@@ -185,7 +185,13 @@
     "payments_instant": "Instantâneo",
     "payments_minutes": "minutos",
     "payments_hours": "horas",
-    "payments_business_days": "dias úteis"
+    "payments_business_days": "dias úteis",
+    "hero_title": "Todos os Jogos no JackPoker",
+    "hero_subtitle": "De cash games de micro-stakes a PLO de altas apostas e Spin & Win com jackpot — explore a biblioteca completa de jogos do JackPoker com guias detalhados para cada formato.",
+    "cta_heading": "Comece a Jogar com um Bônus de 300%",
+    "cta_text": "Use o código promocional do JackPoker WELCOME ao se registrar para desbloquear um bônus de 300% no depósito de até $2,000. Cada formato de jogo fica mais acessível com um bankroll aumentado.",
+    "cta_link_text": "detalhes completos do código promocional e como reivindicar",
+    "cta_button": "Obter Código WELCOME →"
   },
   "tournaments": {
     "meta_title": "Torneios JackPoker — Mais de $3,5M Mensais GTD | Freerolls, Sunday Major e Mais",
@@ -231,7 +237,13 @@
     "cta_label": "COMECE A JOGAR",
     "cta_title_1": "Sua Carreira em",
     "cta_title_2": "Torneios Começa Aqui.",
-    "cta_desc": "Cadastre-se no JackPoker, insira o código promo WELCOME para resgatar seu bônus de boas-vindas de 300% e participe do seu primeiro torneio. Com freerolls acontecendo o dia inteiro, você nem precisa depositar para começar a ganhar."
+    "cta_desc": "Cadastre-se no JackPoker, insira o código promo WELCOME para resgatar seu bônus de boas-vindas de 300% e participe do seu primeiro torneio. Com freerolls acontecendo o dia inteiro, você nem precisa depositar para começar a ganhar.",
+    "hero_title": "Torneios JackPoker",
+    "hero_subtitle": "$3.5M+ em garantias mensais, freerolls diários, o icônico Big Bang Sunday e eventos de séries exclusivas. Sua próxima grande vitória começa aqui.",
+    "cta_heading": "Participe de Torneios com um Bankroll Aumentado",
+    "cta_text": "Registre-se com o código WELCOME para desbloquear um bônus de 300% no primeiro depósito de até $2,000 — um stack maior para participar de mais torneios desde o primeiro dia.",
+    "cta_link_text": "Veja os detalhes completos do código e o detalhamento dos bônus",
+    "cta_button": "Obter Código WELCOME →"
   },
   "bonuses": {
     "meta_title": "Bônus e Promoções JackPoker — 300% até $2.000 + Freerolls e Rakeback",
@@ -269,7 +281,13 @@
     "cta_label": "RESGATE SEU BÔNUS",
     "cta_title_1": "Comece a Jogar com",
     "cta_title_2": "um Impulso de 300%.",
-    "cta_desc": "Cadastre-se no JackPoker, insira o código promo WELCOME na tela de depósito e seu bônus é ativado instantaneamente. Depósito mínimo: $10. Bônus máximo: $2.000. Sua jornada no poker começa agora."
+    "cta_desc": "Cadastre-se no JackPoker, insira o código promo WELCOME na tela de depósito e seu bônus é ativado instantaneamente. Depósito mínimo: $10. Bônus máximo: $2.000. Sua jornada no poker começa agora.",
+    "hero_title": "Bônus e Promoções do JackPoker",
+    "hero_subtitle": "Maximize seu bankroll com nosso bônus de boas-vindas de 300%, recompensas Lootbox, programa de rakeback e entradas exclusivas em torneios.",
+    "cta_heading": "Ative Todos os Bônus com Um Só Código",
+    "cta_text": "Cada bônus nesta página — o match de 300%, o dinheiro instantâneo, o Lootbox, as Missões de Boas-vindas — se ativa com um único código promocional. Não perca no seu primeiro depósito.",
+    "cta_link_text": "Veja o detalhamento completo do código e os passos de ativação",
+    "cta_button": "Obter Código WELCOME →"
   },
   "promo_code": {
     "meta_title": "Código Promo JackPoker: WELCOME — Bônus de 300% até $2.000 (Março 2026)",
@@ -306,7 +324,33 @@
     "cta_label": "USE SEU CÓDIGO AGORA",
     "cta_title_1": "Não Perca",
     "cta_title_2": "Seu Bônus.",
-    "cta_desc": "O código promo WELCOME está disponível para todos os novos jogadores. Cadastre-se agora, insira o código, faça seu primeiro depósito e comece a jogar com até 300% a mais na sua conta. Sem passos complicados, sem requisitos ocultos."
+    "cta_desc": "O código promo WELCOME está disponível para todos os novos jogadores. Cadastre-se agora, insira o código, faça seu primeiro depósito e comece a jogar com até 300% a mais na sua conta. Sem passos complicados, sem requisitos ocultos.",
+    "hero_title": "Código Promocional JackPoker: WELCOME",
+    "hero_subtitle": "Desbloqueie um bônus de 300% no depósito de até $2,000, dinheiro instantâneo, recompensas Lootbox e Missões de Boas-vindas exclusivas com um só código.",
+    "faq_label": "Perguntas Frequentes",
+    "faq_heading": "Tudo Sobre o Código Promocional",
+    "faq_intro": "Tem perguntas? Temos respostas. Aqui estão as perguntas mais comuns que novos jogadores fazem sobre nosso código promocional e bônus de boas-vindas.",
+    "faq_q1": "Qual é o código promocional do JackPoker?",
+    "faq_a1": "O código promocional do JackPoker é WELCOME. Ao inseri-lo durante o registro ou na página do primeiro depósito, ele desbloqueia o pacote completo de boas-vindas: bônus de 300% no primeiro depósito de até $2,000, crédito instantâneo de 20%, um Lootbox de Boas-vindas com multiplicador de até 1,000%, acesso a Missões escalonadas e ingresso VIP acelerado. O código é exclusivo para novos jogadores e completamente gratuito.",
+    "faq_q2": "Como insiro o código promocional?",
+    "faq_a2": "Durante o processo de registro, você encontrará um campo chamado «Código Promocional», «Código de Bônus» ou similar. Basta digitar WELCOME nesse campo e continuar. Se você perdeu durante o registro, também pode inserir o código na página de caixa antes do primeiro depósito. O código deve ser inserido antes do primeiro depósito — não pode ser aplicado retroativamente.",
+    "faq_q3": "Posso usar o código no celular?",
+    "faq_a3": "Com certeza. O código WELCOME funciona igualmente em todas as plataformas — navegador desktop, APK Android e PWA iOS. A experiência mobile do JackPoker é completa, e registro, depósito e ativação de bônus funcionam exatamente da mesma forma.",
+    "faq_q4": "Qual é o depósito mínimo para usar o código?",
+    "faq_a4": "O depósito mínimo para ativar o código WELCOME é $20. Qualquer depósito abaixo desse limite não ativará o pacote de boas-vindas. Para receber o bônus máximo de $2,000, você precisará depositar pelo menos $667.",
+    "faq_q5": "Jogadores existentes podem usar o código WELCOME?",
+    "faq_a5": "O código WELCOME é projetado especificamente para novos jogadores e se aplica apenas ao primeiro depósito. Se você é um jogador existente, o código não ativará um bônus em depósitos subsequentes. No entanto, o JackPoker oferece promoções contínuas para jogadores existentes.",
+    "faq_q6": "Como o bônus de boas-vindas é liberado?",
+    "faq_a6": "O bônus de 300% no depósito é liberado incrementalmente enquanto você joga. Cada vez que contribui rake em um cash game — seja Texas Hold'em, PLO ou Spin&Win — uma porção do seu bônus é desbloqueada e transferida para seu saldo real.",
+    "faq_q7": "Posso sacar o bônus imediatamente?",
+    "faq_a7": "O bônus de 300% não pode ser sacado imediatamente — é liberado progressivamente através do jogo. No entanto, o componente de 20% instantâneo é dinheiro real que chega ao seu saldo imediatamente e pode ser sacado sujeito a verificação padrão.",
+    "faq_q8": "Há limite de tempo para o bônus?",
+    "faq_a8": "Sim. O bônus WELCOME deve ser ganho dentro de 60 dias do primeiro depósito. Qualquer bônus não liberado ao final desse período expirará. Recomendamos jogar regularmente nos primeiros dois meses para maximizar o bônus.",
+    "final_cta_label": "Apenas para Novos Jogadores",
+    "final_cta_heading": "Não Perca Seu Bônus de Boas-vindas de $2,000",
+    "final_cta_text": "Milhares de novos jogadores se juntam ao JackPoker todo mês e ativam esta oferta. O código WELCOME está disponível agora — mas só é válido para o primeiro depósito.",
+    "final_cta_button": "Jogar — Código WELCOME ♠",
+    "final_cta_terms": "Apenas novos jogadores. Depósito mín. $20. Bônus de 300% até $2,000. Bônus liberado através do jogo. Expira em 60 dias. 18+. Jogue com responsabilidade. Termos completos aplicam-se."
   },
   "news": {
     "meta_title": "Notícias JackPoker — Últimas Atualizações, Eventos e Anúncios da Plataforma",
@@ -341,7 +385,13 @@
     "news_6_title": "Jackpot Spin & Win: Jogador Ganha $287.000",
     "news_6_date": "8 de Fevereiro de 2026",
     "news_6_tag": "Comunidade",
-    "news_6_excerpt": "Um jogador do JackPoker acertou um enorme jackpot do Spin & Win nesta semana, transformando um buy-in de $100 em $287.000 em menos de cinco minutos. O sortudo vencedor, jogando do Brasil, ativou o multiplicador de 2.870×."
+    "news_6_excerpt": "Um jogador do JackPoker acertou um enorme jackpot do Spin & Win nesta semana, transformando um buy-in de $100 em $287.000 em menos de cinco minutos. O sortudo vencedor, jogando do Brasil, ativou o multiplicador de 2.870×.",
+    "hero_title": "Notícias e Atualizações do JackPoker",
+    "hero_subtitle": "Resultados de torneios, novas promoções, atualizações da plataforma e destaques da comunidade — tudo o que acontece no JackPoker, em um só lugar.",
+    "cta_heading": "Novo no JackPoker? Comece com um Bônus de 300%",
+    "cta_text": "Enquanto você acompanha as últimas notícias, não esqueça — novos jogadores podem desbloquear um bônus de 300% no depósito de até $2,000 usando nosso código exclusivo.",
+    "cta_link_text": "Detalhes completos do código e como ativar seu bônus",
+    "cta_button": "Obter Código WELCOME →"
   },
   "_meta": {
     "lang_code": "pt",
@@ -350,5 +400,13 @@
     "dir": "ltr",
     "currency_symbol": "$",
     "locale_code": "pt-BR"
+  },
+  "breadcrumb": {
+    "home": "Início",
+    "games": "Jogos",
+    "bonuses": "Bônus",
+    "tournaments": "Torneios",
+    "news": "Notícias",
+    "promo_code": "Código Promocional WELCOME"
   }
 }

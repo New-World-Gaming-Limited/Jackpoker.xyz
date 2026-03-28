@@ -1329,8 +1329,8 @@ p { margin-bottom: 1rem; }
   display: flex;
   align-items: center;
   gap: 6px;
-  background: rgba(255,255,255,0.06);
-  border: 1px solid rgba(255,255,255,0.1);
+  background: #1E1B27;
+  border: 1px solid rgba(137,59,247,0.3);
   border-radius: 8px;
   padding: 6px 12px;
   color: var(--text-primary);
@@ -1341,7 +1341,7 @@ p { margin-bottom: 1rem; }
   white-space: nowrap;
 }
 .lang-btn:hover {
-  background: rgba(255,255,255,0.1);
+  background: #2A2537;
   border-color: var(--purple-primary);
 }
 
@@ -1410,11 +1410,11 @@ p { margin-bottom: 1rem; }
 
 /* Light mode overrides */
 [data-theme="light"] .lang-btn {
-  background: rgba(0,0,0,0.04);
-  border-color: rgba(0,0,0,0.1);
+  background: #F5F3F8;
+  border-color: rgba(137,59,247,0.2);
 }
 [data-theme="light"] .lang-btn:hover {
-  background: rgba(0,0,0,0.08);
+  background: #EDE9F3;
 }
 [data-theme="light"] .lang-dropdown {
   background: #fff;
@@ -1448,4 +1448,63 @@ p { margin-bottom: 1rem; }
 }
 :lang(ru) {
   font-family: 'Inter', system-ui, sans-serif;
+}
+
+
+/* ============================================
+   BREADCRUMB NAVIGATION
+   ============================================ */
+.breadcrumb-nav {
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-subtle);
+  padding: 10px 0;
+  font-size: 0.82rem;
+  margin-top: var(--header-height);
+}
+
+.breadcrumb-nav + section {
+  padding-top: 48px !important;
+}
+
+.breadcrumb-list {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.breadcrumb-list li {
+  display: flex;
+  align-items: center;
+  color: var(--text-muted);
+}
+
+.breadcrumb-list li + li::before {
+  content: "›";
+  margin: 0 10px;
+  color: var(--text-muted);
+  opacity: 0.5;
+  font-size: 1rem;
+}
+
+.breadcrumb-list li a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.breadcrumb-list li a:hover {
+  color: var(--gold-primary);
+}
+
+.breadcrumb-list li:last-child {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+[data-theme="light"] .breadcrumb-nav {
+  background: #F8F7FA;
 }

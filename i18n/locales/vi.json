@@ -185,7 +185,13 @@
     "payments_instant": "Tức Thì",
     "payments_minutes": "phút",
     "payments_hours": "giờ",
-    "payments_business_days": "ngày làm việc"
+    "payments_business_days": "ngày làm việc",
+    "hero_title": "Tất Cả Trò Chơi Tại JackPoker",
+    "hero_subtitle": "Từ cash game micro-stakes đến PLO high-roller và Spin & Win jackpot — khám phá toàn bộ thư viện trò chơi JackPoker với hướng dẫn chi tiết cho mọi hình thức.",
+    "cta_heading": "Bắt Đầu Chơi với Thưởng 300%",
+    "cta_text": "Sử dụng mã khuyến mãi JackPoker WELCOME khi đăng ký để mở khóa thưởng 300% nạp tiền lên đến $2,000. Mọi hình thức chơi trở nên dễ tiếp cận hơn với bankroll được tăng cường.",
+    "cta_link_text": "chi tiết đầy đủ về mã khuyến mãi và cách nhận",
+    "cta_button": "Nhận Mã WELCOME →"
   },
   "tournaments": {
     "meta_title": "Giải Đấu JackPoker — $3,5M+ GTD Hàng Tháng | Freeroll, Sunday Major & Nhiều Hơn Nữa",
@@ -231,7 +237,13 @@
     "cta_label": "BẮT ĐẦU CHƠI",
     "cta_title_1": "Sự Nghiệp Giải Đấu",
     "cta_title_2": "Của Bạn Bắt Đầu Ở Đây.",
-    "cta_desc": "Đăng ký tại JackPoker, nhập mã khuyến mãi WELCOME để nhận thưởng chào mừng 300% và tham gia giải đấu đầu tiên của bạn. Với freeroll chạy suốt ngày, bạn thậm chí không cần nạp tiền để bắt đầu thắng."
+    "cta_desc": "Đăng ký tại JackPoker, nhập mã khuyến mãi WELCOME để nhận thưởng chào mừng 300% và tham gia giải đấu đầu tiên của bạn. Với freeroll chạy suốt ngày, bạn thậm chí không cần nạp tiền để bắt đầu thắng.",
+    "hero_title": "Giải Đấu JackPoker",
+    "hero_subtitle": "$3.5M+ đảm bảo hàng tháng, freeroll hàng ngày, Big Bang Sunday huyền thoại và các sự kiện series độc quyền. Chiến thắng lớn tiếp theo bắt đầu từ đây.",
+    "cta_heading": "Tham Gia Giải Đấu với Bankroll Tăng Cường",
+    "cta_text": "Đăng ký với mã WELCOME để mở khóa thưởng 300% nạp tiền đầu tiên lên đến $2,000 — stack lớn hơn để tham gia nhiều giải đấu hơn ngay từ ngày đầu.",
+    "cta_link_text": "Xem chi tiết đầy đủ về mã và phân tích thưởng",
+    "cta_button": "Nhận Mã WELCOME →"
   },
   "bonuses": {
     "meta_title": "Khuyến Mãi JackPoker — 300% lên đến $2,000 + Freeroll & Rakeback",
@@ -269,7 +281,13 @@
     "cta_label": "NHẬN THƯỞNG CỦA BẠN",
     "cta_title_1": "Bắt Đầu Chơi Với",
     "cta_title_2": "Mức Tăng 300%.",
-    "cta_desc": "Đăng ký tại JackPoker, nhập mã khuyến mãi WELCOME trên màn hình nạp tiền và thưởng của bạn kích hoạt ngay lập tức. Nạp tối thiểu: $10. Thưởng tối đa: $2,000. Hành trình poker của bạn bắt đầu ngay bây giờ."
+    "cta_desc": "Đăng ký tại JackPoker, nhập mã khuyến mãi WELCOME trên màn hình nạp tiền và thưởng của bạn kích hoạt ngay lập tức. Nạp tối thiểu: $10. Thưởng tối đa: $2,000. Hành trình poker của bạn bắt đầu ngay bây giờ.",
+    "hero_title": "Thưởng và Khuyến Mãi JackPoker",
+    "hero_subtitle": "Tối đa hóa bankroll với thưởng chào mừng 300%, phần thưởng Lootbox, chương trình rakeback và vé vào giải đấu độc quyền.",
+    "cta_heading": "Kích Hoạt Tất Cả Thưởng Bằng Một Mã",
+    "cta_text": "Mọi thưởng trên trang này — match 300%, tiền mặt tức thì, Lootbox, Nhiệm Vụ Chào Mừng — đều kích hoạt bằng một mã khuyến mãi. Đừng bỏ lỡ khi nạp tiền lần đầu.",
+    "cta_link_text": "Xem chi tiết đầy đủ về mã khuyến mãi và các bước kích hoạt",
+    "cta_button": "Nhận Mã WELCOME →"
   },
   "promo_code": {
     "meta_title": "Mã Khuyến Mãi JackPoker: WELCOME — Thưởng 300% lên đến $2,000 (Tháng 3 năm 2026)",
@@ -306,7 +324,33 @@
     "cta_label": "SỬ DỤNG MÃ CỦA BẠN NGAY",
     "cta_title_1": "Đừng Bỏ Lỡ",
     "cta_title_2": "Phần Thưởng Của Bạn.",
-    "cta_desc": "Mã khuyến mãi WELCOME dành cho tất cả người chơi mới. Đăng ký ngay, nhập mã, thực hiện lần nạp đầu tiên và bắt đầu chơi với thêm tới 300% trong tài khoản. Không có bước phức tạp, không có yêu cầu ẩn."
+    "cta_desc": "Mã khuyến mãi WELCOME dành cho tất cả người chơi mới. Đăng ký ngay, nhập mã, thực hiện lần nạp đầu tiên và bắt đầu chơi với thêm tới 300% trong tài khoản. Không có bước phức tạp, không có yêu cầu ẩn.",
+    "hero_title": "Mã Khuyến Mãi JackPoker: WELCOME",
+    "hero_subtitle": "Mở khóa thưởng 300% nạp tiền lên đến $2,000, tiền mặt tức thì, phần thưởng Lootbox và Nhiệm Vụ Chào Mừng độc quyền với một mã.",
+    "faq_label": "Câu Hỏi Thường Gặp",
+    "faq_heading": "Tất Cả Về Mã Khuyến Mãi",
+    "faq_intro": "Bạn có thắc mắc? Chúng tôi có câu trả lời. Đây là những câu hỏi phổ biến nhất mà người chơi mới hỏi về mã khuyến mãi và thưởng chào mừng.",
+    "faq_q1": "Mã khuyến mãi JackPoker là gì?",
+    "faq_a1": "Mã khuyến mãi JackPoker là WELCOME. Khi nhập trong quá trình đăng ký hoặc tại trang nạp tiền đầu tiên, nó mở khóa gói chào mừng đầy đủ: thưởng 300% nạp tiền đầu tiên lên đến $2,000, tín dụng tiền mặt tức thì 20%, Lootbox Chào Mừng với hệ số nhân lên đến 1,000%, truy cập Nhiệm Vụ theo cấp bậc và đăng ký VIP nhanh. Mã dành riêng cho người chơi mới và hoàn toàn miễn phí.",
+    "faq_q2": "Làm thế nào để nhập mã khuyến mãi?",
+    "faq_a2": "Trong quá trình đăng ký, bạn sẽ thấy trường có nhãn \"Mã Khuyến Mãi\", \"Mã Thưởng\" hoặc tương tự. Chỉ cần gõ WELCOME vào trường đó và tiếp tục. Nếu bạn bỏ lỡ khi đăng ký, bạn có thể nhập mã tại trang thanh toán trước khi nạp tiền đầu tiên. Mã phải được nhập trước khi nạp tiền đầu tiên — không thể áp dụng hồi tố.",
+    "faq_q3": "Có thể sử dụng mã trên điện thoại không?",
+    "faq_a3": "Hoàn toàn. Mã WELCOME hoạt động giống nhau trên tất cả nền tảng — trình duyệt desktop, APK Android và PWA iOS. Trải nghiệm di động JackPoker đầy đủ tính năng, đăng ký, nạp tiền và kích hoạt thưởng hoạt động giống hệt.",
+    "faq_q4": "Nạp tiền tối thiểu bao nhiêu để dùng mã?",
+    "faq_a4": "Nạp tiền tối thiểu để kích hoạt mã WELCOME là $20. Bất kỳ khoản nạp nào dưới ngưỡng này sẽ không kích hoạt gói chào mừng. Để nhận thưởng tối đa $2,000, bạn cần nạp ít nhất $667.",
+    "faq_q5": "Người chơi hiện tại có thể dùng mã WELCOME không?",
+    "faq_a5": "Mã WELCOME được thiết kế dành riêng cho người chơi mới và chỉ áp dụng cho lần nạp tiền đầu tiên. Nếu bạn là người chơi hiện tại, mã sẽ không kích hoạt thưởng cho các lần nạp tiếp theo. Tuy nhiên, JackPoker có chương trình khuyến mãi liên tục cho người chơi hiện tại.",
+    "faq_q6": "Thưởng chào mừng được giải phóng như thế nào?",
+    "faq_a6": "Thưởng 300% nạp tiền được giải phóng dần khi bạn chơi. Mỗi khi bạn đóng góp rake vào cash game — dù là Texas Hold'em, PLO hay Spin&Win — một phần thưởng được mở khóa và chuyển vào số dư thực.",
+    "faq_q7": "Có thể rút thưởng ngay lập tức không?",
+    "faq_a7": "Thưởng 300% không thể rút ngay — nó được giải phóng dần thông qua chơi game. Tuy nhiên, phần tiền mặt tức thì 20% là tiền thật vào số dư ngay lập tức và có thể rút theo yêu cầu xác minh tài khoản tiêu chuẩn.",
+    "faq_q8": "Có giới hạn thời gian cho thưởng không?",
+    "faq_a8": "Có. Thưởng WELCOME phải được kiếm trong vòng 60 ngày kể từ lần nạp tiền đầu tiên. Bất kỳ thưởng chưa giải phóng nào sau thời hạn này sẽ hết hạn. Chúng tôi khuyên bạn nên chơi thường xuyên trong hai tháng đầu để tối đa hóa thưởng.",
+    "final_cta_label": "Chỉ Dành Cho Người Chơi Mới",
+    "final_cta_heading": "Đừng Bỏ Lỡ Thưởng Chào Mừng $2,000",
+    "final_cta_text": "Hàng ngàn người chơi mới tham gia JackPoker mỗi tháng và kích hoạt ưu đãi này. Mã WELCOME đang có sẵn — nhưng chỉ có hiệu lực cho lần nạp tiền đầu tiên.",
+    "final_cta_button": "Chơi Ngay — Mã WELCOME ♠",
+    "final_cta_terms": "Chỉ người chơi mới. Nạp tối thiểu $20. Thưởng 300% đến $2,000. Thưởng giải phóng qua chơi game. Hết hạn 60 ngày. 18+. Chơi có trách nhiệm. Áp dụng đầy đủ điều khoản."
   },
   "news": {
     "meta_title": "Tin Tức JackPoker — Cập Nhật Mới Nhất, Sự Kiện & Thông Báo Nền Tảng",
@@ -341,7 +385,13 @@
     "news_6_title": "Jackpot Spin & Win Được Trúng: Người Chơi Thắng $287,000",
     "news_6_date": "8 tháng 2 năm 2026",
     "news_6_tag": "Cộng Đồng",
-    "news_6_excerpt": "Một người chơi JackPoker đã trúng jackpot Spin & Win khổng lồ trong tuần này, biến buy-in $100 thành $287.000 trong chưa đến năm phút. Người chiến thắng may mắn, đang chơi từ Brazil, đã kích hoạt hệ số nhân 2.870×."
+    "news_6_excerpt": "Một người chơi JackPoker đã trúng jackpot Spin & Win khổng lồ trong tuần này, biến buy-in $100 thành $287.000 trong chưa đến năm phút. Người chiến thắng may mắn, đang chơi từ Brazil, đã kích hoạt hệ số nhân 2.870×.",
+    "hero_title": "Tin Tức và Cập Nhật JackPoker",
+    "hero_subtitle": "Kết quả giải đấu, khuyến mãi mới, cập nhật nền tảng và điểm nổi bật cộng đồng — mọi thứ đang diễn ra tại JackPoker, tại một nơi.",
+    "cta_heading": "Mới Tại JackPoker? Bắt Đầu với Thưởng 300%",
+    "cta_text": "Trong khi bạn cập nhật tin tức mới nhất, đừng quên — người chơi mới có thể mở khóa thưởng 300% nạp tiền lên đến $2,000 với mã khuyến mãi độc quyền của chúng tôi.",
+    "cta_link_text": "Chi tiết đầy đủ về mã và cách kích hoạt thưởng",
+    "cta_button": "Nhận Mã WELCOME →"
   },
   "_meta": {
     "lang_code": "vi",
@@ -350,5 +400,13 @@
     "dir": "ltr",
     "currency_symbol": "$",
     "locale_code": "vi-VN"
+  },
+  "breadcrumb": {
+    "home": "Trang chủ",
+    "games": "Trò chơi",
+    "bonuses": "Thưởng",
+    "tournaments": "Giải đấu",
+    "news": "Tin tức",
+    "promo_code": "Mã khuyến mãi WELCOME"
   }
 }

@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jackpoker.poker/sitemap.xml
+
+# Allow all crawlers full access
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
