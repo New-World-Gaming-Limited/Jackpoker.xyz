@@ -124,9 +124,15 @@ def do_replacements(html_content, en_flat, target_flat):
     return result
 
 
-def fix_asset_paths(html_content):
+def fix_asset_paths(html_content, lang_code):
     """Fix relative paths for files in subdirectories."""
-    # CSS
+    # Add <base> tag so all relative links resolve correctly from the subdirectory
+    # This is needed because 'serve' uses clean URLs: /ru/index.html -> /ru
+    # Without trailing slash, relative links resolve from / instead of /ru/
+    base_tag = f'<base href="/{lang_code}/">'
+    html_content = html_content.replace('<head>', f'<head>\n  {base_tag}', 1)
+    
+    # CSS — needs ../ since base is /{lang}/
     html_content = html_content.replace('href="style.css"', 'href="../style.css"')
     # JS  
     html_content = html_content.replace('src="main.js"', 'src="../main.js"')
@@ -134,8 +140,7 @@ def fix_asset_paths(html_content):
     html_content = re.sub(r'(src|href)="assets/', r'\1="../assets/', html_content)
     html_content = re.sub(r"(src|href)='assets/", r"\1='../assets/", html_content)
     # Favicon link in head
-    # Internal page links (same directory)
-    # Don't change external links
+    # Internal page links stay as-is (base tag handles resolution)
     return html_content
 
 
@@ -252,7 +257,7 @@ def process_page(page_name, lang_code, en_locale, target_locale=None):
     html = do_replacements(html, en_flat, target_flat)
     
     # 4. Fix asset paths for subdirectory
-    html = fix_asset_paths(html)
+    html = fix_asset_paths(html, lang_code)
     
     # 5. Update canonical
     html = update_canonical(html, lang_code, page_name)
