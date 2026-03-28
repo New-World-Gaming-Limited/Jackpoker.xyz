@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JackPoker Promo Code WELCOME — Unlock the Full Welcome Package</title>
+  <meta name="description" content="Use JackPoker promo code WELCOME to get a 300% match bonus up to $2,000, 20% instant cash, Welcome Lootbox, Aviator Bonus, and Welcome Quests. Enter it at registration.">
+  <meta property="og:title" content="JackPoker Promo Code WELCOME — Unlock the Full Welcome Package">
+  <meta property="og:description" content="Use promo code WELCOME at JackPoker to unlock the 300% match bonus, 20% instant cash, Lootbox, Welcome Quests, and Aviator Bonus.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Promo hero breadcrumbs spacing */
+    .promo-hero .breadcrumbs {
+      margin-bottom: var(--space-6);
+    }
+
+    .promo-hero h1 {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+      margin-bottom: var(--space-4);
+    }
+
+    /* Bonus summary cards */
+    .bonus-summary-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-4);
+      margin: var(--space-6) 0;
+    }
+
+    .bonus-summary-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-5) var(--space-6);
+      transition: border-color var(--transition-interactive);
+    }
+
+    .bonus-summary-card:hover {
+      border-color: var(--color-gold);
+    }
+
+    .bonus-summary-card .bsc-icon {
+      font-size: 1.75rem;
+      margin-bottom: var(--space-3);
+    }
+
+    .bonus-summary-card h4 {
+      font-family: var(--font-display);
+      font-size: var(--text-base);
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-bottom: var(--space-2);
+    }
+
+    .bonus-summary-card p {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      margin: 0;
+      max-width: none;
+    }
+
+    @media (max-width: 768px) {
+      .bonus-summary-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 480px) {
+      .bonus-summary-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Welcome Quest tiers */
+    .quest-tiers {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-4);
+      margin: var(--space-4) 0;
+    }
+
+    .quest-tier {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-5);
+      text-align: center;
+    }
+
+    .quest-tier.tier-gold {
+      border-color: rgba(228, 161, 1, 0.35);
+      background: linear-gradient(135deg, rgba(228, 161, 1, 0.06), var(--color-surface-2));
+    }
+
+    .quest-tier.tier-supernova {
+      border-color: rgba(229, 68, 75, 0.35);
+      background: linear-gradient(135deg, rgba(229, 68, 75, 0.06), var(--color-surface-2));
+    }
+
+    .quest-tier-name {
+      font-family: var(--font-display);
+      font-size: var(--text-base);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-1);
+    }
+
+    .tier-silver .quest-tier-name { color: #A8B2C0; }
+    .tier-gold .quest-tier-name { color: var(--color-gold); }
+    .tier-supernova .quest-tier-name { color: var(--color-red-light); }
+
+    .quest-reward {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      margin-bottom: var(--space-1);
+    }
+
+    .quest-deposit {
+      font-size: var(--text-xs);
+      color: var(--color-text-faint);
+    }
+
+    @media (max-width: 640px) {
+      .quest-tiers { grid-template-columns: 1fr; }
+    }
+
+    /* Terms list */
+    .terms-list {
+      list-style: none;
+      padding: 0;
+      margin: var(--space-4) 0;
+    }
+
+    .terms-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-3);
+      padding: var(--space-3) 0;
+      border-bottom: 1px solid var(--color-border);
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      line-height: 1.6;
+      max-width: none;
+    }
+
+    .terms-list li:last-child {
+      border-bottom: none;
+    }
+
+    .terms-list li::before {
+      content: "→";
+      color: var(--color-gold);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* Table wrapper for mobile scroll */
+    .table-wrapper {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: var(--space-6) 0;
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+    }
+
+    .table-wrapper .data-table {
+      margin: 0;
+    }
+
+    .table-wrapper .data-table th:first-child,
+    .table-wrapper .data-table td:first-child {
+      border-left: none;
+    }
+
+    .data-table .highlight-row td {
+      background: rgba(228, 161, 1, 0.04);
+    }
+
+    .data-table td strong {
+      color: var(--color-gold);
+    }
+
+    /* Page sections alternate backgrounds */
+    .section-alt {
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    /* Code inline */
+    code.promo-inline {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--color-gold);
+      background: rgba(228, 161, 1, 0.08);
+      padding: 2px 8px;
+      border-radius: var(--radius-sm);
+      font-size: inherit;
+    }
+
+    /* CTA promo banner (custom for this page) */
+    .promo-cta-banner {
+      padding: var(--space-20) 0;
+      background: linear-gradient(135deg, rgba(228, 161, 1, 0.1), rgba(228, 161, 1, 0.02));
+      border-top: 1px solid rgba(228, 161, 1, 0.2);
+      text-align: center;
+    }
+
+    .promo-cta-banner h2 {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      margin-bottom: var(--space-4);
+    }
+
+    .promo-cta-banner p {
+      font-size: var(--text-lg);
+      color: var(--color-text-muted);
+      max-width: 560px;
+      margin: 0 auto var(--space-8);
+    }
+
+    .promo-cta-code-display {
+      font-family: var(--font-display);
+      font-size: var(--text-3xl);
+      font-weight: 700;
+      color: var(--color-gold);
+      letter-spacing: 0.15em;
+      margin-bottom: var(--space-8);
+      padding: var(--space-4) var(--space-10);
+      background: rgba(228, 161, 1, 0.05);
+      border: 2px dashed rgba(228, 161, 1, 0.35);
+      border-radius: var(--radius-xl);
+      display: inline-block;
+    }
+
+    .promo-cta-buttons {
+      display: flex;
+      gap: var(--space-4);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Section h2 top spacing for consecutive sections */
+    .content-section + .content-section .content-main h2:first-child {
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="JackPoker Fan Hub Home">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="8" fill="#E4A101"/>
+          <text x="8" y="29" font-family="Oswald, sans-serif" font-weight="700" font-size="24" fill="#0D0F14">JP</text>
+        </svg>
+        <span class="logo-text">JackPoker <span class="logo-accent">Fan Hub</span></span>
+      </a>
+      <nav class="nav-desktop" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="review.html" class="nav-link">Review</a>
+        <a href="bonuses.html" class="nav-link">Bonuses</a>
+        <a href="tournaments.html" class="nav-link">Tournaments</a>
+        <a href="games.html" class="nav-link">Games</a>
+        <a href="promo-code.html" class="nav-link cta-nav active">Promo Code</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="Open menu" aria-expanded="false" id="mobileToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" id="mobileNav" aria-label="Mobile navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="review.html" class="nav-link">Review</a>
+      <a href="bonuses.html" class="nav-link">Bonuses</a>
+      <a href="tournaments.html" class="nav-link">Tournaments</a>
+      <a href="games.html" class="nav-link">Games</a>
+      <a href="promo-code.html" class="nav-link active">Promo Code</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Promo Hero -->
+    <section class="promo-hero">
+      <div class="container">
+        <div class="breadcrumbs">
+          <a href="index.html">Home</a><span class="sep">/</span><span>Promo Code</span>
+        </div>
+        <h1>JackPoker Promo Code <span class="text-gold">2026</span></h1>
+        <p class="hero-subtitle" style="margin:0 auto">Use this exclusive promo code when you register at JackPoker to unlock the full welcome package.</p>
+        <div class="promo-hero-box">
+          <div class="promo-label">Your JackPoker Promo Code</div>
+          <div class="promo-hero-code">WELCOME</div>
+          <button class="btn btn-gold btn-lg" style="width:100%;margin-bottom:var(--space-4)" onclick="copyPromoCode()">Copy Promo Code</button>
+          <div class="copy-feedback" id="copyFeedback"></div>
+          <a href="https://jack-poker.com" target="_blank" rel="noopener noreferrer sponsored" class="btn btn-outline" style="width:100%">Visit JackPoker.com</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- What You Get -->
+    <section class="content-section section">
+      <div class="container">
+        <div class="section-header">
+          <h2>What You Get with Promo Code <span class="text-gold">WELCOME</span></h2>
+          <p>One code. Seven layers of bonuses. Here's exactly what unlocks when you register with WELCOME and make your first deposit.</p>
+        </div>
+
+        <div class="bonus-summary-grid">
+          <div class="bonus-summary-card">
+            <div class="bsc-icon">&#128176;</div>
+            <h4>300% Match Bonus</h4>
+            <p>Up to $2,000 on your first deposit. Released as you rake at $5 per $20 generated.</p>
+          </div>
+          <div class="bonus-summary-card">
+            <div class="bsc-icon">&#9889;</div>
+            <h4>20% Instant Cash</h4>
+            <p>Credited immediately on deposit. Use it at any table right away, no waiting.</p>
+          </div>
+          <div class="bonus-summary-card">
+            <div class="bsc-icon">&#127381;</div>
+            <h4>Welcome Lootbox</h4>
+            <p>Pick 3 of 9 cards to reveal randomized rewards: up to 1,000% bonus, 25% rakeback, 300 free spins, $500 in tournament tickets.</p>
+          </div>
+          <div class="bonus-summary-card">
+            <div class="bsc-icon">&#127942;</div>
+            <h4>Welcome Quests</h4>
+            <p>Tiered missions based on your deposit size: Silver, Gold, or Supernova. Extra rewards as you play.</p>
+          </div>
+          <div class="bonus-summary-card">
+            <div class="bsc-icon">&#128641;</div>
+            <h4>Aviator Bonus</h4>
+            <p>100 Free Flights plus 300 free spins on your first deposit. All credited automatically.</p>
+          </div>
+          <div class="bonus-summary-card">
+            <div class="bsc-icon">&#128200;</div>
+            <h4>Deposit Booster</h4>
+            <p>Access to the Deposit Booster on every future re-deposit of $10 or more, from 10% up to 1,000%.</p>
+          </div>
+        </div>
+
+        <div class="highlight-box">
+          <p><strong>The short version:</strong> deposit with code <code class="promo-inline">WELCOME</code> and JackPoker gives you back an instant 20% of your deposit, matches the rest at 300%, then hands you a lootbox mini-game, quest rewards based on your deposit level, Aviator flights, and a lifetime Deposit Booster. It's the most complete welcome package in recreational poker.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use the Promo Code -->
+    <section class="content-section section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>How to Use the Promo Code</h2>
+          <p>Getting all your bonuses takes six simple steps. The whole process takes about 5 minutes.</p>
+        </div>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h4>Visit JackPoker.com</h4>
+              <p>Head to <a href="https://jack-poker.com" target="_blank" rel="noopener noreferrer sponsored" style="color:var(--color-gold)">jack-poker.com</a> and click the registration button in the top right corner. No download is needed — JackPoker runs in your browser.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h4>Enter Promo Code WELCOME</h4>
+              <p>During registration, you'll see a promo code field. Type <code class="promo-inline">WELCOME</code> exactly as written. This must be done during sign-up — you can't apply it after your account is created.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <div class="step-content">
+              <h4>Complete Registration</h4>
+              <p>Fill in your details and verify your account. JackPoker accepts players from most countries and the process is straightforward. Have your email ready for verification.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <div class="step-content">
+              <h4>Make Your First Deposit</h4>
+              <p>Deposit $10 or more to activate all welcome bonuses. The higher your deposit, the bigger your Welcome Quest tier. Deposit $500+ to unlock Supernova quests worth up to $635. JackPoker supports cards, e-wallets, and all major cryptocurrencies.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">5</div>
+            <div class="step-content">
+              <h4>Play the Lootbox Mini-Game</h4>
+              <p>After your first deposit, the Welcome Lootbox launches automatically. Choose 3 of 9 cards to reveal your randomized bonus rewards. You might get a 1,000% bonus, 25% rakeback, free spins, or tournament tickets — or a combination of all of them.</p>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-number">6</div>
+            <div class="step-content">
+              <h4>Start Playing</h4>
+              <p>Hit the tables and watch your bonuses unlock as you generate rake. Your 20% instant cash is ready to use immediately. The 300% match bonus releases at $5 for every $20 in rake you contribute — which equals 25% effective rakeback on top of everything else.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bonus Breakdown Table -->
+    <section class="content-section section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Bonus Breakdown</h2>
+          <p>Every bonus you get with promo code WELCOME, what it's worth, and how it works.</p>
+        </div>
+
+        <div class="table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Bonus</th>
+                <th>Value</th>
+                <th>How It Works</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="highlight-row">
+                <td><strong>Match Bonus</strong></td>
+                <td><strong>300% up to $2,000</strong></td>
+                <td>Released as you rake: $5 credited per $20 in rake (25% effective rakeback). 60-day window to release.</td>
+              </tr>
+              <tr>
+                <td>Instant Cash</td>
+                <td>20% of deposit</td>
+                <td>Credited immediately on first deposit. Available to play at any table right away.</td>
+              </tr>
+              <tr>
+                <td>Lootbox</td>
+                <td>Up to 1,000% + extras</td>
+                <td>Pick 3 of 9 cards on first deposit of $10+. Prizes include bonus up to 1,000%, up to 25% rakeback, up to 300 free spins, and up to $500 in tournament tickets.</td>
+              </tr>
+              <tr>
+                <td>Welcome Quests Silver</td>
+                <td>Up to $22</td>
+                <td>Unlocked with a deposit of $20 to $99.99. Complete in-game missions to earn rewards.</td>
+              </tr>
+              <tr>
+                <td>Welcome Quests Gold</td>
+                <td>Up to $140</td>
+                <td>Unlocked with a deposit of $100 to $499.99. More missions, more rewards.</td>
+              </tr>
+              <tr class="highlight-row">
+                <td><strong>Welcome Quests Supernova</strong></td>
+                <td><strong>Up to $635</strong></td>
+                <td>Unlocked with a deposit of $500 or more. The highest quest tier with the largest reward pool.</td>
+              </tr>
+              <tr>
+                <td>Aviator Bonus</td>
+                <td>100 Free Flights + 300 Spins</td>
+                <td>Credited on first deposit. Play Aviator with your free flights, then enjoy the free spins on slots.</td>
+              </tr>
+              <tr>
+                <td>Deposit Booster</td>
+                <td>10% up to 1,000%</td>
+                <td>Available on every re-deposit of $10 or more. Boost varies by promotion. Ongoing, not just for new players.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Quest Tiers Detail -->
+        <div class="section-header" style="margin-top:var(--space-10);margin-bottom:var(--space-6)">
+          <h2>Welcome Quest Tiers</h2>
+          <p>Your deposit amount determines which quest tier you unlock. Here's what each tier earns you.</p>
+        </div>
+
+        <div class="quest-tiers">
+          <div class="quest-tier tier-silver">
+            <div class="quest-tier-name">Silver</div>
+            <div class="quest-reward">Up to $22</div>
+            <div class="quest-deposit">Deposit $20 – $99.99</div>
+          </div>
+          <div class="quest-tier tier-gold">
+            <div class="quest-tier-name">Gold</div>
+            <div class="quest-reward">Up to $140</div>
+            <div class="quest-deposit">Deposit $100 – $499.99</div>
+          </div>
+          <div class="quest-tier tier-supernova">
+            <div class="quest-tier-name">Supernova</div>
+            <div class="quest-reward">Up to $635</div>
+            <div class="quest-deposit">Deposit $500+</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Important Terms -->
+    <section class="content-section section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Important Terms</h2>
+          <p>Read these before you deposit. No small print surprises — just what you need to know.</p>
+        </div>
+
+        <ul class="terms-list">
+          <li>Welcome bonuses activate on your first deposit only. You get one shot, so use code <code class="promo-inline">WELCOME</code> during registration.</li>
+          <li>Minimum deposit of $10 triggers the Lootbox and Aviator Bonus. Minimum $20 deposit unlocks Silver Welcome Quests.</li>
+          <li>The match bonus has a 60-day window to release. Play enough rake within that period to collect the full value.</li>
+          <li>Bonus balance unlocks at $5 per $20 in rake generated — that's a 25% effective rakeback rate built into the match bonus itself.</li>
+          <li>The 20% Instant Cash has wagering requirements that must be met before you can withdraw it as real money. You can play with it freely from the start.</li>
+          <li>You can combine the welcome bonus with ongoing promotions, tournaments, and freerolls at JackPoker. It doesn't lock you out of anything.</li>
+          <li>The promo code must be entered during registration. JackPoker can't apply it retroactively once your account is created.</li>
+          <li>The Deposit Booster is available on re-deposits of $10 or more and isn't limited to your welcome period. It continues throughout your time at JackPoker.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="content-section section">
+      <div class="container" style="max-width:800px">
+        <div class="section-header">
+          <h2>Frequently Asked Questions</h2>
+          <p>Quick answers to the most common questions about the JackPoker promo code.</p>
+        </div>
+
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-question">Is the WELCOME promo code free to use?</button>
+            <div class="faq-answer">
+              <p>Yes, entering <code class="promo-inline">WELCOME</code> is completely free. The code doesn't cost anything — it simply unlocks the full welcome package when you make your first deposit. Without the code, you won't get the Lootbox, Welcome Quests, Aviator Bonus, or Deposit Booster access. It's also worth noting that the 20% instant cash is credited just for depositing, so you're getting something back on day one regardless of how you play.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Can I use the promo code on mobile?</button>
+            <div class="faq-answer">
+              <p>Absolutely. JackPoker runs directly in your mobile browser with no download required. Android users can also install a dedicated APK, and iOS users can add the progressive web app to their home screen for a native feel. The registration form — including the promo code field — works the same way on any device. Just visit jack-poker.com, tap the registration button, and enter <code class="promo-inline">WELCOME</code> in the promo code field.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">What's the minimum deposit to get all bonuses?</button>
+            <div class="faq-answer">
+              <p>A $10 deposit gets you the 20% instant cash, Lootbox, and Aviator Bonus (100 Free Flights + 300 spins). To unlock the Welcome Quests, you need at least $20, which puts you on the Silver tier. Deposit $100 or more for Gold quests, and $500 or more for Supernova quests worth up to $635 in rewards. The 300% match bonus applies to any deposit amount, so even a small first deposit earns you the match — just scaled to your deposit size.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-question">Can I combine the welcome bonus with other promotions?</button>
+            <div class="faq-answer">
+              <p>Yes. The WELCOME package doesn't prevent you from participating in any of JackPoker's ongoing promotions, freerolls, or tournaments. You can join the Bonus Bonanza daily series, enter freerolls worth over $200,000 monthly, and play in the Big Bang Sunday $45K GTD tournament — all while your welcome bonuses are still unlocking in the background. The Deposit Booster also continues on every future re-deposit, so the value doesn't stop after day one.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="promo-cta-banner">
+      <div class="container">
+        <div class="promo-label" style="margin-bottom:var(--space-4)">Exclusive JackPoker Promo Code</div>
+        <div class="promo-cta-code-display">WELCOME</div>
+        <h2>Don't Leave Bonuses on the Table</h2>
+        <p>Register today with promo code WELCOME and get 300% up to $2,000, 20% instant cash, a Lootbox, Welcome Quests, 100 Aviator flights, and the Deposit Booster — all stacked on your first deposit.</p>
+        <div class="promo-cta-buttons">
+          <a href="https://jack-poker.com" target="_blank" rel="noopener noreferrer sponsored" class="btn btn-gold btn-lg">Claim with Code WELCOME</a>
+          <a href="bonuses.html" class="btn btn-outline btn-lg">See Full Bonus Guide</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="40" rx="8" fill="#E4A101"/>
+              <text x="8" y="29" font-family="Oswald, sans-serif" font-weight="700" font-size="24" fill="#0D0F14">JP</text>
+            </svg>
+            <span>JackPoker Fan Hub</span>
+          </div>
+          <p>An independent fan site dedicated to helping players get the most out of JackPoker. Not affiliated with or endorsed by Jack La International Limitada.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Pages</h4>
+          <a href="index.html">Home</a>
+          <a href="review.html">Review</a>
+          <a href="bonuses.html">Bonuses</a>
+          <a href="tournaments.html">Tournaments</a>
+          <a href="games.html">Games</a>
+          <a href="promo-code.html">Promo Code</a>
+        </div>
+        <div class="footer-links">
+          <h4>JackPoker</h4>
+          <a href="https://jack-poker.com" target="_blank" rel="noopener noreferrer">Official Website</a>
+          <a href="https://jack-poker.com/en/promotions/match-bonus/" target="_blank" rel="noopener noreferrer">Match Bonus</a>
+          <a href="https://jack-poker.com/en/tournaments/" target="_blank" rel="noopener noreferrer">Tournaments</a>
+        </div>
+        <div class="footer-links">
+          <h4>Support Channels</h4>
+          <p class="footer-support-note">Contact JackPoker directly:</p>
+          <span>Telegram</span>
+          <span>WhatsApp</span>
+          <span>Facebook Messenger</span>
+          <span>Instagram</span>
+          <span>Email: legal&#64;jack-poker.com</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>This is an independent fan site. JackPoker is owned and operated by Jack La International Limitada. Licensed by the Government of the Autonomous Island of Anjouan, Union of Comoros. Certified by iTech Labs, BMM TestLabs, and GLI.</p>
+        <p>18+ only. Gambling can be addictive. Please play responsibly.</p>
+        <p>&copy; 2026 JackPoker Fan Hub. This site includes commercial links.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

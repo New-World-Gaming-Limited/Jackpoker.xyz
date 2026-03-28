@@ -1,0 +1,1401 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JackPoker Tournaments — Complete Guide to Every Format &amp; Prize Pool</title>
+  <meta name="description" content="Everything you need to know about JackPoker tournaments. Bonus Bonanza series, Big Bang Sunday $45K GTD, daily freerolls, Spin &amp; Win, PKO events, and seasonal series — all covered.">
+  <meta property="og:title" content="JackPoker Tournaments — Complete Guide to Every Format &amp; Prize Pool">
+  <meta property="og:description" content="Your complete guide to JackPoker tournaments: Bonus Bonanza, Big Bang Sunday, freerolls, Spin &amp; Win, PKO events, and seasonal series. Buy-ins from $0 to $200.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ===== TOURNAMENTS PAGE SPECIFIC ===== */
+
+    /* Page hero with decorative cards */
+    .page-hero-tournaments {
+      position: relative;
+      padding: var(--space-16) 0 var(--space-12);
+      text-align: center;
+      background: linear-gradient(180deg, rgba(228, 161, 1, 0.05) 0%, transparent 100%);
+      overflow: hidden;
+    }
+
+    .page-hero-tournaments::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 700px;
+      height: 700px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(228, 161, 1, 0.08) 0%, transparent 70%);
+      filter: blur(40px);
+      pointer-events: none;
+    }
+
+    .page-hero-tournaments .floating-suit {
+      position: absolute;
+      font-size: 2.5rem;
+      opacity: 0.05;
+      pointer-events: none;
+    }
+
+    .page-hero-tournaments .suit-1 { top: 12%; left: 6%; }
+    .page-hero-tournaments .suit-2 { top: 20%; right: 10%; color: var(--color-red); }
+    .page-hero-tournaments .suit-3 { bottom: 15%; left: 14%; color: var(--color-red); }
+    .page-hero-tournaments .suit-4 { bottom: 25%; right: 6%; }
+
+    .page-hero-tournaments .hero-content-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-hero-tournaments h1 {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+      margin-bottom: var(--space-4);
+    }
+
+    .page-hero-tournaments .hero-lead {
+      font-size: var(--text-lg);
+      color: var(--color-text-muted);
+      max-width: 620px;
+      margin: 0 auto var(--space-8);
+    }
+
+    .page-hero-tournaments .hero-stats {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-8);
+      flex-wrap: wrap;
+      padding-top: var(--space-8);
+      border-top: 1px solid var(--color-border);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Full-width content layout */
+    .tournaments-content {
+      padding: var(--space-12) 0 var(--space-16);
+    }
+
+    .tournaments-content .container {
+      max-width: var(--content-wide);
+    }
+
+    /* Section separator + heading */
+    .t-section {
+      padding: var(--space-12) 0;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .t-section:first-child {
+      padding-top: 0;
+      border-top: none;
+    }
+
+    .t-section-header {
+      margin-bottom: var(--space-8);
+    }
+
+    .t-section-header h2 {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      margin-bottom: var(--space-3);
+    }
+
+    .t-section-header p {
+      color: var(--color-text-muted);
+      max-width: 760px;
+      line-height: 1.7;
+    }
+
+    /* Overview stats row */
+    .overview-stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-5);
+      margin-bottom: var(--space-8);
+    }
+
+    .overview-stat {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      text-align: center;
+    }
+
+    .overview-stat-number {
+      display: block;
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--color-gold);
+      margin-bottom: var(--space-2);
+    }
+
+    .overview-stat-label {
+      font-size: var(--text-xs);
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .format-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+    }
+
+    .format-pill {
+      padding: var(--space-2) var(--space-4);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-full);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--color-text-muted);
+    }
+
+    .format-pill.gold {
+      border-color: rgba(228, 161, 1, 0.35);
+      color: var(--color-gold);
+      background: rgba(228, 161, 1, 0.05);
+    }
+
+    /* Bonus Bonanza — featured gold card */
+    .bonanza-card {
+      background: linear-gradient(135deg, rgba(228, 161, 1, 0.07) 0%, var(--color-surface) 60%);
+      border: 2px solid rgba(228, 161, 1, 0.35);
+      border-radius: var(--radius-xl);
+      padding: var(--space-10);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .bonanza-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(228, 161, 1, 0.07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .bonanza-inner {
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: var(--space-10);
+      align-items: start;
+      position: relative;
+      z-index: 1;
+    }
+
+    .bonanza-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-2) var(--space-4);
+      background: var(--color-gold);
+      color: #0D0F14;
+      border-radius: var(--radius-full);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: var(--space-5);
+    }
+
+    .bonanza-title {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: var(--space-4);
+    }
+
+    .bonanza-text p {
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      margin-bottom: var(--space-4);
+    }
+
+    .bonanza-facts {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+    }
+
+    .bonanza-facts h4 {
+      font-family: var(--font-display);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-2);
+    }
+
+    .bonanza-fact-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--space-2) 0;
+      border-bottom: 1px solid var(--color-border);
+      font-size: var(--text-sm);
+    }
+
+    .bonanza-fact-row:last-child {
+      border-bottom: none;
+    }
+
+    .bonanza-fact-label {
+      color: var(--color-text-muted);
+    }
+
+    .bonanza-fact-value {
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    .bonanza-fact-value.gold {
+      color: var(--color-gold);
+    }
+
+    /* Big Bang Sunday */
+    .big-bang-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-8);
+    }
+
+    .big-bang-main {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8);
+    }
+
+    .big-bang-main .prize-display {
+      font-family: var(--font-display);
+      font-size: var(--text-2xl);
+      font-weight: 700;
+      color: var(--color-gold);
+      margin: var(--space-4) 0 var(--space-2);
+      line-height: 1;
+    }
+
+    .big-bang-main h3 {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: var(--space-2);
+    }
+
+    .event-tag {
+      display: inline-block;
+      padding: var(--space-1) var(--space-3);
+      background: var(--color-surface-3);
+      border-radius: var(--radius-sm);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-4);
+    }
+
+    .event-tag.monthly {
+      background: rgba(228, 161, 1, 0.12);
+      color: var(--color-gold);
+    }
+
+    .big-bang-main p {
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      margin-bottom: var(--space-4);
+      font-size: var(--text-sm);
+    }
+
+    .qualify-steps {
+      margin-top: var(--space-5);
+      padding-top: var(--space-5);
+      border-top: 1px solid var(--color-border);
+    }
+
+    .qualify-steps h4 {
+      font-family: var(--font-display);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-4);
+      color: var(--color-text-muted);
+    }
+
+    .qualify-steps .steps {
+      margin: 0;
+    }
+
+    .qualify-steps .step-number {
+      width: 30px;
+      height: 30px;
+      font-size: var(--text-sm);
+      background: var(--color-surface-3);
+      color: var(--color-text);
+    }
+
+    .qualify-steps .step-content h4 {
+      font-size: var(--text-sm);
+      margin-bottom: 2px;
+    }
+
+    /* Freeroll tiers */
+    .freeroll-tiers {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-4);
+    }
+
+    .freeroll-tier {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: var(--space-5);
+      align-items: center;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-5) var(--space-6);
+      transition: border-color var(--transition-interactive);
+    }
+
+    .freeroll-tier:hover {
+      border-color: var(--color-gold);
+    }
+
+    .freeroll-tier-icon {
+      font-size: 1.75rem;
+    }
+
+    .freeroll-tier-info h4 {
+      font-family: var(--font-display);
+      font-size: var(--text-base);
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: var(--space-1);
+    }
+
+    .freeroll-tier-info p {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+    }
+
+    .freeroll-tier-prize {
+      text-align: right;
+    }
+
+    .freeroll-tier-prize .prize-amount {
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      font-weight: 700;
+      color: var(--color-gold);
+      display: block;
+    }
+
+    .freeroll-tier-prize .prize-freq {
+      font-size: var(--text-xs);
+      color: var(--color-text-faint);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    /* Spin & Win */
+    .spin-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-8);
+      align-items: start;
+    }
+
+    .spin-info p {
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      margin-bottom: var(--space-4);
+    }
+
+    .multiplier-table {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    .multiplier-table h4 {
+      font-family: var(--font-display);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: var(--space-4) var(--space-5);
+      border-bottom: 1px solid var(--color-border);
+      color: var(--color-text-muted);
+    }
+
+    .multiplier-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--space-3) var(--space-5);
+      border-bottom: 1px solid var(--color-border);
+      font-size: var(--text-sm);
+    }
+
+    .multiplier-row:last-child {
+      border-bottom: none;
+    }
+
+    .multiplier-row .mult-x {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--color-gold);
+    }
+
+    .multiplier-row .mult-desc {
+      color: var(--color-text-muted);
+      font-size: var(--text-xs);
+    }
+
+    /* PKO section */
+    .pko-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-5);
+    }
+
+    .pko-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      transition: border-color var(--transition-interactive), box-shadow var(--transition-interactive);
+    }
+
+    .pko-card:hover {
+      border-color: var(--color-gold);
+      box-shadow: var(--shadow-gold);
+    }
+
+    .pko-card-icon {
+      font-size: 2rem;
+      margin-bottom: var(--space-4);
+    }
+
+    .pko-card h4 {
+      font-family: var(--font-display);
+      font-size: var(--text-base);
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: var(--space-2);
+    }
+
+    .pko-card .pko-prize {
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      font-weight: 700;
+      color: var(--color-gold);
+      margin-bottom: var(--space-3);
+    }
+
+    .pko-card p {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      line-height: 1.6;
+    }
+
+    /* Seasonal series */
+    .seasonal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-5);
+    }
+
+    .seasonal-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-7);
+      transition: border-color var(--transition-interactive);
+    }
+
+    .seasonal-card:hover {
+      border-color: rgba(228, 161, 1, 0.4);
+    }
+
+    .seasonal-badge {
+      display: inline-block;
+      padding: var(--space-1) var(--space-3);
+      background: var(--color-surface-3);
+      border-radius: var(--radius-sm);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-4);
+    }
+
+    .seasonal-card h4 {
+      font-family: var(--font-display);
+      font-size: var(--text-base);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: var(--space-2);
+    }
+
+    .seasonal-card .seasonal-gtd {
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      font-weight: 700;
+      color: var(--color-gold);
+      margin-bottom: var(--space-3);
+    }
+
+    .seasonal-card p {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      line-height: 1.6;
+    }
+
+    /* Summary table */
+    .table-wrapper {
+      overflow-x: auto;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--color-border);
+    }
+
+    .summary-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: var(--text-sm);
+      min-width: 600px;
+    }
+
+    .summary-table th {
+      text-align: left;
+      padding: var(--space-4) var(--space-5);
+      background: var(--color-surface-2);
+      border-bottom: 2px solid var(--color-border);
+      font-family: var(--font-display);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: var(--text-xs);
+      letter-spacing: 0.05em;
+      color: var(--color-text-muted);
+      white-space: nowrap;
+    }
+
+    .summary-table td {
+      padding: var(--space-4) var(--space-5);
+      border-bottom: 1px solid var(--color-border);
+      vertical-align: middle;
+    }
+
+    .summary-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .summary-table tr:hover td {
+      background: var(--color-surface);
+    }
+
+    .summary-table .t-name {
+      font-family: var(--font-display);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: var(--text-sm);
+    }
+
+    .summary-table .t-prize {
+      font-family: var(--font-display);
+      font-weight: 700;
+      color: var(--color-gold);
+    }
+
+    .freq-badge {
+      display: inline-block;
+      padding: 2px var(--space-3);
+      background: var(--color-surface-3);
+      border-radius: var(--radius-full);
+      font-size: var(--text-xs);
+      font-weight: 600;
+      color: var(--color-text-muted);
+    }
+
+    /* Tips section */
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-5);
+    }
+
+    .tip-card {
+      display: flex;
+      gap: var(--space-4);
+      align-items: flex-start;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      transition: border-color var(--transition-interactive);
+    }
+
+    .tip-card:hover {
+      border-color: rgba(228, 161, 1, 0.3);
+    }
+
+    .tip-number {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(228, 161, 1, 0.1);
+      border: 1px solid rgba(228, 161, 1, 0.25);
+      border-radius: 50%;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: var(--text-sm);
+      color: var(--color-gold);
+    }
+
+    .tip-text h4 {
+      font-family: var(--font-display);
+      font-size: var(--text-base);
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: var(--space-2);
+    }
+
+    .tip-text p {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      line-height: 1.7;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .bonanza-inner { grid-template-columns: 1fr; }
+      .big-bang-layout { grid-template-columns: 1fr; }
+      .spin-grid { grid-template-columns: 1fr; }
+      .pko-grid { grid-template-columns: repeat(2, 1fr); }
+      .seasonal-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 640px) {
+      .overview-stats { grid-template-columns: repeat(2, 1fr); }
+      .pko-grid { grid-template-columns: 1fr; }
+      .seasonal-grid { grid-template-columns: 1fr; }
+      .tips-grid { grid-template-columns: 1fr; }
+      .freeroll-tier { grid-template-columns: auto 1fr; }
+      .freeroll-tier-prize { grid-column: 1 / -1; text-align: left; }
+      .page-hero-tournaments .hero-stats { gap: var(--space-5); }
+    }
+
+    @media (max-width: 480px) {
+      .overview-stats { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="JackPoker Fan Hub Home">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="8" fill="#E4A101"/>
+          <text x="8" y="29" font-family="Oswald, sans-serif" font-weight="700" font-size="24" fill="#0D0F14">JP</text>
+        </svg>
+        <span class="logo-text">JackPoker <span class="logo-accent">Fan Hub</span></span>
+      </a>
+      <nav class="nav-desktop" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="review.html" class="nav-link">Review</a>
+        <a href="bonuses.html" class="nav-link">Bonuses</a>
+        <a href="tournaments.html" class="nav-link active">Tournaments</a>
+        <a href="games.html" class="nav-link">Games</a>
+        <a href="promo-code.html" class="nav-link cta-nav">Promo Code</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="Open menu" aria-expanded="false" id="mobileToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" id="mobileNav" aria-label="Mobile navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="review.html" class="nav-link">Review</a>
+      <a href="bonuses.html" class="nav-link">Bonuses</a>
+      <a href="tournaments.html" class="nav-link active">Tournaments</a>
+      <a href="games.html" class="nav-link">Games</a>
+      <a href="promo-code.html" class="nav-link">Promo Code</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero-tournaments">
+      <span class="floating-suit suit-1" aria-hidden="true">&#9824;</span>
+      <span class="floating-suit suit-2" aria-hidden="true">&#9829;</span>
+      <span class="floating-suit suit-3" aria-hidden="true">&#9830;</span>
+      <span class="floating-suit suit-4" aria-hidden="true">&#9827;</span>
+      <div class="container hero-content-inner">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="sep" aria-hidden="true">›</span>
+          <span>Tournaments</span>
+        </nav>
+        <h1>JackPoker <span class="text-gold">Tournaments</span></h1>
+        <p class="hero-lead">New tournaments every 30 minutes. Over $1.5 million in monthly prize pools. Buy-ins from $0 all the way to $200 across every format you want to play.</p>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">$1.5M+</span>
+            <span class="stat-label">Monthly Prize Pools</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">Every 30 min</span>
+            <span class="stat-label">New Tournament Starts</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">8x Daily</span>
+            <span class="stat-label">Free Tournaments</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-number">$45K GTD</span>
+            <span class="stat-label">Big Bang Sunday</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="tournaments-content">
+      <div class="container">
+
+        <!-- 1. Tournament Overview -->
+        <section class="t-section" id="overview">
+          <div class="t-section-header">
+            <h2>Tournament Overview</h2>
+            <p>JackPoker's tournament schedule is one of the densest in online poker. Whether you're looking to grind freerolls, take shots in a flagship MTT series, or chase a Spin &amp; Win jackpot, there's something running at any hour of the day.</p>
+          </div>
+
+          <div class="overview-stats">
+            <div class="overview-stat">
+              <span class="overview-stat-number">$1.5M+</span>
+              <span class="overview-stat-label">Total Monthly GTD</span>
+            </div>
+            <div class="overview-stat">
+              <span class="overview-stat-number">Every 30 min</span>
+              <span class="overview-stat-label">Tournament Frequency</span>
+            </div>
+            <div class="overview-stat">
+              <span class="overview-stat-number">$0–$200</span>
+              <span class="overview-stat-label">Buy-in Range</span>
+            </div>
+            <div class="overview-stat">
+              <span class="overview-stat-number">7+ formats</span>
+              <span class="overview-stat-label">Game Types</span>
+            </div>
+          </div>
+
+          <div style="margin-bottom: var(--space-6);">
+            <p style="color: var(--color-text-muted); margin-bottom: var(--space-4); line-height: 1.7;">The schedule covers a full range of formats and budgets. Registered players can jump into a freeroll at any time of day with no deposit required. Depositing players unlock additional freeroll tiers, while regular grinders have the Bonus Bonanza series running on 3-hour cycles around the clock. The calendar also includes special seasonal series with massive overlays and quest-based reward systems.</p>
+            <p style="color: var(--color-text-muted); line-height: 1.7;">Formats on the schedule include No-Limit Hold'em, Pot-Limit Omaha, PLO5, Progressive Knockout (PKO), re-entry events, freerolls, and satellites. The Spin &amp; Win lottery SNGs run on demand 24/7 as a standalone format.</p>
+          </div>
+
+          <div class="format-pills" role="list" aria-label="Available tournament formats">
+            <span class="format-pill gold" role="listitem">NLH</span>
+            <span class="format-pill gold" role="listitem">PLO</span>
+            <span class="format-pill gold" role="listitem">PLO5</span>
+            <span class="format-pill" role="listitem">PKO</span>
+            <span class="format-pill" role="listitem">Re-entry</span>
+            <span class="format-pill" role="listitem">Freeroll</span>
+            <span class="format-pill" role="listitem">Satellite</span>
+            <span class="format-pill" role="listitem">Spin &amp; Win</span>
+          </div>
+        </section>
+
+        <!-- 2. Bonus Bonanza Series -->
+        <section class="t-section" id="bonus-bonanza">
+          <div class="t-section-header">
+            <h2>Bonus Bonanza Series</h2>
+            <p>JackPoker's flagship daily MTT series. The heart of the tournament schedule and the primary source of value for regular players.</p>
+          </div>
+
+          <div class="bonanza-card">
+            <div class="bonanza-inner">
+              <div class="bonanza-text">
+                <div class="bonanza-badge">&#127942; Flagship Series</div>
+                <h3 class="bonanza-title">Bonus <span class="text-gold">Bonanza</span></h3>
+                <p>The Bonus Bonanza series is JackPoker's most active tournament product. Events run in 3-hour cycles throughout the day, so there's always one either starting soon or in progress. Buy-ins run from $5 to $100, and prize pools range from $3,500 to $15,000 per event. Total monthly prize pools across the entire series come in around <strong>$1,245,000</strong>.</p>
+                <p>What makes the Bonus Bonanza stand out from a value perspective is how winnings are paid. All prizes go to your bonus balance and unlock as you generate rake at <strong>$5 per $20 raked</strong>, which works out to a 25% effective rakeback rate. There's no time limit on clearing, so you're not racing against a deadline to use what you've won.</p>
+                <p>Overlays are frequent across the series, which means the prize pools regularly exceed total buy-ins paid. That's free money added to your potential winnings just for being in the field.</p>
+              </div>
+              <div class="bonanza-facts">
+                <h4>Quick Facts</h4>
+                <div class="bonanza-fact-row">
+                  <span class="bonanza-fact-label">Buy-ins</span>
+                  <span class="bonanza-fact-value">$5 to $100</span>
+                </div>
+                <div class="bonanza-fact-row">
+                  <span class="bonanza-fact-label">Prize Pools</span>
+                  <span class="bonanza-fact-value gold">$3,500 – $15,000</span>
+                </div>
+                <div class="bonanza-fact-row">
+                  <span class="bonanza-fact-label">Schedule</span>
+                  <span class="bonanza-fact-value">3-hour cycles, daily</span>
+                </div>
+                <div class="bonanza-fact-row">
+                  <span class="bonanza-fact-label">Monthly Total</span>
+                  <span class="bonanza-fact-value gold">~$1,245,000</span>
+                </div>
+                <div class="bonanza-fact-row">
+                  <span class="bonanza-fact-label">Overlays</span>
+                  <span class="bonanza-fact-value">Frequent</span>
+                </div>
+                <div class="bonanza-fact-row">
+                  <span class="bonanza-fact-label">Prize Payment</span>
+                  <span class="bonanza-fact-value">Bonus Balance</span>
+                </div>
+                <div class="bonanza-fact-row">
+                  <span class="bonanza-fact-label">Clearing Rate</span>
+                  <span class="bonanza-fact-value">$5 per $20 rake</span>
+                </div>
+                <div class="bonanza-fact-row">
+                  <span class="bonanza-fact-label">Effective Rakeback</span>
+                  <span class="bonanza-fact-value gold">25%</span>
+                </div>
+                <div class="bonanza-fact-row">
+                  <span class="bonanza-fact-label">Time Limit</span>
+                  <span class="bonanza-fact-value">None</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 3. Big Bang Sunday -->
+        <section class="t-section" id="big-bang-sunday">
+          <div class="t-section-header">
+            <h2>Big Bang Sunday</h2>
+            <p>JackPoker's marquee monthly event. One Sunday a month, the whole room focuses on one big prize pool.</p>
+          </div>
+
+          <div class="big-bang-layout">
+            <div class="big-bang-main">
+              <div class="event-tag monthly">Monthly Event</div>
+              <h3>Big Bang Sunday</h3>
+              <div class="prize-display">$45,000 GTD</div>
+              <p style="font-size: var(--text-sm); color: var(--color-text-muted); margin-bottom: var(--space-2);">First Sunday of every month</p>
+              <p>This is JackPoker's biggest recurring tournament. At $45,000 guaranteed, it's a serious prize pool for a $30 direct buy-in, making it one of the best value-per-dollar MTTs you'll find anywhere online.</p>
+              <p>You don't have to pay the full $30 to get in. Satellites run all week leading up to the event, starting as low as $1. Players who haven't deposited can also work their way in through the freeroll ladder, though it takes some grinding to get there.</p>
+
+              <div class="qualify-steps">
+                <h4>How to Qualify</h4>
+                <div class="steps">
+                  <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                      <h4>Freeroll Route</h4>
+                      <p>Win tickets through daily freerolls. Takes more work but costs nothing.</p>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                      <h4>Satellite Route</h4>
+                      <p>Satellites run daily from $1 buy-ins throughout the week.</p>
+                    </div>
+                  </div>
+                  <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                      <h4>Direct Buy-in</h4>
+                      <p>Register directly for $30 — the best bang-for-buck option if you have the bankroll.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <div class="bonanza-facts" style="margin-bottom: var(--space-5);">
+                <h4>Event Details</h4>
+                <div class="bonanza-fact-row">
+                  <span class="bonanza-fact-label">Prize Pool</span>
+                  <span class="bonanza-fact-value gold">$45,000 GTD</span>
+                </div>
+                <div class="bonanza-fact-row">
+                  <span class="bonanza-fact-label">Buy-in</span>
+                  <span class="bonanza-fact-value">$30 direct</span>
+                </div>
+                <div class="bonanza-fact-row">
+                  <span class="bonanza-fact-label">Frequency</span>
+                  <span class="bonanza-fact-value">1st Sunday monthly</span>
+                </div>
+                <div class="bonanza-fact-row">
+                  <span class="bonanza-fact-label">Satellite Buy-ins</span>
+                  <span class="bonanza-fact-value">From $1</span>
+                </div>
+                <div class="bonanza-fact-row">
+                  <span class="bonanza-fact-label">Freeroll Qualify</span>
+                  <span class="bonanza-fact-value">Yes</span>
+                </div>
+                <div class="bonanza-fact-row">
+                  <span class="bonanza-fact-label">Format</span>
+                  <span class="bonanza-fact-value">NLH</span>
+                </div>
+              </div>
+
+              <div class="highlight-box">
+                <p><strong>Value check:</strong> $30 buy-in for a $45,000 prize pool means even modest cashes are multiples of your buy-in. Qualify through a $1 satellite and the value multiplies dramatically.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 4. Freeroll Festival -->
+        <section class="t-section" id="freerolls">
+          <div class="t-section-header">
+            <h2>Freeroll Festival</h2>
+            <p>Up to 8 daily freerolls with over $200,000 in monthly prize pools. Four tiers based on deposit size and weekly rake, with the top tier offering $2,500 GTD twice a day.</p>
+          </div>
+
+          <p style="color: var(--color-text-muted); line-height: 1.7; margin-bottom: var(--space-6); max-width: 760px;">All prizes from freerolls are paid as Instant Cash Bonuses, which means they hit your balance as real cash you can use right away. The bottom tier is open to everyone who's registered, even if you've never made a deposit. The upper tiers reward players who are actively depositing and generating rake.</p>
+
+          <div class="freeroll-tiers" role="list">
+            <div class="freeroll-tier" role="listitem">
+              <div class="freeroll-tier-icon" aria-hidden="true">&#127902;</div>
+              <div class="freeroll-tier-info">
+                <h4>Open Freeroll</h4>
+                <p>Available to all registered players. No deposit required to enter. Open to anyone with an account.</p>
+              </div>
+              <div class="freeroll-tier-prize">
+                <span class="prize-amount">$150 GTD</span>
+                <span class="prize-freq">2x daily</span>
+              </div>
+            </div>
+            <div class="freeroll-tier" role="listitem">
+              <div class="freeroll-tier-icon" aria-hidden="true">&#128176;</div>
+              <div class="freeroll-tier-info">
+                <h4>Depositor Freeroll</h4>
+                <p>Requires a deposit of <strong>$50 to $149</strong> and weekly rake of <strong>$15 to $49</strong>.</p>
+              </div>
+              <div class="freeroll-tier-prize">
+                <span class="prize-amount">$300 GTD</span>
+                <span class="prize-freq">2x daily</span>
+              </div>
+            </div>
+            <div class="freeroll-tier" role="listitem">
+              <div class="freeroll-tier-icon" aria-hidden="true">&#128181;</div>
+              <div class="freeroll-tier-info">
+                <h4>Mid-Stakes Freeroll</h4>
+                <p>Requires a deposit of <strong>$150 to $699</strong> and weekly rake of <strong>$50 to $199</strong>.</p>
+              </div>
+              <div class="freeroll-tier-prize">
+                <span class="prize-amount">$600 GTD</span>
+                <span class="prize-freq">2x daily</span>
+              </div>
+            </div>
+            <div class="freeroll-tier" role="listitem">
+              <div class="freeroll-tier-icon" aria-hidden="true">&#128184;</div>
+              <div class="freeroll-tier-info">
+                <h4>High-Volume Freeroll</h4>
+                <p>Requires a deposit of <strong>$700 or more</strong> and weekly rake of <strong>$200 or more</strong>.</p>
+              </div>
+              <div class="freeroll-tier-prize">
+                <span class="prize-amount">$2,500 GTD</span>
+                <span class="prize-freq">2x daily</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="highlight-box" style="margin-top: var(--space-6);">
+            <p><strong>Monthly total:</strong> $200,000+ in freeroll prize pools each month. Prizes are paid as Instant Cash Bonuses with no clearing requirements.</p>
+          </div>
+        </section>
+
+        <!-- 5. Spin & Win -->
+        <section class="t-section" id="spin-win">
+          <div class="t-section-header">
+            <h2>Spin &amp; Win</h2>
+            <p>3-max hyper-turbo lottery SNGs running on demand around the clock. Pick your buy-in, spin the wheel, and play for a randomly assigned prize pool that could reach $1,000,000.</p>
+          </div>
+
+          <div class="spin-grid">
+            <div class="spin-info">
+              <p>Spin &amp; Win is as simple as tournaments get. Three players sit down, the prize pool multiplier is revealed, and everyone plays a hyper-turbo with a 500-chip starting stack at 25 big blinds. Games typically wrap up in about 15 minutes.</p>
+              <p>Buy-ins range from $1 to $100. At lower multipliers, winner takes all. At higher multipliers, second and third place also get paid, which gives more players a share of the bigger pools.</p>
+              <p>The top jackpot multiplier reaches $1,000,000, though higher multipliers are rare by design. The real appeal is the speed and variance: each game is a quick, self-contained session where a single spin can turn a $1 buy-in into a meaningful payout.</p>
+              <div class="bonanza-facts" style="margin-top: var(--space-6);">
+                <h4>Format Details</h4>
+                <div class="bonanza-fact-row">
+                  <span class="bonanza-fact-label">Players</span>
+                  <span class="bonanza-fact-value">3-max</span>
+                </div>
+                <div class="bonanza-fact-row">
+                  <span class="bonanza-fact-label">Format</span>
+                  <span class="bonanza-fact-value">Hyper-turbo SNG</span>
+                </div>
+                <div class="bonanza-fact-row">
+                  <span class="bonanza-fact-label">Starting Stack</span>
+                  <span class="bonanza-fact-value">500 chips (25 BB)</span>
+                </div>
+                <div class="bonanza-fact-row">
+                  <span class="bonanza-fact-label">Buy-ins</span>
+                  <span class="bonanza-fact-value">$1 – $100</span>
+                </div>
+                <div class="bonanza-fact-row">
+                  <span class="bonanza-fact-label">Game Duration</span>
+                  <span class="bonanza-fact-value">~15 minutes</span>
+                </div>
+                <div class="bonanza-fact-row">
+                  <span class="bonanza-fact-label">Max Jackpot</span>
+                  <span class="bonanza-fact-value gold">$1,000,000</span>
+                </div>
+              </div>
+            </div>
+            <div class="multiplier-table">
+              <h4>Prize Pool Multipliers</h4>
+              <div class="multiplier-row">
+                <span class="mult-x">2x</span>
+                <span class="mult-desc">Winner takes all</span>
+              </div>
+              <div class="multiplier-row">
+                <span class="mult-x">3x</span>
+                <span class="mult-desc">Winner takes all</span>
+              </div>
+              <div class="multiplier-row">
+                <span class="mult-x">6x</span>
+                <span class="mult-desc">Winner takes all</span>
+              </div>
+              <div class="multiplier-row">
+                <span class="mult-x">12x</span>
+                <span class="mult-desc">Winner takes all</span>
+              </div>
+              <div class="multiplier-row">
+                <span class="mult-x">25x</span>
+                <span class="mult-desc">Top 2 paid</span>
+              </div>
+              <div class="multiplier-row">
+                <span class="mult-x">50x</span>
+                <span class="mult-desc">Top 2 paid</span>
+              </div>
+              <div class="multiplier-row">
+                <span class="mult-x">100x</span>
+                <span class="mult-desc">All 3 players paid</span>
+              </div>
+              <div class="multiplier-row">
+                <span class="mult-x">500x</span>
+                <span class="mult-desc">All 3 players paid</span>
+              </div>
+              <div class="multiplier-row">
+                <span class="mult-x" style="color: var(--color-red-light);">10,000x</span>
+                <span class="mult-desc">$1,000,000 Jackpot — all 3 paid</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 6. PKO Events -->
+        <section class="t-section" id="pko">
+          <div class="t-section-header">
+            <h2>PKO (Progressive Knockout)</h2>
+            <p>Progressive Knockout tournaments add a bounty layer to every MTT. Every player you eliminate pays you instant cash on the spot, regardless of where you finish overall.</p>
+          </div>
+
+          <p style="color: var(--color-text-muted); line-height: 1.7; margin-bottom: var(--space-8); max-width: 760px;">In a PKO, half your buy-in goes into the prize pool and half becomes your bounty. When you knock someone out, you win half their bounty immediately as cash, and the other half gets added to your own head. The longer you survive and the more people you eliminate, the bigger the bounty on your head grows. PKO events at JackPoker run regularly on the daily schedule and feature heavily in special series.</p>
+
+          <div class="pko-grid">
+            <div class="pko-card">
+              <div class="pko-card-icon" aria-hidden="true">&#10052;</div>
+              <h4>Low in the Snow</h4>
+              <div class="pko-prize">$900,000 GTD</div>
+              <p>JackPoker's flagship PKO series. A full slate of progressive knockout events running across an extended series window with a massive total guarantee.</p>
+            </div>
+            <div class="pko-card">
+              <div class="pko-card-icon" aria-hidden="true">&#127875;</div>
+              <h4>Full House of Horror</h4>
+              <div class="pko-prize">$1M Leaderboard</div>
+              <p>162 PKO tournaments with a $1,000,000 leaderboard on top of the regular prize pools. Points accumulate across the series for an additional layer of competition.</p>
+            </div>
+            <div class="pko-card">
+              <div class="pko-card-icon" aria-hidden="true">&#127942;</div>
+              <h4>Daily PKO Events</h4>
+              <div class="pko-prize">Varies</div>
+              <p>Regular PKO events appear on the daily schedule outside of special series. Buy-ins typically run $5 to $100, consistent with the Bonus Bonanza range.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 7. Seasonal Series -->
+        <section class="t-section" id="seasonal">
+          <div class="t-section-header">
+            <h2>Seasonal Series</h2>
+            <p>JackPoker runs major series throughout the year with elevated guarantees, quest-based reward systems, and special promotions on top of the standard schedule.</p>
+          </div>
+
+          <div class="seasonal-grid">
+            <div class="seasonal-card">
+              <div class="seasonal-badge">Winter</div>
+              <h4>Winter Games Festival</h4>
+              <div class="seasonal-gtd">$2,500,000 GTD</div>
+              <p>JackPoker's winter series. A full schedule of events running across multiple formats with a $2.5 million total guarantee spread across the series.</p>
+            </div>
+            <div class="seasonal-card">
+              <div class="seasonal-badge">Main Event</div>
+              <h4>Bigger Bang Series</h4>
+              <div class="seasonal-gtd">$2.5M + $1M Giveaway</div>
+              <p>The Bigger Bang main series carries $2.5M GTD alongside a $1 Million Giant Giveaway running as a parallel promotion for all participants.</p>
+            </div>
+            <div class="seasonal-card">
+              <div class="seasonal-badge">PKO Series</div>
+              <h4>Low in the Snow</h4>
+              <div class="seasonal-gtd">$900,000 GTD</div>
+              <p>A dedicated PKO series with $900K in guaranteed prize money. Quest-based bonuses and special rewards layer on top of the tournament payouts.</p>
+            </div>
+          </div>
+
+          <div class="highlight-box" style="margin-top: var(--space-8);">
+            <p><strong>Quest-based rewards:</strong> Seasonal series at JackPoker come with additional quest systems. Completing in-game missions during a series earns bonus rewards on top of your tournament results, adding extra value for active players.</p>
+          </div>
+        </section>
+
+        <!-- 8. Tournament Types Summary Table -->
+        <section class="t-section" id="summary">
+          <div class="t-section-header">
+            <h2>Tournament Types at a Glance</h2>
+            <p>A full comparison of every tournament format on the JackPoker schedule.</p>
+          </div>
+
+          <div class="table-wrapper">
+            <table class="summary-table" aria-label="JackPoker tournament formats summary">
+              <thead>
+                <tr>
+                  <th>Tournament</th>
+                  <th>Buy-in Range</th>
+                  <th>GTD / Prize Pool</th>
+                  <th>Frequency</th>
+                  <th>Format</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="t-name">Bonus Bonanza</td>
+                  <td>$5 – $100</td>
+                  <td class="t-prize">$3,500 – $15,000</td>
+                  <td><span class="freq-badge">Daily (3h cycles)</span></td>
+                  <td>NLH / PLO</td>
+                </tr>
+                <tr>
+                  <td class="t-name">Big Bang Sunday</td>
+                  <td>$30</td>
+                  <td class="t-prize">$45,000</td>
+                  <td><span class="freq-badge">Monthly (1st Sunday)</span></td>
+                  <td>NLH</td>
+                </tr>
+                <tr>
+                  <td class="t-name">Open Freeroll</td>
+                  <td>$0</td>
+                  <td class="t-prize">$150</td>
+                  <td><span class="freq-badge">2x daily</span></td>
+                  <td>NLH</td>
+                </tr>
+                <tr>
+                  <td class="t-name">Freeroll — Tier 2</td>
+                  <td>$0</td>
+                  <td class="t-prize">$300</td>
+                  <td><span class="freq-badge">2x daily</span></td>
+                  <td>NLH</td>
+                </tr>
+                <tr>
+                  <td class="t-name">Freeroll — Tier 3</td>
+                  <td>$0</td>
+                  <td class="t-prize">$600</td>
+                  <td><span class="freq-badge">2x daily</span></td>
+                  <td>NLH</td>
+                </tr>
+                <tr>
+                  <td class="t-name">Freeroll — Tier 4</td>
+                  <td>$0</td>
+                  <td class="t-prize">$2,500</td>
+                  <td><span class="freq-badge">2x daily</span></td>
+                  <td>NLH</td>
+                </tr>
+                <tr>
+                  <td class="t-name">Spin &amp; Win</td>
+                  <td>$1 – $100</td>
+                  <td class="t-prize">Up to $1,000,000</td>
+                  <td><span class="freq-badge">On demand, 24/7</span></td>
+                  <td>3-max hyper-turbo</td>
+                </tr>
+                <tr>
+                  <td class="t-name">PKO Events</td>
+                  <td>$5 – $100</td>
+                  <td class="t-prize">Varies by event</td>
+                  <td><span class="freq-badge">Regular schedule</span></td>
+                  <td>NLH / PLO PKO</td>
+                </tr>
+                <tr>
+                  <td class="t-name">Satellites</td>
+                  <td>$1 – $30</td>
+                  <td>Tournament tickets</td>
+                  <td><span class="freq-badge">Daily</span></td>
+                  <td>Various</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <!-- 9. Tips for Tournament Players -->
+        <section class="t-section" id="tips">
+          <div class="t-section-header">
+            <h2>Tips for Tournament Players</h2>
+            <p>Practical ways to get more out of JackPoker's tournament schedule, especially if you're starting out.</p>
+          </div>
+
+          <div class="tips-grid">
+            <div class="tip-card">
+              <div class="tip-number" aria-hidden="true">1</div>
+              <div class="tip-text">
+                <h4>Use the Welcome Quests for Tickets</h4>
+                <p>The Welcome Quest system gives new players free tournament tickets as part of their onboarding rewards. Complete the quests early to build a small bankroll before risking your own money.</p>
+              </div>
+            </div>
+            <div class="tip-card">
+              <div class="tip-number" aria-hidden="true">2</div>
+              <div class="tip-text">
+                <h4>Freerolls Don't Require a Deposit</h4>
+                <p>The $150 GTD daily freerolls are open to all registered players with no deposit needed. If you're testing the site or building a roll from scratch, start here every day.</p>
+              </div>
+            </div>
+            <div class="tip-card">
+              <div class="tip-number" aria-hidden="true">3</div>
+              <div class="tip-text">
+                <h4>Grind Bonus Bonanza First</h4>
+                <p>The Bonus Bonanza series is where most players build their bankrolls. Start at the $5 and $10 buy-in events, cash frequently, and use those winnings to move up to higher stakes over time.</p>
+              </div>
+            </div>
+            <div class="tip-card">
+              <div class="tip-number" aria-hidden="true">4</div>
+              <div class="tip-text">
+                <h4>Satellite Your Way into Big Bang</h4>
+                <p>Don't pay the $30 direct buy-in unless you're comfortable with it. Satellites run from $1 all week, and the overlay on a $45K field is significant enough to justify the grind.</p>
+              </div>
+            </div>
+            <div class="tip-card">
+              <div class="tip-number" aria-hidden="true">5</div>
+              <div class="tip-text">
+                <h4>Unlock Bonus Bonanza Winnings Through Cash Games</h4>
+                <p>Bonanza prizes go to your bonus balance and release at $5 per $20 in rake. Playing cash games alongside the tournament schedule speeds up the clearing process without any time pressure.</p>
+              </div>
+            </div>
+            <div class="tip-card">
+              <div class="tip-number" aria-hidden="true">6</div>
+              <div class="tip-text">
+                <h4>VIP Status Unlocks Private Tables</h4>
+                <p>JackVIP players get access to exclusive private tournaments that aren't available to the general player pool. If you're playing regularly, qualifying for VIP status opens up a separate tier of competition.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Ready to Play?</h2>
+          <p>Register at JackPoker with promo code <strong>WELCOME</strong> to unlock the full welcome package: 300% match bonus, 20% instant cash, Lootbox rewards, and immediate access to all freerolls and tournaments.</p>
+          <a href="https://jack-poker.com" target="_blank" rel="noopener noreferrer sponsored" class="btn btn-gold btn-lg">Visit JackPoker.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="40" rx="8" fill="#E4A101"/>
+              <text x="8" y="29" font-family="Oswald, sans-serif" font-weight="700" font-size="24" fill="#0D0F14">JP</text>
+            </svg>
+            <span>JackPoker Fan Hub</span>
+          </div>
+          <p>An independent fan site dedicated to helping players get the most out of JackPoker. Not affiliated with or endorsed by Jack La International Limitada.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Pages</h4>
+          <a href="index.html">Home</a>
+          <a href="review.html">Review</a>
+          <a href="bonuses.html">Bonuses</a>
+          <a href="tournaments.html">Tournaments</a>
+          <a href="games.html">Games</a>
+          <a href="promo-code.html">Promo Code</a>
+        </div>
+        <div class="footer-links">
+          <h4>JackPoker</h4>
+          <a href="https://jack-poker.com" target="_blank" rel="noopener noreferrer">Official Website</a>
+          <a href="https://jack-poker.com/en/promotions/match-bonus/" target="_blank" rel="noopener noreferrer">Match Bonus</a>
+          <a href="https://jack-poker.com/en/tournaments/" target="_blank" rel="noopener noreferrer">Tournaments</a>
+        </div>
+        <div class="footer-links">
+          <h4>Support Channels</h4>
+          <p class="footer-support-note">Contact JackPoker directly:</p>
+          <span>Telegram</span>
+          <span>WhatsApp</span>
+          <span>Facebook Messenger</span>
+          <span>Instagram</span>
+          <span>Email: legal&#64;jack-poker.com</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>This is an independent fan site. JackPoker is owned and operated by Jack La International Limitada. Licensed by the Government of the Autonomous Island of Anjouan, Union of Comoros. Certified by iTech Labs, BMM TestLabs, and GLI.</p>
+        <p>18+ only. Gambling can be addictive. Please play responsibly.</p>
+        <p>&copy; 2026 JackPoker Fan Hub. This site includes commercial links.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

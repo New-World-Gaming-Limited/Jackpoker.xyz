@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JackPoker Review 2026 — Full Honest Review | JackPoker Fan Hub</title>
+  <meta name="description" content="In-depth JackPoker review covering games, bonuses, software, payments, and more. Find out why JackPoker's 300% welcome bonus and soft player pool make it one of the best recreational poker rooms in 2026.">
+  <meta property="og:title" content="JackPoker Review 2026 — Full Honest Review | JackPoker Fan Hub">
+  <meta property="og:description" content="Everything you need to know about JackPoker: rating, games, bonuses, rake, software, and payments. Read our full review.">
+  <meta property="og:type" content="article">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Review page specific styles */
+    .review-section {
+      padding: clamp(var(--space-12), 6vw, var(--space-20)) 0;
+    }
+
+    /* Overall rating card */
+    .overall-rating-card {
+      background: linear-gradient(135deg, rgba(228,161,1,0.07), var(--color-surface));
+      border: 1px solid rgba(228,161,1,0.25);
+      border-radius: var(--radius-xl);
+      padding: var(--space-8);
+      margin-bottom: var(--space-8);
+    }
+
+    .overall-rating-top {
+      display: flex;
+      align-items: center;
+      gap: var(--space-6);
+      margin-bottom: var(--space-6);
+      flex-wrap: wrap;
+    }
+
+    .score-block {
+      text-align: center;
+    }
+
+    .score-number {
+      font-family: var(--font-display);
+      font-size: 4rem;
+      font-weight: 700;
+      color: var(--color-gold);
+      line-height: 1;
+    }
+
+    .score-denom {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      margin-top: var(--space-1);
+    }
+
+    .score-stars {
+      font-size: var(--text-xl);
+      color: var(--color-gold);
+      letter-spacing: 2px;
+      margin-top: var(--space-2);
+    }
+
+    .rating-bars-wrap {
+      flex: 1;
+      min-width: 240px;
+    }
+
+    /* Support contact list */
+    .support-channels {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+      margin: var(--space-4) 0;
+    }
+
+    .support-channel {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      padding: var(--space-3) var(--space-4);
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      font-size: var(--text-sm);
+    }
+
+    .support-channel-icon {
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .support-channel-label {
+      color: var(--color-text-muted);
+    }
+
+    .support-channel strong {
+      color: var(--color-text);
+    }
+
+    /* Table scrollable wrapper */
+    .table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: var(--space-6) 0;
+    }
+
+    /* Sidebar visit button */
+    .sidebar-visit-btn {
+      display: block;
+      text-align: center;
+      background: var(--color-gold);
+      color: #0D0F14;
+      font-weight: 700;
+      font-size: var(--text-sm);
+      padding: var(--space-4) var(--space-6);
+      border-radius: var(--radius-md);
+      margin-top: var(--space-4);
+      transition: background var(--transition-interactive), transform var(--transition-interactive), box-shadow var(--transition-interactive);
+    }
+
+    .sidebar-visit-btn:hover {
+      background: var(--color-gold-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-gold);
+    }
+
+    /* Section anchor links */
+    .toc {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-5) var(--space-6);
+      margin-bottom: var(--space-8);
+    }
+
+    .toc h4 {
+      font-family: var(--font-display);
+      font-size: var(--text-sm);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-text-muted);
+      margin-bottom: var(--space-3);
+    }
+
+    .toc-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+    }
+
+    .toc-link {
+      display: inline-block;
+      padding: var(--space-1) var(--space-3);
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-full);
+      font-size: var(--text-xs);
+      font-weight: 500;
+      color: var(--color-text-muted);
+      transition: border-color var(--transition-interactive), color var(--transition-interactive);
+    }
+
+    .toc-link:hover {
+      border-color: var(--color-gold);
+      color: var(--color-gold);
+    }
+
+    /* Game categories in review */
+    .game-type-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: var(--space-4);
+      margin: var(--space-4) 0;
+    }
+
+    .game-type-item {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+    }
+
+    .game-type-item h4 {
+      font-family: var(--font-display);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: var(--space-2);
+      color: var(--color-text);
+    }
+
+    .game-type-item p {
+      font-size: var(--text-xs);
+      color: var(--color-text-muted);
+      margin: 0;
+    }
+
+    /* Review sub-badges */
+    .verdict-badge {
+      display: inline-block;
+      padding: var(--space-1) var(--space-3);
+      border-radius: var(--radius-sm);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-left: var(--space-2);
+      vertical-align: middle;
+    }
+
+    .verdict-excellent {
+      background: rgba(34, 197, 94, 0.15);
+      color: var(--color-green);
+    }
+
+    .verdict-good {
+      background: rgba(228,161,1,0.15);
+      color: var(--color-gold);
+    }
+
+    .verdict-fair {
+      background: rgba(229, 68, 75, 0.1);
+      color: var(--color-red);
+    }
+
+    /* Payment icon pills with categories */
+    .payment-section-label {
+      font-family: var(--font-display);
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-text-faint);
+      margin: var(--space-4) 0 var(--space-2);
+    }
+
+    @media (max-width: 640px) {
+      .overall-rating-top { flex-direction: column; }
+      .score-block { align-self: flex-start; }
+      .game-type-row { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="JackPoker Fan Hub Home">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="8" fill="#E4A101"/>
+          <text x="8" y="29" font-family="Oswald, sans-serif" font-weight="700" font-size="24" fill="#0D0F14">JP</text>
+        </svg>
+        <span class="logo-text">JackPoker <span class="logo-accent">Fan Hub</span></span>
+      </a>
+      <nav class="nav-desktop" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="review.html" class="nav-link active">Review</a>
+        <a href="bonuses.html" class="nav-link">Bonuses</a>
+        <a href="tournaments.html" class="nav-link">Tournaments</a>
+        <a href="games.html" class="nav-link">Games</a>
+        <a href="promo-code.html" class="nav-link cta-nav">Promo Code</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="Open menu" aria-expanded="false" id="mobileToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" id="mobileNav" aria-label="Mobile navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="review.html" class="nav-link active">Review</a>
+      <a href="bonuses.html" class="nav-link">Bonuses</a>
+      <a href="tournaments.html" class="nav-link">Tournaments</a>
+      <a href="games.html" class="nav-link">Games</a>
+      <a href="promo-code.html" class="nav-link">Promo Code</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="sep">/</span>
+          <span>Review</span>
+        </nav>
+        <h1>JackPoker <span class="text-gold">Review 2026</span></h1>
+        <p>A complete, no-nonsense look at everything JackPoker has to offer — from the 300% welcome bonus and game selection to software, payments, and support.</p>
+      </div>
+    </section>
+
+    <!-- Main Content + Sidebar -->
+    <section class="review-section">
+      <div class="container">
+        <div class="content-grid">
+
+          <!-- ===== MAIN COLUMN ===== -->
+          <div class="content-main">
+
+            <!-- Table of Contents -->
+            <div class="toc">
+              <h4>Jump to section</h4>
+              <div class="toc-links">
+                <a href="#rating" class="toc-link">Overall Rating</a>
+                <a href="#pros-cons" class="toc-link">Pros &amp; Cons</a>
+                <a href="#about" class="toc-link">About JackPoker</a>
+                <a href="#software" class="toc-link">Software</a>
+                <a href="#games" class="toc-link">Games</a>
+                <a href="#rake" class="toc-link">Rake</a>
+                <a href="#payments" class="toc-link">Payments</a>
+                <a href="#support" class="toc-link">Support</a>
+                <a href="#faq" class="toc-link">FAQ</a>
+              </div>
+            </div>
+
+            <!-- Overall Rating -->
+            <div id="rating">
+              <h2>Overall Rating <span class="verdict-badge verdict-excellent">Excellent</span></h2>
+              <div class="overall-rating-card">
+                <div class="overall-rating-top">
+                  <div class="score-block">
+                    <div class="score-number">4.2</div>
+                    <div class="score-denom">out of 5</div>
+                    <div class="score-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+                  </div>
+                  <div class="rating-bars-wrap">
+                    <div class="rating-bars">
+                      <div class="rating-bar-row">
+                        <span class="rating-bar-label">Bonuses</span>
+                        <div class="rating-bar-track"><div class="rating-bar-fill" style="width:95%"></div></div>
+                        <span class="rating-bar-value text-gold">95%</span>
+                      </div>
+                      <div class="rating-bar-row">
+                        <span class="rating-bar-label">Tournaments</span>
+                        <div class="rating-bar-track"><div class="rating-bar-fill" style="width:90%"></div></div>
+                        <span class="rating-bar-value text-gold">90%</span>
+                      </div>
+                      <div class="rating-bar-row">
+                        <span class="rating-bar-label">Game Variety</span>
+                        <div class="rating-bar-track"><div class="rating-bar-fill" style="width:85%"></div></div>
+                        <span class="rating-bar-value text-gold">85%</span>
+                      </div>
+                      <div class="rating-bar-row">
+                        <span class="rating-bar-label">Payments</span>
+                        <div class="rating-bar-track"><div class="rating-bar-fill" style="width:85%"></div></div>
+                        <span class="rating-bar-value text-gold">85%</span>
+                      </div>
+                      <div class="rating-bar-row">
+                        <span class="rating-bar-label">Support</span>
+                        <div class="rating-bar-track"><div class="rating-bar-fill" style="width:82%"></div></div>
+                        <span class="rating-bar-value text-gold">82%</span>
+                      </div>
+                      <div class="rating-bar-row">
+                        <span class="rating-bar-label">Software</span>
+                        <div class="rating-bar-track"><div class="rating-bar-fill" style="width:80%"></div></div>
+                        <span class="rating-bar-value text-gold">80%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p style="color:var(--color-text-muted);font-size:var(--text-sm);margin:0;line-height:1.7;">JackPoker earns a strong 4.2 out of 5 overall. The bonuses are genuinely world-class, the player pool is soft, and the browser-based platform works well across devices. It's not perfect — the player pool is still smaller than established giants, and there's no traditional desktop client — but for recreational players looking for a welcoming, profitable room, it punches well above its weight.</p>
+              </div>
+            </div>
+
+            <!-- Pros / Cons -->
+            <div id="pros-cons">
+              <h2>Pros &amp; Cons</h2>
+              <div class="pros-cons">
+                <div class="pros-list">
+                  <h3>The Good Stuff</h3>
+                  <ul>
+                    <li>World-leading 300% welcome bonus — one of the best in online poker</li>
+                    <li>Soft player pool that's genuinely ideal for recreational players</li>
+                    <li>Crypto-friendly with 7+ cryptocurrencies supported</li>
+                    <li>Browser-based play with no download needed on any device</li>
+                    <li>$200K+ monthly in freeroll prizes — even non-depositors qualify for some</li>
+                    <li>Up to 20% lifetime VIP rakeback once you qualify</li>
+                  </ul>
+                </div>
+                <div class="cons-list">
+                  <h3>Worth Knowing</h3>
+                  <ul>
+                    <li>No traditional downloadable desktop client</li>
+                    <li>Some VIP perks require qualifying play volume to unlock</li>
+                    <li>Multi-tabling is capped at 3 tables simultaneously</li>
+                    <li>Newer room (est. 2021) — smaller player pool than PokerStars or GGPoker</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- About JackPoker -->
+            <div id="about">
+              <h2>About JackPoker</h2>
+              <p>JackPoker launched in 2021 under the parent company <strong>Jack La International Limitada</strong>. It started life as a poker room focused on Brazil and Latin America — markets that were underserved by the major networks — and has since been expanding globally with English, German, Spanish, Russian, and Portuguese interfaces.</p>
+              <p>The room holds a license from the <strong>Government of the Autonomous Island of Anjouan, Union of Comoros</strong>, which is a legitimate (if smaller) offshore jurisdiction used by a number of online gaming operators. More meaningfully, JackPoker is independently certified by <strong>iTech Labs</strong>, <strong>BMM TestLabs</strong>, and <strong>GLI</strong> — three respected testing labs that verify RNG fairness and software integrity. That's a more thorough certification stack than plenty of larger rooms carry.</p>
+              <p>At any given time you'll find around <strong>1,000 players</strong> online. That's not PokerStars numbers, obviously, but it keeps the games liquid at the micro and low stakes, which is where most recreational players are anyway. The room's whole philosophy is built around making poker fun again — there are active anti-toxic policies, and the bonus structure is clearly designed to reward players for showing up, not just for being a rakeback grinder.</p>
+            </div>
+
+            <!-- Software & Platform -->
+            <div id="software">
+              <h2>Software &amp; Platform <span class="verdict-badge verdict-good">Good</span></h2>
+              <p>JackPoker runs on a <strong>browser-based web client</strong> that works in any modern browser on any operating system — Windows, macOS, Linux, ChromeOS, it doesn't matter. You open the site, log in, and you're at the tables. No client download, no update pop-ups, no installation headaches.</p>
+              <p>Mobile is handled two ways. <strong>Android</strong> users get a dedicated APK you download directly from the JackPoker site (it's not in the Play Store). <strong>iOS</strong> users get a Progressive Web App — open the site in Safari, tap "Add to Home Screen," and it runs like a native app. It's not quite as slick as a proper App Store app, but it works well for cash game sessions.</p>
+
+              <h3>What the Lobby Looks Like</h3>
+              <p>The lobby has multi-stage filters so you can quickly zero in on the game type, stakes, and number of players you want. You can preview a table before sitting down, which is handy for checking the average pot size or whether the table has fish. The interface is clean and doesn't feel cluttered.</p>
+
+              <h3>Table Features</h3>
+              <p>Once you're seated, the table experience is solid. The key features worth knowing about:</p>
+              <ul>
+                <li><strong>Multi-tabling:</strong> Up to 3 tables open at once. Not great for mass multi-tablers, but fine for recreational players.</li>
+                <li><strong>Enhanced bet sliders:</strong> Quick-bet buttons are customizable, which cuts down on fumbling around with the slider.</li>
+                <li><strong>Player notes:</strong> You can tag and note opponents across sessions — these carry over between tables.</li>
+                <li><strong>Streaming mode:</strong> Hides your cards and stack size for screen-sharing or streaming without leaking info.</li>
+                <li><strong>Run it twice:</strong> Available on all cash game tables. Both players need to agree.</li>
+                <li><strong>Game settings:</strong> You can customize table felt colors, card backs, and a few other visual preferences.</li>
+              </ul>
+
+              <p>The main thing missing is a dedicated desktop client. If you prefer the feel of a downloadable app or you rely on third-party HUD software, JackPoker's browser-based setup won't satisfy you. For everyone else, it's more than adequate.</p>
+            </div>
+
+            <!-- Game Selection -->
+            <div id="games">
+              <h2>Game Selection <span class="verdict-badge verdict-good">Good</span></h2>
+              <p>All cash games at JackPoker are <strong>6-max</strong>. There are no heads-up tables. The selection covers the main formats you'd want, plus a couple of specialty games that keep things interesting.</p>
+
+              <div class="game-type-row">
+                <div class="game-type-item">
+                  <h4>Texas Hold'em</h4>
+                  <p>NL10 to NL2000. The biggest game type. Good action at NL10 through NL100 at peak hours.</p>
+                </div>
+                <div class="game-type-item">
+                  <h4>Pot-Limit Omaha</h4>
+                  <p>PLO10 to PLO1000. Standard 4-card Omaha. Run it twice on all tables.</p>
+                </div>
+                <div class="game-type-item">
+                  <h4>5-Card Omaha</h4>
+                  <p>PLO5 — one of JackPoker's most popular formats. More cards, more action.</p>
+                </div>
+                <div class="game-type-item">
+                  <h4>6-Card Omaha</h4>
+                  <p>PLO6 for maximum pre-flop equity runs. Less common but available.</p>
+                </div>
+                <div class="game-type-item">
+                  <h4>Push-Fold</h4>
+                  <p>All-in or fold only. 100 BB stacks with a 10 BB ante. 6-max format. Pure aggression.</p>
+                </div>
+                <div class="game-type-item">
+                  <h4>Spin &amp; Win</h4>
+                  <p>3-max hyper-turbo lottery SNGs. $1 to $100 buy-ins. Jackpots up to $1,000,000.</p>
+                </div>
+              </div>
+
+              <h3>Tournaments</h3>
+              <p>JackPoker's tournament schedule includes MTTs, Progressive Knockout (PKO) events, freerolls, and Sit &amp; Gos. The flagship daily series is the <strong>Bonus Bonanza</strong>, with guarantees ranging from $3,500 to $15,000 per event and a combined monthly payout of over $1.25 million. The <strong>Big Bang Sunday</strong> is the monthly centerpiece — $45,000 guaranteed for a $30 buy-in, with satellite qualifiers running all week.</p>
+              <p>Freerolls are a genuine draw here. Up to 8 freerolls run daily, and the total monthly freeroll prize pool exceeds $200,000. Tier levels depend on your deposit and rake activity, but even new depositors get access to the lower-tier events.</p>
+
+              <h3>JackCasino</h3>
+              <p>There's a separate casino section within the platform covering slots, an Aviator crash game, roulette, and dice. Popular titles include <strong>Gates of Olympus</strong> and <strong>DemiGods</strong>. If you want a break from poker, it's there — but the poker product is clearly the main event.</p>
+            </div>
+
+            <!-- Rake Structure -->
+            <div id="rake">
+              <h2>Rake Structure <span class="verdict-badge verdict-fair">Know Before You Play</span></h2>
+              <p>JackPoker charges a flat <strong>5.5% rake</strong> across all No-Limit Hold'em stakes. Caps vary by stakes and table size — 2-3 player games have lower caps than 4+ player games. The rake structure is competitive at lower stakes but does get meaningful at the mid-stakes level. Tournament rake runs at <strong>10%</strong>, and Spin &amp; Win takes <strong>7%</strong>.</p>
+
+              <div class="table-wrap">
+                <table class="data-table">
+                  <thead>
+                    <tr>
+                      <th>Stakes</th>
+                      <th>Rake</th>
+                      <th>Cap (2-3 Players)</th>
+                      <th>Cap (4+ Players)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><strong>NL10</strong></td>
+                      <td>5.5%</td>
+                      <td>$0.87</td>
+                      <td>$1.75</td>
+                    </tr>
+                    <tr>
+                      <td><strong>NL20</strong></td>
+                      <td>5.5%</td>
+                      <td>$1.65</td>
+                      <td>$3.25</td>
+                    </tr>
+                    <tr>
+                      <td><strong>NL50</strong></td>
+                      <td>5.5%</td>
+                      <td>$3.47</td>
+                      <td>$6.90</td>
+                    </tr>
+                    <tr>
+                      <td><strong>NL100</strong></td>
+                      <td>5.5%</td>
+                      <td>$4.35</td>
+                      <td>$8.70</td>
+                    </tr>
+                    <tr>
+                      <td><strong>NL200</strong></td>
+                      <td>5.5%</td>
+                      <td>$5.20</td>
+                      <td>$10.40</td>
+                    </tr>
+                    <tr>
+                      <td><strong>NL400</strong></td>
+                      <td>5.5%</td>
+                      <td>$6.95</td>
+                      <td>$13.90</td>
+                    </tr>
+                    <tr>
+                      <td><strong>NL1000</strong></td>
+                      <td>5.5%</td>
+                      <td>$12.00</td>
+                      <td>$24.00</td>
+                    </tr>
+                    <tr>
+                      <td><strong>NL2000</strong></td>
+                      <td>5.5%</td>
+                      <td>$17.00</td>
+                      <td>$33.00</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>The 5.5% rate isn't the lowest in the industry, but it's offset significantly by the rakeback programs. JackVIP members get up to 20% rakeback for life, and the 300% match bonus effectively gives you a 25% rakeback equivalent while it's releasing. Combined, the net rake cost for an active player is very reasonable.</p>
+            </div>
+
+            <!-- Payment Methods -->
+            <div id="payments">
+              <h2>Payment Methods <span class="verdict-badge verdict-good">Good</span></h2>
+              <p>JackPoker covers a broad range of payment options — more than most rooms its size. The minimum deposit is <strong>$10</strong>, which keeps the barrier to entry low. The site uses SSL encryption throughout, deposits are processed instantly, and VIP members get priority on withdrawals (often within a few hours).</p>
+
+              <p class="payment-section-label">Cards &amp; E-Wallets</p>
+              <div class="payment-pills">
+                <span class="payment-pill">VISA / Mastercard</span>
+                <span class="payment-pill">Skrill</span>
+                <span class="payment-pill">Neteller</span>
+                <span class="payment-pill">JetonBank</span>
+                <span class="payment-pill">LuxonPay</span>
+                <span class="payment-pill">Paysafecard</span>
+                <span class="payment-pill">Open Banking</span>
+              </div>
+
+              <p class="payment-section-label">Regional Methods</p>
+              <div class="payment-pills">
+                <span class="payment-pill">Pix (Brazil)</span>
+                <span class="payment-pill">Interac (Canada)</span>
+                <span class="payment-pill">Blik (Poland)</span>
+              </div>
+
+              <p class="payment-section-label">Cryptocurrency</p>
+              <div class="payment-pills">
+                <span class="payment-pill crypto">Bitcoin (BTC)</span>
+                <span class="payment-pill crypto">Ethereum (ETH)</span>
+                <span class="payment-pill crypto">USDT (TRC20 / ERC20)</span>
+                <span class="payment-pill crypto">TRON (TRX)</span>
+                <span class="payment-pill crypto">Litecoin (LTC)</span>
+                <span class="payment-pill crypto">Dogecoin (DOGE)</span>
+                <span class="payment-pill crypto">BNB</span>
+              </div>
+
+              <p style="margin-top:var(--space-5);">The crypto support is particularly strong — 7 different cryptocurrencies with near-instant processing. If you're privacy-conscious or live somewhere with restrictive banking laws, crypto is the cleanest path in and out. Skrill and Neteller cover most e-wallet users, and the regional methods (Pix, Interac, Blik) show JackPoker is thinking about local markets rather than just defaulting to generic solutions.</p>
+            </div>
+
+            <!-- Customer Support -->
+            <div id="support">
+              <h2>Customer Support <span class="verdict-badge verdict-excellent">Excellent</span></h2>
+              <p>JackPoker's support is genuinely impressive. Average response time across channels is <strong>2-5 minutes</strong>, which beats most rooms in this tier. VIP members get 24/7 priority support. The available channels are:</p>
+
+              <div class="support-channels">
+                <div class="support-channel">
+                  <span class="support-channel-icon">&#128172;</span>
+                  <div>
+                    <strong>Telegram</strong>
+                    <span class="support-channel-label"> — fastest response, recommended for urgent issues</span>
+                  </div>
+                </div>
+                <div class="support-channel">
+                  <span class="support-channel-icon">&#128241;</span>
+                  <div>
+                    <strong>WhatsApp</strong>
+                    <span class="support-channel-label"> — great for quick questions while you're on mobile</span>
+                  </div>
+                </div>
+                <div class="support-channel">
+                  <span class="support-channel-icon">&#128178;</span>
+                  <div>
+                    <strong>Facebook Messenger</strong>
+                    <span class="support-channel-label"> — convenient if you're already on Facebook</span>
+                  </div>
+                </div>
+                <div class="support-channel">
+                  <span class="support-channel-icon">&#128247;</span>
+                  <div>
+                    <strong>Instagram</strong>
+                    <span class="support-channel-label"> — DMs are monitored and answered promptly</span>
+                  </div>
+                </div>
+                <div class="support-channel">
+                  <span class="support-channel-icon">&#9993;</span>
+                  <div>
+                    <strong>Email</strong>
+                    <span class="support-channel-label"> — legal@jack-poker.com for formal or account inquiries</span>
+                  </div>
+                </div>
+              </div>
+
+              <p>The breadth of support channels is one of the things JackPoker gets right. Meeting players where they already are — Telegram and WhatsApp especially — rather than forcing everyone through a ticket system is a smart move. Responses in our experience have been helpful and not just copy-pasted answers.</p>
+            </div>
+
+            <!-- FAQ -->
+            <div id="faq">
+              <h2>Frequently Asked Questions</h2>
+              <div class="faq-list">
+
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false">Is JackPoker legit and safe to play at?</button>
+                  <div class="faq-answer">
+                    <p>Yes. JackPoker is licensed by the Government of the Autonomous Island of Anjouan, Union of Comoros, and independently certified by iTech Labs, BMM TestLabs, and GLI — three reputable testing labs. The room has been operating since 2021 with a clean track record and no widespread reports of unpaid withdrawals. It's a legitimate poker operation, not a fly-by-night site.</p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false">What's the best bonus for new players at JackPoker?</button>
+                  <div class="faq-answer">
+                    <p>The <strong>Welcome Package</strong> is the one to go for. Using promo code WELCOME at registration unlocks a 300% match bonus up to $2,000, a 20% instant cash credit on your first deposit, and the Lootbox mini-game where you can win up to 1,000% bonus, up to 25% rakeback, free spins, and tournament tickets. The 300% match is particularly strong — it's one of the biggest percentage matches in the industry right now. The bonus releases as you generate rake, effectively giving you 25% rakeback while it's active.</p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false">Can I play JackPoker on my phone?</button>
+                  <div class="faq-answer">
+                    <p>Yes, on both Android and iOS. Android users can download the dedicated APK directly from the JackPoker website (it's not in the Google Play Store, so you'll need to allow installs from unknown sources in your phone settings). iOS users run JackPoker as a Progressive Web App — open the site in Safari, tap the share icon, and select "Add to Home Screen." It's not identical to a native app but plays smoothly for cash game sessions and tournament registration.</p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false">Does JackPoker accept crypto deposits?</button>
+                  <div class="faq-answer">
+                    <p>Absolutely. JackPoker supports 7 cryptocurrencies: Bitcoin (BTC), Ethereum (ETH), USDT (both TRC20 and ERC20), TRON (TRX), Litecoin (LTC), Dogecoin (DOGE), and BNB. Crypto deposits are processed almost instantly, and withdrawals are typically fast as well. It's one of the best options if you want to keep your banking activity private or if your local banking options are limited.</p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false">How do I become a JackVIP member?</button>
+                  <div class="faq-answer">
+                    <p>JackVIP status is earned through qualifying play — specifically by hitting a rake threshold over a set period. Once you qualify, you're in for life. The benefits include up to 20% lifetime rakeback, 10% casino cashback, priority withdrawal processing, access to private VIP tables, and a dedicated personal VIP manager. The exact rake requirement to qualify isn't publicly listed, so your best bet is to contact support via Telegram to get current figures for your stake level.</p>
+                  </div>
+                </div>
+
+                <div class="faq-item">
+                  <button class="faq-question" aria-expanded="false">What poker games are available at JackPoker?</button>
+                  <div class="faq-answer">
+                    <p>Cash games include No-Limit Texas Hold'em (NL10-NL2000), Pot-Limit Omaha (PLO10-PLO1000), 5-Card Omaha (PLO5), and 6-Card Omaha (PLO6). All cash game tables are 6-max — there are no heads-up tables. Specialty formats include Push-Fold (all-in or fold with 100 BB stacks and a 10 BB ante) and Spin &amp; Win (3-max lottery SNGs with $1-$100 buy-ins and jackpots up to $1 million). The tournament schedule includes MTTs, PKOs, freerolls, and Sit &amp; Gos, with over $1.25M in monthly guaranteed prize pools.</p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div><!-- /.content-main -->
+
+          <!-- ===== SIDEBAR ===== -->
+          <aside class="sidebar">
+
+            <!-- Quick Facts Card -->
+            <div class="sidebar-card">
+              <h3>Quick Facts</h3>
+              <div class="quick-facts">
+                <div class="quick-fact">
+                  <span class="quick-fact-label">Established</span>
+                  <span class="quick-fact-value">2021</span>
+                </div>
+                <div class="quick-fact">
+                  <span class="quick-fact-label">License</span>
+                  <span class="quick-fact-value">Anjouan / Comoros</span>
+                </div>
+                <div class="quick-fact">
+                  <span class="quick-fact-label">Software</span>
+                  <span class="quick-fact-value">Browser-based</span>
+                </div>
+                <div class="quick-fact">
+                  <span class="quick-fact-label">Mobile</span>
+                  <span class="quick-fact-value">Android APK + iOS PWA</span>
+                </div>
+                <div class="quick-fact">
+                  <span class="quick-fact-label">Games</span>
+                  <span class="quick-fact-value">Hold'em, PLO, PLO5, PLO6, Spin&amp;Win, Push-Fold</span>
+                </div>
+                <div class="quick-fact">
+                  <span class="quick-fact-label">Min Deposit</span>
+                  <span class="quick-fact-value text-gold">$10</span>
+                </div>
+                <div class="quick-fact">
+                  <span class="quick-fact-label">Languages</span>
+                  <span class="quick-fact-value">EN, DE, ES, RU, PT</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Promo Code Box -->
+            <div class="sidebar-card">
+              <h3>Promo Code</h3>
+              <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-3);">Enter this code at registration to unlock the full welcome package.</p>
+              <div class="promo-code-inline" id="sidebarPromoCode">WELCOME</div>
+              <button class="btn btn-gold btn-copy" onclick="copySidebarPromo()" style="width:100%;">Copy Code</button>
+              <p class="promo-note" style="margin-top:var(--space-3);">300% match bonus + 20% instant cash + Lootbox</p>
+            </div>
+
+            <!-- Visit CTA -->
+            <div class="sidebar-card" style="background:linear-gradient(135deg,rgba(228,161,1,0.08),var(--color-surface));border-color:rgba(228,161,1,0.25);">
+              <h3>Ready to Play?</h3>
+              <p style="font-size:var(--text-sm);color:var(--color-text-muted);margin-bottom:var(--space-2);">Join JackPoker today and claim your 300% welcome bonus. Soft games, crypto deposits, and 24/7 freerolls waiting.</p>
+              <a href="https://jack-poker.com" target="_blank" rel="noopener noreferrer sponsored" class="sidebar-visit-btn">Visit JackPoker.com &#8599;</a>
+            </div>
+
+          </aside>
+        </div><!-- /.content-grid -->
+      </div>
+    </section>
+
+    <!-- Bottom CTA Banner -->
+    <section class="cta-banner">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Get the Full Welcome Package</h2>
+          <p>Use promo code <strong>WELCOME</strong> when you register to unlock the 300% match bonus up to $2,000, 20% instant cash on your first deposit, and the Lootbox with prizes up to 1,000% bonus. Minimum deposit just $10.</p>
+          <a href="https://jack-poker.com" target="_blank" rel="noopener noreferrer sponsored" class="btn btn-gold btn-lg">Claim Bonus at JackPoker.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="40" rx="8" fill="#E4A101"/>
+              <text x="8" y="29" font-family="Oswald, sans-serif" font-weight="700" font-size="24" fill="#0D0F14">JP</text>
+            </svg>
+            <span>JackPoker Fan Hub</span>
+          </div>
+          <p>An independent fan site dedicated to helping players get the most out of JackPoker. Not affiliated with or endorsed by Jack La International Limitada.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Pages</h4>
+          <a href="index.html">Home</a>
+          <a href="review.html">Review</a>
+          <a href="bonuses.html">Bonuses</a>
+          <a href="tournaments.html">Tournaments</a>
+          <a href="games.html">Games</a>
+          <a href="promo-code.html">Promo Code</a>
+        </div>
+        <div class="footer-links">
+          <h4>JackPoker</h4>
+          <a href="https://jack-poker.com" target="_blank" rel="noopener noreferrer">Official Website</a>
+          <a href="https://jack-poker.com/en/promotions/match-bonus/" target="_blank" rel="noopener noreferrer">Match Bonus</a>
+          <a href="https://jack-poker.com/en/tournaments/" target="_blank" rel="noopener noreferrer">Tournaments</a>
+        </div>
+        <div class="footer-links">
+          <h4>Support Channels</h4>
+          <p class="footer-support-note">Contact JackPoker directly:</p>
+          <span>Telegram</span>
+          <span>WhatsApp</span>
+          <span>Facebook Messenger</span>
+          <span>Instagram</span>
+          <span>Email: legal&#64;jack-poker.com</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>This is an independent fan site. JackPoker is owned and operated by Jack La International Limitada. Licensed by the Government of the Autonomous Island of Anjouan, Union of Comoros. Certified by iTech Labs, BMM TestLabs, and GLI.</p>
+        <p>18+ only. Gambling can be addictive. Please play responsibly.</p>
+        <p>&copy; 2026 JackPoker Fan Hub. This site includes commercial links.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script>
+    function copySidebarPromo() {
+      const code = document.getElementById('sidebarPromoCode').textContent.trim();
+      navigator.clipboard.writeText(code).then(() => {
+        const btn = document.querySelector('.btn-copy');
+        const original = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(() => { btn.textContent = original; }, 2000);
+      }).catch(() => {
+        const btn = document.querySelector('.btn-copy');
+        const original = btn.textContent;
+        btn.textContent = 'Copied!';
+        setTimeout(() => { btn.textContent = original; }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>

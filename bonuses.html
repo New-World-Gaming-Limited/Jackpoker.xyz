@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JackPoker Bonuses &amp; Promotions 2026: Complete Guide</title>
+  <meta name="description" content="Every JackPoker bonus explained: 300% Welcome Match, Lootbox, Welcome Quests, Aviator Bonus, Deposit Booster, Referral Program, Bad Beat Jackpot, and more. Use promo code WELCOME.">
+  <meta property="og:title" content="JackPoker Bonuses &amp; Promotions 2026: Complete Guide">
+  <meta property="og:description" content="A complete breakdown of all JackPoker bonuses and promotions. Welcome match, Lootbox, quests, rakeback, jackpots and more.">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ===== BONUSES PAGE STYLES ===== */
+
+    /* Summary grid at top */
+    .bonus-summary-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--space-4);
+      margin-top: var(--space-8);
+    }
+
+    .bonus-summary-stat {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-5) var(--space-4);
+      text-align: center;
+    }
+
+    .bonus-summary-stat .stat-number {
+      font-size: var(--text-xl);
+    }
+
+    @media (max-width: 768px) {
+      .bonus-summary-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 480px) {
+      .bonus-summary-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    /* Full-width bonus layout with sidebar */
+    .bonuses-layout {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: var(--space-10);
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .bonuses-layout { grid-template-columns: 1fr; }
+    }
+
+    /* Bonus category heading */
+    .bonus-category-heading {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      margin-bottom: var(--space-6);
+      padding-bottom: var(--space-4);
+      border-bottom: 2px solid var(--color-border);
+      color: var(--color-text);
+    }
+
+    .bonus-category-heading span {
+      color: var(--color-gold);
+    }
+
+    /* Bonus detail cards */
+    .bonus-cards {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-6);
+      margin-bottom: var(--space-12);
+    }
+
+    .bonus-detail-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-8);
+      transition: border-color var(--transition-interactive);
+    }
+
+    .bonus-detail-card:hover {
+      border-color: rgba(228, 161, 1, 0.3);
+    }
+
+    .bonus-detail-card.featured {
+      border-color: rgba(228, 161, 1, 0.35);
+      background: linear-gradient(135deg, rgba(228, 161, 1, 0.05), var(--color-surface));
+    }
+
+    .bonus-detail-card .card-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: var(--space-4);
+      margin-bottom: var(--space-4);
+      flex-wrap: wrap;
+    }
+
+    .bonus-detail-card .card-title-group {
+      flex: 1;
+    }
+
+    .bonus-detail-card .card-number {
+      font-family: var(--font-display);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      color: rgba(228, 161, 1, 0.4);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-2);
+    }
+
+    .bonus-detail-card h3 {
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      margin-bottom: 0;
+    }
+
+    .bonus-detail-card .bonus-amount {
+      font-family: var(--font-display);
+      font-size: var(--text-xl);
+      font-weight: 700;
+      color: var(--color-gold);
+      white-space: nowrap;
+    }
+
+    .bonus-detail-card .bonus-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin-bottom: var(--space-4);
+    }
+
+    .bonus-meta-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-1);
+      padding: var(--space-1) var(--space-3);
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-full);
+      font-size: var(--text-xs);
+      font-weight: 500;
+      color: var(--color-text-muted);
+    }
+
+    .bonus-meta-pill.pill-gold {
+      background: rgba(228, 161, 1, 0.08);
+      border-color: rgba(228, 161, 1, 0.25);
+      color: var(--color-gold);
+    }
+
+    .bonus-meta-pill.pill-green {
+      background: rgba(34, 197, 94, 0.08);
+      border-color: rgba(34, 197, 94, 0.25);
+      color: var(--color-green);
+    }
+
+    .bonus-meta-pill.pill-red {
+      background: rgba(229, 68, 75, 0.08);
+      border-color: rgba(229, 68, 75, 0.25);
+      color: var(--color-red-light);
+    }
+
+    .bonus-detail-card p {
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+      line-height: 1.75;
+      margin-bottom: var(--space-3);
+    }
+
+    .bonus-detail-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .bonus-detail-card ul {
+      margin: var(--space-3) 0;
+      padding-left: var(--space-5);
+    }
+
+    .bonus-detail-card li {
+      color: var(--color-text-muted);
+      font-size: var(--text-sm);
+      line-height: 1.75;
+      margin-bottom: var(--space-2);
+    }
+
+    .bonus-detail-card li strong {
+      color: var(--color-text);
+    }
+
+    .bonus-detail-card .bonus-divider {
+      border: none;
+      border-top: 1px solid var(--color-border);
+      margin: var(--space-5) 0;
+    }
+
+    /* Tier table */
+    .tier-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: var(--space-4) 0;
+      font-size: var(--text-sm);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    .tier-table thead tr {
+      background: var(--color-surface-2);
+    }
+
+    .tier-table th {
+      text-align: left;
+      padding: var(--space-3) var(--space-4);
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: var(--text-xs);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--color-text-muted);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .tier-table td {
+      padding: var(--space-3) var(--space-4);
+      border-bottom: 1px solid var(--color-border);
+      color: var(--color-text-muted);
+    }
+
+    .tier-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .tier-table tbody tr:hover td {
+      background: var(--color-surface-2);
+    }
+
+    .tier-name {
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    .tier-silver { color: #B0B8C8; }
+    .tier-gold-color { color: var(--color-gold); }
+    .tier-supernova { color: #E87B2A; }
+
+    /* VIP payout table */
+    .vip-table .hand-name {
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    .vip-table .payout-val {
+      color: var(--color-gold);
+      font-weight: 600;
+    }
+
+    /* Referral levels */
+    .referral-levels {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+      margin: var(--space-4) 0;
+    }
+
+    .referral-level {
+      display: flex;
+      gap: var(--space-4);
+      align-items: flex-start;
+      padding: var(--space-4) var(--space-5);
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-md);
+    }
+
+    .referral-level-badge {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(228, 161, 1, 0.1);
+      border: 1px solid rgba(228, 161, 1, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: var(--text-sm);
+      color: var(--color-gold);
+    }
+
+    .referral-level-info {
+      flex: 1;
+    }
+
+    .referral-level-info strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: var(--text-sm);
+      font-weight: 600;
+      text-transform: uppercase;
+      color: var(--color-text);
+      margin-bottom: var(--space-1);
+    }
+
+    .referral-level-info p {
+      margin: 0;
+      font-size: var(--text-xs);
+    }
+
+    .referral-level-amount {
+      flex-shrink: 0;
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      font-weight: 700;
+      color: var(--color-gold);
+    }
+
+    /* How to claim steps */
+    .how-to-section {
+      padding: clamp(var(--space-12), 8vw, var(--space-20)) 0;
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6);
+      margin-top: var(--space-10);
+    }
+
+    .step-card {
+      background: var(--color-surface-2);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+      position: relative;
+    }
+
+    .step-card-number {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--color-gold);
+      color: #0D0F14;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-weight: 700;
+      font-size: var(--text-lg);
+      margin-bottom: var(--space-4);
+    }
+
+    .step-card h4 {
+      font-family: var(--font-display);
+      font-size: var(--text-base);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      margin-bottom: var(--space-2);
+    }
+
+    .step-card p {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      .steps-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 480px) {
+      .steps-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Wagering info box */
+    .wagering-section {
+      padding: clamp(var(--space-12), 8vw, var(--space-20)) 0;
+    }
+
+    .wagering-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6);
+      margin-top: var(--space-8);
+    }
+
+    .wagering-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-6);
+    }
+
+    .wagering-card .wager-icon {
+      font-size: 1.75rem;
+      margin-bottom: var(--space-3);
+    }
+
+    .wagering-card h4 {
+      font-family: var(--font-display);
+      font-size: var(--text-base);
+      font-weight: 600;
+      text-transform: uppercase;
+      margin-bottom: var(--space-3);
+    }
+
+    .wagering-card p {
+      font-size: var(--text-sm);
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .wagering-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Sidebar sticky */
+    .bonuses-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-6);
+    }
+
+    .bonuses-sidebar .sidebar-card {
+      position: sticky;
+      top: 96px;
+    }
+
+    /* Quick nav list in sidebar */
+    .bonus-nav-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-1);
+    }
+
+    .bonus-nav-list li a {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-2) var(--space-3);
+      font-size: var(--text-xs);
+      color: var(--color-text-muted);
+      border-radius: var(--radius-sm);
+      transition: background var(--transition-interactive), color var(--transition-interactive);
+    }
+
+    .bonus-nav-list li a:hover {
+      background: var(--color-surface-2);
+      color: var(--color-gold);
+    }
+
+    .bonus-nav-list li a::before {
+      content: "";
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: var(--color-border-light);
+      flex-shrink: 0;
+    }
+
+    /* Featured badge */
+    .featured-ribbon {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-1);
+      padding: var(--space-1) var(--space-3);
+      background: var(--color-gold);
+      color: #0D0F14;
+      border-radius: var(--radius-sm);
+      font-size: var(--text-xs);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: var(--space-4);
+    }
+
+    /* Info note inline */
+    .info-note {
+      display: flex;
+      gap: var(--space-3);
+      align-items: flex-start;
+      padding: var(--space-4) var(--space-5);
+      background: rgba(228, 161, 1, 0.05);
+      border: 1px solid rgba(228, 161, 1, 0.15);
+      border-radius: var(--radius-md);
+      margin: var(--space-4) 0;
+    }
+
+    .info-note-icon {
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .info-note p {
+      margin: 0;
+      font-size: var(--text-xs);
+      line-height: 1.6;
+      color: var(--color-text-muted);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="JackPoker Fan Hub Home">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="40" height="40" rx="8" fill="#E4A101"/>
+          <text x="8" y="29" font-family="Oswald, sans-serif" font-weight="700" font-size="24" fill="#0D0F14">JP</text>
+        </svg>
+        <span class="logo-text">JackPoker <span class="logo-accent">Fan Hub</span></span>
+      </a>
+      <nav class="nav-desktop" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="review.html" class="nav-link">Review</a>
+        <a href="bonuses.html" class="nav-link active">Bonuses</a>
+        <a href="tournaments.html" class="nav-link">Tournaments</a>
+        <a href="games.html" class="nav-link">Games</a>
+        <a href="promo-code.html" class="nav-link cta-nav">Promo Code</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="Open menu" aria-expanded="false" id="mobileToggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" id="mobileNav" aria-label="Mobile navigation">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="review.html" class="nav-link">Review</a>
+      <a href="bonuses.html" class="nav-link active">Bonuses</a>
+      <a href="tournaments.html" class="nav-link">Tournaments</a>
+      <a href="games.html" class="nav-link">Games</a>
+      <a href="promo-code.html" class="nav-link">Promo Code</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="page-hero">
+      <div class="container">
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="index.html">Home</a>
+          <span class="sep">/</span>
+          <span>Bonuses</span>
+        </nav>
+        <h1>JackPoker <span class="text-gold">Bonuses &amp; Promotions</span></h1>
+        <p>Every active promotion at JackPoker, explained in full. From the welcome package to the VIP jackpots, here's what's on offer right now.</p>
+        <div class="bonus-summary-grid">
+          <div class="bonus-summary-stat">
+            <span class="stat-number">300%</span>
+            <span class="stat-label">Welcome Match</span>
+          </div>
+          <div class="bonus-summary-stat">
+            <span class="stat-number">$2,000</span>
+            <span class="stat-label">Max Bonus</span>
+          </div>
+          <div class="bonus-summary-stat">
+            <span class="stat-number">10</span>
+            <span class="stat-label">Active Promos</span>
+          </div>
+          <div class="bonus-summary-stat">
+            <span class="stat-number">WELCOME</span>
+            <span class="stat-label">Promo Code</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Main Bonuses Content -->
+    <section class="section content-section">
+      <div class="container">
+        <div class="bonuses-layout">
+
+          <!-- Main content -->
+          <div class="bonuses-main">
+
+            <!-- Welcome Bonuses -->
+            <h2 class="bonus-category-heading">Welcome <span>Bonuses</span></h2>
+            <div class="bonus-cards" id="welcome-bonuses">
+
+              <!-- 1. Welcome Match Bonus -->
+              <div class="bonus-detail-card featured" id="welcome-match">
+                <div class="featured-ribbon">&#9733; Featured Welcome Offer</div>
+                <div class="card-header">
+                  <div class="card-title-group">
+                    <div class="card-number">Bonus 01</div>
+                    <h3>Welcome Match Bonus</h3>
+                  </div>
+                  <div class="bonus-amount">300% up to $2,000</div>
+                </div>
+                <div class="bonus-meta">
+                  <span class="bonus-meta-pill pill-gold">First Deposit</span>
+                  <span class="bonus-meta-pill pill-green">25% Effective Rakeback</span>
+                  <span class="bonus-meta-pill">60 Days to Release</span>
+                  <span class="bonus-meta-pill">Use Code: WELCOME</span>
+                </div>
+                <p>Your first deposit is matched at 300%. If you deposit $200, you get a $600 bonus added to your account, up to a maximum of $2,000 from a $667 deposit. The bonus is held in your bonus balance and released in increments as you play.</p>
+                <p>The release rate is <strong>$5 credited for every $20 in rake you generate</strong>, which works out to 25% effective rakeback. This is on top of any rakeback you earn elsewhere. You have 60 days from deposit to release the full bonus.</p>
+                <hr class="bonus-divider">
+                <p>This bonus is also combined with the <strong>20% Instant Cash</strong> offer, credited immediately when you deposit. The instant cash has no wagering requirements and is yours to use right away. Together, these two components make up the core welcome offer.</p>
+                <div class="info-note">
+                  <span class="info-note-icon">&#128161;</span>
+                  <p>The 20% Instant Cash is credited to your real money balance with no strings attached. The 300% match bonus sits in your bonus wallet and unlocks as you rake.</p>
+                </div>
+              </div>
+
+              <!-- 2. Welcome Lootbox -->
+              <div class="bonus-detail-card" id="welcome-lootbox">
+                <div class="card-header">
+                  <div class="card-title-group">
+                    <div class="card-number">Bonus 02</div>
+                    <h3>Welcome Lootbox</h3>
+                  </div>
+                  <div class="bonus-amount">Up to 1,000%</div>
+                </div>
+                <div class="bonus-meta">
+                  <span class="bonus-meta-pill pill-gold">Deposit $10+</span>
+                  <span class="bonus-meta-pill">Mini-Game</span>
+                  <span class="bonus-meta-pill">Activated on First Deposit</span>
+                </div>
+                <p>When you make your first deposit of $10 or more, the Lootbox mini-game activates in the lobby. Pick 3 cards from a grid of 9 to reveal your randomized rewards. The contents of each card are random, so every new player gets a different combination.</p>
+                <p>Possible Lootbox rewards include:</p>
+                <ul>
+                  <li><strong>Up to 1,000% deposit bonus</strong> on top of your first deposit</li>
+                  <li><strong>Up to 25% rakeback</strong> for an initial period</li>
+                  <li><strong>Up to 300 free spins</strong> in Gates of Olympus</li>
+                  <li><strong>Tournament ticket package</strong> worth up to $500</li>
+                </ul>
+                <p>The Lootbox is a standalone bonus on top of the Welcome Match, not a replacement for it. You can land all three selections in a single play. Open it from your lobby immediately after your first deposit.</p>
+              </div>
+
+              <!-- 3. Welcome Quests -->
+              <div class="bonus-detail-card" id="welcome-quests">
+                <div class="card-header">
+                  <div class="card-title-group">
+                    <div class="card-number">Bonus 03</div>
+                    <h3>Welcome Quests</h3>
+                  </div>
+                  <div class="bonus-amount">Up to $635+</div>
+                </div>
+                <div class="bonus-meta">
+                  <span class="bonus-meta-pill pill-gold">3 Tiers</span>
+                  <span class="bonus-meta-pill">14 Days to Complete</span>
+                  <span class="bonus-meta-pill">Visible in Lobby</span>
+                </div>
+                <p>Welcome Quests are a set of tasks that unlock based on your first deposit size. There are three tiers: Silver, Gold, and Supernova. The quests appear in the lobby once your first deposit is confirmed, and you have 14 days to complete each tier's challenges.</p>
+
+                <table class="tier-table" aria-label="Welcome Quest tiers">
+                  <thead>
+                    <tr>
+                      <th>Tier</th>
+                      <th>Deposit Required</th>
+                      <th>Cash Rewards</th>
+                      <th>Extras</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td><span class="tier-name tier-silver">&#9679; Silver</span></td>
+                      <td>$20 to $99.99</td>
+                      <td>Up to $22</td>
+                      <td>Flipout ticket ($7K pool) + free spins</td>
+                    </tr>
+                    <tr>
+                      <td><span class="tier-name tier-gold-color">&#9679; Gold</span></td>
+                      <td>$100 to $499.99</td>
+                      <td>~$140</td>
+                      <td>Flipout ticket ($15K pool) + 150 free spins</td>
+                    </tr>
+                    <tr>
+                      <td><span class="tier-name tier-supernova">&#9679; Supernova</span></td>
+                      <td>$500+</td>
+                      <td>~$635</td>
+                      <td>Flipout ticket ($30K pool) + 150 free spins in DemiGods</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p>Flipout is JackPoker's exclusive PKO-style tournament format. The tickets granted through Welcome Quests give you direct entry into dedicated pools with no additional buy-in needed. Complete quests through the lobby tracker; progress is shown in real time.</p>
+              </div>
+
+              <!-- 4. Aviator Bonus -->
+              <div class="bonus-detail-card" id="aviator-bonus">
+                <div class="card-header">
+                  <div class="card-title-group">
+                    <div class="card-number">Bonus 04</div>
+                    <h3>Aviator Bonus</h3>
+                  </div>
+                  <div class="bonus-amount">100 Free Flights</div>
+                </div>
+                <div class="bonus-meta">
+                  <span class="bonus-meta-pill pill-gold">Welcome Bonus</span>
+                  <span class="bonus-meta-pill">Spribe Aviator</span>
+                  <span class="bonus-meta-pill">Up to x10,000 Multiplier</span>
+                </div>
+                <p>The Aviator Bonus stacks on top of the core welcome package. You get <strong>100 Free Flights</strong> in Spribe's Aviator game, where the multiplier can reach up to x10,000. Free Flights use a fixed stake; winnings are credited as real money.</p>
+                <p>This bonus also includes the full Welcome Match structure:</p>
+                <ul>
+                  <li>300% match bonus up to $2,000</li>
+                  <li>20% Instant Cash credited immediately</li>
+                  <li>Up to 300 free spins in Gates of Olympus</li>
+                </ul>
+                <p>The Aviator Bonus is available on your first deposit when using promo code <strong>WELCOME</strong>. Activate Aviator from the casino section in the JackPoker lobby.</p>
+              </div>
+            </div>
+
+            <!-- Ongoing Promotions -->
+            <h2 class="bonus-category-heading">Ongoing <span>Promotions</span></h2>
+            <div class="bonus-cards" id="ongoing-promos">
+
+              <!-- 5. Deposit Booster -->
+              <div class="bonus-detail-card" id="deposit-booster">
+                <div class="card-header">
+                  <div class="card-title-group">
+                    <div class="card-number">Bonus 05</div>
+                    <h3>Deposit Booster</h3>
+                  </div>
+                  <div class="bonus-amount">10% to 1,000%</div>
+                </div>
+                <div class="bonus-meta">
+                  <span class="bonus-meta-pill pill-gold">Every Re-Deposit $10+</span>
+                  <span class="bonus-meta-pill pill-green">10% Effective Rakeback</span>
+                  <span class="bonus-meta-pill">Guaranteed Minimum 10%</span>
+                </div>
+                <p>The Deposit Booster activates on every re-deposit of $10 or more after your welcome bonus is active. Each qualifying deposit triggers a wheel spin that awards a bonus between 10% and 1,000% of that deposit's value.</p>
+                <p>The bonus is credited to your bonus balance, not your real money balance. It unlocks at <strong>$1 for every $10 in rake generated</strong>, which is 10% effective rakeback on those funds. There's no upper limit on how many times you can spin the Deposit Booster wheel.</p>
+                <div class="info-note">
+                  <span class="info-note-icon">&#128204;</span>
+                  <p>The minimum outcome is always 10%, so even on an unlucky spin you still get something back. The 1,000% outcome is rare but has been hit by players.</p>
+                </div>
+              </div>
+
+              <!-- 6. Referral Program -->
+              <div class="bonus-detail-card" id="referral">
+                <div class="card-header">
+                  <div class="card-title-group">
+                    <div class="card-number">Bonus 06</div>
+                    <h3>Jack's Pals Referral Program</h3>
+                  </div>
+                  <div class="bonus-amount">Up to $1,170</div>
+                </div>
+                <div class="bonus-meta">
+                  <span class="bonus-meta-pill pill-green">Real Money, No Wagering</span>
+                  <span class="bonus-meta-pill">Per Referred Friend</span>
+                  <span class="bonus-meta-pill">3 Levels</span>
+                </div>
+                <p>Refer a friend to JackPoker and earn real money as they play. The Jack's Pals program pays out in three levels based on how much rake your referral generates. There are no wagering requirements on any of the payouts.</p>
+
+                <div class="referral-levels">
+                  <div class="referral-level">
+                    <div class="referral-level-badge">L1</div>
+                    <div class="referral-level-info">
+                      <strong>Level 1: Instant Cash</strong>
+                      <p>Triggered when your referral generates their first $15 in rake</p>
+                    </div>
+                    <div class="referral-level-amount">$20</div>
+                  </div>
+                  <div class="referral-level">
+                    <div class="referral-level-badge">L2</div>
+                    <div class="referral-level-info">
+                      <strong>Level 2: Ongoing Play</strong>
+                      <p>Triggered when they generate $100 more in rake after Level 1</p>
+                    </div>
+                    <div class="referral-level-amount">$150</div>
+                  </div>
+                  <div class="referral-level">
+                    <div class="referral-level-badge">L3</div>
+                    <div class="referral-level-info">
+                      <strong>Level 3: Regular Player</strong>
+                      <p>Triggered when they generate $800 more in rake after Level 2</p>
+                    </div>
+                    <div class="referral-level-amount">$1,000</div>
+                  </div>
+                </div>
+
+                <p>The $20 Level 1 payout arrives almost immediately. Levels 2 and 3 are credited as your referral hits the rake thresholds. You can refer multiple friends with no cap on total earnings.</p>
+              </div>
+
+              <!-- 7. Bad Beat Jackpot -->
+              <div class="bonus-detail-card" id="bad-beat">
+                <div class="card-header">
+                  <div class="card-title-group">
+                    <div class="card-number">Bonus 07</div>
+                    <h3>Bad Beat Jackpot</h3>
+                  </div>
+                  <div class="bonus-amount">Up to $2,000</div>
+                </div>
+                <div class="bonus-meta">
+                  <span class="bonus-meta-pill pill-red">Consolation Payout</span>
+                  <span class="bonus-meta-pill">NLH, PLO, PLO5, PLO6</span>
+                  <span class="bonus-meta-pill pill-green">Credited Immediately</span>
+                </div>
+                <p>The Bad Beat Jackpot is JackPoker's consolation for the worst kind of poker loss: losing with a full house or better. If you hold a qualifying hand (full house or above) and still lose the pot in NLH, PLO, PLO5, or PLO6, you're eligible for a payout of up to $2,000.</p>
+                <p>The payout is credited to your account immediately after the hand. No claim process needed. The qualifying hands are: full house, four of a kind, straight flush, and royal flush, provided they lose at showdown. Both players must show their hands.</p>
+                <div class="info-note">
+                  <span class="info-note-icon">&#9825;</span>
+                  <p>Bad beats sting, but at least this one pays. The payout scales with the severity of the bad beat and the stakes being played.</p>
+                </div>
+              </div>
+
+              <!-- 8. Monte Carlo VIP Jackpot -->
+              <div class="bonus-detail-card" id="monte-carlo">
+                <div class="card-header">
+                  <div class="card-title-group">
+                    <div class="card-number">Bonus 08</div>
+                    <h3>Monte Carlo VIP Jackpot</h3>
+                  </div>
+                  <div class="bonus-amount">Up to 70x BB</div>
+                </div>
+                <div class="bonus-meta">
+                  <span class="bonus-meta-pill pill-gold">VIP Members Only</span>
+                  <span class="bonus-meta-pill">NLH and PLO5</span>
+                  <span class="bonus-meta-pill">At Showdown</span>
+                </div>
+                <p>The Monte Carlo VIP Jackpot rewards strong winning hands at showdown with extra big blind payouts. Available exclusively for JackVIP members in No Limit Hold'em and PLO5 cash games.</p>
+
+                <table class="tier-table vip-table" aria-label="Monte Carlo VIP Jackpot payouts">
+                  <thead>
+                    <tr>
+                      <th>Hand</th>
+                      <th>Payout (Big Blinds)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="hand-name">Set</td>
+                      <td class="payout-val">1 to 2 BB</td>
+                    </tr>
+                    <tr>
+                      <td class="hand-name">Straight</td>
+                      <td class="payout-val">2 to 3 BB</td>
+                    </tr>
+                    <tr>
+                      <td class="hand-name">Flush</td>
+                      <td class="payout-val">4 to 5 BB</td>
+                    </tr>
+                    <tr>
+                      <td class="hand-name">Full House</td>
+                      <td class="payout-val">6 to 8 BB</td>
+                    </tr>
+                    <tr>
+                      <td class="hand-name">Four of a Kind</td>
+                      <td class="payout-val">17 to 20 BB</td>
+                    </tr>
+                    <tr>
+                      <td class="hand-name">Straight Flush</td>
+                      <td class="payout-val">25 to 30 BB</td>
+                    </tr>
+                    <tr>
+                      <td class="hand-name">Royal Flush</td>
+                      <td class="payout-val">60 to 70 BB</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <p>Payouts are automatic and credited in big blind units of the table you're playing. The exact payout within each range varies by table stakes and current jackpot fund. You need to reach JackVIP status to qualify; contact your VIP manager for details.</p>
+              </div>
+            </div>
+
+            <!-- Seasonal & Casino Promotions -->
+            <h2 class="bonus-category-heading">Seasonal &amp; <span>Casino Promos</span></h2>
+            <div class="bonus-cards" id="seasonal-promos">
+
+              <!-- 9. Poker Market Quests -->
+              <div class="bonus-detail-card" id="market-quests">
+                <div class="card-header">
+                  <div class="card-title-group">
+                    <div class="card-number">Bonus 09</div>
+                    <h3>Poker Market Quests</h3>
+                  </div>
+                  <div class="bonus-amount">$20,000 Total</div>
+                </div>
+                <div class="bonus-meta">
+                  <span class="bonus-meta-pill pill-gold">Seasonal Series</span>
+                  <span class="bonus-meta-pill">29 Quests</span>
+                  <span class="bonus-meta-pill">Cash, Tournaments &amp; Casino</span>
+                </div>
+                <p>Poker Market Quests are a seasonal challenge series with $20,000 in total prize money spread across 29 individual quests. They span all three main areas of JackPoker: cash game tables, tournaments, and the casino section.</p>
+                <p>Quests are divided into three difficulty levels: easy, medium, and hard. Easy quests are quick tasks you can knock out in a session or two. Medium quests require sustained play across multiple days. Hard quests are endurance challenges aimed at active high-volume players.</p>
+                <p>Completing all quests within a single category (cash, tournaments, or casino) earns an exclusive event invite. These events have larger prize pools and are only accessible through quest completion, not direct buy-in.</p>
+                <div class="info-note">
+                  <span class="info-note-icon">&#127942;</span>
+                  <p>The seasonal nature means Poker Market Quests rotate. Check the promotions lobby to see the current series, its end date, and which quests are still available to complete.</p>
+                </div>
+              </div>
+
+              <!-- 10. 250 Weekly Bonus -->
+              <div class="bonus-detail-card" id="weekly-bonus">
+                <div class="card-header">
+                  <div class="card-title-group">
+                    <div class="card-number">Bonus 10</div>
+                    <h3>250 Weekly Bonus (JackCasino)</h3>
+                  </div>
+                  <div class="bonus-amount">Free Spins Weekly</div>
+                </div>
+                <div class="bonus-meta">
+                  <span class="bonus-meta-pill pill-gold">Tuesdays &amp; Saturdays</span>
+                  <span class="bonus-meta-pill">JackCasino</span>
+                  <span class="bonus-meta-pill">Deposit-Based</span>
+                </div>
+                <p>The 250 Weekly Bonus runs in JackCasino every Tuesday and Saturday. Make a qualifying deposit on either of those days and you'll receive free spins. The number of spins scales with your deposit size.</p>
+                <p>Free spins are allocated automatically after your deposit is confirmed. They're available in the casino lobby immediately. Winnings from free spins are credited as bonus funds and subject to standard bonus release rules.</p>
+                <p>This promotion resets each week. You can claim it twice per week as long as you make eligible deposits on both qualifying days.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="bonuses-sidebar" aria-label="Bonus sidebar">
+            <div class="sidebar-card">
+              <h3>Promo Code</h3>
+              <div class="promo-code-inline" id="promoCode">WELCOME</div>
+              <button class="btn btn-gold btn-copy" style="width:100%; margin-bottom: var(--space-3);" onclick="copyPromo()">Copy Code</button>
+              <p class="promo-note">Enter at registration to unlock the full welcome package.</p>
+            </div>
+
+            <div class="sidebar-card" style="position: static;">
+              <h3>Quick Navigation</h3>
+              <ul class="bonus-nav-list">
+                <li><a href="#welcome-match">Welcome Match (300%)</a></li>
+                <li><a href="#welcome-lootbox">Welcome Lootbox</a></li>
+                <li><a href="#welcome-quests">Welcome Quests</a></li>
+                <li><a href="#aviator-bonus">Aviator Bonus</a></li>
+                <li><a href="#deposit-booster">Deposit Booster</a></li>
+                <li><a href="#referral">Jack's Pals Referral</a></li>
+                <li><a href="#bad-beat">Bad Beat Jackpot</a></li>
+                <li><a href="#monte-carlo">Monte Carlo VIP Jackpot</a></li>
+                <li><a href="#market-quests">Poker Market Quests</a></li>
+                <li><a href="#weekly-bonus">250 Weekly Bonus</a></li>
+                <li><a href="#wagering">Wagering Requirements</a></li>
+                <li><a href="#how-to-claim">How to Claim</a></li>
+              </ul>
+            </div>
+
+            <div class="sidebar-card" style="position: static;">
+              <h3>Bonus At a Glance</h3>
+              <div class="quick-facts">
+                <div class="quick-fact">
+                  <span class="quick-fact-label">Welcome Match</span>
+                  <span class="quick-fact-value">300% / $2K</span>
+                </div>
+                <div class="quick-fact">
+                  <span class="quick-fact-label">Instant Cash</span>
+                  <span class="quick-fact-value">20% no wager</span>
+                </div>
+                <div class="quick-fact">
+                  <span class="quick-fact-label">Lootbox</span>
+                  <span class="quick-fact-value">Up to 1,000%</span>
+                </div>
+                <div class="quick-fact">
+                  <span class="quick-fact-label">Quests (Max)</span>
+                  <span class="quick-fact-value">~$635</span>
+                </div>
+                <div class="quick-fact">
+                  <span class="quick-fact-label">Referral (Max)</span>
+                  <span class="quick-fact-value">$1,170</span>
+                </div>
+                <div class="quick-fact">
+                  <span class="quick-fact-label">Min Deposit</span>
+                  <span class="quick-fact-value">$10</span>
+                </div>
+                <div class="quick-fact">
+                  <span class="quick-fact-label">Release Rate</span>
+                  <span class="quick-fact-value">$5 / $20 rake</span>
+                </div>
+                <div class="quick-fact">
+                  <span class="quick-fact-label">Expiry</span>
+                  <span class="quick-fact-value">60 days</span>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wagering Requirements -->
+    <section class="wagering-section" id="wagering">
+      <div class="container">
+        <div class="section-header">
+          <h2>Wagering <span class="text-gold">Requirements</span></h2>
+          <p>Understanding how JackPoker bonuses unlock is important before you decide how to use them.</p>
+        </div>
+        <div class="wagering-grid">
+          <div class="wagering-card">
+            <div class="wager-icon">&#9827;</div>
+            <h4>Standard Release Rate</h4>
+            <p>Most bonuses, including the 300% Welcome Match, unlock at <strong>$5 credited for every $20 in rake generated</strong>. That's a 25% effective rakeback rate. Every hand you play at a real money table contributes toward releasing your bonus balance.</p>
+          </div>
+          <div class="wagering-card">
+            <div class="wager-icon">&#128204;</div>
+            <h4>Deposit Booster Rate</h4>
+            <p>The Deposit Booster bonus releases at a slower rate: <strong>$1 for every $10 in rake</strong>, which is 10% effective rakeback. This still makes the booster worthwhile, especially given the chance of landing a 100%+ spin.</p>
+          </div>
+          <div class="wagering-card">
+            <div class="wager-icon">&#128176;</div>
+            <h4>Withdrawal Rules</h4>
+            <p>All bonus balance must be fully released before withdrawal. The 20% Instant Cash has no wagering requirement and can be withdrawn at any time. Winnings generated from Bonus Bonanza tournaments are not subject to any time limit for clearing.</p>
+          </div>
+        </div>
+        <div class="highlight-box" style="margin-top: var(--space-8); max-width: 720px;">
+          <p><strong>Important:</strong> Rake contribution toward bonus release happens automatically as you play cash games and tournaments. You don't need to opt in or track anything manually. The lobby shows your current bonus balance and release progress.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Claim -->
+    <section class="how-to-section" id="how-to-claim">
+      <div class="container">
+        <div class="section-header">
+          <h2>How to <span class="text-gold">Claim</span></h2>
+          <p>Getting started at JackPoker and activating the full welcome package takes about five minutes.</p>
+        </div>
+        <div class="steps-grid">
+          <div class="step-card">
+            <div class="step-card-number">1</div>
+            <h4>Visit JackPoker.com</h4>
+            <p>Go to <a href="https://jack-poker.com" target="_blank" rel="noopener noreferrer sponsored" class="text-gold">JackPoker.com</a> and click the Register or Sign Up button. The site works directly in your browser. No download is required.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-card-number">2</div>
+            <h4>Register with Promo Code WELCOME</h4>
+            <p>Fill in the registration form and enter <strong>WELCOME</strong> in the promo code field. This code activates the full welcome package, including the 300% match and Lootbox.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-card-number">3</div>
+            <h4>Make Your First Deposit ($10+)</h4>
+            <p>Deposit at least $10 to trigger all welcome bonuses. You can use crypto (BTC, ETH, USDT, etc.), card, e-wallet, or regional payment methods. The 20% Instant Cash arrives immediately.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-card-number">4</div>
+            <h4>Play the Lootbox Mini-Game</h4>
+            <p>Once your deposit confirms, the Lootbox appears in the lobby. Pick 3 of 9 cards to reveal your bonus rewards. You only get one shot at it, so take your time choosing.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-card-number">5</div>
+            <h4>Complete Your Welcome Quests</h4>
+            <p>Check the Quests section in the lobby for your tier (Silver, Gold, or Supernova). Work through the tasks over 14 days to claim your quest rewards including cash, free spins, and Flipout tickets.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-card-number">6</div>
+            <h4>Enjoy Ongoing Promotions</h4>
+            <p>The Deposit Booster, Referral Program, Bad Beat Jackpot, and seasonal quests all run continuously. Check the Promotions tab in the lobby regularly so you don't miss anything.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+      <div class="container">
+        <div class="cta-content">
+          <h2>Claim Your Welcome Bonus</h2>
+          <p>Use promo code <strong>WELCOME</strong> to unlock the full package: 300% match up to $2,000, 20% Instant Cash, the Lootbox mini-game, and Welcome Quests. All on your first deposit of $10 or more.</p>
+          <div style="margin-bottom: var(--space-6);">
+            <div style="display: inline-block; padding: var(--space-3) var(--space-8); background: rgba(228,161,1,0.06); border: 2px dashed rgba(228,161,1,0.4); border-radius: var(--radius-md); font-family: var(--font-display); font-size: var(--text-xl); font-weight: 700; color: var(--color-gold); letter-spacing: 0.12em;">WELCOME</div>
+          </div>
+          <a href="https://jack-poker.com" target="_blank" rel="noopener noreferrer sponsored" class="btn btn-gold btn-lg">Visit JackPoker.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="40" height="40" rx="8" fill="#E4A101"/>
+              <text x="8" y="29" font-family="Oswald, sans-serif" font-weight="700" font-size="24" fill="#0D0F14">JP</text>
+            </svg>
+            <span>JackPoker Fan Hub</span>
+          </div>
+          <p>An independent fan site dedicated to helping players get the most out of JackPoker. Not affiliated with or endorsed by Jack La International Limitada.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Pages</h4>
+          <a href="index.html">Home</a>
+          <a href="review.html">Review</a>
+          <a href="bonuses.html">Bonuses</a>
+          <a href="tournaments.html">Tournaments</a>
+          <a href="games.html">Games</a>
+          <a href="promo-code.html">Promo Code</a>
+        </div>
+        <div class="footer-links">
+          <h4>JackPoker</h4>
+          <a href="https://jack-poker.com" target="_blank" rel="noopener noreferrer">Official Website</a>
+          <a href="https://jack-poker.com/en/promotions/match-bonus/" target="_blank" rel="noopener noreferrer">Match Bonus</a>
+          <a href="https://jack-poker.com/en/tournaments/" target="_blank" rel="noopener noreferrer">Tournaments</a>
+        </div>
+        <div class="footer-links">
+          <h4>Support Channels</h4>
+          <p class="footer-support-note">Contact JackPoker directly:</p>
+          <span>Telegram</span>
+          <span>WhatsApp</span>
+          <span>Facebook Messenger</span>
+          <span>Instagram</span>
+          <span>Email: legal&#64;jack-poker.com</span>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>This is an independent fan site. JackPoker is owned and operated by Jack La International Limitada. Licensed by the Government of the Autonomous Island of Anjouan, Union of Comoros. Certified by iTech Labs, BMM TestLabs, and GLI.</p>
+        <p>18+ only. Gambling can be addictive. Please play responsibly.</p>
+        <p>&copy; 2026 JackPoker Fan Hub. This site includes commercial links.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
