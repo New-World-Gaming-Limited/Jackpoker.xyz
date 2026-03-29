@@ -136,22 +136,20 @@ def do_replacements(html_content, en_flat, target_flat):
 
 
 def fix_asset_paths(html_content, lang_code):
-    """Fix relative paths for files in subdirectories."""
-    # Add <base> tag so all relative links resolve correctly from the subdirectory
-    # This is needed because 'serve' uses clean URLs: /ru/index.html -> /ru
-    # Without trailing slash, relative links resolve from / instead of /ru/
-    base_tag = f'<base href="/{lang_code}/">'
-    html_content = html_content.replace('<head>', f'<head>\n  {base_tag}', 1)
+    """Fix relative paths for files in subdirectories.
     
-    # CSS — needs ../ since base is /{lang}/
+    No <base> tag — it breaks when served through a proxy path prefix.
+    Instead, CSS/JS/images use ../ to reach the root, and same-language
+    page links stay relative (games.html resolves to /ru/games.html when
+    the current page is /ru/index.html).
+    """
+    # CSS
     html_content = html_content.replace('href="style.css"', 'href="../style.css"')
     # JS  
     html_content = html_content.replace('src="main.js"', 'src="../main.js"')
     # Images (both src and href)
     html_content = re.sub(r'(src|href)="assets/', r'\1="../assets/', html_content)
     html_content = re.sub(r"(src|href)='assets/", r"\1='../assets/", html_content)
-    # Favicon link in head
-    # Internal page links stay as-is (base tag handles resolution)
     return html_content
 
 
