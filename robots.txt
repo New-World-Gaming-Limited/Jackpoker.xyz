@@ -1,5 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /i18n/
+Disallow: /lang/
+Disallow: /skills/
 
 Sitemap: https://jackpoker.poker/sitemap.xml
 Sitemap: https://jackpoker.poker/sitemap-en.xml
@@ -9,3 +12,4 @@ Sitemap: https://jackpoker.poker/it/sitemap.xml
 Sitemap: https://jackpoker.poker/pt/sitemap.xml
 Sitemap: https://jackpoker.poker/vi/sitemap.xml
 Sitemap: https://jackpoker.poker/th/sitemap.xml
+Sitemap: https://jackpoker.poker/ms/sitemap.xml

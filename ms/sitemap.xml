@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jackpoker.poker/vi/index.html</loc>
+    <loc>https://jackpoker.poker/ms/index.html</loc>
     <lastmod>2026-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
@@ -17,7 +17,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.poker/index.html" />
   </url>
   <url>
-    <loc>https://jackpoker.poker/vi/games.html</loc>
+    <loc>https://jackpoker.poker/ms/games.html</loc>
     <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -32,7 +32,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.poker/games.html" />
   </url>
   <url>
-    <loc>https://jackpoker.poker/vi/tournaments.html</loc>
+    <loc>https://jackpoker.poker/ms/tournaments.html</loc>
     <lastmod>2026-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -47,7 +47,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.poker/tournaments.html" />
   </url>
   <url>
-    <loc>https://jackpoker.poker/vi/bonuses.html</loc>
+    <loc>https://jackpoker.poker/ms/bonuses.html</loc>
     <lastmod>2026-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -62,7 +62,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.poker/bonuses.html" />
   </url>
   <url>
-    <loc>https://jackpoker.poker/vi/promo-code.html</loc>
+    <loc>https://jackpoker.poker/ms/promo-code.html</loc>
     <lastmod>2026-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -77,7 +77,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.poker/promo-code.html" />
   </url>
   <url>
-    <loc>https://jackpoker.poker/vi/news.html</loc>
+    <loc>https://jackpoker.poker/ms/news.html</loc>
     <lastmod>2026-03-29</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -92,7 +92,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.poker/news.html" />
   </url>
   <url>
-    <loc>https://jackpoker.poker/vi/news/big-bang-sunday-guarantee-increased-to-45k-largest-in-jackpo.html</loc>
+    <loc>https://jackpoker.poker/ms/news/big-bang-sunday-guarantee-increased-to-45k-largest-in-jackpo.html</loc>
     <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -107,7 +107,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.poker/news/big-bang-sunday-guarantee-increased-to-45k-largest-in-jackpo.html" />
   </url>
   <url>
-    <loc>https://jackpoker.poker/vi/news/bonus-bonanza-march-schedule-620-events-125m-in-guarantees.html</loc>
+    <loc>https://jackpoker.poker/ms/news/bonus-bonanza-march-schedule-620-events-125m-in-guarantees.html</loc>
     <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -122,7 +122,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.poker/news/bonus-bonanza-march-schedule-620-events-125m-in-guarantees.html" />
   </url>
   <url>
-    <loc>https://jackpoker.poker/vi/news/crypto-deposits-now-available-in-sol-matic-and-ton.html</loc>
+    <loc>https://jackpoker.poker/ms/news/crypto-deposits-now-available-in-sol-matic-and-ton.html</loc>
     <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -137,7 +137,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.poker/news/crypto-deposits-now-available-in-sol-matic-and-ton.html" />
   </url>
   <url>
-    <loc>https://jackpoker.poker/vi/news/instant-withdrawal-processing-now-available-for-vip-players.html</loc>
+    <loc>https://jackpoker.poker/ms/news/instant-withdrawal-processing-now-available-for-vip-players.html</loc>
     <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -152,7 +152,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.poker/news/instant-withdrawal-processing-now-available-for-vip-players.html" />
   </url>
   <url>
-    <loc>https://jackpoker.poker/vi/news/jackpoker-mobile-app-30-launches-with-multi-table-support.html</loc>
+    <loc>https://jackpoker.poker/ms/news/jackpoker-mobile-app-30-launches-with-multi-table-support.html</loc>
     <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -167,7 +167,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.poker/news/jackpoker-mobile-app-30-launches-with-multi-table-support.html" />
   </url>
   <url>
-    <loc>https://jackpoker.poker/vi/news/jackpoker-passes-500000-registered-players-milestone.html</loc>
+    <loc>https://jackpoker.poker/ms/news/jackpoker-passes-500000-registered-players-milestone.html</loc>
     <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -182,7 +182,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.poker/news/jackpoker-passes-500000-registered-players-milestone.html" />
   </url>
   <url>
-    <loc>https://jackpoker.poker/vi/news/new-hand-replayer-and-advanced-statistics-dashboard-released.html</loc>
+    <loc>https://jackpoker.poker/ms/news/new-hand-replayer-and-advanced-statistics-dashboard-released.html</loc>
     <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -197,7 +197,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.poker/news/new-hand-replayer-and-advanced-statistics-dashboard-released.html" />
   </url>
   <url>
-    <loc>https://jackpoker.poker/vi/news/winter-games-festival-wraps-with-record-breaking-21m-in-payo.html</loc>
+    <loc>https://jackpoker.poker/ms/news/winter-games-festival-wraps-with-record-breaking-21m-in-payo.html</loc>
     <lastmod>2026-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>

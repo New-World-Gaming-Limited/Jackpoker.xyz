@@ -43,6 +43,7 @@ LANGUAGES = {
     "pt": {"name": "Português", "flag_code": "BR"},
     "vi": {"name": "Tiếng Việt", "flag_code": "VN"},
     "th": {"name": "ไทย", "flag_code": "TH"},
+    "ms": {"name": "Bahasa Melayu", "flag_code": "MY"},
 }
 
 BASE_URL = "https://jackpoker.poker"

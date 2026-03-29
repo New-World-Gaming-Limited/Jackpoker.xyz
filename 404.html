@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — JackPoker</title>
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/jackpoker-favicon.svg">
+  <style>
+    .error-page { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80vh; text-align: center; padding: 2rem; }
+    .error-code { font-family: var(--font-display); font-size: 8rem; font-weight: 900; background: linear-gradient(90deg, #8032FF, #FF3D00); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; }
+    .error-message { font-size: 1.5rem; font-weight: 600; margin: 1rem 0; }
+    .error-links { display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap; justify-content: center; }
+    .error-links a { padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.2s; }
+    .error-links .primary { background: linear-gradient(90deg, #6A2DC0, #FF3D00); color: white; }
+    .error-links .secondary { border: 1px solid var(--border-subtle); color: var(--text-secondary); }
+  </style>
+</head>
+<body>
+  <div class="error-page">
+    <div class="error-code">404</div>
+    <p class="error-message">This page doesn't exist</p>
+    <p style="color: var(--text-muted); max-width: 400px;">The page you're looking for may have been moved or no longer exists. Try one of these instead:</p>
+    <div class="error-links">
+      <a href="index.html" class="primary">Back to Home</a>
+      <a href="promo-code.html" class="secondary">Get Promo Code</a>
+      <a href="games.html" class="secondary">Explore Games</a>
+      <a href="news.html" class="secondary">Latest News</a>
+    </div>
+  </div>
+</body>
+</html>

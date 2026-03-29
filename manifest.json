@@ -1,0 +1,16 @@
+{
+  "name": "JackPoker \u2014 Online Poker",
+  "short_name": "JackPoker",
+  "description": "Premier online poker platform with Texas Hold'em, PLO, Spin & Win and massive tournaments.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#893BF7",
+  "icons": [
+    {
+      "src": "assets/images/jackpoker-favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
