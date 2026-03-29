@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="ms" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pertandingan JackPoker — Jaminan Bulanan $3.5J+</title>
+  <meta name="description" content="Jadual pertandingan JackPoker penuh: Bonus Bonanza $1.25J GTD, Big Bang Sunday $45K, $200K+ freerolls">
+  <meta property="og:title" content="Pertandingan JackPoker — Jaminan Bulanan $3.5J+">
+  <meta property="og:description" content="Jadual pertandingan paling menarik dalam poker dalam talian. Freeroll harian, jaminan kolam hadiah yang besar">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://jackpoker.poker/assets/images/hero-poker.jpg" />
+  <link rel="canonical" href="https://jackpoker.poker/tournaments" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/jackpoker-favicon.svg" />
+  <style>
+    /* ===== TOURNAMENTS PAGE EXTRAS ===== */
+
+    /* Hero with image bg */
+    .tourn-hero {
+      position: relative;
+      padding: calc(var(--header-height) + 72px) 0 80px;
+      overflow: hidden;
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+    }
+
+    .tourn-hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .tourn-hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.30;
+    }
+
+    .tourn-hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg,
+        rgba(13,11,18,0.45) 0%,
+        rgba(13,11,18,0.72) 60%,
+        rgba(13,11,18,1) 100%
+      );
+    }
+
+    .tourn-hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Stats bar with borders */
+    .stats-section {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .stats-bar-bordered {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      divide: h;
+    }
+
+    .stat-bordered {
+      text-align: center;
+      padding: 36px 24px;
+      border-right: 1px solid var(--border-subtle);
+    }
+
+    .stat-bordered:last-child {
+      border-right: none;
+    }
+
+    .stat-bordered .stat-number {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--gold-primary);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-bordered .stat-desc {
+      color: var(--text-muted);
+      font-size: 0.83rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+
+    /* Carnival Banner */
+    .carnival-banner {
+      background: linear-gradient(135deg, #1A1026 0%, #2A1440 40%, #1A1026 100%);
+      border: 1px solid rgba(246,186,70,0.35);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .carnival-banner::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #F6BA46, #FF3D00, #893BF7, #F6BA46);
+    }
+
+    .carnival-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .carnival-left {
+      padding: 48px;
+      border-right: 1px solid rgba(246,186,70,0.15);
+    }
+
+    .carnival-right {
+      padding: 48px;
+    }
+
+    .carnival-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: rgba(246,186,70,0.12);
+      border: 1px solid rgba(246,186,70,0.3);
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--gold-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 20px;
+    }
+
+    .carnival-prize {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 900;
+      color: var(--gold-primary);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .carnival-subtitle {
+      color: var(--text-white);
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .how-it-works-list {
+      list-style: none;
+      margin: 0;
+    }
+
+    .how-it-works-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 0.93rem;
+      color: var(--text-body);
+      line-height: 1.6;
+    }
+
+    .how-it-works-list li:last-child {
+      border-bottom: none;
+    }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      background: var(--gradient-btn-gold);
+      color: #000000;
+      font-size: 0.75rem;
+      font-weight: 800;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    /* Bonus Bonanza */
+    .bonanza-grid {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .bonanza-schedule {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    .bonanza-schedule-header {
+      padding: 20px 24px;
+      background: var(--purple-surface);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .bonanza-schedule-header h4 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .schedule-row {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      padding: 14px 24px;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 0.88rem;
+      color: var(--text-body);
+      align-items: center;
+    }
+
+    .schedule-row:last-child {
+      border-bottom: none;
+    }
+
+    .schedule-row:hover {
+      background: rgba(137,59,247,0.04);
+    }
+
+    .schedule-row .gtd {
+      color: var(--gold-primary);
+      font-weight: 700;
+    }
+
+    .schedule-row .buyin {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    /* Big Bang Sunday */
+    .big-bang-card {
+      background: linear-gradient(135deg, #1A0D30 0%, #271D34 100%);
+      border: 1px solid rgba(137,59,247,0.35);
+      border-radius: var(--radius-xl);
+      padding: 48px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .big-bang-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--gradient-btn-primary);
+    }
+
+    .big-bang-card::after {
+      content: '♠';
+      position: absolute;
+      right: 40px;
+      top: 40px;
+      font-size: 8rem;
+      color: var(--purple-primary);
+      opacity: 0.06;
+      line-height: 1;
+    }
+
+    .big-bang-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .big-bang-gtd {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 5vw, 4.4rem);
+      font-weight: 900;
+      color: var(--purple-primary);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .big-bang-label {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .blind-structure {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    .blind-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 0.83rem;
+      color: var(--text-body);
+    }
+
+    .blind-row:first-child {
+      background: var(--purple-surface);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .blind-row:last-child {
+      border-bottom: none;
+    }
+
+    /* Freeroll Festival */
+    .freeroll-types {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 32px;
+    }
+
+    .freeroll-type-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      transition: all 0.3s ease;
+    }
+
+    .freeroll-type-card:hover {
+      border-color: rgba(137,59,247,0.3);
+      transform: translateY(-2px);
+    }
+
+    .freeroll-icon {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .freeroll-type-card h4 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: var(--text-white);
+    }
+
+    .freeroll-type-card p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    /* Format grid */
+    .format-card {
+      background: var(--gradient-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .format-card:hover {
+      border-color: rgba(137,59,247,0.3);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .format-icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .format-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+      color: var(--text-white);
+    }
+
+    .format-card p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    /* Register Steps */
+    .register-steps {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .register-step {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 28px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      transition: all 0.3s ease;
+    }
+
+    .register-step:hover {
+      border-color: rgba(137,59,247,0.25);
+      background: var(--bg-card-hover);
+    }
+
+    .step-number {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      background: var(--gradient-btn-primary);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--text-white);
+    }
+
+    .register-step-content h4 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+      color: var(--text-white);
+    }
+
+    .register-step-content p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    /* Tips */
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .tip-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-left: 3px solid var(--purple-primary);
+      border-radius: var(--radius-md);
+      padding: 24px;
+    }
+
+    .tip-card h4 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: var(--text-white);
+    }
+
+    .tip-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    /* Final CTA */
+    .final-cta {
+      background: linear-gradient(135deg, #1A0D30 0%, #221E2E 50%, #1A1026 100%);
+      border-top: 1px solid var(--border-subtle);
+      padding: 96px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px;
+      height: 700px;
+      background: var(--purple-primary);
+      border-radius: 50%;
+      filter: blur(220px);
+      opacity: 0.08;
+      pointer-events: none;
+    }
+
+    .final-cta-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .promo-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      background: rgba(246,186,70,0.08);
+      border: 1px solid rgba(246,186,70,0.25);
+      border-radius: 100px;
+      font-size: 0.88rem;
+      color: var(--text-body);
+      margin-bottom: 28px;
+    }
+
+    .promo-pill .code {
+      font-family: 'Courier New', monospace;
+      font-weight: 800;
+      color: var(--gold-primary);
+      letter-spacing: 0.1em;
+    }
+
+    /* Schedule Table Wrapper */
+    .table-wrapper {
+      overflow-x: auto;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .carnival-inner { grid-template-columns: 1fr; }
+      .carnival-left { border-right: none; border-bottom: 1px solid rgba(246,186,70,0.15); padding: 32px; }
+      .carnival-right { padding: 32px; }
+      .big-bang-inner { grid-template-columns: 1fr; }
+      .bonanza-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .stats-bar-bordered { grid-template-columns: repeat(2, 1fr); }
+      .stat-bordered { border-right: none; border-bottom: 1px solid var(--border-subtle); }
+      .stat-bordered:nth-child(odd) { border-right: 1px solid var(--border-subtle); }
+      .freeroll-types { grid-template-columns: 1fr; }
+      .register-steps { grid-template-columns: 1fr; }
+      .tips-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+<script>
+    (function(){var t=null;try{var m=document.cookie.match(/jp-theme=([^;]+)/);if(m)t=m[1]}catch(e){}document.documentElement.setAttribute("data-theme",t||"dark")})();
+  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "JackPoker",
+  "url": "https://jackpoker.poker",
+  "logo": "https://jackpoker.poker/assets/images/jackpoker-logo-official.png",
+  "description": "Modern online poker platform offering Texas Hold'em, PLO, Spin&Win tournaments, and more. Licensed and certified.",
+  "foundingDate": "2021",
+  "sameAs": [
+    "https://jack-poker.com",
+    "https://t.me/jackpokerclub"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "url": "https://jack-poker.com/support",
+    "availableLanguage": [
+      "English",
+      "Russian",
+      "Portuguese",
+      "Spanish"
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://jackpoker.poker"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tournaments",
+      "item": "https://jackpoker.poker/tournaments.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "JackPoker Tournament Schedule",
+  "description": "Daily and weekly poker tournaments on JackPoker platform",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Sunday Major",
+      "description": "Promotions flagship tournament with massive guaranteed prize pools"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Daily Grind Series",
+      "description": "Affordable daily tournaments with solid guarantees"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Spin & Win Leaderboard",
+      "description": "Promotions competitions with extra cash prizes for top spinners"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Freeroll Festivals",
+      "description": "Free-entry tournaments with real money prizes"
+    }
+  ]
+}
+</script>
+<link rel="alternate" hreflang="en" href="https://jackpoker.poker/tournaments.html" />
+<link rel="alternate" hreflang="ru" href="https://jackpoker.poker/ru/tournaments.html" />
+<link rel="alternate" hreflang="es" href="https://jackpoker.poker/es/tournaments.html" />
+<link rel="alternate" hreflang="it" href="https://jackpoker.poker/it/tournaments.html" />
+<link rel="alternate" hreflang="pt" href="https://jackpoker.poker/pt/tournaments.html" />
+<link rel="alternate" hreflang="vi" href="https://jackpoker.poker/vi/tournaments.html" />
+<link rel="alternate" hreflang="th" href="https://jackpoker.poker/th/tournaments.html" />
+<link rel="alternate" hreflang="ms" href="https://jackpoker.poker/ms/tournaments.html" />
+<link rel="alternate" hreflang="x-default" href="https://jackpoker.poker/tournaments.html" />
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="JackPoker Home">
+        <svg class="logo-icon" width="189" height="47" viewBox="0 0 189 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="JackPoker">
+<path d="M25.4001 1C24.0001 1 22.8001 2.2 22.8001 3.6C22.8001 5.1 23.8343 5.9 25.3001 5.9H28.7001C28.7001 5.9 31.3001 5.9 31.3001 8.3C31.3001 10.7 28.7001 10.7 28.7001 10.7H8.30008C6.90008 10.7 5.70008 11.9 5.70008 13.3C5.70008 14.7 6.90008 15.9 8.30008 15.9H22.5001C22.5001 15.9 25.1001 15.9 25.1001 18.3C25.1001 20.7 22.5001 20.7 22.5001 20.7H11.4001C10.0001 20.7 8.80008 21.9 8.80008 23.3C8.80008 24.7 10.0001 25.9 11.4001 25.9H22.6001C22.6001 25.9 25.2001 25.9 25.2001 28.3C25.2001 30.7 22.6001 30.7 22.6001 30.7H21.8001C20.4001 30.7 19.2001 31.9 19.2001 33.3C19.2001 34.7 20.4001 35.9 21.8001 35.9H28.8001C28.8001 35.9 31.4001 35.9 31.4001 38.3C31.4001 40.7 28.8001 40.7 28.8001 40.7H14.0001C12.6001 40.7 11.4001 41.9 11.4001 43.3C11.4001 44.7 12.6001 45.9 14.0001 45.9H34.3001C36.5001 45.9 38.4001 44.8 39.5001 43C41.1501 40.25 42.7751 37.4999 44.4001 34.7499C46.0251 31.9999 47.6501 29.25 49.3001 26.5C50.4001 24.6 50.4001 22.3 49.3001 20.4C47.6501 17.6501 46.0252 14.9001 44.4002 12.1502C42.7752 9.4002 41.1501 6.65001 39.5001 3.9C38.4001 2.1 36.4001 1 34.3001 1H25.4001Z" fill="url(#jpLogoGrad)"/>
+<path d="M11.3999 3.6C11.3999 2.2 12.5999 1 13.9999 1H17.5999C18.9999 1 20.1999 2.2 20.1999 3.6C20.1999 5 18.9999 6.2 17.5999 6.2H13.9999C12.5999 6.2 11.3999 5 11.3999 3.6Z" fill="url(#jpLogoGrad)"/>
+<path d="M0 23.5001C0 22.1001 1.2 20.9001 2.6 20.9001H3.6C5 20.9001 6.2 22.1001 6.2 23.5001C6.2 24.9001 5 26.1001 3.6 26.1001H2.6C1.2 26.1001 0 24.9001 0 23.5001Z" fill="url(#jpLogoGrad)"/>
+<path d="M8.30008 30.8001C6.90008 30.8001 5.70008 32.0001 5.70008 33.4001C5.70008 34.9001 6.90008 36.1001 8.30008 36.0001H14.0001C15.4001 36.0001 16.6001 34.8001 16.6001 33.4001C16.6001 32.0001 15.4001 30.8001 14.0001 30.8001H8.30008Z" fill="url(#jpLogoGrad)"/>
+<path d="M69.7955 27.3088C69.7955 28.8312 69.6204 30.0793 69.2704 31.0533C68.9203 32.0273 68.3261 32.7598 67.4876 33.2509C66.6572 33.7502 65.5257 33.9998 64.0929 33.9998C63.7591 33.9998 63.3887 33.9712 62.9817 33.9139C62.5747 33.8648 62.3142 33.832 62.2002 33.8157L62.5177 31.2252H63.7144C65.1797 31.2252 65.9164 30.4231 65.9246 28.8189V15.265L64.0441 14.5039V12.3676L71.676 12.2449V14.5039L69.7955 15.265V27.3088Z" fill="white"/>
+<path d="M81.4937 28.3401C81.4937 28.3728 81.2779 28.557 80.8465 28.8926C80.415 29.2281 79.8981 29.5351 79.2957 29.8133C78.6933 30.0834 78.0746 30.2185 77.4396 30.2185C76.2185 30.2185 75.2619 29.8788 74.57 29.1995C73.8862 28.512 73.5443 27.538 73.5443 26.2775C73.5443 24.837 74.0571 23.7853 75.0829 23.1223C76.1086 22.4594 77.6024 22.1279 79.5643 22.1279H81.3227V20.7406C81.3227 19.5129 80.6796 18.9031 79.3934 18.9113C79.0107 18.9113 78.6566 18.94 78.331 18.9973C78.0054 19.0545 77.7449 19.1159 77.5495 19.1814C77.3622 19.2387 77.2442 19.2755 77.1954 19.2919L76.8168 20.8756H74.57L74.399 17.1557C74.5456 17.1066 74.9038 17.0002 75.4736 16.8365C76.0516 16.6728 76.7395 16.5173 77.5373 16.37C78.3432 16.2226 79.1044 16.149 79.8207 16.149C81.107 16.149 82.1286 16.3127 82.8857 16.6401C83.6428 16.9593 84.1964 17.4831 84.5464 18.2115C84.8965 18.9318 85.0715 19.9017 85.0715 21.1212V27.3334L86.952 27.7876V29.8011L81.9455 29.9729L81.4937 28.3401ZM77.1709 25.897C77.1709 26.388 77.2971 26.7645 77.5495 27.0264C77.81 27.2802 78.1763 27.407 78.6485 27.407C79.0474 27.407 79.4422 27.3006 79.833 27.0878C80.2237 26.8668 80.5534 26.6418 80.822 26.4126C81.0907 26.1752 81.2576 26.0197 81.3227 25.9461V24.2641H79.894C78.9253 24.2641 78.2292 24.3951 77.8059 24.657C77.3826 24.9189 77.1709 25.3322 77.1709 25.897Z" fill="white"/>
+<path d="M100.311 28.0823C99.7492 28.5897 99.0124 29.0726 98.1007 29.531C97.1971 29.9893 96.1428 30.2185 94.938 30.2185C92.8866 30.2185 91.291 29.6169 90.1513 28.4137C89.0116 27.2106 88.4417 25.5327 88.4417 23.3802C88.4417 21.1376 89.0442 19.3737 90.249 18.0888C91.4619 16.7956 93.1511 16.149 95.3166 16.149C95.9515 16.149 96.5906 16.2145 97.2337 16.3454C97.885 16.4764 98.4263 16.6114 98.8578 16.7506C99.2974 16.8815 99.5742 16.9715 99.6881 17.0206L99.566 21.1457H97.3192L96.9651 19.3656C96.8836 19.3492 96.6801 19.3124 96.3545 19.2551C96.0289 19.1896 95.6585 19.1569 95.2433 19.1569C94.3234 19.1569 93.6029 19.472 93.0819 20.1022C92.5691 20.7324 92.3126 21.6573 92.3126 22.8768C92.3126 24.2682 92.5731 25.3404 93.0942 26.0934C93.6233 26.8382 94.4048 27.2106 95.4387 27.2106C96.0899 27.2106 96.6598 27.1124 97.1482 26.916C97.6448 26.7113 98.06 26.5026 98.3937 26.2898C98.7275 26.077 98.9514 25.9379 99.0654 25.8724L100.311 28.0823Z" fill="white"/>
+<path d="M108.602 21.4527L110.3 18.8868L109.201 18.5307V16.5173L115.66 16.3945V18.5307L113.902 18.8622L111.582 22.1525L114.378 27.3579L116.283 27.9595V29.9729H111.655L108.553 23.8344H106.954V27.3334L108.334 27.9595V29.9729H101.202V27.9595L103.205 27.3334V13.2025L101.202 12.6991V10.6857L106.954 10.4893V21.4527H108.602Z" fill="white"/>
+<path d="M117.406 27.8367L119.275 27.0756V15.265L117.406 14.5039V12.3676L123.158 12.2449H125.527C127.423 12.2449 128.909 12.7155 129.984 13.6567C131.066 14.598 131.608 15.8871 131.608 17.524C131.608 19.6029 130.993 21.1703 129.764 22.2261C128.543 23.2819 126.78 23.8099 124.477 23.8099H123.158V27.0756L125.026 27.8367V29.9729H117.406V27.8367ZM124.477 20.8756C125.527 20.8756 126.333 20.6342 126.894 20.1513C127.456 19.6602 127.737 18.9522 127.737 18.0274C127.737 17.1925 127.513 16.5255 127.065 16.0262C126.626 15.5188 125.991 15.265 125.16 15.265H123.158V20.8756H124.477Z" fill="white"/>
+<path d="M139.74 16.149C141.751 16.149 143.302 16.7383 144.393 17.9169C145.492 19.0955 146.041 20.7692 146.041 22.9382C146.041 24.4278 145.764 25.721 145.211 26.8177C144.665 27.9145 143.892 28.7575 142.891 29.3468C141.89 29.9279 140.713 30.2185 139.362 30.2185C135.112 30.2185 132.988 27.9145 132.988 23.3065C132.988 21.8169 133.264 20.536 133.818 19.4638C134.38 18.3916 135.169 17.5731 136.187 17.0084C137.205 16.4354 138.389 16.149 139.74 16.149ZM139.606 19.1569C138.662 19.1569 137.966 19.4638 137.518 20.0776C137.078 20.6915 136.859 21.7269 136.859 23.1837C136.859 24.5751 137.066 25.5941 137.481 26.2407C137.905 26.8873 138.572 27.2106 139.484 27.2106C140.404 27.2106 141.08 26.8873 141.511 26.2407C141.942 25.5941 142.158 24.5342 142.158 23.061C142.158 21.7514 141.955 20.7733 141.548 20.1267C141.141 19.4802 140.493 19.1569 139.606 19.1569Z" fill="white"/>
+<path d="M154.809 21.4527L156.506 18.8868L155.407 18.5307V16.5173L161.867 16.3945V18.5307L160.108 18.8622L157.788 22.1525L160.585 27.3579L162.49 27.9595V29.9729H157.862L154.76 23.8344H153.16V27.3334L154.54 27.9595V29.9729H147.409V27.9595L149.412 27.3334V13.2025L147.409 12.6991V10.6857L153.16 10.4893V21.4527H154.809Z" fill="white"/>
+<path d="M167.508 24.0186C167.573 25.0253 167.875 25.811 168.412 26.3758C168.957 26.9323 169.666 27.2106 170.537 27.2106C171.155 27.2106 171.774 27.1247 172.393 26.9528C173.02 26.7727 173.536 26.5927 173.944 26.4126C174.359 26.2243 174.623 26.0934 174.737 26.0197L175.812 28.1068C175.812 28.1396 175.519 28.3483 174.933 28.733C174.355 29.1095 173.642 29.4532 172.796 29.7642C171.957 30.0671 171.062 30.2185 170.109 30.2185C167.993 30.2185 166.381 29.6292 165.274 28.4506C164.167 27.272 163.613 25.6023 163.613 23.4415C163.613 21.9847 163.878 20.7079 164.407 19.6111C164.944 18.5062 165.713 17.655 166.715 17.0575C167.716 16.4518 168.904 16.149 170.28 16.149C172.112 16.149 173.516 16.6769 174.493 17.7327C175.47 18.7885 175.958 20.2291 175.958 22.0542C175.958 22.4553 175.938 22.8441 175.897 23.2206C175.857 23.5971 175.828 23.8344 175.812 23.9326L167.508 24.0186ZM170.036 19.1569C169.352 19.1569 168.795 19.3901 168.363 19.8566C167.932 20.315 167.663 20.9207 167.557 21.6737H172.087C172.087 20.9207 171.921 20.315 171.587 19.8566C171.253 19.3901 170.736 19.1569 170.036 19.1569Z" fill="white"/>
+<path d="M183.199 18.1256C183.199 18.0928 183.395 17.9005 183.786 17.5486C184.176 17.1966 184.628 16.8774 185.141 16.591C185.662 16.2963 186.175 16.149 186.68 16.149C187.079 16.149 187.453 16.1817 187.803 16.2472C188.153 16.3127 188.426 16.3822 188.621 16.4559C188.825 16.5296 188.951 16.5746 189 16.591L188.804 21.4281H186.558L186.179 19.2919C185.748 19.2919 185.328 19.3983 184.921 19.6111C184.522 19.8157 184.18 20.0449 183.896 20.2986C183.619 20.5442 183.48 20.6751 183.48 20.6915V27.3334L185.984 27.9595V29.9729H177.729V27.9595L179.732 27.3334V19.1569L177.729 18.5307V16.5173L182.98 16.3945L183.199 18.1256Z" fill="white"/>
+<defs>
+<linearGradient id="jpLogoGrad" x1="0" y1="33.44" x2="50.74" y2="33.44" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8032FF"/>
+<stop offset="1" stop-color="#FF3D00"/>
+</linearGradient>
+</defs>
+</svg>
+      </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Laman Utama</a>
+      <a href="games.html">Permainan</a>
+      <a href="bonuses.html">Bonus</a>
+      <a href="tournaments.html" class="active">Pertandingan</a>
+      <a href="news.html">Berita</a>
+      <a href="promo-code.html">Kod Promosi</a>
+    </nav>
+    <a href="https://record.jack-poker.com/_yiuBNstnNMSlaGPKJ9GnQGNd7ZgqdRLk/1/" class="header-cta header-cta-desktop">Main Sekarang ♠</a>
+     <div class="lang-switcher">
+  <button class="lang-btn" aria-label="Change language" aria-expanded="false">
+    <span class="lang-flag">MY</span>
+    <span class="lang-label">Bahasa Melayu</span>
+    <svg class="lang-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  </button>
+  <div class="lang-dropdown" role="menu">
+    <a href="../tournaments.html" role="menuitem" hreflang="en"><span class="lang-flag">US</span><span>English</span></a>
+    <a href="../ru/tournaments.html" role="menuitem" hreflang="ru"><span class="lang-flag">RU</span><span>Русский</span></a>
+    <a href="../es/tournaments.html" role="menuitem" hreflang="es"><span class="lang-flag">ES</span><span>Español</span></a>
+    <a href="../it/tournaments.html" role="menuitem" hreflang="it"><span class="lang-flag">IT</span><span>Italiano</span></a>
+    <a href="../pt/tournaments.html" role="menuitem" hreflang="pt"><span class="lang-flag">BR</span><span>Português</span></a>
+    <a href="../vi/tournaments.html" role="menuitem" hreflang="vi"><span class="lang-flag">VN</span><span>Tiếng Việt</span></a>
+    <a href="../th/tournaments.html" role="menuitem" hreflang="th"><span class="lang-flag">TH</span><span>ไทย</span></a>
+    <a href="tournaments.html" class="active" role="menuitem" hreflang="ms"><span class="lang-flag">MY</span><span>Bahasa Melayu</span></a>
+  </div>
+</div>
+        <button class="theme-toggle" aria-label="Toggle theme">
+       <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 1.78a1 1 0 011.415 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM18 9a1 1 0 110 2h-1a1 1 0 110-2h1zM3 9a1 1 0 110 2H2a1 1 0 110-2h1zm12.657 6.071l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 011.414-1.414zM5.757 4.929a1 1 0 010 1.414l-.707.707A1 1 0 013.636 5.636l.707-.707a1 1 0 011.414 0zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1z" fill="currentColor"/><circle cx="10" cy="10" r="3.5" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+       <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/></svg>
+     </button>
+  </div>
+</header>
+
+<!-- Breadcrumb Navigation -->
+<nav class="breadcrumb-nav" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">Laman Utama</span></a>
+        <meta itemprop="position" content="1" />
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span itemprop="name">Pertandingan</span>
+        <meta itemprop="position" content="2" />
+      </li>
+    </ol>
+  </div>
+</nav>
+
+
+<!-- Page Hero with H1 -->
+<section style="padding: calc(var(--header-height) + 48px) 0 24px; background: linear-gradient(180deg, rgba(137,59,247,0.06) 0%, transparent 100%); position: relative; overflow: hidden;">
+  <div class="container">
+    <h1 style="font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 900; letter-spacing: -0.03em; margin-bottom: 12px;" data-i18n="tournaments_hero_title">Pertandingan JackPoker</h1>
+    <p style="color: var(--text-muted); font-size: 1.08rem; max-width: 640px; line-height: 1.7;" data-i18n="tournaments_hero_subtitle">$3.5J+ dalam jaminan bulanan, freeroll harian, Big Bang Sunday yang ikonik dan acara siri eksklusif</p>
+  </div>
+</section>
+
+<!-- ===== 2. TOURNAMENT OVERVIEW STATS ===== -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-bar-bordered">
+      <div class="stat-bordered">
+        <div class="stat-number">$3.5J+</div>
+        <div class="stat-desc">Jaminan Bulanan</div>
+      </div>
+      <div class="stat-bordered">
+        <div class="stat-number">8</div>
+        <div class="stat-desc">Freeroll Harian</div>
+      </div>
+      <div class="stat-bordered">
+        <div class="stat-number">$45K</div>
+        <div class="stat-desc">GTD Big Bang Sunday</div>
+      </div>
+      <div class="stat-bordered">
+        <div class="stat-number">$200K+</div>
+        <div class="stat-desc">Hadiah Pertandingan Bulanan</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3. FEATURED: CASH CARNIVAL ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Acara Semasa</span>
+      <h2>Cash Carnival — <span class="gold-text">$500,000 dalam Titisan Tunai</span></h2>
+      <p>Promosi langsung terbesar kami tahun ini sedang berjalan sekarang. Setiap sesi di meja tunai kami boleh </p>
+    </div>
+
+    <div class="carnival-banner">
+      <div class="carnival-inner">
+        <div class="carnival-left">
+          <div class="carnival-badge">🎪 Sedang Berlangsung · 23 Mac – 19 April 2026</div>
+          <div class="carnival-prize">$500,000</div>
+          <div class="carnival-subtitle">dalam Jumlah Titisan Tunai</div>
+          <p style="color: var(--text-body); margin-bottom: 20px; line-height: 1.8;">Cash Carnival adalah promosi bermusim utama kami, dan edisi 2026 adalah yang terbesar pernah kami jalankan</p>
+          <p style="color: var(--text-body); margin-bottom: 24px; line-height: 1.8;">Apa yang menjadikan Cash Carnival luar biasa adalah kekerapan dan ketidakdugaan titisan. Sebuah "bom tunai" <strong style="color: var(--gold-primary);">3 hingga 7 tangan</strong> di meja yang mengambil bahagian. Apabila bom meletup, setiap pemain yang duduk di meja pada waktu itu menerima</p>
+
+          <div class="highlight-box gold">
+            <h4>Mengapa Cash Carnival Tidak Boleh Dilepaskan</h4>
+            <p>Dengan $500,000 tersebar hanya dalam 27 hari merentasi meja tunai aktif, matematik ini berjumlah kepada luar biasa</p>
+          </div>
+        </div>
+
+        <div class="carnival-right">
+          <h3 style="color: var(--text-white); margin-bottom: 20px;">Cara Menyertai</h3>
+          <ul class="how-it-works-list">
+            <li>
+              <span class="step-num">1</span>
+              <span><strong style="color: var(--text-white);">Cipta akaun percuma anda</strong> — Pendaftaran mengambil masa kurang daripada dua minit. Gunakan kod promosi <strong style="color: var(--gold-primary);">WELCOME</strong> untuk mengaktifkan pakej aluan anda bersama kelayakan Cash Carnival.</span>
+            </li>
+            <li>
+              <span class="step-num">2</span>
+              <span><strong style="color: var(--text-white);">Tambah dana akaun anda</strong> — Buat deposit kelayakan menggunakan mana-mana kaedah pembayaran yang disokong, termasuk Visa, Mastercard, </span>
+            </li>
+            <li>
+              <span class="step-num">3</span>
+              <span><strong style="color: var(--text-white);">Duduk di mana-mana meja tunai</strong> — Cash Carnival aktif merentasi meja cash game Texas Hold'em dan PLO kami. Navigasi ke cash ga</span>
+            </li>
+            <li>
+              <span class="step-num">4</span>
+              <span><strong style="color: var(--text-white);">Tunggu bom</strong> — Bom tunai dicetuskan secara rawak setiap 3–7 tangan. Apabila ia dilepaskan, semua pemain di meja menerima a</span>
+            </li>
+            <li>
+              <span class="step-num">5</span>
+              <span><strong style="color: var(--text-white);">Tonton baki anda bertumbuh</strong> — Hadiah dikreditkan serta-merta dan boleh dikeluarkan secara bebas tanpa keperluan playthrough. Main lo</span>
+            </li>
+          </ul>
+
+          <div style="margin-top: 28px; padding: 20px; background: rgba(246,186,70,0.06); border: 1px solid rgba(246,186,70,0.2); border-radius: var(--radius-md);">
+            <p style="margin: 0; font-size: 0.88rem; color: var(--text-muted);">Promosi berjalan 23 Mac – 19 April 2026. Terbuka kepada semua pemain dengan akaun wang sebenar yang aktif. Tunai</p>
+          </div>
+
+          <a href="https://record.jack-poker.com/_yiuBNstnNMSlaGPKJ9GnQGNd7ZgqdRLk/1/" class="btn btn-gold btn-lg" style="margin-top: 24px; width: 100%; justify-content: center;">Ambil Bahagian Anda dari $500K ♠</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 4. BONUS BONANZA SERIES ===== -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Siri Utama</span>
+      <h2>Siri Bonus Bonanza — <span class="gold-text">~$1.25J GTD Bulanan</span></h2>
+      <p>Siri pertandingan utama kekal kami berjalan setiap bulan tunggal, menawarkan jadual peristiwa yang berstruktur </p>
+    </div>
+
+    <div class="bonanza-grid">
+      <div>
+        <p style="line-height: 1.8; margin-bottom: 20px;">Siri Bonus Bonanza adalah tulang belakang penawaran pertandingan JackPoker. Tidak seperti siri terhad masa <strong style="color: var(--gold-primary);">$1.25 juta</strong> dalam jumlah wang kolam hadiah, tersebar merentasi berpuluh-puluh acara yang bermula dari micro-stakes ultra-murah</p>
+
+        <p style="line-height: 1.8; margin-bottom: 20px;">Salah satu ciri khas Bonus Bonanza adalah kepelbagaian peringkat beli-masuk. Kami percaya <strong style="color: var(--text-white);">$1.10</strong> untuk penerbangan micro-stakes, melalui pertaruhan pertengahan popular <strong style="color: var(--text-white);">$22 dan $55</strong> acara beli-masuk, dan sehingga <strong style="color: var(--text-white);">$109 dan $215</strong> untuk pertandingan utama high-stakes. Terdapat acara sebenar untuk setiap bankroll.</p>
+
+        <p style="line-height: 1.8; margin-bottom: 28px;">Pertandingan Progressive Knockout (PKO) adalah asas pengalaman Bonus Bonanza. Dalam acara PKO</p>
+
+        <div class="highlight-box">
+          <h4>Bagaimana Siri Berfungsi</h4>
+          <p>Bonus Bonanza mengikuti kalendar bulanan bergulung. Acara-acara dipaparkan 30 hari lebih awal dalam to</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="bonanza-schedule">
+          <div class="bonanza-schedule-header">
+            <h4>Sorotan Jadual Siri</h4>
+          </div>
+          <div class="schedule-row" style="background: var(--purple-surface); color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;">
+            <span>Acara</span>
+            <span>Format</span>
+            <span class="gtd" style="color: var(--text-muted);">GTD</span>
+          </div>
+          <div class="schedule-row">
+            <span class="buyin">$5.50</span>
+            <span>Pembuka Mikro</span>
+            <span class="gtd">$5,000</span>
+          </div>
+          <div class="schedule-row">
+            <span class="buyin">$11</span>
+            <span>Penggilap Harian</span>
+            <span class="gtd">$15,000</span>
+          </div>
+          <div class="schedule-row">
+            <span class="buyin">$22</span>
+            <span>Istimewa Pertengahan Minggu</span>
+            <span class="gtd">$30,000</span>
+          </div>
+          <div class="schedule-row">
+            <span class="buyin">$22</span>
+            <span>Pemburu Hadiah PKO</span>
+            <span class="gtd">$25,000</span>
+          </div>
+          <div class="schedule-row">
+            <span class="buyin">$33</span>
+            <span>Turbo Malam Jumaat</span>
+            <span class="gtd">$20,000</span>
+          </div>
+          <div class="schedule-row">
+            <span class="buyin">$55</span>
+            <span>PKO High Roller</span>
+            <span class="gtd">$50,000</span>
+          </div>
+          <div class="schedule-row">
+            <span class="buyin">$109</span>
+            <span>Acara Utama Bonanza</span>
+            <span class="gtd">$100,000</span>
+          </div>
+          <div class="schedule-row">
+            <span class="buyin">$215</span>
+            <span>Super High Roller</span>
+            <span class="gtd">$75,000</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 12px;">
+          <div class="pill" style="justify-content: space-between; padding: 14px 18px; border-radius: var(--radius-md);">
+            <span>Acara Bulanan</span>
+            <strong style="color: var(--gold-primary);">40+ pertandingan</strong>
+          </div>
+          <div class="pill" style="justify-content: space-between; padding: 14px 18px; border-radius: var(--radius-md);">
+            <span>Acara PKO Sebulan</span>
+            <strong style="color: var(--gold-primary);">12+ acara</strong>
+          </div>
+          <div class="pill" style="justify-content: space-between; padding: 14px 18px; border-radius: var(--radius-md);">
+            <span>Julat Beli-masuk</span>
+            <strong style="color: var(--gold-primary);">$1.10 – $215</strong>
+          </div>
+          <div class="pill" style="justify-content: space-between; padding: 14px 18px; border-radius: var(--radius-md);">
+            <span>Pendaftaran Lewat</span>
+            <strong style="color: var(--gold-primary);">Sehingga 3 peringkat buta</strong>
+          </div>
+        </div>
+
+        <a href="https://record.jack-poker.com/_yiuBNstnNMSlaGPKJ9GnQGNd7ZgqdRLk/1/" class="btn btn-purple" style="margin-top: 24px; width: 100%; justify-content: center;">Semak Imbas Jadual Siri Penuh</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. BIG BANG SUNDAY ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Utama Promosi</span>
+      <h2>Big Bang Sunday — <span class="gold-text">Nilai Terbaik dalam Poker Dalam Talian</span></h2>
+      <p>Setiap Ahad, komuniti kami berkumpul untuk pertandingan terbesar minggu ini. Pada $30 untuk masuk dan $45,</p>
+    </div>
+
+    <div class="big-bang-card">
+      <div class="big-bang-inner">
+        <div>
+          <div class="big-bang-label">Kolam Hadiah Dijamin Promosi</div>
+          <div class="big-bang-gtd">$45,000</div>
+          <div style="display: flex; gap: 12px; margin-bottom: 28px; flex-wrap: wrap;">
+            <span class="badge badge-purple">Yuran Masuk $30</span>
+            <span class="badge badge-gold">Setiap Ahad</span>
+            <span class="badge badge-green">Masuk Semula Tersedia</span>
+          </div>
+
+          <p style="color: var(--text-body); line-height: 1.8; margin-bottom: 16px;">Big Bang Sunday adalah pertandingan mingguan utama kami dan acara yang paling ditunggu-tunggu komuniti kami</p>
+
+          <p style="color: var(--text-body); line-height: 1.8; margin-bottom: 16px;">Pada beli-masuk $30, Big Bang Sunday mewakili nilai yang luar biasa. Jaminan $45,000 dibahagi dengan</p>
+
+          <p style="color: var(--text-body); line-height: 1.8; margin-bottom: 24px;">Masuk semula dibenarkan sehingga tempoh pendaftaran lewat ditutup, biasanya tiga hingga lima peringkat buta</p>
+
+          <a href="https://record.jack-poker.com/_yiuBNstnNMSlaGPKJ9GnQGNd7ZgqdRLk/1/" class="btn btn-primary">Daftar untuk Ahad Ini →</a>
+        </div>
+
+        <div>
+          <h4 style="color: var(--text-white); margin-bottom: 16px; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.06em;">Struktur Pertandingan</h4>
+          <div class="blind-structure">
+            <div class="blind-row">
+              <span>Peringkat</span>
+              <span>Buta</span>
+              <span>Tempoh</span>
+            </div>
+            <div class="blind-row">
+              <span>1–4</span>
+              <span>25/50 – 100/200</span>
+              <span>12 minit</span>
+            </div>
+            <div class="blind-row">
+              <span>5–8</span>
+              <span>150/300 – 400/800</span>
+              <span>12 minit</span>
+            </div>
+            <div class="blind-row">
+              <span>9–12</span>
+              <span>600/1200 – 1.5K/3K</span>
+              <span>12 minit</span>
+            </div>
+            <div class="blind-row">
+              <span>13–16</span>
+              <span>2.5K/5K – 6K/12K</span>
+              <span>12 minit</span>
+            </div>
+            <div class="blind-row">
+              <span>17+</span>
+              <span>8K/16K+</span>
+              <span>12 minit</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 10px;">
+            <div class="pill" style="justify-content: space-between; padding: 12px 16px; border-radius: var(--radius-md);">
+              <span>Timbunan Permulaan</span>
+              <strong style="color: var(--text-white);">20,000 cip</strong>
+            </div>
+            <div class="pill" style="justify-content: space-between; padding: 12px 16px; border-radius: var(--radius-md);">
+              <span>Pendaftaran Lewat</span>
+              <strong style="color: var(--text-white);">5 peringkat pertama</strong>
+            </div>
+            <div class="pill" style="justify-content: space-between; padding: 12px 16px; border-radius: var(--radius-md);">
+              <span>Tempat Dibayar</span>
+              <strong style="color: var(--text-white);">15% teratas peserta</strong>
+            </div>
+            <div class="pill" style="justify-content: space-between; padding: 12px 16px; border-radius: var(--radius-md);">
+              <span>Satelit Langkah 1</span>
+              <strong style="color: var(--gold-primary);">Dari $3</strong>
+            </div>
+          </div>
+
+          <div class="highlight-box" style="margin-top: 20px;">
+            <h4>Mengapa Big Bang Sunday Berbeza</h4>
+            <p>Jaminan $45,000 pada beli-masuk $30 adalah salah satu nisbah hadiah-kepada-masuk terbaik dalam poker dalam talian. Lain</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. FREEROLL FESTIVAL ===== -->
+<section class="section section-surface">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Percuma untuk Main</span>
+      <h2>Festival Freeroll — <span class="gold-text">$200,000+ Bulanan, Sifar Beli-masuk</span></h2>
+      <p>Kami mengagihkan lebih daripada $200,000 setiap bulan dalam hadiah freeroll merentasi lapan pertandingan harian — satu</p>
+    </div>
+
+    <div class="split">
+      <div class="split-content">
+        <p>Program Festival Freeroll kami adalah yang paling murah hati yang kami ketahui dalam poker dalam talian: lebih <strong style="color: var(--gold-primary);">$200,000 sebulan</strong> diagihkan melalui pertandingan masuk-percuma sepenuhnya. Kami menjalankan <strong style="color: var(--text-white);">lapan freeroll setiap hari tunggal</strong>, dijadualkan kira-kira setiap tiga jam untuk merangkumi semua zon waktu utama di seluruh dunia. Tidak kira di mana anda</p>
+
+        <p>Untuk pemain baharu, freeroll mewakili tapak pembuktian yang ideal. Anda boleh merasai JackPoker sepenuhnya</p>
+
+        <p>Di luar freeroll terbuka standard, kami mengendali program freeroll premium bertingkat yang memberi ganjaran kepada kesetiaan <strong style="color: var(--text-white);">freeroll eksklusif dengan kolam hadiah yang lebih besar</strong> dan peserta yang lebih kecil dan lebih selektif. Acara premium ini boleh menampilkan hadiah $5,000 atau lebih dengan e</p>
+
+        <a href="https://record.jack-poker.com/_yiuBNstnNMSlaGPKJ9GnQGNd7ZgqdRLk/1/" class="btn btn-purple" style="margin-top: 8px;">Main Percuma Hari Ini →</a>
+      </div>
+
+      <div>
+        <div class="freeroll-types">
+          <div class="freeroll-type-card">
+            <span class="freeroll-icon">🆓</span>
+            <h4>Pertandingan Terbuka</h4>
+            <p>Tersedia kepada semua pemain berdaftar tanpa sebarang syarat. Lapan berjalan harian, setiap tiga jam. Kolam hadiah</p>
+          </div>
+          <div class="freeroll-type-card">
+            <span class="freeroll-icon">💰</span>
+            <h4>Pertandingan Deposit</h4>
+            <p>Eksklusif kepada pemain yang telah membuat sekurang-kurangnya satu deposit kelayakan. Peserta yang lebih kecil dan hadiah yang lebih besar </p>
+          </div>
+          <div class="freeroll-type-card">
+            <span class="freeroll-icon">👑</span>
+            <h4>Pertandingan Kesetiaan</h4>
+            <p>Diberikan kepada pemain yang menjana rake melalui cash game dan pertandingan berbayar kami. Semakin banyak anda bermain</p>
+          </div>
+          <div class="freeroll-type-card">
+            <span class="freeroll-icon">⭐</span>
+            <h4>Pertandingan Acara Khas</h4>
+            <p>Dilancarkan seiring dengan promosi besar, pelancaran siri bermusim, dan cuti umum. Acara sekali ini</p>
+          </div>
+        </div>
+
+        <div class="highlight-box gold" style="margin-top: 24px;">
+          <h4>Membina Bankroll Anda dengan Cara yang Bijak</h4>
+          <p>Mulakan dengan freeroll terbuka untuk mempelajari antara muka. Sebaik sahaja anda membuat deposit — walaupun $10 — anda membuka kunci</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. TOURNAMENT FORMATS ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Kenali Permainan Anda</span>
+      <h2>Format Pertandingan <span class="gold-text">Dijelaskan</span></h2>
+      <p>Kami menawarkan lima format pertandingan teras merentasi jadual kami. Setiap satu memberi ganjaran kepada pendekatan strategik yang berbeza</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="format-card">
+        <span class="format-icon">🔒</span>
+        <h3>Freezeout</h3>
+        <p>Format klasik. Anda menerima satu timbunan permulaan, dan apabila cip anda habis, anda tersingkir</p>
+      </div>
+
+      <div class="format-card">
+        <span class="format-icon">🔄</span>
+        <h3>Masuk Semula</h3>
+        <p>Jika anda tersingkir sebelum tempoh pendaftaran lewat ditutup, anda boleh masuk semula ke pertandingan dengan</p>
+      </div>
+
+      <div class="format-card">
+        <span class="format-icon">💥</span>
+        <h3>Progressive Knockout (PKO)</h3>
+        <p>Format paling menarik dalam poker pertandingan moden. Dalam PKO, separuh beli-masuk anda membiayai kolam hadiah dan</p>
+      </div>
+
+      <div class="format-card">
+        <span class="format-icon">⚡</span>
+        <h3>Turbo &amp; Hyper-Turbo</h3>
+        <p>Acara Turbo menampilkan peringkat buta 5–6 minit, berbanding standard 10–15. Hyper-Turbo mendorong</p>
+      </div>
+
+      <div class="format-card">
+        <span class="format-icon">🎯</span>
+        <h3>Pertandingan Satelit</h3>
+        <p>Satelit memberikan tempat duduk kepada pertandingan sasaran yang lebih besar dan bukannya hadiah tunai. Menang satelit, dan anda</p>
+      </div>
+
+      <div class="format-card">
+        <span class="format-icon">🌀</span>
+        <h3>Spin &amp; Win (Jackpot)</h3>
+        <p>Format tiga pemain hyper-pantas di mana kolam hadiah ditentukan oleh putaran pengganda rawak sebelum <strong style="color: var(--gold-primary);">$1,000,000</strong>. Permainan berlangsung antara 5 dan 20 minit. Spin &amp; Win bukan pertandingan multi-meja tradisional, tetapi</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. RECENT EVENT COVERAGE ===== -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Sejarah Acara</span>
+      <h2>Terkini <span class="gold-text">Acara-acara Utama</span></h2>
+      <p>Sejarah acara kami berbicara sendiri. Setiap musim kami menaikkan bar dengan jaminan yang lebih besar, lebih kreatif</p>
+    </div>
+
+    <div class="grid-2">
+      <div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">23 Mac – 19 April 2026</div>
+            <h4>Cash Carnival 2026 <span class="badge badge-green" style="margin-left: 8px; vertical-align: middle;">Langsung Sekarang</span></h4>
+            <p>Promosi meja-tunai terbesar kami pernah. Setengah juta dolar dalam bom tunai rawak yang diedarkan merentasi</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">26 Januari – 15 Februari 2026</div>
+            <h4>Winter Games Festival</h4>
+            <p>Siri bertempat terbesar musim sejuk kami menyampaikan <strong style="color: var(--gold-primary);">$2.5 juta</strong> dalam jumlah kolam hadiah bertempat merentasi 80+ acara. Acara Utama sahaja menanggung <strong style="color: var(--text-white);">jaminan $80,000</strong> dengan beli-masuk bermula dari $200. Siri ini dibezakan dengan nilai yang luar biasa di setiap peringkat — ev</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">9 Februari – 8 Mac 2026</div>
+            <h4>Happy Hour Jackpot + Cash Carnival</h4>
+            <p>Kombinasi promosi berkembar yang menggabungkan dua format paling popular kami secara serentak. Happy  <strong style="color: var(--gold-primary);">$1 juta dalam hadiah papan pemimpin dijamin</strong> diedarkan mingguan, memberi ganjaran kepada pelaku yang paling konsisten dalam komuniti cash game kami secara automatik</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">3–30 November 2025</div>
+            <h4>Siri Bigger Bang</h4>
+            <p>Siri pertandingan paling bercita-cita tinggi yang pernah kami jalankan pada masa pelancaran, Siri Bigger Bang menet <strong style="color: var(--gold-primary);">$3.5 juta dalam jumlah kolam hadiah bertempat</strong> merentasi sebulan penuh permainan. Siri ini menampilkan 120+ acara individu yang merangkumi freezeout, PKO, masuk semula-</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">6 Oktober – 2 November 2025</div>
+            <h4>Full House of Horror</h4>
+            <p>Siri bermusim bertema Halloween kami terbukti menjadi salah satu acara kami yang paling kreatif dan disukai.  <strong style="color: var(--text-white);">162 pertandingan PKO individu</strong> — jumlah yang belum pernah ada sebelumnya untuk satu siri tunggal — dengan progressive knockout berjalan pada setiap peringkat beli-masuk <strong style="color: var(--gold-primary);">papan pemimpin $1 juta</strong> yang menjejaki perolehan hadiah hadiah merentasi semua acara, memberi ganjaran kepada penghapus paling agresif dengan</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">November 2025</div>
+            <h4>Siri Pelancaran Hyper Giveaway</h4>
+            <p>Dilancarkan seiring dengan Siri Bigger Bang, Hyper Giveaway adalah debut format ultra-pantas kami</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. DAILY TOURNAMENT SCHEDULE ===== -->
+<section class="section" id="schedule">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Jadual Harian</span>
+      <h2>Pertandingan Harian <span class="gold-text">Jadual</span></h2>
+      <p>Jadual harian kami memastikan sentiasa ada pertandingan bermula dalam sejam seterusnya, tidak kira apa</p>
+    </div>
+
+    <div class="table-wrapper">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Masa (UTC)</th>
+            <th>Nama Pertandingan</th>
+            <th>Format</th>
+            <th>Beli-masuk</th>
+            <th>GTD / Hadiah</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">00:00</td>
+            <td>Pertandingan Tengah Malam</td>
+            <td><span class="badge badge-green">Pertandingan</span></td>
+            <td>PERCUMA</td>
+            <td>$200</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">01:00</td>
+            <td>Asia Early Bird</td>
+            <td><span class="badge badge-purple">Freezeout</span></td>
+            <td>$5.50</td>
+            <td>$2,000 GTD</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">03:00</td>
+            <td>Pertandingan #2 — Sesi Awal</td>
+            <td><span class="badge badge-green">Pertandingan</span></td>
+            <td>PERCUMA</td>
+            <td>$300</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">05:00</td>
+            <td>Pemanasan Pagi PKO</td>
+            <td><span class="badge badge-gold">PKO</span></td>
+            <td>$11</td>
+            <td>$5,000 GTD</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">06:00</td>
+            <td>Pertandingan #3 — Global</td>
+            <td><span class="badge badge-green">Pertandingan</span></td>
+            <td>PERCUMA</td>
+            <td>$500</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">08:00</td>
+            <td>Pembuka Mikro Bonanza</td>
+            <td><span class="badge badge-purple">Masuk Semula</span></td>
+            <td>$5.50</td>
+            <td>$5,000 GTD</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">09:00</td>
+            <td>Pertandingan #4 — Pagi Eropah</td>
+            <td><span class="badge badge-green">Pertandingan</span></td>
+            <td>PERCUMA</td>
+            <td>$500</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">11:00</td>
+            <td>Turbo Pertengahan Hari</td>
+            <td><span class="badge badge-purple">Turbo</span></td>
+            <td>$16.50</td>
+            <td>$7,500 GTD</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">12:00</td>
+            <td>Pertandingan #5 — Rehat Tengah Hari</td>
+            <td><span class="badge badge-green">Pertandingan</span></td>
+            <td>PERCUMA</td>
+            <td>$750</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">14:00</td>
+            <td>Penggilap Petang</td>
+            <td><span class="badge badge-purple">Freezeout</span></td>
+            <td>$22</td>
+            <td>$15,000 GTD</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">15:00</td>
+            <td>Pertandingan #6 — Petang</td>
+            <td><span class="badge badge-green">Pertandingan</span></td>
+            <td>PERCUMA</td>
+            <td>$1,000</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">17:00</td>
+            <td>Happy Hour PKO</td>
+            <td><span class="badge badge-gold">PKO</span></td>
+            <td>$33</td>
+            <td>$20,000 GTD</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">18:00</td>
+            <td>Pertandingan #7 — Waktu Utama</td>
+            <td><span class="badge badge-green">Pertandingan</span></td>
+            <td>PERCUMA</td>
+            <td>$1,500</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">19:00</td>
+            <td>Feature Malam — Bonanza Main</td>
+            <td><span class="badge badge-purple">Masuk Semula</span></td>
+            <td>$55</td>
+            <td>$30,000 GTD</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">20:30</td>
+            <td>Penembak Hyper-Turbo</td>
+            <td><span class="badge badge-purple">Hyper-Turbo</span></td>
+            <td>$16.50</td>
+            <td>$5,000 GTD</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">21:00</td>
+            <td>Pertandingan #8 — Hantu Malam</td>
+            <td><span class="badge badge-green">Pertandingan</span></td>
+            <td>PERCUMA</td>
+            <td>$1,000</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">22:00</td>
+            <td>High Roller Malam Lewat</td>
+            <td><span class="badge badge-gold">PKO</span></td>
+            <td>$109</td>
+            <td>$25,000 GTD</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600; border-bottom: none;">Ahad Sahaja</td>
+            <td><strong style="color: var(--text-white);">Big Bang Sunday</strong></td>
+            <td><span class="badge badge-gold">Masuk Semula</span></td>
+            <td>$30</td>
+            <td style="color: var(--gold-primary); font-weight: 700;">$45,000 GTD</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="margin-top: 20px; color: var(--text-muted); font-size: 0.85rem; text-align: center;">Jadual adalah gambaran pengaturcaraan hari bekerja standard. Acara siri Bonus Bonanza tambahan, </p>
+  </div>
+</section>
+
+<!-- ===== 10. HOW TO REGISTER ===== -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Mulakan</span>
+      <h2>Cara Mendaftar untuk <span class="gold-text">Pertandingan</span></h2>
+      <p>Memasuki pertandingan JackPoker pertama anda hanya mengambil beberapa minit. Berikut adalah semua yang anda perlu lakukan, </p>
+    </div>
+
+    <div class="register-steps">
+      <div class="register-step">
+        <div class="step-number">1</div>
+        <div class="register-step-content">
+          <h4>Cipta Akaun Anda</h4>
+          <p>Lawati JackPoker dan klik Daftar. Isikan alamat e-mel anda, pilih kata laluan yang selamat, dan sahkan <strong style="color: var(--gold-primary);">WELCOME</strong> di medan kod promosi semasa pendaftaran untuk mengaktifkan pakej aluan penuh, termasuk deposit 300%</p>
+        </div>
+      </div>
+
+      <div class="register-step">
+        <div class="step-number">2</div>
+        <div class="register-step-content">
+          <h4>Sahkan Identiti Anda</h4>
+          <p>JackPoker beroperasi di bawah lesen permainan penuh dan memerlukan pengesahan identiti standard sebelum pen</p>
+        </div>
+      </div>
+
+      <div class="register-step">
+        <div class="step-number">3</div>
+        <div class="register-step-content">
+          <h4>Buat Deposit</h4>
+          <p>Navigasi ke bahagian Cashier dan pilih kaedah pembayaran pilihan anda. Kami menyokong Visa, Mastercar</p>
+        </div>
+      </div>
+
+      <div class="register-step">
+        <div class="step-number">4</div>
+        <div class="register-step-content">
+          <h4>Buka Lobi Pertandingan</h4>
+          <p>Klik tab Pertandingan dalam navigasi utama. Lobi memaparkan semua acara akan datang yang disusun mengikut s</p>
+        </div>
+      </div>
+
+      <div class="register-step">
+        <div class="step-number">5</div>
+        <div class="register-step-content">
+          <h4>Daftar untuk Acara Anda</h4>
+          <p>Pilih pertandingan yang ingin anda masuki, kemudian klik butang Daftar hijau. Untuk acara berbayar, yuran</p>
+        </div>
+      </div>
+
+      <div class="register-step">
+        <div class="step-number">6</div>
+        <div class="register-step-content">
+          <h4>Ambil Tempat Duduk Anda &amp; Main</h4>
+          <p>Apabila pertandingan bermula, meja anda akan terbuka secara automatik atau memberitahu anda dengan amaran. JackPoke</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 11. TOURNAMENT TIPS ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Sudut Strategi</span>
+      <h2>Petua Pertandingan untuk <span class="gold-text">Pemain JackPoker</span></h2>
+      <p>Sama ada anda pendatang baharu kepada pertandingan multi-meja atau penggilap berpengalaman, prinsip-prinsip strategik ini</p>
+    </div>
+
+    <div class="tips-grid">
+      <div class="tip-card">
+        <h4>Mulakan dengan Pertandingan untuk Mempelajari Antara Muka</h4>
+        <p>Sebelum membuat komitmen wang beli-masuk kepada mana-mana pertandingan, luangkan masa dalam freeroll percuma kami untuk menguasai Ja</p>
+      </div>
+
+      <div class="tip-card">
+        <h4>Fahami ICM Apabila Gelembung Hampir</h4>
+        <p>Matematik Independent Chip Model (ICM) mengawal permainan optimum berhampiran gelembung wang dan meja akhir p</p>
+      </div>
+
+      <div class="tip-card">
+        <h4>Sesuaikan Strategi Anda untuk Format PKO</h4>
+        <p>Pertandingan Progressive Knockout memerlukan rangka kerja strategik yang berbeza secara asasnya berbanding st</p>
+      </div>
+
+      <div class="tip-card">
+        <h4>Gunakan Satelit untuk Mengakses Acara Beli-masuk Tinggi</h4>
+        <p>Cara paling cekap untuk membina résumé pertandingan anda dan mengambil tembakan pada acara bernilai tinggi adalah melalui</p>
+      </div>
+
+      <div class="tip-card">
+        <h4>Bina Timbunan Awal dalam Acara Turbo dan Hyper</h4>
+        <p>Dalam pertandingan Turbo dan Hyper-Turbo, nisbah buta-kepada-timbunan meningkat dengan sangat pesat sehingga strategi berhati-hati</p>
+      </div>
+
+      <div class="tip-card">
+        <h4>Multi-Meja untuk Memaksimumkan Jumlah dan EV</h4>
+        <p>JackPoker menyokong sehingga tiga meja serentak, dan multi-tabling adalah salah satu cara paling berkesan</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 12. FINAL CTA ===== -->
+<section class="final-cta">
+  <div class="container">
+    <div class="final-cta-inner">
+      <div class="promo-pill">
+        Gunakan kod promosi <span class="code">WELCOME</span> untuk padanan deposit 300% sehingga $2,000
+      </div>
+      <h2 style="font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 20px;">Sertai <span class="gold-text">Aksi</span></h2>
+      <p style="color: var(--text-muted); max-width: 580px; margin: 0 auto 16px; font-size: 1.05rem; line-height: 1.8;">Lebih $3.5 juta dalam jaminan bulanan. Lapan pertandingan percuma harian. Acara Big Bang Sunday $45,000</p>
+      <p style="color: var(--text-muted); max-width: 520px; margin: 0 auto 36px; font-size: 0.95rem; line-height: 1.8;">Daftar sekarang, masuki freeroll pertama anda dalam beberapa minit selepas mendaftar, dan mula membina bankroll anda</p>
+
+      <div style="display: flex; align-items: center; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px;">
+        <div class="promo-code-box" style="max-width: 280px;">
+          <span class="promo-code-value">WELCOME</span>
+          <button class="promo-code-copy" onclick="navigator.clipboard.writeText('WELCOME').then(()=>{this.textContent=\'Disalin!\';setTimeout(()=>{this.textContent=\'Salin\'},2000)})">Salin</button>
+        </div>
+        <a href="https://record.jack-poker.com/_yiuBNstnNMSlaGPKJ9GnQGNd7ZgqdRLk/1/" class="btn btn-primary btn-lg">Main Sekarang ♠</a>
+      </div>
+
+      <div style="display: flex; gap: 32px; justify-content: center; flex-wrap: wrap;">
+        <div style="display: flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.88rem;">
+          <span style="color: var(--success);">✓</span> Tiada muat turun diperlukan
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.88rem;">
+          <span style="color: var(--success);">✓</span> Platform berlesen &amp; bersertifikat
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.88rem;">
+          <span style="color: var(--success);">✓</span> Pertandingan tersedia dengan serta-merta
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.88rem;">
+          <span style="color: var(--success);">✓</span> iOS, Android &amp; permainan pelayar
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Promo Code CTA — Tournament Context -->
+<aside class="promo-cta-inline" style="background: linear-gradient(135deg, rgba(137,59,247,0.08), rgba(246,186,70,0.08)); border: 1px solid rgba(246,186,70,0.2); border-radius: 16px; padding: 32px 36px; margin: 48px 0; position: relative; overflow: hidden;">
+  <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--purple-primary), var(--gold-primary));"></div>
+  <div style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 280px;">
+      <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 8px;">Masuki Pertandingan dengan Timbunan yang Lebih Besar</h3>
+      <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin: 0;">Pemain baharu yang mendaftar dengan <a href="promo-code.html" style="color: var(--gold-primary); font-weight: 700; text-decoration: underline;">kod bonus JackPoker WELCOME</a> menerima padanan deposit 300% ditambah tiket freeroll dan masukan Misi Aluan yang termasuk pertandingan <a href="promo-code.html" style="color: var(--gold-primary); font-weight: 600;">pecahan kod promosi WELCOME lengkap</a> untuk melihat semua yang anda buka kunci.</p>
+    </div>
+    <div style="flex-shrink: 0;">
+      <a href="promo-code.html" class="btn btn-cta" style="white-space: nowrap;">Gunakan Kod WELCOME →</a>
+    </div>
+  </div>
+</aside>
+
+<!-- ===== FOOTER ===== -->
+
+    <!-- Latest News Links -->
+    <section style="padding: 24px 0 0;">
+      <div class="container">
+        <h3 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; color: var(--text-primary);">Terkini dari JackPoker</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <a href="news/winter-games-festival-wraps-with-record-breaking-21m-in-payo.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">Winter Games Festival: $2.1J Bayaran →</a>
+          <a href="news/bonus-bonanza-march-schedule-620-events-125m-in-guarantees.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">Bonus Bonanza Mac: $1.25J GTD →</a>
+          <a href="news/jackpoker-mobile-app-30-launches-with-multi-table-support.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">Aplikasi Mudah Alih 3.0 Dilancarkan →</a>
+          <a href="news/crypto-deposits-now-available-in-sol-matic-and-ton.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">Deposit Kripto: SOL, MATIC, TON →</a>
+        </div>
+      </div>
+    </section>
+
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="JackPoker Home">
+        <svg class="logo-icon" width="189" height="47" viewBox="0 0 189 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="JackPoker">
+<path d="M25.4001 1C24.0001 1 22.8001 2.2 22.8001 3.6C22.8001 5.1 23.8343 5.9 25.3001 5.9H28.7001C28.7001 5.9 31.3001 5.9 31.3001 8.3C31.3001 10.7 28.7001 10.7 28.7001 10.7H8.30008C6.90008 10.7 5.70008 11.9 5.70008 13.3C5.70008 14.7 6.90008 15.9 8.30008 15.9H22.5001C22.5001 15.9 25.1001 15.9 25.1001 18.3C25.1001 20.7 22.5001 20.7 22.5001 20.7H11.4001C10.0001 20.7 8.80008 21.9 8.80008 23.3C8.80008 24.7 10.0001 25.9 11.4001 25.9H22.6001C22.6001 25.9 25.2001 25.9 25.2001 28.3C25.2001 30.7 22.6001 30.7 22.6001 30.7H21.8001C20.4001 30.7 19.2001 31.9 19.2001 33.3C19.2001 34.7 20.4001 35.9 21.8001 35.9H28.8001C28.8001 35.9 31.4001 35.9 31.4001 38.3C31.4001 40.7 28.8001 40.7 28.8001 40.7H14.0001C12.6001 40.7 11.4001 41.9 11.4001 43.3C11.4001 44.7 12.6001 45.9 14.0001 45.9H34.3001C36.5001 45.9 38.4001 44.8 39.5001 43C41.1501 40.25 42.7751 37.4999 44.4001 34.7499C46.0251 31.9999 47.6501 29.25 49.3001 26.5C50.4001 24.6 50.4001 22.3 49.3001 20.4C47.6501 17.6501 46.0252 14.9001 44.4002 12.1502C42.7752 9.4002 41.1501 6.65001 39.5001 3.9C38.4001 2.1 36.4001 1 34.3001 1H25.4001Z" fill="url(#jpLogoGrad)"/>
+<path d="M11.3999 3.6C11.3999 2.2 12.5999 1 13.9999 1H17.5999C18.9999 1 20.1999 2.2 20.1999 3.6C20.1999 5 18.9999 6.2 17.5999 6.2H13.9999C12.5999 6.2 11.3999 5 11.3999 3.6Z" fill="url(#jpLogoGrad)"/>
+<path d="M0 23.5001C0 22.1001 1.2 20.9001 2.6 20.9001H3.6C5 20.9001 6.2 22.1001 6.2 23.5001C6.2 24.9001 5 26.1001 3.6 26.1001H2.6C1.2 26.1001 0 24.9001 0 23.5001Z" fill="url(#jpLogoGrad)"/>
+<path d="M8.30008 30.8001C6.90008 30.8001 5.70008 32.0001 5.70008 33.4001C5.70008 34.9001 6.90008 36.1001 8.30008 36.0001H14.0001C15.4001 36.0001 16.6001 34.8001 16.6001 33.4001C16.6001 32.0001 15.4001 30.8001 14.0001 30.8001H8.30008Z" fill="url(#jpLogoGrad)"/>
+<path d="M69.7955 27.3088C69.7955 28.8312 69.6204 30.0793 69.2704 31.0533C68.9203 32.0273 68.3261 32.7598 67.4876 33.2509C66.6572 33.7502 65.5257 33.9998 64.0929 33.9998C63.7591 33.9998 63.3887 33.9712 62.9817 33.9139C62.5747 33.8648 62.3142 33.832 62.2002 33.8157L62.5177 31.2252H63.7144C65.1797 31.2252 65.9164 30.4231 65.9246 28.8189V15.265L64.0441 14.5039V12.3676L71.676 12.2449V14.5039L69.7955 15.265V27.3088Z" fill="white"/>
+<path d="M81.4937 28.3401C81.4937 28.3728 81.2779 28.557 80.8465 28.8926C80.415 29.2281 79.8981 29.5351 79.2957 29.8133C78.6933 30.0834 78.0746 30.2185 77.4396 30.2185C76.2185 30.2185 75.2619 29.8788 74.57 29.1995C73.8862 28.512 73.5443 27.538 73.5443 26.2775C73.5443 24.837 74.0571 23.7853 75.0829 23.1223C76.1086 22.4594 77.6024 22.1279 79.5643 22.1279H81.3227V20.7406C81.3227 19.5129 80.6796 18.9031 79.3934 18.9113C79.0107 18.9113 78.6566 18.94 78.331 18.9973C78.0054 19.0545 77.7449 19.1159 77.5495 19.1814C77.3622 19.2387 77.2442 19.2755 77.1954 19.2919L76.8168 20.8756H74.57L74.399 17.1557C74.5456 17.1066 74.9038 17.0002 75.4736 16.8365C76.0516 16.6728 76.7395 16.5173 77.5373 16.37C78.3432 16.2226 79.1044 16.149 79.8207 16.149C81.107 16.149 82.1286 16.3127 82.8857 16.6401C83.6428 16.9593 84.1964 17.4831 84.5464 18.2115C84.8965 18.9318 85.0715 19.9017 85.0715 21.1212V27.3334L86.952 27.7876V29.8011L81.9455 29.9729L81.4937 28.3401ZM77.1709 25.897C77.1709 26.388 77.2971 26.7645 77.5495 27.0264C77.81 27.2802 78.1763 27.407 78.6485 27.407C79.0474 27.407 79.4422 27.3006 79.833 27.0878C80.2237 26.8668 80.5534 26.6418 80.822 26.4126C81.0907 26.1752 81.2576 26.0197 81.3227 25.9461V24.2641H79.894C78.9253 24.2641 78.2292 24.3951 77.8059 24.657C77.3826 24.9189 77.1709 25.3322 77.1709 25.897Z" fill="white"/>
+<path d="M100.311 28.0823C99.7492 28.5897 99.0124 29.0726 98.1007 29.531C97.1971 29.9893 96.1428 30.2185 94.938 30.2185C92.8866 30.2185 91.291 29.6169 90.1513 28.4137C89.0116 27.2106 88.4417 25.5327 88.4417 23.3802C88.4417 21.1376 89.0442 19.3737 90.249 18.0888C91.4619 16.7956 93.1511 16.149 95.3166 16.149C95.9515 16.149 96.5906 16.2145 97.2337 16.3454C97.885 16.4764 98.4263 16.6114 98.8578 16.7506C99.2974 16.8815 99.5742 16.9715 99.6881 17.0206L99.566 21.1457H97.3192L96.9651 19.3656C96.8836 19.3492 96.6801 19.3124 96.3545 19.2551C96.0289 19.1896 95.6585 19.1569 95.2433 19.1569C94.3234 19.1569 93.6029 19.472 93.0819 20.1022C92.5691 20.7324 92.3126 21.6573 92.3126 22.8768C92.3126 24.2682 92.5731 25.3404 93.0942 26.0934C93.6233 26.8382 94.4048 27.2106 95.4387 27.2106C96.0899 27.2106 96.6598 27.1124 97.1482 26.916C97.6448 26.7113 98.06 26.5026 98.3937 26.2898C98.7275 26.077 98.9514 25.9379 99.0654 25.8724L100.311 28.0823Z" fill="white"/>
+<path d="M108.602 21.4527L110.3 18.8868L109.201 18.5307V16.5173L115.66 16.3945V18.5307L113.902 18.8622L111.582 22.1525L114.378 27.3579L116.283 27.9595V29.9729H111.655L108.553 23.8344H106.954V27.3334L108.334 27.9595V29.9729H101.202V27.9595L103.205 27.3334V13.2025L101.202 12.6991V10.6857L106.954 10.4893V21.4527H108.602Z" fill="white"/>
+<path d="M117.406 27.8367L119.275 27.0756V15.265L117.406 14.5039V12.3676L123.158 12.2449H125.527C127.423 12.2449 128.909 12.7155 129.984 13.6567C131.066 14.598 131.608 15.8871 131.608 17.524C131.608 19.6029 130.993 21.1703 129.764 22.2261C128.543 23.2819 126.78 23.8099 124.477 23.8099H123.158V27.0756L125.026 27.8367V29.9729H117.406V27.8367ZM124.477 20.8756C125.527 20.8756 126.333 20.6342 126.894 20.1513C127.456 19.6602 127.737 18.9522 127.737 18.0274C127.737 17.1925 127.513 16.5255 127.065 16.0262C126.626 15.5188 125.991 15.265 125.16 15.265H123.158V20.8756H124.477Z" fill="white"/>
+<path d="M139.74 16.149C141.751 16.149 143.302 16.7383 144.393 17.9169C145.492 19.0955 146.041 20.7692 146.041 22.9382C146.041 24.4278 145.764 25.721 145.211 26.8177C144.665 27.9145 143.892 28.7575 142.891 29.3468C141.89 29.9279 140.713 30.2185 139.362 30.2185C135.112 30.2185 132.988 27.9145 132.988 23.3065C132.988 21.8169 133.264 20.536 133.818 19.4638C134.38 18.3916 135.169 17.5731 136.187 17.0084C137.205 16.4354 138.389 16.149 139.74 16.149ZM139.606 19.1569C138.662 19.1569 137.966 19.4638 137.518 20.0776C137.078 20.6915 136.859 21.7269 136.859 23.1837C136.859 24.5751 137.066 25.5941 137.481 26.2407C137.905 26.8873 138.572 27.2106 139.484 27.2106C140.404 27.2106 141.08 26.8873 141.511 26.2407C141.942 25.5941 142.158 24.5342 142.158 23.061C142.158 21.7514 141.955 20.7733 141.548 20.1267C141.141 19.4802 140.493 19.1569 139.606 19.1569Z" fill="white"/>
+<path d="M154.809 21.4527L156.506 18.8868L155.407 18.5307V16.5173L161.867 16.3945V18.5307L160.108 18.8622L157.788 22.1525L160.585 27.3579L162.49 27.9595V29.9729H157.862L154.76 23.8344H153.16V27.3334L154.54 27.9595V29.9729H147.409V27.9595L149.412 27.3334V13.2025L147.409 12.6991V10.6857L153.16 10.4893V21.4527H154.809Z" fill="white"/>
+<path d="M167.508 24.0186C167.573 25.0253 167.875 25.811 168.412 26.3758C168.957 26.9323 169.666 27.2106 170.537 27.2106C171.155 27.2106 171.774 27.1247 172.393 26.9528C173.02 26.7727 173.536 26.5927 173.944 26.4126C174.359 26.2243 174.623 26.0934 174.737 26.0197L175.812 28.1068C175.812 28.1396 175.519 28.3483 174.933 28.733C174.355 29.1095 173.642 29.4532 172.796 29.7642C171.957 30.0671 171.062 30.2185 170.109 30.2185C167.993 30.2185 166.381 29.6292 165.274 28.4506C164.167 27.272 163.613 25.6023 163.613 23.4415C163.613 21.9847 163.878 20.7079 164.407 19.6111C164.944 18.5062 165.713 17.655 166.715 17.0575C167.716 16.4518 168.904 16.149 170.28 16.149C172.112 16.149 173.516 16.6769 174.493 17.7327C175.47 18.7885 175.958 20.2291 175.958 22.0542C175.958 22.4553 175.938 22.8441 175.897 23.2206C175.857 23.5971 175.828 23.8344 175.812 23.9326L167.508 24.0186ZM170.036 19.1569C169.352 19.1569 168.795 19.3901 168.363 19.8566C167.932 20.315 167.663 20.9207 167.557 21.6737H172.087C172.087 20.9207 171.921 20.315 171.587 19.8566C171.253 19.3901 170.736 19.1569 170.036 19.1569Z" fill="white"/>
+<path d="M183.199 18.1256C183.199 18.0928 183.395 17.9005 183.786 17.5486C184.176 17.1966 184.628 16.8774 185.141 16.591C185.662 16.2963 186.175 16.149 186.68 16.149C187.079 16.149 187.453 16.1817 187.803 16.2472C188.153 16.3127 188.426 16.3822 188.621 16.4559C188.825 16.5296 188.951 16.5746 189 16.591L188.804 21.4281H186.558L186.179 19.2919C185.748 19.2919 185.328 19.3983 184.921 19.6111C184.522 19.8157 184.18 20.0449 183.896 20.2986C183.619 20.5442 183.48 20.6751 183.48 20.6915V27.3334L185.984 27.9595V29.9729H177.729V27.9595L179.732 27.3334V19.1569L177.729 18.5307V16.5173L182.98 16.3945L183.199 18.1256Z" fill="white"/>
+<defs>
+<linearGradient id="jpLogoGrad" x1="0" y1="33.44" x2="50.74" y2="33.44" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8032FF"/>
+<stop offset="1" stop-color="#FF3D00"/>
+</linearGradient>
+</defs>
+</svg>
+      </a>
+        <p>JackPoker ialah platform poker dalam talian moden yang menawarkan Texas Hold'em, PLO, Spin&Win, dan aksi pertandingan</p>
+      </div>
+      <div class="footer-col">
+        <h4>Platform</h4>
+        <ul>
+          <li><a href="games.html">Permainan</a></li>
+          <li><a href="tournaments.html">Pertandingan</a></li>
+          <li><a href="bonuses.html">Bonus &amp; Promosi</a></li>
+          <li><a href="promo-code.html">Kod Promosi</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Sumber</h4>
+        <ul>
+          <li><a href="news.html">Berita</a></li>
+          <li><a href="https://jack-poker.com/faq" target="_blank" rel="noopener noreferrer">Soalan Lazim</a></li>
+          <li><a href="https://jack-poker.com/terms" target="_blank" rel="noopener noreferrer">Terma Perkhidmatan</a></li>
+          <li><a href="https://jack-poker.com/privacy" target="_blank" rel="noopener noreferrer">Dasar Privasi</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Pembayaran</h4>
+        <div class="footer-payment-icons">
+          <span>VISA</span><span>Mastercard</span><span>Skrill</span><span>Neteller</span><span>Bitcoin</span><span>Ethereum</span><span>USDT</span><span>Pix</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 JackPoker. Dikendalikan oleh Jack La International Limitada. Berlesen di Anjouan, Kesatuan Com</p>
+      <p>Disahkan oleh iTech Labs &bull; BMM TestLabs &bull; GLI</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../main.js"></script>
+</body>
+</html>
