@@ -92,12 +92,19 @@ def build_hreflang_tags(current_page):
     return '\n'.join(tags)
 
 
+# Brand names and terms that must NEVER be replaced during translation
+PROTECTED_BRAND_NAMES = {
+    "JackPoker", "WELCOME", "Spin&Win", "PLO", "PLO6", "NL25+",
+    "Lootbox", "Welcome Quest", "Welcome Quests",
+}
+
 def do_replacements(html_content, en_flat, target_flat):
     """
     Replace English text with target language text using smart matching.
     
     We sort replacements by string length (longest first) to avoid
-    partial replacement issues. We skip very short strings.
+    partial replacement issues. We skip very short strings and protected
+    brand names.
     """
     result = html_content
     
@@ -117,6 +124,10 @@ def do_replacements(html_content, en_flat, target_flat):
             
         # Skip pure numbers/symbols
         if re.match(r'^[\d\$\%\+\.\,\×\s]+$', en_val):
+            continue
+        
+        # Skip protected brand names — these should never be translated
+        if en_val.strip() in PROTECTED_BRAND_NAMES:
             continue
         
         result = result.replace(en_val, target_val)

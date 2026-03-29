@@ -1508,3 +1508,11 @@ p { margin-bottom: 1rem; }
 [data-theme="light"] .breadcrumb-nav {
   background: #F8F7FA;
 }
+
+/* News card image hover effects */
+.news-card:hover img {
+  transform: scale(1.05);
+}
+.featured-article:hover img {
+  transform: scale(1.05);
+}

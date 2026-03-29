@@ -2,10 +2,10 @@ User-agent: *
 Allow: /
 
 Sitemap: https://jackpoker.poker/sitemap.xml
-
-# Allow all crawlers full access
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
+Sitemap: https://jackpoker.poker/sitemap-en.xml
+Sitemap: https://jackpoker.poker/ru/sitemap.xml
+Sitemap: https://jackpoker.poker/es/sitemap.xml
+Sitemap: https://jackpoker.poker/it/sitemap.xml
+Sitemap: https://jackpoker.poker/pt/sitemap.xml
+Sitemap: https://jackpoker.poker/vi/sitemap.xml
+Sitemap: https://jackpoker.poker/th/sitemap.xml
