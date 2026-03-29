@@ -1369,17 +1369,16 @@ p { margin-bottom: 1rem; }
   top: calc(100% + 6px);
   right: 0;
   min-width: 180px;
-  background: var(--card-bg);
-  border: 1px solid var(--border-color);
+  background: #1e1b28;
+  border: 1px solid rgba(137,59,247,0.25);
   border-radius: 12px;
   padding: 6px;
-  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.5);
   opacity: 0;
   visibility: hidden;
   transform: translateY(-8px);
   transition: all 0.2s cubic-bezier(0.4,0,0.2,1);
   z-index: 1001;
-  backdrop-filter: blur(20px);
 }
 .lang-switcher.open .lang-dropdown {
   opacity: 1;
