@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ألعاب JackPoker — Hold'em وPLO وSpin & Win | 2026</title>
+  <meta name="description" content="استكشف كل الألعاب في JackPoker: Texas Hold'em وPLO وجاكبوتات Spin & Win حتى $1M وPush-Fold والمزيد. دليل كامل للرهانات والتنسيقات.">
+  <meta property="og:title" content="ألعاب JackPoker — تفصيل كامل للتنسيقات 2026">
+  <meta property="og:description" content="شرح تفصيلي لكل تنسيق بوكر ولعبة كازينو في JackPoker. الرهانات وأحجام الطاولة والحركة وميزات البرنامج وطرق الدفع.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://jackpoker.poker/assets/images/hero-poker.jpg" />
+  <link rel="canonical" href="https://jackpoker.poker/ar/games.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/jackpoker-favicon.svg" />
+
+  <style>
+    /* ===== GAMES PAGE EXTRAS ===== */
+
+    /* Sticky in-page games nav */
+    .games-subnav {
+      background: rgba(13,11,18,0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+      position: sticky;
+      top: var(--header-height);
+      z-index: 90;
+    }
+
+    .games-subnav-inner {
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .games-subnav-inner::-webkit-scrollbar { display: none; }
+
+    .games-subnav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 14px 18px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-decoration: none;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s ease;
+    }
+
+    .games-subnav-link:hover {
+      color: var(--gold-primary);
+      border-bottom-color: var(--gold-primary);
+    }
+
+    .games-subnav-link.active {
+      color: var(--gold-primary);
+      border-bottom-color: var(--gold-primary);
+    }
+
+    /* Game section hero strips */
+    .game-section {
+      padding: 80px 0;
+    }
+
+    .game-section + .game-section {
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .game-section-dark {
+      background: var(--bg-secondary);
+    }
+
+    .game-section-surface {
+      background: var(--bg-tertiary);
+    }
+
+    /* Large game title treatment */
+    .game-title-block {
+      margin-bottom: 40px;
+    }
+
+    .game-title-block .game-format-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 14px;
+      background: rgba(246,186,70,0.1);
+      border: 1px solid rgba(246,186,70,0.25);
+      border-radius: 100px;
+      font-size: 0.73rem;
+      font-weight: 700;
+      color: var(--gold-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+
+    .game-title-block h2 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      margin-bottom: 16px;
+    }
+
+    .game-title-block .game-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      max-width: 640px;
+    }
+
+    /* Stakes chips row */
+    .stakes-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 24px 0;
+    }
+
+    .stake-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 14px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-body);
+      font-family: 'Courier New', monospace;
+      letter-spacing: 0.02em;
+      transition: all 0.2s ease;
+    }
+
+    .stake-chip:hover {
+      border-color: var(--purple-primary);
+      color: var(--text-white);
+      background: rgba(137,59,247,0.08);
+    }
+
+    .stake-chip.featured {
+      background: rgba(246,186,70,0.08);
+      border-color: rgba(246,186,70,0.3);
+      color: var(--gold-primary);
+    }
+
+    /* Traffic indicator dots */
+    .traffic-indicator {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin: 6px 0;
+    }
+
+    .traffic-dots {
+      display: flex;
+      gap: 4px;
+    }
+
+    .traffic-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--border-medium);
+    }
+
+    .traffic-dot.active {
+      background: var(--success);
+    }
+
+    .traffic-dot.medium {
+      background: var(--gold-primary);
+    }
+
+    /* Spin & Win multiplier display */
+    .multiplier-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 28px 0;
+    }
+
+    .multiplier-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 20px 16px;
+      text-align: center;
+      transition: all 0.25s ease;
+    }
+
+    .multiplier-card:hover {
+      border-color: rgba(137,59,247,0.3);
+      transform: translateY(-3px);
+    }
+
+    .multiplier-card.jackpot {
+      background: rgba(246,186,70,0.06);
+      border-color: rgba(246,186,70,0.25);
+    }
+
+    .multiplier-card .mult-value {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--gold-primary);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .multiplier-card.jackpot .mult-value {
+      font-size: 1.8rem;
+      background: var(--gradient-gold-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .multiplier-card .mult-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .multiplier-card .mult-chance {
+      font-size: 0.68rem;
+      color: var(--text-faint);
+      margin-top: 4px;
+    }
+
+    /* PLO variant cards */
+    .plo-variant-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 32px 0;
+    }
+
+    .plo-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .plo-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+    }
+
+    .plo-card.plo4::before { background: linear-gradient(90deg, #893BF7, #6A2DC0); }
+    .plo-card.plo5::before { background: linear-gradient(90deg, #F6BA46, #F4AD23); }
+    .plo-card.plo6::before { background: var(--gradient-btn-cta); }
+
+    .plo-card:hover {
+      border-color: rgba(137,59,247,0.25);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .plo-card .plo-num {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 12px;
+      opacity: 0.25;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .plo-card.plo4 .plo-num { color: var(--purple-primary); }
+    .plo-card.plo5 .plo-num { color: var(--gold-primary); }
+    .plo-card.plo6 .plo-num { color: var(--success); }
+
+    .plo-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+
+    .plo-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .plo-card .plo-unique {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .plo4 .plo-unique { background: rgba(137,59,247,0.12); color: var(--purple-primary); }
+    .plo5 .plo-unique { background: rgba(246,186,70,0.1); color: var(--gold-primary); }
+    .plo6 .plo-unique { background: rgba(255,61,0,0.1); color: var(--success); }
+
+    /* Push-Fold visual */
+    .pushfold-display {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      text-align: center;
+      margin: 28px 0;
+    }
+
+    .pushfold-btns {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .pf-btn {
+      padding: 16px 40px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      cursor: default;
+    }
+
+    .pf-btn-push {
+      background: var(--gradient-btn-cta);
+      color: #FFFFFF;
+    }
+
+    .pf-btn-fold {
+      background: linear-gradient(135deg, #FF3D00, #CC2200);
+      color: #fff;
+    }
+
+    /* Casino game icons row */
+    .casino-types {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin: 24px 0;
+    }
+
+    .casino-type-card {
+      flex: 1;
+      min-width: 160px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 24px 20px;
+      text-align: center;
+      transition: all 0.25s ease;
+    }
+
+    .casino-type-card:hover {
+      border-color: rgba(246,186,70,0.3);
+      transform: translateY(-3px);
+    }
+
+    .casino-type-icon {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .casino-type-card h4 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .casino-type-card p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Platform features list with icons */
+    .platform-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .platform-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      font-size: 0.95rem;
+      color: var(--text-body);
+      transition: all 0.2s ease;
+    }
+
+    .platform-list li:hover {
+      border-color: rgba(137,59,247,0.2);
+      background: rgba(137,59,247,0.03);
+    }
+
+    .platform-list .pl-icon {
+      font-size: 1.3rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .platform-list .pl-text strong {
+      display: block;
+      color: var(--text-white);
+      margin-bottom: 2px;
+      font-size: 0.92rem;
+    }
+
+    .platform-list .pl-text span {
+      color: var(--text-muted);
+      font-size: 0.87rem;
+    }
+
+    /* Payment methods section */
+    .payment-category {
+      margin-bottom: 32px;
+    }
+
+    .payment-category-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    /* Stakes table wrapper */
+    .table-wrapper {
+      overflow-x: auto;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .table-wrapper .data-table {
+      border: none;
+      border-radius: 0;
+    }
+
+    /* Jackpot counter */
+    .jackpot-display {
+      background: linear-gradient(135deg, rgba(246,186,70,0.08), rgba(137,59,247,0.06));
+      border: 1px solid rgba(246,186,70,0.2);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      text-align: center;
+      margin: 28px 0;
+    }
+
+    .jackpot-display .jp-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .jackpot-display .jp-amount {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 900;
+      background: var(--gradient-gold-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .jackpot-display .jp-sub {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Content prose blocks */
+    .prose-block p {
+      color: var(--text-body);
+      line-height: 1.85;
+      margin-bottom: 18px;
+      font-size: 1rem;
+    }
+
+    .prose-block p:last-child { margin-bottom: 0; }
+
+    /* Info columns layout */
+    .info-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin: 32px 0;
+    }
+
+    @media (max-width: 768px) {
+      .multiplier-grid { grid-template-columns: repeat(2, 1fr); }
+      .plo-variant-grid { grid-template-columns: 1fr; }
+      .info-columns { grid-template-columns: 1fr; }
+      .casino-types { flex-direction: column; }
+      .pushfold-btns { flex-direction: column; align-items: center; }
+    }
+
+    @media (max-width: 480px) {
+      .multiplier-grid { grid-template-columns: repeat(2, 1fr); }
+      .games-subnav-link { padding: 12px 14px; font-size: 0.78rem; }
+    }
+  </style>
+<script>
+    (function(){var t=null;try{var m=document.cookie.match(/jp-theme=([^;]+)/);if(m)t=m[1]}catch(e){}document.documentElement.setAttribute("data-theme",t||"dark")})();
+  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "JackPoker",
+  "url": "https://jackpoker.poker",
+  "logo": "https://jackpoker.poker/assets/images/jackpoker-logo-official.png",
+  "description": "Modern online poker platform offering Texas Hold'em, PLO, Spin&Win tournaments, and more. Licensed and certified.",
+  "foundingDate": "2021",
+  "sameAs": [
+    "https://jack-poker.com",
+    "https://t.me/jackpokerclub"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "url": "https://jack-poker.com/support",
+    "availableLanguage": [
+      "English",
+      "Russian",
+      "Portuguese",
+      "Spanish"
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://jackpoker.poker"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Games",
+      "item": "https://jackpoker.poker/games.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "JackPoker Games",
+  "description": "Complete list of poker games available on JackPoker platform",
+  "numberOfItems": 6,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Texas Hold'em No-Limit",
+      "description": "Stakes from NL10 to NL2000 with dynamic tables"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Pot-Limit Omaha (PLO)",
+      "description": "PLO4, PLO5, and PLO6 variants with action-packed gameplay"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Spin & Win",
+      "description": "Fast-paced 3-player hyper-turbo SNGs with jackpots up to $1,000,000"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Push-Fold",
+      "description": "Short-stack all-in-or-fold format for quick sessions"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Multi-Table Tournaments",
+      "description": "Daily GTD events from micro to high stakes"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "Sit & Go Tournaments Tournaments",
+      "description": "On-demand tournament action at all stake levels"
+    }
+  ]
+}
+</script>
+<link rel="alternate" hreflang="en" href="https://jackpoker.poker/games.html" />
+<link rel="alternate" hreflang="ru" href="https://jackpoker.poker/ru/games.html" />
+<link rel="alternate" hreflang="es" href="https://jackpoker.poker/es/games.html" />
+<link rel="alternate" hreflang="it" href="https://jackpoker.poker/it/games.html" />
+<link rel="alternate" hreflang="pt" href="https://jackpoker.poker/pt/games.html" />
+<link rel="alternate" hreflang="vi" href="https://jackpoker.poker/vi/games.html" />
+<link rel="alternate" hreflang="th" href="https://jackpoker.poker/th/games.html" />
+<link rel="alternate" hreflang="ms" href="https://jackpoker.poker/ms/games.html" />
+<link rel="alternate" hreflang="ko" href="https://jackpoker.poker/ko/games.html" />
+<link rel="alternate" hreflang="ar" href="https://jackpoker.poker/ar/games.html" />
+<link rel="alternate" hreflang="pl" href="https://jackpoker.poker/pl/games.html" />
+<link rel="alternate" hreflang="cs" href="https://jackpoker.poker/cs/games.html" />
+<link rel="alternate" hreflang="x-default" href="https://jackpoker.poker/games.html" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Arabic RTL overrides */
+[dir="rtl"] { font-family: "Noto Sans Arabic", var(--font-body); }
+[dir="rtl"] .nav-links { flex-direction: row-reverse; }
+[dir="rtl"] .nav-cta { margin-left: 0; margin-right: auto; }
+[dir="rtl"] .hero-content { text-align: right; }
+[dir="rtl"] .feature-card, [dir="rtl"] .game-card { text-align: right; }
+[dir="rtl"] .lang-switcher { left: auto; }
+[dir="rtl"] .footer-grid { direction: rtl; }
+[dir="rtl"] .breadcrumb { direction: rtl; }
+[dir="rtl"] .news-card-content { text-align: right; }
+[dir="rtl"] .promo-steps { direction: rtl; }
+[dir="rtl"] .step-number { margin-right: 0; margin-left: 1rem; }
+</style>
+</head>
+<body>
+
+  <!-- ============================================
+       HEADER
+       ============================================ -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="JackPoker Home">
+        <svg class="logo-icon" width="189" height="47" viewBox="0 0 189 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="JackPoker">
+<path d="M25.4001 1C24.0001 1 22.8001 2.2 22.8001 3.6C22.8001 5.1 23.8343 5.9 25.3001 5.9H28.7001C28.7001 5.9 31.3001 5.9 31.3001 8.3C31.3001 10.7 28.7001 10.7 28.7001 10.7H8.30008C6.90008 10.7 5.70008 11.9 5.70008 13.3C5.70008 14.7 6.90008 15.9 8.30008 15.9H22.5001C22.5001 15.9 25.1001 15.9 25.1001 18.3C25.1001 20.7 22.5001 20.7 22.5001 20.7H11.4001C10.0001 20.7 8.80008 21.9 8.80008 23.3C8.80008 24.7 10.0001 25.9 11.4001 25.9H22.6001C22.6001 25.9 25.2001 25.9 25.2001 28.3C25.2001 30.7 22.6001 30.7 22.6001 30.7H21.8001C20.4001 30.7 19.2001 31.9 19.2001 33.3C19.2001 34.7 20.4001 35.9 21.8001 35.9H28.8001C28.8001 35.9 31.4001 35.9 31.4001 38.3C31.4001 40.7 28.8001 40.7 28.8001 40.7H14.0001C12.6001 40.7 11.4001 41.9 11.4001 43.3C11.4001 44.7 12.6001 45.9 14.0001 45.9H34.3001C36.5001 45.9 38.4001 44.8 39.5001 43C41.1501 40.25 42.7751 37.4999 44.4001 34.7499C46.0251 31.9999 47.6501 29.25 49.3001 26.5C50.4001 24.6 50.4001 22.3 49.3001 20.4C47.6501 17.6501 46.0252 14.9001 44.4002 12.1502C42.7752 9.4002 41.1501 6.65001 39.5001 3.9C38.4001 2.1 36.4001 1 34.3001 1H25.4001Z" fill="url(#jpLogoGrad)"/>
+<path d="M11.3999 3.6C11.3999 2.2 12.5999 1 13.9999 1H17.5999C18.9999 1 20.1999 2.2 20.1999 3.6C20.1999 5 18.9999 6.2 17.5999 6.2H13.9999C12.5999 6.2 11.3999 5 11.3999 3.6Z" fill="url(#jpLogoGrad)"/>
+<path d="M0 23.5001C0 22.1001 1.2 20.9001 2.6 20.9001H3.6C5 20.9001 6.2 22.1001 6.2 23.5001C6.2 24.9001 5 26.1001 3.6 26.1001H2.6C1.2 26.1001 0 24.9001 0 23.5001Z" fill="url(#jpLogoGrad)"/>
+<path d="M8.30008 30.8001C6.90008 30.8001 5.70008 32.0001 5.70008 33.4001C5.70008 34.9001 6.90008 36.1001 8.30008 36.0001H14.0001C15.4001 36.0001 16.6001 34.8001 16.6001 33.4001C16.6001 32.0001 15.4001 30.8001 14.0001 30.8001H8.30008Z" fill="url(#jpLogoGrad)"/>
+<path d="M69.7955 27.3088C69.7955 28.8312 69.6204 30.0793 69.2704 31.0533C68.9203 32.0273 68.3261 32.7598 67.4876 33.2509C66.6572 33.7502 65.5257 33.9998 64.0929 33.9998C63.7591 33.9998 63.3887 33.9712 62.9817 33.9139C62.5747 33.8648 62.3142 33.832 62.2002 33.8157L62.5177 31.2252H63.7144C65.1797 31.2252 65.9164 30.4231 65.9246 28.8189V15.265L64.0441 14.5039V12.3676L71.676 12.2449V14.5039L69.7955 15.265V27.3088Z" fill="white"/>
+<path d="M81.4937 28.3401C81.4937 28.3728 81.2779 28.557 80.8465 28.8926C80.415 29.2281 79.8981 29.5351 79.2957 29.8133C78.6933 30.0834 78.0746 30.2185 77.4396 30.2185C76.2185 30.2185 75.2619 29.8788 74.57 29.1995C73.8862 28.512 73.5443 27.538 73.5443 26.2775C73.5443 24.837 74.0571 23.7853 75.0829 23.1223C76.1086 22.4594 77.6024 22.1279 79.5643 22.1279H81.3227V20.7406C81.3227 19.5129 80.6796 18.9031 79.3934 18.9113C79.0107 18.9113 78.6566 18.94 78.331 18.9973C78.0054 19.0545 77.7449 19.1159 77.5495 19.1814C77.3622 19.2387 77.2442 19.2755 77.1954 19.2919L76.8168 20.8756H74.57L74.399 17.1557C74.5456 17.1066 74.9038 17.0002 75.4736 16.8365C76.0516 16.6728 76.7395 16.5173 77.5373 16.37C78.3432 16.2226 79.1044 16.149 79.8207 16.149C81.107 16.149 82.1286 16.3127 82.8857 16.6401C83.6428 16.9593 84.1964 17.4831 84.5464 18.2115C84.8965 18.9318 85.0715 19.9017 85.0715 21.1212V27.3334L86.952 27.7876V29.8011L81.9455 29.9729L81.4937 28.3401ZM77.1709 25.897C77.1709 26.388 77.2971 26.7645 77.5495 27.0264C77.81 27.2802 78.1763 27.407 78.6485 27.407C79.0474 27.407 79.4422 27.3006 79.833 27.0878C80.2237 26.8668 80.5534 26.6418 80.822 26.4126C81.0907 26.1752 81.2576 26.0197 81.3227 25.9461V24.2641H79.894C78.9253 24.2641 78.2292 24.3951 77.8059 24.657C77.3826 24.9189 77.1709 25.3322 77.1709 25.897Z" fill="white"/>
+<path d="M100.311 28.0823C99.7492 28.5897 99.0124 29.0726 98.1007 29.531C97.1971 29.9893 96.1428 30.2185 94.938 30.2185C92.8866 30.2185 91.291 29.6169 90.1513 28.4137C89.0116 27.2106 88.4417 25.5327 88.4417 23.3802C88.4417 21.1376 89.0442 19.3737 90.249 18.0888C91.4619 16.7956 93.1511 16.149 95.3166 16.149C95.9515 16.149 96.5906 16.2145 97.2337 16.3454C97.885 16.4764 98.4263 16.6114 98.8578 16.7506C99.2974 16.8815 99.5742 16.9715 99.6881 17.0206L99.566 21.1457H97.3192L96.9651 19.3656C96.8836 19.3492 96.6801 19.3124 96.3545 19.2551C96.0289 19.1896 95.6585 19.1569 95.2433 19.1569C94.3234 19.1569 93.6029 19.472 93.0819 20.1022C92.5691 20.7324 92.3126 21.6573 92.3126 22.8768C92.3126 24.2682 92.5731 25.3404 93.0942 26.0934C93.6233 26.8382 94.4048 27.2106 95.4387 27.2106C96.0899 27.2106 96.6598 27.1124 97.1482 26.916C97.6448 26.7113 98.06 26.5026 98.3937 26.2898C98.7275 26.077 98.9514 25.9379 99.0654 25.8724L100.311 28.0823Z" fill="white"/>
+<path d="M108.602 21.4527L110.3 18.8868L109.201 18.5307V16.5173L115.66 16.3945V18.5307L113.902 18.8622L111.582 22.1525L114.378 27.3579L116.283 27.9595V29.9729H111.655L108.553 23.8344H106.954V27.3334L108.334 27.9595V29.9729H101.202V27.9595L103.205 27.3334V13.2025L101.202 12.6991V10.6857L106.954 10.4893V21.4527H108.602Z" fill="white"/>
+<path d="M117.406 27.8367L119.275 27.0756V15.265L117.406 14.5039V12.3676L123.158 12.2449H125.527C127.423 12.2449 128.909 12.7155 129.984 13.6567C131.066 14.598 131.608 15.8871 131.608 17.524C131.608 19.6029 130.993 21.1703 129.764 22.2261C128.543 23.2819 126.78 23.8099 124.477 23.8099H123.158V27.0756L125.026 27.8367V29.9729H117.406V27.8367ZM124.477 20.8756C125.527 20.8756 126.333 20.6342 126.894 20.1513C127.456 19.6602 127.737 18.9522 127.737 18.0274C127.737 17.1925 127.513 16.5255 127.065 16.0262C126.626 15.5188 125.991 15.265 125.16 15.265H123.158V20.8756H124.477Z" fill="white"/>
+<path d="M139.74 16.149C141.751 16.149 143.302 16.7383 144.393 17.9169C145.492 19.0955 146.041 20.7692 146.041 22.9382C146.041 24.4278 145.764 25.721 145.211 26.8177C144.665 27.9145 143.892 28.7575 142.891 29.3468C141.89 29.9279 140.713 30.2185 139.362 30.2185C135.112 30.2185 132.988 27.9145 132.988 23.3065C132.988 21.8169 133.264 20.536 133.818 19.4638C134.38 18.3916 135.169 17.5731 136.187 17.0084C137.205 16.4354 138.389 16.149 139.74 16.149ZM139.606 19.1569C138.662 19.1569 137.966 19.4638 137.518 20.0776C137.078 20.6915 136.859 21.7269 136.859 23.1837C136.859 24.5751 137.066 25.5941 137.481 26.2407C137.905 26.8873 138.572 27.2106 139.484 27.2106C140.404 27.2106 141.08 26.8873 141.511 26.2407C141.942 25.5941 142.158 24.5342 142.158 23.061C142.158 21.7514 141.955 20.7733 141.548 20.1267C141.141 19.4802 140.493 19.1569 139.606 19.1569Z" fill="white"/>
+<path d="M154.809 21.4527L156.506 18.8868L155.407 18.5307V16.5173L161.867 16.3945V18.5307L160.108 18.8622L157.788 22.1525L160.585 27.3579L162.49 27.9595V29.9729H157.862L154.76 23.8344H153.16V27.3334L154.54 27.9595V29.9729H147.409V27.9595L149.412 27.3334V13.2025L147.409 12.6991V10.6857L153.16 10.4893V21.4527H154.809Z" fill="white"/>
+<path d="M167.508 24.0186C167.573 25.0253 167.875 25.811 168.412 26.3758C168.957 26.9323 169.666 27.2106 170.537 27.2106C171.155 27.2106 171.774 27.1247 172.393 26.9528C173.02 26.7727 173.536 26.5927 173.944 26.4126C174.359 26.2243 174.623 26.0934 174.737 26.0197L175.812 28.1068C175.812 28.1396 175.519 28.3483 174.933 28.733C174.355 29.1095 173.642 29.4532 172.796 29.7642C171.957 30.0671 171.062 30.2185 170.109 30.2185C167.993 30.2185 166.381 29.6292 165.274 28.4506C164.167 27.272 163.613 25.6023 163.613 23.4415C163.613 21.9847 163.878 20.7079 164.407 19.6111C164.944 18.5062 165.713 17.655 166.715 17.0575C167.716 16.4518 168.904 16.149 170.28 16.149C172.112 16.149 173.516 16.6769 174.493 17.7327C175.47 18.7885 175.958 20.2291 175.958 22.0542C175.958 22.4553 175.938 22.8441 175.897 23.2206C175.857 23.5971 175.828 23.8344 175.812 23.9326L167.508 24.0186ZM170.036 19.1569C169.352 19.1569 168.795 19.3901 168.363 19.8566C167.932 20.315 167.663 20.9207 167.557 21.6737H172.087C172.087 20.9207 171.921 20.315 171.587 19.8566C171.253 19.3901 170.736 19.1569 170.036 19.1569Z" fill="white"/>
+<path d="M183.199 18.1256C183.199 18.0928 183.395 17.9005 183.786 17.5486C184.176 17.1966 184.628 16.8774 185.141 16.591C185.662 16.2963 186.175 16.149 186.68 16.149C187.079 16.149 187.453 16.1817 187.803 16.2472C188.153 16.3127 188.426 16.3822 188.621 16.4559C188.825 16.5296 188.951 16.5746 189 16.591L188.804 21.4281H186.558L186.179 19.2919C185.748 19.2919 185.328 19.3983 184.921 19.6111C184.522 19.8157 184.18 20.0449 183.896 20.2986C183.619 20.5442 183.48 20.6751 183.48 20.6915V27.3334L185.984 27.9595V29.9729H177.729V27.9595L179.732 27.3334V19.1569L177.729 18.5307V16.5173L182.98 16.3945L183.199 18.1256Z" fill="white"/>
+<defs>
+<linearGradient id="jpLogoGrad" x1="0" y1="33.44" x2="50.74" y2="33.44" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8032FF"/>
+<stop offset="1" stop-color="#FF3D00"/>
+</linearGradient>
+</defs>
+</svg>
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">الرئيسية</a>
+        <a href="games.html" class="active">الألعاب</a>
+        <a href="bonuses.html">المكافآت</a>
+        <a href="tournaments.html">البطولات</a>
+        <a href="news.html">الأخبار</a>
+        <a href="promo-code.html">الرمز الترويجي</a>
+      </nav>
+      <a href="https://go.jack-full.com/c41f796e" class="header-cta header-cta-desktop">العب الآن ♠</a>
+     <div class="lang-switcher">
+  <button class="lang-btn" aria-label="Change language" aria-expanded="false">
+    <span class="lang-flag">SA</span>
+    <span class="lang-label">العربية</span>
+    <svg class="lang-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  </button>
+  <div class="lang-dropdown" role="menu">
+    <a href="../games.html" role="menuitem" hreflang="en"><span class="lang-flag">GB</span><span>English</span></a>
+    <a href="../ru/games.html" role="menuitem" hreflang="ru"><span class="lang-flag">RU</span><span>Русский</span></a>
+    <a href="../es/games.html" role="menuitem" hreflang="es"><span class="lang-flag">ES</span><span>Español</span></a>
+    <a href="../it/games.html" role="menuitem" hreflang="it"><span class="lang-flag">IT</span><span>Italiano</span></a>
+    <a href="../pt/games.html" role="menuitem" hreflang="pt"><span class="lang-flag">BR</span><span>Português</span></a>
+    <a href="../vi/games.html" role="menuitem" hreflang="vi"><span class="lang-flag">VN</span><span>Tiếng Việt</span></a>
+    <a href="../th/games.html" role="menuitem" hreflang="th"><span class="lang-flag">TH</span><span>ไทย</span></a>
+    <a href="../ms/games.html" role="menuitem" hreflang="ms"><span class="lang-flag">MY</span><span>Bahasa Melayu</span></a>
+    <a href="../ko/games.html" role="menuitem" hreflang="ko"><span class="lang-flag">KR</span><span>한국어</span></a>
+    <a href="games.html" class="active" role="menuitem" hreflang="ar"><span class="lang-flag">SA</span><span>العربية</span></a>
+    <a href="../pl/games.html" role="menuitem" hreflang="pl"><span class="lang-flag">PL</span><span>Polski</span></a>
+    <a href="../cs/games.html" role="menuitem" hreflang="cs"><span class="lang-flag">CZ</span><span>Čeština</span></a>
+  </div>
+</div>
+        <button class="theme-toggle" aria-label="Toggle theme">
+       <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 1.78a1 1 0 011.415 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM18 9a1 1 0 110 2h-1a1 1 0 110-2h1zM3 9a1 1 0 110 2H2a1 1 0 110-2h1zm12.657 6.071l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 011.414-1.414zM5.757 4.929a1 1 0 010 1.414l-.707.707A1 1 0 013.636 5.636l.707-.707a1 1 0 011.414 0zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1z" fill="currentColor"/><circle cx="10" cy="10" r="3.5" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+       <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/></svg>
+     </button>
+  </div>
+</header>
+
+<!-- Breadcrumb Navigation -->
+<nav class="breadcrumb-nav" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">الرئيسية</span></a>
+        <meta itemprop="position" content="1" />
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span itemprop="name">الألعاب</span>
+        <meta itemprop="position" content="2" />
+      </li>
+    </ol>
+  </div>
+</nav>
+
+<!-- Page Hero with H1 -->
+<section style="padding: calc(var(--header-height) + 48px) 0 32px; background: linear-gradient(180deg, rgba(137,59,247,0.06) 0%, transparent 100%); position: relative; overflow: hidden;">
+  <div class="container">
+    <h1 style="font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 900; letter-spacing: -0.03em; margin-bottom: 12px;" data-i18n="games_hero_title">كل ألعاب JackPoker</h1>
+    <p style="color: var(--text-muted); font-size: 1.08rem; max-width: 640px; line-height: 1.7;" data-i18n="games_hero_subtitle">من ألعاب الكاش ذات الرهانات المنخفضة إلى PLO للرهانات العالية وجاكبوت Spin & Win — استكشف مكتبة ألعاب JackPoker الكاملة مع أدلة تفصيلية لكل تنسيق.</p>
+  </div>
+</section>
+
+<!-- ============================================
+     3. NO-LIMIT TEXAS HOLD'EM
+       ============================================ -->
+  <section class="game-section game-section-dark section-accent" id="holdem">
+    <div class="container">
+      <div class="game-title-block">
+        <span class="game-format-badge">♠ لعبة كاش</span>
+        <h2>No-Limit <span class="gold-text">Texas Hold'em</span></h2>
+        <p class="game-subtitle">أساس JackPoker. لوبي No-Limit Hold'em لدينا يعمل باستمرار عبر مستويات رهانات وأحجام طاولات ومجمعات لاعبين متعددة — يوفر لعب أموال حقيقية 24 ساعة يوميًا، 7 أيام أسبوعيًا.</p>
+      </div>
+
+      <div class="info-columns">
+        <div class="prose-block">
+          <p>No-Limit Texas Hold'em في JackPoker مبني للاعبي الكاش الجديين. نقدم واحدة من أوسع نطاقات الرهانات في أي غرفة بوكر أونلاين — تبدأ من الرهانات المنخفضة NL10 ($0.05/$0.10 بلايند) وصولًا إلى رهانات NL2000 العالية ($10/$20 بلايند) لأكبر اللاعبين. سواء كنت تطحن حجمًا في المستويات الأدنى أو تلعب جلسات قصيرة في المستويات المتوسطة، يمنحك لوبي الكاش مرونة اختيار الطاولة التي تناسب رصيدك واستراتيجيتك تمامًا.</p>
+          <p>طاولات Hold'em لدينا تعمل بثلاثة تنسيقات مختلفة: heads-up (2-max) للمعارك الفردية التي تتطلب مهارة ما بعد الفلوب العالية والعدوانية، وتنسيق 6-max السريع الذي أصبح المعيار العالمي للبوكر الاحترافي أونلاين، وطاولات full-ring (9-max) حيث يصبح اختيار اليد والموقع محوريَّين. كل تنسيق يخلق بيئة استراتيجية مختلفة، ويشعر اللاعبون ذوو الخبرة بالراحة بغض النظر عن تفضيلاتهم.</p>
+          <p>حركة طاولات Hold'em في JackPoker تكون الأقوى في نطاق NL25 إلى NL200، حيث ستجد باستمرار طاولات متعددة تعمل بمجمعات لاعبين كاملة على مدار الساعة. مستويات الرهانات المنخفضة (NL10 وNL25) تستقطب تدفقًا مستمرًا من اللاعبين الجدد والترفيهيين، مما يجعلها من أسهل الألعاب أونلاين في أي وقت. طاولات NL100 وNL200 المتوسطة تميل للعمل في أوقات الذروة الأوروبية والآسيوية، بينما تجذب NL500 وما فوق لاعبين جديين وطاحنين بحجم عالٍ يأخذون اختيار مقاعدهم بجدية.</p>
+          <p>ما يميز منتج Hold'em لدينا عن المنافسين هو جودة مجمع اللاعبين الترفيهيين. JackPoker يسوّق بنشاط للاعبين العاديين عبر عروض كـCash Carnival المستمر — فعالية إسقاط جوائز بقيمة $500K تمتد من 23 مارس إلى 19 أبريل 2026 — حيث تنفجر قنابل نقدية كل 3 إلى 7 أيدٍ على طاولات الكاش المشاركة. هذا يخلق بيئة مثيرة ومليئة بالحركة تُبقي اللاعبين الترفيهيين على الطاولات أطول، مما يفيد مباشرةً اللاعبين الرابحين المنتظمين الذين يشاركونهم الطاولة.</p>
+        </div>
+
+        <div>
+          <div class="highlight-box mb-3">
+            <h4>الرهانات المتاحة — Hold'em</h4>
+            <div class="stakes-row" style="margin: 16px 0 0;">
+              <span class="stake-chip">NL10 — $0.05/$0.10</span>
+              <span class="stake-chip">NL25 — $0.10/$0.25</span>
+              <span class="stake-chip">NL50 — $0.25/$0.50</span>
+              <span class="stake-chip featured">NL100 — $0.50/$1</span>
+              <span class="stake-chip featured">NL200 — $1/$2</span>
+              <span class="stake-chip">NL500 — $2.50/$5</span>
+              <span class="stake-chip">NL1000 — $5/$10</span>
+              <span class="stake-chip">NL2000 — $10/$20</span>
+            </div>
+          </div>
+
+          <div class="card card-sm mb-3">
+            <h4 style="margin-bottom: 16px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted);">الحركة حسب مستوى الرهان</h4>
+            <div class="traffic-indicator">
+              <div class="traffic-dots">
+                <div class="traffic-dot active"></div>
+                <div class="traffic-dot active"></div>
+                <div class="traffic-dot active"></div>
+                <div class="traffic-dot active"></div>
+                <div class="traffic-dot active"></div>
+              </div>
+              <span>NL10–NL50 — مرتفعة جدًا (ذروة الرهانات المنخفضة)</span>
+            </div>
+            <div class="traffic-indicator">
+              <div class="traffic-dots">
+                <div class="traffic-dot active"></div>
+                <div class="traffic-dot active"></div>
+                <div class="traffic-dot active"></div>
+                <div class="traffic-dot active"></div>
+                <div class="traffic-dot"></div>
+              </div>
+              <span>NL100–NL200 — مرتفعة (الرهانات الأساسية)</span>
+            </div>
+            <div class="traffic-indicator">
+              <div class="traffic-dots">
+                <div class="traffic-dot active"></div>
+                <div class="traffic-dot active"></div>
+                <div class="traffic-dot active"></div>
+                <div class="traffic-dot medium"></div>
+                <div class="traffic-dot"></div>
+              </div>
+              <span>NL500 — متوسطة (أوقات الذروة)</span>
+            </div>
+            <div class="traffic-indicator">
+              <div class="traffic-dots">
+                <div class="traffic-dot active"></div>
+                <div class="traffic-dot active"></div>
+                <div class="traffic-dot medium"></div>
+                <div class="traffic-dot"></div>
+                <div class="traffic-dot"></div>
+              </div>
+              <span>NL1000 — نشطة (المساء)</span>
+            </div>
+            <div class="traffic-indicator">
+              <div class="traffic-dots">
+                <div class="traffic-dot medium"></div>
+                <div class="traffic-dot medium"></div>
+                <div class="traffic-dot"></div>
+                <div class="traffic-dot"></div>
+                <div class="traffic-dot"></div>
+              </div>
+              <span>NL2000 — رهانات عالية حسب الطلب</span>
+            </div>
+          </div>
+
+          <div class="highlight-box gold">
+            <h4>تنسيقات الطاولة المتاحة</h4>
+            <p>2-max (Heads Up) و6-max (Short-Handed) و9-max (Full Ring) — جميع مستويات الرهان تدعم على الأقل 6-max، مع توفر 2-max و9-max في رهانات مختارة.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="promo-banner mt-4">
+        <div class="promo-banner-content">
+          <h3>Cash Carnival — متاح الآن</h3>
+          <p>يعمل من 23 مارس إلى 19 أبريل 2026. $500K في Cash Drops تضرب طاولات Hold'em المشاركة كل 3-7 أيدٍ. لا يلزم الاشتراك — فقط اجلس والعب.</p>
+        </div>
+        <a href="https://go.jack-full.com/c41f796e" class="btn btn-gold" style="white-space: nowrap;">انضم إلى طاولة</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       4. POT-LIMIT OMAHA (PLO)
+       ============================================ -->
+  <section class="game-section section-accent" id="plo">
+    <div class="container">
+      <div class="game-title-block">
+        <span class="game-format-badge">◆ لعبة كاش</span>
+        <h2>Pot-Limit <span class="gold-text">Omaha</span></h2>
+        <p class="game-subtitle">JackPoker يقدم ليس واحدًا بل ثلاثة متغيرات من Omaha — PLO4 وPLO5 وPLO6 الحصري — مانحًا لاعبي Omaha تنوعًا يفوق أي غرفة أخرى أونلاين تقريبًا. أحواض كبيرة، حركة كبيرة، ميزات أفضل.</p>
+      </div>
+
+      <div class="prose-block" style="max-width: 840px; margin-bottom: 40px;">
+        <p>نما Pot-Limit Omaha بثبات على مدار العقد الماضي ليصبح ثاني أكثر تنسيقات البوكر لعبًا في العالم، وفي JackPoker هو أولوية حقيقية. بنينا لوبي Omaha بنفس الاهتمام الذي بذلناه لـHold'em — مستويات رهانات متعددة ودعم متعدد التنسيقات ومجمع لاعبين يضم لاعبين ترفيهيين جذبتهم الطبيعة المليئة بالحركة للعبة. مع أربع أو خمس أو حتى ست بطاقات تُوزَّع على كل لاعب، تتضاعف تركيبات الأيدٍ أضعافًا مضاعفة، مما يخلق أحواضًا تتجاوز بكثير نظيراتها في Hold'em وألواحًا تسير بطرق رائعة ودرامية في أغلب الأحيان.</p>
+        <p>بالنسبة لمتخصصي Omaha، يُعدّ JackPoker من القلة التي يمكنك فيها التنقل بسلاسة بين PLO4 وPLO5 وPLO6 في نفس الجلسة. محفظتنا الموحدة تعني إمكانية التنقل بين متغيرات Omaha والقفز إلى طاولة Hold'em أو Spin &amp; Win دون الحاجة إلى السحب. اللوبي نظيف وسريع ويُظهر قوائم الانتظار في الوقت الفعلي — لتتمكن من التسجيل في طاولات متعددة وأخذ مقعدك في ثوانٍ من فور فتح أي مقعد.</p>
+      </div>
+
+      <div class="plo-variant-grid">
+        <!-- PLO4 -->
+        <div class="plo-card plo4">
+          <div class="plo-num">4</div>
+          <span class="plo-unique">التنسيق القياسي</span>
+          <h3 style="margin-top: 12px;">PLO4 — Omaha رباعية البطاقات</h3>
+          <p>المتغير الأصلي والأكثر لعبًا من Omaha. يحصل كل لاعب على أربع بطاقات خاصة ويجب استخدام اثنتين منها بالضبط مع ثلاث بطاقات مجتمعة لتكوين أفضل يد من خمس بطاقات. يكافئ PLO4 اللاعبين الذين يتمتعون بمهارات قوية في تقييم الحصص ومعرفة بالبلوكرز وإعادة الرسم وإمكانات الـnut — مهارات تنتقل مباشرةً من Omaha في البطولات إلى طاولات الكاش.</p>
+          <p>رهانات PLO4 لدينا تبدأ من المستوى المبتدئ PLO10 ($0.05/$0.10) وصولًا إلى PLO500 ($2.50/$5)، مع أكثر الطاولات نشاطًا عند PLO25 وPLO50 وPLO100. يسود تنسيق six-max، وإن كانت طاولات 9-max تعمل عند رهانات أدنى مختارة للاعبين الذين يفضلون أسلوبًا أكثر صبرًا.</p>
+        </div>
+
+        <!-- PLO5 -->
+        <div class="plo-card plo5">
+          <div class="plo-num">5</div>
+          <span class="plo-unique">حركة عالية</span>
+          <h3 style="margin-top: 12px;">PLO5 — Omaha خماسية البطاقات</h3>
+          <p>تُضخّم Omaha خماسية البطاقات كل جانب من جوانب تجربة PLO4. مع بطاقة خاصة إضافية، تقترب نسب الأحواض قبل الفلوب أكثر من بعضها، ويزداد تعقيد اللعب بعد الفلوب، وتتزايد وتيرة الأيدي الممتازة بشكل كبير. يعني هذا أحواضًا أكبر وحركة أكثر متعددة الأطراف وحالات أقل بكثير يمكن فيها للاعب واحد أن يهيمن بسحب الـnut المباشر.</p>
+          <p>PLO5 في JackPoker اكتسب سريعًا قاعدة متابعين متفانين من اللاعبين الراغبين في مزيد من الحركة لكل يد ومن يزدهرون في مناظر الأحواض المعقدة التي تخلقها خمس بطاقات خاصة. تتراوح الرهانات من PLO10 إلى PLO200، مع ذروة الحركة خلال الوقت الأوروبي المفضل. إذا كنت تنتقل من PLO4، ستتحدى PLO5 مهارات قراءة يدك وإدراك الأحواض بطرق جديدة كليًا.</p>
+        </div>
+
+        <!-- PLO6 -->
+        <div class="plo-card plo6">
+          <div class="plo-num">6</div>
+          <span class="plo-unique">★ حصري في JackPoker</span>
+          <h3 style="margin-top: 12px;">PLO6 — Omaha سداسية البطاقات</h3>
+          <p>PLO6 من أكثر العروض تميزًا في JackPoker — تنسيق لن تجده إلا في قلة نادرة من غرف البوكر أونلاين عالميًا. ست بطاقات خاصة لكل لاعب تخلق مشهد أحواض ما قبل الفلوب شبه فوضوي حيث يمكن لكل يد ابتدائية تقريبًا الاتصال بقوة باللوح. الأيدٍ الكبيرة أكثر شيوعًا بكثير، وتكافئ اللعبة اللاعبين القادرين على تقدير قوة أيديهم النسبية في المواقف التي تنتشر فيها الأيدٍ الـnut بين لاعبين متعددين في آنٍ واحد.</p>
+          <p>هذا المتغير ليس للضعفاء — PLO6 يولّد تباينًا هائلًا حتى للاعبين الأقوياء، وإدارة الرصيد على هذه الطاولات تتطلب انضباطًا خاصًا. مع ذلك، هذا أيضًا حيث يشعر اللاعبون الترفيهيون بأكبر قدر من الراحة، لأن كل يد تبدو سحبًا حيًا. يقدم JackPoker PLO6 من PLO10 إلى PLO100، مما يجعله متاحًا للاعبين على كل مستوى رصيد تقريبًا مع توفير رهانات ذات معنى لمتخصصي Omaha ذوي الخبرة.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <h4>لماذا يختار لاعبو Omaha JackPoker</h4>
+        <p>ثلاثة متغيرات من Omaha تحت سقف واحد. محفظة واحدة تمتد عبر PLO4 وPLO5 وPLO6 وHold'em وSpin &amp; Win والكازينو. لا يلزم تنزيل — دعم كامل للعب على عدة طاولات عبر المتصفح. أضف إلى ذلك برنامج راك باك VIP بنسبة 20% مدى الحياة ولديك واحدة من أكثر بيئات Omaha مكافأةً أونلاين.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       5. SPIN & WIN
+       ============================================ -->
+  <section class="game-section game-section-dark section-accent" id="spinwin">
+    <div class="container">
+      <div class="game-title-block">
+        <span class="game-format-badge">🌀 SNG جاكبوت</span>
+        <h2>Spin &amp; <span class="gold-text">Win</span></h2>
+        <p class="game-subtitle">أكثر تنسيقات JackPoker إثارةً. ثلاثة لاعبين. دوران واحد. جائزة يمكن أن تضاعف رسوم دخولك حتى 1,000,000 مرة في لحظة واحدة — تحويل $5 إلى لحظة مليون دولار.</p>
+      </div>
+
+      <div class="jackpot-display">
+        <div class="jp-label">أعلى جائزة جاكبوت ممكنة</div>
+        <div class="jp-amount">$1,000,000</div>
+        <div class="jp-sub">تُمنح عشوائيًا عبر دوران المضاعف قبل اللعبة. لا يلزم الاشتراك.</div>
+      </div>
+
+      <div class="info-columns">
+        <div class="prose-block">
+          <p>Spin &amp; Win هو التنسيق الذي اجتاح عالم البوكر أونلاين، وتطبيق JackPoker هو من أكثر التطبيقات الملائمة للاعب المتاحة. قبل بدء كل لعبة، تدور عجلة رقمية لتحديد مجموع الجائزة لتلك المباراة. يُطبَّق المضاعف على مجموع رسوم دخول اللاعبين الثلاثة المسجلين — لذا فإن Spin &amp; Win بـ$5 بنتيجة 2x يدفع إجمالي $30، بينما تنتج النتيجة النادرة 1,000x عند نفس مستوى الدخول جاكبوتًا بـ$15,000 موزعًا بين اللاعبين، يأخذ الفائز حصة الأسد منه.</p>
+          <p>اللعبة ذاتها هي sit-and-go فائق السرعة لثلاثة لاعبين. ترتفع مستويات البلايند بسرعة شديدة — عادةً كل 2 إلى 3 دقائق — مما يعني أن المباراة كاملة من التسجيل إلى الإتمام نادرًا ما تستغرق أكثر من 10 إلى 15 دقيقة حتى لو وصلت لليد الأخيرة. هذه السرعة هي جوهر جاذبية التنسيق: يمكنك لعب عشرات من ألعاب Spin &amp; Win في مساء واحد، مع تجربة مضاعفات متنوعة، وكل منها يحمل إمكانية حقيقية لنتيجة جاكبوت تغير الحياة.</p>
+          <p>تتغير الاستراتيجية في Spin &amp; Win بشكل كبير حسب المضاعف المُعلَن. عند المضاعفات المنخفضة (2x إلى 5x)، تشبه اللعبة عن كثب استراتيجية SNG القياسية المدفوعة بـICM — تسود نطاقات push-fold في المراحل المتأخرة. لكن مع ارتفاع المضاعفات يتغير الديناميك. عند 25x أو 50x، تشتد الحوافز للتسلق في ترتيب المال، بينما عند المضاعفات النادرة الفائقة بـ500x أو أكثر، يصبح الفارق في الجائزة بين المركز الأول والثاني كبيرًا لدرجة أن الـchip EV المطلق كثيرًا ما يتغلب على اعتبارات ICM الحذرة.</p>
+          <p>يقدم JackPoker Spin &amp; Win بمستويات دخول متعددة، مما يتيح للاعبين العاديين تجربة تنسيق الجاكبوت بدولارات قليلة، فيما يمكن للاعبين الجديين الذين يطحنون حجمًا كبيرًا من التنسيق ذلك برهانات يمثل فيها العائد المتوقع من المضاعفات العالية مردودًا ماليًا كبيرًا. يعني هيكل hyper-turbo أيضًا أن الراك باك من حجم Spin &amp; Win يتراكم بسرعة، وبرنامج الراك باك مدى الحياة بنسبة 20% في JackPoker يجعل التنسيق مربحًا بشكل خاص للاعبين ذوي الحجم العالي عبر جميع مستويات الدخول.</p>
+        </div>
+
+        <div>
+          <h3 style="font-size: 1.1rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted);">مضاعفات الجائزة</h3>
+          <div class="multiplier-grid">
+            <div class="multiplier-card">
+              <div class="mult-value">2x</div>
+              <div class="mult-label">شائع</div>
+              <div class="mult-chance">الأكثر تكرارًا</div>
+            </div>
+            <div class="multiplier-card">
+              <div class="mult-value">4x</div>
+              <div class="mult-label">قياسي</div>
+              <div class="mult-chance">شائع جدًا</div>
+            </div>
+            <div class="multiplier-card">
+              <div class="mult-value">10x</div>
+              <div class="mult-label">معزّز</div>
+              <div class="mult-chance">غير شائع</div>
+            </div>
+            <div class="multiplier-card">
+              <div class="mult-value">25x</div>
+              <div class="mult-label">انطلاق حار</div>
+              <div class="mult-chance">نادر</div>
+            </div>
+            <div class="multiplier-card">
+              <div class="mult-value">50x</div>
+              <div class="mult-label">كبير</div>
+              <div class="mult-chance">نادر جدًا</div>
+            </div>
+            <div class="multiplier-card">
+              <div class="mult-value">100x</div>
+              <div class="mult-label">ملحمي</div>
+              <div class="mult-chance">استثنائي</div>
+            </div>
+            <div class="multiplier-card">
+              <div class="mult-value">500x</div>
+              <div class="mult-label">ضخم</div>
+              <div class="mult-chance">نادر للغاية</div>
+            </div>
+            <div class="multiplier-card jackpot">
+              <div class="mult-value">1,000,000x</div>
+              <div class="mult-label">★ جاكبوت</div>
+              <div class="mult-chance">يغيّر الحياة</div>
+            </div>
+          </div>
+
+          <div class="card card-sm mt-3">
+            <h4 style="margin-bottom: 14px;">نظرة عامة على التنسيق</h4>
+            <ul class="split-content" style="list-style: none; padding: 0; margin: 0;">
+              <li style="padding: 6px 0 6px 24px; position: relative; font-size: 0.92rem; color: var(--text-body);">
+                <span style="position: absolute; left: 0; color: var(--success); font-weight: 700;">✓</span>
+                3 لاعبين — مستويات بلايند فائقة السرعة
+              </li>
+              <li style="padding: 6px 0 6px 24px; position: relative; font-size: 0.92rem; color: var(--text-body);">
+                <span style="position: absolute; left: 0; color: var(--success); font-weight: 700;">✓</span>
+                الجلسات عادةً 8-15 دقيقة
+              </li>
+              <li style="padding: 6px 0 6px 24px; position: relative; font-size: 0.92rem; color: var(--text-body);">
+                <span style="position: absolute; left: 0; color: var(--success); font-weight: 700;">✓</span>
+                يُكشف المضاعف قبل أول يد
+              </li>
+              <li style="padding: 6px 0 6px 24px; position: relative; font-size: 0.92rem; color: var(--text-body);">
+                <span style="position: absolute; left: 0; color: var(--success); font-weight: 700;">✓</span>
+                مستويات دخول متعددة متاحة
+              </li>
+              <li style="padding: 6px 0 6px 24px; position: relative; font-size: 0.92rem; color: var(--text-body);">
+                <span style="position: absolute; left: 0; color: var(--success); font-weight: 700;">✓</span>
+                أعلى جاكبوت: $1,000,000
+              </li>
+              <li style="padding: 6px 0 6px 24px; position: relative; font-size: 0.92rem; color: var(--text-body);">
+                <span style="position: absolute; left: 0; color: var(--success); font-weight: 700;">✓</span>
+                يُسهم في راك باك VIP
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       6. PUSH-FOLD
+       ============================================ -->
+  <section class="game-section section-accent" id="pushfold">
+    <div class="container">
+      <div class="game-title-block">
+        <span class="game-format-badge">⚡ لعبة الرصيد القصير</span>
+        <h2>Push-<span class="gold-text">Fold</span></h2>
+        <p class="game-subtitle">الاختبار النهائي لنظرية البوكر بالرصيد القصير. كل قرار ثنائي: ادفع كل رقائقك أو الطيّ. لا مراهنات، لا limp، لا قرارات معقدة متعددة الشوارع — فقط رياضيات صافية للقيمة المتوقعة.</p>
+      </div>
+
+      <div class="info-columns">
+        <div class="prose-block">
+          <p>Push-Fold هو تنسيق بوكر متخصص يُجرّد اللعبة حتى نقطة القرار الأساسية: هل يدي قوية بما يكفي لـshove all-in من هذا العمق، في هذا الموقع، ضد هؤلاء المنافسين؟ مع بدء كل لاعب برصيد قصير ثابت — عادةً بين 5 و15 بلايند كبيرة — كل قرار منذ توزيع البطاقات هو إما push all-in أو fold. لا يوجد raise قبل الفلوب، لا call، لا check. البساطة خادعة: بالتنفيذ الصحيح، يتطلب Push-Fold معرفة صارمة بنطاقات GTO للـshove ونمذجة الخصم وضغط ICM.</p>
+          <p>بالنسبة للاعبين الجادين في تحسين أساسيات البوكر، يُعدّ Push-Fold في JackPoker من أفضل أدوات التدريب المتاحة. لعب مئات من أيدي Push-Fold في مساء واحد يُترسّخ نطاقات الرصيد القصير في الذاكرة العضلية بطريقة لا تستطيع ألعاب الكاش أو البطولات التقليدية تحقيقها بنفس السرعة. ستطور سريعًا فهمًا حدسيًا للأيدٍ المربحة لـshove من كل موقع، وكيف تتعدّل تلك النطاقات مع تغير أحجام الرصيد وارتفاع البلايند.</p>
+          <p>Push-Fold هو أيضًا تنسيق ترفيهي حقيقي للجلسات غير الرسمية. تنتهي الألعاب بسرعة — طاولة Push-Fold كاملة عادةً تنتهي خلال خمس إلى ثماني دقائق — مما يجعله مثاليًا للاعبين الذين يريدون حركة بوكر حقيقية دون الالتزام بطحن طويل في الكاش. الإيقاع السريع يعني تجربة تركيز عالٍ من المواقف المثيرة في فترة زمنية قصيرة، والتأرجحات محدودة طبيعيًا بالهيكل الثنائي. مع ذلك، التنسيق يكافئ المعرفة: اللاعبون الذين درسوا مخططات push-fold يتفوقون باستمرار على المعتمدين على الحدس، مما يجعله من المتغيرات النادرة التي يؤتي فيها التحضير الدراسي ثماره شبه فوري.</p>
+          <p>لعبة Push-Fold لدينا متاحة عبر مستويات رهانات متعددة، من نقاط الدخول المنخفضة حيث يمكن للاعبين الجدد تعلم التنسيق بأدنى مخاطر، وصولًا إلى طاولات الرهانات المتوسطة حيث يتنافس اللاعبون الجديون على أحواض جوائز ذات معنى. سرعة اللعب تعني أيضًا أن مساهمتك الساعية في الراك تتراكم بسرعة، مما يساعد في بناء أرباح الراك باك VIP بمعدل يستغرق ساعات أكثر بكثير للوصول إليه على طاولات الكاش التقليدية.</p>
+        </div>
+
+        <div>
+          <div class="pushfold-display">
+            <p style="color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px;">كل قرار هو أحد اثنين</p>
+            <div class="pushfold-btns">
+              <div class="pf-btn pf-btn-push">PUSH</div>
+              <div class="pf-btn pf-btn-fold">FOLD</div>
+            </div>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 16px; margin-bottom: 0;">نطاقات الرصيد القصير &bull; صنع قرار GTO &bull; جلسات سريعة</p>
+          </div>
+
+          <div class="card card-sm mt-3">
+            <h4 style="margin-bottom: 16px;">لماذا يعمل Push-Fold</h4>
+            <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; margin-bottom: 12px;">يلغي التنسيق معظم مصادر التوتر والتباين المرتبطة باللعب متعدد الشوارع. لا مكالمات سيئة في البدل، لا رهانات نهر ضائعة — فقط قرارات واضحة وقابلة للقياس.</p>
+            <div class="stakes-row" style="margin-top: 12px;">
+              <span class="badge badge-purple">جلسات سريعة</span>
+              <span class="badge badge-gold">تدريب GTO</span>
+              <span class="badge badge-green">تباين منخفض لكل يد</span>
+              <span class="badge badge-purple">رهانات متعددة</span>
+            </div>
+          </div>
+
+          <div class="highlight-box gold mt-3">
+            <h4>مثالي لـ:</h4>
+            <p>اللاعبون الراغبون في الطحن الحجمي في جلسات قصيرة، أو تحسين لعبة البطولات بالرصيد القصير، أو ببساطة تجربة بوكر سريع دون تعقيد اللعب ذي الرصيد العميق.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       7. CASINO GAMES
+       ============================================ -->
+  <section class="game-section game-section-dark section-accent" id="casino">
+    <div class="container">
+      <div class="game-title-block">
+        <span class="game-format-badge">🎲 JackCasino</span>
+        <h2>الكازينو <span class="gold-text">الألعاب</span></h2>
+        <p class="game-subtitle">الكازينو المتكامل في JackPoker يمنحك الوصول إلى الماكينات وألعاب الطاولة والكازينو الحي — كل ذلك داخل نفس المنصة ونفس المحفظة كحسابك في البوكر.</p>
+      </div>
+
+      <div class="casino-types">
+        <div class="casino-type-card">
+          <span class="casino-type-icon">🎰</span>
+          <h4>الماكينات</h4>
+          <p>مئات الألعاب من مزودين رائدين. جاكبوتات تراكمية، وMegaways، و3-reels كلاسيكية، وماكينات فيديو غنية بالميزات.</p>
+        </div>
+        <div class="casino-type-card">
+          <span class="casino-type-icon">🃏</span>
+          <h4>ألعاب الطاولة</h4>
+          <p>Blackjack وRoulete وBaccarat والمزيد — متغيرات متعددة وحدود رهان تناسب كل أسلوب لعب.</p>
+        </div>
+        <div class="casino-type-card">
+          <span class="casino-type-icon">📡</span>
+          <h4>الكازينو المباشر</h4>
+          <p>مقدمو حقيقيون يبثون فيديو HD 24/7. Blackjack مباشر وRoulete مباشرة وBaccarat مباشر وعروض ألعاب.</p>
+        </div>
+        <div class="casino-type-card">
+          <span class="casino-type-icon">🎯</span>
+          <h4>ألعاب خاصة</h4>
+          <p>بطاقات خدش ورياضات افتراضية وألعاب أركيد للترفيه بين جلسات البوكر.</p>
+        </div>
+      </div>
+
+      <div class="grid-2 mt-4">
+        <div class="prose-block">
+          <p>عرض الكازينو لدينا مصمم كامتداد طبيعي لتجربة البوكر، وليس كمنتج منفصل. لاعبو البوكر الراغبون في استراحة من الطاولات — أو المنتظرون لفتح مقعد جيد — يمكنهم الانتقال إلى جلسة ماكينات أو يد blackjack مباشرة دون مغادرة المنصة أبدًا. عندما تنتهي لعبة البوكر، أرباحك متاحة فورًا في محفظة الكازينو والعكس صحيح. لا تأخيرات في التحويل، لا حسابات منفصلة، لا مبالغ دنيا.</p>
+          <p>نخزّن مكتبة ماكيناتنا بألعاب من مزودين من الدرجة الأولى، بما فيها ماكينات ذات جاكبوتات تراكمية يمكن للفوز الفردي فيها أن يصل لمبالغ تغير الحياة. تشمل تشكيلة ألعاب الطاولة كل كلاسيكيات الكازينو الكبرى بمتغيرات قواعد متعددة — single-deck blackjack وEuropean roulette وسبيد baccarat — عبر نطاقات رهانات تستوعب كلًا من اللاعبين العاديين والرهانات العالية. يبث استوديو الكازينو المباشر على مدار الساعة، مما يضمن أنه متى أردت الجلوس على طاولة حقيقية مع مقدّم احترافي، يكون هناك دائمًا واحد متاح.</p>
+        </div>
+
+        <div>
+          <div class="highlight-box gold">
+            <h4>استرداد نقدي 10% على الكازينو للاعبي البوكر</h4>
+            <p>جميع لاعبي البوكر النشطين في برنامج VIP في JackPoker يحصلون على مكافأة استرداد نقدي بنسبة 10% على صافي خسائر الكازينو. تُحسب أسبوعيًا وتُضاف مباشرةً إلى محفظة البوكر، مما يمنحك قيمة حقيقية حتى في جلسات الكازينو الخاسرة. الاسترداد تلقائي — لا مطالبات، لا متطلبات مراهنة تتجاوز حجمك العادي في البوكر.</p>
+          </div>
+
+          <div class="highlight-box mt-3">
+            <h4>محفظة متكاملة — رصيد واحد لكل شيء</h4>
+            <p>إيداعك يموّل حساب البوكر ولعب الكازينو ورسوم دخول البطولات وجلسات Spin &amp; Win في آنٍ واحد. السحوبات تُسحب من نفس الرصيد. لا احتكاك، لا انتظار، ولا فصل بين نتائج البوكر ونتائج الكازينو.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       8. PLATFORM FEATURES
+       ============================================ -->
+  <section class="game-section section-accent" id="platform">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">المنصة</span>
+        <h2>العب في أي مكان، <span class="gold-text">أي جهاز</span></h2>
+        <p>منصة JackPoker مبنية للاعب الحديث. لا يلزم تنزيل لللعب على سطح المكتب، وتطبيقات جوال أصلية لـAndroid وiOS، ومجموعة ميزات كاملة تنافس برامج البوكر المخصصة.</p>
+      </div>
+
+      <div class="split">
+        <div class="split-img">
+          <img src="../assets/images/mobile-app.jpg" alt="JackPoker mobile app on Android and iOS" loading="lazy">
+        </div>
+        <div class="split-content">
+          <span class="section-label">إمكانية الوصول</span>
+          <h2>متصفح، وAndroid &amp; <span class="gold-text">iOS</span></h2>
+          <p>نؤمن بأن أفضل برامج البوكر هي تلك التي لا تعيق طريقك. تنطلق منصة JackPoker المعتمدة على المتصفح فورًا من أي سطح مكتب أو حاسوب محمول — بدون تنزيل عميل، بدون تثبيت، بدون مشاكل توافق. افتح متصفحك، سجّل الدخول، ولوبي الألعاب الكامل بانتظارك.</p>
+          <p>للاعبين على الجوال، نقدم APK لـAndroid مخصصًا يمكنك تنزيله مباشرةً من موقع JackPoker. يوفر APK تجربة تطبيق أصلية مع ضوابط لمس محسّنة وعرض سلس للطاولة وإمكانية استقبال إشعارات عند فتح مقعد الطاولة المسجل. لمستخدمي iPhone وiPad، نقدم تطبيق ويب تقدمي (PWA) يُثبَّت على شاشتك الرئيسية ويتصرف تمامًا كتطبيق أصلي — بما يشمل الوصول للقوائم دون اتصال وإشعارات push ووضع ملء الشاشة.</p>
+          <ul>
+            <li>اللعب عبر المتصفح — بدون تنزيل، بدون تثبيت</li>
+            <li>APK لـAndroid — تنزيل مباشر، تجربة أصلية كاملة</li>
+            <li>PWA لـiOS — ثبّت على الشاشة الرئيسية، تجربة تطبيق أصلي</li>
+            <li>لعب على عدة طاولات بحد أقصى 3 طاولات متزامنة</li>
+            <li>اختيار سمة طاولة وصورة رمزية مخصصتين</li>
+            <li>أرشيف تاريخ الأيدٍ وإحصاءات الجلسة</li>
+            <li>محادثة داخل اللعبة مع دعم الرموز التعبيرية</li>
+          </ul>
+          <a href="https://go.jack-full.com/c41f796e" class="btn btn-primary">تنزيل أو العب الآن</a>
+        </div>
+      </div>
+
+      <div style="margin-top: 64px;">
+        <h3 style="margin-bottom: 28px; font-size: 1.3rem;">إمكانيات المنصة الكاملة</h3>
+        <ul class="platform-list">
+          <li>
+            <span class="pl-icon">🖥️</span>
+            <div class="pl-text">
+              <strong>لعب فوري عبر المتصفح</strong>
+              <span>عميل بوكر كامل يُوفَّر عبر المتصفح. يعمل على Chrome وFirefox وSafari وEdge دون أي مكون إضافي أو تنزيل. يعمل بالكامل على Mac وWindows وLinux.</span>
+            </div>
+          </li>
+          <li>
+            <span class="pl-icon">📱</span>
+            <div class="pl-text">
+              <strong>تنزيل APK لـAndroid</strong>
+              <span>حمّل تطبيق JackPoker لـAndroid مباشرةً من موقعنا. محسّن للهواتف الذكية والأجهزة اللوحية، مع ضوابط رهان ملائمة للمس ودعم وضع المناظر الأفقية.</span>
+            </div>
+          </li>
+          <li>
+            <span class="pl-icon">🍎</span>
+            <div class="pl-text">
+              <strong>تطبيق الويب التقدمي iOS</strong>
+              <span>ثبّت JackPoker على شاشة iPhone أو iPad الرئيسية عبر Safari. يتصرف PWA كتطبيق أصلي — وضع ملء الشاشة وأيقونة الشاشة الرئيسية وتجربة طاولة سلسة دون قيود App Store.</span>
+            </div>
+          </li>
+          <li>
+            <span class="pl-icon">⬜⬛</span>
+            <div class="pl-text">
+              <strong>اللعب على عدة طاولات — حتى 3 طاولات</strong>
+              <span>شغّل حتى ثلاث طاولات في آنٍ معًا في تخطيط بلاط. لكل طاولة مؤقت تصرف خاص بها وإعدادات إجراءات تلقائية، لن تفوتك يد أبدًا أثناء إدارة عدة ألعاب.</span>
+            </div>
+          </li>
+          <li>
+            <span class="pl-icon">🎨</span>
+            <div class="pl-text">
+              <strong>سمات طاولة مخصصة &amp; صور رمزية</strong>
+              <span>خصّص بيئة البوكر الخاصة بك بألوان اللباد القابلة للاختيار وتصاميم ظهر البطاقات والصور الرمزية للاعبين. افتح خيارات تخصيص متميزة عبر برنامج VIP.</span>
+            </div>
+          </li>
+          <li>
+            <span class="pl-icon">📋</span>
+            <div class="pl-text">
+              <strong>تاريخ الأيدٍ &amp; تتبع الإحصاءات</strong>
+              <span>كل يد تلعبها مسجلة ومتاحة للتنزيل أو المراجعة داخل المنصة. صفّي حسب الجلسة ونوع اللعبة ومستوى الرهان. صدّر بتنسيق HH القياسي المتوافق مع برامج التتبع.</span>
+            </div>
+          </li>
+          <li>
+            <span class="pl-icon">💬</span>
+            <div class="pl-text">
+              <strong>محادثة داخل اللعبة</strong>
+              <span>محادثة طاولة كاملة مع ردود أفعال بالرموز التعبيرية ووظائف اجتماعية قياسية وإشراف المعتدلين. اكتم لاعبًا بعينه أو كامل محادثة الطاولة بنقرة واحدة. المحادثة متاحة على كل من سطح المكتب والجوال.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       9. STAKES TABLE
+       ============================================ -->
+  <section class="game-section game-section-dark" id="stakes-table">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">مرجع</span>
+        <h2>كامل <span class="gold-text">دليل الرهانات</span></h2>
+        <p>تفصيل كامل لكل تنسيق لعبة ومستوى رهان وتكوين طاولة متاح في JackPoker. استخدم هذا الجدول للعثور على اللعبة المناسبة لرصيدك ومستوى مهارتك.</p>
+      </div>
+
+      <div class="table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>تنسيق اللعبة</th>
+              <th>أدنى رهان</th>
+              <th>أعلى رهان</th>
+              <th>أحجام الطاولة</th>
+              <th>الحالة</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>NL Texas Hold'em</strong></td>
+              <td>NL10 — $0.05/$0.10</td>
+              <td>NL2000 — $10/$20</td>
+              <td>2-max، 6-max، 9-max</td>
+              <td><span class="badge badge-green">● مباشر</span></td>
+            </tr>
+            <tr>
+              <td><strong>PLO4 (4-Card Omaha)</strong></td>
+              <td>PLO10 — $0.05/$0.10</td>
+              <td>PLO500 — $2.50/$5</td>
+              <td>6-max، 9-max</td>
+              <td><span class="badge badge-green">● مباشر</span></td>
+            </tr>
+            <tr>
+              <td><strong>PLO5 (5-Card Omaha)</strong></td>
+              <td>PLO10 — $0.05/$0.10</td>
+              <td>PLO200 — $1/$2</td>
+              <td>6-max</td>
+              <td><span class="badge badge-green">● مباشر</span></td>
+            </tr>
+            <tr>
+              <td><strong style="color: var(--gold-primary);">PLO6 (6-Card Omaha) ★</strong></td>
+              <td>PLO10 — $0.05/$0.10</td>
+              <td>PLO100 — $0.50/$1</td>
+              <td>6-max</td>
+              <td><span class="badge badge-gold">★ حصري</span></td>
+            </tr>
+            <tr>
+              <td><strong>Spin &amp; Win</strong></td>
+              <td>رسوم دخول $1</td>
+              <td>رسوم دخول $100</td>
+              <td>3 لاعبين فقط</td>
+              <td><span class="badge badge-green">● مباشر</span></td>
+            </tr>
+            <tr>
+              <td><strong>Push-Fold</strong></td>
+              <td>رهانات منخفضة</td>
+              <td>رهانات متوسطة</td>
+              <td>Short-handed</td>
+              <td><span class="badge badge-green">● مباشر</span></td>
+            </tr>
+            <tr>
+              <td><strong>الكازينو — الماكينات</strong></td>
+              <td>$0.10 لكل دوران</td>
+              <td>حتى $500 لكل دوران</td>
+              <td>غير متاح</td>
+              <td><span class="badge badge-green">● مباشر</span></td>
+            </tr>
+            <tr>
+              <td><strong>الكازينو — الكازينو المباشر</strong></td>
+              <td>حتى $1 لكل يد</td>
+              <td>حتى $5,000 لكل يد</td>
+              <td>غير متاح</td>
+              <td><span class="badge badge-green">● 24/7</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="color: var(--text-faint); font-size: 0.82rem; margin-top: 16px; text-align: center;">الرهانات والتوفر قابلة للتغيير. سجّل الدخول إلى اللوبي للاطلاع على توفر الألعاب في الوقت الفعلي.</p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       10. SOFTWARE FEATURES
+       ============================================ -->
+  <section class="game-section section-accent" id="software">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">البرنامج</span>
+        <h2>مبني لـ <span class="gold-text">اللاعبين الجادين</span></h2>
+        <p>برنامج JackPoker مكتظ بالميزات التي يتوقعها اللاعبون المحترفون والترفيهيون الجادون. كل أداة تحتاجها للعب جيدًا وتتبع نتائجك وتعظيم كفاءتك مبنية مباشرةً في المنصة.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="feature-card">
+          <div class="feature-icon">⬜⬛</div>
+          <h3>دعم اللعب على عدة طاولات</h3>
+          <p>العب على ما يصل إلى ثلاث طاولات في آنٍ معًا في تخطيط بلاط نظيف. كل طاولة مستقلة تمامًا — مؤقتات تصرف منفصلة وإجراءات تلقائية وضوابط رهان — لتتنقل بين الطاولات بسلاسة دون ارتباك أو نقرات خاطئة. مثالي للاعبي كاش الباحثين عن حجم ولاعبي Spin &amp; Win الراغبين في تعظيم معدلهم الساعي.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Quick Seat</h3>
+          <p>لا تضيع وقتك في البحث عن أفضل طاولة متاحة. Quick Seat يتيح لك تحديد نوع اللعبة المفضل والرهان وحجم الطاولة، ويجد النظام تلقائيًا أنسب طاولة متاحة ويجلسك فيها. تُدار قوائم الانتظار تلقائيًا — ستتلقى إشعارًا وتُنقل إلى مقعد جديد فور فتح واحد يناسب تفضيلاتك.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📹</div>
+          <h3>مراجعة الأيدٍ</h3>
+          <p>راجع أي يد لعبتها مع مراجعة الأيدٍ المدمجة لدينا. تصفّح الحركة شارعًا بشارع — شاهد كل رهان ومكالمة وطيّ وعرض بالضبط كما حدث. صفّي تاريخ أيديك حسب الجلسة ونطاق التاريخ ومستوى الرهان أو نوع اللعبة. صدّر أيدٍ فردية أو جلسات كاملة بتنسيق الصناعة القياسي للاستخدام مع أدوات التتبع الخارجية والـsolvers.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">💰</div>
+          <h3>أدوات إدارة الرصيد</h3>
+          <p>يتضمن JackPoker ضوابط مدمجة للقمار المسؤول وإدارة الرصيد. حدد حدود إيداع الجلسة وحدود الخسارة أو حدود الوقت مباشرةً من لوحة تحكم حسابك. اعرض تاريخ الربح والخسارة الصافي مع ملخصات جلسات بيانية. حدد تنبيهات عند وصولك إلى معالم رصيد محددة مسبقًا — إيجابية وسلبية — لإبقاء لعبتك منضبطة.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">⏱️</div>
+          <h3>بنك الوقت</h3>
+          <p>كل لاعب يحصل على بنك وقت من ثوانٍ إضافية يمكن استخدامه في القرارات الصعبة. يتفعّل بنك الوقت تلقائيًا عند انتهاء ساعة التصرف القياسية، مما يمنحك لحظات إضافية للتفكير في المواقف المعقدة دون انتهاء المهلة. يتراكم بنك الوقت المتاح بين الأيدٍ وهو معروض بوضوح في مقعدك في جميع الأوقات.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3>الإجراءات التلقائية</h3>
+          <p>بسّط جلستك بمجموعة إجراءات تلقائية شاملة. جهّز مسبقًا Check/Fold للتصرف فورًا عند دورك في المواقف التي قررت فيها بالفعل. مزج الأيدٍ الخاسرة تلقائيًا دون الكشف عن بطاقاتك عند العرض. تعيين Auto-Post-Blinds لتُوزَّع عليك الأيدٍ دائمًا دون انتظار البوتون. جميع الإجراءات التلقائية قابلة للتكوين لكل طاولة، مما يمنحك تحكمًا دقيقًا عبر جلسات متعددة الطاولات.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       11. PAYMENT METHODS
+       ============================================ -->
+  <section class="game-section game-section-dark section-accent" id="payments">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">الخدمات المصرفية</span>
+        <h2>إيداعات وسحوبات &amp; <span class="gold-text">سريعة</span></h2>
+        <p>JackPoker يدعم مجموعة واسعة من طرق الإيداع والسحب — من البطاقات التقليدية والمحافظ الإلكترونية إلى طيف العملات الرقمية الرئيسية الكامل. أوقات معالجة سريعة وبدون رسوم خفية.</p>
+      </div>
+
+      <div class="grid-2" style="gap: 48px;">
+        <div>
+          <div class="payment-category">
+            <div class="payment-category-label">البطاقات &amp; التحويل البنكي</div>
+            <div class="payment-grid">
+              <span class="payment-pill">💳 VISA</span>
+              <span class="payment-pill">💳 Mastercard</span>
+              <span class="payment-pill">🏦 التحويل البنكي</span>
+            </div>
+          </div>
+
+          <div class="payment-category">
+            <div class="payment-category-label">محافظ إلكترونية</div>
+            <div class="payment-grid">
+              <span class="payment-pill">🔵 Skrill</span>
+              <span class="payment-pill">🟠 Neteller</span>
+              <span class="payment-pill">🏦 JetonBank</span>
+              <span class="payment-pill">💜 LuxonPay</span>
+              <span class="payment-pill">🟡 Paysafecard</span>
+            </div>
+          </div>
+
+          <div class="payment-category">
+            <div class="payment-category-label">طرق إقليمية</div>
+            <div class="payment-grid">
+              <span class="payment-pill">🇧🇷 Pix</span>
+              <span class="payment-pill">🍁 Interac</span>
+              <span class="payment-pill">🇵🇱 Blik</span>
+            </div>
+          </div>
+
+          <div class="payment-category">
+            <div class="payment-category-label">العملات الرقمية</div>
+            <div class="payment-grid">
+              <span class="payment-pill">₿ Bitcoin (BTC)</span>
+              <span class="payment-pill">Ξ Ethereum (ETH)</span>
+              <span class="payment-pill">💵 USDT (Tether)</span>
+              <span class="payment-pill">🔵 TRX (Tron)</span>
+              <span class="payment-pill">Ł Litecoin (LTC)</span>
+              <span class="payment-pill">🐕 Dogecoin (DOGE)</span>
+              <span class="payment-pill">🟡 BNB</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="prose-block">
+          <h3 style="margin-bottom: 20px;">خدمات مصرفية تلائمك</h3>
+          <p>بنينا بنيتنا التحتية للمدفوعات حول احتياجات مجتمع لاعبين دولي. سواء كنت تودع من أوروبا بـSkrill أو Neteller، أو تستخدم Pix من البرازيل، أو Interac من كندا، أو Blik من بولندا، فطريقتك المفضلة موجودة شبه حتمًا في قائمتنا. جميع الطرق المدعومة متاحة للإيداع والسحب دون أي احتكاك إضافي.</p>
+          <p>إيداعات العملات الرقمية في JackPoker تُعالَج على السلسلة وتُضاف إلى حسابك فور استقبال تأكيدات الشبكة — عادةً في غضون دقائق لـBitcoin وشبه فورية لرموز ERC-20. سحوبات العملات الرقمية تُعالَج في غضون 24 ساعة للحسابات القياسية وفي غضون ساعات قليلة لأعضاء مستوى VIP الذين يتمتعون بمعالجة دفع ذات أولوية. لا رسوم تحويل إضافية على معاملات العملات الرقمية.</p>
+          <p>لمستخدمي البطاقات والمحافظ الإلكترونية، الإيداعات فورية ومتاحة للعب في الحال. تعتمد أوقات معالجة السحوبات على طريقتك وحالة التحقق — الحسابات المُحقَّقة بالكامل عادةً ترى سحوبات المحافظ الإلكترونية مُعالَجة في نفس يوم العمل. يتمتع لاعبو VIP بمعالجة سحب ذات أولوية كأحد المزايا الرئيسية لمستواهم، مما يضمن وصول أرباحك إليك بأسرع ما تسمح به شبكة الدفع.</p>
+          <p>جميع المعاملات المالية على JackPoker تُعالَج بموجب تشفير SSL/TLS. تمتثل أنظمة الدفع لدينا لمتطلبات ترخيصنا في أنجوان وتخضع لعمليات تدقيق أمني من أطراف ثالثة بشكل منتظم من قِبل iTech Labs وBMM TestLabs وGLI — نفس الجهات التي تُصادق على نزاهة ألعابنا.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       12. FINAL CTA
+       ============================================ -->
+  <section class="cta-section" id="cta">
+    <div class="container">
+      <div class="cta-inner">
+        <span class="section-label">ابدأ</span>
+        <h2>اختر <span class="gold-text">لعبتك</span></h2>
+        <p>من Hold'em ذو الرهانات المنخفضة إلى جاكبوتات Spin &amp; Win المليونية — جلستك التالية على بُعد نقرة واحدة. انضم إلى آلاف اللاعبين على الطاولات الآن في JackPoker.</p>
+
+        <div style="margin-bottom: 32px;">
+          <div class="promo-code-box" style="margin: 0 auto; max-width: 340px;">
+            <span class="promo-code-value">WELCOME</span>
+            <button class="promo-code-copy" onclick="navigator.clipboard.writeText('WELCOME').then(()=>{this.textContent='Copied!';setTimeout(()=>{this.textContent='Copy';},2000})">نسخ</button>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 12px; margin-bottom: 0;">استخدم الرمز <strong style="color: var(--gold-primary);">WELCOME</strong> لمطابقة 300% حتى $2,000 + كاش فوري 20% + Lootbox</p>
+        </div>
+
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <a href="https://go.jack-full.com/c41f796e" class="btn btn-primary btn-lg">♠ العب الآن — التسجيل مجاني</a>
+          <a href="bonuses.html" class="btn btn-secondary btn-lg">استكشف المكافأة</a>
+        </div>
+
+        <div style="margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--border-subtle);">
+          <div class="grid-4" style="gap: 16px;">
+            <div style="text-align: center;">
+              <div style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 900; color: var(--gold-primary);">300%</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px;">مطابقة الترحيب</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 900; color: var(--gold-primary);">$2,000</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px;">أعلى مكافأة</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 900; color: var(--gold-primary);">20%</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px;">استرداد كاش فوري</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 900; color: var(--gold-primary);">$1M</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px;">جاكبوت Spin &amp; Win</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promo Code CTA — Games Context -->
+  <aside class="promo-cta-inline" style="background: linear-gradient(135deg, rgba(137,59,247,0.08), rgba(246,186,70,0.08)); border: 1px solid rgba(246,186,70,0.2); border-radius: 16px; padding: 32px 36px; margin: 48px auto; max-width: var(--max-width); position: relative; overflow: hidden;">
+    <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--purple-primary), var(--gold-primary));"></div>
+    <div class="container" style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap;">
+      <div style="flex: 1; min-width: 280px;">
+        <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 8px;">ابدأ اللعب بمكافأة 300%</h3>
+        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin: 0;">استخدم <a href="promo-code.html" style="color: var(--gold-primary); font-weight: 700; text-decoration: underline;">الرمز الترويجي WELCOME في JackPoker</a> عند تسجيلك لفتح مطابقة إيداع بنسبة 300% حتى $2,000. كل تنسيق لعبة أعلاه يصبح أكثر سهولة بالوصول برصيد معزّز. اطلع على <a href="promo-code.html" style="color: var(--gold-primary); font-weight: 600;">تفاصيل الرمز الترويجي الكاملة وطريقة المطالبة</a>.</p>
+      </div>
+      <div style="flex-shrink: 0;">
+        <a href="promo-code.html" class="btn btn-cta" style="white-space: nowrap;">احصل على الرمز WELCOME →</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  
+    <!-- Latest News Links -->
+    <section style="padding: 24px 0 0;">
+      <div class="container">
+        <h3 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; color: var(--text-primary);">آخر الأخبار من JackPoker</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <a href="news/winter-games-festival-wraps-with-record-breaking-21m-in-payo.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">Winter Games Festival: مدفوعات $2.1M →</a>
+          <a href="news/bonus-bonanza-march-schedule-620-events-125m-in-guarantees.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">Bonus Bonanza مارس: $1.25M مضمونة →</a>
+          <a href="news/jackpoker-mobile-app-30-launches-with-multi-table-support.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">إطلاق تطبيق الجوال 3.0 →</a>
+          <a href="news/crypto-deposits-now-available-in-sol-matic-and-ton.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">إيداعات العملات الرقمية: SOL وMATIC وTON →</a>
+        </div>
+      </div>
+    </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="JackPoker Home">
+        <svg class="logo-icon" width="189" height="47" viewBox="0 0 189 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="JackPoker">
+<path d="M25.4001 1C24.0001 1 22.8001 2.2 22.8001 3.6C22.8001 5.1 23.8343 5.9 25.3001 5.9H28.7001C28.7001 5.9 31.3001 5.9 31.3001 8.3C31.3001 10.7 28.7001 10.7 28.7001 10.7H8.30008C6.90008 10.7 5.70008 11.9 5.70008 13.3C5.70008 14.7 6.90008 15.9 8.30008 15.9H22.5001C22.5001 15.9 25.1001 15.9 25.1001 18.3C25.1001 20.7 22.5001 20.7 22.5001 20.7H11.4001C10.0001 20.7 8.80008 21.9 8.80008 23.3C8.80008 24.7 10.0001 25.9 11.4001 25.9H22.6001C22.6001 25.9 25.2001 25.9 25.2001 28.3C25.2001 30.7 22.6001 30.7 22.6001 30.7H21.8001C20.4001 30.7 19.2001 31.9 19.2001 33.3C19.2001 34.7 20.4001 35.9 21.8001 35.9H28.8001C28.8001 35.9 31.4001 35.9 31.4001 38.3C31.4001 40.7 28.8001 40.7 28.8001 40.7H14.0001C12.6001 40.7 11.4001 41.9 11.4001 43.3C11.4001 44.7 12.6001 45.9 14.0001 45.9H34.3001C36.5001 45.9 38.4001 44.8 39.5001 43C41.1501 40.25 42.7751 37.4999 44.4001 34.7499C46.0251 31.9999 47.6501 29.25 49.3001 26.5C50.4001 24.6 50.4001 22.3 49.3001 20.4C47.6501 17.6501 46.0252 14.9001 44.4002 12.1502C42.7752 9.4002 41.1501 6.65001 39.5001 3.9C38.4001 2.1 36.4001 1 34.3001 1H25.4001Z" fill="url(#jpLogoGrad)"/>
+<path d="M11.3999 3.6C11.3999 2.2 12.5999 1 13.9999 1H17.5999C18.9999 1 20.1999 2.2 20.1999 3.6C20.1999 5 18.9999 6.2 17.5999 6.2H13.9999C12.5999 6.2 11.3999 5 11.3999 3.6Z" fill="url(#jpLogoGrad)"/>
+<path d="M0 23.5001C0 22.1001 1.2 20.9001 2.6 20.9001H3.6C5 20.9001 6.2 22.1001 6.2 23.5001C6.2 24.9001 5 26.1001 3.6 26.1001H2.6C1.2 26.1001 0 24.9001 0 23.5001Z" fill="url(#jpLogoGrad)"/>
+<path d="M8.30008 30.8001C6.90008 30.8001 5.70008 32.0001 5.70008 33.4001C5.70008 34.9001 6.90008 36.1001 8.30008 36.0001H14.0001C15.4001 36.0001 16.6001 34.8001 16.6001 33.4001C16.6001 32.0001 15.4001 30.8001 14.0001 30.8001H8.30008Z" fill="url(#jpLogoGrad)"/>
+<path d="M69.7955 27.3088C69.7955 28.8312 69.6204 30.0793 69.2704 31.0533C68.9203 32.0273 68.3261 32.7598 67.4876 33.2509C66.6572 33.7502 65.5257 33.9998 64.0929 33.9998C63.7591 33.9998 63.3887 33.9712 62.9817 33.9139C62.5747 33.8648 62.3142 33.832 62.2002 33.8157L62.5177 31.2252H63.7144C65.1797 31.2252 65.9164 30.4231 65.9246 28.8189V15.265L64.0441 14.5039V12.3676L71.676 12.2449V14.5039L69.7955 15.265V27.3088Z" fill="white"/>
+<path d="M81.4937 28.3401C81.4937 28.3728 81.2779 28.557 80.8465 28.8926C80.415 29.2281 79.8981 29.5351 79.2957 29.8133C78.6933 30.0834 78.0746 30.2185 77.4396 30.2185C76.2185 30.2185 75.2619 29.8788 74.57 29.1995C73.8862 28.512 73.5443 27.538 73.5443 26.2775C73.5443 24.837 74.0571 23.7853 75.0829 23.1223C76.1086 22.4594 77.6024 22.1279 79.5643 22.1279H81.3227V20.7406C81.3227 19.5129 80.6796 18.9031 79.3934 18.9113C79.0107 18.9113 78.6566 18.94 78.331 18.9973C78.0054 19.0545 77.7449 19.1159 77.5495 19.1814C77.3622 19.2387 77.2442 19.2755 77.1954 19.2919L76.8168 20.8756H74.57L74.399 17.1557C74.5456 17.1066 74.9038 17.0002 75.4736 16.8365C76.0516 16.6728 76.7395 16.5173 77.5373 16.37C78.3432 16.2226 79.1044 16.149 79.8207 16.149C81.107 16.149 82.1286 16.3127 82.8857 16.6401C83.6428 16.9593 84.1964 17.4831 84.5464 18.2115C84.8965 18.9318 85.0715 19.9017 85.0715 21.1212V27.3334L86.952 27.7876V29.8011L81.9455 29.9729L81.4937 28.3401ZM77.1709 25.897C77.1709 26.388 77.2971 26.7645 77.5495 27.0264C77.81 27.2802 78.1763 27.407 78.6485 27.407C79.0474 27.407 79.4422 27.3006 79.833 27.0878C80.2237 26.8668 80.5534 26.6418 80.822 26.4126C81.0907 26.1752 81.2576 26.0197 81.3227 25.9461V24.2641H79.894C78.9253 24.2641 78.2292 24.3951 77.8059 24.657C77.3826 24.9189 77.1709 25.3322 77.1709 25.897Z" fill="white"/>
+<path d="M100.311 28.0823C99.7492 28.5897 99.0124 29.0726 98.1007 29.531C97.1971 29.9893 96.1428 30.2185 94.938 30.2185C92.8866 30.2185 91.291 29.6169 90.1513 28.4137C89.0116 27.2106 88.4417 25.5327 88.4417 23.3802C88.4417 21.1376 89.0442 19.3737 90.249 18.0888C91.4619 16.7956 93.1511 16.149 95.3166 16.149C95.9515 16.149 96.5906 16.2145 97.2337 16.3454C97.885 16.4764 98.4263 16.6114 98.8578 16.7506C99.2974 16.8815 99.5742 16.9715 99.6881 17.0206L99.566 21.1457H97.3192L96.9651 19.3656C96.8836 19.3492 96.6801 19.3124 96.3545 19.2551C96.0289 19.1896 95.6585 19.1569 95.2433 19.1569C94.3234 19.1569 93.6029 19.472 93.0819 20.1022C92.5691 20.7324 92.3126 21.6573 92.3126 22.8768C92.3126 24.2682 92.5731 25.3404 93.0942 26.0934C93.6233 26.8382 94.4048 27.2106 95.4387 27.2106C96.0899 27.2106 96.6598 27.1124 97.1482 26.916C97.6448 26.7113 98.06 26.5026 98.3937 26.2898C98.7275 26.077 98.9514 25.9379 99.0654 25.8724L100.311 28.0823Z" fill="white"/>
+<path d="M108.602 21.4527L110.3 18.8868L109.201 18.5307V16.5173L115.66 16.3945V18.5307L113.902 18.8622L111.582 22.1525L114.378 27.3579L116.283 27.9595V29.9729H111.655L108.553 23.8344H106.954V27.3334L108.334 27.9595V29.9729H101.202V27.9595L103.205 27.3334V13.2025L101.202 12.6991V10.6857L106.954 10.4893V21.4527H108.602Z" fill="white"/>
+<path d="M117.406 27.8367L119.275 27.0756V15.265L117.406 14.5039V12.3676L123.158 12.2449H125.527C127.423 12.2449 128.909 12.7155 129.984 13.6567C131.066 14.598 131.608 15.8871 131.608 17.524C131.608 19.6029 130.993 21.1703 129.764 22.2261C128.543 23.2819 126.78 23.8099 124.477 23.8099H123.158V27.0756L125.026 27.8367V29.9729H117.406V27.8367ZM124.477 20.8756C125.527 20.8756 126.333 20.6342 126.894 20.1513C127.456 19.6602 127.737 18.9522 127.737 18.0274C127.737 17.1925 127.513 16.5255 127.065 16.0262C126.626 15.5188 125.991 15.265 125.16 15.265H123.158V20.8756H124.477Z" fill="white"/>
+<path d="M139.74 16.149C141.751 16.149 143.302 16.7383 144.393 17.9169C145.492 19.0955 146.041 20.7692 146.041 22.9382C146.041 24.4278 145.764 25.721 145.211 26.8177C144.665 27.9145 143.892 28.7575 142.891 29.3468C141.89 29.9279 140.713 30.2185 139.362 30.2185C135.112 30.2185 132.988 27.9145 132.988 23.3065C132.988 21.8169 133.264 20.536 133.818 19.4638C134.38 18.3916 135.169 17.5731 136.187 17.0084C137.205 16.4354 138.389 16.149 139.74 16.149ZM139.606 19.1569C138.662 19.1569 137.966 19.4638 137.518 20.0776C137.078 20.6915 136.859 21.7269 136.859 23.1837C136.859 24.5751 137.066 25.5941 137.481 26.2407C137.905 26.8873 138.572 27.2106 139.484 27.2106C140.404 27.2106 141.08 26.8873 141.511 26.2407C141.942 25.5941 142.158 24.5342 142.158 23.061C142.158 21.7514 141.955 20.7733 141.548 20.1267C141.141 19.4802 140.493 19.1569 139.606 19.1569Z" fill="white"/>
+<path d="M154.809 21.4527L156.506 18.8868L155.407 18.5307V16.5173L161.867 16.3945V18.5307L160.108 18.8622L157.788 22.1525L160.585 27.3579L162.49 27.9595V29.9729H157.862L154.76 23.8344H153.16V27.3334L154.54 27.9595V29.9729H147.409V27.9595L149.412 27.3334V13.2025L147.409 12.6991V10.6857L153.16 10.4893V21.4527H154.809Z" fill="white"/>
+<path d="M167.508 24.0186C167.573 25.0253 167.875 25.811 168.412 26.3758C168.957 26.9323 169.666 27.2106 170.537 27.2106C171.155 27.2106 171.774 27.1247 172.393 26.9528C173.02 26.7727 173.536 26.5927 173.944 26.4126C174.359 26.2243 174.623 26.0934 174.737 26.0197L175.812 28.1068C175.812 28.1396 175.519 28.3483 174.933 28.733C174.355 29.1095 173.642 29.4532 172.796 29.7642C171.957 30.0671 171.062 30.2185 170.109 30.2185C167.993 30.2185 166.381 29.6292 165.274 28.4506C164.167 27.272 163.613 25.6023 163.613 23.4415C163.613 21.9847 163.878 20.7079 164.407 19.6111C164.944 18.5062 165.713 17.655 166.715 17.0575C167.716 16.4518 168.904 16.149 170.28 16.149C172.112 16.149 173.516 16.6769 174.493 17.7327C175.47 18.7885 175.958 20.2291 175.958 22.0542C175.958 22.4553 175.938 22.8441 175.897 23.2206C175.857 23.5971 175.828 23.8344 175.812 23.9326L167.508 24.0186ZM170.036 19.1569C169.352 19.1569 168.795 19.3901 168.363 19.8566C167.932 20.315 167.663 20.9207 167.557 21.6737H172.087C172.087 20.9207 171.921 20.315 171.587 19.8566C171.253 19.3901 170.736 19.1569 170.036 19.1569Z" fill="white"/>
+<path d="M183.199 18.1256C183.199 18.0928 183.395 17.9005 183.786 17.5486C184.176 17.1966 184.628 16.8774 185.141 16.591C185.662 16.2963 186.175 16.149 186.68 16.149C187.079 16.149 187.453 16.1817 187.803 16.2472C188.153 16.3127 188.426 16.3822 188.621 16.4559C188.825 16.5296 188.951 16.5746 189 16.591L188.804 21.4281H186.558L186.179 19.2919C185.748 19.2919 185.328 19.3983 184.921 19.6111C184.522 19.8157 184.18 20.0449 183.896 20.2986C183.619 20.5442 183.48 20.6751 183.48 20.6915V27.3334L185.984 27.9595V29.9729H177.729V27.9595L179.732 27.3334V19.1569L177.729 18.5307V16.5173L182.98 16.3945L183.199 18.1256Z" fill="white"/>
+<defs>
+<linearGradient id="jpLogoGrad" x1="0" y1="33.44" x2="50.74" y2="33.44" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8032FF"/>
+<stop offset="1" stop-color="#FF3D00"/>
+</linearGradient>
+</defs>
+</svg>
+      </a>
+          <p>JackPoker منصة بوكر أونلاين حديثة تقدم Texas Hold'em وPLO وSpin&amp;Win وبطولات متنوعة. مرخصة ومعتمدة من iTech Labs وBMM TestLabs وGLI. العب بمسؤولية.</p>
+        </div>
+        <div class="footer-col">
+          <h4>المنصة</h4>
+          <ul>
+            <li><a href="games.html">الألعاب</a></li>
+            <li><a href="tournaments.html">البطولات</a></li>
+            <li><a href="bonuses.html">المكافآت &amp; العروض</a></li>
+            <li><a href="promo-code.html">الرمز الترويجي</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>الموارد</h4>
+          <ul>
+            <li><a href="news.html">الأخبار</a></li>
+            <li><a href="https://go.jack-full.com/c41f796e" target="_blank" rel="noopener noreferrer">الأسئلة الشائعة</a></li>
+            <li><a href="terms.html">شروط الخدمة</a></li>
+            <li><a href="https://go.jack-full.com/c41f796e" target="_blank" rel="noopener noreferrer">سياسة الخصوصية</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>المدفوعات</h4>
+          <div class="footer-payment-icons">
+            <span>VISA</span><span>Mastercard</span><span>Skrill</span><span>Neteller</span><span>Bitcoin</span><span>Ethereum</span><span>USDT</span><span>Pix</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 JackPoker. تشغيل بواسطة Jack La International Limitada. مرخصة في أنجوان، الاتحاد القمري. العب بمسؤولية. 18+</p>
+        <p>معتمدة من iTech Labs &bull; BMM TestLabs &bull; GLI</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+  <script>
+    // Sticky subnav active link tracking
+    (function() {
+      const sections = document.querySelectorAll('[id]');
+      const navLinks = document.querySelectorAll('.games-subnav-link');
+
+      function updateActiveLink() {
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 130;
+          if (window.scrollY >= sectionTop) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          const href = link.getAttribute('href');
+          if (href && href === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      }
+
+      window.addEventListener('scroll', updateActiveLink, { passive: true });
+      updateActiveLink();
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,1056 @@
+<!DOCTYPE html>
+<html lang="cs" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Novinky JackPoker — Turnaje, akce a aktuality</title>
+  <meta name="description" content="Nejnovější novinky JackPoker: výsledky turnajů, akce, aktualizace platformy a komunitní novinky.">
+  <meta property="og:title" content="Novinky a aktuality JackPoker — Turnaje, akce &amp; oznámení platformy">
+  <meta property="og:description" content="Vše nejnovější z JackPoker: $500K Cash Carnival, Winter Games Festival, aktualizace platformy a turnajové výsledky.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://jackpoker.poker/assets/images/hero-poker.jpg" />
+  <link rel="canonical" href="https://jackpoker.poker/cs/news.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..800&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/jackpoker-favicon.svg" />
+  <style>
+    /* ===== NEWS PAGE SPECIFIC STYLES ===== */
+
+    /* Page Hero */
+    .page-hero-news {
+      padding: calc(var(--header-height) + 56px) 0 52px;
+      background: linear-gradient(180deg, rgba(137,59,247,0.06) 0%, transparent 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .page-hero-news::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      right: -80px;
+      width: 480px;
+      height: 480px;
+      background: var(--purple-primary);
+      border-radius: 50%;
+      filter: blur(180px);
+      opacity: 0.07;
+      pointer-events: none;
+    }
+
+    .page-hero-news::after {
+      content: '';
+      position: absolute;
+      bottom: -60px;
+      left: -60px;
+      width: 320px;
+      height: 320px;
+      background: var(--gold-primary);
+      border-radius: 50%;
+      filter: blur(150px);
+      opacity: 0.04;
+      pointer-events: none;
+    }
+
+    .page-hero-news .hero-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-hero-news h1 {
+      font-size: clamp(2.2rem, 5vw, 3.4rem);
+      font-weight: 900;
+      margin-bottom: 14px;
+      letter-spacing: -0.03em;
+    }
+
+    .page-hero-news .hero-subtitle {
+      font-size: 1.08rem;
+      color: var(--text-muted);
+      max-width: 620px;
+      line-height: 1.8;
+      margin: 0;
+    }
+
+    /* Featured Article */
+    .featured-article {
+      background: var(--gradient-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .featured-article::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: var(--gradient-hero);
+    }
+
+    .featured-article:hover {
+      border-color: rgba(137,59,247,0.3);
+      box-shadow: 0 16px 60px rgba(137,59,247,0.12);
+    }
+
+    .featured-article-img {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .featured-article-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      min-height: 380px;
+      transition: transform 0.5s ease;
+    }
+
+    .featured-article:hover .featured-article-img img {
+      transform: scale(1.04);
+    }
+
+    .featured-article-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, transparent 60%, rgba(13,11,18,0.6) 100%);
+    }
+
+    .featured-badge {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 16px;
+      background: rgba(246,186,70,0.92);
+      color: #000000;
+      font-size: 0.72rem;
+      font-weight: 800;
+      border-radius: 100px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .featured-article-content {
+      padding: 48px 44px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .featured-article-tag {
+      display: inline-block;
+      padding: 4px 14px;
+      background: rgba(246,186,70,0.1);
+      color: var(--gold-primary);
+      font-size: 0.72rem;
+      font-weight: 700;
+      border-radius: 100px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+
+    .featured-article-content h2 {
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      margin-bottom: 12px;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+    }
+
+    .featured-date {
+      color: var(--text-faint);
+      font-size: 0.8rem;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .featured-date span {
+      display: inline-block;
+      width: 3px;
+      height: 3px;
+      background: var(--text-faint);
+      border-radius: 50%;
+    }
+
+    .featured-article-body p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.85;
+      margin-bottom: 14px;
+    }
+
+    .featured-article-body p:last-child {
+      margin-bottom: 0;
+    }
+
+    .featured-read-more {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 24px;
+      color: var(--gold-primary);
+      font-size: 0.88rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: gap 0.2s ease;
+    }
+
+    .featured-read-more:hover {
+      gap: 12px;
+      color: var(--gold-hover);
+    }
+
+    /* News Section Label */
+    .news-section-label {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .news-section-label h2 {
+      font-size: 1.55rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .news-section-label-line {
+      flex: 1;
+      height: 1px;
+      background: var(--border-subtle);
+    }
+
+    /* News Card Enhancements */
+    .news-card-tag.tournament {
+      background: rgba(137,59,247,0.15);
+      color: var(--purple-primary);
+    }
+
+    .news-card-tag.promotion {
+      background: rgba(246,186,70,0.12);
+      color: var(--gold-primary);
+    }
+
+    .news-card-tag.platform {
+      background: rgba(125,226,57,0.1);
+      color: var(--success);
+    }
+
+    .news-card-tag.community {
+      background: rgba(79,152,163,0.12);
+      color: #4fa2bf;
+    }
+
+    .news-card-excerpt {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      line-height: 1.75;
+      margin-top: 10px;
+    }
+
+    .news-card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 18px;
+      padding-top: 14px;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .news-card-read-more {
+      color: var(--purple-primary);
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      transition: color 0.2s ease, gap 0.2s ease;
+    }
+
+    .news-card-read-more:hover {
+      color: var(--gold-primary);
+      gap: 7px;
+    }
+
+    /* Filter bar */
+    .news-filter-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+
+    .filter-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 18px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 100px;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      border-color: var(--purple-primary);
+      color: var(--text-white);
+      background: rgba(137,59,247,0.1);
+    }
+
+    .filter-btn.active {
+      background: rgba(137,59,247,0.15);
+    }
+
+    /* Subscribe Section */
+    .subscribe-section {
+      background: var(--gradient-card);
+      border: 1px solid var(--border-gold);
+      border-radius: var(--radius-xl);
+      padding: 56px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .subscribe-section::before {
+      content: '';
+      position: absolute;
+      top: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 400px;
+      height: 400px;
+      background: var(--gold-primary);
+      border-radius: 50%;
+      filter: blur(160px);
+      opacity: 0.06;
+      pointer-events: none;
+    }
+
+    .subscribe-section::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--gradient-btn-gold);
+    }
+
+    .subscribe-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .subscribe-section .section-label {
+      color: var(--gold-primary);
+    }
+
+    .subscribe-section h2 {
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      margin-bottom: 14px;
+    }
+
+    .subscribe-section p {
+      color: var(--text-muted);
+      max-width: 520px;
+      margin: 0 auto 32px;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .subscribe-cta-group {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .promo-tag-inline {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      background: rgba(246,186,70,0.08);
+      border: 1px solid rgba(246,186,70,0.25);
+      border-radius: var(--radius-md);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .promo-tag-inline strong {
+      color: var(--gold-primary);
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+      font-family: 'Courier New', monospace;
+    }
+
+    /* Quick Links */
+    .quick-links-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .quick-link-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 28px 32px;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      color: var(--text-white);
+    }
+
+    .quick-link-card:hover {
+      border-color: rgba(137,59,247,0.3);
+      background: var(--bg-card-hover);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-card-hover);
+      color: var(--text-white);
+    }
+
+    .quick-link-icon {
+      font-size: 2rem;
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(137,59,247,0.1);
+      border-radius: var(--radius-md);
+      flex-shrink: 0;
+    }
+
+    .quick-link-text h4 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+      font-weight: 700;
+    }
+
+    .quick-link-text p {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      margin: 0;
+    }
+
+    .quick-link-arrow {
+      margin-left: auto;
+      color: var(--text-faint);
+      font-size: 1.1rem;
+      transition: color 0.2s ease, transform 0.2s ease;
+    }
+
+    .quick-link-card:hover .quick-link-arrow {
+      color: var(--gold-primary);
+      transform: translateX(4px);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .featured-article {
+        grid-template-columns: 1fr;
+      }
+
+      .featured-article-img img {
+        min-height: 240px;
+        max-height: 300px;
+      }
+
+      .featured-article-img-overlay {
+        background: linear-gradient(to bottom, transparent 60%, rgba(13,11,18,0.8) 100%);
+      }
+
+      .featured-article-content {
+        padding: 32px 28px;
+      }
+
+      .quick-links-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .subscribe-section {
+        padding: 40px 24px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .news-section-label h2 {
+        font-size: 1.25rem;
+      }
+
+      .featured-article-content h2 {
+        font-size: 1.35rem;
+      }
+    }
+  </style>
+<script>
+    (function(){var t=null;try{var m=document.cookie.match(/jp-theme=([^;]+)/);if(m)t=m[1]}catch(e){}document.documentElement.setAttribute("data-theme",t||"dark")})();
+  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "JackPoker",
+  "url": "https://jackpoker.poker",
+  "logo": "https://jackpoker.poker/assets/images/jackpoker-logo-official.png",
+  "description": "Modern online poker platform offering Texas Hold'em, PLO, Spin&Win tournaments, and more. Licensed and certified.",
+  "foundingDate": "2021",
+  "sameAs": [
+    "https://jack-poker.com",
+    "https://t.me/jackpokerclub"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "url": "https://jack-poker.com/support",
+    "availableLanguage": [
+      "English",
+      "Russian",
+      "Portuguese",
+      "Spanish"
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://jackpoker.poker"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "News",
+      "item": "https://jackpoker.poker/news.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "JackPoker News",
+  "description": "Latest news, updates, and event coverage from the JackPoker platform",
+  "url": "https://jackpoker.poker/news.html",
+  "publisher": {
+    "@type": "Organization",
+    "name": "JackPoker"
+  }
+}
+</script>
+<link rel="alternate" hreflang="en" href="https://jackpoker.poker/news.html" />
+<link rel="alternate" hreflang="ru" href="https://jackpoker.poker/ru/news.html" />
+<link rel="alternate" hreflang="es" href="https://jackpoker.poker/es/news.html" />
+<link rel="alternate" hreflang="it" href="https://jackpoker.poker/it/news.html" />
+<link rel="alternate" hreflang="pt" href="https://jackpoker.poker/pt/news.html" />
+<link rel="alternate" hreflang="vi" href="https://jackpoker.poker/vi/news.html" />
+<link rel="alternate" hreflang="th" href="https://jackpoker.poker/th/news.html" />
+<link rel="alternate" hreflang="ms" href="https://jackpoker.poker/ms/news.html" />
+<link rel="alternate" hreflang="ko" href="https://jackpoker.poker/ko/news.html" />
+<link rel="alternate" hreflang="ar" href="https://jackpoker.poker/ar/news.html" />
+<link rel="alternate" hreflang="pl" href="https://jackpoker.poker/pl/news.html" />
+<link rel="alternate" hreflang="cs" href="https://jackpoker.poker/cs/news.html" />
+<link rel="alternate" hreflang="x-default" href="https://jackpoker.poker/news.html" />
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="JackPoker Home">
+        <svg class="logo-icon" width="189" height="47" viewBox="0 0 189 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="JackPoker">
+<path d="M25.4001 1C24.0001 1 22.8001 2.2 22.8001 3.6C22.8001 5.1 23.8343 5.9 25.3001 5.9H28.7001C28.7001 5.9 31.3001 5.9 31.3001 8.3C31.3001 10.7 28.7001 10.7 28.7001 10.7H8.30008C6.90008 10.7 5.70008 11.9 5.70008 13.3C5.70008 14.7 6.90008 15.9 8.30008 15.9H22.5001C22.5001 15.9 25.1001 15.9 25.1001 18.3C25.1001 20.7 22.5001 20.7 22.5001 20.7H11.4001C10.0001 20.7 8.80008 21.9 8.80008 23.3C8.80008 24.7 10.0001 25.9 11.4001 25.9H22.6001C22.6001 25.9 25.2001 25.9 25.2001 28.3C25.2001 30.7 22.6001 30.7 22.6001 30.7H21.8001C20.4001 30.7 19.2001 31.9 19.2001 33.3C19.2001 34.7 20.4001 35.9 21.8001 35.9H28.8001C28.8001 35.9 31.4001 35.9 31.4001 38.3C31.4001 40.7 28.8001 40.7 28.8001 40.7H14.0001C12.6001 40.7 11.4001 41.9 11.4001 43.3C11.4001 44.7 12.6001 45.9 14.0001 45.9H34.3001C36.5001 45.9 38.4001 44.8 39.5001 43C41.1501 40.25 42.7751 37.4999 44.4001 34.7499C46.0251 31.9999 47.6501 29.25 49.3001 26.5C50.4001 24.6 50.4001 22.3 49.3001 20.4C47.6501 17.6501 46.0252 14.9001 44.4002 12.1502C42.7752 9.4002 41.1501 6.65001 39.5001 3.9C38.4001 2.1 36.4001 1 34.3001 1H25.4001Z" fill="url(#jpLogoGrad)"/>
+<path d="M11.3999 3.6C11.3999 2.2 12.5999 1 13.9999 1H17.5999C18.9999 1 20.1999 2.2 20.1999 3.6C20.1999 5 18.9999 6.2 17.5999 6.2H13.9999C12.5999 6.2 11.3999 5 11.3999 3.6Z" fill="url(#jpLogoGrad)"/>
+<path d="M0 23.5001C0 22.1001 1.2 20.9001 2.6 20.9001H3.6C5 20.9001 6.2 22.1001 6.2 23.5001C6.2 24.9001 5 26.1001 3.6 26.1001H2.6C1.2 26.1001 0 24.9001 0 23.5001Z" fill="url(#jpLogoGrad)"/>
+<path d="M8.30008 30.8001C6.90008 30.8001 5.70008 32.0001 5.70008 33.4001C5.70008 34.9001 6.90008 36.1001 8.30008 36.0001H14.0001C15.4001 36.0001 16.6001 34.8001 16.6001 33.4001C16.6001 32.0001 15.4001 30.8001 14.0001 30.8001H8.30008Z" fill="url(#jpLogoGrad)"/>
+<path d="M69.7955 27.3088C69.7955 28.8312 69.6204 30.0793 69.2704 31.0533C68.9203 32.0273 68.3261 32.7598 67.4876 33.2509C66.6572 33.7502 65.5257 33.9998 64.0929 33.9998C63.7591 33.9998 63.3887 33.9712 62.9817 33.9139C62.5747 33.8648 62.3142 33.832 62.2002 33.8157L62.5177 31.2252H63.7144C65.1797 31.2252 65.9164 30.4231 65.9246 28.8189V15.265L64.0441 14.5039V12.3676L71.676 12.2449V14.5039L69.7955 15.265V27.3088Z" fill="white"/>
+<path d="M81.4937 28.3401C81.4937 28.3728 81.2779 28.557 80.8465 28.8926C80.415 29.2281 79.8981 29.5351 79.2957 29.8133C78.6933 30.0834 78.0746 30.2185 77.4396 30.2185C76.2185 30.2185 75.2619 29.8788 74.57 29.1995C73.8862 28.512 73.5443 27.538 73.5443 26.2775C73.5443 24.837 74.0571 23.7853 75.0829 23.1223C76.1086 22.4594 77.6024 22.1279 79.5643 22.1279H81.3227V20.7406C81.3227 19.5129 80.6796 18.9031 79.3934 18.9113C79.0107 18.9113 78.6566 18.94 78.331 18.9973C78.0054 19.0545 77.7449 19.1159 77.5495 19.1814C77.3622 19.2387 77.2442 19.2755 77.1954 19.2919L76.8168 20.8756H74.57L74.399 17.1557C74.5456 17.1066 74.9038 17.0002 75.4736 16.8365C76.0516 16.6728 76.7395 16.5173 77.5373 16.37C78.3432 16.2226 79.1044 16.149 79.8207 16.149C81.107 16.149 82.1286 16.3127 82.8857 16.6401C83.6428 16.9593 84.1964 17.4831 84.5464 18.2115C84.8965 18.9318 85.0715 19.9017 85.0715 21.1212V27.3334L86.952 27.7876V29.8011L81.9455 29.9729L81.4937 28.3401ZM77.1709 25.897C77.1709 26.388 77.2971 26.7645 77.5495 27.0264C77.81 27.2802 78.1763 27.407 78.6485 27.407C79.0474 27.407 79.4422 27.3006 79.833 27.0878C80.2237 26.8668 80.5534 26.6418 80.822 26.4126C81.0907 26.1752 81.2576 26.0197 81.3227 25.9461V24.2641H79.894C78.9253 24.2641 78.2292 24.3951 77.8059 24.657C77.3826 24.9189 77.1709 25.3322 77.1709 25.897Z" fill="white"/>
+<path d="M100.311 28.0823C99.7492 28.5897 99.0124 29.0726 98.1007 29.531C97.1971 29.9893 96.1428 30.2185 94.938 30.2185C92.8866 30.2185 91.291 29.6169 90.1513 28.4137C89.0116 27.2106 88.4417 25.5327 88.4417 23.3802C88.4417 21.1376 89.0442 19.3737 90.249 18.0888C91.4619 16.7956 93.1511 16.149 95.3166 16.149C95.9515 16.149 96.5906 16.2145 97.2337 16.3454C97.885 16.4764 98.4263 16.6114 98.8578 16.7506C99.2974 16.8815 99.5742 16.9715 99.6881 17.0206L99.566 21.1457H97.3192L96.9651 19.3656C96.8836 19.3492 96.6801 19.3124 96.3545 19.2551C96.0289 19.1896 95.6585 19.1569 95.2433 19.1569C94.3234 19.1569 93.6029 19.472 93.0819 20.1022C92.5691 20.7324 92.3126 21.6573 92.3126 22.8768C92.3126 24.2682 92.5731 25.3404 93.0942 26.0934C93.6233 26.8382 94.4048 27.2106 95.4387 27.2106C96.0899 27.2106 96.6598 27.1124 97.1482 26.916C97.6448 26.7113 98.06 26.5026 98.3937 26.2898C98.7275 26.077 98.9514 25.9379 99.0654 25.8724L100.311 28.0823Z" fill="white"/>
+<path d="M108.602 21.4527L110.3 18.8868L109.201 18.5307V16.5173L115.66 16.3945V18.5307L113.902 18.8622L111.582 22.1525L114.378 27.3579L116.283 27.9595V29.9729H111.655L108.553 23.8344H106.954V27.3334L108.334 27.9595V29.9729H101.202V27.9595L103.205 27.3334V13.2025L101.202 12.6991V10.6857L106.954 10.4893V21.4527H108.602Z" fill="white"/>
+<path d="M117.406 27.8367L119.275 27.0756V15.265L117.406 14.5039V12.3676L123.158 12.2449H125.527C127.423 12.2449 128.909 12.7155 129.984 13.6567C131.066 14.598 131.608 15.8871 131.608 17.524C131.608 19.6029 130.993 21.1703 129.764 22.2261C128.543 23.2819 126.78 23.8099 124.477 23.8099H123.158V27.0756L125.026 27.8367V29.9729H117.406V27.8367ZM124.477 20.8756C125.527 20.8756 126.333 20.6342 126.894 20.1513C127.456 19.6602 127.737 18.9522 127.737 18.0274C127.737 17.1925 127.513 16.5255 127.065 16.0262C126.626 15.5188 125.991 15.265 125.16 15.265H123.158V20.8756H124.477Z" fill="white"/>
+<path d="M139.74 16.149C141.751 16.149 143.302 16.7383 144.393 17.9169C145.492 19.0955 146.041 20.7692 146.041 22.9382C146.041 24.4278 145.764 25.721 145.211 26.8177C144.665 27.9145 143.892 28.7575 142.891 29.3468C141.89 29.9279 140.713 30.2185 139.362 30.2185C135.112 30.2185 132.988 27.9145 132.988 23.3065C132.988 21.8169 133.264 20.536 133.818 19.4638C134.38 18.3916 135.169 17.5731 136.187 17.0084C137.205 16.4354 138.389 16.149 139.74 16.149ZM139.606 19.1569C138.662 19.1569 137.966 19.4638 137.518 20.0776C137.078 20.6915 136.859 21.7269 136.859 23.1837C136.859 24.5751 137.066 25.5941 137.481 26.2407C137.905 26.8873 138.572 27.2106 139.484 27.2106C140.404 27.2106 141.08 26.8873 141.511 26.2407C141.942 25.5941 142.158 24.5342 142.158 23.061C142.158 21.7514 141.955 20.7733 141.548 20.1267C141.141 19.4802 140.493 19.1569 139.606 19.1569Z" fill="white"/>
+<path d="M154.809 21.4527L156.506 18.8868L155.407 18.5307V16.5173L161.867 16.3945V18.5307L160.108 18.8622L157.788 22.1525L160.585 27.3579L162.49 27.9595V29.9729H157.862L154.76 23.8344H153.16V27.3334L154.54 27.9595V29.9729H147.409V27.9595L149.412 27.3334V13.2025L147.409 12.6991V10.6857L153.16 10.4893V21.4527H154.809Z" fill="white"/>
+<path d="M167.508 24.0186C167.573 25.0253 167.875 25.811 168.412 26.3758C168.957 26.9323 169.666 27.2106 170.537 27.2106C171.155 27.2106 171.774 27.1247 172.393 26.9528C173.02 26.7727 173.536 26.5927 173.944 26.4126C174.359 26.2243 174.623 26.0934 174.737 26.0197L175.812 28.1068C175.812 28.1396 175.519 28.3483 174.933 28.733C174.355 29.1095 173.642 29.4532 172.796 29.7642C171.957 30.0671 171.062 30.2185 170.109 30.2185C167.993 30.2185 166.381 29.6292 165.274 28.4506C164.167 27.272 163.613 25.6023 163.613 23.4415C163.613 21.9847 163.878 20.7079 164.407 19.6111C164.944 18.5062 165.713 17.655 166.715 17.0575C167.716 16.4518 168.904 16.149 170.28 16.149C172.112 16.149 173.516 16.6769 174.493 17.7327C175.47 18.7885 175.958 20.2291 175.958 22.0542C175.958 22.4553 175.938 22.8441 175.897 23.2206C175.857 23.5971 175.828 23.8344 175.812 23.9326L167.508 24.0186ZM170.036 19.1569C169.352 19.1569 168.795 19.3901 168.363 19.8566C167.932 20.315 167.663 20.9207 167.557 21.6737H172.087C172.087 20.9207 171.921 20.315 171.587 19.8566C171.253 19.3901 170.736 19.1569 170.036 19.1569Z" fill="white"/>
+<path d="M183.199 18.1256C183.199 18.0928 183.395 17.9005 183.786 17.5486C184.176 17.1966 184.628 16.8774 185.141 16.591C185.662 16.2963 186.175 16.149 186.68 16.149C187.079 16.149 187.453 16.1817 187.803 16.2472C188.153 16.3127 188.426 16.3822 188.621 16.4559C188.825 16.5296 188.951 16.5746 189 16.591L188.804 21.4281H186.558L186.179 19.2919C185.748 19.2919 185.328 19.3983 184.921 19.6111C184.522 19.8157 184.18 20.0449 183.896 20.2986C183.619 20.5442 183.48 20.6751 183.48 20.6915V27.3334L185.984 27.9595V29.9729H177.729V27.9595L179.732 27.3334V19.1569L177.729 18.5307V16.5173L182.98 16.3945L183.199 18.1256Z" fill="white"/>
+<defs>
+<linearGradient id="jpLogoGrad" x1="0" y1="33.44" x2="50.74" y2="33.44" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8032FF"/>
+<stop offset="1" stop-color="#FF3D00"/>
+</linearGradient>
+</defs>
+</svg>
+      </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Domů</a>
+      <a href="games.html">Hry</a>
+      <a href="bonuses.html">Bonusy</a>
+      <a href="tournaments.html">Turnaje</a>
+      <a href="news.html" class="active">Novinky</a>
+      <a href="promo-code.html">Promo kód</a>
+    </nav>
+    <a href="https://go.jack-full.com/c41f796e" class="header-cta header-cta-desktop">Hrát hned ♠</a>
+     <div class="lang-switcher">
+  <button class="lang-btn" aria-label="Change language" aria-expanded="false">
+    <span class="lang-flag">CZ</span>
+    <span class="lang-label">Čeština</span>
+    <svg class="lang-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  </button>
+  <div class="lang-dropdown" role="menu">
+    <a href="../news.html" role="menuitem" hreflang="en"><span class="lang-flag">GB</span><span>English</span></a>
+    <a href="../ru/news.html" role="menuitem" hreflang="ru"><span class="lang-flag">RU</span><span>Русский</span></a>
+    <a href="../es/news.html" role="menuitem" hreflang="es"><span class="lang-flag">ES</span><span>Español</span></a>
+    <a href="../it/news.html" role="menuitem" hreflang="it"><span class="lang-flag">IT</span><span>Italiano</span></a>
+    <a href="../pt/news.html" role="menuitem" hreflang="pt"><span class="lang-flag">BR</span><span>Português</span></a>
+    <a href="../vi/news.html" role="menuitem" hreflang="vi"><span class="lang-flag">VN</span><span>Tiếng Việt</span></a>
+    <a href="../th/news.html" role="menuitem" hreflang="th"><span class="lang-flag">TH</span><span>ไทย</span></a>
+    <a href="../ms/news.html" role="menuitem" hreflang="ms"><span class="lang-flag">MY</span><span>Bahasa Melayu</span></a>
+    <a href="../ko/news.html" role="menuitem" hreflang="ko"><span class="lang-flag">KR</span><span>한국어</span></a>
+    <a href="../ar/news.html" role="menuitem" hreflang="ar"><span class="lang-flag">SA</span><span>العربية</span></a>
+    <a href="../pl/news.html" role="menuitem" hreflang="pl"><span class="lang-flag">PL</span><span>Polski</span></a>
+    <a href="news.html" class="active" role="menuitem" hreflang="cs"><span class="lang-flag">CZ</span><span>Čeština</span></a>
+  </div>
+</div>
+        <button class="theme-toggle" aria-label="Toggle theme">
+       <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 1.78a1 1 0 011.415 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM18 9a1 1 0 110 2h-1a1 1 0 110-2h1zM3 9a1 1 0 110 2H2a1 1 0 110-2h1zm12.657 6.071l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 011.414-1.414zM5.757 4.929a1 1 0 010 1.414l-.707.707A1 1 0 013.636 5.636l.707-.707a1 1 0 011.414 0zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1z" fill="currentColor"/><circle cx="10" cy="10" r="3.5" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+       <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/></svg>
+     </button>
+  </div>
+</header>
+
+<!-- Breadcrumb Navigation -->
+<nav class="breadcrumb-nav" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">Domů</span></a>
+        <meta itemprop="position" content="1" />
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span itemprop="name">Novinky</span>
+        <meta itemprop="position" content="2" />
+      </li>
+    </ol>
+  </div>
+</nav>
+
+
+<!-- Page Hero with H1 -->
+<section class="page-hero-news">
+  <div class="container hero-inner">
+    <h1 data-i18n="news_hero_title">Novinky a aktuality JackPoker</h1>
+    <p class="hero-subtitle" data-i18n="news_hero_subtitle">Výsledky turnajů, nové akce, aktualizace platformy a komunitní novinky — vše na jednom místě.</p>
+  </div>
+</section>
+
+<!-- ===== FEATURED NEWS ARTICLE ===== -->
+<section class="section" style="padding-top: 40px; padding-bottom: 60px;">
+  <div class="container">
+    <div class="featured-article" style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 0; border-radius: var(--radius-xl); overflow: hidden; background: var(--gradient-card); border: 1px solid var(--border-subtle);">
+      <div style="position:relative;overflow:hidden;border-radius:0 var(--radius-xl) var(--radius-xl) 0;">
+        <img src="../assets/images/news/news-cash-carnival.jpg" alt="Cash Carnival $500K Prize Pool" loading="lazy" style="width:100%;height:100%;object-fit:cover;min-height:400px;">
+        <div style="position:absolute;bottom:0;left:0;right:0;padding:32px;background:linear-gradient(transparent,rgba(0,0,0,0.85));">
+          <div style="font-size:clamp(3rem,6vw,4.5rem);font-weight:900;background:linear-gradient(135deg,var(--gold-primary),var(--gold-dark));-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1;">$500k</div>
+          <div style="font-size:0.85rem;color:var(--text-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;margin-top:8px;">Prize pool v hotovosti</div>
+          <div style="display:flex;gap:20px;margin-top:16px;">
+            <div><span style="color:var(--gold-primary);font-weight:800;font-size:1.2rem;">28</span> <span style="color:var(--text-muted);font-size:0.78rem;">Dny</span></div>
+            <div><span style="color:var(--gold-primary);font-weight:800;font-size:1.2rem;">$5k</span> <span style="color:var(--text-muted);font-size:0.78rem;">Maximální drop</span></div>
+            <div><span style="color:var(--gold-primary);font-weight:800;font-size:1.2rem;">NL25+</span> <span style="color:var(--text-muted);font-size:0.78rem;">Min. sázky</span></div>
+          </div>
+        </div>
+      </div>
+      <div style="background: linear-gradient(135deg, rgba(137,59,247,0.15), rgba(246,186,70,0.1)); display: flex; align-items: center; justify-content: center; padding: 40px;">
+        <div style="text-align: center;">
+          <div style="font-size: 4rem; font-weight: 900; font-family: var(--font-display); background: var(--gradient-gold-text); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; margin-bottom: 8px;">$500K</div>
+          <div style="color: var(--text-muted); font-size: 1.1rem; font-weight: 600;">Prize pool v hotovosti</div>
+          <div style="margin-top: 24px; display: flex; gap: 16px; justify-content: center;">
+            <div style="text-align: center;"><div style="font-size: 1.5rem; font-weight: 800; color: var(--gold-primary);">28</div><div style="font-size: 0.75rem; color: var(--text-muted);">Dny</div></div>
+            <div style="text-align: center;"><div style="font-size: 1.5rem; font-weight: 800; color: var(--gold-primary);">$5K</div><div style="font-size: 0.75rem; color: var(--text-muted);">Maximální drop</div></div>
+            <div style="text-align: center;"><div style="font-size: 1.5rem; font-weight: 800; color: var(--gold-primary);">NL25+</div><div style="font-size: 0.75rem; color: var(--text-muted);">Min. sázky</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== NEWS GRID ===== -->
+<section class="section section-dark" style="padding-top: 40px;">
+  <div class="container">
+    <div class="news-section-label" style="margin-bottom: 32px;">
+      <h2>Nejnovější <span class="gold-text">Novinky</span></h2>
+      <div class="news-section-label-line"></div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px; margin-bottom: 60px;">
+
+      <!-- News Card 1 -->
+      <article class="news-card" style="background: var(--gradient-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; transition: all 0.3s ease;">
+        <div style="width:100%;height:180px;overflow:hidden;">
+          <img src="../assets/images/news/news-winter-games.jpg" alt="JackPoker Winter Games Festival Tournament" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 0.3s ease;">
+        </div>
+        <div style="padding: 28px;">
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--purple-primary); background: rgba(137,59,247,0.12); padding: 4px 10px; border-radius: 6px;">Turnaj</span>
+            <span style="font-size: 0.78rem; color: var(--text-muted);">25. března 2026</span>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; line-height: 1.4;">Winter Games Festival zakončen s rekordními výplatami $2,1 mil.</h3>
+          <p style="color: var(--text-muted); line-height: 1.7; font-size: 0.92rem;">JackPoker Winter Games Festival skončil po třech týdnech intenzivní turnajové akce, s celkovými výplatami přesahujícími $2,1 milionu napříč více než 400 naplánovanými událostmi.</p>
+          <a href="news/winter-games-festival-wraps-with-record-breaking-21m-in-payo.html" style="color: var(--purple-primary); font-weight: 600; font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-top: 8px;">Číst více →</a>
+        </div>
+      </article>
+
+      <!-- News Card 2 -->
+      <article class="news-card" style="background: var(--gradient-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; transition: all 0.3s ease;">
+        <div style="width:100%;height:180px;overflow:hidden;">
+          <img src="../assets/images/news/news-mobile-app.jpg" alt="JackPoker Mobile App 3.0 Multi-Table Support" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 0.3s ease;">
+        </div>
+        <div style="padding: 28px;">
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-primary); background: rgba(246,186,70,0.12); padding: 4px 10px; border-radius: 6px;">Platforma</span>
+            <span style="font-size: 0.78rem; color: var(--text-muted);">20. března 2026</span>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; line-height: 1.4;">Mobilní aplikace JackPoker 3.0 spuštěna s podporou více stolů</h3>
+          <p style="color: var(--text-muted); line-height: 1.7; font-size: 0.92rem;">Dlouho očekávaná aktualizace JackPoker Mobile 3.0 je nyní živě na iOS i Androidu a přináší plnou podporu více stolů, redesignovaný lobby turnajů a vylepšený HUD pro cash hry.</p>
+          <a href="news/jackpoker-mobile-app-30-launches-with-multi-table-support.html" style="color: var(--purple-primary); font-weight: 600; font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-top: 8px;">Číst více →</a>
+        </div>
+      </article>
+
+      <!-- News Card 3 -->
+      <article class="news-card" style="background: var(--gradient-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; transition: all 0.3s ease;">
+        <div style="width:100%;height:180px;overflow:hidden;">
+          <img src="../assets/images/news/news-crypto-deposits.jpg" alt="JackPoker Cryptocurrency Deposits SOL MATIC TON" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 0.3s ease;">
+        </div>
+        <div style="padding: 28px;">
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #4ADE80; background: rgba(74,222,128,0.12); padding: 4px 10px; border-radius: 6px;">Platby</span>
+            <span style="font-size: 0.78rem; color: var(--text-muted);">15. března 2026</span>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; line-height: 1.4;">Vklady kryptoměnou nyní dostupné v SOL, MATIC a TON</h3>
+          <p style="color: var(--text-muted); line-height: 1.7; font-size: 0.92rem;">JackPoker rozšířil možnosti vkladů kryptoměnou o tři nové tokeny: Solana (SOL), Polygon (MATIC) a Toncoin (TON) – k již podporovaným BTC, ETH, USDT, TRX, LTC, DOGE a BNB.</p>
+          <a href="news/crypto-deposits-now-available-in-sol-matic-and-ton.html" style="color: var(--purple-primary); font-weight: 600; font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-top: 8px;">Číst více →</a>
+        </div>
+      </article>
+
+      <!-- News Card 4 -->
+      <article class="news-card" style="background: var(--gradient-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; transition: all 0.3s ease;">
+        <div style="width:100%;height:180px;overflow:hidden;">
+          <img src="../assets/images/news/news-bonus-bonanza.jpg" alt="JackPoker Bonus Bonanza March Tournament Schedule" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 0.3s ease;">
+        </div>
+        <div style="padding: 28px;">
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--purple-primary); background: rgba(137,59,247,0.12); padding: 4px 10px; border-radius: 6px;">Turnaj</span>
+            <span style="font-size: 0.78rem; color: var(--text-muted);">10. března 2026</span>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; line-height: 1.4;">Rozvrh Bonus Bonanza na březen: 620 událostí, $1,25 mil. v garantech</h3>
+          <p style="color: var(--text-muted); line-height: 1.7; font-size: 0.92rem;">Březnové vydání turnajové série JackPoker Bonus Bonanza zahrnuje 620 naplánovaných událostí s celkovými garanty přesahujícími $1,25 milionu — největší měsíční rozvrh v historii série.</p>
+          <a href="news/bonus-bonanza-march-schedule-620-events-125m-in-guarantees.html" style="color: var(--purple-primary); font-weight: 600; font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-top: 8px;">Číst více →</a>
+        </div>
+      </article>
+
+      <!-- News Card 5 -->
+      <article class="news-card" style="background: var(--gradient-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; transition: all 0.3s ease;">
+        <div style="width:100%;height:180px;overflow:hidden;">
+          <img src="../assets/images/news/news-500k-milestone.jpg" alt="JackPoker 500K Players Milestone" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 0.3s ease;">
+        </div>
+        <div style="padding: 28px;">
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #F472B6; background: rgba(244,114,182,0.12); padding: 4px 10px; border-radius: 6px;">Komunita</span>
+            <span style="font-size: 0.78rem; color: var(--text-muted);">5. března 2026</span>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; line-height: 1.4;">JackPoker překonal milník 500 000 registrovaných hráčů</h3>
+          <p style="color: var(--text-muted); line-height: 1.7; font-size: 0.92rem;">JackPoker oficiálně překročil 500 000 registrovaných hráčských účtů – milník, který platforma dosáhla za méně než tři roky provozu.</p>
+          <a href="news/jackpoker-passes-500000-registered-players-milestone.html" style="color: var(--purple-primary); font-weight: 600; font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-top: 8px;">Číst více →</a>
+        </div>
+      </article>
+
+      <!-- News Card 6 -->
+      <article class="news-card" style="background: var(--gradient-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; transition: all 0.3s ease;">
+        <div style="width:100%;height:180px;overflow:hidden;">
+          <img src="../assets/images/news/news-statistics-dashboard.jpg" alt="JackPoker Hand Replayer Statistics Dashboard" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 0.3s ease;">
+        </div>
+        <div style="padding: 28px;">
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-primary); background: rgba(246,186,70,0.12); padding: 4px 10px; border-radius: 6px;">Platforma</span>
+            <span style="font-size: 0.78rem; color: var(--text-muted);">28. února 2026</span>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; line-height: 1.4;">Vydán nový Hand Replayer a pokročilý statistický panel</h3>
+          <p style="color: var(--text-muted); line-height: 1.7; font-size: 0.92rem;">JackPoker spustil komplexní hand replayer a statistický panel přímo integrovaný do rozhraní klienta, umožňující hráčům analyzovat své ruce, sledovat klíčové statistiky a exportovat data do externích nástrojů.</p>
+          <a href="news/new-hand-replayer-and-advanced-statistics-dashboard-released.html" style="color: var(--purple-primary); font-weight: 600; font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-top: 8px;">Číst více →</a>
+        </div>
+      </article>
+
+      <!-- News Card 7 -->
+      <article class="news-card" style="background: var(--gradient-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; transition: all 0.3s ease;">
+        <div style="width:100%;height:180px;overflow:hidden;">
+          <img src="../assets/images/news/news-big-bang-sunday.jpg" alt="JackPoker Big Bang Sunday $45K Guarantee" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 0.3s ease;">
+        </div>
+        <div style="padding: 28px;">
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--purple-primary); background: rgba(137,59,247,0.12); padding: 4px 10px; border-radius: 6px;">Turnaj</span>
+            <span style="font-size: 0.78rem; color: var(--text-muted);">20. února 2026</span>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; line-height: 1.4;">Garant Big Bang Sunday zvýšen na $45K — nejvyšší v historii JackPoker</h3>
+          <p style="color: var(--text-muted); line-height: 1.7; font-size: 0.92rem;">Vlajkový týdenní turnaj JackPoker, Big Bang Sunday, obdržel trvalé zvýšení garantovaného prize poolu z $35 000 na $45 000 — největší garantovaný prize pool pro pravidelný týdenní turnaj v historii platformy.</p>
+          <a href="news/big-bang-sunday-guarantee-increased-to-45k-largest-in-jackpo.html" style="color: var(--purple-primary); font-weight: 600; font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-top: 8px;">Číst více →</a>
+        </div>
+      </article>
+
+      <!-- News Card 8 -->
+      <article class="news-card" style="background: var(--gradient-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); overflow: hidden; transition: all 0.3s ease;">
+        <div style="width:100%;height:180px;overflow:hidden;">
+          <img src="../assets/images/news/news-instant-withdrawal.jpg" alt="JackPoker Instant VIP Withdrawals" loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 0.3s ease;">
+        </div>
+        <div style="padding: 28px;">
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 14px;">
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #4ADE80; background: rgba(74,222,128,0.12); padding: 4px 10px; border-radius: 6px;">Platby</span>
+            <span style="font-size: 0.78rem; color: var(--text-muted);">12. února 2026</span>
+          </div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 12px; line-height: 1.4;">Okamžité zpracování výběrů nyní dostupné pro VIP hráče</h3>
+          <p style="color: var(--text-muted); line-height: 1.7; font-size: 0.92rem;">Hráči, kteří dosáhnou statusu Gold VIP a výše, mají nyní přístup k okamžitému zpracování výběrů na všechny podporované platební metody — 24/7 bez výjimky.</p>
+          <a href="news/instant-withdrawal-processing-now-available-for-vip-players.html" style="color: var(--purple-primary); font-weight: 600; font-size: 0.88rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; margin-top: 8px;">Číst více →</a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== UPCOMING EVENTS TIMELINE ===== -->
+<section class="section" style="padding-top: 40px; padding-bottom: 60px;">
+  <div class="container">
+    <div class="news-section-label" style="margin-bottom: 32px;">
+      <h2>Nadcházející <span class="gold-text">Události</span></h2>
+      <div class="news-section-label-line"></div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; margin-bottom: 40px;">
+      <div style="background: var(--gradient-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 24px; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--gold-primary), var(--purple-primary));"></div>
+        <div style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--gold-primary); margin-bottom: 10px;">23. 3. – 19. 4.</div>
+        <h4 style="margin-bottom: 8px;">Cash Carnival IV</h4>
+        <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6;">$500 000 v náhodných bomb pot cash dropech napříč všemi sázkami cash her od NL25 výše. Probíhá od 23. března do 19. dubna 2026.</p>
+      </div>
+
+      <div style="background: var(--gradient-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 24px; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--purple-primary), #FF3D00);"></div>
+        <div style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--purple-primary); margin-bottom: 10px;">Každou neděli</div>
+        <h4 style="margin-bottom: 8px;">Big Bang Sunday</h4>
+        <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6;">Buy-in $33, $45K GTD. Vlajkový týdenní turnaj JackPoker s pozdní registrací a satelity od $1.</p>
+      </div>
+
+      <div style="background: var(--gradient-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 24px; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #4ADE80, var(--gold-primary));"></div>
+        <div style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #4ADE80; margin-bottom: 10px;">Denně</div>
+        <h4 style="margin-bottom: 8px;">Freeroll Festival</h4>
+        <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6;">8 denních freerollů s $200K+ v měsíčních výhrách. Bez buy-inu, výplaty v reálných penězích. Probíhá denně.</p>
+      </div>
+
+      <div style="background: var(--gradient-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-lg); padding: 24px; position: relative; overflow: hidden;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, #F472B6, var(--purple-primary));"></div>
+        <div style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #F472B6; margin-bottom: 10px;">Duben 2026</div>
+        <h4 style="margin-bottom: 8px;">Spring Championship Series</h4>
+        <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6;">Inaugurální jarní šampionát: 150+ událostí, $750K v kombinovaných garantech, satellite série a speciální formáty PKO. Spuštění 1. dubna 2026.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== QUICK LINKS ===== -->
+<section class="section section-dark" style="padding-top: 20px; padding-bottom: 60px;">
+  <div class="container">
+    <div class="news-section-label" style="margin-bottom: 28px;">
+      <h2>Prozkoumat <span class="gold-text">JackPokeru</span></h2>
+      <div class="news-section-label-line"></div>
+    </div>
+
+    <div class="quick-links-grid">
+      <a href="tournaments.html" class="quick-link-card">
+        <div class="quick-link-icon">🏆</div>
+        <div class="quick-link-text">
+          <h4>Turnaje</h4>
+          <p>Bonus Bonanza, Big Bang Sunday, PKO akce a sezónní série</p>
+        </div>
+        <span class="quick-link-arrow">→</span>
+      </a>
+
+      <a href="bonuses.html" class="quick-link-card">
+        <div class="quick-link-icon">🎁</div>
+        <div class="quick-link-text">
+          <h4>Bonusy &amp; Akce</h4>
+          <p>Uvítací balíček, 20% okamžitá hotovost, Lootboxy a průběžné akce</p>
+        </div>
+        <span class="quick-link-arrow">→</span>
+      </a>
+
+      <a href="games.html" class="quick-link-card">
+        <div class="quick-link-icon">♠</div>
+        <div class="quick-link-text">
+          <h4>Všechny hry</h4>
+          <p>Texas Hold'em, PLO, PLO5, PLO6, Spin &amp; Win a Push-Fold stoly</p>
+        </div>
+        <span class="quick-link-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- Promo Code CTA — News Context -->
+<aside class="promo-cta-inline" style="background: linear-gradient(135deg, rgba(137,59,247,0.08), rgba(246,186,70,0.08)); border: 1px solid rgba(246,186,70,0.2); border-radius: 16px; padding: 32px 36px; margin: 48px 0; position: relative; overflow: hidden;">
+  <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--gold-primary), var(--purple-primary));"></div>
+  <div style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 280px;">
+      <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 8px;">Nový v JackPoker? Začněte s 300% navíc</h3>
+      <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin: 0;">Všechny výše uvedené události a akce jsou ještě lepší, když začínáte s posíleným bankrollem. Použijte promo kód WELCOME při registraci <a href="promo-code.html" style="color: var(--gold-primary); font-weight: 700; text-decoration: underline;">promo kód JackPoker WELCOME</a> a získejte 300% match prvního vkladu až do $2 000, plus okamžitou hotovost, odměny Lootbox a Welcome Questy. <a href="promo-code.html" style="color: var(--gold-primary); font-weight: 600;">úplné podrobnosti uvítacího balíčku</a>.</p>
+    </div>
+    <div style="flex-shrink: 0;">
+      <a href="promo-code.html" class="btn btn-cta" style="white-space: nowrap;">Nárokovat bonus →</a>
+    </div>
+  </div>
+</aside>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="JackPoker Home">
+        <svg class="logo-icon" width="189" height="47" viewBox="0 0 189 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="JackPoker">
+<path d="M25.4001 1C24.0001 1 22.8001 2.2 22.8001 3.6C22.8001 5.1 23.8343 5.9 25.3001 5.9H28.7001C28.7001 5.9 31.3001 5.9 31.3001 8.3C31.3001 10.7 28.7001 10.7 28.7001 10.7H8.30008C6.90008 10.7 5.70008 11.9 5.70008 13.3C5.70008 14.7 6.90008 15.9 8.30008 15.9H22.5001C22.5001 15.9 25.1001 15.9 25.1001 18.3C25.1001 20.7 22.5001 20.7 22.5001 20.7H11.4001C10.0001 20.7 8.80008 21.9 8.80008 23.3C8.80008 24.7 10.0001 25.9 11.4001 25.9H22.6001C22.6001 25.9 25.2001 25.9 25.2001 28.3C25.2001 30.7 22.6001 30.7 22.6001 30.7H21.8001C20.4001 30.7 19.2001 31.9 19.2001 33.3C19.2001 34.7 20.4001 35.9 21.8001 35.9H28.8001C28.8001 35.9 31.4001 35.9 31.4001 38.3C31.4001 40.7 28.8001 40.7 28.8001 40.7H14.0001C12.6001 40.7 11.4001 41.9 11.4001 43.3C11.4001 44.7 12.6001 45.9 14.0001 45.9H34.3001C36.5001 45.9 38.4001 44.8 39.5001 43C41.1501 40.25 42.7751 37.4999 44.4001 34.7499C46.0251 31.9999 47.6501 29.25 49.3001 26.5C50.4001 24.6 50.4001 22.3 49.3001 20.4C47.6501 17.6501 46.0252 14.9001 44.4002 12.1502C42.7752 9.4002 41.1501 6.65001 39.5001 3.9C38.4001 2.1 36.4001 1 34.3001 1H25.4001Z" fill="url(#jpLogoGrad)"/>
+<path d="M11.3999 3.6C11.3999 2.2 12.5999 1 13.9999 1H17.5999C18.9999 1 20.1999 2.2 20.1999 3.6C20.1999 5 18.9999 6.2 17.5999 6.2H13.9999C12.5999 6.2 11.3999 5 11.3999 3.6Z" fill="url(#jpLogoGrad)"/>
+<path d="M0 23.5001C0 22.1001 1.2 20.9001 2.6 20.9001H3.6C5 20.9001 6.2 22.1001 6.2 23.5001C6.2 24.9001 5 26.1001 3.6 26.1001H2.6C1.2 26.1001 0 24.9001 0 23.5001Z" fill="url(#jpLogoGrad)"/>
+<path d="M8.30008 30.8001C6.90008 30.8001 5.70008 32.0001 5.70008 33.4001C5.70008 34.9001 6.90008 36.1001 8.30008 36.0001H14.0001C15.4001 36.0001 16.6001 34.8001 16.6001 33.4001C16.6001 32.0001 15.4001 30.8001 14.0001 30.8001H8.30008Z" fill="url(#jpLogoGrad)"/>
+<path d="M69.7955 27.3088C69.7955 28.8312 69.6204 30.0793 69.2704 31.0533C68.9203 32.0273 68.3261 32.7598 67.4876 33.2509C66.6572 33.7502 65.5257 33.9998 64.0929 33.9998C63.7591 33.9998 63.3887 33.9712 62.9817 33.9139C62.5747 33.8648 62.3142 33.832 62.2002 33.8157L62.5177 31.2252H63.7144C65.1797 31.2252 65.9164 30.4231 65.9246 28.8189V15.265L64.0441 14.5039V12.3676L71.676 12.2449V14.5039L69.7955 15.265V27.3088Z" fill="white"/>
+<path d="M81.4937 28.3401C81.4937 28.3728 81.2779 28.557 80.8465 28.8926C80.415 29.2281 79.8981 29.5351 79.2957 29.8133C78.6933 30.0834 78.0746 30.2185 77.4396 30.2185C76.2185 30.2185 75.2619 29.8788 74.57 29.1995C73.8862 28.512 73.5443 27.538 73.5443 26.2775C73.5443 24.837 74.0571 23.7853 75.0829 23.1223C76.1086 22.4594 77.6024 22.1279 79.5643 22.1279H81.3227V20.7406C81.3227 19.5129 80.6796 18.9031 79.3934 18.9113C79.0107 18.9113 78.6566 18.94 78.331 18.9973C78.0054 19.0545 77.7449 19.1159 77.5495 19.1814C77.3622 19.2387 77.2442 19.2755 77.1954 19.2919L76.8168 20.8756H74.57L74.399 17.1557C74.5456 17.1066 74.9038 17.0002 75.4736 16.8365C76.0516 16.6728 76.7395 16.5173 77.5373 16.37C78.3432 16.2226 79.1044 16.149 79.8207 16.149C81.107 16.149 82.1286 16.3127 82.8857 16.6401C83.6428 16.9593 84.1964 17.4831 84.5464 18.2115C84.8965 18.9318 85.0715 19.9017 85.0715 21.1212V27.3334L86.952 27.7876V29.8011L81.9455 29.9729L81.4937 28.3401ZM77.1709 25.897C77.1709 26.388 77.2971 26.7645 77.5495 27.0264C77.81 27.2802 78.1763 27.407 78.6485 27.407C79.0474 27.407 79.4422 27.3006 79.833 27.0878C80.2237 26.8668 80.5534 26.6418 80.822 26.4126C81.0907 26.1752 81.2576 26.0197 81.3227 25.9461V24.2641H79.894C78.9253 24.2641 78.2292 24.3951 77.8059 24.657C77.3826 24.9189 77.1709 25.3322 77.1709 25.897Z" fill="white"/>
+<path d="M100.311 28.0823C99.7492 28.5897 99.0124 29.0726 98.1007 29.531C97.1971 29.9893 96.1428 30.2185 94.938 30.2185C92.8866 30.2185 91.291 29.6169 90.1513 28.4137C89.0116 27.2106 88.4417 25.5327 88.4417 23.3802C88.4417 21.1376 89.0442 19.3737 90.249 18.0888C91.4619 16.7956 93.1511 16.149 95.3166 16.149C95.9515 16.149 96.5906 16.2145 97.2337 16.3454C97.885 16.4764 98.4263 16.6114 98.8578 16.7506C99.2974 16.8815 99.5742 16.9715 99.6881 17.0206L99.566 21.1457H97.3192L96.9651 19.3656C96.8836 19.3492 96.6801 19.3124 96.3545 19.2551C96.0289 19.1896 95.6585 19.1569 95.2433 19.1569C94.3234 19.1569 93.6029 19.472 93.0819 20.1022C92.5691 20.7324 92.3126 21.6573 92.3126 22.8768C92.3126 24.2682 92.5731 25.3404 93.0942 26.0934C93.6233 26.8382 94.4048 27.2106 95.4387 27.2106C96.0899 27.2106 96.6598 27.1124 97.1482 26.916C97.6448 26.7113 98.06 26.5026 98.3937 26.2898C98.7275 26.077 98.9514 25.9379 99.0654 25.8724L100.311 28.0823Z" fill="white"/>
+<path d="M108.602 21.4527L110.3 18.8868L109.201 18.5307V16.5173L115.66 16.3945V18.5307L113.902 18.8622L111.582 22.1525L114.378 27.3579L116.283 27.9595V29.9729H111.655L108.553 23.8344H106.954V27.3334L108.334 27.9595V29.9729H101.202V27.9595L103.205 27.3334V13.2025L101.202 12.6991V10.6857L106.954 10.4893V21.4527H108.602Z" fill="white"/>
+<path d="M117.406 27.8367L119.275 27.0756V15.265L117.406 14.5039V12.3676L123.158 12.2449H125.527C127.423 12.2449 128.909 12.7155 129.984 13.6567C131.066 14.598 131.608 15.8871 131.608 17.524C131.608 19.6029 130.993 21.1703 129.764 22.2261C128.543 23.2819 126.78 23.8099 124.477 23.8099H123.158V27.0756L125.026 27.8367V29.9729H117.406V27.8367ZM124.477 20.8756C125.527 20.8756 126.333 20.6342 126.894 20.1513C127.456 19.6602 127.737 18.9522 127.737 18.0274C127.737 17.1925 127.513 16.5255 127.065 16.0262C126.626 15.5188 125.991 15.265 125.16 15.265H123.158V20.8756H124.477Z" fill="white"/>
+<path d="M139.74 16.149C141.751 16.149 143.302 16.7383 144.393 17.9169C145.492 19.0955 146.041 20.7692 146.041 22.9382C146.041 24.4278 145.764 25.721 145.211 26.8177C144.665 27.9145 143.892 28.7575 142.891 29.3468C141.89 29.9279 140.713 30.2185 139.362 30.2185C135.112 30.2185 132.988 27.9145 132.988 23.3065C132.988 21.8169 133.264 20.536 133.818 19.4638C134.38 18.3916 135.169 17.5731 136.187 17.0084C137.205 16.4354 138.389 16.149 139.74 16.149ZM139.606 19.1569C138.662 19.1569 137.966 19.4638 137.518 20.0776C137.078 20.6915 136.859 21.7269 136.859 23.1837C136.859 24.5751 137.066 25.5941 137.481 26.2407C137.905 26.8873 138.572 27.2106 139.484 27.2106C140.404 27.2106 141.08 26.8873 141.511 26.2407C141.942 25.5941 142.158 24.5342 142.158 23.061C142.158 21.7514 141.955 20.7733 141.548 20.1267C141.141 19.4802 140.493 19.1569 139.606 19.1569Z" fill="white"/>
+<path d="M154.809 21.4527L156.506 18.8868L155.407 18.5307V16.5173L161.867 16.3945V18.5307L160.108 18.8622L157.788 22.1525L160.585 27.3579L162.49 27.9595V29.9729H157.862L154.76 23.8344H153.16V27.3334L154.54 27.9595V29.9729H147.409V27.9595L149.412 27.3334V13.2025L147.409 12.6991V10.6857L153.16 10.4893V21.4527H154.809Z" fill="white"/>
+<path d="M167.508 24.0186C167.573 25.0253 167.875 25.811 168.412 26.3758C168.957 26.9323 169.666 27.2106 170.537 27.2106C171.155 27.2106 171.774 27.1247 172.393 26.9528C173.02 26.7727 173.536 26.5927 173.944 26.4126C174.359 26.2243 174.623 26.0934 174.737 26.0197L175.812 28.1068C175.812 28.1396 175.519 28.3483 174.933 28.733C174.355 29.1095 173.642 29.4532 172.796 29.7642C171.957 30.0671 171.062 30.2185 170.109 30.2185C167.993 30.2185 166.381 29.6292 165.274 28.4506C164.167 27.272 163.613 25.6023 163.613 23.4415C163.613 21.9847 163.878 20.7079 164.407 19.6111C164.944 18.5062 165.713 17.655 166.715 17.0575C167.716 16.4518 168.904 16.149 170.28 16.149C172.112 16.149 173.516 16.6769 174.493 17.7327C175.47 18.7885 175.958 20.2291 175.958 22.0542C175.958 22.4553 175.938 22.8441 175.897 23.2206C175.857 23.5971 175.828 23.8344 175.812 23.9326L167.508 24.0186ZM170.036 19.1569C169.352 19.1569 168.795 19.3901 168.363 19.8566C167.932 20.315 167.663 20.9207 167.557 21.6737H172.087C172.087 20.9207 171.921 20.315 171.587 19.8566C171.253 19.3901 170.736 19.1569 170.036 19.1569Z" fill="white"/>
+<path d="M183.199 18.1256C183.199 18.0928 183.395 17.9005 183.786 17.5486C184.176 17.1966 184.628 16.8774 185.141 16.591C185.662 16.2963 186.175 16.149 186.68 16.149C187.079 16.149 187.453 16.1817 187.803 16.2472C188.153 16.3127 188.426 16.3822 188.621 16.4559C188.825 16.5296 188.951 16.5746 189 16.591L188.804 21.4281H186.558L186.179 19.2919C185.748 19.2919 185.328 19.3983 184.921 19.6111C184.522 19.8157 184.18 20.0449 183.896 20.2986C183.619 20.5442 183.48 20.6751 183.48 20.6915V27.3334L185.984 27.9595V29.9729H177.729V27.9595L179.732 27.3334V19.1569L177.729 18.5307V16.5173L182.98 16.3945L183.199 18.1256Z" fill="white"/>
+<defs>
+<linearGradient id="jpLogoGrad" x1="0" y1="33.44" x2="50.74" y2="33.44" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8032FF"/>
+<stop offset="1" stop-color="#FF3D00"/>
+</linearGradient>
+</defs>
+</svg>
+      </a>
+        <p>JackPoker je moderní online pokerová platforma nabízející Texas Hold'em, PLO, Spin&amp;Win a turnajové akce. Licencováno a certifikováno iTech Labs, BMM TestLabs a GLI. Hrajte zodpovědně.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Platforma</h4>
+        <ul>
+          <li><a href="games.html">Hry</a></li>
+          <li><a href="tournaments.html">Turnaje</a></li>
+          <li><a href="bonuses.html">Bonusy &amp; Akce</a></li>
+          <li><a href="promo-code.html">Promo kód</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Zdroje</h4>
+        <ul>
+          <li><a href="news.html">Novinky</a></li>
+          <li><a href="https://go.jack-full.com/c41f796e" target="_blank" rel="noopener noreferrer">FAQ</a></li>
+          <li><a href="terms.html">Podmínky služby</a></li>
+          <li><a href="https://go.jack-full.com/c41f796e" target="_blank" rel="noopener noreferrer">Zásady ochrany soukromí</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Platby</h4>
+        <div class="footer-payment-icons">
+          <span>VISA</span><span>Mastercard</span><span>Skrill</span><span>Neteller</span><span>Bitcoin</span><span>Ethereum</span><span>USDT</span><span>Pix</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 JackPoker. Provozováno společností Jack La International Limitada. Licencováno v Anjouanu, Svaz Komory. Hraj zodpovědně. 18+</p>
+      <p>Certifikováno iTech Labs &bull; BMM TestLabs &bull; GLI</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../main.js"></script>
+<script>
+  // Scroll header
+  const header = document.getElementById('siteHeader');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // Mobile menu
+  const menuToggle = document.getElementById('menuToggle');
+  const mainNav = document.getElementById('mainNav');
+  menuToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('open');
+    menuToggle.textContent = mainNav.classList.contains('open') ? '✕' : '☰';
+  });
+
+  // Filter bar (visual only — all content always shown on this static page)
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+
+  // Fade-in on scroll
+  const observerOptions = {
+    threshold: 0.08,
+    rootMargin: '0px 0px -40px 0px'
+  };
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+
+  document.querySelectorAll('.news-card, .featured-article, .quick-link-card').forEach(el => {
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(24px)';
+    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>

@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html lang="cs" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bonusy a promo akce JackPoker — 300% uvítací bonus</title>
+  <meta name="description" content="Nárokujte si 300% match vkladu až do $2 000 v JackPoker. Plus 20% hotovost, multiplikátory Lootboxu, Welcome Questy a rakeback. Kód: WELCOME.">
+  <meta property="og:title" content="Bonusy a akce JackPoker 2026 — 300% uvítací bonus + Lootbox">
+  <meta property="og:description" content="Nárokujte si 300% match prvního vkladu až do $2 000 v JackPoker. Plus 20% okamžitá hotovost, multiplikátory Lootboxu až 1 000%, Welcome Questy, rakeback a další.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://jackpoker.poker/assets/images/hero-poker.jpg" />
+  <link rel="canonical" href="https://jackpoker.poker/cs/bonuses.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/jackpoker-favicon.svg" />
+  <style>
+    /* ===== BONUSES PAGE — ADDITIONAL STYLES ===== */
+
+    /* Bonus Package Hero Card */
+    .welcome-package-card {
+      background: linear-gradient(145deg, #271D34, #1E1B27);
+      border: 1px solid rgba(246,186,70,0.25);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      position: relative;
+    }
+    .welcome-package-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #F6BA46, #893BF7, #FF3D00);
+    }
+    .welcome-package-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      align-items: stretch;
+    }
+    .welcome-package-content {
+      padding: 48px;
+    }
+    .welcome-package-image {
+      position: relative;
+      overflow: hidden;
+      border-radius: 0 var(--radius-xl) var(--radius-xl) 0;
+    }
+    .welcome-package-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      min-height: 400px;
+      display: block;
+    }
+    .welcome-package-image::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(27,18,40,0.7) 0%, transparent 50%);
+      z-index: 1;
+    }
+
+    /* Bonus Amount Display */
+    .bonus-amount-display {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .bonus-amount-number {
+      font-family: var(--font-display);
+      font-size: 3.5rem;
+      font-weight: 900;
+      background: var(--gradient-gold-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+    }
+    .bonus-amount-label {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    /* Step Process */
+    .step-process {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin: 24px 0;
+    }
+    .step-process-item {
+      display: flex;
+      gap: 16px;
+      position: relative;
+      padding-bottom: 24px;
+    }
+    .step-process-item:last-child { padding-bottom: 0; }
+    .step-process-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 32px;
+      bottom: 0;
+      width: 2px;
+      background: var(--border-subtle);
+    }
+    .step-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--gradient-btn-primary);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      z-index: 1;
+    }
+    .step-text h4 {
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+      color: var(--text-white);
+    }
+    .step-text p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Lootbox Section */
+    .lootbox-visual {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin: 32px 0;
+    }
+    .lootbox-tier {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 16px 12px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .lootbox-tier:hover {
+      border-color: rgba(137,59,247,0.4);
+      transform: translateY(-4px);
+    }
+    .lootbox-tier .tier-icon {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .lootbox-tier .tier-mult {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--gold-primary);
+      display: block;
+    }
+    .lootbox-tier .tier-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      display: block;
+      margin-top: 2px;
+    }
+    .lootbox-tier.jackpot {
+      border-color: rgba(246,186,70,0.4);
+      background: rgba(246,186,70,0.04);
+    }
+    .lootbox-tier.jackpot .tier-mult {
+      background: var(--gradient-gold-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Quest Cards */
+    .quest-card {
+      background: var(--gradient-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .quest-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-card-hover);
+    }
+    .quest-header {
+      padding: 28px 28px 20px;
+      position: relative;
+    }
+    .quest-header.silver { background: linear-gradient(135deg, rgba(168,168,168,0.08), rgba(168,168,168,0.02)); border-bottom: 1px solid rgba(168,168,168,0.15); }
+    .quest-header.gold { background: linear-gradient(135deg, rgba(246,186,70,0.10), rgba(246,186,70,0.02)); border-bottom: 1px solid rgba(246,186,70,0.2); }
+    .quest-header.supernova { background: linear-gradient(135deg, rgba(137,59,247,0.12), rgba(255,61,0,0.04)); border-bottom: 1px solid rgba(137,59,247,0.25); }
+    .quest-tier-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+    .quest-tier-badge.silver { background: rgba(168,168,168,0.12); color: #C0C0C0; }
+    .quest-tier-badge.gold { background: rgba(246,186,70,0.12); color: var(--gold-primary); }
+    .quest-tier-badge.supernova { background: rgba(137,59,247,0.15); color: var(--purple-primary); }
+    .quest-prize {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .quest-prize.silver { color: #C0C0C0; }
+    .quest-prize.gold { color: var(--gold-primary); }
+    .quest-prize.supernova {
+      background: linear-gradient(135deg, #893BF7, #FF3D00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .quest-body {
+      padding: 20px 28px 28px;
+    }
+    .quest-tasks {
+      list-style: none;
+      margin: 16px 0 0;
+    }
+    .quest-tasks li {
+      padding: 8px 0;
+      padding-left: 22px;
+      position: relative;
+      font-size: 0.88rem;
+      color: var(--text-body);
+      border-bottom: 1px solid var(--border-subtle);
+      line-height: 1.5;
+    }
+    .quest-tasks li:last-child { border-bottom: none; }
+    .quest-tasks li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--purple-primary);
+      font-size: 0.75rem;
+      top: 10px;
+    }
+    .quest-tasks li .task-reward {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--gold-primary);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    /* VIP Tiers Table */
+    .vip-tiers {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: 32px 0;
+    }
+    .vip-tier-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 20px 16px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .vip-tier-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(137,59,247,0.3);
+    }
+    .vip-tier-card.featured {
+      border-color: rgba(246,186,70,0.4);
+      background: rgba(246,186,70,0.03);
+    }
+    .vip-tier-card.featured::before {
+      content: 'ELITE';
+      position: absolute;
+      top: 10px; right: -18px;
+      background: var(--gradient-btn-gold);
+      color: #000000;
+      font-size: 0.6rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      padding: 3px 24px;
+      transform: rotate(45deg);
+    }
+    .vip-tier-icon { font-size: 1.8rem; margin-bottom: 10px; display: block; }
+    .vip-tier-name {
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-white);
+      margin-bottom: 8px;
+    }
+    .vip-tier-rakeback {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--gold-primary);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .vip-tier-sub {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* Crypto Currency Pills */
+    .crypto-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 24px 0;
+    }
+    .crypto-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-body);
+      transition: all 0.2s ease;
+    }
+    .crypto-pill:hover {
+      border-color: var(--gold-primary);
+      color: var(--gold-primary);
+    }
+    .crypto-pill .crypto-symbol {
+      font-size: 1rem;
+    }
+
+    /* Cash Carnival Highlight */
+    .carnival-banner {
+      background: linear-gradient(135deg, rgba(255,61,0,0.08), rgba(246,186,70,0.06));
+      border: 1px solid rgba(255,61,0,0.3);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .carnival-banner::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #FF3D00, #F6BA46, #FF3D00);
+    }
+    .carnival-banner .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 16px;
+      background: rgba(255,61,0,0.15);
+      border: 1px solid rgba(255,61,0,0.4);
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #FF3D00;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 20px;
+    }
+    .carnival-banner .live-dot {
+      width: 6px;
+      height: 6px;
+      background: #FF3D00;
+      border-radius: 50%;
+      animation: pulse 1.5s ease infinite;
+    }
+    .carnival-prize {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, #FF3D00, #F6BA46);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .carnival-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 40px;
+    }
+
+    /* Promo Code Section */
+    .promo-code-section {
+      text-align: center;
+      padding: 64px 0;
+    }
+    .promo-code-large {
+      display: inline-flex;
+      align-items: stretch;
+      gap: 0;
+      background: var(--bg-card);
+      border: 2px solid rgba(246,186,70,0.5);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin: 32px auto;
+      box-shadow: 0 0 40px rgba(246,186,70,0.08);
+    }
+    .promo-code-large .code-text {
+      padding: 18px 36px;
+      font-family: 'Courier New', monospace;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--gold-primary);
+      letter-spacing: 0.2em;
+    }
+    .promo-code-large .code-copy-btn {
+      padding: 18px 28px;
+      background: var(--gradient-btn-gold);
+      color: #000000;
+      font-weight: 700;
+      font-size: 0.9rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      font-family: var(--font-body);
+    }
+    .promo-code-large .code-copy-btn:hover { opacity: 0.9; }
+
+    /* Terms box */
+    .terms-box {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      margin-top: 24px;
+    }
+    .terms-box h4 {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .terms-box ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
+    }
+    .terms-box ul li {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      padding-left: 14px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .terms-box ul li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--text-faint);
+    }
+
+    /* Info Row */
+    .info-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+    .info-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      background: rgba(137,59,247,0.08);
+      border: 1px solid rgba(137,59,247,0.18);
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      color: var(--text-body);
+    }
+    .info-chip .chip-label {
+      color: var(--text-muted);
+      font-size: 0.78rem;
+    }
+    .info-chip strong { color: var(--text-white); }
+
+    /* Divider */
+    .section-divider {
+      border: none;
+      height: 1px;
+      background: var(--border-subtle);
+      margin: 0;
+    }
+
+    /* Tournament Bonus Cards */
+    .tourney-bonus-card {
+      background: var(--gradient-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 24px;
+      align-items: start;
+      transition: all 0.3s ease;
+    }
+    .tourney-bonus-card:hover {
+      border-color: rgba(137,59,247,0.3);
+      box-shadow: var(--shadow-card-hover);
+    }
+    .tourney-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(137,59,247,0.1);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      flex-shrink: 0;
+    }
+
+    /* Final CTA Section */
+    .final-cta {
+      background: linear-gradient(135deg, #000000 0%, #1A1226 50%, #000000 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 96px 0;
+      text-align: center;
+    }
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(137,59,247,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .final-cta .cta-inner {
+      position: relative;
+      z-index: 1;
+    }
+    .final-cta h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 16px;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 1024px) {
+      .welcome-package-inner { grid-template-columns: 1fr; }
+      .welcome-package-image { display: none; }
+      .vip-tiers { grid-template-columns: repeat(2, 1fr); }
+      .lootbox-visual { grid-template-columns: repeat(3, 1fr); }
+      .carnival-inner { grid-template-columns: 1fr; }
+      .terms-box ul { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .welcome-package-content { padding: 28px; }
+      .bonus-amount-number { font-size: 2.5rem; }
+      .vip-tiers { grid-template-columns: repeat(2, 1fr); }
+      .lootbox-visual { grid-template-columns: repeat(2, 1fr); }
+      .carnival-prize { font-size: 2rem; }
+      .promo-code-large .code-text { padding: 14px 20px; font-size: 1.2rem; }
+      .promo-code-large .code-copy-btn { padding: 14px 18px; font-size: 0.8rem; }
+    }
+    @media (max-width: 480px) {
+      .vip-tiers { grid-template-columns: 1fr 1fr; }
+      .lootbox-visual { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+<script>
+    (function(){var t=null;try{var m=document.cookie.match(/jp-theme=([^;]+)/);if(m)t=m[1]}catch(e){}document.documentElement.setAttribute("data-theme",t||"dark")})();
+  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "JackPoker",
+  "url": "https://jackpoker.poker",
+  "logo": "https://jackpoker.poker/assets/images/jackpoker-logo-official.png",
+  "description": "Modern online poker platform offering Texas Hold'em, PLO, Spin&Win tournaments, and more. Licensed and certified.",
+  "foundingDate": "2021",
+  "sameAs": [
+    "https://jack-poker.com",
+    "https://t.me/jackpokerclub"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "url": "https://jack-poker.com/support",
+    "availableLanguage": [
+      "English",
+      "Russian",
+      "Portuguese",
+      "Spanish"
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://jackpoker.poker"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Bonuses & Promos",
+      "item": "https://jackpoker.poker/bonuses.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Offer",
+  "name": "JackPoker Welcome Bonus",
+  "description": "300% deposit bonus up to $2,000 plus 20% instant cashback, Lootbox rewards, and Quest challenges",
+  "url": "https://jackpoker.poker/bonuses.html",
+  "priceCurrency": "USD",
+  "price": "0",
+  "category": "Welcome Bonus",
+  "seller": {
+    "@type": "Organization",
+    "name": "JackPoker"
+  }
+}
+</script>
+<link rel="alternate" hreflang="en" href="https://jackpoker.poker/bonuses.html" />
+<link rel="alternate" hreflang="ru" href="https://jackpoker.poker/ru/bonuses.html" />
+<link rel="alternate" hreflang="es" href="https://jackpoker.poker/es/bonuses.html" />
+<link rel="alternate" hreflang="it" href="https://jackpoker.poker/it/bonuses.html" />
+<link rel="alternate" hreflang="pt" href="https://jackpoker.poker/pt/bonuses.html" />
+<link rel="alternate" hreflang="vi" href="https://jackpoker.poker/vi/bonuses.html" />
+<link rel="alternate" hreflang="th" href="https://jackpoker.poker/th/bonuses.html" />
+<link rel="alternate" hreflang="ms" href="https://jackpoker.poker/ms/bonuses.html" />
+<link rel="alternate" hreflang="ko" href="https://jackpoker.poker/ko/bonuses.html" />
+<link rel="alternate" hreflang="ar" href="https://jackpoker.poker/ar/bonuses.html" />
+<link rel="alternate" hreflang="pl" href="https://jackpoker.poker/pl/bonuses.html" />
+<link rel="alternate" hreflang="cs" href="https://jackpoker.poker/cs/bonuses.html" />
+<link rel="alternate" hreflang="x-default" href="https://jackpoker.poker/bonuses.html" />
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="JackPoker Home">
+        <svg class="logo-icon" width="189" height="47" viewBox="0 0 189 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="JackPoker">
+<path d="M25.4001 1C24.0001 1 22.8001 2.2 22.8001 3.6C22.8001 5.1 23.8343 5.9 25.3001 5.9H28.7001C28.7001 5.9 31.3001 5.9 31.3001 8.3C31.3001 10.7 28.7001 10.7 28.7001 10.7H8.30008C6.90008 10.7 5.70008 11.9 5.70008 13.3C5.70008 14.7 6.90008 15.9 8.30008 15.9H22.5001C22.5001 15.9 25.1001 15.9 25.1001 18.3C25.1001 20.7 22.5001 20.7 22.5001 20.7H11.4001C10.0001 20.7 8.80008 21.9 8.80008 23.3C8.80008 24.7 10.0001 25.9 11.4001 25.9H22.6001C22.6001 25.9 25.2001 25.9 25.2001 28.3C25.2001 30.7 22.6001 30.7 22.6001 30.7H21.8001C20.4001 30.7 19.2001 31.9 19.2001 33.3C19.2001 34.7 20.4001 35.9 21.8001 35.9H28.8001C28.8001 35.9 31.4001 35.9 31.4001 38.3C31.4001 40.7 28.8001 40.7 28.8001 40.7H14.0001C12.6001 40.7 11.4001 41.9 11.4001 43.3C11.4001 44.7 12.6001 45.9 14.0001 45.9H34.3001C36.5001 45.9 38.4001 44.8 39.5001 43C41.1501 40.25 42.7751 37.4999 44.4001 34.7499C46.0251 31.9999 47.6501 29.25 49.3001 26.5C50.4001 24.6 50.4001 22.3 49.3001 20.4C47.6501 17.6501 46.0252 14.9001 44.4002 12.1502C42.7752 9.4002 41.1501 6.65001 39.5001 3.9C38.4001 2.1 36.4001 1 34.3001 1H25.4001Z" fill="url(#jpLogoGrad)"/>
+<path d="M11.3999 3.6C11.3999 2.2 12.5999 1 13.9999 1H17.5999C18.9999 1 20.1999 2.2 20.1999 3.6C20.1999 5 18.9999 6.2 17.5999 6.2H13.9999C12.5999 6.2 11.3999 5 11.3999 3.6Z" fill="url(#jpLogoGrad)"/>
+<path d="M0 23.5001C0 22.1001 1.2 20.9001 2.6 20.9001H3.6C5 20.9001 6.2 22.1001 6.2 23.5001C6.2 24.9001 5 26.1001 3.6 26.1001H2.6C1.2 26.1001 0 24.9001 0 23.5001Z" fill="url(#jpLogoGrad)"/>
+<path d="M8.30008 30.8001C6.90008 30.8001 5.70008 32.0001 5.70008 33.4001C5.70008 34.9001 6.90008 36.1001 8.30008 36.0001H14.0001C15.4001 36.0001 16.6001 34.8001 16.6001 33.4001C16.6001 32.0001 15.4001 30.8001 14.0001 30.8001H8.30008Z" fill="url(#jpLogoGrad)"/>
+<path d="M69.7955 27.3088C69.7955 28.8312 69.6204 30.0793 69.2704 31.0533C68.9203 32.0273 68.3261 32.7598 67.4876 33.2509C66.6572 33.7502 65.5257 33.9998 64.0929 33.9998C63.7591 33.9998 63.3887 33.9712 62.9817 33.9139C62.5747 33.8648 62.3142 33.832 62.2002 33.8157L62.5177 31.2252H63.7144C65.1797 31.2252 65.9164 30.4231 65.9246 28.8189V15.265L64.0441 14.5039V12.3676L71.676 12.2449V14.5039L69.7955 15.265V27.3088Z" fill="white"/>
+<path d="M81.4937 28.3401C81.4937 28.3728 81.2779 28.557 80.8465 28.8926C80.415 29.2281 79.8981 29.5351 79.2957 29.8133C78.6933 30.0834 78.0746 30.2185 77.4396 30.2185C76.2185 30.2185 75.2619 29.8788 74.57 29.1995C73.8862 28.512 73.5443 27.538 73.5443 26.2775C73.5443 24.837 74.0571 23.7853 75.0829 23.1223C76.1086 22.4594 77.6024 22.1279 79.5643 22.1279H81.3227V20.7406C81.3227 19.5129 80.6796 18.9031 79.3934 18.9113C79.0107 18.9113 78.6566 18.94 78.331 18.9973C78.0054 19.0545 77.7449 19.1159 77.5495 19.1814C77.3622 19.2387 77.2442 19.2755 77.1954 19.2919L76.8168 20.8756H74.57L74.399 17.1557C74.5456 17.1066 74.9038 17.0002 75.4736 16.8365C76.0516 16.6728 76.7395 16.5173 77.5373 16.37C78.3432 16.2226 79.1044 16.149 79.8207 16.149C81.107 16.149 82.1286 16.3127 82.8857 16.6401C83.6428 16.9593 84.1964 17.4831 84.5464 18.2115C84.8965 18.9318 85.0715 19.9017 85.0715 21.1212V27.3334L86.952 27.7876V29.8011L81.9455 29.9729L81.4937 28.3401ZM77.1709 25.897C77.1709 26.388 77.2971 26.7645 77.5495 27.0264C77.81 27.2802 78.1763 27.407 78.6485 27.407C79.0474 27.407 79.4422 27.3006 79.833 27.0878C80.2237 26.8668 80.5534 26.6418 80.822 26.4126C81.0907 26.1752 81.2576 26.0197 81.3227 25.9461V24.2641H79.894C78.9253 24.2641 78.2292 24.3951 77.8059 24.657C77.3826 24.9189 77.1709 25.3322 77.1709 25.897Z" fill="white"/>
+<path d="M100.311 28.0823C99.7492 28.5897 99.0124 29.0726 98.1007 29.531C97.1971 29.9893 96.1428 30.2185 94.938 30.2185C92.8866 30.2185 91.291 29.6169 90.1513 28.4137C89.0116 27.2106 88.4417 25.5327 88.4417 23.3802C88.4417 21.1376 89.0442 19.3737 90.249 18.0888C91.4619 16.7956 93.1511 16.149 95.3166 16.149C95.9515 16.149 96.5906 16.2145 97.2337 16.3454C97.885 16.4764 98.4263 16.6114 98.8578 16.7506C99.2974 16.8815 99.5742 16.9715 99.6881 17.0206L99.566 21.1457H97.3192L96.9651 19.3656C96.8836 19.3492 96.6801 19.3124 96.3545 19.2551C96.0289 19.1896 95.6585 19.1569 95.2433 19.1569C94.3234 19.1569 93.6029 19.472 93.0819 20.1022C92.5691 20.7324 92.3126 21.6573 92.3126 22.8768C92.3126 24.2682 92.5731 25.3404 93.0942 26.0934C93.6233 26.8382 94.4048 27.2106 95.4387 27.2106C96.0899 27.2106 96.6598 27.1124 97.1482 26.916C97.6448 26.7113 98.06 26.5026 98.3937 26.2898C98.7275 26.077 98.9514 25.9379 99.0654 25.8724L100.311 28.0823Z" fill="white"/>
+<path d="M108.602 21.4527L110.3 18.8868L109.201 18.5307V16.5173L115.66 16.3945V18.5307L113.902 18.8622L111.582 22.1525L114.378 27.3579L116.283 27.9595V29.9729H111.655L108.553 23.8344H106.954V27.3334L108.334 27.9595V29.9729H101.202V27.9595L103.205 27.3334V13.2025L101.202 12.6991V10.6857L106.954 10.4893V21.4527H108.602Z" fill="white"/>
+<path d="M117.406 27.8367L119.275 27.0756V15.265L117.406 14.5039V12.3676L123.158 12.2449H125.527C127.423 12.2449 128.909 12.7155 129.984 13.6567C131.066 14.598 131.608 15.8871 131.608 17.524C131.608 19.6029 130.993 21.1703 129.764 22.2261C128.543 23.2819 126.78 23.8099 124.477 23.8099H123.158V27.0756L125.026 27.8367V29.9729H117.406V27.8367ZM124.477 20.8756C125.527 20.8756 126.333 20.6342 126.894 20.1513C127.456 19.6602 127.737 18.9522 127.737 18.0274C127.737 17.1925 127.513 16.5255 127.065 16.0262C126.626 15.5188 125.991 15.265 125.16 15.265H123.158V20.8756H124.477Z" fill="white"/>
+<path d="M139.74 16.149C141.751 16.149 143.302 16.7383 144.393 17.9169C145.492 19.0955 146.041 20.7692 146.041 22.9382C146.041 24.4278 145.764 25.721 145.211 26.8177C144.665 27.9145 143.892 28.7575 142.891 29.3468C141.89 29.9279 140.713 30.2185 139.362 30.2185C135.112 30.2185 132.988 27.9145 132.988 23.3065C132.988 21.8169 133.264 20.536 133.818 19.4638C134.38 18.3916 135.169 17.5731 136.187 17.0084C137.205 16.4354 138.389 16.149 139.74 16.149ZM139.606 19.1569C138.662 19.1569 137.966 19.4638 137.518 20.0776C137.078 20.6915 136.859 21.7269 136.859 23.1837C136.859 24.5751 137.066 25.5941 137.481 26.2407C137.905 26.8873 138.572 27.2106 139.484 27.2106C140.404 27.2106 141.08 26.8873 141.511 26.2407C141.942 25.5941 142.158 24.5342 142.158 23.061C142.158 21.7514 141.955 20.7733 141.548 20.1267C141.141 19.4802 140.493 19.1569 139.606 19.1569Z" fill="white"/>
+<path d="M154.809 21.4527L156.506 18.8868L155.407 18.5307V16.5173L161.867 16.3945V18.5307L160.108 18.8622L157.788 22.1525L160.585 27.3579L162.49 27.9595V29.9729H157.862L154.76 23.8344H153.16V27.3334L154.54 27.9595V29.9729H147.409V27.9595L149.412 27.3334V13.2025L147.409 12.6991V10.6857L153.16 10.4893V21.4527H154.809Z" fill="white"/>
+<path d="M167.508 24.0186C167.573 25.0253 167.875 25.811 168.412 26.3758C168.957 26.9323 169.666 27.2106 170.537 27.2106C171.155 27.2106 171.774 27.1247 172.393 26.9528C173.02 26.7727 173.536 26.5927 173.944 26.4126C174.359 26.2243 174.623 26.0934 174.737 26.0197L175.812 28.1068C175.812 28.1396 175.519 28.3483 174.933 28.733C174.355 29.1095 173.642 29.4532 172.796 29.7642C171.957 30.0671 171.062 30.2185 170.109 30.2185C167.993 30.2185 166.381 29.6292 165.274 28.4506C164.167 27.272 163.613 25.6023 163.613 23.4415C163.613 21.9847 163.878 20.7079 164.407 19.6111C164.944 18.5062 165.713 17.655 166.715 17.0575C167.716 16.4518 168.904 16.149 170.28 16.149C172.112 16.149 173.516 16.6769 174.493 17.7327C175.47 18.7885 175.958 20.2291 175.958 22.0542C175.958 22.4553 175.938 22.8441 175.897 23.2206C175.857 23.5971 175.828 23.8344 175.812 23.9326L167.508 24.0186ZM170.036 19.1569C169.352 19.1569 168.795 19.3901 168.363 19.8566C167.932 20.315 167.663 20.9207 167.557 21.6737H172.087C172.087 20.9207 171.921 20.315 171.587 19.8566C171.253 19.3901 170.736 19.1569 170.036 19.1569Z" fill="white"/>
+<path d="M183.199 18.1256C183.199 18.0928 183.395 17.9005 183.786 17.5486C184.176 17.1966 184.628 16.8774 185.141 16.591C185.662 16.2963 186.175 16.149 186.68 16.149C187.079 16.149 187.453 16.1817 187.803 16.2472C188.153 16.3127 188.426 16.3822 188.621 16.4559C188.825 16.5296 188.951 16.5746 189 16.591L188.804 21.4281H186.558L186.179 19.2919C185.748 19.2919 185.328 19.3983 184.921 19.6111C184.522 19.8157 184.18 20.0449 183.896 20.2986C183.619 20.5442 183.48 20.6751 183.48 20.6915V27.3334L185.984 27.9595V29.9729H177.729V27.9595L179.732 27.3334V19.1569L177.729 18.5307V16.5173L182.98 16.3945L183.199 18.1256Z" fill="white"/>
+<defs>
+<linearGradient id="jpLogoGrad" x1="0" y1="33.44" x2="50.74" y2="33.44" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8032FF"/>
+<stop offset="1" stop-color="#FF3D00"/>
+</linearGradient>
+</defs>
+</svg>
+      </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Domů</a>
+      <a href="games.html">Hry</a>
+      <a href="bonuses.html" class="active">Bonus</a>
+      <a href="tournaments.html">Turnaje</a>
+      <a href="news.html">Novinky</a>
+      <a href="promo-code.html">Promo kód</a>
+    </nav>
+    <a href="https://go.jack-full.com/c41f796e" class="header-cta header-cta-desktop">Hrát hned ♠</a>
+     <div class="lang-switcher">
+  <button class="lang-btn" aria-label="Change language" aria-expanded="false">
+    <span class="lang-flag">CZ</span>
+    <span class="lang-label">Čeština</span>
+    <svg class="lang-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  </button>
+  <div class="lang-dropdown" role="menu">
+    <a href="../bonuses.html" role="menuitem" hreflang="en"><span class="lang-flag">GB</span><span>English</span></a>
+    <a href="../ru/bonuses.html" role="menuitem" hreflang="ru"><span class="lang-flag">RU</span><span>Русский</span></a>
+    <a href="../es/bonuses.html" role="menuitem" hreflang="es"><span class="lang-flag">ES</span><span>Español</span></a>
+    <a href="../it/bonuses.html" role="menuitem" hreflang="it"><span class="lang-flag">IT</span><span>Italiano</span></a>
+    <a href="../pt/bonuses.html" role="menuitem" hreflang="pt"><span class="lang-flag">BR</span><span>Português</span></a>
+    <a href="../vi/bonuses.html" role="menuitem" hreflang="vi"><span class="lang-flag">VN</span><span>Tiếng Việt</span></a>
+    <a href="../th/bonuses.html" role="menuitem" hreflang="th"><span class="lang-flag">TH</span><span>ไทย</span></a>
+    <a href="../ms/bonuses.html" role="menuitem" hreflang="ms"><span class="lang-flag">MY</span><span>Bahasa Melayu</span></a>
+    <a href="../ko/bonuses.html" role="menuitem" hreflang="ko"><span class="lang-flag">KR</span><span>한국어</span></a>
+    <a href="../ar/bonuses.html" role="menuitem" hreflang="ar"><span class="lang-flag">SA</span><span>العربية</span></a>
+    <a href="../pl/bonuses.html" role="menuitem" hreflang="pl"><span class="lang-flag">PL</span><span>Polski</span></a>
+    <a href="bonuses.html" class="active" role="menuitem" hreflang="cs"><span class="lang-flag">CZ</span><span>Čeština</span></a>
+  </div>
+</div>
+        <button class="theme-toggle" aria-label="Toggle theme">
+       <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 1.78a1 1 0 011.415 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM18 9a1 1 0 110 2h-1a1 1 0 110-2h1zM3 9a1 1 0 110 2H2a1 1 0 110-2h1zm12.657 6.071l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 011.414-1.414zM5.757 4.929a1 1 0 010 1.414l-.707.707A1 1 0 013.636 5.636l.707-.707a1 1 0 011.414 0zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1z" fill="currentColor"/><circle cx="10" cy="10" r="3.5" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+       <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/></svg>
+     </button>
+  </div>
+</header>
+
+<!-- Breadcrumb Navigation -->
+<nav class="breadcrumb-nav" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">Domů</span></a>
+        <meta itemprop="position" content="1" />
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span itemprop="name">Bonusy</span>
+        <meta itemprop="position" content="2" />
+      </li>
+    </ol>
+  </div>
+</nav>
+
+
+<!-- Page Hero with H1 -->
+<section style="padding: calc(var(--header-height) + 48px) 0 24px; background: linear-gradient(180deg, rgba(246,186,70,0.06) 0%, transparent 100%); position: relative; overflow: hidden;">
+  <div class="container">
+    <h1 style="font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 900; letter-spacing: -0.03em; margin-bottom: 12px;" data-i18n="bonuses_hero_title">Bonusy a promo akce JackPoker</h1>
+    <p style="color: var(--text-muted); font-size: 1.08rem; max-width: 640px; line-height: 1.7;" data-i18n="bonuses_hero_subtitle">Maximalizujte svůj bankroll s naším 300% uvítacím bonusem, odměnami Lootbox, programem rakeback a dalším. Vše, co potřebujete vědět o bonusech JackPoker.</p>
+  </div>
+</section>
+
+<!-- ===== BONUS STATS BAR ===== -->
+<section class="section section-dark" style="padding:40px 0;">
+  <div class="container">
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-number">$2,000</div>
+        <div class="stat-desc">Max. uvítací match</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">20%</div>
+        <div class="stat-desc">Doživotní program</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">$200K+</div>
+        <div class="stat-desc">Měsíční turnaje</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">$500K</div>
+        <div class="stat-desc">Prize pool Cash Carnival</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== WELCOME BONUS PACKAGE ===== -->
+<section class="section" id="welcome-bonus">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Exkluzivní pro nové hráče</span>
+      <h2>Uvítací bonus <span class="gold-text">Balíček</span></h2>
+      <p>Náš uvítací bonusový balíček je navržen tak, aby dal novým hráčům maximální možný nárůst na začátku jejich pokerové cesty na JackPoker. Kombinujeme tři oddělené odměny do jednoho silného balíčku aktivovaného jediným promo kódem.</p>
+    </div>
+
+    <div class="welcome-package-card">
+      <div class="welcome-package-inner">
+        <div class="welcome-package-content">
+          <div style="margin-bottom:24px;">
+            <div class="bonus-amount-display">
+              <span class="bonus-amount-number">300%</span>
+              <span class="bonus-amount-label">Match na první vklad</span>
+            </div>
+            <p style="color:var(--text-muted); margin-bottom:0; font-size:0.95rem;">Až <strong style="color:var(--gold-primary);">$2,000</strong> v bonusových fondech — vložte $100 a okamžitě hrajte s $400</p>
+          </div>
+
+          <p>Naše vlajková uvítací nabídka odpovídá vašemu prvnímu vkladu ve výši 300 %. To znamená, že vložíte-li $200, obdržíte $600 v bonusových fondech — a to platí až do maximálního bonusu $2,000 (to vyžaduje vklad $667).</p>
+
+          <p>Bonusové fondy se postupně uvolňují, jak vyděláváte rake u stolů. Například každých $10 v rake, které vygenerujete, uvolní část vašeho bonusu přibližně odpovídající $2,50–$5. Tím je zajištěno, že bonus je spojen s reálnou herní aktivitou a ne s pouhým vkladem a okamžitým výběrem.</p>
+
+          <div class="highlight-box gold" style="margin:24px 0;">
+            <h4>Příklad: Jak funguje match 300 %</h4>
+            <p>Vložte $500 → Obdržíte $1,500 v bonusových fondech → Hrajete s $2,000 celkem. Váš $1,500 bonus se uvolňuje postupně, jak generujete rake, a zůstane aktivní po dobu 60 dní od data vkladu.</p>
+          </div>
+
+          <!-- Step Process -->
+          <h3 style="margin-bottom:16px; font-size:1.1rem;">Jak uplatnit uvítací bonus</h3>
+          <div class="step-process">
+            <div class="step-process-item">
+              <div class="step-num">1</div>
+              <div class="step-text">
+                <h4>Zaregistrujte svůj účet</h4>
+                <p>Klikněte na „Hrát nyní“ a dokončete rychlou registraci. Celý proces trvá méně než dvě minuty a nevyžaduje žádné stahování.</p>
+              </div>
+            </div>
+            <div class="step-process-item">
+              <div class="step-num">2</div>
+              <div class="step-text">
+                <h4>Zadejte promo kód WELCOME</h4>
+                <p>Během registrace nebo v sekci promo akcí vašeho účtu zadejte kód <strong style="color:var(--gold-primary);">WELCOME</strong> pro aktivaci celého bonusového balíčku.</p>
+              </div>
+            </div>
+            <div class="step-process-item">
+              <div class="step-num">3</div>
+              <div class="step-text">
+                <h4>Proveďte první vklad</h4>
+                <p>Použijte libovolnou podporovanou metodu — karty, e-peněženky nebo krypto. Minimální kvalifikační vklad je $20. Vyšší vklady odemknou větší bonusy až do maxima $2,000.</p>
+              </div>
+            </div>
+            <div class="step-process-item">
+              <div class="step-num">4</div>
+              <div class="step-text">
+                <h4>Otevřete svůj Lootbox</h4>
+                <p>Po přijetí vašeho vkladu obdržíte Welcome Lootbox. Otevřete ji a odhalte svůj bonusový multiplikátor — může být kdekoliv od standardního 1x až po jackpotový výsledek 10x+.</p>
+              </div>
+            </div>
+            <div class="step-process-item">
+              <div class="step-num">5</div>
+              <div class="step-text">
+                <h4>Hrajte a vydělávejte</h4>
+                <p>Připojte se k jakékoliv cashové hře nebo turnaji. Váš bonus se uvolňuje, jak vyděláváte rake a vaše uvítací mise postupují paralelně. Sledujte svůj pokrok v sekci Promo akce v řídicím panelu.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Terms box -->
+          <div class="terms-box">
+            <h4>Podmínky bonusu &amp; obratu</h4>
+            <ul>
+              <li>Minimální vklad: $20</li>
+              <li>Maximální bonus: $2,000</li>
+              <li>Obrat: 6x výše bonusu v rake</li>
+              <li>Platnost bonusu: 60 dní od vkladu</li>
+              <li>Promo kód: WELCOME</li>
+              <li>Jeden bonus na hráče/domácnost</li>
+              <li>Způsobilé hry: Všechny pokerové stoly &amp; turnaje</li>
+              <li>Kryptoměnové vklady mohou obdržet vylepšené sazby</li>
+            </ul>
+          </div>
+
+          <div style="margin-top:28px; display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="https://go.jack-full.com/c41f796e" class="btn btn-primary btn-lg">Uplatnit 300% bonus ♠</a>
+          </div>
+        </div>
+        <div class="welcome-package-image">
+          <img src="../assets/images/bonus-chest.jpg" alt="JackPoker Welcome Bonus Chest">
+        </div>
+      </div>
+    </div>
+
+    <!-- 20% Instant Cash Feature -->
+    <div style="margin-top:40px;" class="grid-2">
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>20% okamžitý kreditní vklad</h3>
+        <p style="color:var(--text-body); margin-bottom:12px;">Kromě 300% matche připisujeme 20 % vašeho prvního vkladu jako skutečné, volně použitelné peníze — žádné podmínky obratu, žádné zamknuté fondy. Pokud vložíte $100, obdržíte okamžitý $20 cash kredit připsaný přímo na váš zůstatek.</p>
+        <p>20% okamžitá hotovost je trvalým přírůstkem k zůstatku vašeho účtu. Můžete ji okamžitě použít ke hře nebo ji vybrat — žádná nutnost odehrání, žádné podmínky. Je to naše poděkování za to, že jste dali JackPoker šanci.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎁</div>
+        <h3>Promo kód: WELCOME</h3>
+        <p style="color:var(--text-body); margin-bottom:12px;">Promo kód WELCOME aktivuje kompletní zážitek JackPoker pro nové hráče. Kombinuje 300% match bonus, 20% okamžitou hotovost, Welcome Lootbox a vstup do Welcome Quest — to vše jediným kódem zadaným při registraci.</p>
+        <p>Kód je platný na neurčito a funguje na váš první vklad bez ohledu na platební metodu nebo výši vkladu (minimum $20). Neexistuje žádné datum vypršení — kdykoliv budete připraveni hrát, kód bude fungovat.</p>
+        <div class="promo-code-box" style="margin-top:16px;">
+          <div class="promo-code-value">WELCOME</div>
+          <button class="promo-code-copy btn-copy" onclick="copyPromoCode()">Kopírovat kód</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== LOOTBOX BONUS SYSTEM ===== -->
+<section class="section section-dark" id="lootbox">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Unikátní bonusová funkce</span>
+      <h2>Systém JackPoker <span class="gold-text">Lootbox</span></h2>
+      <p>Většina pokerových stránek vám dá plochý procentuální bonus. My jdeme dál. Náš systém Lootbox přidává prvek vzrušení a překvapení do každého bonusového okamžiku — a může výrazně zesílit vaše odměny.</p>
+    </div>
+
+    <div class="split">
+      <div class="split-content">
+        <h3 style="margin-bottom:16px;">Jak fungují Lootboxy</h3>
+        <p>Když se kvalifikujete pro Lootbox — prostřednictvím kvalifikačního vkladu, dosažením milníku nebo splněním herní výzvy — obdržíte virtuální krabičku. Otevřete ji a odkryjete náhodný bonusový multiplikátor, který se aplikuje na vaši standardní bonusovou částku.</p>
+
+        <p>Multiplikátory se pohybují od 100 % (rovnajícímu se standardnímu bonusu) až po 1 000 % nebo více pro vzácné výsledky jackpot. Průměrný Lootbox výsledek výrazně překonává standard flat-rate bonus, který byste jinak dostali.</p>
+
+        <p>Systém Lootbox funguje transparentně. Každá úroveň Lootboxu má zveřejněné pravděpodobnostní tabulky dostupné v sekci promo akcí a ověřené iTech Labs, BMM TestLabs a GLI. Vždy přesně víte, jaké jsou vaše šance na každý výsledek multiplikátoru.</p>
+
+        <p>Kromě uvítací nabídky se Lootboxy objevují po celou vaši cestu na JackPoker. Vklady přesahující práh spustí nové Lootboxy. Milníky rake odemknou prémiové Lootboxy. Postup VIP úrovní přinese exkluzivní Lootboxy s lepšími pravděpodobnostmi multiplikátoru. Je to trvalý systém odměn, který každý vklad, každou herní relaci a každý dosažený milník učiní zajímavějším.</p>
+
+        <div class="highlight-box" style="margin-top:24px;">
+          <h4>Certifikováno nezávislými laboratořemi jako fér</h4>
+          <p>Všechny výsledky Lootboxu jsou generovány certifikovaným RNG testovaným a certifikovaným iTech Labs, BMM TestLabs a GLI — stejnými orgány, které certifikují integritu naší hry a férovost softwaru. Tabulky pravděpodobností jsou veřejně dostupné a auditovány čtvrtletně.</p>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-bottom:20px; text-align:center;">Multiplikátorové úrovně Lootboxu</h3>
+        <div class="lootbox-visual">
+          <div class="lootbox-tier">
+            <span class="tier-icon">📦</span>
+            <span class="tier-mult">100%</span>
+            <span class="tier-label">Bronze</span>
+          </div>
+          <div class="lootbox-tier">
+            <span class="tier-icon">📦</span>
+            <span class="tier-mult">200%</span>
+            <span class="tier-label">Silver</span>
+          </div>
+          <div class="lootbox-tier">
+            <span class="tier-icon">💎</span>
+            <span class="tier-mult">400%</span>
+            <span class="tier-label">Gold</span>
+          </div>
+          <div class="lootbox-tier">
+            <span class="tier-icon">💎</span>
+            <span class="tier-mult">700%</span>
+            <span class="tier-label">Platinum</span>
+          </div>
+          <div class="lootbox-tier jackpot">
+            <span class="tier-icon">👑</span>
+            <span class="tier-mult">1,000%</span>
+            <span class="tier-label">Jackpot</span>
+          </div>
+        </div>
+
+        <div class="card card-sm" style="margin-top:20px;">
+          <h4 style="margin-bottom:12px;">Kdy obdržíte Lootboxy</h4>
+          <ul class="quest-tasks" style="list-style:none;">
+            <li style="padding:8px 0 8px 22px; position:relative; font-size:0.88rem; border-bottom:1px solid var(--border-subtle);"><span style="position:absolute;left:0;color:var(--gold-primary);">✦</span> První kvalifikační vklad (Welcome Lootbox)</li>
+            <li style="padding:8px 0 8px 22px; position:relative; font-size:0.88rem; border-bottom:1px solid var(--border-subtle);"><span style="position:absolute;left:0;color:var(--gold-primary);">✦</span> Každý následující vklad přesahující kvalifikační práh</li>
+            <li style="padding:8px 0 8px 22px; position:relative; font-size:0.88rem; border-bottom:1px solid var(--border-subtle);"><span style="position:absolute;left:0;color:var(--gold-primary);">✦</span> Dosažení milníků rake (100, 250, 500, 1 000 celoživotní rake)</li>
+            <li style="padding:8px 0 8px 22px; position:relative; font-size:0.88rem; border-bottom:1px solid var(--border-subtle);"><span style="position:absolute;left:0;color:var(--gold-primary);">✦</span> Splnění úrovní Welcome Quest (Stříbro, Zlato, Supernova)</li>
+            <li style="padding:8px 0 8px 22px; position:relative; font-size:0.88rem; border-bottom:1px solid var(--border-subtle);"><span style="position:absolute;left:0;color:var(--gold-primary);">✦</span> Sezónní akce a speciální promo období</li>
+            <li style="padding:8px 0 8px 22px; position:relative; font-size:0.88rem;"><span style="position:absolute;left:0;color:var(--gold-primary);">✦</span> Povýšení VIP programu a výročí</li>
+          </ul>
+        </div>
+
+        <div class="card card-sm" style="margin-top:16px; border-color:rgba(246,186,70,0.2);">
+          <h4 style="color:var(--gold-primary); margin-bottom:8px;">Proč na tom záleží</h4>
+          <p style="color:var(--text-muted); font-size:0.88rem; margin:0; line-height:1.7;">Tradiční pokerové bonusy jsou statické a předvídatelné. Náš systém Lootbox přidává skutečné vzrušení z odkrytí do každé odměny — a statisticky vede k vyšším průměrným bonusovým hodnotám ve srovnání s flat-rate alternativami. Každý Lootbox je příležitost k masivnímu zesílení vašeho bankrollu.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== WELCOME QUESTS ===== -->
+<section class="section section-accent" id="welcome-quests">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Postup nového hráče</span>
+      <h2>Uvítací <span class="gold-text">mise</span></h2>
+      <p>Uvítací mise jsou naším strukturovaným systémem postupu pro nové hráče. Napříč třemi úrovněmi — Stříbro, Zlato a Supernova — absolvujete výzvy navržené tak, aby vás provedly každým aspektem platformy JackPoker a zároveň vám odměňovaly hodnotnými odměnami na každém kroku.</p>
+    </div>
+
+    <div class="grid-3" style="margin-bottom:48px;">
+
+      <!-- Silver Quest -->
+      <div class="quest-card">
+        <div class="quest-header silver">
+          <span class="quest-tier-badge silver">⚔ Stříbrná mise</span>
+          <div class="quest-prize silver">$50</div>
+          <p style="color:var(--text-muted); font-size:0.85rem; margin:0;">v bonusových kreditech + freerollové tikety</p>
+        </div>
+        <div class="quest-body">
+          <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:12px;">Stříbrná mise je vaším vstupním bodem do systému Welcome Quests. Tyto výzvy vás seznámí se základy platformy JackPoker a odměňují vás, jak si budujete svůj základ jako hráč.</p>
+          <ul class="quest-tasks">
+            <li>
+              Zahrajte 50 rukou No Limit Hold'em
+              <span class="task-reward">Odměna: $5 bonusový kredit</span>
+            </li>
+            <li>
+              Vydělajte $5 v rake napříč sázkami libovolného stolu
+              <span class="task-reward">Odměna: $10 bonusový kredit</span>
+            </li>
+            <li>
+              Umístěte se v penězích v jakémkoliv turnaji
+              <span class="task-reward">Odměna: 1 tiket do turnajů ($200K pool)</span>
+            </li>
+            <li>
+              Vyzkoušejte Spin&Win — zahrajte 10 kol
+              <span class="task-reward">Odměna: $5 bonusový kredit + Lootbox</span>
+            </li>
+            <li>
+              Splňte všechny stříbrné cíle
+              <span class="task-reward">Odměna: $30 dokončovací bonus + stříbrný odznak</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Gold Quest -->
+      <div class="quest-card">
+        <div class="quest-header gold">
+          <span class="quest-tier-badge gold">★ Zlatá mise</span>
+          <div class="quest-prize gold">$200</div>
+          <p style="color:var(--text-muted); font-size:0.85rem; margin:0;">v bonusových kreditech + turnajové tikety</p>
+        </div>
+        <div class="quest-body">
+          <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:12px;">Zlatá mise se odemkne po splnění Stříbrné. Výzvy se stupňují v ambicích — budete prozkoumávat pokročilé herní funkce a soutěžit v náročnějších akcích a zároveň vydělávat větší odměny.</p>
+          <ul class="quest-tasks">
+            <li>
+              Zahrajte 300 rukou libovolné varianty pokeru
+              <span class="task-reward">Odměna: $20 bonusový kredit</span>
+            </li>
+            <li>
+              Vydělajte $30 v celkovém rake za 7 dní
+              <span class="task-reward">Odměna: $50 bonusový kredit</span>
+            </li>
+            <li>
+              Registrujte se na Big Bang Sunday ($45K GTD)
+              <span class="task-reward">Odměna: satelitní tiket + $20 bonus</span>
+            </li>
+            <li>
+              Hrajte na více stolech: hrajte na 2 stolech současně
+              <span class="task-reward">Odměna: $25 bonusový kredit + Gold Lootbox</span>
+            </li>
+            <li>
+              Splňte všechny zlaté cíle
+              <span class="task-reward">Odměna: $85 bonus za dokončení + zlatý odznak</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Supernova Quest -->
+      <div class="quest-card">
+        <div class="quest-header supernova">
+          <span class="quest-tier-badge supernova">🌟 Supernova Quest</span>
+          <div class="quest-prize supernova">$1,000</div>
+          <p style="color:var(--text-muted); font-size:0.85rem; margin:0;">v cenách + vstup do VIP programu</p>
+        </div>
+        <div class="quest-body">
+          <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:12px;">Supernova Quest je nejvyšší úspěch pro nové hráče. Jeho dokončení vás přemění na ověřeného hráče s vysokou hodnotou a zajistí vám přímý vstup do našeho VIP programu se zvýšeným rakebackem od prvního dne.</p>
+          <ul class="quest-tasks">
+            <li>
+              Zahrajte 1 000 rukou u libovolných sázek
+              <span class="task-reward">Odměna: $100 bonusový kredit</span>
+            </li>
+            <li>
+              Získejte $150 celoživotního rake v JackPoker
+              <span class="task-reward">Odměna: $200 bonusový kredit</span>
+            </li>
+            <li>
+              Vyhrajte turnaj nebo skončete v top 3 satelitu
+              <span class="task-reward">Odměna: balíček turnajových vstupenek za $250</span>
+            </li>
+            <li>
+              Dosáhněte 30denní série (přihlaste se každý den po dobu 30 dnů)
+              <span class="task-reward">Odměna: Platinum Lootbox + $150 bonus</span>
+            </li>
+            <li>
+              Splňte všechny cíle Supernovy
+              <span class="task-reward">Odměna: $300 bonus + vstup do VIP programu + odznak Supernova</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlight-box gold">
+      <h4>Postup v questech probíhá automaticky</h4>
+      <p>Nemusíte se přihlašovat k jednotlivým questům ani je ručně aktivovat. V okamžiku, kdy se zaregistrujete s promo kódem WELCOME a provedete první vklad, začnou všechny tři úrovně questů sledovat vaši aktivitu. Váš postup je kdykoli viditelný na panelu akcí ve vašem účtu. Questy musí být dokončeny do 90 dnů od registrace účtu.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== RAKEBACK & VIP ===== -->
+<section class="section section-dark" id="rakeback-vip">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Průběžné odměny</span>
+      <h2>Program &amp; <span class="gold-text">VIP Program</span></h2>
+      <p>Náš závazek odměňovat věrné hráče sahá daleko za uvítací bonus. VIP program JackPoker poskytuje až 20% celoživotní rakeback, kasino cashback, prioritní servis a exkluzivní výhody, které rostou spolu s vámi, jak se zvyšuje váš objem hry.</p>
+    </div>
+
+    <div class="split split-reverse" style="margin-bottom:56px;">
+      <div class="split-img">
+        <img loading="lazy" src="../assets/images/vip-lounge.jpg" alt="JackPoker VIP Lounge">
+      </div>
+      <div class="split-content">
+        <span class="section-label">Doživotní program</span>
+        <h3>Až 20 % zpět z každé ruky</h3>
+        <p>Program je základním kamenem našeho věrnostního programu. Každá ruka, kterou zahrajete u stolu s reálnými penězi, generuje rake – malé procento, které si bere dům. Smysluplnou část tohoto rake vám vracíme přímo na zůstatek jako rakeback, připisovaný průběžně.</p>
+        <p>Naše struktura rakebacku je transparentní a jednoduchá: žádné složité bodové systémy k luštění, žádné svévolné obraty a žádná exspirace vašeho naakumulovaného rakebacku. Co si vyděláte, to je vaše – automaticky vráceno na váš zůstatek.</p>
+        <ul>
+          <li>Program připsán automaticky – žádné uplatňování není nutné</li>
+          <li>Platí pro všechny varianty cash her a výše sázek</li>
+          <li>Akumuluje se od vaší úplně první ruky</li>
+          <li>Vyšší objem rake odemyká vyšší procenta rakebacku</li>
+          <li>Kombinuje se s uvítacím bonusem během způsobilých období</li>
+          <li>Viditelný v reálném čase na panelu vašeho účtu</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- VIP Tiers -->
+    <h3 style="text-align:center; margin-bottom:8px;">Struktura VIP úrovní</h3>
+    <p style="text-align:center; color:var(--text-muted); margin-bottom:32px; max-width:560px; margin-left:auto; margin-right:auto;">Vaše procento rakebacku se zvyšuje s tím, jak postupujete skrze naše VIP úrovně. Postup je založen na měsíčně generovaném rake a resetování je nastaveno velkoryse, aby chránilo váš stávající status.</p>
+
+    <div class="vip-tiers">
+      <div class="vip-tier-card">
+        <span class="vip-tier-icon">🥉</span>
+        <div class="vip-tier-name">Bronze</div>
+        <div class="vip-tier-rakeback">5%</div>
+        <div class="vip-tier-sub">Program</div>
+        <p style="color:var(--text-muted); font-size:0.78rem; margin-top:12px; margin-bottom:0;">Vstupní úroveň – automaticky aktivní pro všechny nové hráče od prvního dne</p>
+      </div>
+      <div class="vip-tier-card">
+        <span class="vip-tier-icon">🥈</span>
+        <div class="vip-tier-name">Silver</div>
+        <div class="vip-tier-rakeback">10%</div>
+        <div class="vip-tier-sub">Program</div>
+        <p style="color:var(--text-muted); font-size:0.78rem; margin-top:12px; margin-bottom:0;">Odemknuto po dosažení $500 měsíčního rake v JackPoker</p>
+      </div>
+      <div class="vip-tier-card">
+        <span class="vip-tier-icon">🥇</span>
+        <div class="vip-tier-name">Gold</div>
+        <div class="vip-tier-rakeback">15%</div>
+        <div class="vip-tier-sub">Program</div>
+        <p style="color:var(--text-muted); font-size:0.78rem; margin-top:12px; margin-bottom:0;">Odemknuto při $2,000 měsíčního rake – plný kasino cashback zahrnut</p>
+      </div>
+      <div class="vip-tier-card featured">
+        <span class="vip-tier-icon">👑</span>
+        <div class="vip-tier-name">Diamond</div>
+        <div class="vip-tier-rakeback">20%</div>
+        <div class="vip-tier-sub">Program</div>
+        <p style="color:var(--text-muted); font-size:0.78rem; margin-top:12px; margin-bottom:0;">Naše elitní úroveň – pro měsíční rake nad $5,000. Pouze na pozvání.</p>
+      </div>
+    </div>
+
+    <!-- VIP Benefits Grid -->
+    <h3 style="text-align:center; margin-top:56px; margin-bottom:32px;">Exkluzivní VIP výhody</h3>
+    <div class="grid-3">
+      <div class="feature-card">
+        <div class="feature-icon">💰</div>
+        <h3>10% kasino cashback</h3>
+        <p>Členové VIP na úrovni Gold a výše dostávají každý týden 10% cashback na své čisté ztráty ze hry v našich integrovaných kasinových hrách. Cashback je připsán každé pondělí jako volně vyplatitelná hotovost bez dalších podmínek.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Prioritní výběry</h3>
+        <p>VIP členové se přesouvají na přední místo fronty při každém požadavku na výběr. Zatímco standardní hráči čekají až 24 hodin, naši členové Gold a Diamond obdrží zpracované výběry do hodin od podání – včetně víkendů.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>Vyhrazená VIP podpora</h3>
+        <p>Každý VIP člen Gold a Diamond má přiděleného jmenovitého správce účtu dostupného přes přímý chat a e-mail. Váš správce řeší vklady, výběry, vyjednávání o bonusech a veškeré problémy s platformou osobně a okamžitě.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎁</div>
+        <h3>Exkluzivní Lootboxy</h3>
+        <p>VIP členové dostávají vylepšené Lootboxy s lepším rozdělením pravděpodobnosti, které je vychýleno směrem k vyšším pásmům multiplikátorů. Výsledky Platinum a Jackpot jsou výrazně pravděpodobnější pro členy Gold a Diamond.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏆</div>
+        <h3>Privátní turnaje</h3>
+        <p>Exkluzivní turnaje pouze na pozvání s garantovanými cenami overlay a strukturami výher, které odměňují menší pole. VIP turnaje probíhají týdně pro členy Silver a výše a denně pro naši úroveň Diamond.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌟</div>
+        <h3>Vylepšený reload bonus</h3>
+        <p>VIP členové dostávají personalizované nabídky reload bonusu na každý vklad – nejen na první. Naši členové Diamond mají přístup k průběžným 50–100% reload bonusům na základě jejich individuální herní historie a preferencí.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== TOURNAMENT BONUSES ===== -->
+<section class="section" id="tournament-bonuses">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Odměny za soutěžní hru</span>
+      <h2>Turnaj <span class="gold-text">Bonus</span></h2>
+      <p>Náš turnajový program je bonusovou příležitostí sám o sobě. Od freerollů s volným vstupem a šestimístnými prize pooly až po satelity s přetékajícím garantem, které vám dávají šanci na velké turnaje za zlomek ceny – náš turnajový rozvrh rozšiřuje váš bankroll bez nutnosti dalších vkladů.</p>
+    </div>
+
+    <div style="display:flex; flex-direction:column; gap:16px;">
+
+      <div class="tourney-bonus-card">
+        <div class="tourney-icon">🎰</div>
+        <div>
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:8px;">
+            <h3 style="margin:0; font-size:1.2rem;">Freeroll Festival – $200 000+ měsíčně</h3>
+            <span class="badge badge-green">VOLNÝ VSTUP</span>
+          </div>
+          <p style="color:var(--text-muted); margin-bottom:12px;">Náš Freeroll Festival je nejštědřejší průběžný program s volným vstupem v online pokeru. Každý den probíhá osm samostatných freerollových turnajů – pokrývajících ranní, odpolední a večerní časová pásma. Všichni registrovaní hráči JackPoker mají automaticky nárok na vstup bez jakýchkoli dalších požadavků.</p>
+          <p style="color:var(--text-muted); margin-bottom:0;">V průběhu kalendářního měsíce rozděluje Freeroll Festival přes $200 000 na kombinovaných výhrách. Jedná se o skutečné peněžní ceny připsané přímo na váš zůstatek, které lze vybrat bez jakéhokoli dalšího požadavku na sázení. Pro hráče budující bankroll je Freeroll Festival mimořádným bezplatným zdrojem dostupným každému členovi naší komunity.</p>
+        </div>
+      </div>
+
+      <div class="tourney-bonus-card">
+        <div class="tourney-icon">🚀</div>
+        <div>
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:8px;">
+            <h3 style="margin:0; font-size:1.2rem;">Satelitní turnaje – přístup k velkým událostem</h3>
+            <span class="badge badge-purple">NÍZKÝ BUY-IN</span>
+          </div>
+          <p style="color:var(--text-muted); margin-bottom:12px;">Náš satelitní program poskytuje nákladově efektivní cestu do našich největších garantovaných turnajů a do prestižních živých akcí, které JackPoker podporuje. Satelity probíhají nepřetržitě, s buy-iny začínajícími od pouhých $1, přičemž udělují přímé vstupy do našich vlajkových akcí včetně Bonus Bonanza ($1,25 mil. měsíčně) a Big Bang Sunday ($45 000 garantováno).</p>
+          <p style="color:var(--text-muted); margin-bottom:0;">Vícestupňové satelity znamenají, že se můžete propracovat od mikrosázek v sérii kroků. Vstup $1 do satelitu 1. stupně může nakonec vést k místu na velké akci za $500+ – tento druh progrese, pro který je poker jedinečně vhodný a který aktivně kultivujeme jako součást naší filozofie turnajového designu.</p>
+        </div>
+      </div>
+
+      <div class="tourney-bonus-card">
+        <div class="tourney-icon">💥</div>
+        <div>
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:8px;">
+            <h3 style="margin:0; font-size:1.2rem;">Garantované prize pooly s overlayem – skutečná hodnota v každém turnaji</h3>
+            <span class="badge badge-gold">OVERLAY</span>
+          </div>
+          <p style="color:var(--text-muted); margin-bottom:12px;">Stojíme za našimi garantovanými prize pooly. Když celkové buy-iny nedosáhnou naší deklarované záruky, dorovnáme rozdíl z vlastních prostředků – čímž vytváříme overlay, který zvyšuje efektivní výhru na hráče nad úroveň nákladů na buy-in. Naše největší pravidelná příležitost pro overlay je Big Bang Sunday s garantem $45 000 při pouhém buy-inu $30.</p>
+          <p style="color:var(--text-muted); margin-bottom:0;">Overlaye představují čistě pozitivní očekávanou hodnotu pro turnajové hráče. Garanty stavíme velkoryse, protože věříme ve vybudování silného soutěžního pole a odměňování hráčů, kteří se zapojí. Naše história dodržení každého garantu – napříč stovkami akcí a miliony na výhrách – mluví sama za sebe.</p>
+        </div>
+      </div>
+
+      <div class="tourney-bonus-card">
+        <div class="tourney-icon">🏆</div>
+        <div>
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:8px;">
+            <h3 style="margin:0; font-size:1.2rem;">Bonus Bonanza – $1,25 milionu měsíčně</h3>
+            <span class="badge badge-gold">VLAJKOVÁ LoĎ</span>
+          </div>
+          <p style="color:var(--text-muted); margin-bottom:12px;">Bonus Bonanza je naší vlajkovou měsíční turnajovou sérií – strukturovaný rozvrh akcí kolektivně garantující přes $1 250 000 v měsíčních výhrách. Série probíhá celý kalendářní měsíc s více akcemi každý den, pokrývajícími všechny hlavní varianty pokeru a široké spektrum výší buy-inů od $5 do $500 a více.</p>
+          <p style="color:var(--text-muted); margin-bottom:0;">Noví hráči dostávají jako součást svého postupu ve Welcome Quest zdarma satelitní vstupenku do Bonus Bonanza. Dokončení zlaté úrovně questu vás automaticky kvalifikuje pro přímý vstup do jedné z nižších buy-in akcí Bonus Bonanza – náš uvítací dárek pro hráče, kteří se plně zapojí do platformy v průběhu prvních 30 dnů.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== CRYPTO DEPOSIT BONUS ===== -->
+<section class="section section-dark" id="crypto-bonus">
+  <div class="container">
+    <div class="split" style="margin-bottom:0;">
+      <div class="split-img">
+        <img loading="lazy" src="../assets/images/crypto-poker.jpg" alt="JackPoker Crypto Deposit Bonus">
+      </div>
+      <div class="split-content">
+        <span class="section-label">Hráči kryptoměn</span>
+        <h2>Vklad kryptoměnou <span class="gold-text">Bonus</span></h2>
+        <p>Jsme pokerová platforma zaměřená na kryptoměny. Naše platební infrastruktura je postavena tak, aby zpracovávala vklady a výběry digitálních měn rychleji, levněji a s větším soukromím než jakákoli tradiční platební metoda. Jako poděkování hráčům, kteří si vyberou kryptoměny, nabízíme vylepšené bonusové podmínky na způsobilé vklady kryptoměnou.</p>
+
+        <p>Vklady kryptoměnou jsou způsobilé pro stejný 300% uvítací match jako všechny ostatní metody, s přidanou výhodou rychlejšího zpracování – většina vkladů kryptoměnou se odrazí na vašem zůstatku JackPoker během minut od potvrzení blockchainem. Pro vklady v Bitcoinu přesahující způsobilý práh náš tým pravidelně spouští exkluzivní nabídky reload specifické pro krypto s vylepšenými procenty match, komunikovanými přímo přes platformu.</p>
+
+        <p>Přijímáme nejširší škálu kryptoměn ze všech srovnatelných pokerových platforem. Ať vlastníte Bitcoin, Ethereum, stablecoiny jako USDT, nebo jakékoli jiné námi podporované mince, můžete si dobít účet, uplatnit uvítací bonus a být u stolů do pěti minut od okamžiku, kdy zahájíte svůj převod.</p>
+
+        <h4 style="margin-bottom:16px; margin-top:8px;">Podporované kryptoměny</h4>
+        <div class="crypto-pills">
+          <div class="crypto-pill"><span class="crypto-symbol">₿</span> Bitcoin (BTC)</div>
+          <div class="crypto-pill"><span class="crypto-symbol">⟠</span> Ethereum (ETH)</div>
+          <div class="crypto-pill"><span class="crypto-symbol">₮</span> Tether (USDT)</div>
+          <div class="crypto-pill"><span class="crypto-symbol">◈</span> TRON (TRX)</div>
+          <div class="crypto-pill"><span class="crypto-symbol">Ł</span> Litecoin (LTC)</div>
+          <div class="crypto-pill"><span class="crypto-symbol">Ð</span> Dogecoin (DOGE)</div>
+          <div class="crypto-pill"><span class="crypto-symbol">⬡</span> BNB</div>
+        </div>
+
+        <div class="highlight-box gold" style="margin-top:24px;">
+          <h4>Nulové poplatky za vklady kryptoměnou</h4>
+          <p>JackPoker neúčtuje žádné platformní poplatky za vklady kryptoměnou. Platíte pouze standardní poplatek za síťovou transakci – a v sítích s nízkými poplatky jako TRON (USDT-TRC20) je tento poplatek zanedbatelný. Celá částka vašeho vkladu dorazí na váš účet a je způsobilá pro plný uvítací bonus.</p>
+        </div>
+
+        <ul>
+          <li>Žádné platformní poplatky za vklady kryptoměnou</li>
+          <li>Výběry zpracovány do 1–4 hodin</li>
+          <li>Minimální vklad kryptoměnou od ekvivalentu $20</li>
+          <li>Plná způsobilost na bonus pro všechny podporované mince</li>
+          <li>Vylepšené periodické nabídky reload pro pravidelné uživatele krypta</li>
+          <li>Podporovány platby z nekustodiálních peněženek</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== CURRENT PROMOTIONS — CASH CARNIVAL ===== -->
+<section class="section" id="current-promotions">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Právě teď živě</span>
+      <h2>Aktuální <span class="gold-text">Akce</span></h2>
+      <p>Kromě našeho trvalého bonusového programu pořádáme po celý rok časově omezené akce, které přinášejí mimořádné výhry celé hráčské základně. Zde je přehled toho, co je aktivní právě teď a co přijde jako další.</p>
+    </div>
+
+    <div class="carnival-banner" style="margin-bottom:32px;">
+      <div class="carnival-inner">
+        <div>
+          <div class="live-badge">
+            <span class="live-dot"></span>
+            ŽIVĚ NYNÍ — 23. 3. až 19. 4. 2026
+          </div>
+          <div class="carnival-prize">$500,000</div>
+          <h2 style="color:var(--text-white); margin-bottom:12px;">Cash Carnival</h2>
+          <p style="color:var(--text-body); margin-bottom:16px; max-width:520px;">Cash Carnival je naší největší jarní akcí – $500 000 v cash dropech distribuovaných přímo hráčům u stolů po dobu čtyř týdnů od 23. března do 19. dubna 2026. Cash bomby jsou spouštěny náhodně u stolů každých tři až sedm rukou a zasypávají přítomné hráče okamžitou peněžní cenou připsanou přímo na jejich zůstatek.</p>
+          <p style="color:var(--text-muted); margin-bottom:24px; max-width:520px; font-size:0.92rem;">Každá ruka cash hry za reálné peníze, kterou zahrajete, vás zařadí do poolu dropů. Není nutné se přihlašovat ani požadována minimální sázka – každý hráč u každého stolu je způsobilý pro každou bombu. Čím více rukou během akce zahrajete, tím více bomb zažijete a tím více příležitostí máte pro sběr dropu.</p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="https://go.jack-full.com/c41f796e" class="btn btn-primary">Připojte se k Cash Carnival ♠</a>
+            <a href="news.html" class="btn btn-secondary">Zjistit více</a>
+          </div>
+        </div>
+        <div style="text-align:center; flex-shrink:0;">
+          <div style="background:rgba(255,61,0,0.08); border:1px solid rgba(255,61,0,0.25); border-radius:var(--radius-lg); padding:32px 28px; min-width:200px;">
+            <div style="font-size:2.5rem; margin-bottom:8px;">💣</div>
+            <div style="font-family:var(--font-display); font-size:1rem; font-weight:700; color:var(--text-white); margin-bottom:4px;">Cash bomby</div>
+            <div style="font-size:0.82rem; color:var(--text-muted);">Každých 3–7 rukou</div>
+            <div style="margin-top:20px; padding-top:20px; border-top:1px solid rgba(255,61,0,0.2);">
+              <div style="font-family:var(--font-display); font-size:2rem; font-weight:900; color:#FF3D00;">28</div>
+              <div style="font-size:0.78rem; color:var(--text-muted);">Zbývající dny</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Other active promotions -->
+    <div class="grid-2">
+      <div class="promo-banner">
+        <div class="promo-banner-content">
+          <h3>Freeroll Festival <span class="text-gold">— Průběžně</span></h3>
+          <p>8 denních turnajů s volným vstupem. Přes $200 000 v garantovaných měsíčních cenách distribuovaných v ranních, odpoledních a večerních akcích. Bez buy-inu – stačí se zaregistrovat a hrát.</p>
+        </div>
+        <a href="tournaments.html" class="btn btn-secondary btn-sm" style="flex-shrink:0;">Zobrazit turnaj</a>
+      </div>
+      <div class="promo-banner">
+        <div class="promo-banner-content">
+          <h3>Big Bang Sunday <span class="text-gold">— $45K GTD</span></h3>
+          <p>Náš vlajkový týdenní turnaj probíhá každou neděli. Garantovaný prize pool $45 000 při buy-inu pouhých $30. Satelity od $1. Obrovský potenciál overlayu každý týden.</p>
+        </div>
+        <a href="tournaments.html" class="btn btn-secondary btn-sm" style="flex-shrink:0;">Získat vstupenky</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== PROMO CODE SECTION ===== -->
+<section class="section section-dark" id="promo-code">
+  <div class="container">
+    <div class="promo-code-section">
+      <span class="section-label">Váš aktivační kód</span>
+      <h2>Použijte promo kód <span class="gold-text">WELCOME</span></h2>
+      <p style="color:var(--text-muted); max-width:560px; margin:0 auto 8px; font-size:1.05rem;">Zadejte tento kód při registraci účtu JackPoker a odemkněte celý balíček bonusů pro nové hráče: 300% match, 20% okamžitá hotovost, Welcome Lootbox a všechny tři úrovně Welcome Questu.</p>
+      <p style="color:var(--text-muted); max-width:500px; margin:0 auto 0; font-size:0.9rem;">Kód lze také zadat v sekci akcí vašeho účtu před prvním vkladem, pokud jste ho při registraci zapomněli zadat.</p>
+
+      <div style="display:flex; justify-content:center; margin:32px 0 12px;">
+        <div class="promo-code-large">
+          <div class="code-text">WELCOME</div>
+          <button class="code-copy-btn btn-copy" onclick="copyPromoCode()">📋 Kopírovat kód</button>
+        </div>
+      </div>
+      <p id="copyFeedback" style="color:var(--success); font-size:0.85rem; min-height:20px; margin-bottom:32px;"></p>
+
+      <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+        <a href="https://go.jack-full.com/c41f796e" class="btn btn-primary btn-lg">Registrovat se &amp; nárokovat bonus ♠</a>
+        <a href="promo-code.html" class="btn btn-secondary btn-lg">Úplné podrobnosti promo kódu</a>
+      </div>
+
+      <!-- What you get summary -->
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:48px; text-align:center; max-width:800px; margin-left:auto; margin-right:auto;">
+        <div style="padding:20px; background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:var(--radius-md);">
+          <div style="font-size:1.6rem; margin-bottom:8px;">🎯</div>
+          <div style="font-family:var(--font-display); font-size:1.1rem; font-weight:800; color:var(--gold-primary); margin-bottom:4px;">300%</div>
+          <div style="font-size:0.78rem; color:var(--text-muted);">Match vkladu</div>
+        </div>
+        <div style="padding:20px; background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:var(--radius-md);">
+          <div style="font-size:1.6rem; margin-bottom:8px;">⚡</div>
+          <div style="font-family:var(--font-display); font-size:1.1rem; font-weight:800; color:var(--gold-primary); margin-bottom:4px;">20%</div>
+          <div style="font-size:0.78rem; color:var(--text-muted);">Okamžitá hotovost</div>
+        </div>
+        <div style="padding:20px; background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:var(--radius-md);">
+          <div style="font-size:1.6rem; margin-bottom:8px;">📦</div>
+          <div style="font-family:var(--font-display); font-size:1.1rem; font-weight:800; color:var(--gold-primary); margin-bottom:4px;">1,000%</div>
+          <div style="font-size:0.78rem; color:var(--text-muted);">Maximum Lootboxu</div>
+        </div>
+        <div style="padding:20px; background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:var(--radius-md);">
+          <div style="font-size:1.6rem; margin-bottom:8px;">🌟</div>
+          <div style="font-family:var(--font-display); font-size:1.1rem; font-weight:800; color:var(--gold-primary); margin-bottom:4px;">3 úrovně</div>
+          <div style="font-size:0.78rem; color:var(--text-muted);">Welcome Quests</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== BONUS FAQ ===== -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Časté otázky</span>
+      <h2>Bonus <span class="gold-text">FAQ</span></h2>
+      <p>Vše, co potřebujete vědět o uplatnění, průchodu a maximalizaci vašich bonusů JackPoker. Pokud zde vaše otázka nenajde odpověď, náš tým podpory je dostupný nepřetržitě přes live chat.</p>
+    </div>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Jak si nárokuji uvítací bonus JackPoker?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Uplatnění uvítacího bonusu je přímočaré. Nejprve si zaregistrujte nový účet JackPoker pomocí tlačítka "Hrát nyní" na této stránce. Během registrace uvidíte pole pro promo kód – zadejte <strong>WELCOME</strong> tam. Pokud pole při registraci přeskočíte, můžete ho zadat také v sekci akcí vašeho účtu před prvním vkladem.</p>
+            <p>Jakmile je promo kód aktivní, proveďte první vklad pomocí libovolné podporované platební metody s minimální částkou $20. Váš 300% match bonus a 20% okamžitý kredit v hotovosti se oba zobrazí na vašem účtu okamžitě po potvrzení vkladu. Váš Welcome Lootbox bude připraven k otevření ihned a vaše Welcome Questy začnou automaticky sledovat postup. Žádné další kroky, žádné čekání na schválení – vše se aktivuje při vašem prvním vkladu.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Jaké jsou požadavky na protočení uvítacího bonusu?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Uvítací bonus JackPoker podléhá požadavku na protočení ve výši 6násobku hodnoty bonusu v generovaném rake. To znamená, že musíte vygenerovat rake rovnající se šestinásobku hodnoty vašeho bonusu, abyste plně odemkli bonusové prostředky a převedli je na vyplatitelnou hotovost. Rake se generuje automaticky při hraní rukou za reálné peníze u libovolného stolu cash hry.</p>
+            <p>Pro ilustraci: pokud vložíte $200 a obdržíte bonus $600 (300% match), museli byste vygenerovat celkový rake $3 600, abyste bonus plně vyčistili. Pro aktivní hráče u stolů se středními sázkami je to typicky dosažitelné v průběhu 60denního okna platnosti bonusu. 20% okamžitý kredit v hotovosti nemá žádný další požadavek na protočení – je okamžitě k dispozici jako součást vašeho hlavního zůstatku.</p>
+            <p>Bonusové prostředky se uvolňují postupně s tím, jak získáváte rake – nemusíte splnit celý požadavek, než se jakýkoli bonus převede. S generovaným rake se odpovídající části vašeho bonusu průběžně odemykají a stávají se vyplatitelnými.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Kdy bonusy expirují a co se stane, pokud je nevyčistím včas?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Uvítací bonus expiruje 60 dní od data vašeho způsobilého vkladu. Jakákoli část bonusu, která nebyla odemknuta prostřednictvím generování rake do data expirace, bude z vašeho účtu odebrána. To se týká specificky části match bonusu – 20% okamžitá hotovost připsaná v době vkladu je již plně vaše a nepodléhá expiraci.</p>
+            <p>Welcome Questy mají samostatný termín: všechny tři úrovně questů (Silver, Gold a Supernova) musí být dokončeny do 90 dnů od registrace účtu. Postup v nedokončených questech je ukládán, takže libovolné úkoly, které jste částečně dokončili, se budou počítat k celkovému součtu úrovně, pokud dokončíte před termínem.</p>
+            <p>Pokud se domníváte, že jste blízko vyčištění bonusu, ale potřebujete krátké prodloužení, kontaktujte náš tým podpory. Ačkoli prodloužení jsou řešena případ od případu a nejsou garantována, snažíme se vyjít vstříc hráčům, kteří prokazují skutečné zapojení s platformou.</p>
+          </div>
+        </div>
+        </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Mohu si nárokovat více bonusů současně?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Balíček uvítacího bonusu (300% match + 20% okamžitá hotovost + Welcome Lootbox + Welcome Questy) je jednorázová nabídka pro nové hráče při jejich prvním vkladu. Na jednom účtu nelze nárokovat více uvítacích bonusů. Jeden účet na hráče, jeden uvítací balíček na celý život.</p>
+            <p>Průběžné akce však probíhají souběžně s uvítacím bonusem a nejsou s ním v konfliktu. Můžete se zúčastnit Freeroll Festivalu, cash dropů Cash Carnival, turnaje Big Bang Sunday a VIP rakeback programu – to vše zároveň, když pracujete na splnění požadavku na protočení uvítacího bonusu. Není třeba vybírat – naše akce jsou navrženy tak, aby se vzájemně doplňovaly.</p>
+            <p>Reload vkladové bonusy jsou stávajícím hráčům nabízeny pravidelně. Ty jsou odděleny od uvítacího balíčku a lze je přijmout po vyčištění uvítacího bonusu. VIP členové dostávají personalizované nabídky reloadu častěji a za výhodnějších podmínek.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Je promo kód WELCOME jediný kód, který funguje v JackPoker?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>WELCOME je náš primární a nejhodnotnější propagační kód – odemyká celý uvítací balíček pro nové hráče včetně 300% matche, 20% okamžité hotovosti, Lootboxu a všech tří úrovní Welcome Questu. Tento kód doporučujeme všem novým hráčům registrujícím se poprvé.</p>
+            <p>Čas od času vydáváme také časově omezené propagační kódy během speciálních akcí, sezónních kampaní a prostřednictvím našich affiliate partnerů. Tyto kódy mohou odemknout specifické bonusy jako balíčky turnajových vstupenek, vylepšené reload bonusy nebo posilovače multiplikátoru Lootboxu. Veškeré aktivní propagační kódy budou zveřejněny na naší stránce akcí a komunikovány prostřednictvím našich oficiálních kanálů na sociálních sítích.</p>
+            <p>Pokud jste obdrželi jiný kód prostřednictvím akce nebo partnera, můžete ho zadat v sekci akcí vašeho účtu a zjistit přesně, co odemkne, než ho aktivujete. Nikdy nesdílejte své propagační kódy s ostatními, protože kódy jsou obvykle svázány s individuálními účty.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Jak funguje rakeback a jak zkontrolovat svůj zůstatek?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Program v JackPoker se počítá jako procento z hrubého rake, který generujete u všech stolů cash hry. Pokaždé, když jste rozdáni do ruky, která dojde na flop a z potu je stažen rake, je váš podíl tohoto rake sledován v reálném čase. Procento z vašeho celkového rake – určené vaší VIP úrovní – je průběžně automaticky vráceno na váš zůstatek.</p>
+            <p>Všichni noví hráči začínají na úrovni Bronze s 5% rakebackem. S rostoucím měsíčním objemem rake postupujete přes Silver (10%), Gold (15%) a Diamond (20%). Svůj aktuální zůstatek rakebacku, celoživotně vydělané rakeback a stav úrovně můžete kdykoli zkontrolovat v sekci Účet vašeho panelu JackPoker na kartě Loajalita a odměny.</p>
+            <p>Program je připsán na váš hlavní zůstatek – nikoli na nevyřízený nebo bonusový zůstatek – což znamená, že je okamžitě k dispozici pro hru nebo výběr. Na rakeback není žádný požadavek na protočení na žádné úrovni. Je to jednoduše náš způsob, jak vracet hodnotu hráčům, kteří udržují naše stoly v provozu.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Mohu vybrat bonus před splněním požadavku na protočení?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Prostředky match bonusu (část 300%) musí být před výběrem protočeny podle požadavku 6násobku rake. Tyto prostředky jsou drženy v nevyřízeném bonusovém zůstatku odděleném od vašeho zůstatku v reálných penězích. S generovaným rake se bonus postupně převádí do vašeho hlavního zůstatku v segmentech – celý bonus nelze vybrat najednou před protočením, ale části, které se již převedly, vybrat lze.</p>
+            <p>Okamžitý kredit v hotovosti 20 % je zcela jiná záležitost. Tento kredit je vložen přímo na váš hlavní zůstatek v době vašeho prvního vkladu a nemá žádný požadavek na protočení. Můžete ho vybrat kdykoli, s výhradou pouze našich standardních minimálních limitů pro výběry a standardního procesu KYC ověření požadovaného pro všechny výběry.</p>
+            <p>Pokud se rozhodnete vybrat před plným vyčištěním uvítacího bonusu, zbývající nepřevedený zůstatek bonusu bude propadnut. Doporučujeme projít celým požadavkem před zahájením výběru, abyste zajistili, že získáte každý dolar hodnoty vašeho bonusu.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta">
+  <div class="container">
+    <div class="cta-inner">
+      <span class="section-label" style="display:block; margin-bottom:16px;">Připraven hrát?</span>
+      <h2>Získej svůj <span class="gold-text">300% bonus</span> Dnes</h2>
+      <p>Připojte se k JackPoker nyní a získejte nejštědřejší uvítací balíček v online pokeru. Váš 300% match až do $2 000, 20% okamžitá hotovost, multiplikátor Lootboxu a Welcome Questy – vše čeká na vás a vše odemkne jediný vklad s promo kódem WELCOME.</p>
+
+      <div style="display:flex; justify-content:center; margin:24px 0;">
+        <div class="promo-code-large">
+          <div class="code-text">WELCOME</div>
+          <button class="code-copy-btn btn-copy" onclick="copyPromoCode()">📋 Kopírovat</button>
+        </div>
+      </div>
+      <p id="copyFeedback2" style="color:var(--success); font-size:0.85rem; min-height:20px; margin-bottom:24px;"></p>
+
+      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-bottom:32px;">
+        <a href="https://go.jack-full.com/c41f796e" class="btn btn-primary btn-lg">Hrát nyní v JackPoker ♠</a>
+        <a href="promo-code.html" class="btn btn-secondary btn-lg">Více o kódu WELCOME</a>
+      </div>
+
+      <p style="color:var(--text-faint); font-size:0.8rem; max-width:520px; margin:0 auto;">18+ | Hrajte zodpovědně | Licencováno v Anjouan, Union of Comoros | Certifikováno iTech Labs, BMM TestLabs &amp; GLI | Platí podmínky a požadavky na protočení.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Promo Code CTA — Bonuses Context -->
+<aside class="promo-cta-inline" style="background: linear-gradient(135deg, rgba(137,59,247,0.08), rgba(246,186,70,0.08)); border: 1px solid rgba(246,186,70,0.2); border-radius: 16px; padding: 32px 36px; margin: 48px 0; position: relative; overflow: hidden;">
+  <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--gold-primary), #FF3D00);"></div>
+  <div style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 280px;">
+      <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 8px;">Aktivujte všechny bonusy jedním kódem</h3>
+      <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin: 0;">Každý bonus na této stránce se odemkne zadáním <a href="promo-code.html" style="color: var(--gold-primary); font-weight: 700; text-decoration: underline;">promo kódu WELCOME</a> při registraci. Kód aktivuje 300% match, 20% okamžitou hotovost, Welcome Lootbox a Welcome Questy současně. Přečtěte si náš <a href="promo-code.html" style="color: var(--gold-primary); font-weight: 600;">průvodce aktivací promo kódu krok za krokem</a> a ujistěte se, že získáte vše.</p>
+    </div>
+    <div style="flex-shrink: 0;">
+      <a href="promo-code.html" class="btn btn-cta" style="white-space: nowrap;">Získat promo kód →</a>
+    </div>
+  </div>
+</aside>
+
+<!-- ===== FOOTER ===== -->
+
+    <!-- Latest News Links -->
+    <section style="padding: 24px 0 0;">
+      <div class="container">
+        <h3 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; color: var(--text-primary);">Novinky z JackPoker</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <a href="news/winter-games-festival-wraps-with-record-breaking-21m-in-payo.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">Zimní herní festival: výplaty $2,1M →</a>
+          <a href="news/bonus-bonanza-march-schedule-620-events-125m-in-guarantees.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">Bonus Bonanza březen: $1,25M GTD →</a>
+          <a href="news/jackpoker-mobile-app-30-launches-with-multi-table-support.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">Mobilní aplikace 3.0 spuštěna →</a>
+          <a href="news/crypto-deposits-now-available-in-sol-matic-and-ton.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">Kryptoměnové vklady: SOL, MATIC, TON →</a>
+        </div>
+      </div>
+    </section>
+
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="JackPoker Home">
+        <svg class="logo-icon" width="189" height="47" viewBox="0 0 189 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="JackPoker">
+<path d="M25.4001 1C24.0001 1 22.8001 2.2 22.8001 3.6C22.8001 5.1 23.8343 5.9 25.3001 5.9H28.7001C28.7001 5.9 31.3001 5.9 31.3001 8.3C31.3001 10.7 28.7001 10.7 28.7001 10.7H8.30008C6.90008 10.7 5.70008 11.9 5.70008 13.3C5.70008 14.7 6.90008 15.9 8.30008 15.9H22.5001C22.5001 15.9 25.1001 15.9 25.1001 18.3C25.1001 20.7 22.5001 20.7 22.5001 20.7H11.4001C10.0001 20.7 8.80008 21.9 8.80008 23.3C8.80008 24.7 10.0001 25.9 11.4001 25.9H22.6001C22.6001 25.9 25.2001 25.9 25.2001 28.3C25.2001 30.7 22.6001 30.7 22.6001 30.7H21.8001C20.4001 30.7 19.2001 31.9 19.2001 33.3C19.2001 34.7 20.4001 35.9 21.8001 35.9H28.8001C28.8001 35.9 31.4001 35.9 31.4001 38.3C31.4001 40.7 28.8001 40.7 28.8001 40.7H14.0001C12.6001 40.7 11.4001 41.9 11.4001 43.3C11.4001 44.7 12.6001 45.9 14.0001 45.9H34.3001C36.5001 45.9 38.4001 44.8 39.5001 43C41.1501 40.25 42.7751 37.4999 44.4001 34.7499C46.0251 31.9999 47.6501 29.25 49.3001 26.5C50.4001 24.6 50.4001 22.3 49.3001 20.4C47.6501 17.6501 46.0252 14.9001 44.4002 12.1502C42.7752 9.4002 41.1501 6.65001 39.5001 3.9C38.4001 2.1 36.4001 1 34.3001 1H25.4001Z" fill="url(#jpLogoGrad)"/>
+<path d="M11.3999 3.6C11.3999 2.2 12.5999 1 13.9999 1H17.5999C18.9999 1 20.1999 2.2 20.1999 3.6C20.1999 5 18.9999 6.2 17.5999 6.2H13.9999C12.5999 6.2 11.3999 5 11.3999 3.6Z" fill="url(#jpLogoGrad)"/>
+<path d="M0 23.5001C0 22.1001 1.2 20.9001 2.6 20.9001H3.6C5 20.9001 6.2 22.1001 6.2 23.5001C6.2 24.9001 5 26.1001 3.6 26.1001H2.6C1.2 26.1001 0 24.9001 0 23.5001Z" fill="url(#jpLogoGrad)"/>
+<path d="M8.30008 30.8001C6.90008 30.8001 5.70008 32.0001 5.70008 33.4001C5.70008 34.9001 6.90008 36.1001 8.30008 36.0001H14.0001C15.4001 36.0001 16.6001 34.8001 16.6001 33.4001C16.6001 32.0001 15.4001 30.8001 14.0001 30.8001H8.30008Z" fill="url(#jpLogoGrad)"/>
+<path d="M69.7955 27.3088C69.7955 28.8312 69.6204 30.0793 69.2704 31.0533C68.9203 32.0273 68.3261 32.7598 67.4876 33.2509C66.6572 33.7502 65.5257 33.9998 64.0929 33.9998C63.7591 33.9998 63.3887 33.9712 62.9817 33.9139C62.5747 33.8648 62.3142 33.832 62.2002 33.8157L62.5177 31.2252H63.7144C65.1797 31.2252 65.9164 30.4231 65.9246 28.8189V15.265L64.0441 14.5039V12.3676L71.676 12.2449V14.5039L69.7955 15.265V27.3088Z" fill="white"/>
+<path d="M81.4937 28.3401C81.4937 28.3728 81.2779 28.557 80.8465 28.8926C80.415 29.2281 79.8981 29.5351 79.2957 29.8133C78.6933 30.0834 78.0746 30.2185 77.4396 30.2185C76.2185 30.2185 75.2619 29.8788 74.57 29.1995C73.8862 28.512 73.5443 27.538 73.5443 26.2775C73.5443 24.837 74.0571 23.7853 75.0829 23.1223C76.1086 22.4594 77.6024 22.1279 79.5643 22.1279H81.3227V20.7406C81.3227 19.5129 80.6796 18.9031 79.3934 18.9113C79.0107 18.9113 78.6566 18.94 78.331 18.9973C78.0054 19.0545 77.7449 19.1159 77.5495 19.1814C77.3622 19.2387 77.2442 19.2755 77.1954 19.2919L76.8168 20.8756H74.57L74.399 17.1557C74.5456 17.1066 74.9038 17.0002 75.4736 16.8365C76.0516 16.6728 76.7395 16.5173 77.5373 16.37C78.3432 16.2226 79.1044 16.149 79.8207 16.149C81.107 16.149 82.1286 16.3127 82.8857 16.6401C83.6428 16.9593 84.1964 17.4831 84.5464 18.2115C84.8965 18.9318 85.0715 19.9017 85.0715 21.1212V27.3334L86.952 27.7876V29.8011L81.9455 29.9729L81.4937 28.3401ZM77.1709 25.897C77.1709 26.388 77.2971 26.7645 77.5495 27.0264C77.81 27.2802 78.1763 27.407 78.6485 27.407C79.0474 27.407 79.4422 27.3006 79.833 27.0878C80.2237 26.8668 80.5534 26.6418 80.822 26.4126C81.0907 26.1752 81.2576 26.0197 81.3227 25.9461V24.2641H79.894C78.9253 24.2641 78.2292 24.3951 77.8059 24.657C77.3826 24.9189 77.1709 25.3322 77.1709 25.897Z" fill="white"/>
+<path d="M100.311 28.0823C99.7492 28.5897 99.0124 29.0726 98.1007 29.531C97.1971 29.9893 96.1428 30.2185 94.938 30.2185C92.8866 30.2185 91.291 29.6169 90.1513 28.4137C89.0116 27.2106 88.4417 25.5327 88.4417 23.3802C88.4417 21.1376 89.0442 19.3737 90.249 18.0888C91.4619 16.7956 93.1511 16.149 95.3166 16.149C95.9515 16.149 96.5906 16.2145 97.2337 16.3454C97.885 16.4764 98.4263 16.6114 98.8578 16.7506C99.2974 16.8815 99.5742 16.9715 99.6881 17.0206L99.566 21.1457H97.3192L96.9651 19.3656C96.8836 19.3492 96.6801 19.3124 96.3545 19.2551C96.0289 19.1896 95.6585 19.1569 95.2433 19.1569C94.3234 19.1569 93.6029 19.472 93.0819 20.1022C92.5691 20.7324 92.3126 21.6573 92.3126 22.8768C92.3126 24.2682 92.5731 25.3404 93.0942 26.0934C93.6233 26.8382 94.4048 27.2106 95.4387 27.2106C96.0899 27.2106 96.6598 27.1124 97.1482 26.916C97.6448 26.7113 98.06 26.5026 98.3937 26.2898C98.7275 26.077 98.9514 25.9379 99.0654 25.8724L100.311 28.0823Z" fill="white"/>
+<path d="M108.602 21.4527L110.3 18.8868L109.201 18.5307V16.5173L115.66 16.3945V18.5307L113.902 18.8622L111.582 22.1525L114.378 27.3579L116.283 27.9595V29.9729H111.655L108.553 23.8344H106.954V27.3334L108.334 27.9595V29.9729H101.202V27.9595L103.205 27.3334V13.2025L101.202 12.6991V10.6857L106.954 10.4893V21.4527H108.602Z" fill="white"/>
+<path d="M117.406 27.8367L119.275 27.0756V15.265L117.406 14.5039V12.3676L123.158 12.2449H125.527C127.423 12.2449 128.909 12.7155 129.984 13.6567C131.066 14.598 131.608 15.8871 131.608 17.524C131.608 19.6029 130.993 21.1703 129.764 22.2261C128.543 23.2819 126.78 23.8099 124.477 23.8099H123.158V27.0756L125.026 27.8367V29.9729H117.406V27.8367ZM124.477 20.8756C125.527 20.8756 126.333 20.6342 126.894 20.1513C127.456 19.6602 127.737 18.9522 127.737 18.0274C127.737 17.1925 127.513 16.5255 127.065 16.0262C126.626 15.5188 125.991 15.265 125.16 15.265H123.158V20.8756H124.477Z" fill="white"/>
+<path d="M139.74 16.149C141.751 16.149 143.302 16.7383 144.393 17.9169C145.492 19.0955 146.041 20.7692 146.041 22.9382C146.041 24.4278 145.764 25.721 145.211 26.8177C144.665 27.9145 143.892 28.7575 142.891 29.3468C141.89 29.9279 140.713 30.2185 139.362 30.2185C135.112 30.2185 132.988 27.9145 132.988 23.3065C132.988 21.8169 133.264 20.536 133.818 19.4638C134.38 18.3916 135.169 17.5731 136.187 17.0084C137.205 16.4354 138.389 16.149 139.74 16.149ZM139.606 19.1569C138.662 19.1569 137.966 19.4638 137.518 20.0776C137.078 20.6915 136.859 21.7269 136.859 23.1837C136.859 24.5751 137.066 25.5941 137.481 26.2407C137.905 26.8873 138.572 27.2106 139.484 27.2106C140.404 27.2106 141.08 26.8873 141.511 26.2407C141.942 25.5941 142.158 24.5342 142.158 23.061C142.158 21.7514 141.955 20.7733 141.548 20.1267C141.141 19.4802 140.493 19.1569 139.606 19.1569Z" fill="white"/>
+<path d="M154.809 21.4527L156.506 18.8868L155.407 18.5307V16.5173L161.867 16.3945V18.5307L160.108 18.8622L157.788 22.1525L160.585 27.3579L162.49 27.9595V29.9729H157.862L154.76 23.8344H153.16V27.3334L154.54 27.9595V29.9729H147.409V27.9595L149.412 27.3334V13.2025L147.409 12.6991V10.6857L153.16 10.4893V21.4527H154.809Z" fill="white"/>
+<path d="M167.508 24.0186C167.573 25.0253 167.875 25.811 168.412 26.3758C168.957 26.9323 169.666 27.2106 170.537 27.2106C171.155 27.2106 171.774 27.1247 172.393 26.9528C173.02 26.7727 173.536 26.5927 173.944 26.4126C174.359 26.2243 174.623 26.0934 174.737 26.0197L175.812 28.1068C175.812 28.1396 175.519 28.3483 174.933 28.733C174.355 29.1095 173.642 29.4532 172.796 29.7642C171.957 30.0671 171.062 30.2185 170.109 30.2185C167.993 30.2185 166.381 29.6292 165.274 28.4506C164.167 27.272 163.613 25.6023 163.613 23.4415C163.613 21.9847 163.878 20.7079 164.407 19.6111C164.944 18.5062 165.713 17.655 166.715 17.0575C167.716 16.4518 168.904 16.149 170.28 16.149C172.112 16.149 173.516 16.6769 174.493 17.7327C175.47 18.7885 175.958 20.2291 175.958 22.0542C175.958 22.4553 175.938 22.8441 175.897 23.2206C175.857 23.5971 175.828 23.8344 175.812 23.9326L167.508 24.0186ZM170.036 19.1569C169.352 19.1569 168.795 19.3901 168.363 19.8566C167.932 20.315 167.663 20.9207 167.557 21.6737H172.087C172.087 20.9207 171.921 20.315 171.587 19.8566C171.253 19.3901 170.736 19.1569 170.036 19.1569Z" fill="white"/>
+<path d="M183.199 18.1256C183.199 18.0928 183.395 17.9005 183.786 17.5486C184.176 17.1966 184.628 16.8774 185.141 16.591C185.662 16.2963 186.175 16.149 186.68 16.149C187.079 16.149 187.453 16.1817 187.803 16.2472C188.153 16.3127 188.426 16.3822 188.621 16.4559C188.825 16.5296 188.951 16.5746 189 16.591L188.804 21.4281H186.558L186.179 19.2919C185.748 19.2919 185.328 19.3983 184.921 19.6111C184.522 19.8157 184.18 20.0449 183.896 20.2986C183.619 20.5442 183.48 20.6751 183.48 20.6915V27.3334L185.984 27.9595V29.9729H177.729V27.9595L179.732 27.3334V19.1569L177.729 18.5307V16.5173L182.98 16.3945L183.199 18.1256Z" fill="white"/>
+<defs>
+<linearGradient id="jpLogoGrad" x1="0" y1="33.44" x2="50.74" y2="33.44" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8032FF"/>
+<stop offset="1" stop-color="#FF3D00"/>
+</linearGradient>
+</defs>
+</svg>
+      </a>
+        <p>JackPoker je moderní online pokerová platforma nabízející Texas Hold'em, PLO, Spin&Win a turnajovou akci. Licencováno a certifikováno iTech Labs, BMM TestLabs a GLI. Hraj zodpovědně.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Platforma</h4>
+        <ul>
+          <li><a href="games.html">Hry</a></li>
+          <li><a href="tournaments.html">Turnaje</a></li>
+          <li><a href="bonuses.html">Bonusy &amp; Akce</a></li>
+          <li><a href="promo-code.html">Promo kód</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Zdroje</h4>
+        <ul>
+          <li><a href="news.html">Novinky</a></li>
+          <li><a href="https://go.jack-full.com/c41f796e" target="_blank" rel="noopener noreferrer">FAQ</a></li>
+          <li><a href="terms.html">Podmínky služby</a></li>
+          <li><a href="https://go.jack-full.com/c41f796e" target="_blank" rel="noopener noreferrer">Zásady ochrany soukromí</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Platby</h4>
+        <div class="footer-payment-icons">
+          <span>VISA</span><span>Mastercard</span><span>Skrill</span><span>Neteller</span><span>Bitcoin</span><span>Ethereum</span><span>USDT</span><span>Pix</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 JackPoker. Provozováno společností Jack La International Limitada. Licencováno v Anjouanu, Svaz Komory. Hraj zodpovědně. 18+</p>
+      <p>Certifikováno iTech Labs &bull; BMM TestLabs &bull; GLI</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../main.js"></script>
+<script>
+  // Header scroll effect
+  (function() {
+    var header = document.querySelector('.site-header');
+    if (header) {
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 10) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+    }
+  })();
+
+  // Mobile menu
+  (function() {
+    var toggle = document.getElementById('menuToggle');
+    var nav = document.getElementById('mainNav');
+    if (toggle && nav) {
+      toggle.addEventListener('click', function() {
+        nav.classList.toggle('open');
+      });
+    }
+  })();
+
+  // FAQ accordion
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = this.closest('.faq-item');
+        var wasActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('active'); });
+        if (!wasActive) item.classList.add('active');
+      });
+    });
+  });
+
+  // Promo code copy
+  function copyPromoCode() {
+    var code = 'WELCOME';
+    var feedbacks = document.querySelectorAll('#copyFeedback, #copyFeedback2');
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(code).then(function() {
+        feedbacks.forEach(function(el) { if(el) el.textContent = '✓ Copied to clipboard!'; });
+        setTimeout(function() {
+          feedbacks.forEach(function(el) { if(el) el.textContent = ''; });
+        }, 3000);
+      });
+    } else {
+      var ta = document.createElement('textarea');
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      feedbacks.forEach(function(el) { if(el) el.textContent = '✓ Copied to clipboard!'; });
+      setTimeout(function() {
+        feedbacks.forEach(function(el) { if(el) el.textContent = ''; });
+      }, 3000);
+    }
+  }
+</script>
+</body>
+</html>

@@ -27,7 +27,7 @@ I18N_DIR = ROOT / "i18n"
 TRANSLATIONS_DIR = I18N_DIR / "translations"
 TRANSLATIONS_DIR.mkdir(exist_ok=True)
 
-MAIN_PAGES = ["index.html", "games.html", "tournaments.html", "bonuses.html", "promo-code.html", "news.html"]
+MAIN_PAGES = ["index.html", "games.html", "tournaments.html", "bonuses.html", "promo-code.html", "news.html", "terms.html"]
 
 # Auto-discover news article pages
 NEWS_DIR = ROOT / "news"
@@ -36,7 +36,7 @@ NEWS_PAGES = [f"news/{f.name}" for f in sorted(NEWS_DIR.glob("*.html"))] if NEWS
 PAGES = MAIN_PAGES + NEWS_PAGES
 
 LANGUAGES = {
-    "en": {"name": "English", "flag_code": "US"},
+    "en": {"name": "English", "flag_code": "GB"},
     "ru": {"name": "Русский", "flag_code": "RU"},
     "es": {"name": "Español", "flag_code": "ES"},
     "it": {"name": "Italiano", "flag_code": "IT"},
@@ -44,6 +44,10 @@ LANGUAGES = {
     "vi": {"name": "Tiếng Việt", "flag_code": "VN"},
     "th": {"name": "ไทย", "flag_code": "TH"},
     "ms": {"name": "Bahasa Melayu", "flag_code": "MY"},
+    "ko": {"name": "한국어", "flag_code": "KR"},
+    "ar": {"name": "العربية", "flag_code": "SA"},
+    "pl": {"name": "Polski", "flag_code": "PL"},
+    "cs": {"name": "Čeština", "flag_code": "CZ"},
 }
 
 BASE_URL = "https://jackpoker.poker"
@@ -372,18 +376,30 @@ def build():
                 html = re.sub(r'<html\s+lang="[^"]*"', f'<html lang="{lang_code}"', html, count=1)
                 html = fix_asset_paths(html, lang_code, page)
                 
-                # Canonical
-                old_canonical = f'{BASE_URL}/{page}'
+                # Canonical — regex replacement to handle all URL formats
                 new_canonical = f'{BASE_URL}/{lang_code}/{page}'
-                html = html.replace(f'href="{old_canonical}"', f'href="{new_canonical}"', 1)
+                html = re.sub(
+                    r'<link\s+rel="canonical"\s+href="[^"]*"\s*/?>',
+                    f'<link rel="canonical" href="{new_canonical}" />',
+                    html, count=1
+                )
                 
                 # Hreflang + switcher
                 html = html.replace('</head>', build_hreflang_tags(page) + '\n</head>', 1)
                 html = inject_switcher(html, lang_code, page)
                 
-                # Font support
+                # Font support + RTL
                 if lang_code == "th":
                     html = html.replace('</head>', '<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">\n</head>', 1)
+                elif lang_code == "ko":
+                    html = html.replace('</head>', '<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">\n</head>', 1)
+                elif lang_code == "pl" or lang_code == "cs":
+                    # Polish and Czech use Latin Extended characters — Inter covers them, no extra font needed
+                    pass
+                elif lang_code == "ar":
+                    # Arabic: RTL direction + Arabic font
+                    html = re.sub(r'<html\s+lang="ar"', '<html lang="ar" dir="rtl"', html, count=1)
+                    html = html.replace('</head>', '<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">\n<style>\n/* Arabic RTL overrides */\n[dir="rtl"] { font-family: "Noto Sans Arabic", var(--font-body); }\n[dir="rtl"] .nav-links { flex-direction: row-reverse; }\n[dir="rtl"] .nav-cta { margin-left: 0; margin-right: auto; }\n[dir="rtl"] .hero-content { text-align: right; }\n[dir="rtl"] .feature-card, [dir="rtl"] .game-card { text-align: right; }\n[dir="rtl"] .lang-switcher { left: auto; }\n[dir="rtl"] .footer-grid { direction: rtl; }\n[dir="rtl"] .breadcrumb { direction: rtl; }\n[dir="rtl"] .news-card-content { text-align: right; }\n[dir="rtl"] .promo-steps { direction: rtl; }\n[dir="rtl"] .step-number { margin-right: 0; margin-left: 1rem; }\n</style>\n</head>', 1)
                 
                 out_path = ROOT / lang_code / page
                 out_path.parent.mkdir(parents=True, exist_ok=True)

@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JackPoker 프로모 코드 WELCOME — 최대 $2,000 300% 보너스</title>
+  <meta name="description" content="JackPoker 프로모 코드 WELCOME을 사용하여 최대 $2,000의 300% 첫 입금 매칭, 20% 즉시 현금, 웰컴 룻박스 보상을 받으세요." />
+  <link rel="icon" type="image/svg+xml" href="../assets/images/jackpoker-favicon.svg" />
+  <link rel="icon" type="image/png" sizes="180x180" href="../assets/images/jackpoker-logo-official.png" />
+  <link rel="canonical" href="https://jackpoker.poker/ko/promo-code.html" />
+  <meta property="og:title" content="JackPoker 프로모 코드 WELCOME — 300% 보너스" />
+  <meta property="og:description" content="JackPoker에서 프로모 코드 WELCOME을 사용하여 최대 $2,000의 300% 입금 매칭, 즉시 현금 및 룻박스 보상을 받으세요." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jackpoker.poker/promo-code" />
+  <meta property="og:image" content="https://jackpoker.poker/assets/images/hero-poker.jpg" />
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* ============================================
+       PROMO CODE PAGE — Additional Styles
+       ============================================ */
+
+    /* Large focal promo code box */
+    .promo-focal {
+      background: linear-gradient(145deg, #221E2E, #1a162a);
+      border: 2px solid rgba(246,186,70,0.45);
+      border-radius: var(--radius-xl);
+      padding: 48px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 60px rgba(246,186,70,0.08), 0 8px 40px rgba(0,0,0,0.4);
+    }
+
+    .promo-focal::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #F4AD23, #F6BA46, #F4AD23);
+    }
+
+    .promo-focal-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .promo-focal-code {
+      font-family: 'Courier New', 'Lucida Console', monospace;
+      font-size: clamp(2.8rem, 7vw, 5rem);
+      font-weight: 900;
+      letter-spacing: 0.18em;
+      background: linear-gradient(180deg, #FBE1B0, #F6BA46);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 24px;
+      display: block;
+    }
+
+    .promo-focal-copy-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 40px;
+      background: var(--gradient-btn-gold);
+      color: #000000;
+      font-weight: 800;
+      font-size: 1rem;
+      border: none;
+      border-radius: var(--radius-md);
+      cursor: pointer;
+      transition: all 0.25s ease;
+      letter-spacing: 0.02em;
+      font-family: var(--font-body);
+      margin-bottom: 20px;
+    }
+
+    .promo-focal-copy-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 32px rgba(246,186,70,0.4);
+    }
+
+    .promo-focal-copy-btn.copied {
+      background: var(--gradient-btn-cta);
+    }
+
+    .promo-focal-sub {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      max-width: 360px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .promo-focal-glow {
+      position: absolute;
+      bottom: -80px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 300px;
+      height: 200px;
+      background: var(--gold-primary);
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.06;
+      pointer-events: none;
+    }
+
+    /* Bonus breakdown cards */
+    .bonus-item {
+      background: var(--gradient-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      transition: all 0.3s ease;
+    }
+
+    .bonus-item:hover {
+      border-color: rgba(246,186,70,0.25);
+      box-shadow: 0 6px 32px rgba(246,186,70,0.07);
+      transform: translateY(-3px);
+    }
+
+    .bonus-item-icon {
+      width: 56px;
+      height: 56px;
+      min-width: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(246,186,70,0.1);
+      border-radius: var(--radius-md);
+      font-size: 1.6rem;
+    }
+
+    .bonus-item-body h3 {
+      font-size: 1.1rem;
+      margin-bottom: 4px;
+    }
+
+    .bonus-item-body .bonus-value {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--gold-primary);
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+
+    .bonus-item-body p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    /* Step-by-step guide */
+    .steps-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .step-item {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      position: relative;
+    }
+
+    .step-item:last-child {
+      border-bottom: none;
+    }
+
+    .step-number {
+      width: 48px;
+      height: 48px;
+      min-width: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--gradient-btn-primary);
+      border-radius: 50%;
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-white);
+      flex-shrink: 0;
+      box-shadow: 0 4px 20px rgba(137,59,247,0.3);
+    }
+
+    .step-content h3 {
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+    }
+
+    .step-content p {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      margin: 0;
+      line-height: 1.75;
+    }
+
+    .step-content .step-code {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 4px 14px;
+      background: rgba(246,186,70,0.12);
+      border: 1px solid rgba(246,186,70,0.25);
+      border-radius: var(--radius-sm);
+      font-family: 'Courier New', monospace;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--gold-primary);
+      letter-spacing: 0.1em;
+    }
+
+    /* Calculator highlight row */
+    .data-table .highlight-row td {
+      background: rgba(246,186,70,0.06);
+      color: var(--gold-primary);
+      font-weight: 700;
+    }
+
+    .data-table .highlight-row td:first-child {
+      border-left: 3px solid var(--gold-primary);
+    }
+
+    .calc-total {
+      font-family: var(--font-display);
+      font-weight: 800;
+      color: var(--success);
+      font-size: 1rem;
+    }
+
+    /* T&C list */
+    .tc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .tc-list li {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 20px 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      font-size: 0.93rem;
+      line-height: 1.7;
+      color: var(--text-body);
+    }
+
+    .tc-list li .tc-icon {
+      font-size: 1.3rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .tc-list li strong {
+      color: var(--text-white);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    /* Why JackPoker cards */
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 1024px) {
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .why-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Cash Carnival highlight */
+    .carnival-box {
+      background: linear-gradient(145deg, #221E2E, #1a162a);
+      border: 1px solid rgba(246,186,70,0.2);
+      border-radius: var(--radius-xl);
+      padding: 48px 40px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .carnival-box::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #F6BA46, #893BF7, transparent);
+    }
+
+    .carnival-box-icon {
+      font-size: 6rem;
+      line-height: 1;
+      flex-shrink: 0;
+      filter: drop-shadow(0 0 20px rgba(246,186,70,0.3));
+    }
+
+    .carnival-box-content h3 {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+    }
+
+    .carnival-box-content .carnival-prize {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 900;
+      color: var(--gold-primary);
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .carnival-box-content p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      max-width: 520px;
+      margin-bottom: 16px;
+    }
+
+    /* Payment method categories */
+    .payment-category {
+      margin-bottom: 32px;
+    }
+
+    .payment-category-label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    /* Final CTA section */
+    .final-cta {
+      background: linear-gradient(180deg, var(--bg-secondary) 0%, #000000 100%);
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(246,186,70,0.06) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .final-cta-glow-purple {
+      position: absolute;
+      top: -100px;
+      right: -100px;
+      width: 400px;
+      height: 400px;
+      background: var(--purple-primary);
+      border-radius: 50%;
+      filter: blur(160px);
+      opacity: 0.08;
+      pointer-events: none;
+    }
+
+    .final-cta-glow-gold {
+      position: absolute;
+      bottom: -100px;
+      left: -100px;
+      width: 400px;
+      height: 400px;
+      background: var(--gold-primary);
+      border-radius: 50%;
+      filter: blur(160px);
+      opacity: 0.06;
+      pointer-events: none;
+    }
+
+    .final-cta-inner {
+      position: relative;
+      z-index: 2;
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    .final-cta-inner h2 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      margin-bottom: 16px;
+    }
+
+    .final-cta-inner .lead {
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      margin-bottom: 40px;
+      line-height: 1.8;
+    }
+
+    .final-promo-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      background: var(--bg-card);
+      border: 2px solid rgba(246,186,70,0.4);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      max-width: 400px;
+      margin: 0 auto 32px;
+      box-shadow: 0 0 40px rgba(246,186,70,0.1);
+    }
+
+    .final-promo-value {
+      flex: 1;
+      padding: 18px 28px;
+      font-family: 'Courier New', monospace;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--gold-primary);
+      letter-spacing: 0.18em;
+      text-align: center;
+    }
+
+    .final-promo-copy {
+      padding: 18px 24px;
+      background: var(--gradient-btn-gold);
+      color: #000000;
+      font-weight: 800;
+      font-size: 0.85rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: var(--font-body);
+      letter-spacing: 0.02em;
+    }
+
+    .final-promo-copy:hover { opacity: 0.9; }
+
+    .urgency-badges {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    .urgency-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 16px;
+      background: rgba(255,61,0,0.1);
+      border: 1px solid rgba(255,61,0,0.25);
+      border-radius: 100px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #FF6B35;
+    }
+
+    .live-dot {
+      width: 6px;
+      height: 6px;
+      background: #FF3D00;
+      border-radius: 50%;
+      animation: pulse 1.5s ease infinite;
+    }
+
+    /* Bonus grid layout */
+    .bonus-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .bonus-grid { grid-template-columns: 1fr; }
+      .carnival-box { flex-direction: column; gap: 24px; text-align: center; }
+      .carnival-box-content .carnival-prize { font-size: 2.4rem; }
+      .final-cta { padding: 72px 0; }
+      .promo-focal { padding: 36px 24px; }
+      .promo-focal-code { font-size: 3rem; }
+      .promo-main-grid { grid-template-columns: 1fr !important; gap: 24px !important; }
+      .carnival-box-content .carnival-prize { font-size: 2rem; }
+      .section { padding: 48px 0; }
+      .container { padding: 0 16px; }
+      h2 { font-size: 1.6rem; }
+      .hero-section h1 { font-size: 2rem; }
+      .hero-section p { font-size: 1rem; }
+    }
+  </style>
+<script>
+    (function(){var t=null;try{var m=document.cookie.match(/jp-theme=([^;]+)/);if(m)t=m[1]}catch(e){}document.documentElement.setAttribute("data-theme",t||"dark")})();
+  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "JackPoker",
+  "url": "https://jackpoker.poker",
+  "logo": "https://jackpoker.poker/assets/images/jackpoker-logo-official.png",
+  "description": "Modern online poker platform offering Texas Hold'em, PLO, Spin&Win tournaments, and more. Licensed and certified.",
+  "foundingDate": "2021",
+  "sameAs": [
+    "https://jack-poker.com",
+    "https://t.me/jackpokerclub"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "url": "https://jack-poker.com/support",
+    "availableLanguage": [
+      "English",
+      "Russian",
+      "Portuguese",
+      "Spanish"
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://jackpoker.poker"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Promo Code",
+      "item": "https://jackpoker.poker/promo-code.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Offer",
+  "name": "JackPoker Promo Code WELCOME",
+  "description": "Use promo code WELCOME to unlock 300% up to $2,000 welcome bonus at JackPoker",
+  "url": "https://jackpoker.poker/promo-code.html",
+  "priceCurrency": "USD",
+  "price": "0",
+  "category": "Promo Code",
+  "validFrom": "2024-01-01",
+  "seller": {
+    "@type": "Organization",
+    "name": "JackPoker"
+  }
+}
+</script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the JackPoker promo code for 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The official JackPoker promo code for 2026 is WELCOME. Enter this code during registration to unlock a 300% first deposit match up to $2,000, 20% instant cash, a Welcome Lootbox with up to 1,000% bonus multiplier, and access to the Welcome Quest reward program."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I use the JackPoker promo code WELCOME?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Visit JackPoker and click Create Account. During registration, look for the I have a referral code option and enter WELCOME. After completing registration, make your first deposit of at least $10. The 300% match bonus, 20% instant cash, and Welcome Lootbox activate automatically."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the maximum bonus with the WELCOME promo code?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The maximum match bonus is $2,000 from a deposit of approximately $667. You also receive 20% instant cash up to $400, a Welcome Lootbox with up to 1,000% additional bonus, and Welcome Quest rewards worth up to $635 at the Supernova tier. The total potential value exceeds $3,000."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does the WELCOME promo code work for poker and casino?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The WELCOME promo code activates bonuses for both poker and casino. The 300% match and 20% instant cash apply to all games including Texas Hold'em, PLO, Spin and Win, tournaments, and casino titles."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use the JackPoker bonus code on mobile?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The WELCOME promo code works on the JackPoker mobile app for iOS and Android and the browser-based web client. Enter it during registration and your bonuses activate regardless of platform."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the 300% match bonus unlock at JackPoker?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The 300% match bonus unlocks incrementally as you generate rake. For every $10 in rake contributed, $1 of your bonus converts to real cash. There is no fixed time limit for clearing the bonus."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the JackPoker WELCOME code available worldwide?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "JackPoker accepts players from most countries and the WELCOME promo code is available globally. Players can deposit using VISA, Mastercard, Skrill, Neteller, Bitcoin, Ethereum, USDT, SOL, and other payment methods."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the minimum deposit to activate the WELCOME bonus?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The minimum first deposit is $10. Even at this minimum, you receive $30 in bonus funds, $2 in instant cash, a Welcome Lootbox, and Silver-tier Welcome Quests. Higher deposits unlock Gold at $100+ and Supernova at $500+."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "JackPoker",
+    "applicationCategory": "GameApplication",
+    "operatingSystem": "Web, iOS, Android",
+    "description": "Online poker platform offering Texas Hold'em, PLO, Spin & Win, tournaments, and casino games with 300% welcome bonus.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Use promo code WELCOME for 300% deposit match up to $2,000"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.6",
+      "ratingCount": "2847",
+      "bestRating": "5"
+    }
+  }
+  </script>
+<link rel="alternate" hreflang="en" href="https://jackpoker.poker/promo-code.html" />
+<link rel="alternate" hreflang="ru" href="https://jackpoker.poker/ru/promo-code.html" />
+<link rel="alternate" hreflang="es" href="https://jackpoker.poker/es/promo-code.html" />
+<link rel="alternate" hreflang="it" href="https://jackpoker.poker/it/promo-code.html" />
+<link rel="alternate" hreflang="pt" href="https://jackpoker.poker/pt/promo-code.html" />
+<link rel="alternate" hreflang="vi" href="https://jackpoker.poker/vi/promo-code.html" />
+<link rel="alternate" hreflang="th" href="https://jackpoker.poker/th/promo-code.html" />
+<link rel="alternate" hreflang="ms" href="https://jackpoker.poker/ms/promo-code.html" />
+<link rel="alternate" hreflang="ko" href="https://jackpoker.poker/ko/promo-code.html" />
+<link rel="alternate" hreflang="ar" href="https://jackpoker.poker/ar/promo-code.html" />
+<link rel="alternate" hreflang="pl" href="https://jackpoker.poker/pl/promo-code.html" />
+<link rel="alternate" hreflang="cs" href="https://jackpoker.poker/cs/promo-code.html" />
+<link rel="alternate" hreflang="x-default" href="https://jackpoker.poker/promo-code.html" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ============================================
+       HEADER
+       ============================================ -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="JackPoker Home">
+        <svg class="logo-icon" width="189" height="47" viewBox="0 0 189 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="JackPoker">
+<path d="M25.4001 1C24.0001 1 22.8001 2.2 22.8001 3.6C22.8001 5.1 23.8343 5.9 25.3001 5.9H28.7001C28.7001 5.9 31.3001 5.9 31.3001 8.3C31.3001 10.7 28.7001 10.7 28.7001 10.7H8.30008C6.90008 10.7 5.70008 11.9 5.70008 13.3C5.70008 14.7 6.90008 15.9 8.30008 15.9H22.5001C22.5001 15.9 25.1001 15.9 25.1001 18.3C25.1001 20.7 22.5001 20.7 22.5001 20.7H11.4001C10.0001 20.7 8.80008 21.9 8.80008 23.3C8.80008 24.7 10.0001 25.9 11.4001 25.9H22.6001C22.6001 25.9 25.2001 25.9 25.2001 28.3C25.2001 30.7 22.6001 30.7 22.6001 30.7H21.8001C20.4001 30.7 19.2001 31.9 19.2001 33.3C19.2001 34.7 20.4001 35.9 21.8001 35.9H28.8001C28.8001 35.9 31.4001 35.9 31.4001 38.3C31.4001 40.7 28.8001 40.7 28.8001 40.7H14.0001C12.6001 40.7 11.4001 41.9 11.4001 43.3C11.4001 44.7 12.6001 45.9 14.0001 45.9H34.3001C36.5001 45.9 38.4001 44.8 39.5001 43C41.1501 40.25 42.7751 37.4999 44.4001 34.7499C46.0251 31.9999 47.6501 29.25 49.3001 26.5C50.4001 24.6 50.4001 22.3 49.3001 20.4C47.6501 17.6501 46.0252 14.9001 44.4002 12.1502C42.7752 9.4002 41.1501 6.65001 39.5001 3.9C38.4001 2.1 36.4001 1 34.3001 1H25.4001Z" fill="url(#jpLogoGrad)"/>
+<path d="M11.3999 3.6C11.3999 2.2 12.5999 1 13.9999 1H17.5999C18.9999 1 20.1999 2.2 20.1999 3.6C20.1999 5 18.9999 6.2 17.5999 6.2H13.9999C12.5999 6.2 11.3999 5 11.3999 3.6Z" fill="url(#jpLogoGrad)"/>
+<path d="M0 23.5001C0 22.1001 1.2 20.9001 2.6 20.9001H3.6C5 20.9001 6.2 22.1001 6.2 23.5001C6.2 24.9001 5 26.1001 3.6 26.1001H2.6C1.2 26.1001 0 24.9001 0 23.5001Z" fill="url(#jpLogoGrad)"/>
+<path d="M8.30008 30.8001C6.90008 30.8001 5.70008 32.0001 5.70008 33.4001C5.70008 34.9001 6.90008 36.1001 8.30008 36.0001H14.0001C15.4001 36.0001 16.6001 34.8001 16.6001 33.4001C16.6001 32.0001 15.4001 30.8001 14.0001 30.8001H8.30008Z" fill="url(#jpLogoGrad)"/>
+<path d="M69.7955 27.3088C69.7955 28.8312 69.6204 30.0793 69.2704 31.0533C68.9203 32.0273 68.3261 32.7598 67.4876 33.2509C66.6572 33.7502 65.5257 33.9998 64.0929 33.9998C63.7591 33.9998 63.3887 33.9712 62.9817 33.9139C62.5747 33.8648 62.3142 33.832 62.2002 33.8157L62.5177 31.2252H63.7144C65.1797 31.2252 65.9164 30.4231 65.9246 28.8189V15.265L64.0441 14.5039V12.3676L71.676 12.2449V14.5039L69.7955 15.265V27.3088Z" fill="white"/>
+<path d="M81.4937 28.3401C81.4937 28.3728 81.2779 28.557 80.8465 28.8926C80.415 29.2281 79.8981 29.5351 79.2957 29.8133C78.6933 30.0834 78.0746 30.2185 77.4396 30.2185C76.2185 30.2185 75.2619 29.8788 74.57 29.1995C73.8862 28.512 73.5443 27.538 73.5443 26.2775C73.5443 24.837 74.0571 23.7853 75.0829 23.1223C76.1086 22.4594 77.6024 22.1279 79.5643 22.1279H81.3227V20.7406C81.3227 19.5129 80.6796 18.9031 79.3934 18.9113C79.0107 18.9113 78.6566 18.94 78.331 18.9973C78.0054 19.0545 77.7449 19.1159 77.5495 19.1814C77.3622 19.2387 77.2442 19.2755 77.1954 19.2919L76.8168 20.8756H74.57L74.399 17.1557C74.5456 17.1066 74.9038 17.0002 75.4736 16.8365C76.0516 16.6728 76.7395 16.5173 77.5373 16.37C78.3432 16.2226 79.1044 16.149 79.8207 16.149C81.107 16.149 82.1286 16.3127 82.8857 16.6401C83.6428 16.9593 84.1964 17.4831 84.5464 18.2115C84.8965 18.9318 85.0715 19.9017 85.0715 21.1212V27.3334L86.952 27.7876V29.8011L81.9455 29.9729L81.4937 28.3401ZM77.1709 25.897C77.1709 26.388 77.2971 26.7645 77.5495 27.0264C77.81 27.2802 78.1763 27.407 78.6485 27.407C79.0474 27.407 79.4422 27.3006 79.833 27.0878C80.2237 26.8668 80.5534 26.6418 80.822 26.4126C81.0907 26.1752 81.2576 26.0197 81.3227 25.9461V24.2641H79.894C78.9253 24.2641 78.2292 24.3951 77.8059 24.657C77.3826 24.9189 77.1709 25.3322 77.1709 25.897Z" fill="white"/>
+<path d="M100.311 28.0823C99.7492 28.5897 99.0124 29.0726 98.1007 29.531C97.1971 29.9893 96.1428 30.2185 94.938 30.2185C92.8866 30.2185 91.291 29.6169 90.1513 28.4137C89.0116 27.2106 88.4417 25.5327 88.4417 23.3802C88.4417 21.1376 89.0442 19.3737 90.249 18.0888C91.4619 16.7956 93.1511 16.149 95.3166 16.149C95.9515 16.149 96.5906 16.2145 97.2337 16.3454C97.885 16.4764 98.4263 16.6114 98.8578 16.7506C99.2974 16.8815 99.5742 16.9715 99.6881 17.0206L99.566 21.1457H97.3192L96.9651 19.3656C96.8836 19.3492 96.6801 19.3124 96.3545 19.2551C96.0289 19.1896 95.6585 19.1569 95.2433 19.1569C94.3234 19.1569 93.6029 19.472 93.0819 20.1022C92.5691 20.7324 92.3126 21.6573 92.3126 22.8768C92.3126 24.2682 92.5731 25.3404 93.0942 26.0934C93.6233 26.8382 94.4048 27.2106 95.4387 27.2106C96.0899 27.2106 96.6598 27.1124 97.1482 26.916C97.6448 26.7113 98.06 26.5026 98.3937 26.2898C98.7275 26.077 98.9514 25.9379 99.0654 25.8724L100.311 28.0823Z" fill="white"/>
+<path d="M108.602 21.4527L110.3 18.8868L109.201 18.5307V16.5173L115.66 16.3945V18.5307L113.902 18.8622L111.582 22.1525L114.378 27.3579L116.283 27.9595V29.9729H111.655L108.553 23.8344H106.954V27.3334L108.334 27.9595V29.9729H101.202V27.9595L103.205 27.3334V13.2025L101.202 12.6991V10.6857L106.954 10.4893V21.4527H108.602Z" fill="white"/>
+<path d="M117.406 27.8367L119.275 27.0756V15.265L117.406 14.5039V12.3676L123.158 12.2449H125.527C127.423 12.2449 128.909 12.7155 129.984 13.6567C131.066 14.598 131.608 15.8871 131.608 17.524C131.608 19.6029 130.993 21.1703 129.764 22.2261C128.543 23.2819 126.78 23.8099 124.477 23.8099H123.158V27.0756L125.026 27.8367V29.9729H117.406V27.8367ZM124.477 20.8756C125.527 20.8756 126.333 20.6342 126.894 20.1513C127.456 19.6602 127.737 18.9522 127.737 18.0274C127.737 17.1925 127.513 16.5255 127.065 16.0262C126.626 15.5188 125.991 15.265 125.16 15.265H123.158V20.8756H124.477Z" fill="white"/>
+<path d="M139.74 16.149C141.751 16.149 143.302 16.7383 144.393 17.9169C145.492 19.0955 146.041 20.7692 146.041 22.9382C146.041 24.4278 145.764 25.721 145.211 26.8177C144.665 27.9145 143.892 28.7575 142.891 29.3468C141.89 29.9279 140.713 30.2185 139.362 30.2185C135.112 30.2185 132.988 27.9145 132.988 23.3065C132.988 21.8169 133.264 20.536 133.818 19.4638C134.38 18.3916 135.169 17.5731 136.187 17.0084C137.205 16.4354 138.389 16.149 139.74 16.149ZM139.606 19.1569C138.662 19.1569 137.966 19.4638 137.518 20.0776C137.078 20.6915 136.859 21.7269 136.859 23.1837C136.859 24.5751 137.066 25.5941 137.481 26.2407C137.905 26.8873 138.572 27.2106 139.484 27.2106C140.404 27.2106 141.08 26.8873 141.511 26.2407C141.942 25.5941 142.158 24.5342 142.158 23.061C142.158 21.7514 141.955 20.7733 141.548 20.1267C141.141 19.4802 140.493 19.1569 139.606 19.1569Z" fill="white"/>
+<path d="M154.809 21.4527L156.506 18.8868L155.407 18.5307V16.5173L161.867 16.3945V18.5307L160.108 18.8622L157.788 22.1525L160.585 27.3579L162.49 27.9595V29.9729H157.862L154.76 23.8344H153.16V27.3334L154.54 27.9595V29.9729H147.409V27.9595L149.412 27.3334V13.2025L147.409 12.6991V10.6857L153.16 10.4893V21.4527H154.809Z" fill="white"/>
+<path d="M167.508 24.0186C167.573 25.0253 167.875 25.811 168.412 26.3758C168.957 26.9323 169.666 27.2106 170.537 27.2106C171.155 27.2106 171.774 27.1247 172.393 26.9528C173.02 26.7727 173.536 26.5927 173.944 26.4126C174.359 26.2243 174.623 26.0934 174.737 26.0197L175.812 28.1068C175.812 28.1396 175.519 28.3483 174.933 28.733C174.355 29.1095 173.642 29.4532 172.796 29.7642C171.957 30.0671 171.062 30.2185 170.109 30.2185C167.993 30.2185 166.381 29.6292 165.274 28.4506C164.167 27.272 163.613 25.6023 163.613 23.4415C163.613 21.9847 163.878 20.7079 164.407 19.6111C164.944 18.5062 165.713 17.655 166.715 17.0575C167.716 16.4518 168.904 16.149 170.28 16.149C172.112 16.149 173.516 16.6769 174.493 17.7327C175.47 18.7885 175.958 20.2291 175.958 22.0542C175.958 22.4553 175.938 22.8441 175.897 23.2206C175.857 23.5971 175.828 23.8344 175.812 23.9326L167.508 24.0186ZM170.036 19.1569C169.352 19.1569 168.795 19.3901 168.363 19.8566C167.932 20.315 167.663 20.9207 167.557 21.6737H172.087C172.087 20.9207 171.921 20.315 171.587 19.8566C171.253 19.3901 170.736 19.1569 170.036 19.1569Z" fill="white"/>
+<path d="M183.199 18.1256C183.199 18.0928 183.395 17.9005 183.786 17.5486C184.176 17.1966 184.628 16.8774 185.141 16.591C185.662 16.2963 186.175 16.149 186.68 16.149C187.079 16.149 187.453 16.1817 187.803 16.2472C188.153 16.3127 188.426 16.3822 188.621 16.4559C188.825 16.5296 188.951 16.5746 189 16.591L188.804 21.4281H186.558L186.179 19.2919C185.748 19.2919 185.328 19.3983 184.921 19.6111C184.522 19.8157 184.18 20.0449 183.896 20.2986C183.619 20.5442 183.48 20.6751 183.48 20.6915V27.3334L185.984 27.9595V29.9729H177.729V27.9595L179.732 27.3334V19.1569L177.729 18.5307V16.5173L182.98 16.3945L183.199 18.1256Z" fill="white"/>
+<defs>
+<linearGradient id="jpLogoGrad" x1="0" y1="33.44" x2="50.74" y2="33.44" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8032FF"/>
+<stop offset="1" stop-color="#FF3D00"/>
+</linearGradient>
+</defs>
+</svg>
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">홈</a>
+        <a href="games.html">게임</a>
+        <a href="bonuses.html">보너스</a>
+        <a href="tournaments.html">토너먼트</a>
+        <a href="news.html">뉴스</a>
+        <a href="promo-code.html" class="active">프로모 코드</a>
+      </nav>
+      <a href="https://go.jack-full.com/c41f796e" class="header-cta header-cta-desktop">지금 플레이 ♠</a>
+     <div class="lang-switcher">
+  <button class="lang-btn" aria-label="Change language" aria-expanded="false">
+    <span class="lang-flag">KR</span>
+    <span class="lang-label">한국어</span>
+    <svg class="lang-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  </button>
+  <div class="lang-dropdown" role="menu">
+    <a href="../promo-code.html" role="menuitem" hreflang="en"><span class="lang-flag">GB</span><span>English</span></a>
+    <a href="../ru/promo-code.html" role="menuitem" hreflang="ru"><span class="lang-flag">RU</span><span>Русский</span></a>
+    <a href="../es/promo-code.html" role="menuitem" hreflang="es"><span class="lang-flag">ES</span><span>Español</span></a>
+    <a href="../it/promo-code.html" role="menuitem" hreflang="it"><span class="lang-flag">IT</span><span>Italiano</span></a>
+    <a href="../pt/promo-code.html" role="menuitem" hreflang="pt"><span class="lang-flag">BR</span><span>Português</span></a>
+    <a href="../vi/promo-code.html" role="menuitem" hreflang="vi"><span class="lang-flag">VN</span><span>Tiếng Việt</span></a>
+    <a href="../th/promo-code.html" role="menuitem" hreflang="th"><span class="lang-flag">TH</span><span>ไทย</span></a>
+    <a href="../ms/promo-code.html" role="menuitem" hreflang="ms"><span class="lang-flag">MY</span><span>Bahasa Melayu</span></a>
+    <a href="promo-code.html" class="active" role="menuitem" hreflang="ko"><span class="lang-flag">KR</span><span>한국어</span></a>
+    <a href="../ar/promo-code.html" role="menuitem" hreflang="ar"><span class="lang-flag">SA</span><span>العربية</span></a>
+    <a href="../pl/promo-code.html" role="menuitem" hreflang="pl"><span class="lang-flag">PL</span><span>Polski</span></a>
+    <a href="../cs/promo-code.html" role="menuitem" hreflang="cs"><span class="lang-flag">CZ</span><span>Čeština</span></a>
+  </div>
+</div>
+        <button class="theme-toggle" aria-label="Toggle theme">
+       <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 1.78a1 1 0 011.415 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM18 9a1 1 0 110 2h-1a1 1 0 110-2h1zM3 9a1 1 0 110 2H2a1 1 0 110-2h1zm12.657 6.071l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 011.414-1.414zM5.757 4.929a1 1 0 010 1.414l-.707.707A1 1 0 013.636 5.636l.707-.707a1 1 0 011.414 0zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1z" fill="currentColor"/><circle cx="10" cy="10" r="3.5" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+       <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/></svg>
+     </button>
+  </div>
+</header>
+
+<!-- Breadcrumb Navigation -->
+<nav class="breadcrumb-nav" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">홈</span></a>
+        <meta itemprop="position" content="1" />
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span itemprop="name">프로모 코드 WELCOME</span>
+        <meta itemprop="position" content="2" />
+      </li>
+    </ol>
+  </div>
+</nav>
+
+
+  <!-- Page Hero with H1 -->
+  <section style="padding: calc(var(--header-height) + 48px) 0 24px; background: linear-gradient(180deg, rgba(246,186,70,0.06) 0%, transparent 100%); position: relative; overflow: hidden;">
+    <div class="container">
+      <h1 style="font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 900; letter-spacing: -0.03em; margin-bottom: 12px;" data-i18n="promo_hero_title">JackPoker 프로모 코드: WELCOME</h1>
+      <p style="color: var(--text-muted); font-size: 1.08rem; max-width: 640px; line-height: 1.7;" data-i18n="promo_hero_subtitle">하나의 코드로 최대 $2,000의 300% 입금 매칭, 즉시 현금, 룻박스 보상, 독점 웰컴 퀘스트를 잠금 해제하세요.</p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       2. MAIN PROMO CODE BOX (Focal Point)
+       ============================================ -->
+  <section class="section" style="background: var(--bg-primary);">
+    <div class="container">
+      <div class="promo-main-grid" style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 48px; align-items: center;">
+        <div>
+          <span class="section-label">나만의 독점 코드</span>
+          <h2 style="margin-bottom:16px;">하나의 코드. <span class="gold-text">완전한 패키지.</span></h2>
+          <p>프로모 코드를 사용하여 JackPoker에 가입하면 <strong style="color:var(--gold-primary);">WELCOME</strong>, 단순한 보너스가 아니라 — 완전한 JackPoker 웰컴 경험을 잠금 해제합니다. 첫 입금에 300% 매칭,</p>
+          <p>코드는 완전히 무료로 사용 가능합니다. 구독도, 함정도, 복잡한 자격 과정도 없습니다. 단순히 <strong style="color:var(--gold-primary);">WELCOME</strong> 프로모 코드 필드에, 첫 입금을 하세요. 모든 것이 자동으로 적용됩니다.</p>
+          <p>이 웰컴 혜택은 온라인 포커에서 가장 후한 것 중 하나입니다. 저희의 300% 매칭은 최대 $2,000까지, 즉 $667를 $2,667으로 만들 수 있습니다.</p>
+        </div>
+        <div>
+          <div class="promo-focal">
+            <div class="promo-focal-glow"></div>
+            <p class="promo-focal-label">공식 JackPoker 프로모 코드</p>
+            <span class="promo-focal-code" id="focalCode">WELCOME</span>
+            <br />
+            <button class="promo-focal-copy-btn" id="focalCopyBtn" onclick="copyFocalCode()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              <span id="focalCopyText">클립보드에 복사</span>
+            </button>
+            <p class="promo-focal-sub">등록 시 이 코드를 사용하여 전체 웰컴 패키지를 잠금 해제하세요. 모든 신규 플레이어에게 유효합니다.</p>
+          </div>
+          <div style="margin-top:20px; text-align:center;">
+            <a href="https://go.jack-full.com/c41f796e" class="btn btn-primary" style="width:100%;">지금 등록 & 코드 사용 ♠</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       3. WHAT YOU GET — Detailed Breakdown
+       ============================================ -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">웰컴 패키지 분석</span>
+        <h2>코드로 잠금 해제하는 모든 것 <span class="gold-text">WELCOME</span></h2>
+        <p>저희 웰컴 패키지는 하나의 보너스가 아닙니다 — 가능한 가장 강력한 시작을 위해 함께 작동하는 5가지 개별 보상입니다.</p>
+      </div>
+
+      <div class="bonus-grid">
+        <!-- 300% Match -->
+        <div class="bonus-item">
+          <div class="bonus-item-icon">💰</div>
+          <div class="bonus-item-body">
+            <h3>첫 입금 매칭</h3>
+            <div class="bonus-value">최대 $2,000의 300%</div>
+            <p>저희는 첫 입금을 3배로, 최대 $2,000의 보너스로 합니다. $667를 입금하면 계정에 $2,667이 있어 플레이할 수 있습니다.</p>
+          </div>
+        </div>
+
+        <!-- 20% Instant Cash -->
+        <div class="bonus-item">
+          <div class="bonus-item-icon">⚡</div>
+          <div class="bonus-item-body">
+            <h3>20% 즉시 현금</h3>
+            <div class="bonus-value">즉시 지급</div>
+            <p>300% 매칭 외에도, 첫 입금의 20%를 즉시 사용 가능한 현금으로 크레딧합니다. 잠금이 아닙니다 — $100을 입금하면 즉시 $20을 받아 원하는 모든 게임에 사용할 수 있습니다. 즉시 사용 가능하며, 웨이저링 없이도 출금 가능합니다.</p>
+          </div>
+        </div>
+
+        <!-- Welcome Lootbox -->
+        <div class="bonus-item">
+          <div class="bonus-item-icon">🎁</div>
+          <div class="bonus-item-body">
+            <h3>웰컴 룻박스</h3>
+            <div class="bonus-value">최대 1,000% 무작위 멀티플라이어</div>
+            <p>프로모 코드 WELCOME으로 등록하는 모든 신규 플레이어는 무작위 보너스 멀티플라이어가 들어있는 웰컴 룻박스를 받습니다.</p>
+          </div>
+        </div>
+
+        <!-- Welcome Quests -->
+        <div class="bonus-item">
+          <div class="bonus-item-icon">🏆</div>
+          <div class="bonus-item-body">
+            <h3>웰컴 퀘스트</h3>
+            <div class="bonus-value">실버 · 골드 · 슈퍼노바</div>
+            <p>웰컴 퀘스트는 JackPoker를 탐색하면서 보상을 주는 일련의 미션입니다. 세 가지 티어가 있습니다.</p>
+          </div>
+        </div>
+
+        <!-- VIP Fast-Track -->
+        <div class="bonus-item" style="grid-column: 1 / -1;">
+          <div class="bonus-item-icon">💎</div>
+          <div class="bonus-item-body">
+            <h3>VIP 패스트 트랙 등록</h3>
+            <div class="bonus-value">최대 20% 평생 프로그램</div>
+            <p>프로모 코드 WELCOME 사용은 첫날부터 저희 VIP 프로그램에 등록됩니다. 레이크를 쌓으면서 VIP 포인트를 획득합니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       4. HOW TO USE THE PROMO CODE
+       ============================================ -->
+  <section class="section section-surface">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">단계별 가이드</span>
+        <h2>프로모 코드 사용 방법 <span class="gold-text">WELCOME</span></h2>
+        <p>웰컴 보너스 수령은 5분 미만 소요됩니다. 이 6단계를 따르면 전체 웰컴 패키지가 활성화됩니다.</p>
+      </div>
+
+      <div class="steps-list">
+        <div class="step-item">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>JackPoker 방문 및 등록 클릭</h3>
+            <p>이 페이지의 링크를 통해 JackPoker 플랫폼으로 이동하거나 사이트로 직접 이동하세요. "등록" 버튼을 클릭하세요.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>세부 정보 입력</h3>
+            <p>이름, 이메일 주소, 생년월일, 안전한 비밀번호로 짧은 등록 양식을 작성하세요.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>프로모 코드 필드에 프로모 코드 WELCOME 입력</h3>
+            <p>등록 중 — 또는 입금 페이지에서 — "프로모 코드" 또는 "보너스 코드" 필드를 볼 수 있습니다. 클릭하고 코드를 입력하세요.</p>
+            <span class="step-code">WELCOME</span>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>첫 입금</h3>
+            <p>광범위한 선택에서 선호하는 결제 방법을 선택하세요 — VISA, Mastercard, Skrill, Neteller, Bitcoin, Ethereum, USDT 및 기타 다양한 방법. 첫 입금 최소 $20 이상으로 시작하세요. 최대 $2,000을 받으려면 정확히 $667을 입금하거나 그 이상을 입금하세요.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <h3>300% 보너스가 자동으로 지급됩니다</h3>
+            <p>첫 입금이 완료되는 즉시, 웰컴 패키지가 활성화됩니다. 300% 보너스가 계정에 추가되고 지급이 시작됩니다.</p>
+          </div>
+        </div>
+
+        <div class="step-item">
+          <div class="step-number">6</div>
+          <div class="step-content">
+            <h3>플레이 시작 및 추가 보상을 위한 웰컴 퀘스트 완료</h3>
+            <p>NL10부터 NL2000까지 캐시 게임에 참가하거나 $1,000,000 잭팟을 위한 Spin&Win을 시도하세요. 모든 핸드가 VIP 포인트를 획득합니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:48px;">
+        <a href="https://go.jack-full.com/c41f796e" class="btn btn-primary btn-lg">시작 — 코드 WELCOME 사용 ♠</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       5. BONUS CALCULATOR
+       ============================================ -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">보너스 계산기</span>
+        <h2>정확히 무엇을 받는지 확인</h2>
+        <p>얼마를 입금해야 할지 모르시나요? 다양한 입금 금액에서 프로모 코드 WELCOME이 잠금 해제하는 것을 명확하게 분석했습니다.</p>
+      </div>
+
+      <div class="highlight-box gold" style="margin-bottom: 32px;">
+        <h4>300% 매칭 작동 방식</h4>
+        <p>입금액에 3배를 곱하여 보너스 자금으로 추가됩니다. 이 보너스 자금은 레이크를 획득하면서 점진적으로 지급됩니다.</p>
+      </div>
+
+      <div style="overflow-x: auto;">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>입금액</th>
+              <th>300% 보너스</th>
+              <th>20% 즉시 현금</th>
+              <th>총 플레이 자금</th>
+              <th>실질 가치</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong style="color:var(--text-white);">$20</strong> <span class="badge badge-purple" style="margin-left:8px;">최소 입금</span></td>
+              <td>$60</td>
+              <td>$4</td>
+              <td class="calc-total">$84</td>
+              <td><span class="badge badge-green">자금의 4.2배</span></td>
+            </tr>
+            <tr>
+              <td><strong style="color:var(--text-white);">$25</strong></td>
+              <td>$75</td>
+              <td>$5</td>
+              <td class="calc-total">$105</td>
+              <td><span class="badge badge-green">자금의 4.2배</span></td>
+            </tr>
+            <tr>
+              <td><strong style="color:var(--text-white);">$100</strong></td>
+              <td>$300</td>
+              <td>$20</td>
+              <td class="calc-total">$420</td>
+              <td><span class="badge badge-green">자금의 4.2배</span></td>
+            </tr>
+            <tr>
+              <td><strong style="color:var(--text-white);">$250</strong></td>
+              <td>$750</td>
+              <td>$50</td>
+              <td class="calc-total">$1,050</td>
+              <td><span class="badge badge-green">자금의 4.2배</span></td>
+            </tr>
+            <tr>
+              <td><strong style="color:var(--text-white);">$500</strong></td>
+              <td>$1,500</td>
+              <td>$100</td>
+              <td class="calc-total">$2,100</td>
+              <td><span class="badge badge-green">자금의 4.2배</span></td>
+            </tr>
+            <tr class="highlight-row">
+              <td><strong>$667</strong> <span class="badge badge-gold" style="margin-left:8px;">최대 보너스</span></td>
+              <td>$2,000</td>
+              <td>$133</td>
+              <td>$2,800</td>
+              <td><span class="badge badge-gold">자금의 4.2배</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 16px; text-align: center;">* 300% 보너스는 첫 입금에 최대 $2,000까지 적용됩니다. $667 이상 입금도 전액 $2,000 보너스를 받습니다.</p>
+
+      <div style="text-align:center; margin-top:40px;">
+        <a href="https://go.jack-full.com/c41f796e" class="btn btn-gold btn-lg">등록 & 보너스 받기 ♠</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       6. TERMS & CONDITIONS
+       ============================================ -->
+  <section class="section section-surface">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">보너스 약관</span>
+        <h2>보너스 약관 & 조건</h2>
+        <p>저희는 완전한 투명성을 믿습니다. WELCOME 보너스 작동 방식, 지급 방식, 극대화 방법에 대해 알아야 할 모든 것입니다.</p>
+      </div>
+
+      <ul class="tc-list">
+        <li>
+          <span class="tc-icon">📋</span>
+          <div>
+            <strong>웨이저링 요건</strong>
+            300% 입금 보너스는 자금을 출금하기 전에 웨이저링 요건이 적용됩니다. 정확한 웨이저링 요건은
+          </div>
+        </li>
+        <li>
+          <span class="tc-icon">🔓</span>
+          <div>
+            <strong>보너스 지급 방식</strong>
+            300% 웰컴 보너스는 한 번에 크레딧되지 않습니다 — 플레이하면서 점진적으로 지급됩니다. 캐시 포커 또는 토너먼트 바이인을 납부하는 모든 핸드마다.
+          </div>
+        </li>
+        <li>
+          <span class="tc-icon">⚡</span>
+          <div>
+            <strong>즉시 현금은 즉시 사용 가능</strong>
+            웰컴 패키지의 20% 즉시 현금 구성 요소는 잠금 보너스와 완전히 별개입니다. 귀하의 계정에 크레딧됩니다.
+          </div>
+        </li>
+        <li>
+          <span class="tc-icon">📅</span>
+          <div>
+            <strong>보너스 만료 기간</strong>
+            웰컴 보너스는 첫 입금 후 60일 이내에 완전히 획득해야 합니다. 60일 이내에 획득되지 않은 300% 보너스 부분은
+          </div>
+        </li>
+        <li>
+          <span class="tc-icon">💵</span>
+          <div>
+            <strong>최소 자격 입금</strong>
+            WELCOME 프로모 코드 보너스를 활성화하는 데 필요한 최소 입금액은 $20입니다. 이 임계값 이하의 입금은 활성화되지 않습니다.
+          </div>
+        </li>
+        <li>
+          <span class="tc-icon">🃏</span>
+          <div>
+            <strong>자격 게임</strong>
+            웰컴 보너스는 Texas Hold'em (NL10~NL2000)을 포함한 JackPoker의 모든 캐시 게임 포맷에서 획득 가능합니다.
+          </div>
+        </li>
+        <li>
+          <span class="tc-icon">👤</span>
+          <div>
+            <strong>플레이어당 하나의 보너스</strong>
+            WELCOME 프로모 코드는 신규 플레이어만, 첫 번째 입금에만 이용 가능합니다. 1인당, 가구당, IP 당 1개의 보너스.
+          </div>
+        </li>
+        <li>
+          <span class="tc-icon">📜</span>
+          <div>
+            <strong>전체 약관 적용</strong>
+            이 하이라이트는 WELCOME 보너스의 주요 약관을 요약합니다. 전체 약관은 웹사이트에서 확인하세요.
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================
+       7. WHY JACKPOKER
+       ============================================ -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">플랫폼</span>
+        <h2>플레이어들이 선택하는 이유 <span class="gold-text">JackPoker</span></h2>
+        <p>후한 웰컴 보너스는 시작에 불과합니다. 전 세계 수만 명의 플레이어가 JackPoker를 선택하는 이유가 있습니다.</p>
+      </div>
+
+      <div class="why-grid">
+        <div class="feature-card">
+          <div class="feature-icon">👥</div>
+          <h3>50,000명 이상의 활성 플레이어</h3>
+          <p>저희 플랫폼은 전 세계 50,000명 이상의 활성 플레이어가 있어, 원하는 스테이크에서 항상 가득 찬 테이블을 찾을 수 있습니다.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🏆</div>
+          <h3>월간 토너먼트 상금 $3.5M+</h3>
+          <p>저희는 온라인 포커에서 가장 풍부한 보장 토너먼트 시리즈를 운영합니다. Bonus Bonanza 시리즈만 해도 월 ~$1.25M를 보장하며, Big Bang Sunday는 매주 일요일 $45,000을 보장합니다.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">₿</div>
+          <h3>크립토 친화적 플랫폼</h3>
+          <p>저희는 모든 레벨에서 암호화폐를 수용합니다. Bitcoin, Ethereum, USDT (Tether), TRX (TRON), Litecoin으로 입금 및 출금.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">💎</div>
+          <h3>최대 20% 평생 프로그램</h3>
+          <p>저희 VIP 프로그램은 게임을 진지하게 생각하는 플레이어를 위해 구축되었습니다. 플레이하면서 레이크를 획득하고, VIP 포인트를 쌓고, 잠금 해제하세요.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🎰</div>
+          <h3>일일 프리롤 8개</h3>
+          <p>저희는 매일 8개의 프리롤 토너먼트를 운영하여 월간 $200,000 이상의 프리롤 상금 풀에 기여합니다.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">✅</div>
+          <h3>라이선스 및 인증</h3>
+          <p>JackPoker는 Anjouan, 코모로 연합에서 완전히 라이선스를 취득하였으며, 세 개의 독립 테스트 기관에 의해 인증되었습니다.</p>
+        </div>
+      </div>
+
+      <div style="text-align:center; margin-top:48px;">
+        <a href="https://go.jack-full.com/c41f796e" class="btn btn-purple btn-lg">오늘 50,000명 이상의 플레이어와 함께하세요 ♠</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       8. CURRENT PROMOTIONS — Cash Carnival
+       ============================================ -->
+  <section class="section section-surface">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">지금 라이브</span>
+        <h2>항상 더 많은 일이 일어나고 있습니다</h2>
+        <p>웰컴 보너스는 시작에 불과합니다. JackPoker에서는 모든 세션에 추가 가치를 주는 지속적인 프로모션을 운영합니다.</p>
+      </div>
+
+      <div class="carnival-box">
+        <div class="carnival-box-icon">🎪</div>
+        <div class="carnival-box-content">
+          <span class="badge badge-gold" style="margin-bottom:12px;">
+            <span class="live-dot"></span> 라이브 — 2026년 3월 23일~4월 19일
+          </span>
+          <h3>Cash Carnival</h3>
+          <div class="carnival-prize">$500,000</div>
+          <p>저희 Cash Carnival이 지금 라이브로 진행 중입니다, 2026년 3월 23일부터 4월 19일까지. 자격 캐시 게임 중 3~7핸드마다 현금 폭탄이 테이블에 착석한 모든 플레이어에게 즉시 현금을 뿌립니다. $500,000의 총 상금 풀이 27일에 걸쳐 배포되어 상당한 기대 가치를 창출합니다. 별도 신청 없이, 최소 스테이크 없이 — 그냥 플레이하세요.</p>
+          <p>등록 불필요. 옵트인 없음, 최소 스테이크 없음. 그냥 일상적인 캐시 게임을 플레이하고 폭탄이 알아서 하게 두세요.</p>
+          <a href="bonuses.html" class="btn btn-gold">모든 프로모션 보기</a>
+        </div>
+      </div>
+
+      <div class="grid-3" style="margin-top: 32px;">
+        <div class="card card-sm">
+          <div style="font-size:1.8rem; margin-bottom:12px;">🎯</div>
+          <h4>Bonus Bonanza</h4>
+          <p style="color:var(--text-muted); font-size:0.9rem; margin:0;">보장 토너먼트 상금 풀로 월 ~$1.25M. 매달, 연중 내내 진행됩니다.</p>
+        </div>
+        <div class="card card-sm">
+          <div style="font-size:1.8rem; margin-bottom:12px;">💣</div>
+          <h4>Big Bang Sunday</h4>
+          <p style="color:var(--text-muted); font-size:0.9rem; margin:0;">$30 바이인에 매주 일요일 $45,000 보장. 이용 가능한 최고의 가치 보장 토너먼트 중 하나.</p>
+        </div>
+        <div class="card card-sm">
+          <div style="font-size:1.8rem; margin-bottom:12px;">🎟️</div>
+          <h4>프리롤 페스티벌</h4>
+          <p style="color:var(--text-muted); font-size:0.9rem; margin:0;">8개의 무료 일일 토너먼트에서 월간 $200,000+ 프리롤 상금. 바이인 없음, 실제 현금 상금. 모든 등록 플레이어에게 개방.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       9. PAYMENT METHODS
+       ============================================ -->
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">입금 & 출금</span>
+        <h2>빠르고 유연한 <span class="gold-text">결제 방법</span></h2>
+        <p>저희는 자금을 빠르고 편리하게 입출금할 수 있도록 포괄적인 결제 옵션을 지원합니다.</p>
+      </div>
+
+      <div class="grid-2" style="gap:40px; align-items:start;">
+        <div>
+          <div class="payment-category">
+            <div class="payment-category-label">⚡ 암호화폐 — 가장 빠른 입금</div>
+            <div class="payment-grid">
+              <span class="payment-pill">₿ Bitcoin (BTC)</span>
+              <span class="payment-pill">Ξ Ethereum (ETH)</span>
+              <span class="payment-pill">₮ USDT (Tether)</span>
+              <span class="payment-pill">♦ TRON (TRX)</span>
+              <span class="payment-pill">Ł Litecoin (LTC)</span>
+              <span class="payment-pill">Ð Dogecoin (DOGE)</span>
+              <span class="payment-pill">⬡ BNB</span>
+            </div>
+          </div>
+
+          <div class="payment-category">
+            <div class="payment-category-label">💳 카드 & 은행</div>
+            <div class="payment-grid">
+              <span class="payment-pill">VISA</span>
+              <span class="payment-pill">Mastercard</span>
+              <span class="payment-pill">Interac</span>
+              <span class="payment-pill">Pix</span>
+              <span class="payment-pill">Blik</span>
+            </div>
+          </div>
+
+          <div class="payment-category">
+            <div class="payment-category-label">🏦 전자 지갑 & 선불</div>
+            <div class="payment-grid">
+              <span class="payment-pill">Skrill</span>
+              <span class="payment-pill">Neteller</span>
+              <span class="payment-pill">JetonBank</span>
+              <span class="payment-pill">LuxonPay</span>
+              <span class="payment-pill">Paysafecard</span>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="highlight-box gold">
+            <h4>크립토가 최고의 입금 방법인 이유</h4>
+            <p>JackPoker의 암호화폐 입금은 몇 분 내에 처리되며, 수수료가 최소화되어 완전히 프라이빗합니다.</p>
+          </div>
+
+          <div style="margin-top:20px; padding: 24px; background: var(--bg-card); border: 1px solid var(--border-subtle); border-radius: var(--radius-md);">
+            <h4 style="margin-bottom:12px;">출금 속도</h4>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom:8px;">저희는 출금을 진지하게 생각합니다. 표준 처리 시간:</p>
+            <ul style="list-style:none; padding:0;">
+              <li style="padding: 8px 0; border-bottom: 1px solid var(--border-subtle); font-size:0.9rem; color:var(--text-body); display:flex; justify-content:space-between;">
+                <span>암호화폐</span> <strong style="color:var(--success);">30분 미만</strong>
+              </li>
+              <li style="padding: 8px 0; border-bottom: 1px solid var(--border-subtle); font-size:0.9rem; color:var(--text-body); display:flex; justify-content:space-between;">
+                <span>전자 지갑 (Skrill, Neteller)</span> <strong style="color:var(--gold-primary);">1~24시간</strong>
+              </li>
+              <li style="padding: 8px 0; font-size:0.9rem; color:var(--text-body); display:flex; justify-content:space-between;">
+                <span>카드 / 은행 이체</span> <strong style="color:var(--text-muted);">영업일 1~5일</strong>
+              </li>
+            </ul>
+            <p style="color: var(--text-muted); font-size: 0.82rem; margin-top: 12px; margin-bottom:0;">VIP 회원은 방법에 관계없이 우선 출금 처리를 받습니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       10. FAQ SECTION
+       ============================================ -->
+  <section class="section section-surface">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">자주 묻는 질문</span>
+        <h2>프로모 코드에 대한 모든 것 <span class="gold-text">WELCOME</span></h2>
+        <p>질문이 있으신가요? 저희가 답변드립니다. 신규 플레이어들이 프로모 코드와 웰컴 보너스에 대해 가장 많이 묻는 질문들입니다.</p>
+      </div>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question">
+            JackPoker 프로모 코드는 무엇인가요?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              JackPoker 프로모 코드는 <strong style="color:var(--gold-primary);">WELCOME</strong>입니다. 등록 시 또는 첫 입금 페이지에서 입력하면, 저희의 전체 신규 플레이어 웰컴 패키지를 잠금 해제합니다: 300% 매칭 보너스(최대 $2,000), 20% 즉시 현금, 웰컴 룻박스, 그리고 웰컴 퀘스트.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            프로모 코드를 어떻게 입력하나요?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              등록 과정에서, "프로모 코드", "보너스 코드" 또는 이와 유사한 필드를 볼 수 있습니다. 간단히 입력하세요 <strong>WELCOME</strong> 해당 필드에 계속하세요. 등록 중에 놓쳤다면, 캐셔나 입금 페이지에도 코드를 입력할 수 있습니다.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            모바일에서 프로모 코드를 사용할 수 있나요?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              물론입니다. 프로모 코드 WELCOME은 모든 플랫폼에서 동일하게 작동합니다 — 데스크탑 브라우저, Android APK, iOS PWA.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            프로모 코드를 사용하기 위한 최소 입금액은 얼마인가요?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              프로모 코드 WELCOME을 활성화하는 최소 입금액은 $20입니다. 이 임계값 이하의 입금은 웰컴 패키지를 활성화하지 않습니다.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            기존 플레이어도 WELCOME 프로모 코드를 사용할 수 있나요?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              WELCOME 프로모 코드는 특별히 신규 플레이어를 위한 것으로, 첫 번째 입금에만 적용됩니다. 기존 플레이어라면 현재 활성화된 리로드 보너스 오퍼나 VIP 보상을 확인하세요 — 월 $500 이상의 레이크를 생성하는 VIP 멤버는 개인 리로드 보너스를 받을 수 있습니다.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            웰컴 보너스는 어떻게 지급되나요?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              300% 입금 보너스는 플레이하면서 점진적으로 지급됩니다. 캐시 게임에 레이크를 납부할 때마다
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            보너스를 즉시 출금할 수 있나요?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              300% 입금 보너스 자체는 즉시 출금할 수 없습니다 — 플레이를 통해 점진적으로 지급됩니다. 단, 20%
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            프로모 코드 보너스를 사용하는 시간 제한이 있나요?
+            <span class="faq-icon">+</span>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              예. WELCOME 보너스는 첫 입금 후 60일 이내에 획득해야 합니다. 만료 시점에 남은 미지급 보너스는 계정에서 제거됩니다. 보너스의 일부 지급분(이미 주 계좌로 해제된 부분)은 만료되지 않으며 계속 사용할 수 있습니다. $2,000 최대 한도 적용.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       11. FINAL CTA — Don't Miss Out
+       ============================================ -->
+  <section class="final-cta">
+    <div class="final-cta-glow-purple"></div>
+    <div class="final-cta-glow-gold"></div>
+    <div class="container">
+      <div class="final-cta-inner">
+        <span class="section-label">신규 플레이어 전용</span>
+        <h2>놓치지 마세요 <span class="gold-text">$2,000 웰컴 보너스</span></h2>
+        <p class="lead">매달 수천 명의 신규 플레이어가 JackPoker에 가입하고 이 혜택을 활성화합니다. 프로모 코드 WELCOME은 지금 바로 이용 가능합니다.</p>
+
+        <div class="urgency-badges">
+          <span class="urgency-badge"><span class="live-dot"></span> Cash Carnival 라이브 — 4월 19일 종료</span>
+          <span class="urgency-badge"><span class="live-dot"></span> 현재 온라인 50,000명 이상</span>
+          <span class="urgency-badge"><span class="live-dot"></span> 오늘 일일 프리롤 8개</span>
+        </div>
+
+        <div class="final-promo-box">
+          <span class="final-promo-value">WELCOME</span>
+          <button class="final-promo-copy" onclick="copyFinalCode(this)">코드 복사</button>
+        </div>
+
+        <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-bottom:28px;">
+          <a href="https://go.jack-full.com/c41f796e" class="btn btn-primary btn-lg">지금 플레이 — 코드 WELCOME 사용 ♠</a>
+          <a href="bonuses.html" class="btn btn-secondary btn-lg">모든 보너스 보기</a>
+        </div>
+
+        <p style="font-size:0.82rem; color:var(--text-faint); max-width:520px; margin:0 auto;">신규 플레이어만. 최소 입금 $20. 최대 $2,000 300% 보너스. 플레이를 통해 보너스 지급. 60일 만료. 18세 이상. 책임감 있는 플레이.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  
+    <!-- Latest News Links -->
+    <section style="padding: 24px 0 0;">
+      <div class="container">
+        <h3 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; color: var(--text-primary);">JackPoker 최신 소식</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <a href="news/winter-games-festival-wraps-with-record-breaking-21m-in-payo.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">Winter Games Festival: $2.1M 지급 →</a>
+          <a href="news/bonus-bonanza-march-schedule-620-events-125m-in-guarantees.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">Bonus Bonanza 3월: $1.25M GTD →</a>
+          <a href="news/jackpoker-mobile-app-30-launches-with-multi-table-support.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">모바일 앱 3.0 출시 →</a>
+          <a href="news/crypto-deposits-now-available-in-sol-matic-and-ton.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">크립토 입금: SOL, MATIC, TON →</a>
+        </div>
+      </div>
+    </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="JackPoker Home">
+        <svg class="logo-icon" width="189" height="47" viewBox="0 0 189 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="JackPoker">
+<path d="M25.4001 1C24.0001 1 22.8001 2.2 22.8001 3.6C22.8001 5.1 23.8343 5.9 25.3001 5.9H28.7001C28.7001 5.9 31.3001 5.9 31.3001 8.3C31.3001 10.7 28.7001 10.7 28.7001 10.7H8.30008C6.90008 10.7 5.70008 11.9 5.70008 13.3C5.70008 14.7 6.90008 15.9 8.30008 15.9H22.5001C22.5001 15.9 25.1001 15.9 25.1001 18.3C25.1001 20.7 22.5001 20.7 22.5001 20.7H11.4001C10.0001 20.7 8.80008 21.9 8.80008 23.3C8.80008 24.7 10.0001 25.9 11.4001 25.9H22.6001C22.6001 25.9 25.2001 25.9 25.2001 28.3C25.2001 30.7 22.6001 30.7 22.6001 30.7H21.8001C20.4001 30.7 19.2001 31.9 19.2001 33.3C19.2001 34.7 20.4001 35.9 21.8001 35.9H28.8001C28.8001 35.9 31.4001 35.9 31.4001 38.3C31.4001 40.7 28.8001 40.7 28.8001 40.7H14.0001C12.6001 40.7 11.4001 41.9 11.4001 43.3C11.4001 44.7 12.6001 45.9 14.0001 45.9H34.3001C36.5001 45.9 38.4001 44.8 39.5001 43C41.1501 40.25 42.7751 37.4999 44.4001 34.7499C46.0251 31.9999 47.6501 29.25 49.3001 26.5C50.4001 24.6 50.4001 22.3 49.3001 20.4C47.6501 17.6501 46.0252 14.9001 44.4002 12.1502C42.7752 9.4002 41.1501 6.65001 39.5001 3.9C38.4001 2.1 36.4001 1 34.3001 1H25.4001Z" fill="url(#jpLogoGrad)"/>
+<path d="M11.3999 3.6C11.3999 2.2 12.5999 1 13.9999 1H17.5999C18.9999 1 20.1999 2.2 20.1999 3.6C20.1999 5 18.9999 6.2 17.5999 6.2H13.9999C12.5999 6.2 11.3999 5 11.3999 3.6Z" fill="url(#jpLogoGrad)"/>
+<path d="M0 23.5001C0 22.1001 1.2 20.9001 2.6 20.9001H3.6C5 20.9001 6.2 22.1001 6.2 23.5001C6.2 24.9001 5 26.1001 3.6 26.1001H2.6C1.2 26.1001 0 24.9001 0 23.5001Z" fill="url(#jpLogoGrad)"/>
+<path d="M8.30008 30.8001C6.90008 30.8001 5.70008 32.0001 5.70008 33.4001C5.70008 34.9001 6.90008 36.1001 8.30008 36.0001H14.0001C15.4001 36.0001 16.6001 34.8001 16.6001 33.4001C16.6001 32.0001 15.4001 30.8001 14.0001 30.8001H8.30008Z" fill="url(#jpLogoGrad)"/>
+<path d="M69.7955 27.3088C69.7955 28.8312 69.6204 30.0793 69.2704 31.0533C68.9203 32.0273 68.3261 32.7598 67.4876 33.2509C66.6572 33.7502 65.5257 33.9998 64.0929 33.9998C63.7591 33.9998 63.3887 33.9712 62.9817 33.9139C62.5747 33.8648 62.3142 33.832 62.2002 33.8157L62.5177 31.2252H63.7144C65.1797 31.2252 65.9164 30.4231 65.9246 28.8189V15.265L64.0441 14.5039V12.3676L71.676 12.2449V14.5039L69.7955 15.265V27.3088Z" fill="white"/>
+<path d="M81.4937 28.3401C81.4937 28.3728 81.2779 28.557 80.8465 28.8926C80.415 29.2281 79.8981 29.5351 79.2957 29.8133C78.6933 30.0834 78.0746 30.2185 77.4396 30.2185C76.2185 30.2185 75.2619 29.8788 74.57 29.1995C73.8862 28.512 73.5443 27.538 73.5443 26.2775C73.5443 24.837 74.0571 23.7853 75.0829 23.1223C76.1086 22.4594 77.6024 22.1279 79.5643 22.1279H81.3227V20.7406C81.3227 19.5129 80.6796 18.9031 79.3934 18.9113C79.0107 18.9113 78.6566 18.94 78.331 18.9973C78.0054 19.0545 77.7449 19.1159 77.5495 19.1814C77.3622 19.2387 77.2442 19.2755 77.1954 19.2919L76.8168 20.8756H74.57L74.399 17.1557C74.5456 17.1066 74.9038 17.0002 75.4736 16.8365C76.0516 16.6728 76.7395 16.5173 77.5373 16.37C78.3432 16.2226 79.1044 16.149 79.8207 16.149C81.107 16.149 82.1286 16.3127 82.8857 16.6401C83.6428 16.9593 84.1964 17.4831 84.5464 18.2115C84.8965 18.9318 85.0715 19.9017 85.0715 21.1212V27.3334L86.952 27.7876V29.8011L81.9455 29.9729L81.4937 28.3401ZM77.1709 25.897C77.1709 26.388 77.2971 26.7645 77.5495 27.0264C77.81 27.2802 78.1763 27.407 78.6485 27.407C79.0474 27.407 79.4422 27.3006 79.833 27.0878C80.2237 26.8668 80.5534 26.6418 80.822 26.4126C81.0907 26.1752 81.2576 26.0197 81.3227 25.9461V24.2641H79.894C78.9253 24.2641 78.2292 24.3951 77.8059 24.657C77.3826 24.9189 77.1709 25.3322 77.1709 25.897Z" fill="white"/>
+<path d="M100.311 28.0823C99.7492 28.5897 99.0124 29.0726 98.1007 29.531C97.1971 29.9893 96.1428 30.2185 94.938 30.2185C92.8866 30.2185 91.291 29.6169 90.1513 28.4137C89.0116 27.2106 88.4417 25.5327 88.4417 23.3802C88.4417 21.1376 89.0442 19.3737 90.249 18.0888C91.4619 16.7956 93.1511 16.149 95.3166 16.149C95.9515 16.149 96.5906 16.2145 97.2337 16.3454C97.885 16.4764 98.4263 16.6114 98.8578 16.7506C99.2974 16.8815 99.5742 16.9715 99.6881 17.0206L99.566 21.1457H97.3192L96.9651 19.3656C96.8836 19.3492 96.6801 19.3124 96.3545 19.2551C96.0289 19.1896 95.6585 19.1569 95.2433 19.1569C94.3234 19.1569 93.6029 19.472 93.0819 20.1022C92.5691 20.7324 92.3126 21.6573 92.3126 22.8768C92.3126 24.2682 92.5731 25.3404 93.0942 26.0934C93.6233 26.8382 94.4048 27.2106 95.4387 27.2106C96.0899 27.2106 96.6598 27.1124 97.1482 26.916C97.6448 26.7113 98.06 26.5026 98.3937 26.2898C98.7275 26.077 98.9514 25.9379 99.0654 25.8724L100.311 28.0823Z" fill="white"/>
+<path d="M108.602 21.4527L110.3 18.8868L109.201 18.5307V16.5173L115.66 16.3945V18.5307L113.902 18.8622L111.582 22.1525L114.378 27.3579L116.283 27.9595V29.9729H111.655L108.553 23.8344H106.954V27.3334L108.334 27.9595V29.9729H101.202V27.9595L103.205 27.3334V13.2025L101.202 12.6991V10.6857L106.954 10.4893V21.4527H108.602Z" fill="white"/>
+<path d="M117.406 27.8367L119.275 27.0756V15.265L117.406 14.5039V12.3676L123.158 12.2449H125.527C127.423 12.2449 128.909 12.7155 129.984 13.6567C131.066 14.598 131.608 15.8871 131.608 17.524C131.608 19.6029 130.993 21.1703 129.764 22.2261C128.543 23.2819 126.78 23.8099 124.477 23.8099H123.158V27.0756L125.026 27.8367V29.9729H117.406V27.8367ZM124.477 20.8756C125.527 20.8756 126.333 20.6342 126.894 20.1513C127.456 19.6602 127.737 18.9522 127.737 18.0274C127.737 17.1925 127.513 16.5255 127.065 16.0262C126.626 15.5188 125.991 15.265 125.16 15.265H123.158V20.8756H124.477Z" fill="white"/>
+<path d="M139.74 16.149C141.751 16.149 143.302 16.7383 144.393 17.9169C145.492 19.0955 146.041 20.7692 146.041 22.9382C146.041 24.4278 145.764 25.721 145.211 26.8177C144.665 27.9145 143.892 28.7575 142.891 29.3468C141.89 29.9279 140.713 30.2185 139.362 30.2185C135.112 30.2185 132.988 27.9145 132.988 23.3065C132.988 21.8169 133.264 20.536 133.818 19.4638C134.38 18.3916 135.169 17.5731 136.187 17.0084C137.205 16.4354 138.389 16.149 139.74 16.149ZM139.606 19.1569C138.662 19.1569 137.966 19.4638 137.518 20.0776C137.078 20.6915 136.859 21.7269 136.859 23.1837C136.859 24.5751 137.066 25.5941 137.481 26.2407C137.905 26.8873 138.572 27.2106 139.484 27.2106C140.404 27.2106 141.08 26.8873 141.511 26.2407C141.942 25.5941 142.158 24.5342 142.158 23.061C142.158 21.7514 141.955 20.7733 141.548 20.1267C141.141 19.4802 140.493 19.1569 139.606 19.1569Z" fill="white"/>
+<path d="M154.809 21.4527L156.506 18.8868L155.407 18.5307V16.5173L161.867 16.3945V18.5307L160.108 18.8622L157.788 22.1525L160.585 27.3579L162.49 27.9595V29.9729H157.862L154.76 23.8344H153.16V27.3334L154.54 27.9595V29.9729H147.409V27.9595L149.412 27.3334V13.2025L147.409 12.6991V10.6857L153.16 10.4893V21.4527H154.809Z" fill="white"/>
+<path d="M167.508 24.0186C167.573 25.0253 167.875 25.811 168.412 26.3758C168.957 26.9323 169.666 27.2106 170.537 27.2106C171.155 27.2106 171.774 27.1247 172.393 26.9528C173.02 26.7727 173.536 26.5927 173.944 26.4126C174.359 26.2243 174.623 26.0934 174.737 26.0197L175.812 28.1068C175.812 28.1396 175.519 28.3483 174.933 28.733C174.355 29.1095 173.642 29.4532 172.796 29.7642C171.957 30.0671 171.062 30.2185 170.109 30.2185C167.993 30.2185 166.381 29.6292 165.274 28.4506C164.167 27.272 163.613 25.6023 163.613 23.4415C163.613 21.9847 163.878 20.7079 164.407 19.6111C164.944 18.5062 165.713 17.655 166.715 17.0575C167.716 16.4518 168.904 16.149 170.28 16.149C172.112 16.149 173.516 16.6769 174.493 17.7327C175.47 18.7885 175.958 20.2291 175.958 22.0542C175.958 22.4553 175.938 22.8441 175.897 23.2206C175.857 23.5971 175.828 23.8344 175.812 23.9326L167.508 24.0186ZM170.036 19.1569C169.352 19.1569 168.795 19.3901 168.363 19.8566C167.932 20.315 167.663 20.9207 167.557 21.6737H172.087C172.087 20.9207 171.921 20.315 171.587 19.8566C171.253 19.3901 170.736 19.1569 170.036 19.1569Z" fill="white"/>
+<path d="M183.199 18.1256C183.199 18.0928 183.395 17.9005 183.786 17.5486C184.176 17.1966 184.628 16.8774 185.141 16.591C185.662 16.2963 186.175 16.149 186.68 16.149C187.079 16.149 187.453 16.1817 187.803 16.2472C188.153 16.3127 188.426 16.3822 188.621 16.4559C188.825 16.5296 188.951 16.5746 189 16.591L188.804 21.4281H186.558L186.179 19.2919C185.748 19.2919 185.328 19.3983 184.921 19.6111C184.522 19.8157 184.18 20.0449 183.896 20.2986C183.619 20.5442 183.48 20.6751 183.48 20.6915V27.3334L185.984 27.9595V29.9729H177.729V27.9595L179.732 27.3334V19.1569L177.729 18.5307V16.5173L182.98 16.3945L183.199 18.1256Z" fill="white"/>
+<defs>
+<linearGradient id="jpLogoGrad" x1="0" y1="33.44" x2="50.74" y2="33.44" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8032FF"/>
+<stop offset="1" stop-color="#FF3D00"/>
+</linearGradient>
+</defs>
+</svg>
+      </a>
+          <p>JackPoker는 Texas Hold'em, PLO, Spin&Win, 토너먼트 액션을 제공하는 현대적인 온라인 포커 플랫폼입니다. 라이선스 취득 및 인증된 플랫폼.</p>
+        </div>
+        <div class="footer-col">
+          <h4>플랫폼</h4>
+          <ul>
+            <li><a href="games.html">게임</a></li>
+            <li><a href="tournaments.html">토너먼트</a></li>
+            <li><a href="bonuses.html">보너스 &amp; 프로모</a></li>
+            <li><a href="promo-code.html">프로모 코드</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>리소스</h4>
+          <ul>
+            <li><a href="news.html">뉴스</a></li>
+            <li><a href="https://go.jack-full.com/c41f796e" target="_blank" rel="noopener noreferrer">FAQ</a></li>
+            <li><a href="terms.html">이용약관</a></li>
+            <li><a href="https://go.jack-full.com/c41f796e" target="_blank" rel="noopener noreferrer">개인정보 처리방침</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>결제</h4>
+          <div class="footer-payment-icons">
+            <span>VISA</span><span>Mastercard</span><span>Skrill</span><span>Neteller</span><span>Bitcoin</span><span>Ethereum</span><span>USDT</span><span>Pix</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 JackPoker. Jack La International Limitada 운영. Anjouan, 코모로 연합에서 라이선스 취득. 책임감 있는 플레이.</p>
+        <p>iTech Labs &bull; BMM TestLabs &bull; GLI 인증</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+  <script>
+    // ============================================
+    // COPY TO CLIPBOARD FUNCTIONS
+    // ============================================
+    function copyCode(btn, code) {
+      navigator.clipboard.writeText(code).then(function () {
+        const original = btn.textContent;
+        btn.textContent = 'Copied!';
+        btn.style.background = 'var(--gradient-btn-cta)';
+        setTimeout(function () {
+          btn.textContent = original;
+          btn.style.background = '';
+        }, 2000);
+      }).catch(function () {
+        // Fallback
+        const ta = document.createElement('textarea');
+        ta.value = code;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'Copied!';
+        setTimeout(function () { btn.textContent = 'Copy Code'; }, 2000);
+      });
+    }
+
+    function copyFocalCode() {
+      const btn = document.getElementById('focalCopyBtn');
+      const textEl = document.getElementById('focalCopyText');
+      navigator.clipboard.writeText('WELCOME').then(function () {
+        textEl.textContent = 'Copied!';
+        btn.classList.add('copied');
+        setTimeout(function () {
+          textEl.textContent = 'Copy to Clipboard';
+          btn.classList.remove('copied');
+        }, 2500);
+      }).catch(function () {
+        const ta = document.createElement('textarea');
+        ta.value = 'WELCOME';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        textEl.textContent = 'Copied!';
+        setTimeout(function () { textEl.textContent = 'Copy to Clipboard'; }, 2500);
+      });
+    }
+
+    function copyFinalCode(btn) {
+      navigator.clipboard.writeText('WELCOME').then(function () {
+        const original = btn.textContent;
+        btn.textContent = 'Copied!';
+        btn.style.background = 'var(--gradient-btn-cta)';
+        setTimeout(function () {
+          btn.textContent = original;
+          btn.style.background = '';
+        }, 2000);
+      }).catch(function () {
+        const ta = document.createElement('textarea');
+        ta.value = 'WELCOME';
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        btn.textContent = 'Copied!';
+        setTimeout(function () { btn.textContent = 'Copy Code'; }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>

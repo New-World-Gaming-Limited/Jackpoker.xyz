@@ -3,31 +3,213 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Not Found — JackPoker</title>
+  <title>404 — Folded Hand | JackPoker</title>
   <meta name="robots" content="noindex">
   <link rel="stylesheet" href="style.css">
   <link rel="icon" type="image/svg+xml" href="assets/images/jackpoker-favicon.svg">
   <style>
-    .error-page { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 80vh; text-align: center; padding: 2rem; }
-    .error-code { font-family: var(--font-display); font-size: 8rem; font-weight: 900; background: linear-gradient(90deg, #8032FF, #FF3D00); -webkit-background-clip: text; -webkit-text-fill-color: transparent; line-height: 1; }
-    .error-message { font-size: 1.5rem; font-weight: 600; margin: 1rem 0; }
-    .error-links { display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap; justify-content: center; }
-    .error-links a { padding: 12px 28px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.2s; }
-    .error-links .primary { background: linear-gradient(90deg, #6A2DC0, #FF3D00); color: white; }
-    .error-links .secondary { border: 1px solid var(--border-subtle); color: var(--text-secondary); }
+    body { background: #000; overflow: hidden; }
+    .error-page {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      min-height: 100vh; text-align: center; padding: 2rem; position: relative; z-index: 1;
+    }
+
+    /* Animated felt table background */
+    .felt-bg {
+      position: fixed; inset: 0; z-index: 0;
+      background: radial-gradient(ellipse at 50% 60%, #0d3d1a 0%, #072b10 40%, #000 80%);
+      opacity: 0.5;
+    }
+    .felt-bg::after {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 50% 50%, rgba(137,59,247,0.08) 0%, transparent 70%);
+    }
+
+    /* Floating card suits */
+    .card-suits {
+      position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
+    }
+    .suit {
+      position: absolute; font-size: 2rem; opacity: 0;
+      animation: floatUp 8s ease-in-out infinite;
+      color: rgba(137,59,247,0.3);
+    }
+    .suit.red { color: rgba(255,61,0,0.25); }
+    @keyframes floatUp {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
+    }
+
+    /* Poker cards display */
+    .cards-display {
+      display: flex; gap: 12px; margin-bottom: 2rem; perspective: 800px;
+    }
+    .poker-card {
+      width: 80px; height: 112px; border-radius: 10px;
+      background: linear-gradient(145deg, #fff, #e8e8e8);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5), 0 0 20px rgba(137,59,247,0.15);
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      font-weight: 900; position: relative; overflow: hidden;
+      animation: dealCard 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+      transform-origin: center bottom;
+    }
+    .poker-card:nth-child(1) { animation-delay: 0.1s; transform: rotate(-8deg); }
+    .poker-card:nth-child(2) { animation-delay: 0.25s; transform: rotate(-3deg); }
+    .poker-card:nth-child(3) { animation-delay: 0.4s; transform: rotate(3deg); }
+    .poker-card:nth-child(4) { animation-delay: 0.55s; transform: rotate(8deg); }
+    @keyframes dealCard {
+      0% { transform: translateY(-200px) rotate(0deg) scale(0.3); opacity: 0; }
+      100% { opacity: 1; }
+    }
+    .poker-card .card-value {
+      font-family: 'Outfit', sans-serif; font-size: 2rem; line-height: 1;
+    }
+    .poker-card .card-suit-icon {
+      font-size: 1.4rem; margin-top: 2px;
+    }
+    .poker-card.black .card-value, .poker-card.black .card-suit-icon { color: #1a1a2e; }
+    .poker-card.red .card-value, .poker-card.red .card-suit-icon { color: #DD4952; }
+    .poker-card::before {
+      content: ''; position: absolute; inset: 3px; border-radius: 8px;
+      border: 1.5px solid rgba(137,59,247,0.15);
+    }
+
+    /* Folded hand message */
+    .fold-label {
+      display: inline-block; padding: 6px 20px; border-radius: 999px; font-size: 0.75rem;
+      font-weight: 700; text-transform: uppercase; letter-spacing: 3px;
+      background: rgba(255,61,0,0.15); color: #FF3D00; border: 1px solid rgba(255,61,0,0.3);
+      margin-bottom: 1.5rem; animation: fadeIn 0.8s 0.8s both;
+    }
+
+    .error-code {
+      font-family: 'Outfit', sans-serif; font-size: 8rem; font-weight: 900;
+      background: linear-gradient(90deg, #8032FF, #FF3D00);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      line-height: 1; margin-bottom: 0.5rem;
+      animation: fadeIn 0.6s 0.5s both;
+      text-shadow: none;
+    }
+
+    .error-title {
+      font-family: 'Outfit', sans-serif; font-size: 1.75rem; font-weight: 700;
+      color: #fff; margin-bottom: 0.75rem;
+      animation: fadeIn 0.6s 0.7s both;
+    }
+
+    .error-subtitle {
+      color: var(--text-muted); max-width: 440px; line-height: 1.6; font-size: 1rem;
+      animation: fadeIn 0.6s 0.9s both;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .error-links {
+      display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap; justify-content: center;
+      animation: fadeIn 0.6s 1.1s both;
+    }
+    .error-links a {
+      padding: 14px 32px; border-radius: 10px; text-decoration: none;
+      font-weight: 700; font-size: 0.9rem; transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      position: relative; overflow: hidden;
+    }
+    .error-links .primary {
+      background: linear-gradient(90deg, #6A2DC0, #FF3D00); color: white;
+      box-shadow: 0 4px 20px rgba(106,45,192,0.4);
+    }
+    .error-links .primary:hover {
+      transform: translateY(-2px); box-shadow: 0 8px 32px rgba(255,61,0,0.4);
+    }
+    .error-links .secondary {
+      border: 1px solid rgba(255,255,255,0.15); color: var(--text-body);
+      background: rgba(255,255,255,0.03); backdrop-filter: blur(10px);
+    }
+    .error-links .secondary:hover {
+      border-color: rgba(137,59,247,0.5); transform: translateY(-2px);
+      background: rgba(137,59,247,0.08);
+    }
+
+    /* Poker chip spinner */
+    .chip-divider {
+      width: 40px; height: 40px; margin: 1.5rem 0;
+      animation: spinChip 4s linear infinite, fadeIn 0.6s 0.6s both;
+    }
+    @keyframes spinChip { from { transform: rotateY(0); } to { transform: rotateY(360deg); } }
+
+    /* Mobile adjustments */
+    @media (max-width: 640px) {
+      .error-code { font-size: 5rem; }
+      .error-title { font-size: 1.3rem; }
+      .poker-card { width: 60px; height: 84px; }
+      .poker-card .card-value { font-size: 1.5rem; }
+      .poker-card .card-suit-icon { font-size: 1rem; }
+      .error-links { flex-direction: column; align-items: center; }
+      .error-links a { width: 100%; max-width: 280px; text-align: center; }
+    }
   </style>
 </head>
 <body>
+  <!-- Background effects -->
+  <div class="felt-bg"></div>
+  <div class="card-suits" id="cardSuits"></div>
+
   <div class="error-page">
+    <!-- Dealt cards spelling 4-0-4 -->
+    <div class="cards-display">
+      <div class="poker-card black">
+        <span class="card-value">4</span>
+        <span class="card-suit-icon">♠</span>
+      </div>
+      <div class="poker-card red">
+        <span class="card-value">0</span>
+        <span class="card-suit-icon">♦</span>
+      </div>
+      <div class="poker-card black">
+        <span class="card-value">4</span>
+        <span class="card-suit-icon">♣</span>
+      </div>
+    </div>
+
+    <span class="fold-label">Hand Folded</span>
+
     <div class="error-code">404</div>
-    <p class="error-message">This page doesn't exist</p>
-    <p style="color: var(--text-muted); max-width: 400px;">The page you're looking for may have been moved or no longer exists. Try one of these instead:</p>
+    <h1 class="error-title">This hand didn't make it to the river</h1>
+    <p class="error-subtitle">The page you're looking for has been folded. Don't worry — there's always another hand to play.</p>
+
+    <!-- Spinning poker chip -->
+    <svg class="chip-divider" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="20" cy="20" r="18" stroke="#893BF7" stroke-width="2"/>
+      <circle cx="20" cy="20" r="13" stroke="#FF3D00" stroke-width="1.5" stroke-dasharray="4 3"/>
+      <circle cx="20" cy="20" r="8" fill="#893BF7"/>
+      <text x="20" y="24" text-anchor="middle" fill="white" font-size="10" font-weight="bold" font-family="Outfit, sans-serif">J</text>
+    </svg>
+
     <div class="error-links">
-      <a href="index.html" class="primary">Back to Home</a>
-      <a href="promo-code.html" class="secondary">Get Promo Code</a>
-      <a href="games.html" class="secondary">Explore Games</a>
-      <a href="news.html" class="secondary">Latest News</a>
+      <a href="index.html" class="primary">Deal Me In — Back to Home</a>
+      <a href="promo-code.html" class="secondary">♠ Use Code WELCOME</a>
+      <a href="games.html" class="secondary">♦ Explore Games</a>
     </div>
   </div>
+
+  <script>
+    // Generate floating card suits
+    const suits = ['♠', '♦', '♣', '♥'];
+    const container = document.getElementById('cardSuits');
+    for (let i = 0; i < 20; i++) {
+      const el = document.createElement('span');
+      el.className = 'suit' + (suits[i % 4] === '♦' || suits[i % 4] === '♥' ? ' red' : '');
+      el.textContent = suits[i % 4];
+      el.style.left = Math.random() * 100 + '%';
+      el.style.animationDelay = Math.random() * 8 + 's';
+      el.style.animationDuration = (6 + Math.random() * 4) + 's';
+      el.style.fontSize = (1.2 + Math.random() * 1.8) + 'rem';
+      container.appendChild(el);
+    }
+  </script>
 </body>
 </html>

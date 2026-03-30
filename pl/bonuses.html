@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html lang="pl" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bonusy i Promocje JackPoker — 300% Bonus Powitalny</title>
+  <meta name="description" content="Odbierz 300% dopasowanie depozytu do $2 000 w JackPoker. Plus 20% gotówki, mnożniki Lootbox, Welcome Questy i rakeback. Kod: WELCOME.">
+  <meta property="og:title" content="Bonusy i Promocje JackPoker 2026 — 300% Bonus Powitalny + Lootbox">
+  <meta property="og:description" content="Odbierz 300% dopasowanie pierwszego depozytu do $2 000 w JackPoker. Plus 20% natychmiastowej gotówki, mnożniki Lootbox do 1 000%, Welcome Questy, rakeback i wiele więcej.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://jackpoker.poker/assets/images/hero-poker.jpg" />
+  <link rel="canonical" href="https://jackpoker.poker/pl/bonuses.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/jackpoker-favicon.svg" />
+  <style>
+    /* ===== BONUSES PAGE — ADDITIONAL STYLES ===== */
+
+    /* Bonus Package Hero Card */
+    .welcome-package-card {
+      background: linear-gradient(145deg, #271D34, #1E1B27);
+      border: 1px solid rgba(246,186,70,0.25);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      position: relative;
+    }
+    .welcome-package-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #F6BA46, #893BF7, #FF3D00);
+    }
+    .welcome-package-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      align-items: stretch;
+    }
+    .welcome-package-content {
+      padding: 48px;
+    }
+    .welcome-package-image {
+      position: relative;
+      overflow: hidden;
+      border-radius: 0 var(--radius-xl) var(--radius-xl) 0;
+    }
+    .welcome-package-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      min-height: 400px;
+      display: block;
+    }
+    .welcome-package-image::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(27,18,40,0.7) 0%, transparent 50%);
+      z-index: 1;
+    }
+
+    /* Bonus Amount Display */
+    .bonus-amount-display {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .bonus-amount-number {
+      font-family: var(--font-display);
+      font-size: 3.5rem;
+      font-weight: 900;
+      background: var(--gradient-gold-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+    }
+    .bonus-amount-label {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    /* Step Process */
+    .step-process {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin: 24px 0;
+    }
+    .step-process-item {
+      display: flex;
+      gap: 16px;
+      position: relative;
+      padding-bottom: 24px;
+    }
+    .step-process-item:last-child { padding-bottom: 0; }
+    .step-process-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 32px;
+      bottom: 0;
+      width: 2px;
+      background: var(--border-subtle);
+    }
+    .step-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--gradient-btn-primary);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      z-index: 1;
+    }
+    .step-text h4 {
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+      color: var(--text-white);
+    }
+    .step-text p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Lootbox Section */
+    .lootbox-visual {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin: 32px 0;
+    }
+    .lootbox-tier {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 16px 12px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .lootbox-tier:hover {
+      border-color: rgba(137,59,247,0.4);
+      transform: translateY(-4px);
+    }
+    .lootbox-tier .tier-icon {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .lootbox-tier .tier-mult {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--gold-primary);
+      display: block;
+    }
+    .lootbox-tier .tier-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      display: block;
+      margin-top: 2px;
+    }
+    .lootbox-tier.jackpot {
+      border-color: rgba(246,186,70,0.4);
+      background: rgba(246,186,70,0.04);
+    }
+    .lootbox-tier.jackpot .tier-mult {
+      background: var(--gradient-gold-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Quest Cards */
+    .quest-card {
+      background: var(--gradient-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .quest-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-card-hover);
+    }
+    .quest-header {
+      padding: 28px 28px 20px;
+      position: relative;
+    }
+    .quest-header.silver { background: linear-gradient(135deg, rgba(168,168,168,0.08), rgba(168,168,168,0.02)); border-bottom: 1px solid rgba(168,168,168,0.15); }
+    .quest-header.gold { background: linear-gradient(135deg, rgba(246,186,70,0.10), rgba(246,186,70,0.02)); border-bottom: 1px solid rgba(246,186,70,0.2); }
+    .quest-header.supernova { background: linear-gradient(135deg, rgba(137,59,247,0.12), rgba(255,61,0,0.04)); border-bottom: 1px solid rgba(137,59,247,0.25); }
+    .quest-tier-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+    .quest-tier-badge.silver { background: rgba(168,168,168,0.12); color: #C0C0C0; }
+    .quest-tier-badge.gold { background: rgba(246,186,70,0.12); color: var(--gold-primary); }
+    .quest-tier-badge.supernova { background: rgba(137,59,247,0.15); color: var(--purple-primary); }
+    .quest-prize {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .quest-prize.silver { color: #C0C0C0; }
+    .quest-prize.gold { color: var(--gold-primary); }
+    .quest-prize.supernova {
+      background: linear-gradient(135deg, #893BF7, #FF3D00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .quest-body {
+      padding: 20px 28px 28px;
+    }
+    .quest-tasks {
+      list-style: none;
+      margin: 16px 0 0;
+    }
+    .quest-tasks li {
+      padding: 8px 0;
+      padding-left: 22px;
+      position: relative;
+      font-size: 0.88rem;
+      color: var(--text-body);
+      border-bottom: 1px solid var(--border-subtle);
+      line-height: 1.5;
+    }
+    .quest-tasks li:last-child { border-bottom: none; }
+    .quest-tasks li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--purple-primary);
+      font-size: 0.75rem;
+      top: 10px;
+    }
+    .quest-tasks li .task-reward {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--gold-primary);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    /* VIP Tiers Table */
+    .vip-tiers {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: 32px 0;
+    }
+    .vip-tier-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 20px 16px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .vip-tier-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(137,59,247,0.3);
+    }
+    .vip-tier-card.featured {
+      border-color: rgba(246,186,70,0.4);
+      background: rgba(246,186,70,0.03);
+    }
+    .vip-tier-card.featured::before {
+      content: 'ELITE';
+      position: absolute;
+      top: 10px; right: -18px;
+      background: var(--gradient-btn-gold);
+      color: #000000;
+      font-size: 0.6rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      padding: 3px 24px;
+      transform: rotate(45deg);
+    }
+    .vip-tier-icon { font-size: 1.8rem; margin-bottom: 10px; display: block; }
+    .vip-tier-name {
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-white);
+      margin-bottom: 8px;
+    }
+    .vip-tier-rakeback {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--gold-primary);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .vip-tier-sub {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* Crypto Currency Pills */
+    .crypto-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 24px 0;
+    }
+    .crypto-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-body);
+      transition: all 0.2s ease;
+    }
+    .crypto-pill:hover {
+      border-color: var(--gold-primary);
+      color: var(--gold-primary);
+    }
+    .crypto-pill .crypto-symbol {
+      font-size: 1rem;
+    }
+
+    /* Cash Carnival Highlight */
+    .carnival-banner {
+      background: linear-gradient(135deg, rgba(255,61,0,0.08), rgba(246,186,70,0.06));
+      border: 1px solid rgba(255,61,0,0.3);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .carnival-banner::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #FF3D00, #F6BA46, #FF3D00);
+    }
+    .carnival-banner .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 16px;
+      background: rgba(255,61,0,0.15);
+      border: 1px solid rgba(255,61,0,0.4);
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #FF3D00;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 20px;
+    }
+    .carnival-banner .live-dot {
+      width: 6px;
+      height: 6px;
+      background: #FF3D00;
+      border-radius: 50%;
+      animation: pulse 1.5s ease infinite;
+    }
+    .carnival-prize {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, #FF3D00, #F6BA46);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .carnival-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 40px;
+    }
+
+    /* Promo Code Section */
+    .promo-code-section {
+      text-align: center;
+      padding: 64px 0;
+    }
+    .promo-code-large {
+      display: inline-flex;
+      align-items: stretch;
+      gap: 0;
+      background: var(--bg-card);
+      border: 2px solid rgba(246,186,70,0.5);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin: 32px auto;
+      box-shadow: 0 0 40px rgba(246,186,70,0.08);
+    }
+    .promo-code-large .code-text {
+      padding: 18px 36px;
+      font-family: 'Courier New', monospace;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--gold-primary);
+      letter-spacing: 0.2em;
+    }
+    .promo-code-large .code-copy-btn {
+      padding: 18px 28px;
+      background: var(--gradient-btn-gold);
+      color: #000000;
+      font-weight: 700;
+      font-size: 0.9rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      font-family: var(--font-body);
+    }
+    .promo-code-large .code-copy-btn:hover { opacity: 0.9; }
+
+    /* Terms box */
+    .terms-box {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      margin-top: 24px;
+    }
+    .terms-box h4 {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .terms-box ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
+    }
+    .terms-box ul li {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      padding-left: 14px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .terms-box ul li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--text-faint);
+    }
+
+    /* Info Row */
+    .info-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+    .info-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      background: rgba(137,59,247,0.08);
+      border: 1px solid rgba(137,59,247,0.18);
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      color: var(--text-body);
+    }
+    .info-chip .chip-label {
+      color: var(--text-muted);
+      font-size: 0.78rem;
+    }
+    .info-chip strong { color: var(--text-white); }
+
+    /* Divider */
+    .section-divider {
+      border: none;
+      height: 1px;
+      background: var(--border-subtle);
+      margin: 0;
+    }
+
+    /* Tournament Bonus Cards */
+    .tourney-bonus-card {
+      background: var(--gradient-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 24px;
+      align-items: start;
+      transition: all 0.3s ease;
+    }
+    .tourney-bonus-card:hover {
+      border-color: rgba(137,59,247,0.3);
+      box-shadow: var(--shadow-card-hover);
+    }
+    .tourney-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(137,59,247,0.1);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      flex-shrink: 0;
+    }
+
+    /* Final CTA Section */
+    .final-cta {
+      background: linear-gradient(135deg, #000000 0%, #1A1226 50%, #000000 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 96px 0;
+      text-align: center;
+    }
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(137,59,247,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .final-cta .cta-inner {
+      position: relative;
+      z-index: 1;
+    }
+    .final-cta h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 16px;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 1024px) {
+      .welcome-package-inner { grid-template-columns: 1fr; }
+      .welcome-package-image { display: none; }
+      .vip-tiers { grid-template-columns: repeat(2, 1fr); }
+      .lootbox-visual { grid-template-columns: repeat(3, 1fr); }
+      .carnival-inner { grid-template-columns: 1fr; }
+      .terms-box ul { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .welcome-package-content { padding: 28px; }
+      .bonus-amount-number { font-size: 2.5rem; }
+      .vip-tiers { grid-template-columns: repeat(2, 1fr); }
+      .lootbox-visual { grid-template-columns: repeat(2, 1fr); }
+      .carnival-prize { font-size: 2rem; }
+      .promo-code-large .code-text { padding: 14px 20px; font-size: 1.2rem; }
+      .promo-code-large .code-copy-btn { padding: 14px 18px; font-size: 0.8rem; }
+    }
+    @media (max-width: 480px) {
+      .vip-tiers { grid-template-columns: 1fr 1fr; }
+      .lootbox-visual { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+<script>
+    (function(){var t=null;try{var m=document.cookie.match(/jp-theme=([^;]+)/);if(m)t=m[1]}catch(e){}document.documentElement.setAttribute("data-theme",t||"dark")})();
+  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "JackPoker",
+  "url": "https://jackpoker.poker",
+  "logo": "https://jackpoker.poker/assets/images/jackpoker-logo-official.png",
+  "description": "Modern online poker platform offering Texas Hold'em, PLO, Spin&Win tournaments, and more. Licensed and certified.",
+  "foundingDate": "2021",
+  "sameAs": [
+    "https://jack-poker.com",
+    "https://t.me/jackpokerclub"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "url": "https://jack-poker.com/support",
+    "availableLanguage": [
+      "English",
+      "Russian",
+      "Portuguese",
+      "Spanish"
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://jackpoker.poker"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Bonuses & Promos",
+      "item": "https://jackpoker.poker/bonuses.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Offer",
+  "name": "JackPoker Welcome Bonus",
+  "description": "300% deposit bonus up to $2,000 plus 20% instant cashback, Lootbox rewards, and Quest challenges",
+  "url": "https://jackpoker.poker/bonuses.html",
+  "priceCurrency": "USD",
+  "price": "0",
+  "category": "Welcome Bonus",
+  "seller": {
+    "@type": "Organization",
+    "name": "JackPoker"
+  }
+}
+</script>
+<link rel="alternate" hreflang="en" href="https://jackpoker.poker/bonuses.html" />
+<link rel="alternate" hreflang="ru" href="https://jackpoker.poker/ru/bonuses.html" />
+<link rel="alternate" hreflang="es" href="https://jackpoker.poker/es/bonuses.html" />
+<link rel="alternate" hreflang="it" href="https://jackpoker.poker/it/bonuses.html" />
+<link rel="alternate" hreflang="pt" href="https://jackpoker.poker/pt/bonuses.html" />
+<link rel="alternate" hreflang="vi" href="https://jackpoker.poker/vi/bonuses.html" />
+<link rel="alternate" hreflang="th" href="https://jackpoker.poker/th/bonuses.html" />
+<link rel="alternate" hreflang="ms" href="https://jackpoker.poker/ms/bonuses.html" />
+<link rel="alternate" hreflang="ko" href="https://jackpoker.poker/ko/bonuses.html" />
+<link rel="alternate" hreflang="ar" href="https://jackpoker.poker/ar/bonuses.html" />
+<link rel="alternate" hreflang="pl" href="https://jackpoker.poker/pl/bonuses.html" />
+<link rel="alternate" hreflang="cs" href="https://jackpoker.poker/cs/bonuses.html" />
+<link rel="alternate" hreflang="x-default" href="https://jackpoker.poker/bonuses.html" />
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="JackPoker Home">
+        <svg class="logo-icon" width="189" height="47" viewBox="0 0 189 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="JackPoker">
+<path d="M25.4001 1C24.0001 1 22.8001 2.2 22.8001 3.6C22.8001 5.1 23.8343 5.9 25.3001 5.9H28.7001C28.7001 5.9 31.3001 5.9 31.3001 8.3C31.3001 10.7 28.7001 10.7 28.7001 10.7H8.30008C6.90008 10.7 5.70008 11.9 5.70008 13.3C5.70008 14.7 6.90008 15.9 8.30008 15.9H22.5001C22.5001 15.9 25.1001 15.9 25.1001 18.3C25.1001 20.7 22.5001 20.7 22.5001 20.7H11.4001C10.0001 20.7 8.80008 21.9 8.80008 23.3C8.80008 24.7 10.0001 25.9 11.4001 25.9H22.6001C22.6001 25.9 25.2001 25.9 25.2001 28.3C25.2001 30.7 22.6001 30.7 22.6001 30.7H21.8001C20.4001 30.7 19.2001 31.9 19.2001 33.3C19.2001 34.7 20.4001 35.9 21.8001 35.9H28.8001C28.8001 35.9 31.4001 35.9 31.4001 38.3C31.4001 40.7 28.8001 40.7 28.8001 40.7H14.0001C12.6001 40.7 11.4001 41.9 11.4001 43.3C11.4001 44.7 12.6001 45.9 14.0001 45.9H34.3001C36.5001 45.9 38.4001 44.8 39.5001 43C41.1501 40.25 42.7751 37.4999 44.4001 34.7499C46.0251 31.9999 47.6501 29.25 49.3001 26.5C50.4001 24.6 50.4001 22.3 49.3001 20.4C47.6501 17.6501 46.0252 14.9001 44.4002 12.1502C42.7752 9.4002 41.1501 6.65001 39.5001 3.9C38.4001 2.1 36.4001 1 34.3001 1H25.4001Z" fill="url(#jpLogoGrad)"/>
+<path d="M11.3999 3.6C11.3999 2.2 12.5999 1 13.9999 1H17.5999C18.9999 1 20.1999 2.2 20.1999 3.6C20.1999 5 18.9999 6.2 17.5999 6.2H13.9999C12.5999 6.2 11.3999 5 11.3999 3.6Z" fill="url(#jpLogoGrad)"/>
+<path d="M0 23.5001C0 22.1001 1.2 20.9001 2.6 20.9001H3.6C5 20.9001 6.2 22.1001 6.2 23.5001C6.2 24.9001 5 26.1001 3.6 26.1001H2.6C1.2 26.1001 0 24.9001 0 23.5001Z" fill="url(#jpLogoGrad)"/>
+<path d="M8.30008 30.8001C6.90008 30.8001 5.70008 32.0001 5.70008 33.4001C5.70008 34.9001 6.90008 36.1001 8.30008 36.0001H14.0001C15.4001 36.0001 16.6001 34.8001 16.6001 33.4001C16.6001 32.0001 15.4001 30.8001 14.0001 30.8001H8.30008Z" fill="url(#jpLogoGrad)"/>
+<path d="M69.7955 27.3088C69.7955 28.8312 69.6204 30.0793 69.2704 31.0533C68.9203 32.0273 68.3261 32.7598 67.4876 33.2509C66.6572 33.7502 65.5257 33.9998 64.0929 33.9998C63.7591 33.9998 63.3887 33.9712 62.9817 33.9139C62.5747 33.8648 62.3142 33.832 62.2002 33.8157L62.5177 31.2252H63.7144C65.1797 31.2252 65.9164 30.4231 65.9246 28.8189V15.265L64.0441 14.5039V12.3676L71.676 12.2449V14.5039L69.7955 15.265V27.3088Z" fill="white"/>
+<path d="M81.4937 28.3401C81.4937 28.3728 81.2779 28.557 80.8465 28.8926C80.415 29.2281 79.8981 29.5351 79.2957 29.8133C78.6933 30.0834 78.0746 30.2185 77.4396 30.2185C76.2185 30.2185 75.2619 29.8788 74.57 29.1995C73.8862 28.512 73.5443 27.538 73.5443 26.2775C73.5443 24.837 74.0571 23.7853 75.0829 23.1223C76.1086 22.4594 77.6024 22.1279 79.5643 22.1279H81.3227V20.7406C81.3227 19.5129 80.6796 18.9031 79.3934 18.9113C79.0107 18.9113 78.6566 18.94 78.331 18.9973C78.0054 19.0545 77.7449 19.1159 77.5495 19.1814C77.3622 19.2387 77.2442 19.2755 77.1954 19.2919L76.8168 20.8756H74.57L74.399 17.1557C74.5456 17.1066 74.9038 17.0002 75.4736 16.8365C76.0516 16.6728 76.7395 16.5173 77.5373 16.37C78.3432 16.2226 79.1044 16.149 79.8207 16.149C81.107 16.149 82.1286 16.3127 82.8857 16.6401C83.6428 16.9593 84.1964 17.4831 84.5464 18.2115C84.8965 18.9318 85.0715 19.9017 85.0715 21.1212V27.3334L86.952 27.7876V29.8011L81.9455 29.9729L81.4937 28.3401ZM77.1709 25.897C77.1709 26.388 77.2971 26.7645 77.5495 27.0264C77.81 27.2802 78.1763 27.407 78.6485 27.407C79.0474 27.407 79.4422 27.3006 79.833 27.0878C80.2237 26.8668 80.5534 26.6418 80.822 26.4126C81.0907 26.1752 81.2576 26.0197 81.3227 25.9461V24.2641H79.894C78.9253 24.2641 78.2292 24.3951 77.8059 24.657C77.3826 24.9189 77.1709 25.3322 77.1709 25.897Z" fill="white"/>
+<path d="M100.311 28.0823C99.7492 28.5897 99.0124 29.0726 98.1007 29.531C97.1971 29.9893 96.1428 30.2185 94.938 30.2185C92.8866 30.2185 91.291 29.6169 90.1513 28.4137C89.0116 27.2106 88.4417 25.5327 88.4417 23.3802C88.4417 21.1376 89.0442 19.3737 90.249 18.0888C91.4619 16.7956 93.1511 16.149 95.3166 16.149C95.9515 16.149 96.5906 16.2145 97.2337 16.3454C97.885 16.4764 98.4263 16.6114 98.8578 16.7506C99.2974 16.8815 99.5742 16.9715 99.6881 17.0206L99.566 21.1457H97.3192L96.9651 19.3656C96.8836 19.3492 96.6801 19.3124 96.3545 19.2551C96.0289 19.1896 95.6585 19.1569 95.2433 19.1569C94.3234 19.1569 93.6029 19.472 93.0819 20.1022C92.5691 20.7324 92.3126 21.6573 92.3126 22.8768C92.3126 24.2682 92.5731 25.3404 93.0942 26.0934C93.6233 26.8382 94.4048 27.2106 95.4387 27.2106C96.0899 27.2106 96.6598 27.1124 97.1482 26.916C97.6448 26.7113 98.06 26.5026 98.3937 26.2898C98.7275 26.077 98.9514 25.9379 99.0654 25.8724L100.311 28.0823Z" fill="white"/>
+<path d="M108.602 21.4527L110.3 18.8868L109.201 18.5307V16.5173L115.66 16.3945V18.5307L113.902 18.8622L111.582 22.1525L114.378 27.3579L116.283 27.9595V29.9729H111.655L108.553 23.8344H106.954V27.3334L108.334 27.9595V29.9729H101.202V27.9595L103.205 27.3334V13.2025L101.202 12.6991V10.6857L106.954 10.4893V21.4527H108.602Z" fill="white"/>
+<path d="M117.406 27.8367L119.275 27.0756V15.265L117.406 14.5039V12.3676L123.158 12.2449H125.527C127.423 12.2449 128.909 12.7155 129.984 13.6567C131.066 14.598 131.608 15.8871 131.608 17.524C131.608 19.6029 130.993 21.1703 129.764 22.2261C128.543 23.2819 126.78 23.8099 124.477 23.8099H123.158V27.0756L125.026 27.8367V29.9729H117.406V27.8367ZM124.477 20.8756C125.527 20.8756 126.333 20.6342 126.894 20.1513C127.456 19.6602 127.737 18.9522 127.737 18.0274C127.737 17.1925 127.513 16.5255 127.065 16.0262C126.626 15.5188 125.991 15.265 125.16 15.265H123.158V20.8756H124.477Z" fill="white"/>
+<path d="M139.74 16.149C141.751 16.149 143.302 16.7383 144.393 17.9169C145.492 19.0955 146.041 20.7692 146.041 22.9382C146.041 24.4278 145.764 25.721 145.211 26.8177C144.665 27.9145 143.892 28.7575 142.891 29.3468C141.89 29.9279 140.713 30.2185 139.362 30.2185C135.112 30.2185 132.988 27.9145 132.988 23.3065C132.988 21.8169 133.264 20.536 133.818 19.4638C134.38 18.3916 135.169 17.5731 136.187 17.0084C137.205 16.4354 138.389 16.149 139.74 16.149ZM139.606 19.1569C138.662 19.1569 137.966 19.4638 137.518 20.0776C137.078 20.6915 136.859 21.7269 136.859 23.1837C136.859 24.5751 137.066 25.5941 137.481 26.2407C137.905 26.8873 138.572 27.2106 139.484 27.2106C140.404 27.2106 141.08 26.8873 141.511 26.2407C141.942 25.5941 142.158 24.5342 142.158 23.061C142.158 21.7514 141.955 20.7733 141.548 20.1267C141.141 19.4802 140.493 19.1569 139.606 19.1569Z" fill="white"/>
+<path d="M154.809 21.4527L156.506 18.8868L155.407 18.5307V16.5173L161.867 16.3945V18.5307L160.108 18.8622L157.788 22.1525L160.585 27.3579L162.49 27.9595V29.9729H157.862L154.76 23.8344H153.16V27.3334L154.54 27.9595V29.9729H147.409V27.9595L149.412 27.3334V13.2025L147.409 12.6991V10.6857L153.16 10.4893V21.4527H154.809Z" fill="white"/>
+<path d="M167.508 24.0186C167.573 25.0253 167.875 25.811 168.412 26.3758C168.957 26.9323 169.666 27.2106 170.537 27.2106C171.155 27.2106 171.774 27.1247 172.393 26.9528C173.02 26.7727 173.536 26.5927 173.944 26.4126C174.359 26.2243 174.623 26.0934 174.737 26.0197L175.812 28.1068C175.812 28.1396 175.519 28.3483 174.933 28.733C174.355 29.1095 173.642 29.4532 172.796 29.7642C171.957 30.0671 171.062 30.2185 170.109 30.2185C167.993 30.2185 166.381 29.6292 165.274 28.4506C164.167 27.272 163.613 25.6023 163.613 23.4415C163.613 21.9847 163.878 20.7079 164.407 19.6111C164.944 18.5062 165.713 17.655 166.715 17.0575C167.716 16.4518 168.904 16.149 170.28 16.149C172.112 16.149 173.516 16.6769 174.493 17.7327C175.47 18.7885 175.958 20.2291 175.958 22.0542C175.958 22.4553 175.938 22.8441 175.897 23.2206C175.857 23.5971 175.828 23.8344 175.812 23.9326L167.508 24.0186ZM170.036 19.1569C169.352 19.1569 168.795 19.3901 168.363 19.8566C167.932 20.315 167.663 20.9207 167.557 21.6737H172.087C172.087 20.9207 171.921 20.315 171.587 19.8566C171.253 19.3901 170.736 19.1569 170.036 19.1569Z" fill="white"/>
+<path d="M183.199 18.1256C183.199 18.0928 183.395 17.9005 183.786 17.5486C184.176 17.1966 184.628 16.8774 185.141 16.591C185.662 16.2963 186.175 16.149 186.68 16.149C187.079 16.149 187.453 16.1817 187.803 16.2472C188.153 16.3127 188.426 16.3822 188.621 16.4559C188.825 16.5296 188.951 16.5746 189 16.591L188.804 21.4281H186.558L186.179 19.2919C185.748 19.2919 185.328 19.3983 184.921 19.6111C184.522 19.8157 184.18 20.0449 183.896 20.2986C183.619 20.5442 183.48 20.6751 183.48 20.6915V27.3334L185.984 27.9595V29.9729H177.729V27.9595L179.732 27.3334V19.1569L177.729 18.5307V16.5173L182.98 16.3945L183.199 18.1256Z" fill="white"/>
+<defs>
+<linearGradient id="jpLogoGrad" x1="0" y1="33.44" x2="50.74" y2="33.44" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8032FF"/>
+<stop offset="1" stop-color="#FF3D00"/>
+</linearGradient>
+</defs>
+</svg>
+      </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Strona główna</a>
+      <a href="games.html">Gry</a>
+      <a href="bonuses.html" class="active">Bonus</a>
+      <a href="tournaments.html">Turnieje</a>
+      <a href="news.html">Aktualności</a>
+      <a href="promo-code.html">Kod Promocyjny</a>
+    </nav>
+    <a href="https://go.jack-full.com/c41f796e" class="header-cta header-cta-desktop">Graj teraz ♠</a>
+     <div class="lang-switcher">
+  <button class="lang-btn" aria-label="Change language" aria-expanded="false">
+    <span class="lang-flag">PL</span>
+    <span class="lang-label">Polski</span>
+    <svg class="lang-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  </button>
+  <div class="lang-dropdown" role="menu">
+    <a href="../bonuses.html" role="menuitem" hreflang="en"><span class="lang-flag">GB</span><span>English</span></a>
+    <a href="../ru/bonuses.html" role="menuitem" hreflang="ru"><span class="lang-flag">RU</span><span>Русский</span></a>
+    <a href="../es/bonuses.html" role="menuitem" hreflang="es"><span class="lang-flag">ES</span><span>Español</span></a>
+    <a href="../it/bonuses.html" role="menuitem" hreflang="it"><span class="lang-flag">IT</span><span>Italiano</span></a>
+    <a href="../pt/bonuses.html" role="menuitem" hreflang="pt"><span class="lang-flag">BR</span><span>Português</span></a>
+    <a href="../vi/bonuses.html" role="menuitem" hreflang="vi"><span class="lang-flag">VN</span><span>Tiếng Việt</span></a>
+    <a href="../th/bonuses.html" role="menuitem" hreflang="th"><span class="lang-flag">TH</span><span>ไทย</span></a>
+    <a href="../ms/bonuses.html" role="menuitem" hreflang="ms"><span class="lang-flag">MY</span><span>Bahasa Melayu</span></a>
+    <a href="../ko/bonuses.html" role="menuitem" hreflang="ko"><span class="lang-flag">KR</span><span>한국어</span></a>
+    <a href="../ar/bonuses.html" role="menuitem" hreflang="ar"><span class="lang-flag">SA</span><span>العربية</span></a>
+    <a href="bonuses.html" class="active" role="menuitem" hreflang="pl"><span class="lang-flag">PL</span><span>Polski</span></a>
+    <a href="../cs/bonuses.html" role="menuitem" hreflang="cs"><span class="lang-flag">CZ</span><span>Čeština</span></a>
+  </div>
+</div>
+        <button class="theme-toggle" aria-label="Toggle theme">
+       <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 1.78a1 1 0 011.415 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM18 9a1 1 0 110 2h-1a1 1 0 110-2h1zM3 9a1 1 0 110 2H2a1 1 0 110-2h1zm12.657 6.071l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 011.414-1.414zM5.757 4.929a1 1 0 010 1.414l-.707.707A1 1 0 013.636 5.636l.707-.707a1 1 0 011.414 0zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1z" fill="currentColor"/><circle cx="10" cy="10" r="3.5" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+       <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/></svg>
+     </button>
+  </div>
+</header>
+
+<!-- Breadcrumb Navigation -->
+<nav class="breadcrumb-nav" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">Strona główna</span></a>
+        <meta itemprop="position" content="1" />
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span itemprop="name">Bonusy</span>
+        <meta itemprop="position" content="2" />
+      </li>
+    </ol>
+  </div>
+</nav>
+
+
+<!-- Page Hero with H1 -->
+<section style="padding: calc(var(--header-height) + 48px) 0 24px; background: linear-gradient(180deg, rgba(246,186,70,0.06) 0%, transparent 100%); position: relative; overflow: hidden;">
+  <div class="container">
+    <h1 style="font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 900; letter-spacing: -0.03em; margin-bottom: 12px;" data-i18n="bonuses_hero_title">Bonusy i Promocje JackPoker</h1>
+    <p style="color: var(--text-muted); font-size: 1.08rem; max-width: 640px; line-height: 1.7;" data-i18n="bonuses_hero_subtitle">Maksymalizuj swój bankroll dzięki naszemu 300% bonusowi powitalnemu, nagrodom Lootbox, programowi rakeback i ekskluzywnym wejściom turniejowym.</p>
+  </div>
+</section>
+
+<!-- ===== BONUS STATS BAR ===== -->
+<section class="section section-dark" style="padding:40px 0;">
+  <div class="container">
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-number">$2,000</div>
+        <div class="stat-desc">Maksymalne Dopasowanie Powitalne</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">20%</div>
+        <div class="stat-desc">Program Dożywotni</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">$200K+</div>
+        <div class="stat-desc">Miesięczne Turnieje</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">$500K</div>
+        <div class="stat-desc">Pula Nagród Cash Carnival</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== WELCOME BONUS PACKAGE ===== -->
+<section class="section" id="welcome-bonus">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Ekskluzywnie dla Nowych Graczy</span>
+      <h2>Bonus Powitalny <span class="gold-text">Pakiet</span></h2>
+      <p>Nasz pakiet powitalny jest zaprojektowany tak, aby dać nowym graczom maksymalne możliwe wsparcie przy dołączeniu. To nie jest pojedyncza, płaska oferta — to warstwowy system bonusów dopasowujących, natychmiastowych nagród i losowych wzmacniaczy, które łączą się, aby zapewnić ci jak najlepszy start.</p>
+    </div>
+
+    <div class="welcome-package-card">
+      <div class="welcome-package-inner">
+        <div class="welcome-package-content">
+          <div style="margin-bottom:24px;">
+            <div class="bonus-amount-display">
+              <span class="bonus-amount-number">300%</span>
+              <span class="bonus-amount-label">Dopasowanie Pierwszego Depozytu</span>
+            </div>
+            <p style="color:var(--text-muted); margin-bottom:0; font-size:0.95rem;">Do <strong style="color:var(--gold-primary);">$2,000</strong> w funduszach bonusowych — wpłać $100 i od razu graj z $400</p>
+          </div>
+
+          <p>Nasza flagowa oferta powitalna dopasowuje twój pierwszy depozyt w wysokości 300%. Oznacza to, że jeśli wpłacisz $100, dopisujemy na twoje konto $300 w funduszach bonusowych — dając ci $400 do gry od razu. Maksymalna kwota dopasowania wynosi $2,000 w funduszach bonusowych, co oznacza, że przy depozycie $667 lub więcej odblokowujesz pełny bonus.</p>
+
+          <p>Fundusze bonusowe są uwalniane stopniowo w miarę generowania rake przy stołach. Za każdy dolar rake, który wygenerujesz, odpowiednia część twojego bonusu powitalnego odblokowuje się i trafia na twoje konto z prawdziwymi pieniędzmi.</p>
+
+          <div class="highlight-box gold" style="margin:24px 0;">
+            <h4>Przykład: Jak Działa Dopasowanie 300%</h4>
+            <p>Wpłać $500 → Otrzymaj $1,500 w funduszach bonusowych → Graj z łącznie $2,000. Twój bonus $1,500 uwalnia się w miarę generowania rake, zamieniając się w prawdziwą, wypłacalną gotówkę podczas ukończenia misji i rozgrywania rąk.</p>
+          </div>
+
+          <!-- Step Process -->
+          <h3 style="margin-bottom:16px; font-size:1.1rem;">Jak Odebrać Swój Bonus Powitalny</h3>
+          <div class="step-process">
+            <div class="step-process-item">
+              <div class="step-num">1</div>
+              <div class="step-text">
+                <h4>Zarejestruj Swoje Konto</h4>
+                <p>Kliknij "Graj Teraz" i zakończ naszą szybką rejestrację. Cały proces zajmuje mniej niż dwie minuty — wystarczy e-mail i bezpieczne hasło.</p>
+              </div>
+            </div>
+            <div class="step-process-item">
+              <div class="step-num">2</div>
+              <div class="step-text">
+                <h4>Wpisz Kod Promocyjny WELCOME</h4>
+                <p>Podczas rejestracji lub w sekcji promocji na swoim koncie wpisz kod <strong style="color:var(--gold-primary);">WELCOME</strong> aby aktywować pełny pakiet bonusowy.</p>
+              </div>
+            </div>
+            <div class="step-process-item">
+              <div class="step-num">3</div>
+              <div class="step-text">
+                <h4>Dokonaj Swojego Pierwszego Depozytu</h4>
+                <p>Użyj dowolnej obsługiwanej metody — karty, e-portfele lub kryptowaluty. Minimalny kwalifikujący depozyt wynosi $20. Twoje dopasowanie 300% i 20% natychmiastowy kredyt gotówkowy są przyznawane jednocześnie.</p>
+              </div>
+            </div>
+            <div class="step-process-item">
+              <div class="step-num">4</div>
+              <div class="step-text">
+                <h4>Otwórz Swój Lootbox</h4>
+                <p>Po zaksięgowaniu depozytu otrzymujesz Welcome Lootbox. Otwórz go, aby odkryć swój osobisty mnożnik bonusu — od 100% do 1,000% twojego początkowego bonusu.</p>
+              </div>
+            </div>
+            <div class="step-process-item">
+              <div class="step-num">5</div>
+              <div class="step-text">
+                <h4>Graj i Zarabiaj</h4>
+                <p>Wskocz do dowolnej gry gotówkowej lub turnieju. Twój bonus uwalnia się w miarę generowania rake, a twoje Welcome Quests postępują automatycznie w tle.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Terms box -->
+          <div class="terms-box">
+            <h4>Warunki Bonusu i Obrót</h4>
+            <ul>
+              <li>Minimalny depozyt: $20</li>
+              <li>Maksymalny bonus: $2,000</li>
+              <li>Obrót: 6x kwoty bonusu w rake</li>
+              <li>Wygaśnięcie bonusu: 60 dni od daty depozytu</li>
+              <li>Kod promocyjny: WELCOME</li>
+              <li>Jeden bonus na gracza/gospodarstwo domowe</li>
+              <li>Uprawnione gry: Wszystkie stoły pokerowe &amp; turnieje</li>
+              <li>Depozyty kryptowalutowe mogą otrzymać podwyższone stawki</li>
+            </ul>
+          </div>
+
+          <div style="margin-top:28px; display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="https://go.jack-full.com/c41f796e" class="btn btn-primary btn-lg">Odbierz Bonus 300% ♠</a>
+          </div>
+        </div>
+        <div class="welcome-package-image">
+          <img src="../assets/images/bonus-chest.jpg" alt="JackPoker Welcome Bonus Chest">
+        </div>
+      </div>
+    </div>
+
+    <!-- 20% Instant Cash Feature -->
+    <div style="margin-top:40px;" class="grid-2">
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>20% Natychmiastowy Kredyt Gotówkowy</h3>
+        <p style="color:var(--text-body); margin-bottom:12px;">Oprócz dopasowania 300%, dopisujemy 20% twojego pierwszego depozytu jako prawdziwą, wydawalną gotówkę w chwili, gdy płatność zostanie zrealizowana. Ta gotówka trafia natychmiast na twoje główne saldo — bez wymogu obrotu, bez oczekiwania.</p>
+        <p>20% natychmiastowej gotówki to stały dodatek do salda twojego konta. Możesz jej używać przy dowolnym stole, w dowolnym turnieju lub wypłacić zgodnie z naszymi standardowymi warunkami wypłat. To nasz sposób na powiedzenie, że cenimy twój pierwszy depozyt i chcemy, abyś mógł od razu grać z prawdziwymi pieniędzmi.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎁</div>
+        <h3>Kod Promocyjny: WELCOME</h3>
+        <p style="color:var(--text-body); margin-bottom:12px;">Kod promocyjny WELCOME aktywuje pełne doświadczenie nowego gracza JackPoker. Bez niego otrzymujesz jedynie standardowe dopasowanie depozytu. Z nim odblokowujesz dopasowanie 300%, 20% natychmiastową gotówkę, swój Welcome Lootbox, dostęp do Welcome Quests i ekskluzywne wejścia do freerollów przeznaczonych dla nowych graczy.</p>
+        <p>Kod jest ważny bezterminowo i działa na twój pierwszy depozyt niezależnie od wybranej metody płatności. Wystarczy wpisać go podczas rejestracji lub w sekcji Promocje na koncie przed dokonaniem pierwszego depozytu.</p>
+        <div class="promo-code-box" style="margin-top:16px;">
+          <div class="promo-code-value">WELCOME</div>
+          <button class="promo-code-copy btn-copy" onclick="copyPromoCode()">Kopiuj Kod</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== LOOTBOX BONUS SYSTEM ===== -->
+<section class="section section-dark" id="lootbox">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Unikalna Funkcja Bonusowa</span>
+      <h2>System <span class="gold-text">Lootbox JackPoker</span></h2>
+      <p>Większość pokojów pokerowych oferuje stały procent bonusu. My idziemy dalej. Nasz system Lootbox wprowadza mechanikę losowego mnożnika, który może amplifikować twój bonus powitalny — i przyszłe bonusy depozytowe — nawet dziesięciokrotnie ponad podstawową wartość.</p>
+    </div>
+
+    <div class="split">
+      <div class="split-content">
+        <h3 style="margin-bottom:16px;">Jak Działają Lootboxy</h3>
+        <p>Gdy zakwalifikujesz się do Lootboxa — przez kwalifikujący depozyt, osiągnięcie kamienia milowego lub podczas specjalnych wydarzeń promocyjnych — otrzymujesz zapieczętowany Lootbox na swoim koncie. Jego otwarcie jest natychmiastowe: system losowo przydziela ci mnożnik z opublikowanego zakresu prawdopodobieństwa, który jest następnie stosowany do twojego bazowego bonusu.</p>
+
+        <p>Mnożniki wahają się od 100% (równego twojemu standardowemu bonusowi) aż do 1,000% — dziesięciokrotności kwoty bazowego bonusu. Welcome Lootbox otwarty przy depozycie $100 z mnożnikiem 1,000% dostarczyłby</p>
+
+        <p>System Lootbox działa transparentnie. Każdy poziom Lootboxa ma opublikowane zakresy prawdopodobieństwa, a wyniki są weryfikowalnie uczciwe. Wierzymy, że nasi gracze zasługują na dokładne rozumienie mechaniki naszych bonusów.</p>
+
+        <p>Poza ofertą powitalną, Lootboxy pojawiają się przez całą twoją podróż z JackPoker. Gracze o wysokim wolumenie otrzymują Lootboxy za kamienie milowe po przekroczeniu progów rake. Specjalne Lootboxy eventowe są dystrybuowane podczas</p>
+
+        <div class="highlight-box" style="margin-top:24px;">
+          <h4>Certyfikowane jako Uczciwe przez Niezależne Laboratoria</h4>
+          <p>Wszystkie wyniki Lootboxów są generowane przez certyfikowany RNG testowany i certyfikowany przez iTech Labs i BMM TestLabs. Nasze rozkłady prawdopodobieństwa są publicznie dostępne, a matematyka stojąca za każdym poziomem jest</p>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-bottom:20px; text-align:center;">Poziomy Mnożników Lootbox</h3>
+        <div class="lootbox-visual">
+          <div class="lootbox-tier">
+            <span class="tier-icon">📦</span>
+            <span class="tier-mult">100%</span>
+            <span class="tier-label">Bronze</span>
+          </div>
+          <div class="lootbox-tier">
+            <span class="tier-icon">📦</span>
+            <span class="tier-mult">200%</span>
+            <span class="tier-label">Silver</span>
+          </div>
+          <div class="lootbox-tier">
+            <span class="tier-icon">💎</span>
+            <span class="tier-mult">400%</span>
+            <span class="tier-label">Gold</span>
+          </div>
+          <div class="lootbox-tier">
+            <span class="tier-icon">💎</span>
+            <span class="tier-mult">700%</span>
+            <span class="tier-label">Platinum</span>
+          </div>
+          <div class="lootbox-tier jackpot">
+            <span class="tier-icon">👑</span>
+            <span class="tier-mult">1,000%</span>
+            <span class="tier-label">Jackpot</span>
+          </div>
+        </div>
+
+        <div class="card card-sm" style="margin-top:20px;">
+          <h4 style="margin-bottom:12px;">Kiedy Otrzymujesz Lootboxy</h4>
+          <ul class="quest-tasks" style="list-style:none;">
+            <li style="padding:8px 0 8px 22px; position:relative; font-size:0.88rem; border-bottom:1px solid var(--border-subtle);"><span style="position:absolute;left:0;color:var(--gold-primary);">✦</span> Pierwszy kwalifikujący depozyt (Welcome Lootbox)</li>
+            <li style="padding:8px 0 8px 22px; position:relative; font-size:0.88rem; border-bottom:1px solid var(--border-subtle);"><span style="position:absolute;left:0;color:var(--gold-primary);">✦</span> Każdy kolejny depozyt powyżej kwalifikującego progu</li>
+            <li style="padding:8px 0 8px 22px; position:relative; font-size:0.88rem; border-bottom:1px solid var(--border-subtle);"><span style="position:absolute;left:0;color:var(--gold-primary);">✦</span> Osiągnięcie progów rake (100, 250, 500, 1,000 łącznego rake)</li>
+            <li style="padding:8px 0 8px 22px; position:relative; font-size:0.88rem; border-bottom:1px solid var(--border-subtle);"><span style="position:absolute;left:0;color:var(--gold-primary);">✦</span> Ukończenie poziomów Welcome Quest (Srebrny, Złoty, Supernova)</li>
+            <li style="padding:8px 0 8px 22px; position:relative; font-size:0.88rem; border-bottom:1px solid var(--border-subtle);"><span style="position:absolute;left:0;color:var(--gold-primary);">✦</span> Sezonowe wydarzenia i specjalne okresy promocyjne</li>
+            <li style="padding:8px 0 8px 22px; position:relative; font-size:0.88rem;"><span style="position:absolute;left:0;color:var(--gold-primary);">✦</span> Awanse w programie VIP i rocznice</li>
+          </ul>
+        </div>
+
+        <div class="card card-sm" style="margin-top:16px; border-color:rgba(246,186,70,0.2);">
+          <h4 style="color:var(--gold-primary); margin-bottom:8px;">Dlaczego To Ma Znaczenie</h4>
+          <p style="color:var(--text-muted); font-size:0.88rem; margin:0; line-height:1.7;">Tradycyjne bonusy pokerowe są statyczne i przewidywalne. Nasz system Lootbox wprowadza prawdziwe emocje do każdego depozytu. Nawet umiarkowany depozyt ma potencjał odblokowania życiowej zmiany w mnożniku bonusu, co sprawia, że każda wpłata jest prawdziwym wydarzeniem.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== WELCOME QUESTS ===== -->
+<section class="section section-accent" id="welcome-quests">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Postęp Nowego Gracza</span>
+      <h2>Powitalne <span class="gold-text">Questy</span></h2>
+      <p>Welcome Quests to nasz ustrukturyzowany system progresji dla nowych graczy. Przez trzy eskalujące poziomy — Srebrny, Złoty i Supernova — wykonujesz pokerowe wyzwania, które nagradzają cię kredytami bonusowymi, biletami i ekskluzywnymi korzyściami platformy.</p>
+    </div>
+
+    <div class="grid-3" style="margin-bottom:48px;">
+
+      <!-- Silver Quest -->
+      <div class="quest-card">
+        <div class="quest-header silver">
+          <span class="quest-tier-badge silver">⚔ Srebrny Quest</span>
+          <div class="quest-prize silver">$50</div>
+          <p style="color:var(--text-muted); font-size:0.85rem; margin:0;">w kredytach bonusowych + bilety freerollowe</p>
+        </div>
+        <div class="quest-body">
+          <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:12px;">Srebrny Quest to twój punkt wejścia do systemu Welcome Quests. Te wyzwania wprowadzają cię do różnych typów gier dostępnych w JackPoker i nagradzają konsekwencję przez pierwsze sesje.</p>
+          <ul class="quest-tasks">
+            <li>
+              Zagraj 50 rąk No Limit Hold'em
+              <span class="task-reward">Nagroda: $5 kredytu bonusowego</span>
+            </li>
+            <li>
+              Zarobij $5 rake przy dowolnych stawkach stołu
+              <span class="task-reward">Nagroda: $10 kredytu bonusowego</span>
+            </li>
+            <li>
+              Zakończ w pieniądzach w dowolnym turnieju
+              <span class="task-reward">Nagroda: 1 bilet turniejowy (pula $200K)</span>
+            </li>
+            <li>
+              Wypróbuj Spin&Win — zagraj 10 rund
+              <span class="task-reward">Nagroda: $5 kredytu bonusowego + Lootbox</span>
+            </li>
+            <li>
+              Ukończ wszystkie cele Srebrne
+              <span class="task-reward">Nagroda: $30 bonus ukończenia + odznaka Srebrna</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Gold Quest -->
+      <div class="quest-card">
+        <div class="quest-header gold">
+          <span class="quest-tier-badge gold">★ Złoty Quest</span>
+          <div class="quest-prize gold">$200</div>
+          <p style="color:var(--text-muted); font-size:0.85rem; margin:0;">w kredytach bonusowych + bilety turniejowe</p>
+        </div>
+        <div class="quest-body">
+          <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:12px;">Złoty Quest odblokowuje się po ukończeniu Srebrnego. Wyzwania rosną w skali ambicji, prowadząc cię głębiej w platformę i nagradzając wyższy wolumen oraz osiągnięcia oparte na umiejętnościach.</p>
+          <ul class="quest-tasks">
+            <li>
+              Zagraj 300 rąk dowolnego wariantu pokera
+              <span class="task-reward">Nagroda: $20 kredytu bonusowego</span>
+            </li>
+            <li>
+              Zarobij $30 łącznego rake w ciągu 7 dni
+              <span class="task-reward">Nagroda: $50 kredytu bonusowego</span>
+            </li>
+            <li>
+              Zarejestruj się na Big Bang Sunday ($45K GTD)
+              <span class="task-reward">Nagroda: bilet satelitarny + $20 bonus</span>
+            </li>
+            <li>
+              Gra wielostołowa: graj przy 2 stołach jednocześnie
+              <span class="task-reward">Nagroda: $25 kredytu bonusowego + Złoty Lootbox</span>
+            </li>
+            <li>
+              Ukończ wszystkie cele Złote
+              <span class="task-reward">Nagroda: $85 bonus za ukończenie + Złota odznaka</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Supernova Quest -->
+      <div class="quest-card">
+        <div class="quest-header supernova">
+          <span class="quest-tier-badge supernova">🌟 Supernova Quest</span>
+          <div class="quest-prize supernova">$1,000</div>
+          <p style="color:var(--text-muted); font-size:0.85rem; margin:0;">w nagrodach + wstęp do programu VIP</p>
+        </div>
+        <div class="quest-body">
+          <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:12px;">Supernova Quest to najwyższe osiągnięcie dla nowych graczy. Jej ukończenie czyni z Ciebie zweryfikowanego gracza wysokiej wartości i daje bezpośredni dostęp do naszego programu VIP z podwyższonym rakebackiem już od pierwszego dnia.</p>
+          <ul class="quest-tasks">
+            <li>
+              Zagraj 1 000 rąk przy dowolnych stawkach
+              <span class="task-reward">Nagroda: $100 bonus kredytowy</span>
+            </li>
+            <li>
+              Wygeneruj $150 w dożywotnim rake w JackPoker
+              <span class="task-reward">Nagroda: $200 bonus kredytowy</span>
+            </li>
+            <li>
+              Wygraj turniej lub zajmij miejsce w top 3 w satelicie
+              <span class="task-reward">Nagroda: pakiet biletów turniejowych o wartości $250</span>
+            </li>
+            <li>
+              Osiągnij 30-dniową passę (loguj się codziennie przez 30 dni)
+              <span class="task-reward">Nagroda: Platinum Lootbox + $150 bonus</span>
+            </li>
+            <li>
+              Ukończ wszystkie zadania Supernova
+              <span class="task-reward">Nagroda: $300 bonus + wstęp do programu VIP + odznaka Supernova</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlight-box gold">
+      <h4>Postęp w Questach jest automatyczny</h4>
+      <p>Nie musisz zapisywać się na poszczególne questy ani ręcznie ich aktywować. W momencie rejestracji z kodem promocyjnym WELCOME i wykonania pierwszego depozytu wszystkie trzy poziomy Questów automatycznie zaczynają śledzić Twoją aktywność. Postęp jest widoczny w dowolnym momencie w panelu Promocji na Twoim koncie. Questy muszą być ukończone w ciągu 90 dni od rejestracji konta.</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== RAKEBACK & VIP ===== -->
+<section class="section section-dark" id="rakeback-vip">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Stałe nagrody</span>
+      <h2>Program &amp; <span class="gold-text">Program VIP</span></h2>
+      <p>Nasze zaangażowanie w nagradzanie lojalnych graczy wykracza daleko poza bonus powitalny. Program VIP JackPoker zapewnia do 20% dożywotniego rakebacku, zwrot gotówki z kasyna, obsługę priorytetową oraz ekskluzywne korzyści, które rosną wraz z Tobą w miarę wzrostu Twojego wolumenu.</p>
+    </div>
+
+    <div class="split split-reverse" style="margin-bottom:56px;">
+      <div class="split-img">
+        <img loading="lazy" src="../assets/images/vip-lounge.jpg" alt="JackPoker VIP Lounge">
+      </div>
+      <div class="split-content">
+        <span class="section-label">Program Dożywotni</span>
+        <h3>Zwrot do 20% z każdej ręki</h3>
+        <p>Program jest fundamentem naszego systemu lojalnościowego. Każda ręka zagrana przy stole za prawdziwe pieniądze generuje rake — niewielki procent pobierany przez dom. Znaczącą część tego rake zwracamy bezpośrednio na Twoje saldo jako rakeback, naliczany na bieżąco.</p>
+        <p>Nasza struktura rakebacku jest przejrzysta i prosta: nie ma skomplikowanych systemów punktowych do rozszyfrowania, żadnych arbitralnych obrotów ani daty ważności zgromadzonego rakebacku. To, co zarabiasz, jest Twoje — automatycznie zwracane na Twoje saldo.</p>
+        <ul>
+          <li>Program naliczany automatycznie — bez konieczności odbierania</li>
+          <li>Obowiązuje we wszystkich wariantach gier gotówkowych i przy wszystkich stawkach</li>
+          <li>Naliczany od pierwszej zagranej ręki</li>
+          <li>Wyższy wolumen rake odblokowuje wyższe procenty rakebacku</li>
+          <li>Łączony z bonusem powitalnym w kwalifikujących się okresach</li>
+          <li>Widoczny w czasie rzeczywistym w panelu Twojego konta</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- VIP Tiers -->
+    <h3 style="text-align:center; margin-bottom:8px;">Struktura poziomów VIP</h3>
+    <p style="text-align:center; color:var(--text-muted); margin-bottom:32px; max-width:560px; margin-left:auto; margin-right:auto;">Twój procent rakebacku rośnie wraz z awansem przez kolejne poziomy VIP. Postęp oparty jest na miesięcznym wolumenie rake, a zasady resetowania są korzystne, aby chronić Twój status poziomu.</p>
+
+    <div class="vip-tiers">
+      <div class="vip-tier-card">
+        <span class="vip-tier-icon">🥉</span>
+        <div class="vip-tier-name">Bronze</div>
+        <div class="vip-tier-rakeback">5%</div>
+        <div class="vip-tier-sub">Program</div>
+        <p style="color:var(--text-muted); font-size:0.78rem; margin-top:12px; margin-bottom:0;">Poziom podstawowy — automatycznie aktywny dla wszystkich nowych graczy od pierwszego dnia</p>
+      </div>
+      <div class="vip-tier-card">
+        <span class="vip-tier-icon">🥈</span>
+        <div class="vip-tier-name">Silver</div>
+        <div class="vip-tier-rakeback">10%</div>
+        <div class="vip-tier-sub">Program</div>
+        <p style="color:var(--text-muted); font-size:0.78rem; margin-top:12px; margin-bottom:0;">Odblokowywany po wygenerowaniu $500 w miesięcznym rake w JackPoker</p>
+      </div>
+      <div class="vip-tier-card">
+        <span class="vip-tier-icon">🥇</span>
+        <div class="vip-tier-name">Gold</div>
+        <div class="vip-tier-rakeback">15%</div>
+        <div class="vip-tier-sub">Program</div>
+        <p style="color:var(--text-muted); font-size:0.78rem; margin-top:12px; margin-bottom:0;">Odblokowywany przy $2,000 miesięcznego rake — pełny zwrot gotówki z kasyna wliczony</p>
+      </div>
+      <div class="vip-tier-card featured">
+        <span class="vip-tier-icon">👑</span>
+        <div class="vip-tier-name">Diamond</div>
+        <div class="vip-tier-rakeback">20%</div>
+        <div class="vip-tier-sub">Program</div>
+        <p style="color:var(--text-muted); font-size:0.78rem; margin-top:12px; margin-bottom:0;">Nasz elitarny poziom — dla miesięcznego rake powyżej $5,000. Wyłącznie na zaproszenie.</p>
+      </div>
+    </div>
+
+    <!-- VIP Benefits Grid -->
+    <h3 style="text-align:center; margin-top:56px; margin-bottom:32px;">Ekskluzywne korzyści VIP</h3>
+    <div class="grid-3">
+      <div class="feature-card">
+        <div class="feature-icon">💰</div>
+        <h3>10% zwrotu gotówki z kasyna</h3>
+        <p>Członkowie VIP na poziomie Gold i wyższym otrzymują 10% zwrotu gotówki od strat netto w naszych zintegrowanych grach kasynowych każdego tygodnia. Zwrot jest naliczany każdego poniedziałku jako wypłacalna gotówka bez żadnych dodatkowych warunków.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Priorytetowe wypłaty</h3>
+        <p>Członkowie VIP awansują na czoło kolejki przy każdym wniosku o wypłatę. Podczas gdy standardowi gracze czekają do 24 godzin, nasi członkowie Gold i Diamond otrzymują przetworzone wypłaty w ciągu godzin od złożenia wniosku — również w weekendy.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>Dedykowana obsługa VIP</h3>
+        <p>Każdy członek VIP na poziomie Gold i Diamond otrzymuje imiennego opiekuna konta, dostępnego przez bezpośredni czat i e-mail. Twój opiekun osobiście i natychmiastowo zajmuje się depozytami, wypłatami, negocjacjami bonusów oraz wszelkimi problemami z platformą.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎁</div>
+        <h3>Ekskluzywne Lootboxy</h3>
+        <p>Członkowie VIP otrzymują ulepszone Lootboxy z poprawionymi rozkładami prawdopodobieństwa, przesunięte w stronę wyższych poziomów mnożnika. Wyniki Platinum i Jackpot są znacznie bardziej prawdopodobne dla członków Gold i Diamond.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏆</div>
+        <h3>Prywatne turnieje</h3>
+        <p>Ekskluzywne turnieje tylko na zaproszenie z gwarantowanymi nakładkami i strukturami nagród, które wynagradzają mniejsze pole. Turnieje VIP odbywają się co tydzień dla członków Silver+ i codziennie dla naszego poziomu Diamond.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌟</div>
+        <h3>Ulepszony bonus doładowania</h3>
+        <p>Członkowie VIP otrzymują spersonalizowane oferty bonusu doładowania przy każdym depozycie — nie tylko pierwszym. Nasi członkowie Diamond mają dostęp do ciągłych bonusów doładowania na poziomie 50–100% w oparciu o indywidualną historię gry i preferencje.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== TOURNAMENT BONUSES ===== -->
+<section class="section" id="tournament-bonuses">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Nagrody za grę rywalizacyjną</span>
+      <h2>Turniej <span class="gold-text">Bonus</span></h2>
+      <p>Nasz program turniejowy jest sam w sobie wyjątkową szansą na bonus. Od freerollów z bezpłatnym wstępem i pulami nagród sięgającymi sześciu cyfr, po satelity z nakładkami dające Ci szansę na udział w dużych wydarzeniach za ułamek kosztów — nasz harmonogram turniejów zwiększa Twój bankroll bez konieczności dokonywania dodatkowych depozytów.</p>
+    </div>
+
+    <div style="display:flex; flex-direction:column; gap:16px;">
+
+      <div class="tourney-bonus-card">
+        <div class="tourney-icon">🎰</div>
+        <div>
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:8px;">
+            <h3 style="margin:0; font-size:1.2rem;">Freeroll Festival — ponad $200 000 miesięcznie</h3>
+            <span class="badge badge-green">BEZPŁATNY WSTĘP</span>
+          </div>
+          <p style="color:var(--text-muted); margin-bottom:12px;">Nasz Freeroll Festival to najbardziej hojny stały program z bezpłatnym wstępem w pokerze online. Każdego dnia w harmonogramie odbywają się osiem oddzielnych turniejów freeroll — obejmujących strefy czasowe poranny, popołudniowy i wieczorny. Wszyscy zarejestrowani gracze JackPoker automatycznie kwalifikują się do udziału bez żadnych dodatkowych wymagań.</p>
+          <p style="color:var(--text-muted); margin-bottom:0;">W ciągu miesiąca kalendarzowego Freeroll Festival rozdysponowuje ponad $200 000 łącznych nagród pieniężnych. To prawdziwe nagrody gotówkowe, zapisywane bezpośrednio na Twoim saldzie i wypłacalne bez żadnych dodatkowych wymogów obrotu. Dla graczy budujących bankroll Freeroll Festival jest niezwykłym bezpłatnym zasobem dostępnym dla każdego członka naszej społeczności.</p>
+        </div>
+      </div>
+
+      <div class="tourney-bonus-card">
+        <div class="tourney-icon">🚀</div>
+        <div>
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:8px;">
+            <h3 style="margin:0; font-size:1.2rem;">Turnieje satelitarne — dostęp do największych wydarzeń</h3>
+            <span class="badge badge-purple">NISKI BUY-IN</span>
+          </div>
+          <p style="color:var(--text-muted); margin-bottom:12px;">Nasz program satelitów zapewnia efektywną kosztowo ścieżkę do naszych największych gwarantowanych turniejów oraz prestiżowych wydarzeń na żywo wspieranych przez JackPoker. Satelity działają nieprzerwanie, z buy-inami zaczynającymi się już od $1, przyznając bezpośrednie wejścia do naszych flagowych wydarzeń, w tym Bonus Bonanza ($1,25 mln miesięcznie) i Big Bang Sunday (gwarancja $45 tys.).</p>
+          <p style="color:var(--text-muted); margin-bottom:0;">Wieloetapowe satelity pozwalają Ci piąć się od mikro-stawek w kolejnych krokach. Wejście za $1 do satelity Etap 1 może ostatecznie prowadzić do miejsca na dużym turnieju o wartości powyżej $500 — tego rodzaju progresja, do której poker jest wyjątkowo predestynowany i którą aktywnie kultywujemy jako część naszej filozofii projektowania turniejów.</p>
+        </div>
+      </div>
+
+      <div class="tourney-bonus-card">
+        <div class="tourney-icon">💥</div>
+        <div>
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:8px;">
+            <h3 style="margin:0; font-size:1.2rem;">Gwarantowane nakładki — realna wartość w każdym turnieju</h3>
+            <span class="badge badge-gold">NAKŁADKA</span>
+          </div>
+          <p style="color:var(--text-muted); margin-bottom:12px;">Stoimy za naszymi gwarantowanymi pulami nagród. Gdy łączne buy-iny nie osiągają podanej przez nas gwarancji, wyrównujemy różnicę z własnych środków — tworząc nakładkę, która zwiększa efektywną nagrodę na gracza powyżej kosztu buy-inu. Nasza największa regularna okazja na nakładkę to Big Bang Sunday z gwarancją $45 000 przy zaledwie $30 buy-inie.</p>
+          <p style="color:var(--text-muted); margin-bottom:0;">Nakładki reprezentują czystą pozytywną wartość oczekiwaną dla graczy turniejowych. Ustalamy hojne gwarancje, bo wierzymy w budowanie silnego pola rywalizacyjnego i nagradzanie graczy, którzy się pojawiają. Nasza historia honorowania każdej gwarancji — w setkach wydarzeń i milionach nagród — mówi sama za siebie.</p>
+        </div>
+      </div>
+
+      <div class="tourney-bonus-card">
+        <div class="tourney-icon">🏆</div>
+        <div>
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:8px;">
+            <h3 style="margin:0; font-size:1.2rem;">Bonus Bonanza — $1,25 miliona miesięcznie</h3>
+            <span class="badge badge-gold">FLAGOWY</span>
+          </div>
+          <p style="color:var(--text-muted); margin-bottom:12px;">Bonus Bonanza to nasza flagowa miesięczna seria turniejów — ustrukturyzowany harmonogram wydarzeń zbiorowo gwarantujący ponad $1 250 000 miesięcznych nagród. Seria trwa przez cały każdy miesiąc kalendarzowy, z wieloma wydarzeniami każdego dnia obejmującymi wszystkie główne warianty pokera i szeroką gamą poziomów buy-inu od $5 do ponad $500.</p>
+          <p style="color:var(--text-muted); margin-bottom:0;">Nowi gracze otrzymują bezpłatny bilet satelitarny do Bonus Bonanza w ramach postępów w Welcome Quest. Ukończenie poziomu Gold Quest automatycznie kwalifikuje Cię do bezpośredniego wejścia na jedno z wydarzeń Bonus Bonanza z niższym buy-inem — nasz prezent powitalny dla graczy, którzy w pełni angażują się w platformę w ciągu pierwszych 30 dni.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== CRYPTO DEPOSIT BONUS ===== -->
+<section class="section section-dark" id="crypto-bonus">
+  <div class="container">
+    <div class="split" style="margin-bottom:0;">
+      <div class="split-img">
+        <img loading="lazy" src="../assets/images/crypto-poker.jpg" alt="JackPoker Crypto Deposit Bonus">
+      </div>
+      <div class="split-content">
+        <span class="section-label">Gracze Crypto</span>
+        <h2>Depozyt Crypto <span class="gold-text">Bonus</span></h2>
+        <p>Jesteśmy platformą pokerową stawiającą kryptowaluty na pierwszym miejscu. Nasza infrastruktura płatnicza jest zbudowana do przetwarzania depozytów i wypłat w walutach cyfrowych szybciej, taniej i z większą prywatnością niż jakikolwiek tradycyjny sposób płatności. W podziękowaniu dla graczy, którzy wybierają krypto, oferujemy ulepszone warunki bonusów na kwalifikujące się depozyty kryptowalutowe.</p>
+
+        <p>Depozyty kryptowalutowe kwalifikują się do tego samego 300% dopasowania powitalne co wszystkie inne metody, z dodatkową zaletą szybszego przetwarzania — większość depozytów krypto pojawia się na Twoim saldzie JackPoker w ciągu kilku minut od potwierdzenia na blockchainie. W przypadku depozytów Bitcoin powyżej kwalifikującego progu nasz zespół okresowo udostępnia ekskluzywne oferty doładowania wyłącznie dla krypto z wyższymi procentami dopasowania, komunikowane bezpośrednio przez platformę.</p>
+
+        <p>Akceptujemy najszerszą gamę kryptowalut spośród wszystkich porównywalnych platform pokerowych. Bez względu na to, czy posiadasz Bitcoin, Ethereum, stablecoiny takie jak USDT czy którykolwiek z naszych innych obsługiwanych tokenów, możesz zasilić konto, odebrać bonus powitalny i usiąść do stołów w mniej niż pięć minut od momentu inicjacji transferu.</p>
+
+        <h4 style="margin-bottom:16px; margin-top:8px;">Obsługiwane kryptowaluty</h4>
+        <div class="crypto-pills">
+          <div class="crypto-pill"><span class="crypto-symbol">₿</span> Bitcoin (BTC)</div>
+          <div class="crypto-pill"><span class="crypto-symbol">⟠</span> Ethereum (ETH)</div>
+          <div class="crypto-pill"><span class="crypto-symbol">₮</span> Tether (USDT)</div>
+          <div class="crypto-pill"><span class="crypto-symbol">◈</span> TRON (TRX)</div>
+          <div class="crypto-pill"><span class="crypto-symbol">Ł</span> Litecoin (LTC)</div>
+          <div class="crypto-pill"><span class="crypto-symbol">Ð</span> Dogecoin (DOGE)</div>
+          <div class="crypto-pill"><span class="crypto-symbol">⬡</span> BNB</div>
+        </div>
+
+        <div class="highlight-box gold" style="margin-top:24px;">
+          <h4>Zero opłat za depozyty krypto</h4>
+          <p>JackPoker nie pobiera żadnych opłat platformowych za depozyty kryptowalutowe. Płacisz jedynie standardową opłatę sieciową za transakcję — a w sieciach z niskimi opłatami, takich jak TRON (USDT-TRC20), jest ona minimalna. Pełna kwota depozytu trafia na Twoje konto i kwalifikuje się do kompletnego bonusu powitalnego.</p>
+        </div>
+
+        <ul>
+          <li>Brak opłat platformowych za depozyty krypto</li>
+          <li>Wypłaty przetwarzane w ciągu 1–4 godzin</li>
+          <li>Minimalny depozyt krypto od równowartości $20</li>
+          <li>Pełna kwalifikowalność do bonusu dla wszystkich obsługiwanych tokenów</li>
+          <li>Ulepszone okresowe oferty doładowania dla stałych użytkowników krypto</li>
+          <li>Obsługiwane płatności z portfeli non-custodial</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== CURRENT PROMOTIONS — CASH CARNIVAL ===== -->
+<section class="section" id="current-promotions">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Aktywne teraz</span>
+      <h2>Aktualne <span class="gold-text">Promocje</span></h2>
+      <p>Oprócz naszego stałego programu bonusowego przez cały rok prowadzimy ograniczone czasowo promocje, które zapewniają nadzwyczajne nagrody pieniężne dla całej bazy graczy. Oto co jest aktywne teraz i co nadchodzi.</p>
+    </div>
+
+    <div class="carnival-banner" style="margin-bottom:32px;">
+      <div class="carnival-inner">
+        <div>
+          <div class="live-badge">
+            <span class="live-dot"></span>
+            NA ŻYWO — 23 mar – 19 kwi 2026
+          </div>
+          <div class="carnival-prize">$500,000</div>
+          <h2 style="color:var(--text-white); margin-bottom:12px;">Cash Carnival</h2>
+          <p style="color:var(--text-body); margin-bottom:16px; max-width:520px;">Cash Carnival to nasza największa wiosenna promocja — $500 000 w zrzutach gotówki rozdzielonych bezpośrednio graczom przy stołach w ciągu czterech tygodni, od 23 marca do 19 kwietnia 2026. Bomby gotówkowe są losowo uruchamiane przy stołach co trzy do siedmiu rąk, obsypując obecnych graczy natychmiastową nagrodą pieniężną zapisywaną bezpośrednio na ich saldzie.</p>
+          <p style="color:var(--text-muted); margin-bottom:24px; max-width:520px; font-size:0.92rem;">Każda ręka w grze gotówkowej za prawdziwe pieniądze wchodzi do puli zrzutów. Nie jest wymagane zapisanie się ani minimalna stawka — każdy gracz przy każdym stole jest uprawniony do każdej bomby. Im więcej rąk zagrasz w okresie promocji, tym więcej bomb napotkasz i tym więcej okazji masz do zebrania zrzutu.</p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="https://go.jack-full.com/c41f796e" class="btn btn-primary">Dołącz do Cash Carnival ♠</a>
+            <a href="news.html" class="btn btn-secondary">Dowiedz się więcej</a>
+          </div>
+        </div>
+        <div style="text-align:center; flex-shrink:0;">
+          <div style="background:rgba(255,61,0,0.08); border:1px solid rgba(255,61,0,0.25); border-radius:var(--radius-lg); padding:32px 28px; min-width:200px;">
+            <div style="font-size:2.5rem; margin-bottom:8px;">💣</div>
+            <div style="font-family:var(--font-display); font-size:1rem; font-weight:700; color:var(--text-white); margin-bottom:4px;">Bomby gotówkowe</div>
+            <div style="font-size:0.82rem; color:var(--text-muted);">Co 3–7 rąk</div>
+            <div style="margin-top:20px; padding-top:20px; border-top:1px solid rgba(255,61,0,0.2);">
+              <div style="font-family:var(--font-display); font-size:2rem; font-weight:900; color:#FF3D00;">28</div>
+              <div style="font-size:0.78rem; color:var(--text-muted);">Pozostałe dni</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Other active promotions -->
+    <div class="grid-2">
+      <div class="promo-banner">
+        <div class="promo-banner-content">
+          <h3>Freeroll Festival <span class="text-gold">— Trwający</span></h3>
+          <p>8 bezpłatnych codziennych turniejów. Ponad $200 000 w gwarantowanych miesięcznych nagrodach rozdzielonych w porannych, popołudniowych i wieczornych wydarzeniach. Brak buy-inu — wystarczy się zarejestrować i grać.</p>
+        </div>
+        <a href="tournaments.html" class="btn btn-secondary btn-sm" style="flex-shrink:0;">Zobacz turniej</a>
+      </div>
+      <div class="promo-banner">
+        <div class="promo-banner-content">
+          <h3>Big Bang Sunday <span class="text-gold">— $45K GTD</span></h3>
+          <p>Nasz flagowy tygodniowy turniej odbywa się każdą niedzielę. Gwarantowana pula nagród $45 000 przy zaledwie $30 buy-inie. Satelity od $1. Ogromny potencjał nakładki każdego tygodnia.</p>
+        </div>
+        <a href="tournaments.html" class="btn btn-secondary btn-sm" style="flex-shrink:0;">Zdobądź bilety</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== PROMO CODE SECTION ===== -->
+<section class="section section-dark" id="promo-code">
+  <div class="container">
+    <div class="promo-code-section">
+      <span class="section-label">Twój kod aktywacyjny</span>
+      <h2>Użyj kodu promocyjnego <span class="gold-text">WELCOME</span></h2>
+      <p style="color:var(--text-muted); max-width:560px; margin:0 auto 8px; font-size:1.05rem;">Wpisz ten kod podczas rejestracji konta JackPoker, aby odblokować kompletny pakiet bonusów dla nowych graczy: 300% dopasowanie, 20% natychmiastowa gotówka, Welcome Lootbox i wszystkie trzy poziomy Welcome Quest.</p>
+      <p style="color:var(--text-muted); max-width:500px; margin:0 auto 0; font-size:0.9rem;">Kod można również wpisać w sekcji Promocje na swoim koncie przed pierwszym depozytem, jeśli zapomniałeś go wprowadzić podczas rejestracji.</p>
+
+      <div style="display:flex; justify-content:center; margin:32px 0 12px;">
+        <div class="promo-code-large">
+          <div class="code-text">WELCOME</div>
+          <button class="code-copy-btn btn-copy" onclick="copyPromoCode()">📋 Kopiuj kod</button>
+        </div>
+      </div>
+      <p id="copyFeedback" style="color:var(--success); font-size:0.85rem; min-height:20px; margin-bottom:32px;"></p>
+
+      <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+        <a href="https://go.jack-full.com/c41f796e" class="btn btn-primary btn-lg">Zarejestruj się i odbierz bonus ♠</a>
+        <a href="promo-code.html" class="btn btn-secondary btn-lg">Pełne szczegóły kodu promocyjnego</a>
+      </div>
+
+      <!-- What you get summary -->
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:48px; text-align:center; max-width:800px; margin-left:auto; margin-right:auto;">
+        <div style="padding:20px; background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:var(--radius-md);">
+          <div style="font-size:1.6rem; margin-bottom:8px;">🎯</div>
+          <div style="font-family:var(--font-display); font-size:1.1rem; font-weight:800; color:var(--gold-primary); margin-bottom:4px;">300%</div>
+          <div style="font-size:0.78rem; color:var(--text-muted);">Dopasowanie depozytu</div>
+        </div>
+        <div style="padding:20px; background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:var(--radius-md);">
+          <div style="font-size:1.6rem; margin-bottom:8px;">⚡</div>
+          <div style="font-family:var(--font-display); font-size:1.1rem; font-weight:800; color:var(--gold-primary); margin-bottom:4px;">20%</div>
+          <div style="font-size:0.78rem; color:var(--text-muted);">Natychmiastowa gotówka</div>
+        </div>
+        <div style="padding:20px; background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:var(--radius-md);">
+          <div style="font-size:1.6rem; margin-bottom:8px;">📦</div>
+          <div style="font-family:var(--font-display); font-size:1.1rem; font-weight:800; color:var(--gold-primary); margin-bottom:4px;">1,000%</div>
+          <div style="font-size:0.78rem; color:var(--text-muted);">Maks. Lootbox</div>
+        </div>
+        <div style="padding:20px; background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:var(--radius-md);">
+          <div style="font-size:1.6rem; margin-bottom:8px;">🌟</div>
+          <div style="font-family:var(--font-display); font-size:1.1rem; font-weight:800; color:var(--gold-primary); margin-bottom:4px;">3 Poziomy</div>
+          <div style="font-size:0.78rem; color:var(--text-muted);">Welcome Quests</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== BONUS FAQ ===== -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Najczęstsze pytania</span>
+      <h2>Bonus <span class="gold-text">FAQ</span></h2>
+      <p>Wszystko, co musisz wiedzieć o odbieraniu, ogrywaniu i maksymalizowaniu bonusów JackPoker. Jeśli nie znajdziesz odpowiedzi na swoje pytanie, nasz zespół wsparcia jest dostępny całą dobę przez czat na żywo.</p>
+    </div>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Jak odebrać bonus powitalny JackPoker?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Odebranie bonusu powitalnego jest proste. Najpierw zarejestruj nowe konto JackPoker, korzystając z przycisku "Graj teraz" na tej stronie. Podczas rejestracji zobaczysz pole na kod promocyjny — wpisz <strong>WELCOME</strong> tam. Jeśli pominiesz to pole podczas rejestracji, możesz go też wpisać w sekcji Promocje na swoim koncie przed wykonaniem pierwszego depozytu.</p>
+            <p>Gdy kod promocyjny jest aktywny, wykonaj pierwszy depozyt dowolną obsługiwaną metodą płatności z minimalną kwotą $20. Twój 300% bonus dopasowania i 20% natychmiastowy bonus gotówkowy pojawią się na Twoim koncie natychmiast po potwierdzeniu depozytu. Twój Welcome Lootbox będzie dostępny do otwarcia od razu, a Twoje Welcome Questy automatycznie zaczną śledzić postępy. Żadnych dodatkowych kroków, żadnego oczekiwania na zatwierdzenie — wszystko aktywuje się przy pierwszym depozycie.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Jakie są wymagania dotyczące obrotu bonusem powitalnym?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Bonus powitalny JackPoker wiąże się z wymogiem obrotu wynoszącym 6-krotność kwoty bonusu w wygenerowanym rake. Oznacza to, że musisz wygenerować rake równe sześciokrotności wartości bonusu, aby w pełni odblokować środki bonusowe i przekształcić je w wypłacalną gotówkę. Rake generowany jest automatycznie podczas gry rękami za prawdziwe pieniądze przy dowolnym stole gotówkowym.</p>
+            <p>Dla przykładu: jeśli wpłacisz $200 i otrzymasz bonus $600 (300% dopasowania), musisz wygenerować $3 600 w łącznym rake, aby w pełni wyczyścić bonus. Dla aktywnych graczy przy stołach ze średnimi stawkami jest to zazwyczaj osiągalne w ciągu 60-dniowego okna ważności bonusu. 20% natychmiastowy bonus gotówkowy nie ma żadnych dodatkowych wymogów obrotu — jest natychmiast dostępny jako część Twojego głównego salda.</p>
+            <p>Środki bonusowe są uwalniane stopniowo w miarę zdobywania rake — nie musisz wyczyścić pełnego wymogu, zanim jakakolwiek część bonusu się zamieni. Wraz z generowaniem rake, odpowiednie części bonusu są na bieżąco odblokowywane i stają się wypłacalne.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Kiedy bonusy wygasają i co się dzieje, jeśli nie zdążę wyczyścić w terminie?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Bonus powitalny wygasa 60 dni od daty kwalifikującego depozytu. Każda część bonusu, która nie została odblokowana przez generowanie rake przed datą wygaśnięcia, zostanie usunięta z Twojego konta. Dotyczy to konkretnie części bonusu dopasowania — 20% natychmiastowa gotówka naliczona w momencie depozytu jest już w pełni Twoja i nie podlega wygaśnięciu.</p>
+            <p>Welcome Questy mają oddzielny termin: wszystkie trzy poziomy questów (Silver, Gold i Supernova) muszą być ukończone w ciągu 90 dni od rejestracji konta. Postępy w nieukończonych questach są zapisywane, więc wszelkie zadania, które ukończyłeś częściowo, będą wliczane do łącznego wyniku poziomu, pod warunkiem że skończysz przed terminem.</p>
+            <p>Jeśli uważasz, że jesteś bliski wyczyszczenia bonusu, ale potrzebujesz krótkiego przedłużenia, skontaktuj się z naszym zespołem wsparcia. Chociaż przedłużenia są rozpatrywane indywidualnie i nie są gwarantowane, robimy co w naszej mocy, aby wychodzić naprzeciw graczom, którzy wykazują autentyczne zaangażowanie w platformę.</p>
+          </div>
+        </div>
+        </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Czy mogę odebrać wiele bonusów jednocześnie?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Pakiet bonusu powitalnego (300% dopasowanie + 20% natychmiastowa gotówka + Welcome Lootbox + Welcome Questy) to jednorazowa oferta dla nowych graczy przy pierwszym depozycie. Nie możesz odebrać wielu bonusów powitalnych na jednym koncie. Jedno konto na gracza, jeden pakiet powitalny na całe życie.</p>
+            <p>Jednak bieżące promocje działają równolegle z bonusem powitalnym i nie kolidują z nim. Możesz uczestniczyć w Freeroll Festival, zrzutach gotówki Cash Carnival, turnieju Big Bang Sunday i programie VIP rakeback jednocześnie, pracując nad wymaganiem obrotu bonusu powitalnego. Nie musisz wybierać — nasze promocje są zaprojektowane tak, aby się kumulowały i uzupełniały nawzajem.</p>
+            <p>Bonusy doładowania depozytu są okresowo oferowane aktualnym graczom. Są one oddzielne od pakietu powitalnego i można je przyjąć po wyczyszczeniu bonusu powitalnego. Członkowie VIP otrzymują spersonalizowane oferty doładowania częściej i na korzystniejszych warunkach.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Czy WELCOME jest jedynym działającym kodem w JackPoker?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>WELCOME to nasz główny i najbardziej wartościowy kod promocyjny — odblokowuje pełny pakiet powitalny dla nowych graczy, w tym 300% dopasowanie, 20% natychmiastową gotówkę, Lootbox i wszystkie trzy poziomy Welcome Quest. To kod, który polecamy wszystkim nowym graczom rejestrującym się po raz pierwszy.</p>
+            <p>Od czasu do czasu publikujemy również ograniczone czasowo kody promocyjne podczas specjalnych wydarzeń, kampanii sezonowych i za pośrednictwem naszych partnerów afiliacyjnych. Kody te mogą odblokowywać konkretne bonusy, takie jak pakiety biletów turniejowych, ulepszone bonusy doładowania lub wzmocnienia mnożnika Lootbox. Wszelkie aktywne kody promocyjne będą publikowane na naszej stronie promocji i komunikowane za pośrednictwem naszych oficjalnych kanałów w mediach społecznościowych.</p>
+            <p>Jeśli otrzymałeś inny kod w ramach promocji lub od partnera, możesz go wpisać w sekcji Promocje na swoim koncie, aby zobaczyć dokładnie, co odblokowuje, zanim go aktywujesz. Nigdy nie udostępniaj swoich kodów promocyjnych innym, ponieważ kody są zazwyczaj powiązane z indywidualnymi kontami.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Jak działa rakeback i jak sprawdzić swoje saldo?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Program w JackPoker jest obliczany jako procent od brutto rake wygenerowanego przy wszystkich stołach gotówkowych. Za każdym razem, gdy zostajesz rozdany do ręki, która dochodzi do floppa i rake jest pobierany z puli, Twój udział w tym rake jest śledzony w czasie rzeczywistym. Procent Twojego łącznego rake — określony przez poziom VIP — jest automatycznie zwracany na Twoje saldo na bieżąco.</p>
+            <p>Wszyscy nowi gracze zaczynają na poziomie Bronze z 5% rakebackiem. W miarę wzrostu miesięcznego wolumenu rake przechodzisz przez poziomy Silver (10%), Gold (15%) i Diamond (20%). Możesz sprawdzić swoje aktualne saldo rakebacku, dożywotni zarobiony rakeback i status poziomu w dowolnym momencie w sekcji Konto panelu JackPoker na karcie Lojalność i nagrody.</p>
+            <p>Program jest naliczany na Twoje główne saldo — nie na oczekujące lub bonusowe saldo — co oznacza, że jest natychmiast dostępny do gry lub wypłaty. Nie ma żadnego wymogu obrotu na rakeback na żadnym poziomie. To po prostu nasz sposób na zwracanie wartości graczom, którzy napędzają nasze stoły.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Czy mogę wypłacić bonus przed wyczyszczeniem wymogu obrotu?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>Środki bonusu dopasowania (część 300%) muszą być obrócone zgodnie z wymogiem 6-krotnego rake, zanim będą mogły zostać wypłacone. Środki te są przechowywane w oczekującym saldzie bonusowym oddzielnym od salda za prawdziwe pieniądze. W miarę generowania rake bonus jest stopniowo przekształcany w segmentach do Twojego głównego salda — nie możesz wypłacić pełnego bonusu jako jednorazową sumę przed obrotem, ale możesz wypłacić te części, które już zostały przekonwertowane.</p>
+            <p>20% natychmiastowy bonus gotówkowy to zupełnie inna sprawa. Ten bonus jest deponowany bezpośrednio na Twoje główne saldo w momencie pierwszego depozytu i nie ma żadnego wymogu obrotu. Możesz go wypłacić w dowolnym momencie, podlegając jedynie naszym standardowym minimalnym progom wypłaty i standardowemu procesowi weryfikacji KYC wymaganemu dla wszystkich wypłat.</p>
+            <p>Jeśli zdecydujesz się na wypłatę przed pełnym wyczyszczeniem bonusu powitalnego, pozostałe nieskonwertowane saldo bonusowe przepadnie. Zalecamy ogrywanie pełnego wymogu przed inicjowaniem wypłaty, aby mieć pewność, że wykorzystasz każdy dolar wartości bonusu.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta">
+  <div class="container">
+    <div class="cta-inner">
+      <span class="section-label" style="display:block; margin-bottom:16px;">Gotowy do Gry?</span>
+      <h2>Odbierz swój <span class="gold-text">Bonus 300%</span> Dzisiaj</h2>
+      <p>Dołącz do JackPoker teraz i odbierz najbardziej hojny pakiet powitalny w pokerze online. Twoje 300% dopasowanie do $2 000, 20% natychmiastowa gotówka, mnożnik Lootbox i Welcome Questy — wszystko na Ciebie czeka, każde z nich odblokowywane jednym depozytem z kodem promocyjnym WELCOME.</p>
+
+      <div style="display:flex; justify-content:center; margin:24px 0;">
+        <div class="promo-code-large">
+          <div class="code-text">WELCOME</div>
+          <button class="code-copy-btn btn-copy" onclick="copyPromoCode()">📋 Kopiuj</button>
+        </div>
+      </div>
+      <p id="copyFeedback2" style="color:var(--success); font-size:0.85rem; min-height:20px; margin-bottom:24px;"></p>
+
+      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-bottom:32px;">
+        <a href="https://go.jack-full.com/c41f796e" class="btn btn-primary btn-lg">Graj teraz w JackPoker ♠</a>
+        <a href="promo-code.html" class="btn btn-secondary btn-lg">Więcej o kodzie WELCOME</a>
+      </div>
+
+      <p style="color:var(--text-faint); font-size:0.8rem; max-width:520px; margin:0 auto;">18+ | Graj odpowiedzialnie | Licencja Anjouan, Union of Comoros | Certyfikat iTech Labs, BMM TestLabs &amp; GLI | Obowiązują warunki i wymogi obrotu.</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Promo Code CTA — Bonuses Context -->
+<aside class="promo-cta-inline" style="background: linear-gradient(135deg, rgba(137,59,247,0.08), rgba(246,186,70,0.08)); border: 1px solid rgba(246,186,70,0.2); border-radius: 16px; padding: 32px 36px; margin: 48px 0; position: relative; overflow: hidden;">
+  <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--gold-primary), #FF3D00);"></div>
+  <div style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 280px;">
+      <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 8px;">Aktywuj wszystkie bonusy jednym kodem</h3>
+      <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin: 0;">Każdy bonus na tej stronie jest odblokowywany przez wpisanie <a href="promo-code.html" style="color: var(--gold-primary); font-weight: 700; text-decoration: underline;">kodu promocyjnego WELCOME</a> podczas rejestracji. Kod aktywuje jednocześnie 300% dopasowanie, 20% natychmiastową gotówkę, Welcome Lootbox i Welcome Questy. Przeczytaj nasz <a href="promo-code.html" style="color: var(--gold-primary); font-weight: 600;">przewodnik aktywacji kodu promocyjnego krok po kroku</a> aby mieć pewność, że odbierasz wszystko.</p>
+    </div>
+    <div style="flex-shrink: 0;">
+      <a href="promo-code.html" class="btn btn-cta" style="white-space: nowrap;">Pobierz kod promocyjny →</a>
+    </div>
+  </div>
+</aside>
+
+<!-- ===== FOOTER ===== -->
+
+    <!-- Latest News Links -->
+    <section style="padding: 24px 0 0;">
+      <div class="container">
+        <h3 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; color: var(--text-primary);">Najnowsze z JackPoker</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <a href="news/winter-games-festival-wraps-with-record-breaking-21m-in-payo.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">Winter Games Festival: Wypłaty $2.1M →</a>
+          <a href="news/bonus-bonanza-march-schedule-620-events-125m-in-guarantees.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">Bonus Bonanza Marzec: $1.25M GTD →</a>
+          <a href="news/jackpoker-mobile-app-30-launches-with-multi-table-support.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">Aplikacja Mobilna 3.0 Uruchomiona →</a>
+          <a href="news/crypto-deposits-now-available-in-sol-matic-and-ton.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">Depozyty Krypto: SOL, MATIC, TON →</a>
+        </div>
+      </div>
+    </section>
+
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="JackPoker Home">
+        <svg class="logo-icon" width="189" height="47" viewBox="0 0 189 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="JackPoker">
+<path d="M25.4001 1C24.0001 1 22.8001 2.2 22.8001 3.6C22.8001 5.1 23.8343 5.9 25.3001 5.9H28.7001C28.7001 5.9 31.3001 5.9 31.3001 8.3C31.3001 10.7 28.7001 10.7 28.7001 10.7H8.30008C6.90008 10.7 5.70008 11.9 5.70008 13.3C5.70008 14.7 6.90008 15.9 8.30008 15.9H22.5001C22.5001 15.9 25.1001 15.9 25.1001 18.3C25.1001 20.7 22.5001 20.7 22.5001 20.7H11.4001C10.0001 20.7 8.80008 21.9 8.80008 23.3C8.80008 24.7 10.0001 25.9 11.4001 25.9H22.6001C22.6001 25.9 25.2001 25.9 25.2001 28.3C25.2001 30.7 22.6001 30.7 22.6001 30.7H21.8001C20.4001 30.7 19.2001 31.9 19.2001 33.3C19.2001 34.7 20.4001 35.9 21.8001 35.9H28.8001C28.8001 35.9 31.4001 35.9 31.4001 38.3C31.4001 40.7 28.8001 40.7 28.8001 40.7H14.0001C12.6001 40.7 11.4001 41.9 11.4001 43.3C11.4001 44.7 12.6001 45.9 14.0001 45.9H34.3001C36.5001 45.9 38.4001 44.8 39.5001 43C41.1501 40.25 42.7751 37.4999 44.4001 34.7499C46.0251 31.9999 47.6501 29.25 49.3001 26.5C50.4001 24.6 50.4001 22.3 49.3001 20.4C47.6501 17.6501 46.0252 14.9001 44.4002 12.1502C42.7752 9.4002 41.1501 6.65001 39.5001 3.9C38.4001 2.1 36.4001 1 34.3001 1H25.4001Z" fill="url(#jpLogoGrad)"/>
+<path d="M11.3999 3.6C11.3999 2.2 12.5999 1 13.9999 1H17.5999C18.9999 1 20.1999 2.2 20.1999 3.6C20.1999 5 18.9999 6.2 17.5999 6.2H13.9999C12.5999 6.2 11.3999 5 11.3999 3.6Z" fill="url(#jpLogoGrad)"/>
+<path d="M0 23.5001C0 22.1001 1.2 20.9001 2.6 20.9001H3.6C5 20.9001 6.2 22.1001 6.2 23.5001C6.2 24.9001 5 26.1001 3.6 26.1001H2.6C1.2 26.1001 0 24.9001 0 23.5001Z" fill="url(#jpLogoGrad)"/>
+<path d="M8.30008 30.8001C6.90008 30.8001 5.70008 32.0001 5.70008 33.4001C5.70008 34.9001 6.90008 36.1001 8.30008 36.0001H14.0001C15.4001 36.0001 16.6001 34.8001 16.6001 33.4001C16.6001 32.0001 15.4001 30.8001 14.0001 30.8001H8.30008Z" fill="url(#jpLogoGrad)"/>
+<path d="M69.7955 27.3088C69.7955 28.8312 69.6204 30.0793 69.2704 31.0533C68.9203 32.0273 68.3261 32.7598 67.4876 33.2509C66.6572 33.7502 65.5257 33.9998 64.0929 33.9998C63.7591 33.9998 63.3887 33.9712 62.9817 33.9139C62.5747 33.8648 62.3142 33.832 62.2002 33.8157L62.5177 31.2252H63.7144C65.1797 31.2252 65.9164 30.4231 65.9246 28.8189V15.265L64.0441 14.5039V12.3676L71.676 12.2449V14.5039L69.7955 15.265V27.3088Z" fill="white"/>
+<path d="M81.4937 28.3401C81.4937 28.3728 81.2779 28.557 80.8465 28.8926C80.415 29.2281 79.8981 29.5351 79.2957 29.8133C78.6933 30.0834 78.0746 30.2185 77.4396 30.2185C76.2185 30.2185 75.2619 29.8788 74.57 29.1995C73.8862 28.512 73.5443 27.538 73.5443 26.2775C73.5443 24.837 74.0571 23.7853 75.0829 23.1223C76.1086 22.4594 77.6024 22.1279 79.5643 22.1279H81.3227V20.7406C81.3227 19.5129 80.6796 18.9031 79.3934 18.9113C79.0107 18.9113 78.6566 18.94 78.331 18.9973C78.0054 19.0545 77.7449 19.1159 77.5495 19.1814C77.3622 19.2387 77.2442 19.2755 77.1954 19.2919L76.8168 20.8756H74.57L74.399 17.1557C74.5456 17.1066 74.9038 17.0002 75.4736 16.8365C76.0516 16.6728 76.7395 16.5173 77.5373 16.37C78.3432 16.2226 79.1044 16.149 79.8207 16.149C81.107 16.149 82.1286 16.3127 82.8857 16.6401C83.6428 16.9593 84.1964 17.4831 84.5464 18.2115C84.8965 18.9318 85.0715 19.9017 85.0715 21.1212V27.3334L86.952 27.7876V29.8011L81.9455 29.9729L81.4937 28.3401ZM77.1709 25.897C77.1709 26.388 77.2971 26.7645 77.5495 27.0264C77.81 27.2802 78.1763 27.407 78.6485 27.407C79.0474 27.407 79.4422 27.3006 79.833 27.0878C80.2237 26.8668 80.5534 26.6418 80.822 26.4126C81.0907 26.1752 81.2576 26.0197 81.3227 25.9461V24.2641H79.894C78.9253 24.2641 78.2292 24.3951 77.8059 24.657C77.3826 24.9189 77.1709 25.3322 77.1709 25.897Z" fill="white"/>
+<path d="M100.311 28.0823C99.7492 28.5897 99.0124 29.0726 98.1007 29.531C97.1971 29.9893 96.1428 30.2185 94.938 30.2185C92.8866 30.2185 91.291 29.6169 90.1513 28.4137C89.0116 27.2106 88.4417 25.5327 88.4417 23.3802C88.4417 21.1376 89.0442 19.3737 90.249 18.0888C91.4619 16.7956 93.1511 16.149 95.3166 16.149C95.9515 16.149 96.5906 16.2145 97.2337 16.3454C97.885 16.4764 98.4263 16.6114 98.8578 16.7506C99.2974 16.8815 99.5742 16.9715 99.6881 17.0206L99.566 21.1457H97.3192L96.9651 19.3656C96.8836 19.3492 96.6801 19.3124 96.3545 19.2551C96.0289 19.1896 95.6585 19.1569 95.2433 19.1569C94.3234 19.1569 93.6029 19.472 93.0819 20.1022C92.5691 20.7324 92.3126 21.6573 92.3126 22.8768C92.3126 24.2682 92.5731 25.3404 93.0942 26.0934C93.6233 26.8382 94.4048 27.2106 95.4387 27.2106C96.0899 27.2106 96.6598 27.1124 97.1482 26.916C97.6448 26.7113 98.06 26.5026 98.3937 26.2898C98.7275 26.077 98.9514 25.9379 99.0654 25.8724L100.311 28.0823Z" fill="white"/>
+<path d="M108.602 21.4527L110.3 18.8868L109.201 18.5307V16.5173L115.66 16.3945V18.5307L113.902 18.8622L111.582 22.1525L114.378 27.3579L116.283 27.9595V29.9729H111.655L108.553 23.8344H106.954V27.3334L108.334 27.9595V29.9729H101.202V27.9595L103.205 27.3334V13.2025L101.202 12.6991V10.6857L106.954 10.4893V21.4527H108.602Z" fill="white"/>
+<path d="M117.406 27.8367L119.275 27.0756V15.265L117.406 14.5039V12.3676L123.158 12.2449H125.527C127.423 12.2449 128.909 12.7155 129.984 13.6567C131.066 14.598 131.608 15.8871 131.608 17.524C131.608 19.6029 130.993 21.1703 129.764 22.2261C128.543 23.2819 126.78 23.8099 124.477 23.8099H123.158V27.0756L125.026 27.8367V29.9729H117.406V27.8367ZM124.477 20.8756C125.527 20.8756 126.333 20.6342 126.894 20.1513C127.456 19.6602 127.737 18.9522 127.737 18.0274C127.737 17.1925 127.513 16.5255 127.065 16.0262C126.626 15.5188 125.991 15.265 125.16 15.265H123.158V20.8756H124.477Z" fill="white"/>
+<path d="M139.74 16.149C141.751 16.149 143.302 16.7383 144.393 17.9169C145.492 19.0955 146.041 20.7692 146.041 22.9382C146.041 24.4278 145.764 25.721 145.211 26.8177C144.665 27.9145 143.892 28.7575 142.891 29.3468C141.89 29.9279 140.713 30.2185 139.362 30.2185C135.112 30.2185 132.988 27.9145 132.988 23.3065C132.988 21.8169 133.264 20.536 133.818 19.4638C134.38 18.3916 135.169 17.5731 136.187 17.0084C137.205 16.4354 138.389 16.149 139.74 16.149ZM139.606 19.1569C138.662 19.1569 137.966 19.4638 137.518 20.0776C137.078 20.6915 136.859 21.7269 136.859 23.1837C136.859 24.5751 137.066 25.5941 137.481 26.2407C137.905 26.8873 138.572 27.2106 139.484 27.2106C140.404 27.2106 141.08 26.8873 141.511 26.2407C141.942 25.5941 142.158 24.5342 142.158 23.061C142.158 21.7514 141.955 20.7733 141.548 20.1267C141.141 19.4802 140.493 19.1569 139.606 19.1569Z" fill="white"/>
+<path d="M154.809 21.4527L156.506 18.8868L155.407 18.5307V16.5173L161.867 16.3945V18.5307L160.108 18.8622L157.788 22.1525L160.585 27.3579L162.49 27.9595V29.9729H157.862L154.76 23.8344H153.16V27.3334L154.54 27.9595V29.9729H147.409V27.9595L149.412 27.3334V13.2025L147.409 12.6991V10.6857L153.16 10.4893V21.4527H154.809Z" fill="white"/>
+<path d="M167.508 24.0186C167.573 25.0253 167.875 25.811 168.412 26.3758C168.957 26.9323 169.666 27.2106 170.537 27.2106C171.155 27.2106 171.774 27.1247 172.393 26.9528C173.02 26.7727 173.536 26.5927 173.944 26.4126C174.359 26.2243 174.623 26.0934 174.737 26.0197L175.812 28.1068C175.812 28.1396 175.519 28.3483 174.933 28.733C174.355 29.1095 173.642 29.4532 172.796 29.7642C171.957 30.0671 171.062 30.2185 170.109 30.2185C167.993 30.2185 166.381 29.6292 165.274 28.4506C164.167 27.272 163.613 25.6023 163.613 23.4415C163.613 21.9847 163.878 20.7079 164.407 19.6111C164.944 18.5062 165.713 17.655 166.715 17.0575C167.716 16.4518 168.904 16.149 170.28 16.149C172.112 16.149 173.516 16.6769 174.493 17.7327C175.47 18.7885 175.958 20.2291 175.958 22.0542C175.958 22.4553 175.938 22.8441 175.897 23.2206C175.857 23.5971 175.828 23.8344 175.812 23.9326L167.508 24.0186ZM170.036 19.1569C169.352 19.1569 168.795 19.3901 168.363 19.8566C167.932 20.315 167.663 20.9207 167.557 21.6737H172.087C172.087 20.9207 171.921 20.315 171.587 19.8566C171.253 19.3901 170.736 19.1569 170.036 19.1569Z" fill="white"/>
+<path d="M183.199 18.1256C183.199 18.0928 183.395 17.9005 183.786 17.5486C184.176 17.1966 184.628 16.8774 185.141 16.591C185.662 16.2963 186.175 16.149 186.68 16.149C187.079 16.149 187.453 16.1817 187.803 16.2472C188.153 16.3127 188.426 16.3822 188.621 16.4559C188.825 16.5296 188.951 16.5746 189 16.591L188.804 21.4281H186.558L186.179 19.2919C185.748 19.2919 185.328 19.3983 184.921 19.6111C184.522 19.8157 184.18 20.0449 183.896 20.2986C183.619 20.5442 183.48 20.6751 183.48 20.6915V27.3334L185.984 27.9595V29.9729H177.729V27.9595L179.732 27.3334V19.1569L177.729 18.5307V16.5173L182.98 16.3945L183.199 18.1256Z" fill="white"/>
+<defs>
+<linearGradient id="jpLogoGrad" x1="0" y1="33.44" x2="50.74" y2="33.44" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8032FF"/>
+<stop offset="1" stop-color="#FF3D00"/>
+</linearGradient>
+</defs>
+</svg>
+      </a>
+        <p>JackPoker to nowoczesna platforma pokera online oferująca Texas Hold'em, PLO, Spin&Win i turnieje. Licencjonowana i certyfikowana przez iTech Labs, BMM TestLabs i GLI. Graj odpowiedzialnie.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Platforma</h4>
+        <ul>
+          <li><a href="games.html">Gry</a></li>
+          <li><a href="tournaments.html">Turnieje</a></li>
+          <li><a href="bonuses.html">Bonusy &amp; Promocje</a></li>
+          <li><a href="promo-code.html">Kod Promocyjny</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Zasoby</h4>
+        <ul>
+          <li><a href="news.html">Aktualności</a></li>
+          <li><a href="https://go.jack-full.com/c41f796e" target="_blank" rel="noopener noreferrer">FAQ</a></li>
+          <li><a href="terms.html">Warunki Usługi</a></li>
+          <li><a href="https://go.jack-full.com/c41f796e" target="_blank" rel="noopener noreferrer">Polityka Prywatności</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Płatności</h4>
+        <div class="footer-payment-icons">
+          <span>VISA</span><span>Mastercard</span><span>Skrill</span><span>Neteller</span><span>Bitcoin</span><span>Ethereum</span><span>USDT</span><span>Pix</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 JackPoker. Obsługiwany przez Jack La International Limitada. Licencjonowany w Anjouan, Unia Komorów. Graj odpowiedzialnie. 18+</p>
+      <p>Certyfikowany przez iTech Labs &bull; BMM TestLabs &bull; GLI</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../main.js"></script>
+<script>
+  // Header scroll effect
+  (function() {
+    var header = document.querySelector('.site-header');
+    if (header) {
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 10) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+    }
+  })();
+
+  // Mobile menu
+  (function() {
+    var toggle = document.getElementById('menuToggle');
+    var nav = document.getElementById('mainNav');
+    if (toggle && nav) {
+      toggle.addEventListener('click', function() {
+        nav.classList.toggle('open');
+      });
+    }
+  })();
+
+  // FAQ accordion
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = this.closest('.faq-item');
+        var wasActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('active'); });
+        if (!wasActive) item.classList.add('active');
+      });
+    });
+  });
+
+  // Promo code copy
+  function copyPromoCode() {
+    var code = 'WELCOME';
+    var feedbacks = document.querySelectorAll('#copyFeedback, #copyFeedback2');
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(code).then(function() {
+        feedbacks.forEach(function(el) { if(el) el.textContent = '✓ Copied to clipboard!'; });
+        setTimeout(function() {
+          feedbacks.forEach(function(el) { if(el) el.textContent = ''; });
+        }, 3000);
+      });
+    } else {
+      var ta = document.createElement('textarea');
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      feedbacks.forEach(function(el) { if(el) el.textContent = '✓ Copied to clipboard!'; });
+      setTimeout(function() {
+        feedbacks.forEach(function(el) { if(el) el.textContent = ''; });
+      }, 3000);
+    }
+  }
+</script>
+</body>
+</html>

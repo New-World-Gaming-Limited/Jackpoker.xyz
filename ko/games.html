@@ -1,0 +1,1567 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JackPoker 게임 — Hold'em, PLO, Spin & Win | 2026</title>
+  <meta name="description" content="JackPoker의 모든 게임 탐색: Texas Hold'em, PLO, 최대 $1M Spin & Win 잭팟, Push-Fold 등. 전체 스테이크 및 포맷.">
+  <meta property="og:title" content="JackPoker 게임 — 전체 포맷 분석 2026">
+  <meta property="og:description" content="JackPoker의 모든 포커 포맷과 카지노 게임을 상세히 설명합니다. 스테이크, 테이블 크기, 트래픽, 소프트웨어 기능 등.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://jackpoker.poker/assets/images/hero-poker.jpg" />
+  <link rel="canonical" href="https://jackpoker.poker/ko/games.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/jackpoker-favicon.svg" />
+
+  <style>
+    /* ===== GAMES PAGE EXTRAS ===== */
+
+    /* Sticky in-page games nav */
+    .games-subnav {
+      background: rgba(13,11,18,0.95);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border-subtle);
+      position: sticky;
+      top: var(--header-height);
+      z-index: 90;
+    }
+
+    .games-subnav-inner {
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .games-subnav-inner::-webkit-scrollbar { display: none; }
+
+    .games-subnav-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 14px 18px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-decoration: none;
+      white-space: nowrap;
+      border-bottom: 2px solid transparent;
+      transition: all 0.2s ease;
+    }
+
+    .games-subnav-link:hover {
+      color: var(--gold-primary);
+      border-bottom-color: var(--gold-primary);
+    }
+
+    .games-subnav-link.active {
+      color: var(--gold-primary);
+      border-bottom-color: var(--gold-primary);
+    }
+
+    /* Game section hero strips */
+    .game-section {
+      padding: 80px 0;
+    }
+
+    .game-section + .game-section {
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    .game-section-dark {
+      background: var(--bg-secondary);
+    }
+
+    .game-section-surface {
+      background: var(--bg-tertiary);
+    }
+
+    /* Large game title treatment */
+    .game-title-block {
+      margin-bottom: 40px;
+    }
+
+    .game-title-block .game-format-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 5px 14px;
+      background: rgba(246,186,70,0.1);
+      border: 1px solid rgba(246,186,70,0.25);
+      border-radius: 100px;
+      font-size: 0.73rem;
+      font-weight: 700;
+      color: var(--gold-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+
+    .game-title-block h2 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      margin-bottom: 16px;
+    }
+
+    .game-title-block .game-subtitle {
+      font-size: 1.05rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+      max-width: 640px;
+    }
+
+    /* Stakes chips row */
+    .stakes-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 24px 0;
+    }
+
+    .stake-chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 7px 14px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-body);
+      font-family: 'Courier New', monospace;
+      letter-spacing: 0.02em;
+      transition: all 0.2s ease;
+    }
+
+    .stake-chip:hover {
+      border-color: var(--purple-primary);
+      color: var(--text-white);
+      background: rgba(137,59,247,0.08);
+    }
+
+    .stake-chip.featured {
+      background: rgba(246,186,70,0.08);
+      border-color: rgba(246,186,70,0.3);
+      color: var(--gold-primary);
+    }
+
+    /* Traffic indicator dots */
+    .traffic-indicator {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin: 6px 0;
+    }
+
+    .traffic-dots {
+      display: flex;
+      gap: 4px;
+    }
+
+    .traffic-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--border-medium);
+    }
+
+    .traffic-dot.active {
+      background: var(--success);
+    }
+
+    .traffic-dot.medium {
+      background: var(--gold-primary);
+    }
+
+    /* Spin & Win multiplier display */
+    .multiplier-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin: 28px 0;
+    }
+
+    .multiplier-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 20px 16px;
+      text-align: center;
+      transition: all 0.25s ease;
+    }
+
+    .multiplier-card:hover {
+      border-color: rgba(137,59,247,0.3);
+      transform: translateY(-3px);
+    }
+
+    .multiplier-card.jackpot {
+      background: rgba(246,186,70,0.06);
+      border-color: rgba(246,186,70,0.25);
+    }
+
+    .multiplier-card .mult-value {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 900;
+      color: var(--gold-primary);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .multiplier-card.jackpot .mult-value {
+      font-size: 1.8rem;
+      background: var(--gradient-gold-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .multiplier-card .mult-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .multiplier-card .mult-chance {
+      font-size: 0.68rem;
+      color: var(--text-faint);
+      margin-top: 4px;
+    }
+
+    /* PLO variant cards */
+    .plo-variant-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 32px 0;
+    }
+
+    .plo-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .plo-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+    }
+
+    .plo-card.plo4::before { background: linear-gradient(90deg, #893BF7, #6A2DC0); }
+    .plo-card.plo5::before { background: linear-gradient(90deg, #F6BA46, #F4AD23); }
+    .plo-card.plo6::before { background: var(--gradient-btn-cta); }
+
+    .plo-card:hover {
+      border-color: rgba(137,59,247,0.25);
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .plo-card .plo-num {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 12px;
+      opacity: 0.25;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    .plo-card.plo4 .plo-num { color: var(--purple-primary); }
+    .plo-card.plo5 .plo-num { color: var(--gold-primary); }
+    .plo-card.plo6 .plo-num { color: var(--success); }
+
+    .plo-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+    }
+
+    .plo-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+
+    .plo-card .plo-unique {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .plo4 .plo-unique { background: rgba(137,59,247,0.12); color: var(--purple-primary); }
+    .plo5 .plo-unique { background: rgba(246,186,70,0.1); color: var(--gold-primary); }
+    .plo6 .plo-unique { background: rgba(255,61,0,0.1); color: var(--success); }
+
+    /* Push-Fold visual */
+    .pushfold-display {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      text-align: center;
+      margin: 28px 0;
+    }
+
+    .pushfold-btns {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .pf-btn {
+      padding: 16px 40px;
+      border-radius: var(--radius-md);
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      cursor: default;
+    }
+
+    .pf-btn-push {
+      background: var(--gradient-btn-cta);
+      color: #FFFFFF;
+    }
+
+    .pf-btn-fold {
+      background: linear-gradient(135deg, #FF3D00, #CC2200);
+      color: #fff;
+    }
+
+    /* Casino game icons row */
+    .casino-types {
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin: 24px 0;
+    }
+
+    .casino-type-card {
+      flex: 1;
+      min-width: 160px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 24px 20px;
+      text-align: center;
+      transition: all 0.25s ease;
+    }
+
+    .casino-type-card:hover {
+      border-color: rgba(246,186,70,0.3);
+      transform: translateY(-3px);
+    }
+
+    .casino-type-icon {
+      font-size: 2.5rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .casino-type-card h4 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+    }
+
+    .casino-type-card p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    /* Platform features list with icons */
+    .platform-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .platform-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      font-size: 0.95rem;
+      color: var(--text-body);
+      transition: all 0.2s ease;
+    }
+
+    .platform-list li:hover {
+      border-color: rgba(137,59,247,0.2);
+      background: rgba(137,59,247,0.03);
+    }
+
+    .platform-list .pl-icon {
+      font-size: 1.3rem;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .platform-list .pl-text strong {
+      display: block;
+      color: var(--text-white);
+      margin-bottom: 2px;
+      font-size: 0.92rem;
+    }
+
+    .platform-list .pl-text span {
+      color: var(--text-muted);
+      font-size: 0.87rem;
+    }
+
+    /* Payment methods section */
+    .payment-category {
+      margin-bottom: 32px;
+    }
+
+    .payment-category-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    /* Stakes table wrapper */
+    .table-wrapper {
+      overflow-x: auto;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .table-wrapper .data-table {
+      border: none;
+      border-radius: 0;
+    }
+
+    /* Jackpot counter */
+    .jackpot-display {
+      background: linear-gradient(135deg, rgba(246,186,70,0.08), rgba(137,59,247,0.06));
+      border: 1px solid rgba(246,186,70,0.2);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      text-align: center;
+      margin: 28px 0;
+    }
+
+    .jackpot-display .jp-label {
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .jackpot-display .jp-amount {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 900;
+      background: var(--gradient-gold-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+
+    .jackpot-display .jp-sub {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* Content prose blocks */
+    .prose-block p {
+      color: var(--text-body);
+      line-height: 1.85;
+      margin-bottom: 18px;
+      font-size: 1rem;
+    }
+
+    .prose-block p:last-child { margin-bottom: 0; }
+
+    /* Info columns layout */
+    .info-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin: 32px 0;
+    }
+
+    @media (max-width: 768px) {
+      .multiplier-grid { grid-template-columns: repeat(2, 1fr); }
+      .plo-variant-grid { grid-template-columns: 1fr; }
+      .info-columns { grid-template-columns: 1fr; }
+      .casino-types { flex-direction: column; }
+      .pushfold-btns { flex-direction: column; align-items: center; }
+    }
+
+    @media (max-width: 480px) {
+      .multiplier-grid { grid-template-columns: repeat(2, 1fr); }
+      .games-subnav-link { padding: 12px 14px; font-size: 0.78rem; }
+    }
+  </style>
+<script>
+    (function(){var t=null;try{var m=document.cookie.match(/jp-theme=([^;]+)/);if(m)t=m[1]}catch(e){}document.documentElement.setAttribute("data-theme",t||"dark")})();
+  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "JackPoker",
+  "url": "https://jackpoker.poker",
+  "logo": "https://jackpoker.poker/assets/images/jackpoker-logo-official.png",
+  "description": "Modern online poker platform offering Texas Hold'em, PLO, Spin&Win tournaments, and more. Licensed and certified.",
+  "foundingDate": "2021",
+  "sameAs": [
+    "https://jack-poker.com",
+    "https://t.me/jackpokerclub"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "url": "https://jack-poker.com/support",
+    "availableLanguage": [
+      "English",
+      "Russian",
+      "Portuguese",
+      "Spanish"
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://jackpoker.poker"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Games",
+      "item": "https://jackpoker.poker/games.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "JackPoker Games",
+  "description": "Complete list of poker games available on JackPoker platform",
+  "numberOfItems": 6,
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Texas Hold'em No-Limit",
+      "description": "Stakes from NL10 to NL2000 with dynamic tables"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Pot-Limit Omaha (PLO)",
+      "description": "PLO4, PLO5, and PLO6 variants with action-packed gameplay"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Spin & Win",
+      "description": "Fast-paced 3-player hyper-turbo SNGs with jackpots up to $1,000,000"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Push-Fold",
+      "description": "Short-stack all-in-or-fold format for quick sessions"
+    },
+    {
+      "@type": "ListItem",
+      "position": 5,
+      "name": "Multi-Table Tournaments",
+      "description": "Daily GTD events from micro to high stakes"
+    },
+    {
+      "@type": "ListItem",
+      "position": 6,
+      "name": "Sit & Go Tournaments Tournaments",
+      "description": "On-demand tournament action at all stake levels"
+    }
+  ]
+}
+</script>
+<link rel="alternate" hreflang="en" href="https://jackpoker.poker/games.html" />
+<link rel="alternate" hreflang="ru" href="https://jackpoker.poker/ru/games.html" />
+<link rel="alternate" hreflang="es" href="https://jackpoker.poker/es/games.html" />
+<link rel="alternate" hreflang="it" href="https://jackpoker.poker/it/games.html" />
+<link rel="alternate" hreflang="pt" href="https://jackpoker.poker/pt/games.html" />
+<link rel="alternate" hreflang="vi" href="https://jackpoker.poker/vi/games.html" />
+<link rel="alternate" hreflang="th" href="https://jackpoker.poker/th/games.html" />
+<link rel="alternate" hreflang="ms" href="https://jackpoker.poker/ms/games.html" />
+<link rel="alternate" hreflang="ko" href="https://jackpoker.poker/ko/games.html" />
+<link rel="alternate" hreflang="ar" href="https://jackpoker.poker/ar/games.html" />
+<link rel="alternate" hreflang="pl" href="https://jackpoker.poker/pl/games.html" />
+<link rel="alternate" hreflang="cs" href="https://jackpoker.poker/cs/games.html" />
+<link rel="alternate" hreflang="x-default" href="https://jackpoker.poker/games.html" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ============================================
+       HEADER
+       ============================================ -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="JackPoker Home">
+        <svg class="logo-icon" width="189" height="47" viewBox="0 0 189 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="JackPoker">
+<path d="M25.4001 1C24.0001 1 22.8001 2.2 22.8001 3.6C22.8001 5.1 23.8343 5.9 25.3001 5.9H28.7001C28.7001 5.9 31.3001 5.9 31.3001 8.3C31.3001 10.7 28.7001 10.7 28.7001 10.7H8.30008C6.90008 10.7 5.70008 11.9 5.70008 13.3C5.70008 14.7 6.90008 15.9 8.30008 15.9H22.5001C22.5001 15.9 25.1001 15.9 25.1001 18.3C25.1001 20.7 22.5001 20.7 22.5001 20.7H11.4001C10.0001 20.7 8.80008 21.9 8.80008 23.3C8.80008 24.7 10.0001 25.9 11.4001 25.9H22.6001C22.6001 25.9 25.2001 25.9 25.2001 28.3C25.2001 30.7 22.6001 30.7 22.6001 30.7H21.8001C20.4001 30.7 19.2001 31.9 19.2001 33.3C19.2001 34.7 20.4001 35.9 21.8001 35.9H28.8001C28.8001 35.9 31.4001 35.9 31.4001 38.3C31.4001 40.7 28.8001 40.7 28.8001 40.7H14.0001C12.6001 40.7 11.4001 41.9 11.4001 43.3C11.4001 44.7 12.6001 45.9 14.0001 45.9H34.3001C36.5001 45.9 38.4001 44.8 39.5001 43C41.1501 40.25 42.7751 37.4999 44.4001 34.7499C46.0251 31.9999 47.6501 29.25 49.3001 26.5C50.4001 24.6 50.4001 22.3 49.3001 20.4C47.6501 17.6501 46.0252 14.9001 44.4002 12.1502C42.7752 9.4002 41.1501 6.65001 39.5001 3.9C38.4001 2.1 36.4001 1 34.3001 1H25.4001Z" fill="url(#jpLogoGrad)"/>
+<path d="M11.3999 3.6C11.3999 2.2 12.5999 1 13.9999 1H17.5999C18.9999 1 20.1999 2.2 20.1999 3.6C20.1999 5 18.9999 6.2 17.5999 6.2H13.9999C12.5999 6.2 11.3999 5 11.3999 3.6Z" fill="url(#jpLogoGrad)"/>
+<path d="M0 23.5001C0 22.1001 1.2 20.9001 2.6 20.9001H3.6C5 20.9001 6.2 22.1001 6.2 23.5001C6.2 24.9001 5 26.1001 3.6 26.1001H2.6C1.2 26.1001 0 24.9001 0 23.5001Z" fill="url(#jpLogoGrad)"/>
+<path d="M8.30008 30.8001C6.90008 30.8001 5.70008 32.0001 5.70008 33.4001C5.70008 34.9001 6.90008 36.1001 8.30008 36.0001H14.0001C15.4001 36.0001 16.6001 34.8001 16.6001 33.4001C16.6001 32.0001 15.4001 30.8001 14.0001 30.8001H8.30008Z" fill="url(#jpLogoGrad)"/>
+<path d="M69.7955 27.3088C69.7955 28.8312 69.6204 30.0793 69.2704 31.0533C68.9203 32.0273 68.3261 32.7598 67.4876 33.2509C66.6572 33.7502 65.5257 33.9998 64.0929 33.9998C63.7591 33.9998 63.3887 33.9712 62.9817 33.9139C62.5747 33.8648 62.3142 33.832 62.2002 33.8157L62.5177 31.2252H63.7144C65.1797 31.2252 65.9164 30.4231 65.9246 28.8189V15.265L64.0441 14.5039V12.3676L71.676 12.2449V14.5039L69.7955 15.265V27.3088Z" fill="white"/>
+<path d="M81.4937 28.3401C81.4937 28.3728 81.2779 28.557 80.8465 28.8926C80.415 29.2281 79.8981 29.5351 79.2957 29.8133C78.6933 30.0834 78.0746 30.2185 77.4396 30.2185C76.2185 30.2185 75.2619 29.8788 74.57 29.1995C73.8862 28.512 73.5443 27.538 73.5443 26.2775C73.5443 24.837 74.0571 23.7853 75.0829 23.1223C76.1086 22.4594 77.6024 22.1279 79.5643 22.1279H81.3227V20.7406C81.3227 19.5129 80.6796 18.9031 79.3934 18.9113C79.0107 18.9113 78.6566 18.94 78.331 18.9973C78.0054 19.0545 77.7449 19.1159 77.5495 19.1814C77.3622 19.2387 77.2442 19.2755 77.1954 19.2919L76.8168 20.8756H74.57L74.399 17.1557C74.5456 17.1066 74.9038 17.0002 75.4736 16.8365C76.0516 16.6728 76.7395 16.5173 77.5373 16.37C78.3432 16.2226 79.1044 16.149 79.8207 16.149C81.107 16.149 82.1286 16.3127 82.8857 16.6401C83.6428 16.9593 84.1964 17.4831 84.5464 18.2115C84.8965 18.9318 85.0715 19.9017 85.0715 21.1212V27.3334L86.952 27.7876V29.8011L81.9455 29.9729L81.4937 28.3401ZM77.1709 25.897C77.1709 26.388 77.2971 26.7645 77.5495 27.0264C77.81 27.2802 78.1763 27.407 78.6485 27.407C79.0474 27.407 79.4422 27.3006 79.833 27.0878C80.2237 26.8668 80.5534 26.6418 80.822 26.4126C81.0907 26.1752 81.2576 26.0197 81.3227 25.9461V24.2641H79.894C78.9253 24.2641 78.2292 24.3951 77.8059 24.657C77.3826 24.9189 77.1709 25.3322 77.1709 25.897Z" fill="white"/>
+<path d="M100.311 28.0823C99.7492 28.5897 99.0124 29.0726 98.1007 29.531C97.1971 29.9893 96.1428 30.2185 94.938 30.2185C92.8866 30.2185 91.291 29.6169 90.1513 28.4137C89.0116 27.2106 88.4417 25.5327 88.4417 23.3802C88.4417 21.1376 89.0442 19.3737 90.249 18.0888C91.4619 16.7956 93.1511 16.149 95.3166 16.149C95.9515 16.149 96.5906 16.2145 97.2337 16.3454C97.885 16.4764 98.4263 16.6114 98.8578 16.7506C99.2974 16.8815 99.5742 16.9715 99.6881 17.0206L99.566 21.1457H97.3192L96.9651 19.3656C96.8836 19.3492 96.6801 19.3124 96.3545 19.2551C96.0289 19.1896 95.6585 19.1569 95.2433 19.1569C94.3234 19.1569 93.6029 19.472 93.0819 20.1022C92.5691 20.7324 92.3126 21.6573 92.3126 22.8768C92.3126 24.2682 92.5731 25.3404 93.0942 26.0934C93.6233 26.8382 94.4048 27.2106 95.4387 27.2106C96.0899 27.2106 96.6598 27.1124 97.1482 26.916C97.6448 26.7113 98.06 26.5026 98.3937 26.2898C98.7275 26.077 98.9514 25.9379 99.0654 25.8724L100.311 28.0823Z" fill="white"/>
+<path d="M108.602 21.4527L110.3 18.8868L109.201 18.5307V16.5173L115.66 16.3945V18.5307L113.902 18.8622L111.582 22.1525L114.378 27.3579L116.283 27.9595V29.9729H111.655L108.553 23.8344H106.954V27.3334L108.334 27.9595V29.9729H101.202V27.9595L103.205 27.3334V13.2025L101.202 12.6991V10.6857L106.954 10.4893V21.4527H108.602Z" fill="white"/>
+<path d="M117.406 27.8367L119.275 27.0756V15.265L117.406 14.5039V12.3676L123.158 12.2449H125.527C127.423 12.2449 128.909 12.7155 129.984 13.6567C131.066 14.598 131.608 15.8871 131.608 17.524C131.608 19.6029 130.993 21.1703 129.764 22.2261C128.543 23.2819 126.78 23.8099 124.477 23.8099H123.158V27.0756L125.026 27.8367V29.9729H117.406V27.8367ZM124.477 20.8756C125.527 20.8756 126.333 20.6342 126.894 20.1513C127.456 19.6602 127.737 18.9522 127.737 18.0274C127.737 17.1925 127.513 16.5255 127.065 16.0262C126.626 15.5188 125.991 15.265 125.16 15.265H123.158V20.8756H124.477Z" fill="white"/>
+<path d="M139.74 16.149C141.751 16.149 143.302 16.7383 144.393 17.9169C145.492 19.0955 146.041 20.7692 146.041 22.9382C146.041 24.4278 145.764 25.721 145.211 26.8177C144.665 27.9145 143.892 28.7575 142.891 29.3468C141.89 29.9279 140.713 30.2185 139.362 30.2185C135.112 30.2185 132.988 27.9145 132.988 23.3065C132.988 21.8169 133.264 20.536 133.818 19.4638C134.38 18.3916 135.169 17.5731 136.187 17.0084C137.205 16.4354 138.389 16.149 139.74 16.149ZM139.606 19.1569C138.662 19.1569 137.966 19.4638 137.518 20.0776C137.078 20.6915 136.859 21.7269 136.859 23.1837C136.859 24.5751 137.066 25.5941 137.481 26.2407C137.905 26.8873 138.572 27.2106 139.484 27.2106C140.404 27.2106 141.08 26.8873 141.511 26.2407C141.942 25.5941 142.158 24.5342 142.158 23.061C142.158 21.7514 141.955 20.7733 141.548 20.1267C141.141 19.4802 140.493 19.1569 139.606 19.1569Z" fill="white"/>
+<path d="M154.809 21.4527L156.506 18.8868L155.407 18.5307V16.5173L161.867 16.3945V18.5307L160.108 18.8622L157.788 22.1525L160.585 27.3579L162.49 27.9595V29.9729H157.862L154.76 23.8344H153.16V27.3334L154.54 27.9595V29.9729H147.409V27.9595L149.412 27.3334V13.2025L147.409 12.6991V10.6857L153.16 10.4893V21.4527H154.809Z" fill="white"/>
+<path d="M167.508 24.0186C167.573 25.0253 167.875 25.811 168.412 26.3758C168.957 26.9323 169.666 27.2106 170.537 27.2106C171.155 27.2106 171.774 27.1247 172.393 26.9528C173.02 26.7727 173.536 26.5927 173.944 26.4126C174.359 26.2243 174.623 26.0934 174.737 26.0197L175.812 28.1068C175.812 28.1396 175.519 28.3483 174.933 28.733C174.355 29.1095 173.642 29.4532 172.796 29.7642C171.957 30.0671 171.062 30.2185 170.109 30.2185C167.993 30.2185 166.381 29.6292 165.274 28.4506C164.167 27.272 163.613 25.6023 163.613 23.4415C163.613 21.9847 163.878 20.7079 164.407 19.6111C164.944 18.5062 165.713 17.655 166.715 17.0575C167.716 16.4518 168.904 16.149 170.28 16.149C172.112 16.149 173.516 16.6769 174.493 17.7327C175.47 18.7885 175.958 20.2291 175.958 22.0542C175.958 22.4553 175.938 22.8441 175.897 23.2206C175.857 23.5971 175.828 23.8344 175.812 23.9326L167.508 24.0186ZM170.036 19.1569C169.352 19.1569 168.795 19.3901 168.363 19.8566C167.932 20.315 167.663 20.9207 167.557 21.6737H172.087C172.087 20.9207 171.921 20.315 171.587 19.8566C171.253 19.3901 170.736 19.1569 170.036 19.1569Z" fill="white"/>
+<path d="M183.199 18.1256C183.199 18.0928 183.395 17.9005 183.786 17.5486C184.176 17.1966 184.628 16.8774 185.141 16.591C185.662 16.2963 186.175 16.149 186.68 16.149C187.079 16.149 187.453 16.1817 187.803 16.2472C188.153 16.3127 188.426 16.3822 188.621 16.4559C188.825 16.5296 188.951 16.5746 189 16.591L188.804 21.4281H186.558L186.179 19.2919C185.748 19.2919 185.328 19.3983 184.921 19.6111C184.522 19.8157 184.18 20.0449 183.896 20.2986C183.619 20.5442 183.48 20.6751 183.48 20.6915V27.3334L185.984 27.9595V29.9729H177.729V27.9595L179.732 27.3334V19.1569L177.729 18.5307V16.5173L182.98 16.3945L183.199 18.1256Z" fill="white"/>
+<defs>
+<linearGradient id="jpLogoGrad" x1="0" y1="33.44" x2="50.74" y2="33.44" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8032FF"/>
+<stop offset="1" stop-color="#FF3D00"/>
+</linearGradient>
+</defs>
+</svg>
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">홈</a>
+        <a href="games.html" class="active">게임</a>
+        <a href="bonuses.html">보너스</a>
+        <a href="tournaments.html">토너먼트</a>
+        <a href="news.html">뉴스</a>
+        <a href="promo-code.html">프로모 코드</a>
+      </nav>
+      <a href="https://go.jack-full.com/c41f796e" class="header-cta header-cta-desktop">지금 플레이 ♠</a>
+     <div class="lang-switcher">
+  <button class="lang-btn" aria-label="Change language" aria-expanded="false">
+    <span class="lang-flag">KR</span>
+    <span class="lang-label">한국어</span>
+    <svg class="lang-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  </button>
+  <div class="lang-dropdown" role="menu">
+    <a href="../games.html" role="menuitem" hreflang="en"><span class="lang-flag">GB</span><span>English</span></a>
+    <a href="../ru/games.html" role="menuitem" hreflang="ru"><span class="lang-flag">RU</span><span>Русский</span></a>
+    <a href="../es/games.html" role="menuitem" hreflang="es"><span class="lang-flag">ES</span><span>Español</span></a>
+    <a href="../it/games.html" role="menuitem" hreflang="it"><span class="lang-flag">IT</span><span>Italiano</span></a>
+    <a href="../pt/games.html" role="menuitem" hreflang="pt"><span class="lang-flag">BR</span><span>Português</span></a>
+    <a href="../vi/games.html" role="menuitem" hreflang="vi"><span class="lang-flag">VN</span><span>Tiếng Việt</span></a>
+    <a href="../th/games.html" role="menuitem" hreflang="th"><span class="lang-flag">TH</span><span>ไทย</span></a>
+    <a href="../ms/games.html" role="menuitem" hreflang="ms"><span class="lang-flag">MY</span><span>Bahasa Melayu</span></a>
+    <a href="games.html" class="active" role="menuitem" hreflang="ko"><span class="lang-flag">KR</span><span>한국어</span></a>
+    <a href="../ar/games.html" role="menuitem" hreflang="ar"><span class="lang-flag">SA</span><span>العربية</span></a>
+    <a href="../pl/games.html" role="menuitem" hreflang="pl"><span class="lang-flag">PL</span><span>Polski</span></a>
+    <a href="../cs/games.html" role="menuitem" hreflang="cs"><span class="lang-flag">CZ</span><span>Čeština</span></a>
+  </div>
+</div>
+        <button class="theme-toggle" aria-label="Toggle theme">
+       <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 1.78a1 1 0 011.415 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM18 9a1 1 0 110 2h-1a1 1 0 110-2h1zM3 9a1 1 0 110 2H2a1 1 0 110-2h1zm12.657 6.071l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 011.414-1.414zM5.757 4.929a1 1 0 010 1.414l-.707.707A1 1 0 013.636 5.636l.707-.707a1 1 0 011.414 0zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1z" fill="currentColor"/><circle cx="10" cy="10" r="3.5" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+       <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/></svg>
+     </button>
+  </div>
+</header>
+
+<!-- Breadcrumb Navigation -->
+<nav class="breadcrumb-nav" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">홈</span></a>
+        <meta itemprop="position" content="1" />
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span itemprop="name">게임</span>
+        <meta itemprop="position" content="2" />
+      </li>
+    </ol>
+  </div>
+</nav>
+
+<!-- Page Hero with H1 -->
+<section style="padding: calc(var(--header-height) + 48px) 0 32px; background: linear-gradient(180deg, rgba(137,59,247,0.06) 0%, transparent 100%); position: relative; overflow: hidden;">
+  <div class="container">
+    <h1 style="font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 900; letter-spacing: -0.03em; margin-bottom: 12px;" data-i18n="games_hero_title">JackPoker의 모든 게임</h1>
+    <p style="color: var(--text-muted); font-size: 1.08rem; max-width: 640px; line-height: 1.7;" data-i18n="games_hero_subtitle">마이크로 스테이크 캐시 게임부터 하이롤러 PLO와 잭팟 Spin & Win까지 — 전체 JackPoker 게임 라이브러리를 탐색하세요.</p>
+  </div>
+</section>
+
+<!-- ============================================
+     3. NO-LIMIT TEXAS HOLD'EM
+       ============================================ -->
+  <section class="game-section game-section-dark section-accent" id="holdem">
+    <div class="container">
+      <div class="game-title-block">
+        <span class="game-format-badge">♠ 캐시 게임</span>
+        <h2>노 리밋 <span class="gold-text">Texas Hold'em</span></h2>
+        <p class="game-subtitle">JackPoker의 핵심. 저희 노 리밋 Hold'em 로비는 다양한 스테이크 레벨, 테이블 크기, 포맷으로 지속적으로 운영됩니다.</p>
+      </div>
+
+      <div class="info-columns">
+        <div class="prose-block">
+          <p>JackPoker의 노 리밋 Texas Hold'em은 진지한 캐시 게임 플레이어를 위해 구축되었습니다. NL10($0.05/$0.10)부터 NL2000($10/$20)까지 업계 최고의 스테이크 범위 중 하나를 제공합니다. 2-max, 6-max, 9-max 테이블을 운영하며, 각 레벨에서 지속적으로 게임이 진행됩니다.</p>
+          <p>저희 Hold'em 테이블은 세 가지 테이블 크기 포맷으로 운영됩니다: 일대일 대결을 위한 헤즈업 2-맥스, </p>
+          <p>JackPoker Hold'em 테이블의 트래픽은 NL25에서 NL200 범위에서 가장 강하며, 여러 개의 테이블이 지속적으로 열려 있습니다.</p>
+          <p>저희 Hold'em 상품을 경쟁사와 차별화하는 것은 레크리에이션 플레이어 풀의 질입니다. JackPoker는 스포츠 베팅, 카지노, 슬롯 등의 게임 수직 계열을 통해 레크리에이션 플레이어를 적극적으로 유치합니다. 이는 소프트한 게임과 생산적인 세션을 의미합니다 — NL25에서 NL200까지 특히 그렇습니다. NL500 이상의 하이 스테이크에서도 $500+ 스택 심층 플레이어의 전용 커뮤니티가 있습니다.</p>
+        </div>
+
+        <div>
+          <div class="highlight-box mb-3">
+            <h4>이용 가능한 스테이크 — Hold'em</h4>
+            <div class="stakes-row" style="margin: 16px 0 0;">
+              <span class="stake-chip">NL10 — $0.05/$0.10</span>
+              <span class="stake-chip">NL25 — $0.10/$0.25</span>
+              <span class="stake-chip">NL50 — $0.25/$0.50</span>
+              <span class="stake-chip featured">NL100 — $0.50/$1</span>
+              <span class="stake-chip featured">NL200 — $1/$2</span>
+              <span class="stake-chip">NL500 — $2.50/$5</span>
+              <span class="stake-chip">NL1000 — $5/$10</span>
+              <span class="stake-chip">NL2000 — $10/$20</span>
+            </div>
+          </div>
+
+          <div class="card card-sm mb-3">
+            <h4 style="margin-bottom: 16px; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--text-muted);">스테이크 레벨별 트래픽</h4>
+            <div class="traffic-indicator">
+              <div class="traffic-dots">
+                <div class="traffic-dot active"></div>
+                <div class="traffic-dot active"></div>
+                <div class="traffic-dot active"></div>
+                <div class="traffic-dot active"></div>
+                <div class="traffic-dot active"></div>
+              </div>
+              <span>NL10–NL50 — 매우 높음 (마이크로 피크)</span>
+            </div>
+            <div class="traffic-indicator">
+              <div class="traffic-dots">
+                <div class="traffic-dot active"></div>
+                <div class="traffic-dot active"></div>
+                <div class="traffic-dot active"></div>
+                <div class="traffic-dot active"></div>
+                <div class="traffic-dot"></div>
+              </div>
+              <span>NL100–NL200 — 높음 (핵심 스테이크)</span>
+            </div>
+            <div class="traffic-indicator">
+              <div class="traffic-dots">
+                <div class="traffic-dot active"></div>
+                <div class="traffic-dot active"></div>
+                <div class="traffic-dot active"></div>
+                <div class="traffic-dot medium"></div>
+                <div class="traffic-dot"></div>
+              </div>
+              <span>NL500 — 보통 (피크)</span>
+            </div>
+            <div class="traffic-indicator">
+              <div class="traffic-dots">
+                <div class="traffic-dot active"></div>
+                <div class="traffic-dot active"></div>
+                <div class="traffic-dot medium"></div>
+                <div class="traffic-dot"></div>
+                <div class="traffic-dot"></div>
+              </div>
+              <span>NL1000 — 활성 (저녁 시간)</span>
+            </div>
+            <div class="traffic-indicator">
+              <div class="traffic-dots">
+                <div class="traffic-dot medium"></div>
+                <div class="traffic-dot medium"></div>
+                <div class="traffic-dot"></div>
+                <div class="traffic-dot"></div>
+                <div class="traffic-dot"></div>
+              </div>
+              <span>NL2000 — 하이롤러 온 디맨드</span>
+            </div>
+          </div>
+
+          <div class="highlight-box gold">
+            <h4>이용 가능한 테이블 포맷</h4>
+            <p>2-맥스 (헤즈업), 6-맥스 (쇼트핸디드), 9-맥스 (풀링) — 모든 스테이크 레벨은 최소 6-맥스를 지원합니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="promo-banner mt-4">
+        <div class="promo-banner-content">
+          <h3>Cash Carnival — 지금 진행 중</h3>
+          <p>2026년 3월 23일 – 4월 19일 진행 중. $500K의 캐시 드롭이 3~7핸드마다 참여 Hold'em 테이블에 적립됩니다. 옵트인 불필요.</p>
+        </div>
+        <a href="https://go.jack-full.com/c41f796e" class="btn btn-gold" style="white-space: nowrap;">테이블 참가</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       4. POT-LIMIT OMAHA (PLO)
+       ============================================ -->
+  <section class="game-section section-accent" id="plo">
+    <div class="container">
+      <div class="game-title-block">
+        <span class="game-format-badge">◆ 캐시 게임</span>
+        <h2>팟 리밋 <span class="gold-text">Omaha</span></h2>
+        <p class="game-subtitle">JackPoker는 PLO4, PLO5, 독점 PLO6 등 세 가지 Omaha 변형 게임을 제공하여 Omaha 플레이어에게 더 많은 다양성을 제공합니다.</p>
+      </div>
+
+      <div class="prose-block" style="max-width: 840px; margin-bottom: 40px;">
+        <p>팟 리밋 Omaha는 지난 10년간 꾸준히 성장하여 전 세계에서 두 번째로 많이 플레이되는 포커 포맷이 되었습니다.</p>
+        <p>Omaha 전문가라면, JackPoker는 PLO4, PLO5, PLO6 사이를 동일한 세션 내에서 원활하게 전환할 수 있는 몇 안 되는 룸 중 하나입니다. 통합 지갑을 통해 Omaha 변형 간에 이동하거나 캐시아웃 없이 Hold'em 테이블이나 Spin &amp; Win으로 전환할 수 있습니다. 로비는 깔끔하고 빠르며 실시간 대기자 명단을 보여줍니다 — 여러 테이블에 등록하고 자리가 생기는 즉시 착석할 수 있습니다.</p>
+      </div>
+
+      <div class="plo-variant-grid">
+        <!-- PLO4 -->
+        <div class="plo-card plo4">
+          <div class="plo-num">4</div>
+          <span class="plo-unique">표준 포맷</span>
+          <h3 style="margin-top: 12px;">PLO4 — 4카드 Omaha</h3>
+          <p>가장 오래되고 널리 플레이되는 Omaha 변형. 각 플레이어는 4장의 홀 카드를 받고 정확히 2장을 사용해야 합니다.</p>
+          <p>저희 PLO4 스테이크는 입문 레벨 PLO10 ($0.05/$0.10)부터 PLO500 ($2.50/$5)까지 운영됩니다.</p>
+        </div>
+
+        <!-- PLO5 -->
+        <div class="plo-card plo5">
+          <div class="plo-num">5</div>
+          <span class="plo-unique">고액 액션</span>
+          <h3 style="margin-top: 12px;">PLO5 — 5카드 Omaha</h3>
+          <p>5카드 Omaha는 PLO4 경험의 모든 측면을 증폭시킵니다. 추가 홀 카드로 핸드 에쿼티가 더 가깝게 유지됩니다.</p>
+          <p>JackPoker의 PLO5는 핸드당 더 많은 액션을 원하고 높은 분산 환경에서 번성하는 플레이어들 사이에서 빠르게 전용 팔로워를 확보했습니다.</p>
+        </div>
+
+        <!-- PLO6 -->
+        <div class="plo-card plo6">
+          <div class="plo-num">6</div>
+          <span class="plo-unique">★ JackPoker 독점</span>
+          <h3 style="margin-top: 12px;">PLO6 — 6카드 Omaha</h3>
+          <p>PLO6은 JackPoker의 가장 독특한 제공 중 하나 — 전 세계적으로 극소수의 온라인 포커 룸에서만 찾을 수 있는 포맷입니다.</p>
+          <p>이 변형은 마음이 약한 플레이어를 위한 것이 아닙니다 — PLO6은 강한 플레이어에게도 엄청난 분산을 발생시키며, 뱅크롤 관리가 필수입니다.</p>
+        </div>
+      </div>
+
+      <div class="highlight-box">
+        <h4>Omaha 플레이어들이 JackPoker를 선택하는 이유</h4>
+        <p>하나의 지붕 아래 세 가지 Omaha 변형. PLO4, PLO5, PLO6, Hold'em, Spin &amp; Win, 카지노를 아우르는 하나의 지갑. 다운로드 불필요.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       5. SPIN & WIN
+       ============================================ -->
+  <section class="game-section game-section-dark section-accent" id="spinwin">
+    <div class="container">
+      <div class="game-title-block">
+        <span class="game-format-badge">🌀 잭팟 SNG</span>
+        <h2>Spin &amp; <span class="gold-text">Win</span></h2>
+        <p class="game-subtitle">JackPoker의 가장 스릴 넘치는 포맷. 3명의 플레이어. 스핀 한 번. 단 $5 참가비가 백만 달러의 순간으로 바뀔 수 있는 — 바이인을 즉시 최대 1,000,000배까지 곱할 수 있는 상금 풀.</p>
+      </div>
+
+      <div class="jackpot-display">
+        <div class="jp-label">최대 잭팟 상금 풀</div>
+        <div class="jp-amount">$1,000,000</div>
+        <div class="jp-sub">게임 전 멀티플라이어 스핀을 통해 무작위 지급. 옵트인 불필요.</div>
+      </div>
+
+      <div class="info-columns">
+        <div class="prose-block">
+          <p>Spin &amp; Win은 온라인 포커를 강타한 포맷이며, JackPoker의 구현은 가장 인기 있는 버전 중 하나입니다. 저희는 $5의 마이크로 레벨부터 $30 및 $100 레벨까지 다양한 바이인 레벨을 제공하며, 모든 레벨에서 항상 같은 최대 $1,000,000 잭팟에 도달할 기회가 있습니다. 상금은 게임 시작 전에 멀티플라이어 스핀으로 결정됩니다 — 플레이어는 승패를 다투기 전에 상금 풀의 크기를 알 수 있습니다. 저희 $15,000 보장 Spin &amp; Win 프로모션은 정기적으로 운영됩니다.</p>
+          <p>게임 자체는 3명이 참여하는 하이퍼 터보 싯앤고입니다. 블라인드 레벨이 매우 빠르게 올라갑니다 — 보통 2~3분마다 — 최종 핸드까지 진행되더라도 등록부터 완료까지 전체 경기가 10~15분을 넘는 경우가 드뭅니다. 이 속도는 포맷의 매력의 핵심입니다: 저녁에 수십 개의 Spin &amp; Win 게임을 플레이하면서 다양한 배수를 경험할 수 있으며, 각 게임마다 인생을 바꾸는 잭팟 결과의 진짜 가능성이 있습니다.</p>
+          <p>Spin &amp; Win의 전략은 발표된 멀티플라이어에 따라 극적으로 달라집니다. 낮은 멀티플라이어 (2x~)에서는</p>
+          <p>JackPoker는 여러 바이인 레벨에서 Spin &amp; Win을 제공하므로, 캐주얼 플레이어도 소액으로 잭팟 포맷을 경험할 수 있습니다.</p>
+        </div>
+
+        <div>
+          <h3 style="font-size: 1.1rem; margin-bottom: 20px; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-muted);">상금 멀티플라이어</h3>
+          <div class="multiplier-grid">
+            <div class="multiplier-card">
+              <div class="mult-value">2x</div>
+              <div class="mult-label">일반</div>
+              <div class="mult-chance">가장 빈번</div>
+            </div>
+            <div class="multiplier-card">
+              <div class="mult-value">4x</div>
+              <div class="mult-label">표준</div>
+              <div class="mult-chance">매우 흔함</div>
+            </div>
+            <div class="multiplier-card">
+              <div class="mult-value">10x</div>
+              <div class="mult-label">부스트</div>
+              <div class="mult-chance">비교적 드묾</div>
+            </div>
+            <div class="multiplier-card">
+              <div class="mult-value">25x</div>
+              <div class="mult-label">핫 런</div>
+              <div class="mult-chance">희귀</div>
+            </div>
+            <div class="multiplier-card">
+              <div class="mult-value">50x</div>
+              <div class="mult-label">메이저</div>
+              <div class="mult-chance">매우 희귀</div>
+            </div>
+            <div class="multiplier-card">
+              <div class="mult-value">100x</div>
+              <div class="mult-label">에픽</div>
+              <div class="mult-chance">예외적</div>
+            </div>
+            <div class="multiplier-card">
+              <div class="mult-value">500x</div>
+              <div class="mult-label">메가</div>
+              <div class="mult-chance">초희귀</div>
+            </div>
+            <div class="multiplier-card jackpot">
+              <div class="mult-value">1,000,000x</div>
+              <div class="mult-label">★ 잭팟</div>
+              <div class="mult-chance">인생을 바꾸는</div>
+            </div>
+          </div>
+
+          <div class="card card-sm mt-3">
+            <h4 style="margin-bottom: 14px;">포맷 스냅샷</h4>
+            <ul class="split-content" style="list-style: none; padding: 0; margin: 0;">
+              <li style="padding: 6px 0 6px 24px; position: relative; font-size: 0.92rem; color: var(--text-body);">
+                <span style="position: absolute; left: 0; color: var(--success); font-weight: 700;">✓</span>
+                3명 플레이어 — 하이퍼 터보 블라인드 레벨
+              </li>
+              <li style="padding: 6px 0 6px 24px; position: relative; font-size: 0.92rem; color: var(--text-body);">
+                <span style="position: absolute; left: 0; color: var(--success); font-weight: 700;">✓</span>
+                세션 보통 8~15분
+              </li>
+              <li style="padding: 6px 0 6px 24px; position: relative; font-size: 0.92rem; color: var(--text-body);">
+                <span style="position: absolute; left: 0; color: var(--success); font-weight: 700;">✓</span>
+                첫 핸드 전 멀티플라이어 공개
+              </li>
+              <li style="padding: 6px 0 6px 24px; position: relative; font-size: 0.92rem; color: var(--text-body);">
+                <span style="position: absolute; left: 0; color: var(--success); font-weight: 700;">✓</span>
+                다양한 바이인 레벨 이용 가능
+              </li>
+              <li style="padding: 6px 0 6px 24px; position: relative; font-size: 0.92rem; color: var(--text-body);">
+                <span style="position: absolute; left: 0; color: var(--success); font-weight: 700;">✓</span>
+                최대 잭팟: $1,000,000
+              </li>
+              <li style="padding: 6px 0 6px 24px; position: relative; font-size: 0.92rem; color: var(--text-body);">
+                <span style="position: absolute; left: 0; color: var(--success); font-weight: 700;">✓</span>
+                VIP 레이크백에 기여
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       6. PUSH-FOLD
+       ============================================ -->
+  <section class="game-section section-accent" id="pushfold">
+    <div class="container">
+      <div class="game-title-block">
+        <span class="game-format-badge">⚡ 쇼트 스택 게임</span>
+        <h2>Push-<span class="gold-text">Fold</span></h2>
+        <p class="game-subtitle">쇼트 스택 포커 이론의 궁극적인 테스트. 모든 결정은 이진법: 올인 푸시하거나 폴드. 베팅 없음, 콜 없음.</p>
+      </div>
+
+      <div class="info-columns">
+        <div class="prose-block">
+          <p>Push-Fold은 게임을 가장 기본적인 결정 포인트로 압축하는 특수 포커 포맷입니다: 내 핸드가 강력할까요?</p>
+          <p>포커 기초를 향상시키려는 진지한 플레이어에게, JackPoker의 Push-Fold은 최고의 훈련 도구 중 하나입니다.</p>
+          <p>Push-Fold은 캐주얼 세션을 즐기기에도 진정으로 즐거운 포맷입니다. 게임이 빠르게 해결됩니다.</p>
+          <p>저희 Push-Fold 게임은 신규 플레이어가 배울 수 있는 마이크로 스테이크 진입점부터 다양한 스테이크 레벨로 이용 가능합니다.</p>
+        </div>
+
+        <div>
+          <div class="pushfold-display">
+            <p style="color: var(--text-muted); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 16px;">모든 결정은 둘 중 하나</p>
+            <div class="pushfold-btns">
+              <div class="pf-btn pf-btn-push">PUSH</div>
+              <div class="pf-btn pf-btn-fold">FOLD</div>
+            </div>
+            <p style="font-size: 0.82rem; color: var(--text-muted); margin-top: 16px; margin-bottom: 0;">쇼트 스택 레인지 &bull; GTO 의사결정 &bull; 빠른 세션</p>
+          </div>
+
+          <div class="card card-sm mt-3">
+            <h4 style="margin-bottom: 16px;">Push-Fold이 효과적인 이유</h4>
+            <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; margin-bottom: 12px;">이 포맷은 멀티 스트리트 플레이와 관련된 대부분의 틸트 및 분산 원인을 제거합니다. 잘못된 턴 콜 없음, 미스 없음.</p>
+            <div class="stakes-row" style="margin-top: 12px;">
+              <span class="badge badge-purple">빠른 세션</span>
+              <span class="badge badge-gold">GTO 훈련</span>
+              <span class="badge badge-green">핸드당 낮은 분산</span>
+              <span class="badge badge-purple">다양한 스테이크</span>
+            </div>
+          </div>
+
+          <div class="highlight-box gold mt-3">
+            <h4>적합한 플레이어:</h4>
+            <p>짧은 시간에 볼륨을 쌓고 싶거나, 쇼트 스택 토너먼트 게임을 향상시키거나, 빠른 플레이를 경험하고 싶은 플레이어.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       7. CASINO GAMES
+       ============================================ -->
+  <section class="game-section game-section-dark section-accent" id="casino">
+    <div class="container">
+      <div class="game-title-block">
+        <span class="game-format-badge">🎲 JackCasino</span>
+        <h2>카지노 <span class="gold-text">게임</span></h2>
+        <p class="game-subtitle">JackPoker의 통합 카지노는 슬롯, 테이블 게임, 라이브 딜러 액션을 제공합니다 — 모두 같은 플랫폼 내에서.</p>
+      </div>
+
+      <div class="casino-types">
+        <div class="casino-type-card">
+          <span class="casino-type-icon">🎰</span>
+          <h4>슬롯</h4>
+          <p>주요 공급업체의 수백 가지 타이틀. 프로그레시브 잭팟, 메가웨이즈, 클래식 3릴, 기능이 풍부한 비디오 슬롯.</p>
+        </div>
+        <div class="casino-type-card">
+          <span class="casino-type-icon">🃏</span>
+          <h4>테이블 게임</h4>
+          <p>블랙잭, 룰렛, 바카라 등 — 모든 플레이 스타일에 맞는 다양한 변형과 베팅 한도.</p>
+        </div>
+        <div class="casino-type-card">
+          <span class="casino-type-icon">📡</span>
+          <h4>라이브 딜러</h4>
+          <p>24/7 HD 비디오 스트리밍 실제 딜러. 라이브 블랙잭, 라이브 룰렛, 라이브 바카라, 게임쇼.</p>
+        </div>
+        <div class="casino-type-card">
+          <span class="casino-type-icon">🎯</span>
+          <h4>스페셜티 게임</h4>
+          <p>포커 세션 사이의 변화를 위한 스크래치 카드, 가상 스포츠, 아케이드 게임.</p>
+        </div>
+      </div>
+
+      <div class="grid-2 mt-4">
+        <div class="prose-block">
+          <p>저희 카지노 제공은 별도 상품이 아니라 포커 경험의 자연스러운 연장으로 설계되었습니다. 포커 플레이어들은</p>
+          <p>저희는 슬롯 라이브러리를 최고 수준의 공급업체 타이틀로 구성하며, 개인 수백만 달러의 당첨금을 제공하는 프로그레시브 잭팟 슬롯도 포함합니다.</p>
+        </div>
+
+        <div>
+          <div class="highlight-box gold">
+            <h4>포커 플레이어를 위한 10% 카지노 캐시백</h4>
+            <p>JackPoker VIP 프로그램의 모든 활성 포커 플레이어는 카지노 순손실에 대해 10% 캐시백 보너스를 받습니다. 매주 계산됩니다.</p>
+          </div>
+
+          <div class="highlight-box mt-3">
+            <h4>통합 지갑 — 하나의 잔액, 모든 것</h4>
+            <p>귀하의 입금은 포커 계정, 카지노 플레이, 토너먼트 바이인, Spin &amp; Win 세션 모두에 동시에 자금을 지원합니다.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       8. PLATFORM FEATURES
+       ============================================ -->
+  <section class="game-section section-accent" id="platform">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">플랫폼</span>
+        <h2>어디서나 플레이, <span class="gold-text">모든 기기에서</span></h2>
+        <p>JackPoker의 플랫폼은 현대 플레이어를 위해 구축되었습니다. 데스크탑 플레이를 위한 다운로드 불필요, Android 네이티브 앱, iOS 지원.</p>
+      </div>
+
+      <div class="split">
+        <div class="split-img">
+          <img src="../assets/images/mobile-app.jpg" alt="JackPoker mobile app on Android and iOS" loading="lazy">
+        </div>
+        <div class="split-content">
+          <span class="section-label">접근성</span>
+          <h2>브라우저, Android &amp; <span class="gold-text">iOS</span></h2>
+          <p>저희는 최고의 포커 소프트웨어가 방해 없이 작동하는 것이라고 믿습니다. JackPoker의 브라우저 기반 플랫폼은 즉시 실행됩니다.</p>
+          <p>모바일 플레이어를 위해, JackPoker 웹사이트에서 직접 다운로드할 수 있는 전용 Android APK를 제공합니다.</p>
+          <ul>
+            <li>브라우저 기반 플레이 — 다운로드 없음, 설치 없음</li>
+            <li>Android APK — 직접 다운로드, 완전한 네이티브 경험</li>
+            <li>iOS PWA — 홈 화면에 설치, 네이티브 앱 느낌</li>
+            <li>최대 3개 동시 테이블 멀티 테이블</li>
+            <li>커스텀 테이블 테마 및 아바타 선택</li>
+            <li>핸드 히스토리 아카이브 및 세션 통계</li>
+            <li>이모지 지원 인게임 채팅</li>
+          </ul>
+          <a href="https://go.jack-full.com/c41f796e" class="btn btn-primary">다운로드 또는 지금 플레이</a>
+        </div>
+      </div>
+
+      <div style="margin-top: 64px;">
+        <h3 style="margin-bottom: 28px; font-size: 1.3rem;">전체 플랫폼 기능</h3>
+        <ul class="platform-list">
+          <li>
+            <span class="pl-icon">🖥️</span>
+            <div class="pl-text">
+              <strong>즉시 브라우저 플레이</strong>
+              <span>브라우저를 통한 완전한 포커 클라이언트. 플러그인이나 다운로드 없이 Chrome, Firefox, Safari, Edge에서 작동합니다.</span>
+            </div>
+          </li>
+          <li>
+            <span class="pl-icon">📱</span>
+            <div class="pl-text">
+              <strong>Android APK 다운로드</strong>
+              <span>저희 웹사이트에서 JackPoker Android 애플리케이션을 직접 다운로드하세요. 스마트폰과 태블릿에 최적화되어 있습니다.</span>
+            </div>
+          </li>
+          <li>
+            <span class="pl-icon">🍎</span>
+            <div class="pl-text">
+              <strong>iOS 프로그레시브 웹 앱</strong>
+              <span>Safari를 통해 iPhone 또는 iPad 홈 화면에 JackPoker를 설치하세요. PWA는 네이티브 앱처럼 작동합니다 — 전체 화면 모드.</span>
+            </div>
+          </li>
+          <li>
+            <span class="pl-icon">⬜⬛</span>
+            <div class="pl-text">
+              <strong>멀티 테이블 — 최대 3개 테이블</strong>
+              <span>타일 레이아웃에서 최대 3개의 테이블을 동시에 실행하세요. 각 테이블에는 자체 액션 타이머와 자동 액션 설정이 있습니다.</span>
+            </div>
+          </li>
+          <li>
+            <span class="pl-icon">🎨</span>
+            <div class="pl-text">
+              <strong>커스텀 테이블 테마 &amp; 아바타</strong>
+              <span>선택 가능한 펠트 색상, 카드 뒷면 디자인, 플레이어 아바타로 포커 환경을 개인화하세요. 프리미엄 테마를 잠금 해제하세요.</span>
+            </div>
+          </li>
+          <li>
+            <span class="pl-icon">📋</span>
+            <div class="pl-text">
+              <strong>핸드 히스토리 &amp; 통계 추적</strong>
+              <span>플레이한 모든 핸드가 기록되어 플랫폼 내에서 다운로드하거나 검토할 수 있습니다. 세션, 게임 유형별로 필터링하세요.</span>
+            </div>
+          </li>
+          <li>
+            <span class="pl-icon">💬</span>
+            <div class="pl-text">
+              <strong>인게임 채팅</strong>
+              <span>이모지 반응, 표준 소셜 기능, 모더레이터 감독이 있는 전체 테이블 채팅. 개별 플레이어 또는 전체 채팅을 음소거하세요.</span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       9. STAKES TABLE
+       ============================================ -->
+  <section class="game-section game-section-dark" id="stakes-table">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">참고</span>
+        <h2>완전한 <span class="gold-text">스테이크 가이드</span></h2>
+        <p>JackPoker의 모든 이용 가능한 게임 포맷, 스테이크 레벨, 테이블 구성에 대한 전체 분석. 이 표를 사용하여 적합한 게임을 찾으세요.</p>
+      </div>
+
+      <div class="table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>게임 포맷</th>
+              <th>최소 스테이크</th>
+              <th>최대 스테이크</th>
+              <th>테이블 크기</th>
+              <th>상태</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>NL Texas Hold'em</strong></td>
+              <td>NL10 — $0.05/$0.10</td>
+              <td>NL2000 — $10/$20</td>
+              <td>2-맥스, 6-맥스, 9-맥스</td>
+              <td><span class="badge badge-green">● 라이브</span></td>
+            </tr>
+            <tr>
+              <td><strong>PLO4 (4카드 Omaha)</strong></td>
+              <td>PLO10 — $0.05/$0.10</td>
+              <td>PLO500 — $2.50/$5</td>
+              <td>6-맥스, 9-맥스</td>
+              <td><span class="badge badge-green">● 라이브</span></td>
+            </tr>
+            <tr>
+              <td><strong>PLO5 (5카드 Omaha)</strong></td>
+              <td>PLO10 — $0.05/$0.10</td>
+              <td>PLO200 — $1/$2</td>
+              <td>6-맥스</td>
+              <td><span class="badge badge-green">● 라이브</span></td>
+            </tr>
+            <tr>
+              <td><strong style="color: var(--gold-primary);">PLO6 (6카드 Omaha) ★</strong></td>
+              <td>PLO10 — $0.05/$0.10</td>
+              <td>PLO100 — $0.50/$1</td>
+              <td>6-맥스</td>
+              <td><span class="badge badge-gold">★ 독점</span></td>
+            </tr>
+            <tr>
+              <td><strong>Spin &amp; Win</strong></td>
+              <td>$1 바이인</td>
+              <td>$100 바이인</td>
+              <td>3인 전용</td>
+              <td><span class="badge badge-green">● 라이브</span></td>
+            </tr>
+            <tr>
+              <td><strong>Push-Fold</strong></td>
+              <td>마이크로 스테이크</td>
+              <td>미드 스테이크</td>
+              <td>쇼트핸디드</td>
+              <td><span class="badge badge-green">● 라이브</span></td>
+            </tr>
+            <tr>
+              <td><strong>카지노 — 슬롯</strong></td>
+              <td>스핀당 $0.10</td>
+              <td>스핀당 $500</td>
+              <td>N/A</td>
+              <td><span class="badge badge-green">● 라이브</span></td>
+            </tr>
+            <tr>
+              <td><strong>카지노 — 라이브 딜러</strong></td>
+              <td>핸드당 $1</td>
+              <td>핸드당 $5,000</td>
+              <td>N/A</td>
+              <td><span class="badge badge-green">● 24/7</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p style="color: var(--text-faint); font-size: 0.82rem; margin-top: 16px; text-align: center;">스테이크와 이용 가능성은 변경될 수 있습니다. 실시간 게임 이용 가능성은 로비에 로그인하세요.</p>
+    </div>
+  </section>
+
+  <!-- ============================================
+       10. SOFTWARE FEATURES
+       ============================================ -->
+  <section class="game-section section-accent" id="software">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">소프트웨어</span>
+        <h2>진지한 플레이어를 위해 <span class="gold-text">구축</span></h2>
+        <p>JackPoker의 소프트웨어는 전문 및 진지한 레크리에이션 플레이어가 기대하는 기능으로 가득합니다.</p>
+      </div>
+
+      <div class="grid-3">
+        <div class="feature-card">
+          <div class="feature-icon">⬜⬛</div>
+          <h3>멀티 테이블 지원</h3>
+          <p>깔끔한 타일 레이아웃에서 최대 3개의 테이블을 동시에 플레이하세요. 각 테이블은 완전히 독립적입니다 — 별도의 액션 타이머, 자동 액션, 베팅 컨트롤 — 혼란이나 미스클릭 없이 테이블 간에 원활하게 이동할 수 있습니다. 시간당 수익을 극대화하려는 캐시 게임 볼륨 그라인더와 Spin &amp; Win 플레이어에게 이상적입니다.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>빠른 착석</h3>
+          <p>최적의 테이블을 찾아 시간을 낭비하지 마세요. 빠른 착석으로 원하는 게임 유형, 스테이크를 지정하면 즉시 배치됩니다.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📹</div>
+          <h3>핸드 리플레이어</h3>
+          <p>내장된 핸드 리플레이어로 플레이한 모든 핸드를 검토하세요. 스트리트별로 액션을 단계적으로 확인하세요.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">💰</div>
+          <h3>뱅크롤 관리 도구</h3>
+          <p>JackPoker는 내장된 책임감 있는 게임 및 뱅크롤 관리 컨트롤을 포함합니다. 세션 입금 한도, 손실 한도를 설정하세요.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">⏱️</div>
+          <h3>타임 뱅크</h3>
+          <p>모든 플레이어는 어려운 결정에 사용할 수 있는 추가 시간 뱅크를 받습니다. 타임 뱅크는 자동으로 활성화됩니다.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🤖</div>
+          <h3>자동 액션</h3>
+          <p>포괄적인 자동 액션 스위트로 세션을 간소화하세요. 차례가 됐을 때 즉시 체크/폴드를 미리 설정하세요.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       11. PAYMENT METHODS
+       ============================================ -->
+  <section class="game-section game-section-dark section-accent" id="payments">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">뱅킹</span>
+        <h2>빠른 입금 &amp; <span class="gold-text">출금</span></h2>
+        <p>JackPoker는 전통적인 카드와 전자 지갑부터 전체 암호화폐 범위까지 광범위한 입금 및 출금 방법을 지원합니다.</p>
+      </div>
+
+      <div class="grid-2" style="gap: 48px;">
+        <div>
+          <div class="payment-category">
+            <div class="payment-category-label">카드 &amp; 은행 이체</div>
+            <div class="payment-grid">
+              <span class="payment-pill">💳 VISA</span>
+              <span class="payment-pill">💳 Mastercard</span>
+              <span class="payment-pill">🏦 은행 이체</span>
+            </div>
+          </div>
+
+          <div class="payment-category">
+            <div class="payment-category-label">전자 지갑</div>
+            <div class="payment-grid">
+              <span class="payment-pill">🔵 Skrill</span>
+              <span class="payment-pill">🟠 Neteller</span>
+              <span class="payment-pill">🏦 JetonBank</span>
+              <span class="payment-pill">💜 LuxonPay</span>
+              <span class="payment-pill">🟡 Paysafecard</span>
+            </div>
+          </div>
+
+          <div class="payment-category">
+            <div class="payment-category-label">지역 방법</div>
+            <div class="payment-grid">
+              <span class="payment-pill">🇧🇷 Pix</span>
+              <span class="payment-pill">🍁 Interac</span>
+              <span class="payment-pill">🇵🇱 Blik</span>
+            </div>
+          </div>
+
+          <div class="payment-category">
+            <div class="payment-category-label">암호화폐</div>
+            <div class="payment-grid">
+              <span class="payment-pill">₿ Bitcoin (BTC)</span>
+              <span class="payment-pill">Ξ Ethereum (ETH)</span>
+              <span class="payment-pill">💵 USDT (Tether)</span>
+              <span class="payment-pill">🔵 TRX (Tron)</span>
+              <span class="payment-pill">Ł Litecoin (LTC)</span>
+              <span class="payment-pill">🐕 Dogecoin (DOGE)</span>
+              <span class="payment-pill">🟡 BNB</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="prose-block">
+          <h3 style="margin-bottom: 20px;">나에게 맞는 뱅킹</h3>
+          <p>저희는 국제 플레이어 커뮤니티의 요구를 중심으로 결제 인프라를 구축했습니다. Skrill이나 Neteller로 유럽에서 입금하든, 브라질에서 Pix, 캐나다에서 Interac, 폴란드에서 Blik을 사용하든, 원하는 방법이 거의 확실히 저희 목록에 있습니다. 지원되는 모든 방법은 추가 절차 없이 입출금 모두에 이용 가능합니다.</p>
+          <p>JackPoker의 암호화폐 입금은 온체인으로 처리되며 네트워크 확인 즉시 계정에 크레딧됩니다.</p>
+          <p>카드 및 전자 지갑 사용자의 경우, 입금은 즉시 처리되어 바로 플레이에 사용 가능합니다. 출금 처리 시간은 방법에 따라 다릅니다.</p>
+          <p>JackPoker의 모든 금융 거래는 SSL/TLS 암호화로 처리됩니다. 저희 결제 시스템은 규정 요건을 준수합니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================
+       12. FINAL CTA
+       ============================================ -->
+  <section class="cta-section" id="cta">
+    <div class="container">
+      <div class="cta-inner">
+        <span class="section-label">시작하기</span>
+        <h2>선택하세요 <span class="gold-text">게임</span></h2>
+        <p>마이크로 스테이크 Hold'em부터 백만 달러 Spin &amp; Win 잭팟까지 — 다음 세션이 클릭 한 번으로 기다립니다. 수천 명의 플레이어와 함께하세요.</p>
+
+        <div style="margin-bottom: 32px;">
+          <div class="promo-code-box" style="margin: 0 auto; max-width: 340px;">
+            <span class="promo-code-value">WELCOME</span>
+            <button class="promo-code-copy" onclick="navigator.clipboard.writeText('WELCOME').then(()=>{this.textContent='복사됨!';setTimeout(()=>{this.textContent='복사';},2000)})">복사</button>
+          </div>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 12px; margin-bottom: 0;">코드 사용 <strong style="color: var(--gold-primary);">WELCOME</strong> 300% 매칭 최대 $2,000 + 20% 즉시 현금 + 룻박스</p>
+        </div>
+
+        <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+          <a href="https://go.jack-full.com/c41f796e" class="btn btn-primary btn-lg">♠ 지금 플레이 — 무료 가입</a>
+          <a href="bonuses.html" class="btn btn-secondary btn-lg">보너스 탐색</a>
+        </div>
+
+        <div style="margin-top: 40px; padding-top: 32px; border-top: 1px solid var(--border-subtle);">
+          <div class="grid-4" style="gap: 16px;">
+            <div style="text-align: center;">
+              <div style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 900; color: var(--gold-primary);">300%</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px;">웰컴 매칭</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 900; color: var(--gold-primary);">$2,000</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px;">최대 보너스</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 900; color: var(--gold-primary);">20%</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px;">즉시 캐시백</div>
+            </div>
+            <div style="text-align: center;">
+              <div style="font-family: var(--font-display); font-size: 1.4rem; font-weight: 900; color: var(--gold-primary);">$1M</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; margin-top: 4px;">Spin &amp; Win 잭팟</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Promo Code CTA — Games Context -->
+  <aside class="promo-cta-inline" style="background: linear-gradient(135deg, rgba(137,59,247,0.08), rgba(246,186,70,0.08)); border: 1px solid rgba(246,186,70,0.2); border-radius: 16px; padding: 32px 36px; margin: 48px auto; max-width: var(--max-width); position: relative; overflow: hidden;">
+    <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--purple-primary), var(--gold-primary));"></div>
+    <div class="container" style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap;">
+      <div style="flex: 1; min-width: 280px;">
+        <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 8px;">300% 보너스로 플레이 시작</h3>
+        <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin: 0;">사용하세요 <a href="promo-code.html" style="color: var(--gold-primary); font-weight: 700; text-decoration: underline;">JackPoker 프로모 코드 WELCOME</a> 가입 시 입력하여 최대 $2,000의 300% 입금 매칭을 잠금 해제하세요. 위의 모든 게임 포맷이 즉시 더욱 접근하기 쉬워집니다. <a href="promo-code.html" style="color: var(--gold-primary); font-weight: 600;">전체 프로모 코드 세부 사항 및 수령 방법</a>.</p>
+      </div>
+      <div style="flex-shrink: 0;">
+        <a href="promo-code.html" class="btn btn-cta" style="white-space: nowrap;">코드 WELCOME 받기 →</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ============================================
+       FOOTER
+       ============================================ -->
+  
+    <!-- Latest News Links -->
+    <section style="padding: 24px 0 0;">
+      <div class="container">
+        <h3 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; color: var(--text-primary);">JackPoker 최신 소식</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <a href="news/winter-games-festival-wraps-with-record-breaking-21m-in-payo.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">Winter Games Festival: $2.1M 지급 →</a>
+          <a href="news/bonus-bonanza-march-schedule-620-events-125m-in-guarantees.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">Bonus Bonanza 3월: $1.25M GTD →</a>
+          <a href="news/jackpoker-mobile-app-30-launches-with-multi-table-support.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">모바일 앱 3.0 출시 →</a>
+          <a href="news/crypto-deposits-now-available-in-sol-matic-and-ton.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">크립토 입금: SOL, MATIC, TON →</a>
+        </div>
+      </div>
+    </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="JackPoker Home">
+        <svg class="logo-icon" width="189" height="47" viewBox="0 0 189 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="JackPoker">
+<path d="M25.4001 1C24.0001 1 22.8001 2.2 22.8001 3.6C22.8001 5.1 23.8343 5.9 25.3001 5.9H28.7001C28.7001 5.9 31.3001 5.9 31.3001 8.3C31.3001 10.7 28.7001 10.7 28.7001 10.7H8.30008C6.90008 10.7 5.70008 11.9 5.70008 13.3C5.70008 14.7 6.90008 15.9 8.30008 15.9H22.5001C22.5001 15.9 25.1001 15.9 25.1001 18.3C25.1001 20.7 22.5001 20.7 22.5001 20.7H11.4001C10.0001 20.7 8.80008 21.9 8.80008 23.3C8.80008 24.7 10.0001 25.9 11.4001 25.9H22.6001C22.6001 25.9 25.2001 25.9 25.2001 28.3C25.2001 30.7 22.6001 30.7 22.6001 30.7H21.8001C20.4001 30.7 19.2001 31.9 19.2001 33.3C19.2001 34.7 20.4001 35.9 21.8001 35.9H28.8001C28.8001 35.9 31.4001 35.9 31.4001 38.3C31.4001 40.7 28.8001 40.7 28.8001 40.7H14.0001C12.6001 40.7 11.4001 41.9 11.4001 43.3C11.4001 44.7 12.6001 45.9 14.0001 45.9H34.3001C36.5001 45.9 38.4001 44.8 39.5001 43C41.1501 40.25 42.7751 37.4999 44.4001 34.7499C46.0251 31.9999 47.6501 29.25 49.3001 26.5C50.4001 24.6 50.4001 22.3 49.3001 20.4C47.6501 17.6501 46.0252 14.9001 44.4002 12.1502C42.7752 9.4002 41.1501 6.65001 39.5001 3.9C38.4001 2.1 36.4001 1 34.3001 1H25.4001Z" fill="url(#jpLogoGrad)"/>
+<path d="M11.3999 3.6C11.3999 2.2 12.5999 1 13.9999 1H17.5999C18.9999 1 20.1999 2.2 20.1999 3.6C20.1999 5 18.9999 6.2 17.5999 6.2H13.9999C12.5999 6.2 11.3999 5 11.3999 3.6Z" fill="url(#jpLogoGrad)"/>
+<path d="M0 23.5001C0 22.1001 1.2 20.9001 2.6 20.9001H3.6C5 20.9001 6.2 22.1001 6.2 23.5001C6.2 24.9001 5 26.1001 3.6 26.1001H2.6C1.2 26.1001 0 24.9001 0 23.5001Z" fill="url(#jpLogoGrad)"/>
+<path d="M8.30008 30.8001C6.90008 30.8001 5.70008 32.0001 5.70008 33.4001C5.70008 34.9001 6.90008 36.1001 8.30008 36.0001H14.0001C15.4001 36.0001 16.6001 34.8001 16.6001 33.4001C16.6001 32.0001 15.4001 30.8001 14.0001 30.8001H8.30008Z" fill="url(#jpLogoGrad)"/>
+<path d="M69.7955 27.3088C69.7955 28.8312 69.6204 30.0793 69.2704 31.0533C68.9203 32.0273 68.3261 32.7598 67.4876 33.2509C66.6572 33.7502 65.5257 33.9998 64.0929 33.9998C63.7591 33.9998 63.3887 33.9712 62.9817 33.9139C62.5747 33.8648 62.3142 33.832 62.2002 33.8157L62.5177 31.2252H63.7144C65.1797 31.2252 65.9164 30.4231 65.9246 28.8189V15.265L64.0441 14.5039V12.3676L71.676 12.2449V14.5039L69.7955 15.265V27.3088Z" fill="white"/>
+<path d="M81.4937 28.3401C81.4937 28.3728 81.2779 28.557 80.8465 28.8926C80.415 29.2281 79.8981 29.5351 79.2957 29.8133C78.6933 30.0834 78.0746 30.2185 77.4396 30.2185C76.2185 30.2185 75.2619 29.8788 74.57 29.1995C73.8862 28.512 73.5443 27.538 73.5443 26.2775C73.5443 24.837 74.0571 23.7853 75.0829 23.1223C76.1086 22.4594 77.6024 22.1279 79.5643 22.1279H81.3227V20.7406C81.3227 19.5129 80.6796 18.9031 79.3934 18.9113C79.0107 18.9113 78.6566 18.94 78.331 18.9973C78.0054 19.0545 77.7449 19.1159 77.5495 19.1814C77.3622 19.2387 77.2442 19.2755 77.1954 19.2919L76.8168 20.8756H74.57L74.399 17.1557C74.5456 17.1066 74.9038 17.0002 75.4736 16.8365C76.0516 16.6728 76.7395 16.5173 77.5373 16.37C78.3432 16.2226 79.1044 16.149 79.8207 16.149C81.107 16.149 82.1286 16.3127 82.8857 16.6401C83.6428 16.9593 84.1964 17.4831 84.5464 18.2115C84.8965 18.9318 85.0715 19.9017 85.0715 21.1212V27.3334L86.952 27.7876V29.8011L81.9455 29.9729L81.4937 28.3401ZM77.1709 25.897C77.1709 26.388 77.2971 26.7645 77.5495 27.0264C77.81 27.2802 78.1763 27.407 78.6485 27.407C79.0474 27.407 79.4422 27.3006 79.833 27.0878C80.2237 26.8668 80.5534 26.6418 80.822 26.4126C81.0907 26.1752 81.2576 26.0197 81.3227 25.9461V24.2641H79.894C78.9253 24.2641 78.2292 24.3951 77.8059 24.657C77.3826 24.9189 77.1709 25.3322 77.1709 25.897Z" fill="white"/>
+<path d="M100.311 28.0823C99.7492 28.5897 99.0124 29.0726 98.1007 29.531C97.1971 29.9893 96.1428 30.2185 94.938 30.2185C92.8866 30.2185 91.291 29.6169 90.1513 28.4137C89.0116 27.2106 88.4417 25.5327 88.4417 23.3802C88.4417 21.1376 89.0442 19.3737 90.249 18.0888C91.4619 16.7956 93.1511 16.149 95.3166 16.149C95.9515 16.149 96.5906 16.2145 97.2337 16.3454C97.885 16.4764 98.4263 16.6114 98.8578 16.7506C99.2974 16.8815 99.5742 16.9715 99.6881 17.0206L99.566 21.1457H97.3192L96.9651 19.3656C96.8836 19.3492 96.6801 19.3124 96.3545 19.2551C96.0289 19.1896 95.6585 19.1569 95.2433 19.1569C94.3234 19.1569 93.6029 19.472 93.0819 20.1022C92.5691 20.7324 92.3126 21.6573 92.3126 22.8768C92.3126 24.2682 92.5731 25.3404 93.0942 26.0934C93.6233 26.8382 94.4048 27.2106 95.4387 27.2106C96.0899 27.2106 96.6598 27.1124 97.1482 26.916C97.6448 26.7113 98.06 26.5026 98.3937 26.2898C98.7275 26.077 98.9514 25.9379 99.0654 25.8724L100.311 28.0823Z" fill="white"/>
+<path d="M108.602 21.4527L110.3 18.8868L109.201 18.5307V16.5173L115.66 16.3945V18.5307L113.902 18.8622L111.582 22.1525L114.378 27.3579L116.283 27.9595V29.9729H111.655L108.553 23.8344H106.954V27.3334L108.334 27.9595V29.9729H101.202V27.9595L103.205 27.3334V13.2025L101.202 12.6991V10.6857L106.954 10.4893V21.4527H108.602Z" fill="white"/>
+<path d="M117.406 27.8367L119.275 27.0756V15.265L117.406 14.5039V12.3676L123.158 12.2449H125.527C127.423 12.2449 128.909 12.7155 129.984 13.6567C131.066 14.598 131.608 15.8871 131.608 17.524C131.608 19.6029 130.993 21.1703 129.764 22.2261C128.543 23.2819 126.78 23.8099 124.477 23.8099H123.158V27.0756L125.026 27.8367V29.9729H117.406V27.8367ZM124.477 20.8756C125.527 20.8756 126.333 20.6342 126.894 20.1513C127.456 19.6602 127.737 18.9522 127.737 18.0274C127.737 17.1925 127.513 16.5255 127.065 16.0262C126.626 15.5188 125.991 15.265 125.16 15.265H123.158V20.8756H124.477Z" fill="white"/>
+<path d="M139.74 16.149C141.751 16.149 143.302 16.7383 144.393 17.9169C145.492 19.0955 146.041 20.7692 146.041 22.9382C146.041 24.4278 145.764 25.721 145.211 26.8177C144.665 27.9145 143.892 28.7575 142.891 29.3468C141.89 29.9279 140.713 30.2185 139.362 30.2185C135.112 30.2185 132.988 27.9145 132.988 23.3065C132.988 21.8169 133.264 20.536 133.818 19.4638C134.38 18.3916 135.169 17.5731 136.187 17.0084C137.205 16.4354 138.389 16.149 139.74 16.149ZM139.606 19.1569C138.662 19.1569 137.966 19.4638 137.518 20.0776C137.078 20.6915 136.859 21.7269 136.859 23.1837C136.859 24.5751 137.066 25.5941 137.481 26.2407C137.905 26.8873 138.572 27.2106 139.484 27.2106C140.404 27.2106 141.08 26.8873 141.511 26.2407C141.942 25.5941 142.158 24.5342 142.158 23.061C142.158 21.7514 141.955 20.7733 141.548 20.1267C141.141 19.4802 140.493 19.1569 139.606 19.1569Z" fill="white"/>
+<path d="M154.809 21.4527L156.506 18.8868L155.407 18.5307V16.5173L161.867 16.3945V18.5307L160.108 18.8622L157.788 22.1525L160.585 27.3579L162.49 27.9595V29.9729H157.862L154.76 23.8344H153.16V27.3334L154.54 27.9595V29.9729H147.409V27.9595L149.412 27.3334V13.2025L147.409 12.6991V10.6857L153.16 10.4893V21.4527H154.809Z" fill="white"/>
+<path d="M167.508 24.0186C167.573 25.0253 167.875 25.811 168.412 26.3758C168.957 26.9323 169.666 27.2106 170.537 27.2106C171.155 27.2106 171.774 27.1247 172.393 26.9528C173.02 26.7727 173.536 26.5927 173.944 26.4126C174.359 26.2243 174.623 26.0934 174.737 26.0197L175.812 28.1068C175.812 28.1396 175.519 28.3483 174.933 28.733C174.355 29.1095 173.642 29.4532 172.796 29.7642C171.957 30.0671 171.062 30.2185 170.109 30.2185C167.993 30.2185 166.381 29.6292 165.274 28.4506C164.167 27.272 163.613 25.6023 163.613 23.4415C163.613 21.9847 163.878 20.7079 164.407 19.6111C164.944 18.5062 165.713 17.655 166.715 17.0575C167.716 16.4518 168.904 16.149 170.28 16.149C172.112 16.149 173.516 16.6769 174.493 17.7327C175.47 18.7885 175.958 20.2291 175.958 22.0542C175.958 22.4553 175.938 22.8441 175.897 23.2206C175.857 23.5971 175.828 23.8344 175.812 23.9326L167.508 24.0186ZM170.036 19.1569C169.352 19.1569 168.795 19.3901 168.363 19.8566C167.932 20.315 167.663 20.9207 167.557 21.6737H172.087C172.087 20.9207 171.921 20.315 171.587 19.8566C171.253 19.3901 170.736 19.1569 170.036 19.1569Z" fill="white"/>
+<path d="M183.199 18.1256C183.199 18.0928 183.395 17.9005 183.786 17.5486C184.176 17.1966 184.628 16.8774 185.141 16.591C185.662 16.2963 186.175 16.149 186.68 16.149C187.079 16.149 187.453 16.1817 187.803 16.2472C188.153 16.3127 188.426 16.3822 188.621 16.4559C188.825 16.5296 188.951 16.5746 189 16.591L188.804 21.4281H186.558L186.179 19.2919C185.748 19.2919 185.328 19.3983 184.921 19.6111C184.522 19.8157 184.18 20.0449 183.896 20.2986C183.619 20.5442 183.48 20.6751 183.48 20.6915V27.3334L185.984 27.9595V29.9729H177.729V27.9595L179.732 27.3334V19.1569L177.729 18.5307V16.5173L182.98 16.3945L183.199 18.1256Z" fill="white"/>
+<defs>
+<linearGradient id="jpLogoGrad" x1="0" y1="33.44" x2="50.74" y2="33.44" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8032FF"/>
+<stop offset="1" stop-color="#FF3D00"/>
+</linearGradient>
+</defs>
+</svg>
+      </a>
+          <p>JackPoker는 Texas Hold'em, PLO, Spin&amp;Win, 토너먼트 액션을 제공하는 현대적인 온라인 포커 플랫폼입니다. 라이선스 취득.</p>
+        </div>
+        <div class="footer-col">
+          <h4>플랫폼</h4>
+          <ul>
+            <li><a href="games.html">게임</a></li>
+            <li><a href="tournaments.html">토너먼트</a></li>
+            <li><a href="bonuses.html">보너스 &amp; 프로모</a></li>
+            <li><a href="promo-code.html">프로모 코드</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>리소스</h4>
+          <ul>
+            <li><a href="news.html">뉴스</a></li>
+            <li><a href="https://go.jack-full.com/c41f796e" target="_blank" rel="noopener noreferrer">FAQ</a></li>
+            <li><a href="terms.html">이용약관</a></li>
+            <li><a href="https://go.jack-full.com/c41f796e" target="_blank" rel="noopener noreferrer">개인정보 처리방침</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>결제</h4>
+          <div class="footer-payment-icons">
+            <span>VISA</span><span>Mastercard</span><span>Skrill</span><span>Neteller</span><span>Bitcoin</span><span>Ethereum</span><span>USDT</span><span>Pix</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 JackPoker. Jack La International Limitada 운영. Anjouan, 코모로 연합에서 라이선스 취득. 책임감 있는 플레이.</p>
+        <p>iTech Labs &bull; BMM TestLabs &bull; GLI 인증</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+  <script>
+    // Sticky subnav active link tracking
+    (function() {
+      const sections = document.querySelectorAll('[id]');
+      const navLinks = document.querySelectorAll('.games-subnav-link');
+
+      function updateActiveLink() {
+        let current = '';
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop - 130;
+          if (window.scrollY >= sectionTop) {
+            current = section.getAttribute('id');
+          }
+        });
+
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          const href = link.getAttribute('href');
+          if (href && href === '#' + current) {
+            link.classList.add('active');
+          }
+        });
+      }
+
+      window.addEventListener('scroll', updateActiveLink, { passive: true });
+      updateActiveLink();
+    })();
+  </script>
+</body>
+</html>
