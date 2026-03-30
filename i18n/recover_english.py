@@ -77,7 +77,7 @@ for page in PAGES:
     html = re.sub(r'<link href="https://fonts\.googleapis\.com/css2\?family=Noto\+Sans\+Thai[^"]*" rel="stylesheet">\s*', '', html)
     
     # Fix canonical URL
-    html = html.replace(f'href="https://jackpoker.poker/es/', 'href="https://jackpoker.poker/')
+    html = html.replace(f'href="https://jackpoker.xyz/es/', 'href="https://jackpoker.xyz/')
     
     out = ROOT / page
     out.write_text(html, encoding="utf-8")

@@ -7,7 +7,7 @@ from pathlib import Path
 from datetime import date
 
 ROOT = Path("/home/user/workspace/jackpoker-fan-site")
-BASE_URL = "https://jackpoker.poker"
+BASE_URL = "https://jackpoker.xyz"
 TODAY = date.today().isoformat()
 
 LANGUAGES = ["en", "ru", "es", "it", "pt", "vi", "th", "ms"]

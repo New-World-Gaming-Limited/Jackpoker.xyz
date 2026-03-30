@@ -4,12 +4,12 @@ Disallow: /i18n/
 Disallow: /lang/
 Disallow: /skills/
 
-Sitemap: https://jackpoker.poker/sitemap.xml
-Sitemap: https://jackpoker.poker/sitemap-en.xml
-Sitemap: https://jackpoker.poker/ru/sitemap.xml
-Sitemap: https://jackpoker.poker/es/sitemap.xml
-Sitemap: https://jackpoker.poker/it/sitemap.xml
-Sitemap: https://jackpoker.poker/pt/sitemap.xml
-Sitemap: https://jackpoker.poker/vi/sitemap.xml
-Sitemap: https://jackpoker.poker/th/sitemap.xml
-Sitemap: https://jackpoker.poker/ms/sitemap.xml
+Sitemap: https://jackpoker.xyz/sitemap.xml
+Sitemap: https://jackpoker.xyz/sitemap-en.xml
+Sitemap: https://jackpoker.xyz/ru/sitemap.xml
+Sitemap: https://jackpoker.xyz/es/sitemap.xml
+Sitemap: https://jackpoker.xyz/it/sitemap.xml
+Sitemap: https://jackpoker.xyz/pt/sitemap.xml
+Sitemap: https://jackpoker.xyz/vi/sitemap.xml
+Sitemap: https://jackpoker.xyz/th/sitemap.xml
+Sitemap: https://jackpoker.xyz/ms/sitemap.xml

@@ -50,7 +50,7 @@ LANGUAGES = {
     "cs": {"name": "Čeština", "flag_code": "CZ"},
 }
 
-BASE_URL = "https://jackpoker.poker"
+BASE_URL = "https://jackpoker.xyz"
 
 # Brand names that should never be translated
 PROTECTED_BRAND_NAMES = [

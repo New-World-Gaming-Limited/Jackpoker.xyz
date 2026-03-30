@@ -32,7 +32,7 @@ LANGUAGES = {
     "th": {"name": "ไทย", "flag_code": "TH"},
 }
 
-BASE_URL = "https://jackpoker.poker"
+BASE_URL = "https://jackpoker.xyz"
 
 def load_locale(lang_code):
     with open(LOCALES_DIR / f"{lang_code}.json", "r", encoding="utf-8") as f:
