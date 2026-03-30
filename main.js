@@ -23,6 +23,28 @@ function jpSetTheme(val) {
 
 document.addEventListener('DOMContentLoaded', function() {
 
+  // ── Expired Events Auto-Hide ──
+  // Elements with data-expires="YYYY-MM-DD" are hidden after that date passes (UTC end-of-day)
+  (function() {
+    var now = new Date();
+    document.querySelectorAll('[data-expires]').forEach(function(el) {
+      var expiryStr = el.getAttribute('data-expires');
+      if (!expiryStr) return;
+      // Parse as end-of-day UTC on the expiry date
+      var parts = expiryStr.split('-');
+      var expiryDate = new Date(Date.UTC(
+        parseInt(parts[0], 10),
+        parseInt(parts[1], 10) - 1,
+        parseInt(parts[2], 10),
+        23, 59, 59, 999
+      ));
+      if (now > expiryDate) {
+        el.style.display = 'none';
+        el.setAttribute('aria-hidden', 'true');
+      }
+    });
+  })();
+
   // ── Theme Toggle Button ──
   var themeBtn = document.getElementById('themeToggle');
   if (themeBtn) {

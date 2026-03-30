@@ -58,6 +58,7 @@ PROTECTED_BRAND_NAMES = [
     "WELCOME",  # promo code
     "Cash Carnival", "Winter Games Festival",
     "Big Bang Sunday", "Bonus Bonanza",
+    "Sherlock's Mystery Bounties", "Mystery Bounty", "Instant Cash",
     "Texas Hold'em", "Omaha", "PLO", "PLO6",
     "NL25+", "NLH",
 ]
