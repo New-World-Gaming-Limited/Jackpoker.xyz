@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://jackpoker.xyz/index.html</loc>
+    <loc>https://jackpoker.xyz/ms/index.html</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -20,7 +20,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.xyz/index.html"/>
   </url>
   <url>
-    <loc>https://jackpoker.xyz/games.html</loc>
+    <loc>https://jackpoker.xyz/ms/games.html</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -39,7 +39,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.xyz/games.html"/>
   </url>
   <url>
-    <loc>https://jackpoker.xyz/tournaments.html</loc>
+    <loc>https://jackpoker.xyz/ms/tournaments.html</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -58,7 +58,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.xyz/tournaments.html"/>
   </url>
   <url>
-    <loc>https://jackpoker.xyz/bonuses.html</loc>
+    <loc>https://jackpoker.xyz/ms/bonuses.html</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -77,7 +77,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.xyz/bonuses.html"/>
   </url>
   <url>
-    <loc>https://jackpoker.xyz/promo-code.html</loc>
+    <loc>https://jackpoker.xyz/ms/promo-code.html</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
@@ -96,7 +96,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.xyz/promo-code.html"/>
   </url>
   <url>
-    <loc>https://jackpoker.xyz/news.html</loc>
+    <loc>https://jackpoker.xyz/ms/news.html</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -115,7 +115,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.xyz/news.html"/>
   </url>
   <url>
-    <loc>https://jackpoker.xyz/terms.html</loc>
+    <loc>https://jackpoker.xyz/ms/terms.html</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -134,7 +134,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.xyz/terms.html"/>
   </url>
   <url>
-    <loc>https://jackpoker.xyz/news/big-bang-sunday-guarantee-increased-to-45k-largest-in-jackpo.html</loc>
+    <loc>https://jackpoker.xyz/ms/news/big-bang-sunday-guarantee-increased-to-45k-largest-in-jackpo.html</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -153,7 +153,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.xyz/news/big-bang-sunday-guarantee-increased-to-45k-largest-in-jackpo.html"/>
   </url>
   <url>
-    <loc>https://jackpoker.xyz/news/bonus-bonanza-march-schedule-620-events-125m-in-guarantees.html</loc>
+    <loc>https://jackpoker.xyz/ms/news/bonus-bonanza-march-schedule-620-events-125m-in-guarantees.html</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -172,7 +172,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.xyz/news/bonus-bonanza-march-schedule-620-events-125m-in-guarantees.html"/>
   </url>
   <url>
-    <loc>https://jackpoker.xyz/news/crypto-deposits-now-available-in-sol-matic-and-ton.html</loc>
+    <loc>https://jackpoker.xyz/ms/news/crypto-deposits-now-available-in-sol-matic-and-ton.html</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -191,7 +191,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.xyz/news/crypto-deposits-now-available-in-sol-matic-and-ton.html"/>
   </url>
   <url>
-    <loc>https://jackpoker.xyz/news/easter-turbo-sprint.html</loc>
+    <loc>https://jackpoker.xyz/ms/news/easter-turbo-sprint.html</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -210,7 +210,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.xyz/news/easter-turbo-sprint.html"/>
   </url>
   <url>
-    <loc>https://jackpoker.xyz/news/instant-withdrawal-processing-now-available-for-vip-players.html</loc>
+    <loc>https://jackpoker.xyz/ms/news/instant-withdrawal-processing-now-available-for-vip-players.html</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -229,7 +229,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.xyz/news/instant-withdrawal-processing-now-available-for-vip-players.html"/>
   </url>
   <url>
-    <loc>https://jackpoker.xyz/news/jackpoker-mobile-app-30-launches-with-multi-table-support.html</loc>
+    <loc>https://jackpoker.xyz/ms/news/jackpoker-mobile-app-30-launches-with-multi-table-support.html</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -248,7 +248,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.xyz/news/jackpoker-mobile-app-30-launches-with-multi-table-support.html"/>
   </url>
   <url>
-    <loc>https://jackpoker.xyz/news/jackpoker-passes-500000-registered-players-milestone.html</loc>
+    <loc>https://jackpoker.xyz/ms/news/jackpoker-passes-500000-registered-players-milestone.html</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -267,7 +267,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.xyz/news/jackpoker-passes-500000-registered-players-milestone.html"/>
   </url>
   <url>
-    <loc>https://jackpoker.xyz/news/new-hand-replayer-and-advanced-statistics-dashboard-released.html</loc>
+    <loc>https://jackpoker.xyz/ms/news/new-hand-replayer-and-advanced-statistics-dashboard-released.html</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -286,7 +286,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.xyz/news/new-hand-replayer-and-advanced-statistics-dashboard-released.html"/>
   </url>
   <url>
-    <loc>https://jackpoker.xyz/news/sherlocks-mystery-bounties.html</loc>
+    <loc>https://jackpoker.xyz/ms/news/sherlocks-mystery-bounties.html</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
@@ -305,7 +305,7 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://jackpoker.xyz/news/sherlocks-mystery-bounties.html"/>
   </url>
   <url>
-    <loc>https://jackpoker.xyz/news/winter-games-festival-wraps-with-record-breaking-21m-in-payo.html</loc>
+    <loc>https://jackpoker.xyz/ms/news/winter-games-festival-wraps-with-record-breaking-21m-in-payo.html</loc>
     <lastmod>2026-03-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>

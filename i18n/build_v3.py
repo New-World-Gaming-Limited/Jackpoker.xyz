@@ -59,6 +59,9 @@ PROTECTED_BRAND_NAMES = [
     "Cash Carnival", "Winter Games Festival",
     "Big Bang Sunday", "Bonus Bonanza",
     "Sherlock's Mystery Bounties", "Mystery Bounty", "Instant Cash",
+    "Easter Turbo Sprint", "Turbo", "Hyper",
+    "Spin&Win", "Lootbox", "Freeroll Festival", "Bad Beat Jackpot",
+    "NLP", "NLB", "NL8", "PLO5", "PLO5B",
     "Texas Hold'em", "Omaha", "PLO", "PLO6",
     "NL25+", "NLH",
 ]
