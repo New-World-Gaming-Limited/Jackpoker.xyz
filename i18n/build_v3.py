@@ -46,6 +46,7 @@ LANGUAGES = {
     "ms": {"name": "Bahasa Melayu", "flag_code": "MY"},
     "ko": {"name": "한국어", "flag_code": "KR"},
     "ar": {"name": "العربية", "flag_code": "SA"},
+    "ja": {"name": "日本語", "flag_code": "JP"},
     "pl": {"name": "Polski", "flag_code": "PL"},
     "cs": {"name": "Čeština", "flag_code": "CZ"},
 }
@@ -397,6 +398,8 @@ def build():
                     html = html.replace('</head>', '<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">\n</head>', 1)
                 elif lang_code == "ko":
                     html = html.replace('</head>', '<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">\n</head>', 1)
+                elif lang_code == "ja":
+                    html = html.replace('</head>', '<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">\n</head>', 1)
                 elif lang_code == "pl" or lang_code == "cs":
                     # Polish and Czech use Latin Extended characters — Inter covers them, no extra font needed
                     pass

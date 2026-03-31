@@ -1,0 +1,1737 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JackPoker ボーナス＆プロモーション — 300% ウェルカムボーナス</title>
+  <meta name="description" content="JackPokerで$2,000までの300%デポジットマッチを受け取りましょう。さらに20%キャッシュ、Lootbox倍率、Welcome Quests＆レーキバック。コード：WELCOME。">
+  <meta property="og:title" content="JackPoker ボーナス＆プロモーション 2026 — 300%ウェルカムボーナス＋Lootbox">
+  <meta property="og:description" content="$2,000までの300%初回デポジットマッチをJackPokerで受け取りましょう。さらに20%インスタントキャッシュ、最大1,000%のLootbox倍率、">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://jackpoker.xyz/assets/images/hero-poker.jpg" />
+  <link rel="canonical" href="https://jackpoker.xyz/ja/bonuses.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/jackpoker-favicon.svg" />
+  <style>
+    /* ===== BONUSES PAGE — ADDITIONAL STYLES ===== */
+
+    /* Bonus Package Hero Card */
+    .welcome-package-card {
+      background: linear-gradient(145deg, #271D34, #1E1B27);
+      border: 1px solid rgba(246,186,70,0.25);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      position: relative;
+    }
+    .welcome-package-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #F6BA46, #893BF7, #FF3D00);
+    }
+    .welcome-package-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      align-items: stretch;
+    }
+    .welcome-package-content {
+      padding: 48px;
+    }
+    .welcome-package-image {
+      position: relative;
+      overflow: hidden;
+      border-radius: 0 var(--radius-xl) var(--radius-xl) 0;
+    }
+    .welcome-package-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      min-height: 400px;
+      display: block;
+    }
+    .welcome-package-image::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(27,18,40,0.7) 0%, transparent 50%);
+      z-index: 1;
+    }
+
+    /* Bonus Amount Display */
+    .bonus-amount-display {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 8px;
+    }
+    .bonus-amount-number {
+      font-family: var(--font-display);
+      font-size: 3.5rem;
+      font-weight: 900;
+      background: var(--gradient-gold-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+    }
+    .bonus-amount-label {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-muted);
+    }
+
+    /* Step Process */
+    .step-process {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      margin: 24px 0;
+    }
+    .step-process-item {
+      display: flex;
+      gap: 16px;
+      position: relative;
+      padding-bottom: 24px;
+    }
+    .step-process-item:last-child { padding-bottom: 0; }
+    .step-process-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 15px;
+      top: 32px;
+      bottom: 0;
+      width: 2px;
+      background: var(--border-subtle);
+    }
+    .step-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--gradient-btn-primary);
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      z-index: 1;
+    }
+    .step-text h4 {
+      font-size: 0.95rem;
+      margin-bottom: 4px;
+      color: var(--text-white);
+    }
+    .step-text p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Lootbox Section */
+    .lootbox-visual {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      margin: 32px 0;
+    }
+    .lootbox-tier {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 16px 12px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+    .lootbox-tier:hover {
+      border-color: rgba(137,59,247,0.4);
+      transform: translateY(-4px);
+    }
+    .lootbox-tier .tier-icon {
+      font-size: 1.8rem;
+      margin-bottom: 8px;
+      display: block;
+    }
+    .lootbox-tier .tier-mult {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--gold-primary);
+      display: block;
+    }
+    .lootbox-tier .tier-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      display: block;
+      margin-top: 2px;
+    }
+    .lootbox-tier.jackpot {
+      border-color: rgba(246,186,70,0.4);
+      background: rgba(246,186,70,0.04);
+    }
+    .lootbox-tier.jackpot .tier-mult {
+      background: var(--gradient-gold-text);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Quest Cards */
+    .quest-card {
+      background: var(--gradient-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .quest-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-card-hover);
+    }
+    .quest-header {
+      padding: 28px 28px 20px;
+      position: relative;
+    }
+    .quest-header.silver { background: linear-gradient(135deg, rgba(168,168,168,0.08), rgba(168,168,168,0.02)); border-bottom: 1px solid rgba(168,168,168,0.15); }
+    .quest-header.gold { background: linear-gradient(135deg, rgba(246,186,70,0.10), rgba(246,186,70,0.02)); border-bottom: 1px solid rgba(246,186,70,0.2); }
+    .quest-header.supernova { background: linear-gradient(135deg, rgba(137,59,247,0.12), rgba(255,61,0,0.04)); border-bottom: 1px solid rgba(137,59,247,0.25); }
+    .quest-tier-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 100px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+    }
+    .quest-tier-badge.silver { background: rgba(168,168,168,0.12); color: #C0C0C0; }
+    .quest-tier-badge.gold { background: rgba(246,186,70,0.12); color: var(--gold-primary); }
+    .quest-tier-badge.supernova { background: rgba(137,59,247,0.15); color: var(--purple-primary); }
+    .quest-prize {
+      font-family: var(--font-display);
+      font-size: 1.8rem;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .quest-prize.silver { color: #C0C0C0; }
+    .quest-prize.gold { color: var(--gold-primary); }
+    .quest-prize.supernova {
+      background: linear-gradient(135deg, #893BF7, #FF3D00);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .quest-body {
+      padding: 20px 28px 28px;
+    }
+    .quest-tasks {
+      list-style: none;
+      margin: 16px 0 0;
+    }
+    .quest-tasks li {
+      padding: 8px 0;
+      padding-left: 22px;
+      position: relative;
+      font-size: 0.88rem;
+      color: var(--text-body);
+      border-bottom: 1px solid var(--border-subtle);
+      line-height: 1.5;
+    }
+    .quest-tasks li:last-child { border-bottom: none; }
+    .quest-tasks li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: var(--purple-primary);
+      font-size: 0.75rem;
+      top: 10px;
+    }
+    .quest-tasks li .task-reward {
+      display: block;
+      font-size: 0.78rem;
+      color: var(--gold-primary);
+      font-weight: 600;
+      margin-top: 2px;
+    }
+
+    /* VIP Tiers Table */
+    .vip-tiers {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin: 32px 0;
+    }
+    .vip-tier-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 20px 16px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .vip-tier-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(137,59,247,0.3);
+    }
+    .vip-tier-card.featured {
+      border-color: rgba(246,186,70,0.4);
+      background: rgba(246,186,70,0.03);
+    }
+    .vip-tier-card.featured::before {
+      content: 'ELITE';
+      position: absolute;
+      top: 10px; right: -18px;
+      background: var(--gradient-btn-gold);
+      color: #000000;
+      font-size: 0.6rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      padding: 3px 24px;
+      transform: rotate(45deg);
+    }
+    .vip-tier-icon { font-size: 1.8rem; margin-bottom: 10px; display: block; }
+    .vip-tier-name {
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-white);
+      margin-bottom: 8px;
+    }
+    .vip-tier-rakeback {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--gold-primary);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .vip-tier-sub {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    /* Crypto Currency Pills */
+    .crypto-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 24px 0;
+    }
+    .crypto-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-body);
+      transition: all 0.2s ease;
+    }
+    .crypto-pill:hover {
+      border-color: var(--gold-primary);
+      color: var(--gold-primary);
+    }
+    .crypto-pill .crypto-symbol {
+      font-size: 1rem;
+    }
+
+    /* Cash Carnival Highlight */
+    .carnival-banner {
+      background: linear-gradient(135deg, rgba(255,61,0,0.08), rgba(246,186,70,0.06));
+      border: 1px solid rgba(255,61,0,0.3);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+    }
+    .carnival-banner::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #FF3D00, #F6BA46, #FF3D00);
+    }
+    .carnival-banner .live-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 16px;
+      background: rgba(255,61,0,0.15);
+      border: 1px solid rgba(255,61,0,0.4);
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #FF3D00;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 20px;
+    }
+    .carnival-banner .live-dot {
+      width: 6px;
+      height: 6px;
+      background: #FF3D00;
+      border-radius: 50%;
+      animation: pulse 1.5s ease infinite;
+    }
+    .carnival-prize {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      font-weight: 900;
+      background: linear-gradient(135deg, #FF3D00, #F6BA46);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .carnival-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 40px;
+    }
+
+    /* Promo Code Section */
+    .promo-code-section {
+      text-align: center;
+      padding: 64px 0;
+    }
+    .promo-code-large {
+      display: inline-flex;
+      align-items: stretch;
+      gap: 0;
+      background: var(--bg-card);
+      border: 2px solid rgba(246,186,70,0.5);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      margin: 32px auto;
+      box-shadow: 0 0 40px rgba(246,186,70,0.08);
+    }
+    .promo-code-large .code-text {
+      padding: 18px 36px;
+      font-family: 'Courier New', monospace;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--gold-primary);
+      letter-spacing: 0.2em;
+    }
+    .promo-code-large .code-copy-btn {
+      padding: 18px 28px;
+      background: var(--gradient-btn-gold);
+      color: #000000;
+      font-weight: 700;
+      font-size: 0.9rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      white-space: nowrap;
+      font-family: var(--font-body);
+    }
+    .promo-code-large .code-copy-btn:hover { opacity: 0.9; }
+
+    /* Terms box */
+    .terms-box {
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 20px 24px;
+      margin-top: 24px;
+    }
+    .terms-box h4 {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+    .terms-box ul {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 24px;
+    }
+    .terms-box ul li {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      padding-left: 14px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .terms-box ul li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--text-faint);
+    }
+
+    /* Info Row */
+    .info-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin: 20px 0;
+    }
+    .info-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      background: rgba(137,59,247,0.08);
+      border: 1px solid rgba(137,59,247,0.18);
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      color: var(--text-body);
+    }
+    .info-chip .chip-label {
+      color: var(--text-muted);
+      font-size: 0.78rem;
+    }
+    .info-chip strong { color: var(--text-white); }
+
+    /* Divider */
+    .section-divider {
+      border: none;
+      height: 1px;
+      background: var(--border-subtle);
+      margin: 0;
+    }
+
+    /* Tournament Bonus Cards */
+    .tourney-bonus-card {
+      background: var(--gradient-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 24px;
+      align-items: start;
+      transition: all 0.3s ease;
+    }
+    .tourney-bonus-card:hover {
+      border-color: rgba(137,59,247,0.3);
+      box-shadow: var(--shadow-card-hover);
+    }
+    .tourney-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(137,59,247,0.1);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      flex-shrink: 0;
+    }
+
+    /* Final CTA Section */
+    .final-cta {
+      background: linear-gradient(135deg, #000000 0%, #1A1226 50%, #000000 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 96px 0;
+      text-align: center;
+    }
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(137,59,247,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .final-cta .cta-inner {
+      position: relative;
+      z-index: 1;
+    }
+    .final-cta h2 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 16px;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 1024px) {
+      .welcome-package-inner { grid-template-columns: 1fr; }
+      .welcome-package-image { display: none; }
+      .vip-tiers { grid-template-columns: repeat(2, 1fr); }
+      .lootbox-visual { grid-template-columns: repeat(3, 1fr); }
+      .carnival-inner { grid-template-columns: 1fr; }
+      .terms-box ul { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .welcome-package-content { padding: 28px; }
+      .bonus-amount-number { font-size: 2.5rem; }
+      .vip-tiers { grid-template-columns: repeat(2, 1fr); }
+      .lootbox-visual { grid-template-columns: repeat(2, 1fr); }
+      .carnival-prize { font-size: 2rem; }
+      .promo-code-large .code-text { padding: 14px 20px; font-size: 1.2rem; }
+      .promo-code-large .code-copy-btn { padding: 14px 18px; font-size: 0.8rem; }
+    }
+    @media (max-width: 480px) {
+      .vip-tiers { grid-template-columns: 1fr 1fr; }
+      .lootbox-visual { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+<script>
+    (function(){var t=null;try{var m=document.cookie.match(/jp-theme=([^;]+)/);if(m)t=m[1]}catch(e){}document.documentElement.setAttribute("data-theme",t||"dark")})();
+  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "JackPoker",
+  "url": "https://jackpoker.xyz",
+  "logo": "https://jackpoker.xyz/assets/images/jackpoker-logo-official.png",
+  "description": "Modern online poker platform offering Texas Hold'em, PLO, Spin&Win tournaments, and more. Licensed and certified.",
+  "foundingDate": "2021",
+  "sameAs": [
+    "https://jack-poker.com",
+    "https://t.me/jackpokerclub"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "url": "https://jack-poker.com/support",
+    "availableLanguage": [
+      "English",
+      "Russian",
+      "Portuguese",
+      "Spanish"
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://jackpoker.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Bonuses & Promos",
+      "item": "https://jackpoker.xyz/bonuses.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Offer",
+  "name": "JackPoker Welcome Bonus",
+  "description": "300% deposit bonus up to $2,000 plus 20% instant cashback, Lootbox rewards, and Quest challenges",
+  "url": "https://jackpoker.xyz/bonuses.html",
+  "priceCurrency": "USD",
+  "price": "0",
+  "category": "Welcome Bonus",
+  "seller": {
+    "@type": "Organization",
+    "name": "JackPoker"
+  }
+}
+</script>
+<link rel="alternate" hreflang="en" href="https://jackpoker.xyz/bonuses.html" />
+<link rel="alternate" hreflang="ru" href="https://jackpoker.xyz/ru/bonuses.html" />
+<link rel="alternate" hreflang="es" href="https://jackpoker.xyz/es/bonuses.html" />
+<link rel="alternate" hreflang="it" href="https://jackpoker.xyz/it/bonuses.html" />
+<link rel="alternate" hreflang="pt" href="https://jackpoker.xyz/pt/bonuses.html" />
+<link rel="alternate" hreflang="vi" href="https://jackpoker.xyz/vi/bonuses.html" />
+<link rel="alternate" hreflang="th" href="https://jackpoker.xyz/th/bonuses.html" />
+<link rel="alternate" hreflang="ms" href="https://jackpoker.xyz/ms/bonuses.html" />
+<link rel="alternate" hreflang="ko" href="https://jackpoker.xyz/ko/bonuses.html" />
+<link rel="alternate" hreflang="ar" href="https://jackpoker.xyz/ar/bonuses.html" />
+<link rel="alternate" hreflang="ja" href="https://jackpoker.xyz/ja/bonuses.html" />
+<link rel="alternate" hreflang="pl" href="https://jackpoker.xyz/pl/bonuses.html" />
+<link rel="alternate" hreflang="cs" href="https://jackpoker.xyz/cs/bonuses.html" />
+<link rel="alternate" hreflang="x-default" href="https://jackpoker.xyz/bonuses.html" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="JackPoker Home">
+        <svg class="logo-icon" width="189" height="47" viewBox="0 0 189 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="JackPoker">
+<path d="M25.4001 1C24.0001 1 22.8001 2.2 22.8001 3.6C22.8001 5.1 23.8343 5.9 25.3001 5.9H28.7001C28.7001 5.9 31.3001 5.9 31.3001 8.3C31.3001 10.7 28.7001 10.7 28.7001 10.7H8.30008C6.90008 10.7 5.70008 11.9 5.70008 13.3C5.70008 14.7 6.90008 15.9 8.30008 15.9H22.5001C22.5001 15.9 25.1001 15.9 25.1001 18.3C25.1001 20.7 22.5001 20.7 22.5001 20.7H11.4001C10.0001 20.7 8.80008 21.9 8.80008 23.3C8.80008 24.7 10.0001 25.9 11.4001 25.9H22.6001C22.6001 25.9 25.2001 25.9 25.2001 28.3C25.2001 30.7 22.6001 30.7 22.6001 30.7H21.8001C20.4001 30.7 19.2001 31.9 19.2001 33.3C19.2001 34.7 20.4001 35.9 21.8001 35.9H28.8001C28.8001 35.9 31.4001 35.9 31.4001 38.3C31.4001 40.7 28.8001 40.7 28.8001 40.7H14.0001C12.6001 40.7 11.4001 41.9 11.4001 43.3C11.4001 44.7 12.6001 45.9 14.0001 45.9H34.3001C36.5001 45.9 38.4001 44.8 39.5001 43C41.1501 40.25 42.7751 37.4999 44.4001 34.7499C46.0251 31.9999 47.6501 29.25 49.3001 26.5C50.4001 24.6 50.4001 22.3 49.3001 20.4C47.6501 17.6501 46.0252 14.9001 44.4002 12.1502C42.7752 9.4002 41.1501 6.65001 39.5001 3.9C38.4001 2.1 36.4001 1 34.3001 1H25.4001Z" fill="url(#jpLogoGrad)"/>
+<path d="M11.3999 3.6C11.3999 2.2 12.5999 1 13.9999 1H17.5999C18.9999 1 20.1999 2.2 20.1999 3.6C20.1999 5 18.9999 6.2 17.5999 6.2H13.9999C12.5999 6.2 11.3999 5 11.3999 3.6Z" fill="url(#jpLogoGrad)"/>
+<path d="M0 23.5001C0 22.1001 1.2 20.9001 2.6 20.9001H3.6C5 20.9001 6.2 22.1001 6.2 23.5001C6.2 24.9001 5 26.1001 3.6 26.1001H2.6C1.2 26.1001 0 24.9001 0 23.5001Z" fill="url(#jpLogoGrad)"/>
+<path d="M8.30008 30.8001C6.90008 30.8001 5.70008 32.0001 5.70008 33.4001C5.70008 34.9001 6.90008 36.1001 8.30008 36.0001H14.0001C15.4001 36.0001 16.6001 34.8001 16.6001 33.4001C16.6001 32.0001 15.4001 30.8001 14.0001 30.8001H8.30008Z" fill="url(#jpLogoGrad)"/>
+<path d="M69.7955 27.3088C69.7955 28.8312 69.6204 30.0793 69.2704 31.0533C68.9203 32.0273 68.3261 32.7598 67.4876 33.2509C66.6572 33.7502 65.5257 33.9998 64.0929 33.9998C63.7591 33.9998 63.3887 33.9712 62.9817 33.9139C62.5747 33.8648 62.3142 33.832 62.2002 33.8157L62.5177 31.2252H63.7144C65.1797 31.2252 65.9164 30.4231 65.9246 28.8189V15.265L64.0441 14.5039V12.3676L71.676 12.2449V14.5039L69.7955 15.265V27.3088Z" fill="white"/>
+<path d="M81.4937 28.3401C81.4937 28.3728 81.2779 28.557 80.8465 28.8926C80.415 29.2281 79.8981 29.5351 79.2957 29.8133C78.6933 30.0834 78.0746 30.2185 77.4396 30.2185C76.2185 30.2185 75.2619 29.8788 74.57 29.1995C73.8862 28.512 73.5443 27.538 73.5443 26.2775C73.5443 24.837 74.0571 23.7853 75.0829 23.1223C76.1086 22.4594 77.6024 22.1279 79.5643 22.1279H81.3227V20.7406C81.3227 19.5129 80.6796 18.9031 79.3934 18.9113C79.0107 18.9113 78.6566 18.94 78.331 18.9973C78.0054 19.0545 77.7449 19.1159 77.5495 19.1814C77.3622 19.2387 77.2442 19.2755 77.1954 19.2919L76.8168 20.8756H74.57L74.399 17.1557C74.5456 17.1066 74.9038 17.0002 75.4736 16.8365C76.0516 16.6728 76.7395 16.5173 77.5373 16.37C78.3432 16.2226 79.1044 16.149 79.8207 16.149C81.107 16.149 82.1286 16.3127 82.8857 16.6401C83.6428 16.9593 84.1964 17.4831 84.5464 18.2115C84.8965 18.9318 85.0715 19.9017 85.0715 21.1212V27.3334L86.952 27.7876V29.8011L81.9455 29.9729L81.4937 28.3401ZM77.1709 25.897C77.1709 26.388 77.2971 26.7645 77.5495 27.0264C77.81 27.2802 78.1763 27.407 78.6485 27.407C79.0474 27.407 79.4422 27.3006 79.833 27.0878C80.2237 26.8668 80.5534 26.6418 80.822 26.4126C81.0907 26.1752 81.2576 26.0197 81.3227 25.9461V24.2641H79.894C78.9253 24.2641 78.2292 24.3951 77.8059 24.657C77.3826 24.9189 77.1709 25.3322 77.1709 25.897Z" fill="white"/>
+<path d="M100.311 28.0823C99.7492 28.5897 99.0124 29.0726 98.1007 29.531C97.1971 29.9893 96.1428 30.2185 94.938 30.2185C92.8866 30.2185 91.291 29.6169 90.1513 28.4137C89.0116 27.2106 88.4417 25.5327 88.4417 23.3802C88.4417 21.1376 89.0442 19.3737 90.249 18.0888C91.4619 16.7956 93.1511 16.149 95.3166 16.149C95.9515 16.149 96.5906 16.2145 97.2337 16.3454C97.885 16.4764 98.4263 16.6114 98.8578 16.7506C99.2974 16.8815 99.5742 16.9715 99.6881 17.0206L99.566 21.1457H97.3192L96.9651 19.3656C96.8836 19.3492 96.6801 19.3124 96.3545 19.2551C96.0289 19.1896 95.6585 19.1569 95.2433 19.1569C94.3234 19.1569 93.6029 19.472 93.0819 20.1022C92.5691 20.7324 92.3126 21.6573 92.3126 22.8768C92.3126 24.2682 92.5731 25.3404 93.0942 26.0934C93.6233 26.8382 94.4048 27.2106 95.4387 27.2106C96.0899 27.2106 96.6598 27.1124 97.1482 26.916C97.6448 26.7113 98.06 26.5026 98.3937 26.2898C98.7275 26.077 98.9514 25.9379 99.0654 25.8724L100.311 28.0823Z" fill="white"/>
+<path d="M108.602 21.4527L110.3 18.8868L109.201 18.5307V16.5173L115.66 16.3945V18.5307L113.902 18.8622L111.582 22.1525L114.378 27.3579L116.283 27.9595V29.9729H111.655L108.553 23.8344H106.954V27.3334L108.334 27.9595V29.9729H101.202V27.9595L103.205 27.3334V13.2025L101.202 12.6991V10.6857L106.954 10.4893V21.4527H108.602Z" fill="white"/>
+<path d="M117.406 27.8367L119.275 27.0756V15.265L117.406 14.5039V12.3676L123.158 12.2449H125.527C127.423 12.2449 128.909 12.7155 129.984 13.6567C131.066 14.598 131.608 15.8871 131.608 17.524C131.608 19.6029 130.993 21.1703 129.764 22.2261C128.543 23.2819 126.78 23.8099 124.477 23.8099H123.158V27.0756L125.026 27.8367V29.9729H117.406V27.8367ZM124.477 20.8756C125.527 20.8756 126.333 20.6342 126.894 20.1513C127.456 19.6602 127.737 18.9522 127.737 18.0274C127.737 17.1925 127.513 16.5255 127.065 16.0262C126.626 15.5188 125.991 15.265 125.16 15.265H123.158V20.8756H124.477Z" fill="white"/>
+<path d="M139.74 16.149C141.751 16.149 143.302 16.7383 144.393 17.9169C145.492 19.0955 146.041 20.7692 146.041 22.9382C146.041 24.4278 145.764 25.721 145.211 26.8177C144.665 27.9145 143.892 28.7575 142.891 29.3468C141.89 29.9279 140.713 30.2185 139.362 30.2185C135.112 30.2185 132.988 27.9145 132.988 23.3065C132.988 21.8169 133.264 20.536 133.818 19.4638C134.38 18.3916 135.169 17.5731 136.187 17.0084C137.205 16.4354 138.389 16.149 139.74 16.149ZM139.606 19.1569C138.662 19.1569 137.966 19.4638 137.518 20.0776C137.078 20.6915 136.859 21.7269 136.859 23.1837C136.859 24.5751 137.066 25.5941 137.481 26.2407C137.905 26.8873 138.572 27.2106 139.484 27.2106C140.404 27.2106 141.08 26.8873 141.511 26.2407C141.942 25.5941 142.158 24.5342 142.158 23.061C142.158 21.7514 141.955 20.7733 141.548 20.1267C141.141 19.4802 140.493 19.1569 139.606 19.1569Z" fill="white"/>
+<path d="M154.809 21.4527L156.506 18.8868L155.407 18.5307V16.5173L161.867 16.3945V18.5307L160.108 18.8622L157.788 22.1525L160.585 27.3579L162.49 27.9595V29.9729H157.862L154.76 23.8344H153.16V27.3334L154.54 27.9595V29.9729H147.409V27.9595L149.412 27.3334V13.2025L147.409 12.6991V10.6857L153.16 10.4893V21.4527H154.809Z" fill="white"/>
+<path d="M167.508 24.0186C167.573 25.0253 167.875 25.811 168.412 26.3758C168.957 26.9323 169.666 27.2106 170.537 27.2106C171.155 27.2106 171.774 27.1247 172.393 26.9528C173.02 26.7727 173.536 26.5927 173.944 26.4126C174.359 26.2243 174.623 26.0934 174.737 26.0197L175.812 28.1068C175.812 28.1396 175.519 28.3483 174.933 28.733C174.355 29.1095 173.642 29.4532 172.796 29.7642C171.957 30.0671 171.062 30.2185 170.109 30.2185C167.993 30.2185 166.381 29.6292 165.274 28.4506C164.167 27.272 163.613 25.6023 163.613 23.4415C163.613 21.9847 163.878 20.7079 164.407 19.6111C164.944 18.5062 165.713 17.655 166.715 17.0575C167.716 16.4518 168.904 16.149 170.28 16.149C172.112 16.149 173.516 16.6769 174.493 17.7327C175.47 18.7885 175.958 20.2291 175.958 22.0542C175.958 22.4553 175.938 22.8441 175.897 23.2206C175.857 23.5971 175.828 23.8344 175.812 23.9326L167.508 24.0186ZM170.036 19.1569C169.352 19.1569 168.795 19.3901 168.363 19.8566C167.932 20.315 167.663 20.9207 167.557 21.6737H172.087C172.087 20.9207 171.921 20.315 171.587 19.8566C171.253 19.3901 170.736 19.1569 170.036 19.1569Z" fill="white"/>
+<path d="M183.199 18.1256C183.199 18.0928 183.395 17.9005 183.786 17.5486C184.176 17.1966 184.628 16.8774 185.141 16.591C185.662 16.2963 186.175 16.149 186.68 16.149C187.079 16.149 187.453 16.1817 187.803 16.2472C188.153 16.3127 188.426 16.3822 188.621 16.4559C188.825 16.5296 188.951 16.5746 189 16.591L188.804 21.4281H186.558L186.179 19.2919C185.748 19.2919 185.328 19.3983 184.921 19.6111C184.522 19.8157 184.18 20.0449 183.896 20.2986C183.619 20.5442 183.48 20.6751 183.48 20.6915V27.3334L185.984 27.9595V29.9729H177.729V27.9595L179.732 27.3334V19.1569L177.729 18.5307V16.5173L182.98 16.3945L183.199 18.1256Z" fill="white"/>
+<defs>
+<linearGradient id="jpLogoGrad" x1="0" y1="33.44" x2="50.74" y2="33.44" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8032FF"/>
+<stop offset="1" stop-color="#FF3D00"/>
+</linearGradient>
+</defs>
+</svg>
+      </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">ホーム</a>
+      <a href="games.html">ゲーム</a>
+      <a href="bonuses.html" class="active">ボーナス</a>
+      <a href="tournaments.html">トーナメント</a>
+      <a href="news.html">ニュース</a>
+      <a href="promo-code.html">プロモコード</a>
+    </nav>
+    <a href="https://go.jack-full.com/c41f796e" class="header-cta header-cta-desktop">今すぐプレイ ♠</a>
+     <div class="lang-switcher">
+  <button class="lang-btn" aria-label="Change language" aria-expanded="false">
+    <span class="lang-flag">JP</span>
+    <span class="lang-label">日本語</span>
+    <svg class="lang-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  </button>
+  <div class="lang-dropdown" role="menu">
+    <a href="../bonuses.html" role="menuitem" hreflang="en"><span class="lang-flag">GB</span><span>English</span></a>
+    <a href="../ru/bonuses.html" role="menuitem" hreflang="ru"><span class="lang-flag">RU</span><span>Русский</span></a>
+    <a href="../es/bonuses.html" role="menuitem" hreflang="es"><span class="lang-flag">ES</span><span>Español</span></a>
+    <a href="../it/bonuses.html" role="menuitem" hreflang="it"><span class="lang-flag">IT</span><span>Italiano</span></a>
+    <a href="../pt/bonuses.html" role="menuitem" hreflang="pt"><span class="lang-flag">BR</span><span>Português</span></a>
+    <a href="../vi/bonuses.html" role="menuitem" hreflang="vi"><span class="lang-flag">VN</span><span>Tiếng Việt</span></a>
+    <a href="../th/bonuses.html" role="menuitem" hreflang="th"><span class="lang-flag">TH</span><span>ไทย</span></a>
+    <a href="../ms/bonuses.html" role="menuitem" hreflang="ms"><span class="lang-flag">MY</span><span>Bahasa Melayu</span></a>
+    <a href="../ko/bonuses.html" role="menuitem" hreflang="ko"><span class="lang-flag">KR</span><span>한국어</span></a>
+    <a href="../ar/bonuses.html" role="menuitem" hreflang="ar"><span class="lang-flag">SA</span><span>العربية</span></a>
+    <a href="bonuses.html" class="active" role="menuitem" hreflang="ja"><span class="lang-flag">JP</span><span>日本語</span></a>
+    <a href="../pl/bonuses.html" role="menuitem" hreflang="pl"><span class="lang-flag">PL</span><span>Polski</span></a>
+    <a href="../cs/bonuses.html" role="menuitem" hreflang="cs"><span class="lang-flag">CZ</span><span>Čeština</span></a>
+  </div>
+</div>
+        <button class="theme-toggle" aria-label="Toggle theme">
+       <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 1.78a1 1 0 011.415 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM18 9a1 1 0 110 2h-1a1 1 0 110-2h1zM3 9a1 1 0 110 2H2a1 1 0 110-2h1zm12.657 6.071l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 011.414-1.414zM5.757 4.929a1 1 0 010 1.414l-.707.707A1 1 0 013.636 5.636l.707-.707a1 1 0 011.414 0zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1z" fill="currentColor"/><circle cx="10" cy="10" r="3.5" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+       <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/></svg>
+     </button>
+  </div>
+</header>
+
+<!-- Breadcrumb Navigation -->
+<nav class="breadcrumb-nav" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">ホーム</span></a>
+        <meta itemprop="position" content="1" />
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span itemprop="name">ボーナス</span>
+        <meta itemprop="position" content="2" />
+      </li>
+    </ol>
+  </div>
+</nav>
+
+
+<!-- Page Hero with H1 -->
+<section style="padding: calc(var(--header-height) + 48px) 0 24px; background: linear-gradient(180deg, rgba(246,186,70,0.06) 0%, transparent 100%); position: relative; overflow: hidden;">
+  <div class="container">
+    <h1 style="font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 900; letter-spacing: -0.03em; margin-bottom: 12px;" data-i18n="bonuses_hero_title">JackPoker ボーナス＆プロモーション</h1>
+    <p style="color: var(--text-muted); font-size: 1.08rem; max-width: 640px; line-height: 1.7;" data-i18n="bonuses_hero_subtitle">300%ウェルカムボーナス、Lootbox報酬、レーキバックプログラム、独占特典でバンクロールを最大化しましょう</p>
+  </div>
+</section>
+
+<!-- ===== BONUS STATS BAR ===== -->
+<section class="section section-dark" style="padding:40px 0;">
+  <div class="container">
+    <div class="stats-bar">
+      <div class="stat-item">
+        <div class="stat-number">$2,000</div>
+        <div class="stat-desc">最大ウェルカムマッチ</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">20%</div>
+        <div class="stat-desc">ライフタイムプログラム</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">$200K+</div>
+        <div class="stat-desc">月間トーナメント</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number">$500K</div>
+        <div class="stat-desc">Cash Carnival 賞金プール</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== WELCOME BONUS PACKAGE ===== -->
+<section class="section" id="welcome-bonus">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">新規プレイヤー限定</span>
+      <h2>ウェルカムボーナス <span class="gold-text">パッケージ</span></h2>
+      <p>ウェルカムボーナスパッケージは、新規プレイヤーが参加時に最大限の恩恵を受けられるよう設計されています。</p>
+    </div>
+
+    <div class="welcome-package-card">
+      <div class="welcome-package-inner">
+        <div class="welcome-package-content">
+          <div style="margin-bottom:24px;">
+            <div class="bonus-amount-display">
+              <span class="bonus-amount-number">300%</span>
+              <span class="bonus-amount-label">初回デポジットマッチ</span>
+            </div>
+            <p style="color:var(--text-muted); margin-bottom:0; font-size:0.95rem;">最大 <strong style="color:var(--gold-primary);">$2,000</strong> ボーナス資金として——$100入金で即$400でプレイ可能</p>
+          </div>
+
+          <p>フラッグシップのウェルカムオファーは、初回デポジットに対して300%のマッチを提供します。つまり、入金すると</p>
+
+          <p>ボーナス資金はテーブルで獲得したレーキに応じて段階的に解放されます。1ドルのレーキを獲得するごとに</p>
+
+          <div class="highlight-box gold" style="margin:24px 0;">
+            <h4>例：300%マッチの仕組み</h4>
+            <p>$500入金 → $1,500のボーナス資金を受取 → 合計$2,000でプレイ可能。$1,500のボーナスはレーキ獲得に応じて解放されます</p>
+          </div>
+
+          <!-- Step Process -->
+          <h3 style="margin-bottom:16px; font-size:1.1rem;">ウェルカムボーナスの受け取り方</h3>
+          <div class="step-process">
+            <div class="step-process-item">
+              <div class="step-num">1</div>
+              <div class="step-text">
+                <h4>アカウントの登録</h4>
+                <p>「今すぐプレイ」をクリックし、スピーディな登録を完了してください。全工程は2分以内で完了します——</p>
+              </div>
+            </div>
+            <div class="step-process-item">
+              <div class="step-num">2</div>
+              <div class="step-text">
+                <h4>プロモコード WELCOME を入力</h4>
+                <p>登録時またはアカウントのプロモーションセクションで、コードを入力してください <strong style="color:var(--gold-primary);">WELCOME</strong> ボーナスパッケージ全体を有効化するために。</p>
+              </div>
+            </div>
+            <div class="step-process-item">
+              <div class="step-num">3</div>
+              <div class="step-text">
+                <h4>初回デポジットを行う</h4>
+                <p>カード、電子ウォレット、または暗号資産など対応する方法をお使いください。最低入金額は$20です。</p>
+              </div>
+            </div>
+            <div class="step-process-item">
+              <div class="step-num">4</div>
+              <div class="step-text">
+                <h4>Lootboxを開く</h4>
+                <p>入金が確認されると、Welcome Lootboxが届きます。開封してご自身のボーナス倍率をご確認ください</p>
+              </div>
+            </div>
+            <div class="step-process-item">
+              <div class="step-num">5</div>
+              <div class="step-text">
+                <h4>プレイして獲得</h4>
+                <p>キャッシュゲームまたはトーナメントにご参加ください。レーキを獲得するとボーナスが解放され、Welcome Questsも進行します</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Terms box -->
+          <div class="terms-box">
+            <h4>ボーナス利用規約＆ウェージャー要件</h4>
+            <ul>
+              <li>最低デポジット：$20</li>
+              <li>最大ボーナス：$2,000</li>
+              <li>ウェージャー：ボーナス額の6倍をレーキで</li>
+              <li>ボーナス有効期限：入金から60日</li>
+              <li>プロモコード：WELCOME</li>
+              <li>1人/世帯につき1ボーナス</li>
+              <li>対象ゲーム：全ポーカーテーブル &amp; トーナメント</li>
+              <li>暗号資産での入金は優遇レートが適用される場合があります</li>
+            </ul>
+          </div>
+
+          <div style="margin-top:28px; display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="https://go.jack-full.com/c41f796e" class="btn btn-primary btn-lg">300%ボーナスを受け取る ♠</a>
+          </div>
+        </div>
+        <div class="welcome-package-image">
+          <img src="../assets/images/bonus-chest.jpg" alt="JackPoker Welcome Bonus Chest">
+        </div>
+      </div>
+    </div>
+
+    <!-- 20% Instant Cash Feature -->
+    <div style="margin-top:40px;" class="grid-2">
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>20% Instant Cash クレジット</h3>
+        <p style="color:var(--text-body); margin-bottom:12px;">300%マッチに加え、初回入金額の20%を実際に使えるキャッシュとして、入金確認後すぐにクレジットします。このキャッシュは即座にメイン残高に反映されます——ウェージャー要件なし、待機時間なし。$100入金すれば、Lootboxを開封する前でも1ハンドプレイする前でも、すぐに$20がプレイ可能残高に追加されます。</p>
+        <p>20%のインスタントキャッシュはアカウント残高への恒久的な追加です。どのテーブルでも、どのトーナメントでも使用でき、または当社の標準出金規約に従って出金することもできます。JackPokerをお選びいただいたことへの感謝の証——メインのウェルカムボーナスに加えた、本物の即時報酬です。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎁</div>
+        <h3>プロモコード：WELCOME</h3>
+        <p style="color:var(--text-body); margin-bottom:12px;">プロモコード WELCOME は、JackPokerの新規プレイヤー体験を完全に有効化します。コードなしでは標準のデポジットマッチのみとなります。コードを使用することで、300%マッチ、20%インスタントキャッシュ、Welcome Lootbox、そしてWelcome Questsプログラム全3ティアへのアクセスが解放されます。</p>
+        <p>このコードは無期限で有効で、ご利用の決済方法に関わらず初回入金に適用されます。登録時または初回入金前にアカウントのプロモーションセクションで入力するだけです。</p>
+        <div class="promo-code-box" style="margin-top:16px;">
+          <div class="promo-code-value">WELCOME</div>
+          <button class="promo-code-copy btn-copy" onclick="copyPromoCode()">コードをコピー</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== LOOTBOX BONUS SYSTEM ===== -->
+<section class="section section-dark" id="lootbox">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">独自のボーナス特典</span>
+      <h2>JackPokerの <span class="gold-text">Lootbox システム</span></h2>
+      <p>多くのポーカーサイトは一律のボーナス率を提供するだけです。私たちはさらに先へ進みます。Lootboxシステムは</p>
+    </div>
+
+    <div class="split">
+      <div class="split-content">
+        <h3 style="margin-bottom:16px;">Lootboxの仕組み</h3>
+        <p>Lootboxを獲得する資格を得たとき——対象入金、マイルストーン達成、または特別期間中——</p>
+
+        <p>倍率は100%（通常ボーナスと同等）から最大1,000%——ベースボーナス額の10倍——まで幅があります。$100入金で1,000%倍率のWelcome Lootboxを開封すると、インスタントキャッシュクレジットに加えて$3,000のボーナス資金が得られます。結果は認定乱数生成器によって決定され、独立テスト機関による公正性審査が実施されています。</p>
+
+        <p>Lootboxシステムは透明性を持って運営されています。各Lootboxティアには公開された確率範囲があり、</p>
+
+        <p>ウェルカムオファー以降も、JackPokerの旅を通じてLootboxが登場します。高ボリュームのプレイヤーは</p>
+
+        <div class="highlight-box" style="margin-top:24px;">
+          <h4>独立ラボによる公正性認定</h4>
+          <p>すべてのLootbox結果は、iTech Labs および BMM TestLabs によってテスト・認定された認定RNGで生成されます</p>
+        </div>
+      </div>
+      <div>
+        <h3 style="margin-bottom:20px; text-align:center;">Lootbox 倍率ティア</h3>
+        <div class="lootbox-visual">
+          <div class="lootbox-tier">
+            <span class="tier-icon">📦</span>
+            <span class="tier-mult">100%</span>
+            <span class="tier-label">ブロンズ</span>
+          </div>
+          <div class="lootbox-tier">
+            <span class="tier-icon">📦</span>
+            <span class="tier-mult">200%</span>
+            <span class="tier-label">シルバー</span>
+          </div>
+          <div class="lootbox-tier">
+            <span class="tier-icon">💎</span>
+            <span class="tier-mult">400%</span>
+            <span class="tier-label">ゴールド</span>
+          </div>
+          <div class="lootbox-tier">
+            <span class="tier-icon">💎</span>
+            <span class="tier-mult">700%</span>
+            <span class="tier-label">プラチナ</span>
+          </div>
+          <div class="lootbox-tier jackpot">
+            <span class="tier-icon">👑</span>
+            <span class="tier-mult">1,000%</span>
+            <span class="tier-label">ジャックポット</span>
+          </div>
+        </div>
+
+        <div class="card card-sm" style="margin-top:20px;">
+          <h4 style="margin-bottom:12px;">Lootboxを受け取るタイミング</h4>
+          <ul class="quest-tasks" style="list-style:none;">
+            <li style="padding:8px 0 8px 22px; position:relative; font-size:0.88rem; border-bottom:1px solid var(--border-subtle);"><span style="position:absolute;left:0;color:var(--gold-primary);">✦</span> 最初の対象入金（Welcome Lootbox）</li>
+            <li style="padding:8px 0 8px 22px; position:relative; font-size:0.88rem; border-bottom:1px solid var(--border-subtle);"><span style="position:absolute;left:0;color:var(--gold-primary);">✦</span> 対象閾値を超えた後続の各入金</li>
+            <li style="padding:8px 0 8px 22px; position:relative; font-size:0.88rem; border-bottom:1px solid var(--border-subtle);"><span style="position:absolute;left:0;color:var(--gold-primary);">✦</span> レーキマイルストーン達成時（生涯レーキ100、250、500、1,000）</li>
+            <li style="padding:8px 0 8px 22px; position:relative; font-size:0.88rem; border-bottom:1px solid var(--border-subtle);"><span style="position:absolute;left:0;color:var(--gold-primary);">✦</span> Welcome Questティア完了時（Silver、Gold、Supernova）</li>
+            <li style="padding:8px 0 8px 22px; position:relative; font-size:0.88rem; border-bottom:1px solid var(--border-subtle);"><span style="position:absolute;left:0;color:var(--gold-primary);">✦</span> シーズンイベントおよび特別プロモーション期間</li>
+            <li style="padding:8px 0 8px 22px; position:relative; font-size:0.88rem;"><span style="position:absolute;left:0;color:var(--gold-primary);">✦</span> VIPプログラムのティアアップグレードおよび記念日</li>
+          </ul>
+        </div>
+
+        <div class="card card-sm" style="margin-top:16px; border-color:rgba(246,186,70,0.2);">
+          <h4 style="color:var(--gold-primary); margin-bottom:8px;">重要な理由</h4>
+          <p style="color:var(--text-muted); font-size:0.88rem; margin:0; line-height:1.7;">従来のポーカーボーナスは固定的で予測可能です。私たちのLootboxシステムは本物のスリルを加えます</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== WELCOME QUESTS ===== -->
+<section class="section section-accent" id="welcome-quests">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">新規プレイヤーの成長</span>
+      <h2>Welcome <span class="gold-text">クエスト</span></h2>
+      <p>Welcome Questsは新規プレイヤー向けの体系的な成長システムです。3つの段階的なティアにわたって</p>
+    </div>
+
+    <div class="grid-3" style="margin-bottom:48px;">
+
+      <!-- Silver Quest -->
+      <div class="quest-card">
+        <div class="quest-header silver">
+          <span class="quest-tier-badge silver">⚔ Silver Quest</span>
+          <div class="quest-prize silver">$50</div>
+          <p style="color:var(--text-muted); font-size:0.85rem; margin:0;">ボーナスクレジット＋フリーロールチケット</p>
+        </div>
+        <div class="quest-body">
+          <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:12px;">Silver QuestはWelcome Questsシステムへの入口です。これらのチャレンジでJackPokerで利用できる様々なゲーム種類が紹介され、最初のセッションを通じた一貫したプレイが報われます。</p>
+          <ul class="quest-tasks">
+            <li>
+              No Limit Hold'emを50ハンドプレイ
+              <span class="task-reward">報酬：$5ボーナスクレジット</span>
+            </li>
+            <li>
+              任意のテーブルステークスで$5のレーキを獲得
+              <span class="task-reward">報酬：$10ボーナスクレジット</span>
+            </li>
+            <li>
+              任意のトーナメントで入賞
+              <span class="task-reward">報酬：トーナメントチケット1枚（$20万プール）</span>
+            </li>
+            <li>
+              Spin&Winを試す——10ラウンドプレイ
+              <span class="task-reward">報酬：$5ボーナスクレジット＋Lootbox</span>
+            </li>
+            <li>
+              Silverの全目標を達成
+              <span class="task-reward">報酬：$30達成ボーナス＋Silverバッジ</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Gold Quest -->
+      <div class="quest-card">
+        <div class="quest-header gold">
+          <span class="quest-tier-badge gold">★ Gold Quest</span>
+          <div class="quest-prize gold">$200</div>
+          <p style="color:var(--text-muted); font-size:0.85rem; margin:0;">ボーナスクレジット＋トーナメントチケット</p>
+        </div>
+        <div class="quest-body">
+          <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:12px;">Gold QuestはSilver完了後に解放されます。チャレンジの難度が上がり、より深く</p>
+          <ul class="quest-tasks">
+            <li>
+              任意のポーカーバリアントを300ハンドプレイ
+              <span class="task-reward">報酬：$20ボーナスクレジット</span>
+            </li>
+            <li>
+              7日間で累計$30のレーキを獲得
+              <span class="task-reward">報酬：$50ボーナスクレジット</span>
+            </li>
+            <li>
+              Big Bang Sunday（$45K GTD）に登録
+              <span class="task-reward">報酬：サテライトチケット＋$20ボーナス</span>
+            </li>
+            <li>
+              マルチテーブル：同時に2テーブルでプレイ
+              <span class="task-reward">報酬：$25ボーナスクレジット＋Gold Lootbox</span>
+            </li>
+            <li>
+              Goldの全目標を達成
+              <span class="task-reward">報酬：$85達成ボーナス＋Goldバッジ</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Supernova Quest -->
+      <div class="quest-card">
+        <div class="quest-header supernova">
+          <span class="quest-tier-badge supernova">🌟 Supernova Quest</span>
+          <div class="quest-prize supernova">$1,000</div>
+          <p style="color:var(--text-muted); font-size:0.85rem; margin:0;">賞品＋VIPプログラム参加権</p>
+        </div>
+        <div class="quest-body">
+          <p style="color:var(--text-muted); font-size:0.88rem; margin-bottom:12px;">Supernova Questは新規プレイヤーにとっての最高の達成です。完了すると</p>
+          <ul class="quest-tasks">
+            <li>
+              任意のステークスで1,000ハンドプレイ
+              <span class="task-reward">報酬：$100ボーナスクレジット</span>
+            </li>
+            <li>
+              JackPokerで生涯レーキ$150を獲得
+              <span class="task-reward">報酬：$200ボーナスクレジット</span>
+            </li>
+            <li>
+              トーナメントで優勝またはサテライトでトップ3入賞
+              <span class="task-reward">報酬：$250トーナメントチケットパッケージ</span>
+            </li>
+            <li>
+              30日間連続ログイン（30日間毎日ログイン）
+              <span class="task-reward">報酬：Platinum Lootbox＋$150ボーナス</span>
+            </li>
+            <li>
+              Supernovaの全目標を達成
+              <span class="task-reward">報酬：$300ボーナス＋VIPプログラム参加権＋Supernovaバッジ</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="highlight-box gold">
+      <h4>クエストの進行は自動です</h4>
+      <p>個別のクエストへのオプトインや手動での有効化は不要です。プロモコード WELCOME でJackPokerに登録して初回入金を行った瞬間から、3つのクエストティアすべてがあなたの活動をトラッキングし始めます。進行状況はアカウント内のプロモーションダッシュボードでいつでも確認できます。クエストはアカウント登録から90日以内に完了する必要があります。</p>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== RAKEBACK & VIP ===== -->
+<section class="section section-dark" id="rakeback-vip">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">継続報酬</span>
+      <h2>プログラム &amp; <span class="gold-text">VIPプログラム</span></h2>
+      <p>忠実なプレイヤーを報酬で称える取り組みは、ウェルカムボーナスをはるかに超えています。JackPoker VIPプログラム</p>
+    </div>
+
+    <div class="split split-reverse" style="margin-bottom:56px;">
+      <div class="split-img">
+        <img loading="lazy" src="../assets/images/vip-lounge.jpg" alt="JackPoker VIP Lounge">
+      </div>
+      <div class="split-content">
+        <span class="section-label">ライフタイムプログラム</span>
+        <h3>すべてのハンドで最大20%バック</h3>
+        <p>プログラムはロイヤルティプログラムの核心です。リアルマネーテーブルでプレイするすべてのハンドが</p>
+        <p>レーキバック体系は透明でシンプルです：解読が難しいポイントシステムはなく、恣意的なロールオーバーもなく、累積レーキバックに有効期限もありません。獲得した分はすべてあなたのものであり、自動的に残高に返還されます。</p>
+        <ul>
+          <li>プログラムは自動クレジット——請求不要</li>
+          <li>全キャッシュゲームバリアントとステークスに適用</li>
+          <li>最初のハンドから累積</li>
+          <li>高レーキボリュームほど高いレーキバック率が解放される</li>
+          <li>対象期間中はウェルカムボーナスと組み合わせ可能</li>
+          <li>アカウントダッシュボードでリアルタイム確認可能</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- VIP Tiers -->
+    <h3 style="text-align:center; margin-bottom:8px;">VIPティア構造</h3>
+    <p style="text-align:center; color:var(--text-muted); margin-bottom:32px; max-width:560px; margin-left:auto; margin-right:auto;">VIPティアを上がるほど、レーキバック率が増加します。進行は月間生成レーキに基づき、ティアステータスを守るためのリセットも寛大に設定されています。</p>
+
+    <div class="vip-tiers">
+      <div class="vip-tier-card">
+        <span class="vip-tier-icon">🥉</span>
+        <div class="vip-tier-name">ブロンズ</div>
+        <div class="vip-tier-rakeback">5%</div>
+        <div class="vip-tier-sub">プログラム</div>
+        <p style="color:var(--text-muted); font-size:0.78rem; margin-top:12px; margin-bottom:0;">エントリーレベル——初日から全新規プレイヤーに自動適用</p>
+      </div>
+      <div class="vip-tier-card">
+        <span class="vip-tier-icon">🥈</span>
+        <div class="vip-tier-name">シルバー</div>
+        <div class="vip-tier-rakeback">10%</div>
+        <div class="vip-tier-sub">プログラム</div>
+        <p style="color:var(--text-muted); font-size:0.78rem; margin-top:12px; margin-bottom:0;">JackPokerで月間レーキ$500生成後に解放</p>
+      </div>
+      <div class="vip-tier-card">
+        <span class="vip-tier-icon">🥇</span>
+        <div class="vip-tier-name">ゴールド</div>
+        <div class="vip-tier-rakeback">15%</div>
+        <div class="vip-tier-sub">プログラム</div>
+        <p style="color:var(--text-muted); font-size:0.78rem; margin-top:12px; margin-bottom:0;">月間レーキ$2,000で解放——カジノキャッシュバック全額含む</p>
+      </div>
+      <div class="vip-tier-card featured">
+        <span class="vip-tier-icon">👑</span>
+        <div class="vip-tier-name">Diamond</div>
+        <div class="vip-tier-rakeback">20%</div>
+        <div class="vip-tier-sub">プログラム</div>
+        <p style="color:var(--text-muted); font-size:0.78rem; margin-top:12px; margin-bottom:0;">エリートティア——月間レーキ$5,000超。招待制。</p>
+      </div>
+    </div>
+
+    <!-- VIP Benefits Grid -->
+    <h3 style="text-align:center; margin-top:56px; margin-bottom:32px;">VIP限定特典</h3>
+    <div class="grid-3">
+      <div class="feature-card">
+        <div class="feature-icon">💰</div>
+        <h3>10%カジノキャッシュバック</h3>
+        <p>Gold以上のVIPメンバーは、統合カジノでの純損失に対して10%のキャッシュバックを受け取ります</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>優先出金</h3>
+        <p>VIPメンバーはすべての出金リクエストで優先されます。一般プレイヤーが最大24時間待つのに対し、</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎯</div>
+        <h3>専任VIPサポート</h3>
+        <p>GoldおよびDiamond VIPメンバー全員に、ダイレクトチャットとメールで連絡できる担当アカウントマネージャーが付きます</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🎁</div>
+        <h3>限定Lootbox</h3>
+        <p>VIPメンバーは、高倍率に重み付けされた改良の確率分布を持つ、強化されたLootboxを受け取ります</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🏆</div>
+        <h3>プライベートトーナメント</h3>
+        <p>招待制限定トーナメント。オーバーレイ保証付きで、スキルの高いプレイヤーを報いる賞金構造を採用</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌟</div>
+        <h3>強化リロードボーナス</h3>
+        <p>VIPメンバーは毎回の入金でパーソナライズされたリロードボーナスオファーを受け取ります——初回だけではありません。Diamondメンバーは</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== TOURNAMENT BONUSES ===== -->
+<section class="section" id="tournament-bonuses">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">競技プレイへの報酬</span>
+      <h2>トーナメント <span class="gold-text">ボーナス</span></h2>
+      <p>トーナメントプログラムはそれ自体がボーナスの機会です。無料エントリーのフリーロールから</p>
+    </div>
+
+    <div style="display:flex; flex-direction:column; gap:16px;">
+
+      <div class="tourney-bonus-card">
+        <div class="tourney-icon">🎰</div>
+        <div>
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:8px;">
+            <h3 style="margin:0; font-size:1.2rem;">Freeroll Festival — 月間$200,000以上</h3>
+            <span class="badge badge-green">無料参加</span>
+          </div>
+          <p style="color:var(--text-muted); margin-bottom:12px;">Freeroll Festivalは、オンラインポーカーで最も充実した継続的な無料エントリープログラムです。毎日、スケジュール全体で8つの独立したフリーロールトーナメントが開催され、朝・昼・夜のタイムゾーンをカバーします。登録済みの全JackPokerプレイヤーは追加要件なしに自動的にエントリー資格を持ちます。</p>
+          <p style="color:var(--text-muted); margin-bottom:0;">Freeroll Festivalは1ヶ月間で合計$200,000以上の賞金を配布します</p>
+        </div>
+      </div>
+
+      <div class="tourney-bonus-card">
+        <div class="tourney-icon">🚀</div>
+        <div>
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:8px;">
+            <h3 style="margin:0; font-size:1.2rem;">サテライトトーナメント — メジャーイベントへのアクセス</h3>
+            <span class="badge badge-purple">少額バイイン</span>
+          </div>
+          <p style="color:var(--text-muted); margin-bottom:12px;">サテライトプログラムは、最大保証トーナメントや、JackPokerが支援する権威ある実地イベントへのコスト効率の高い道を提供します。サテライトは継続的に開催され、バイインは$1から。Bonus Bonanza（月間$125万）やBig Bang Sunday（$45K保証）を含むフラッグシップイベントへの直接エントリーが賞品となります。</p>
+          <p style="color:var(--text-muted); margin-bottom:0;">マルチステージサテライトにより、マイクロステークスから段階的に積み上げることができます。$1のエントリーから</p>
+        </div>
+      </div>
+
+      <div class="tourney-bonus-card">
+        <div class="tourney-icon">💥</div>
+        <div>
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:8px;">
+            <h3 style="margin:0; font-size:1.2rem;">オーバーレイ保証 — すべてのトーナメントに真の価値を</h3>
+            <span class="badge badge-gold">オーバーレイ</span>
+          </div>
+          <p style="color:var(--text-muted); margin-bottom:12px;">私たちは保証賞金プールを確約します。バイイン合計額が設定保証額に届かない場合、不足分は当社が負担します——これにより、プレイヤー1人当たりの実質賞金がバイインコストを上回るオーバーレイが生まれます。最大の定期オーバーレイ機会はBig Bang Sundayで、わずか$30バイインで$45,000保証を提供しています。</p>
+          <p style="color:var(--text-muted); margin-bottom:0;">オーバーレイはトーナメントプレイヤーにとって純粋なプラスの期待値を意味します。私たちが余裕を持った保証を設定するのは</p>
+        </div>
+      </div>
+
+      <div class="tourney-bonus-card">
+        <div class="tourney-icon">🏆</div>
+        <div>
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:8px;">
+            <h3 style="margin:0; font-size:1.2rem;">Bonus Bonanza — 月間$125万</h3>
+            <span class="badge badge-gold">フラッグシップ</span>
+          </div>
+          <p style="color:var(--text-muted); margin-bottom:12px;">Bonus Bonanzaは当社のフラッグシップ月間トーナメントシリーズです——合計で</p>
+          <p style="color:var(--text-muted); margin-bottom:0;">新規プレイヤーはWelcome Quest進行の一部としてBonus Bonanzaへの無料サテライトチケットを受け取ります</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== CRYPTO DEPOSIT BONUS ===== -->
+<section class="section section-dark" id="crypto-bonus">
+  <div class="container">
+    <div class="split" style="margin-bottom:0;">
+      <div class="split-img">
+        <img loading="lazy" src="../assets/images/crypto-poker.jpg" alt="JackPoker Crypto Deposit Bonus">
+      </div>
+      <div class="split-content">
+        <span class="section-label">暗号資産プレイヤー</span>
+        <h2>暗号資産での入金 <span class="gold-text">ボーナス</span></h2>
+        <p>私たちは暗号資産ファーストのポーカープラットフォームです。決済インフラはデジタル通貨の入出金を処理するために構築されており、</p>
+
+        <p>暗号資産の入金は他の決済方法と同じ300%ウェルカムマッチの対象で、さらに処理速度という追加メリットがあります——ほとんどの暗号資産入金はブロックチェーン確認後数分以内にJackPoker残高に反映されます。対象閾値を超えるBitcoin入金については、強化されたマッチ率の暗号資産限定リロードオファーをプラットフォームを通じて定期的にご案内しています。</p>
+
+        <p>比較可能な他のポーカープラットフォームの中で最も幅広い暗号資産に対応しています。Bitcoin、Ethereum、USDTのようなステーブルコイン、またはその他の対応コインを保有しているかにかかわらず、送金を開始してから5分以内にアカウントに入金し、ウェルカムボーナスを受け取り、テーブルに着くことができます。</p>
+
+        <h4 style="margin-bottom:16px; margin-top:8px;">対応暗号資産</h4>
+        <div class="crypto-pills">
+          <div class="crypto-pill"><span class="crypto-symbol">₿</span> Bitcoin (BTC)</div>
+          <div class="crypto-pill"><span class="crypto-symbol">⟠</span> Ethereum (ETH)</div>
+          <div class="crypto-pill"><span class="crypto-symbol">₮</span> Tether (USDT)</div>
+          <div class="crypto-pill"><span class="crypto-symbol">◈</span> TRON (TRX)</div>
+          <div class="crypto-pill"><span class="crypto-symbol">Ł</span> Litecoin (LTC)</div>
+          <div class="crypto-pill"><span class="crypto-symbol">Ð</span> Dogecoin (DOGE)</div>
+          <div class="crypto-pill"><span class="crypto-symbol">⬡</span> BNB</div>
+        </div>
+
+        <div class="highlight-box gold" style="margin-top:24px;">
+          <h4>暗号資産入金手数料ゼロ</h4>
+          <p>JackPokerは全暗号資産入金のプラットフォーム手数料を一切いただきません。お支払いいただくのは標準のネットワーク取引手数料のみです——TRON（USDT-TRC20）などの低手数料ネットワークでは、その手数料は無視できるほど小さいです。入金額全額がアカウントに届き、ウェルカムボーナス全額の対象となります。</p>
+        </div>
+
+        <ul>
+          <li>暗号資産入金にプラットフォーム手数料なし</li>
+          <li>出金処理は1〜4時間以内</li>
+          <li>暗号資産の最低入金額は$20相当から</li>
+          <li>対応全コインでボーナス全額の対象</li>
+          <li>暗号資産の定期利用者向けの強化されたリロードオファー</li>
+          <li>ノンカストディアルウォレット払い対応</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== CURRENT PROMOTIONS — CASH CARNIVAL ===== -->
+<section class="section" id="current-promotions">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">現在ライブ中</span>
+      <h2>現行 <span class="gold-text">プロモーション</span></h2>
+      <p>恒久的なボーナスプログラムに加え、年間を通じて期間限定のプロモーションを実施しており、並外れた</p>
+    </div>
+
+    <div class="carnival-banner" style="margin-bottom:32px;">
+      <div class="carnival-inner">
+        <div>
+          <div class="live-badge">
+            <span class="live-dot"></span>
+            ライブ中 — 2026年3月23日〜4月19日
+          </div>
+          <div class="carnival-prize">$500,000</div>
+          <h2 style="color:var(--text-white); margin-bottom:12px;">Cash Carnival</h2>
+          <p style="color:var(--text-body); margin-bottom:16px; max-width:520px;">Cash Carnivalは当社最大の春のプロモーションです——$500,000のキャッシュドロップをテーブルのプレイヤーに直接配布します</p>
+          <p style="color:var(--text-muted); margin-bottom:24px; max-width:520px; font-size:0.92rem;">リアルマネーキャッシュゲームでプレイしたすべてのハンドがドロッププールに参加します。オプトイン不要、最低ステークスなし</p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <a href="https://go.jack-full.com/c41f796e" class="btn btn-primary">Cash Carnivalに参加 ♠</a>
+            <a href="news.html" class="btn btn-secondary">詳細を見る</a>
+          </div>
+        </div>
+        <div style="text-align:center; flex-shrink:0;">
+          <div style="background:rgba(255,61,0,0.08); border:1px solid rgba(255,61,0,0.25); border-radius:var(--radius-lg); padding:32px 28px; min-width:200px;">
+            <div style="font-size:2.5rem; margin-bottom:8px;">💣</div>
+            <div style="font-family:var(--font-display); font-size:1rem; font-weight:700; color:var(--text-white); margin-bottom:4px;">キャッシュボム</div>
+            <div style="font-size:0.82rem; color:var(--text-muted);">3〜7ハンドごとに</div>
+            <div style="margin-top:20px; padding-top:20px; border-top:1px solid rgba(255,61,0,0.2);">
+              <div style="font-family:var(--font-display); font-size:2rem; font-weight:900; color:#FF3D00;">28</div>
+              <div style="font-size:0.78rem; color:var(--text-muted);">残り日数</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Other active promotions -->
+    <div class="grid-2">
+      <div class="promo-banner">
+        <div class="promo-banner-content">
+          <h3>Freeroll Festival <span class="text-gold">— 継続中</span></h3>
+          <p>8つの無料エントリー日次トーナメント。朝・昼・夜に配布される月間保証賞金$200,000以上。</p>
+        </div>
+        <a href="tournaments.html" class="btn btn-secondary btn-sm" style="flex-shrink:0;">Vedi il Tournament</a>
+      </div>
+      <div class="promo-banner">
+        <div class="promo-banner-content">
+          <h3>Big Bang Sunday <span class="text-gold">— $45K GTD</span></h3>
+          <p>フラッグシップの週次トーナメントは毎週日曜日に開催。$30バイインで$45,000保証賞金プール。サテライトは$1から</p>
+        </div>
+        <a href="tournaments.html" class="btn btn-secondary btn-sm" style="flex-shrink:0;">チケットを入手</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== PROMO CODE SECTION ===== -->
+<section class="section section-dark" id="promo-code">
+  <div class="container">
+    <div class="promo-code-section">
+      <span class="section-label">あなたの有効化コード</span>
+      <h2>プロモコードを使用 <span class="gold-text">WELCOME</span></h2>
+      <p style="color:var(--text-muted); max-width:560px; margin:0 auto 8px; font-size:1.05rem;">JackPokerアカウント登録時にこのコードを入力して、新規プレイヤーボーナスパッケージ全体を解放してください：300%マッチ、20%インスタントキャッシュ、Welcome Lootbox、そしてWelcome Quest全3ティア。</p>
+      <p style="color:var(--text-muted); max-width:500px; margin:0 auto 0; font-size:0.9rem;">登録時に入力を忘れた場合は、初回入金前にアカウントのプロモーションセクションでも入力できます</p>
+
+      <div style="display:flex; justify-content:center; margin:32px 0 12px;">
+        <div class="promo-code-large">
+          <div class="code-text">WELCOME</div>
+          <button class="code-copy-btn btn-copy" onclick="copyPromoCode()">📋 コードをコピー</button>
+        </div>
+      </div>
+      <p id="copyFeedback" style="color:var(--success); font-size:0.85rem; min-height:20px; margin-bottom:32px;"></p>
+
+      <div style="display:flex; justify-content:center; gap:16px; flex-wrap:wrap;">
+        <a href="https://go.jack-full.com/c41f796e" class="btn btn-primary btn-lg">登録 &amp; ボーナスを受け取る ♠</a>
+        <a href="promo-code.html" class="btn btn-secondary btn-lg">プロモコードの詳細</a>
+      </div>
+
+      <!-- What you get summary -->
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:48px; text-align:center; max-width:800px; margin-left:auto; margin-right:auto;">
+        <div style="padding:20px; background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:var(--radius-md);">
+          <div style="font-size:1.6rem; margin-bottom:8px;">🎯</div>
+          <div style="font-family:var(--font-display); font-size:1.1rem; font-weight:800; color:var(--gold-primary); margin-bottom:4px;">300%</div>
+          <div style="font-size:0.78rem; color:var(--text-muted);">デポジットマッチ</div>
+        </div>
+        <div style="padding:20px; background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:var(--radius-md);">
+          <div style="font-size:1.6rem; margin-bottom:8px;">⚡</div>
+          <div style="font-family:var(--font-display); font-size:1.1rem; font-weight:800; color:var(--gold-primary); margin-bottom:4px;">20%</div>
+          <div style="font-size:0.78rem; color:var(--text-muted);">Instant Cash</div>
+        </div>
+        <div style="padding:20px; background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:var(--radius-md);">
+          <div style="font-size:1.6rem; margin-bottom:8px;">📦</div>
+          <div style="font-family:var(--font-display); font-size:1.1rem; font-weight:800; color:var(--gold-primary); margin-bottom:4px;">1,000%</div>
+          <div style="font-size:0.78rem; color:var(--text-muted);">Lootbox最大値</div>
+        </div>
+        <div style="padding:20px; background:var(--bg-card); border:1px solid var(--border-subtle); border-radius:var(--radius-md);">
+          <div style="font-size:1.6rem; margin-bottom:8px;">🌟</div>
+          <div style="font-family:var(--font-display); font-size:1.1rem; font-weight:800; color:var(--gold-primary); margin-bottom:4px;">3段階のティア</div>
+          <div style="font-size:0.78rem; color:var(--text-muted);">ウェルカムクエスト</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== BONUS FAQ ===== -->
+<section class="section" id="faq">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">よくあるご質問</span>
+      <h2>ボーナス <span class="gold-text">FAQ</span></h2>
+      <p>JackPokerボーナスの受け取り、消化、最大活用について知っておくべきことすべて。ご質問が</p>
+    </div>
+
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <button class="faq-question">
+          JackPokerウェルカムボーナスはどのように受け取れますか？
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>ウェルカムボーナスの受け取りは簡単です。まず、このページの「今すぐプレイ」ボタンを使って新しいJackPokerアカウントを登録してください <strong>WELCOME</strong> 登録時にフィールドを見逃した場合は、初回入金前にアカウントのプロモーションセクションでも入力できます</p>
+            <p>プロモコードが有効化されたら、最低$20から対応する決済方法で初回入金を行ってください。300%マッチボーナスと20%インスタントキャッシュクレジットはどちらも入金確認後すぐにアカウントに反映されます。Welcome Lootboxはすぐに開封でき、Welcome Questsも自動的にトラッキングを開始します。追加の手順も、承認待ちも不要——初回入金ですべてが有効化されます。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          ウェルカムボーナスのウェージャー要件はどうなっていますか？
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>JackPokerウェルカムボーナスのウェージャー要件は、生成されたレーキのボーナス額の6倍です。つまり必要なのは</p>
+            <p>例として、$200入金で$600ボーナス（300%マッチ）を受け取った場合、合計$3,600のレーキを生成する必要があります</p>
+            <p>ボーナス資金はレーキを獲得するに応じて段階的に解放されます——全要件を満たす前にボーナスの一部が変換されます</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          ボーナスはいつ失効しますか？期間内に消化できなかった場合はどうなりますか？
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>ウェルカムボーナスは対象入金日から60日で失効します。期間内に消化されなかったボーナスの部分は</p>
+            <p>Welcome Questsには別の締め切りがあります：3つのクエストティア（Silver、Gold、Supernova）はすべて90日以内に完了する必要があります</p>
+            <p>ボーナスの消化が近いと思うが少し延長が必要な場合は、サポートチームにご連絡ください。延長は保証されませんが</p>
+          </div>
+        </div>
+        </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          複数のボーナスを同時に受け取ることはできますか？
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>ウェルカムボーナスパッケージ（300%マッチ＋20%インスタントキャッシュ＋Welcome Lootbox＋Welcome Quests）は新規プレイヤー向けの一回限りのオファーです</p>
+            <p>ただし、継続中のプロモーションはウェルカムボーナスと並行して実施されており、競合しません。Freeroll Festival、Cash Carnivalのキャッシュドロップ、Big Bang Sundayトーナメント、VIPレーキバックプログラム——これらすべてにウェルカムボーナスのウェージャー要件を消化しながら同時に参加できます。どれかを選ぶ必要はありません——当社のプロモーションは積み重なり、互いを補完するよう設計されています。</p>
+            <p>リロードデポジットボーナスは既存プレイヤーに定期的に提供されます。これらはウェルカムパッケージとは別のものであり、</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          プロモコード WELCOME はJackPokerで使える唯一のコードですか？
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>WELCOMEは最も重要な主要プロモーションコードです——300%マッチ、20%インスタントキャッシュ、Lootbox、Welcome Quest全3ティアを含む新規プレイヤーウェルカムパッケージ全体を解放します。初めて登録するすべての新規プレイヤーにお勧めするコードです。</p>
+            <p>時折、特別イベント、季節キャンペーン、およびアフィリエイトパートナーを通じて期間限定プロモーションコードもリリースしています。これらのコードはトーナメントチケットパッケージ、強化リロードボーナス、Lootbox倍率ブーストなど特定のボーナスを解放する場合があります。有効なプロモーションコードはプロモーションページで公開され、公式SNSチャンネルでもお知らせします。</p>
+            <p>プロモーションやパートナーから別のコードを受け取った場合は、アカウントのプロモーションセクションで入力できます</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          レーキバックの仕組みと残高の確認方法を教えてください
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>JackPokerのプログラムは、全キャッシュゲームテーブルで生成されたグロスレーキのパーセンテージとして計算されます。毎回</p>
+            <p>全新規プレイヤーはBronzeティアでスタートし、5%のレーキバックが適用されます。月間レーキ量が増えるにつれて、Silver（10%）、Gold（15%）、Diamond（20%）のティアへと進みます。現在のレーキバック残高、生涯獲得レーキバック、ティアステータスは、JackPokerダッシュボードのアカウントセクション内のロイヤルティ＆リワードタブでいつでも確認できます。</p>
+            <p>プログラムはメイン残高にクレジットされます——保留またはボーナス残高ではありません——つまり即時に</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          ウェージャー要件を満たす前にボーナスを出金できますか？
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-answer">
+          <div class="faq-answer-inner">
+            <p>ボーナスマッチ資金（300%部分）は、6倍のレーキ要件に従ってウェージャーを満たした後でないと出金できません</p>
+            <p>20%インスタントキャッシュクレジットはまったく別の話です。そのクレジットは初回入金時にメイン残高に直接入金され、ウェージャー要件はありません。全出金に必要な標準的な最低出金額とKYC本人確認手続きに従うだけで、いつでも出金できます。</p>
+            <p>ウェルカムボーナスを完全に消化する前に出金する場合、残りの未変換ボーナス残高は没収されます</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta">
+  <div class="container">
+    <div class="cta-inner">
+      <span class="section-label" style="display:block; margin-bottom:16px;">プレイの準備はできましたか？</span>
+      <h2>獲得しましょう <span class="gold-text">300%ボーナス</span> 本日</h2>
+      <p>今すぐJackPokerに参加して、オンラインポーカーで最も充実したウェルカムパッケージを受け取りましょう。$2,000までの300%マッチ、20%インスタントキャッシュ、Lootbox倍率、Welcome Quests——プロモコード WELCOME での初回入金1回ですべてが解放されます。</p>
+
+      <div style="display:flex; justify-content:center; margin:24px 0;">
+        <div class="promo-code-large">
+          <div class="code-text">WELCOME</div>
+          <button class="code-copy-btn btn-copy" onclick="copyPromoCode()">📋 コピー</button>
+        </div>
+      </div>
+      <p id="copyFeedback2" style="color:var(--success); font-size:0.85rem; min-height:20px; margin-bottom:24px;"></p>
+
+      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-bottom:32px;">
+        <a href="https://go.jack-full.com/c41f796e" class="btn btn-primary btn-lg">JackPokerで今すぐプレイ ♠</a>
+        <a href="promo-code.html" class="btn btn-secondary btn-lg">WELCOME コードの詳細</a>
+      </div>
+
+      <p style="color:var(--text-faint); font-size:0.8rem; max-width:520px; margin:0 auto;">18歳以上 | 責任あるギャンブル | Anjouan、コモロ連合ライセンス取得 | iTech Labs、BMM TestLabs &amp; GLI 認定 | 利用規約</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- Promo Code CTA — Bonuses Context -->
+<aside class="promo-cta-inline" style="background: linear-gradient(135deg, rgba(137,59,247,0.08), rgba(246,186,70,0.08)); border: 1px solid rgba(246,186,70,0.2); border-radius: 16px; padding: 32px 36px; margin: 48px 0; position: relative; overflow: hidden;">
+  <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--gold-primary), #FF3D00);"></div>
+  <div style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 280px;">
+      <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 8px;">1つのコードで全ボーナスを有効化</h3>
+      <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin: 0;">このページのすべてのボーナスは、登録時に <a href="promo-code.html" style="color: var(--gold-primary); font-weight: 700; text-decoration: underline;">プロモコードWELCOMEで</a> を入力することで解放されます。このコードで300%マッチ、20%インスタントキャッシュ、Welcome Lootbox、Welcome Questsが有効化されます <a href="promo-code.html" style="color: var(--gold-primary); font-weight: 600;">プロモコード有効化のステップバイステップガイド</a> すべてを確実に受け取るために。</p>
+    </div>
+    <div style="flex-shrink: 0;">
+      <a href="promo-code.html" class="btn btn-cta" style="white-space: nowrap;">プロモコードを入手 →</a>
+    </div>
+  </div>
+</aside>
+
+<!-- ===== FOOTER ===== -->
+
+    <!-- Latest News Links -->
+    <section style="padding: 24px 0 0;">
+      <div class="container">
+        <h3 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; color: var(--text-primary);">JackPokerの最新情報</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <a href="news/winter-games-festival-wraps-with-record-breaking-21m-in-payo.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">Winter Games Festival: $2.1M 賞金 →</a>
+          <a href="news/bonus-bonanza-march-schedule-620-events-125m-in-guarantees.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">Bonus Bonanza March: $1.25M GTD →</a>
+          <a href="news/jackpoker-mobile-app-30-launches-with-multi-table-support.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">モバイルアプリ 3.0 リリース →</a>
+          <a href="news/crypto-deposits-now-available-in-sol-matic-and-ton.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">暗号通貨デポジット: SOL、MATIC、TON →</a>
+        </div>
+      </div>
+    </section>
+
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="JackPoker Home">
+        <svg class="logo-icon" width="189" height="47" viewBox="0 0 189 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="JackPoker">
+<path d="M25.4001 1C24.0001 1 22.8001 2.2 22.8001 3.6C22.8001 5.1 23.8343 5.9 25.3001 5.9H28.7001C28.7001 5.9 31.3001 5.9 31.3001 8.3C31.3001 10.7 28.7001 10.7 28.7001 10.7H8.30008C6.90008 10.7 5.70008 11.9 5.70008 13.3C5.70008 14.7 6.90008 15.9 8.30008 15.9H22.5001C22.5001 15.9 25.1001 15.9 25.1001 18.3C25.1001 20.7 22.5001 20.7 22.5001 20.7H11.4001C10.0001 20.7 8.80008 21.9 8.80008 23.3C8.80008 24.7 10.0001 25.9 11.4001 25.9H22.6001C22.6001 25.9 25.2001 25.9 25.2001 28.3C25.2001 30.7 22.6001 30.7 22.6001 30.7H21.8001C20.4001 30.7 19.2001 31.9 19.2001 33.3C19.2001 34.7 20.4001 35.9 21.8001 35.9H28.8001C28.8001 35.9 31.4001 35.9 31.4001 38.3C31.4001 40.7 28.8001 40.7 28.8001 40.7H14.0001C12.6001 40.7 11.4001 41.9 11.4001 43.3C11.4001 44.7 12.6001 45.9 14.0001 45.9H34.3001C36.5001 45.9 38.4001 44.8 39.5001 43C41.1501 40.25 42.7751 37.4999 44.4001 34.7499C46.0251 31.9999 47.6501 29.25 49.3001 26.5C50.4001 24.6 50.4001 22.3 49.3001 20.4C47.6501 17.6501 46.0252 14.9001 44.4002 12.1502C42.7752 9.4002 41.1501 6.65001 39.5001 3.9C38.4001 2.1 36.4001 1 34.3001 1H25.4001Z" fill="url(#jpLogoGrad)"/>
+<path d="M11.3999 3.6C11.3999 2.2 12.5999 1 13.9999 1H17.5999C18.9999 1 20.1999 2.2 20.1999 3.6C20.1999 5 18.9999 6.2 17.5999 6.2H13.9999C12.5999 6.2 11.3999 5 11.3999 3.6Z" fill="url(#jpLogoGrad)"/>
+<path d="M0 23.5001C0 22.1001 1.2 20.9001 2.6 20.9001H3.6C5 20.9001 6.2 22.1001 6.2 23.5001C6.2 24.9001 5 26.1001 3.6 26.1001H2.6C1.2 26.1001 0 24.9001 0 23.5001Z" fill="url(#jpLogoGrad)"/>
+<path d="M8.30008 30.8001C6.90008 30.8001 5.70008 32.0001 5.70008 33.4001C5.70008 34.9001 6.90008 36.1001 8.30008 36.0001H14.0001C15.4001 36.0001 16.6001 34.8001 16.6001 33.4001C16.6001 32.0001 15.4001 30.8001 14.0001 30.8001H8.30008Z" fill="url(#jpLogoGrad)"/>
+<path d="M69.7955 27.3088C69.7955 28.8312 69.6204 30.0793 69.2704 31.0533C68.9203 32.0273 68.3261 32.7598 67.4876 33.2509C66.6572 33.7502 65.5257 33.9998 64.0929 33.9998C63.7591 33.9998 63.3887 33.9712 62.9817 33.9139C62.5747 33.8648 62.3142 33.832 62.2002 33.8157L62.5177 31.2252H63.7144C65.1797 31.2252 65.9164 30.4231 65.9246 28.8189V15.265L64.0441 14.5039V12.3676L71.676 12.2449V14.5039L69.7955 15.265V27.3088Z" fill="white"/>
+<path d="M81.4937 28.3401C81.4937 28.3728 81.2779 28.557 80.8465 28.8926C80.415 29.2281 79.8981 29.5351 79.2957 29.8133C78.6933 30.0834 78.0746 30.2185 77.4396 30.2185C76.2185 30.2185 75.2619 29.8788 74.57 29.1995C73.8862 28.512 73.5443 27.538 73.5443 26.2775C73.5443 24.837 74.0571 23.7853 75.0829 23.1223C76.1086 22.4594 77.6024 22.1279 79.5643 22.1279H81.3227V20.7406C81.3227 19.5129 80.6796 18.9031 79.3934 18.9113C79.0107 18.9113 78.6566 18.94 78.331 18.9973C78.0054 19.0545 77.7449 19.1159 77.5495 19.1814C77.3622 19.2387 77.2442 19.2755 77.1954 19.2919L76.8168 20.8756H74.57L74.399 17.1557C74.5456 17.1066 74.9038 17.0002 75.4736 16.8365C76.0516 16.6728 76.7395 16.5173 77.5373 16.37C78.3432 16.2226 79.1044 16.149 79.8207 16.149C81.107 16.149 82.1286 16.3127 82.8857 16.6401C83.6428 16.9593 84.1964 17.4831 84.5464 18.2115C84.8965 18.9318 85.0715 19.9017 85.0715 21.1212V27.3334L86.952 27.7876V29.8011L81.9455 29.9729L81.4937 28.3401ZM77.1709 25.897C77.1709 26.388 77.2971 26.7645 77.5495 27.0264C77.81 27.2802 78.1763 27.407 78.6485 27.407C79.0474 27.407 79.4422 27.3006 79.833 27.0878C80.2237 26.8668 80.5534 26.6418 80.822 26.4126C81.0907 26.1752 81.2576 26.0197 81.3227 25.9461V24.2641H79.894C78.9253 24.2641 78.2292 24.3951 77.8059 24.657C77.3826 24.9189 77.1709 25.3322 77.1709 25.897Z" fill="white"/>
+<path d="M100.311 28.0823C99.7492 28.5897 99.0124 29.0726 98.1007 29.531C97.1971 29.9893 96.1428 30.2185 94.938 30.2185C92.8866 30.2185 91.291 29.6169 90.1513 28.4137C89.0116 27.2106 88.4417 25.5327 88.4417 23.3802C88.4417 21.1376 89.0442 19.3737 90.249 18.0888C91.4619 16.7956 93.1511 16.149 95.3166 16.149C95.9515 16.149 96.5906 16.2145 97.2337 16.3454C97.885 16.4764 98.4263 16.6114 98.8578 16.7506C99.2974 16.8815 99.5742 16.9715 99.6881 17.0206L99.566 21.1457H97.3192L96.9651 19.3656C96.8836 19.3492 96.6801 19.3124 96.3545 19.2551C96.0289 19.1896 95.6585 19.1569 95.2433 19.1569C94.3234 19.1569 93.6029 19.472 93.0819 20.1022C92.5691 20.7324 92.3126 21.6573 92.3126 22.8768C92.3126 24.2682 92.5731 25.3404 93.0942 26.0934C93.6233 26.8382 94.4048 27.2106 95.4387 27.2106C96.0899 27.2106 96.6598 27.1124 97.1482 26.916C97.6448 26.7113 98.06 26.5026 98.3937 26.2898C98.7275 26.077 98.9514 25.9379 99.0654 25.8724L100.311 28.0823Z" fill="white"/>
+<path d="M108.602 21.4527L110.3 18.8868L109.201 18.5307V16.5173L115.66 16.3945V18.5307L113.902 18.8622L111.582 22.1525L114.378 27.3579L116.283 27.9595V29.9729H111.655L108.553 23.8344H106.954V27.3334L108.334 27.9595V29.9729H101.202V27.9595L103.205 27.3334V13.2025L101.202 12.6991V10.6857L106.954 10.4893V21.4527H108.602Z" fill="white"/>
+<path d="M117.406 27.8367L119.275 27.0756V15.265L117.406 14.5039V12.3676L123.158 12.2449H125.527C127.423 12.2449 128.909 12.7155 129.984 13.6567C131.066 14.598 131.608 15.8871 131.608 17.524C131.608 19.6029 130.993 21.1703 129.764 22.2261C128.543 23.2819 126.78 23.8099 124.477 23.8099H123.158V27.0756L125.026 27.8367V29.9729H117.406V27.8367ZM124.477 20.8756C125.527 20.8756 126.333 20.6342 126.894 20.1513C127.456 19.6602 127.737 18.9522 127.737 18.0274C127.737 17.1925 127.513 16.5255 127.065 16.0262C126.626 15.5188 125.991 15.265 125.16 15.265H123.158V20.8756H124.477Z" fill="white"/>
+<path d="M139.74 16.149C141.751 16.149 143.302 16.7383 144.393 17.9169C145.492 19.0955 146.041 20.7692 146.041 22.9382C146.041 24.4278 145.764 25.721 145.211 26.8177C144.665 27.9145 143.892 28.7575 142.891 29.3468C141.89 29.9279 140.713 30.2185 139.362 30.2185C135.112 30.2185 132.988 27.9145 132.988 23.3065C132.988 21.8169 133.264 20.536 133.818 19.4638C134.38 18.3916 135.169 17.5731 136.187 17.0084C137.205 16.4354 138.389 16.149 139.74 16.149ZM139.606 19.1569C138.662 19.1569 137.966 19.4638 137.518 20.0776C137.078 20.6915 136.859 21.7269 136.859 23.1837C136.859 24.5751 137.066 25.5941 137.481 26.2407C137.905 26.8873 138.572 27.2106 139.484 27.2106C140.404 27.2106 141.08 26.8873 141.511 26.2407C141.942 25.5941 142.158 24.5342 142.158 23.061C142.158 21.7514 141.955 20.7733 141.548 20.1267C141.141 19.4802 140.493 19.1569 139.606 19.1569Z" fill="white"/>
+<path d="M154.809 21.4527L156.506 18.8868L155.407 18.5307V16.5173L161.867 16.3945V18.5307L160.108 18.8622L157.788 22.1525L160.585 27.3579L162.49 27.9595V29.9729H157.862L154.76 23.8344H153.16V27.3334L154.54 27.9595V29.9729H147.409V27.9595L149.412 27.3334V13.2025L147.409 12.6991V10.6857L153.16 10.4893V21.4527H154.809Z" fill="white"/>
+<path d="M167.508 24.0186C167.573 25.0253 167.875 25.811 168.412 26.3758C168.957 26.9323 169.666 27.2106 170.537 27.2106C171.155 27.2106 171.774 27.1247 172.393 26.9528C173.02 26.7727 173.536 26.5927 173.944 26.4126C174.359 26.2243 174.623 26.0934 174.737 26.0197L175.812 28.1068C175.812 28.1396 175.519 28.3483 174.933 28.733C174.355 29.1095 173.642 29.4532 172.796 29.7642C171.957 30.0671 171.062 30.2185 170.109 30.2185C167.993 30.2185 166.381 29.6292 165.274 28.4506C164.167 27.272 163.613 25.6023 163.613 23.4415C163.613 21.9847 163.878 20.7079 164.407 19.6111C164.944 18.5062 165.713 17.655 166.715 17.0575C167.716 16.4518 168.904 16.149 170.28 16.149C172.112 16.149 173.516 16.6769 174.493 17.7327C175.47 18.7885 175.958 20.2291 175.958 22.0542C175.958 22.4553 175.938 22.8441 175.897 23.2206C175.857 23.5971 175.828 23.8344 175.812 23.9326L167.508 24.0186ZM170.036 19.1569C169.352 19.1569 168.795 19.3901 168.363 19.8566C167.932 20.315 167.663 20.9207 167.557 21.6737H172.087C172.087 20.9207 171.921 20.315 171.587 19.8566C171.253 19.3901 170.736 19.1569 170.036 19.1569Z" fill="white"/>
+<path d="M183.199 18.1256C183.199 18.0928 183.395 17.9005 183.786 17.5486C184.176 17.1966 184.628 16.8774 185.141 16.591C185.662 16.2963 186.175 16.149 186.68 16.149C187.079 16.149 187.453 16.1817 187.803 16.2472C188.153 16.3127 188.426 16.3822 188.621 16.4559C188.825 16.5296 188.951 16.5746 189 16.591L188.804 21.4281H186.558L186.179 19.2919C185.748 19.2919 185.328 19.3983 184.921 19.6111C184.522 19.8157 184.18 20.0449 183.896 20.2986C183.619 20.5442 183.48 20.6751 183.48 20.6915V27.3334L185.984 27.9595V29.9729H177.729V27.9595L179.732 27.3334V19.1569L177.729 18.5307V16.5173L182.98 16.3945L183.199 18.1256Z" fill="white"/>
+<defs>
+<linearGradient id="jpLogoGrad" x1="0" y1="33.44" x2="50.74" y2="33.44" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8032FF"/>
+<stop offset="1" stop-color="#FF3D00"/>
+</linearGradient>
+</defs>
+</svg>
+      </a>
+        <p>JackPokerはTexas Hold'em、PLO、Spin&Win、トーナメントアクションを提供する最新オンラインポーカープラットフォームです。iTech Labs、BMM TestLabs、GLI認定取得済み。責任あるプレイをお願いします。</p>
+      </div>
+      <div class="footer-col">
+        <h4>プラットフォーム</h4>
+        <ul>
+          <li><a href="games.html">ゲーム</a></li>
+          <li><a href="tournaments.html">トーナメント</a></li>
+          <li><a href="bonuses.html">ボーナス &amp; プロモ</a></li>
+          <li><a href="promo-code.html">プロモコード</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>リソース</h4>
+        <ul>
+          <li><a href="news.html">ニュース</a></li>
+          <li><a href="https://go.jack-full.com/c41f796e" target="_blank" rel="noopener noreferrer">FAQ</a></li>
+          <li><a href="terms.html">利用規約</a></li>
+          <li><a href="https://go.jack-full.com/c41f796e" target="_blank" rel="noopener noreferrer">プライバシーポリシー</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>お支払い</h4>
+        <div class="footer-payment-icons">
+          <span>VISA</span><span>Mastercard</span><span>Skrill</span><span>Neteller</span><span>Bitcoin</span><span>Ethereum</span><span>USDT</span><span>Pix</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 JackPoker. Jack La International Limitada運営。Anjouan、コモロ連合にてライセンス取得。責任あるプレイをお願いします。18歳以上。</p>
+      <p>iTech Labs &bull; BMM TestLabs &bull; GLI 認定</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../main.js"></script>
+<script>
+  // Header scroll effect
+  (function() {
+    var header = document.querySelector('.site-header');
+    if (header) {
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 10) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      });
+    }
+  })();
+
+  // Mobile menu
+  (function() {
+    var toggle = document.getElementById('menuToggle');
+    var nav = document.getElementById('mainNav');
+    if (toggle && nav) {
+      toggle.addEventListener('click', function() {
+        nav.classList.toggle('open');
+      });
+    }
+  })();
+
+  // FAQ accordion
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = this.closest('.faq-item');
+        var wasActive = item.classList.contains('active');
+        document.querySelectorAll('.faq-item').forEach(function(i) { i.classList.remove('active'); });
+        if (!wasActive) item.classList.add('active');
+      });
+    });
+  });
+
+  // Promo code copy
+  function copyPromoCode() {
+    var code = 'WELCOME';
+    var feedbacks = document.querySelectorAll('#copyFeedback, #copyFeedback2');
+    if (navigator.clipboard && window.isSecureContext) {
+      navigator.clipboard.writeText(code).then(function() {
+        feedbacks.forEach(function(el) { if(el) el.textContent = '✓ Copied to clipboard!'; });
+        setTimeout(function() {
+          feedbacks.forEach(function(el) { if(el) el.textContent = ''; });
+        }, 3000);
+      });
+    } else {
+      var ta = document.createElement('textarea');
+      ta.value = code;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand('copy');
+      document.body.removeChild(ta);
+      feedbacks.forEach(function(el) { if(el) el.textContent = '✓ Copied to clipboard!'; });
+      setTimeout(function() {
+        feedbacks.forEach(function(el) { if(el) el.textContent = ''; });
+      }, 3000);
+    }
+  }
+</script>
+</body>
+</html>
