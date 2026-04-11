@@ -381,8 +381,9 @@ def build():
                 html = re.sub(r'<html\s+lang="[^"]*"', f'<html lang="{lang_code}"', html, count=1)
                 html = fix_asset_paths(html, lang_code, page)
                 
-                # Canonical — regex replacement to handle all URL formats
-                new_canonical = f'{BASE_URL}/{lang_code}/{page}'
+                # Canonical — clean URL without .html extension
+                clean_page = page.replace('.html', '') if page != 'index.html' else ''
+                new_canonical = f'{BASE_URL}/{lang_code}/{clean_page}'.rstrip('/')
                 html = re.sub(
                     r'<link\s+rel="canonical"\s+href="[^"]*"\s*/?>',
                     f'<link rel="canonical" href="{new_canonical}" />',
