@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JackPoker FAQ — Your Questions Answered | jackpoker.xyz</title>
+  <meta name="description" content="Find answers to common questions about JackPoker registration, deposits, bonuses, promo codes, Spin&Win, tournaments, withdrawals, and more.">
+  <meta property="og:title" content="JackPoker FAQ — Your Questions Answered">
+  <meta property="og:description" content="Find answers to common questions about JackPoker registration, deposits, bonuses, promo codes, Spin&Win, tournaments, withdrawals, and more.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://jackpoker.xyz/assets/images/hero-poker.jpg" />
+  <meta property="og:url" content="https://jackpoker.xyz/faq">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="JackPoker FAQ — Your Questions Answered">
+  <meta name="twitter:description" content="Find answers to common questions about JackPoker registration, deposits, bonuses, promo codes, Spin&Win, tournaments, withdrawals, and more.">
+  <meta name="twitter:image" content="https://jackpoker.xyz/assets/images/hero-poker.jpg">
+  <link rel="canonical" href="https://jackpoker.xyz/faq" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/images/jackpoker-favicon.svg" />
+
+                                    
+  <style>
+    /* ===== FAQ PAGE STYLES ===== */
+    .faq-page-content {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+
+    /* Section heading with gradient bar */
+    .faq-section {
+      margin-bottom: 56px;
+    }
+
+    .faq-section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 24px;
+    }
+
+    .faq-section-icon {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(137,59,247,0.15);
+      border: 1px solid rgba(137,59,247,0.3);
+      border-radius: var(--radius-md);
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .faq-section h2 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-white);
+      margin: 0;
+      letter-spacing: -0.02em;
+    }
+
+    /* Override base faq-item for expanded left border */
+    .faq-item.active {
+      border-color: var(--purple-primary);
+      border-left: 3px solid var(--purple-primary);
+    }
+
+    .faq-answer-inner a {
+      color: var(--gold-primary);
+      text-decoration: underline;
+      text-decoration-color: rgba(246,186,70,0.4);
+      transition: color 0.2s, text-decoration-color 0.2s;
+    }
+
+    .faq-answer-inner a:hover {
+      color: var(--gold-hover);
+      text-decoration-color: var(--gold-hover);
+    }
+
+    .faq-answer-inner strong {
+      color: var(--text-white);
+      font-weight: 700;
+    }
+
+    /* Hero section */
+    .faq-hero {
+      padding: calc(var(--header-height) + 56px) 0 48px;
+      background: linear-gradient(180deg, rgba(137,59,247,0.08) 0%, rgba(255,61,0,0.03) 60%, transparent 100%);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+
+    .faq-hero::before {
+      content: '';
+      position: absolute;
+      top: -120px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 400px;
+      background: var(--purple-primary);
+      border-radius: 50%;
+      filter: blur(180px);
+      opacity: 0.09;
+      pointer-events: none;
+    }
+
+    .faq-hero h1 {
+      font-size: clamp(2.2rem, 5vw, 3.2rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+      position: relative;
+    }
+
+    .faq-hero p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 600px;
+      margin: 0 auto 32px;
+      line-height: 1.8;
+    }
+
+    .faq-hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 48px;
+      margin-top: 40px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border-subtle);
+      flex-wrap: wrap;
+    }
+
+    .faq-hero-stat .stat-val {
+      font-family: var(--font-display);
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: var(--gold-primary);
+      line-height: 1;
+    }
+
+    .faq-hero-stat .stat-lbl {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 4px;
+    }
+
+    /* Mid-page promo CTA box */
+    .faq-promo-box {
+      background: linear-gradient(135deg, rgba(137,59,247,0.12) 0%, rgba(255,61,0,0.08) 100%);
+      border: 1px solid rgba(246,186,70,0.35);
+      border-radius: var(--radius-lg);
+      padding: 36px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin: 48px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .faq-promo-box::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--gradient-hero);
+    }
+
+    .faq-promo-box-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold-primary);
+      margin-bottom: 8px;
+    }
+
+    .faq-promo-box h3 {
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin: 0 0 6px;
+      letter-spacing: -0.02em;
+    }
+
+    .faq-promo-box p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin: 0;
+    }
+
+    .faq-promo-code-badge {
+      display: inline-block;
+      background: var(--bg-card);
+      border: 2px solid var(--gold-hover);
+      border-radius: var(--radius-md);
+      padding: 10px 22px;
+      font-family: 'Courier New', monospace;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--gold-primary);
+      letter-spacing: 0.15em;
+      white-space: nowrap;
+    }
+
+    @media (max-width: 640px) {
+      .faq-promo-box {
+        flex-direction: column;
+        padding: 28px 24px;
+        text-align: center;
+      }
+      .faq-hero-stats {
+        gap: 24px;
+      }
+    }
+
+    /* Bottom CTA */
+    .faq-cta-bottom {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      padding: 56px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      margin: 64px 0 0;
+    }
+
+    .faq-cta-bottom::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px;
+      height: 300px;
+      background: var(--purple-primary);
+      border-radius: 50%;
+      filter: blur(200px);
+      opacity: 0.08;
+    }
+
+    .faq-cta-bottom h2 {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
+      position: relative;
+    }
+
+    .faq-cta-bottom p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      max-width: 520px;
+      margin: 0 auto 32px;
+      line-height: 1.8;
+      position: relative;
+    }
+
+    .faq-cta-stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 40px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border-subtle);
+      flex-wrap: wrap;
+      position: relative;
+    }
+
+    .faq-cta-stat .stat-val {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--gold-primary);
+    }
+
+    .faq-cta-stat .stat-lbl {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 4px;
+    }
+
+    /* Table of contents jump links */
+    .faq-toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 48px;
+    }
+
+    .faq-toc a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-full);
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: all 0.2s ease;
+      font-weight: 500;
+    }
+
+    .faq-toc a:hover {
+      background: rgba(137,59,247,0.1);
+      border-color: var(--purple-primary);
+      color: var(--text-white);
+    }
+
+    /* Breadcrumb nav */
+    .breadcrumb-nav {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      background: var(--bg-secondary);
+    }
+
+    .breadcrumb-list {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+    }
+
+    .breadcrumb-list li:not(:last-child)::after {
+      content: '›';
+      margin-left: 8px;
+      color: var(--text-faint);
+    }
+
+    .breadcrumb-list a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb-list a:hover {
+      color: var(--gold-primary);
+    }
+
+    .breadcrumb-list li:last-child {
+      color: var(--text-white);
+      font-weight: 500;
+    }
+  </style>
+
+  <script>
+    (function(){var t=null;try{var m=document.cookie.match(/jp-theme=([^;]+)/);if(m)t=m[1]}catch(e){}document.documentElement.setAttribute("data-theme",t||"dark")})();
+  </script>
+
+  <!-- Organization schema -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "JackPoker",
+  "url": "https://jackpoker.xyz",
+  "logo": "https://jackpoker.xyz/assets/images/jackpoker-logo-official.png",
+  "description": "Modern online poker platform offering Texas Hold'em, PLO, Spin&Win tournaments, and more. Licensed and certified.",
+  "foundingDate": "2021",
+  "sameAs": [
+    "https://jack-poker.com",
+    "https://t.me/jackpokerclub"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "url": "https://jack-poker.com/support",
+    "availableLanguage": ["English","Russian","Portuguese","Spanish"]
+  }
+}
+</script>
+
+  <!-- Breadcrumb schema -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://jackpoker.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "FAQ",
+      "item": "https://jackpoker.xyz/faq"
+    }
+  ]
+}
+</script>
+
+  <!-- FAQ rich snippet schema -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I create a JackPoker account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Click any 'Join JackPoker' or 'Play Now' button on this site to go to the registration page at go.jack-full.com/c41f796e. Fill in your name, email address, and preferred currency, choose a secure password, and confirm you are 18 or older. The entire process takes under two minutes — no download required since JackPoker runs in your browser."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum age to play at JackPoker?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You must be at least 18 years of age to register and play at JackPoker. We also require you to be above the minimum legal gambling age in your country of residence. Age verification may be requested at any time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which countries can join JackPoker?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JackPoker accepts players from most countries worldwide. The following jurisdictions are restricted: Australia, Austria, Comoros, France, Germany, the Netherlands, the United States, Iran, North Korea, Myanmar, and all FATF-blacklisted territories. If you are unsure whether your country is eligible, contact our live support before registering."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to verify my identity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. JackPoker may request identity verification (KYC) before processing a withdrawal or at any time to comply with its licensing obligations. Typical documents include a government-issued photo ID and a proof-of-address document dated within the last three months. Verified accounts also enjoy faster withdrawals."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the WELCOME promo code and what does it give me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Enter promo code WELCOME during registration or on your first deposit to claim a 300% deposit match bonus up to $2,000, plus 20% Instant Cash back on your deposit. For example, a $100 deposit gives you $300 in bonus funds and an immediate $20 cash-back. The code is available exclusively for new players making their first deposit."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I enter the WELCOME promo code?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "During the registration flow or on the cashier deposit page, you will see a 'Promo Code' or 'Bonus Code' field. Type WELCOME (all caps) and click Apply. The bonus will be credited to your account automatically once your deposit is confirmed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are the wagering requirements for the welcome bonus?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The bonus portion of the welcome package carries a wagering requirement that must be met before bonus funds can be withdrawn. The Instant Cash component (20%) is credited as real money and can be withdrawn without wagering restrictions. Full wagering details are listed in the JackPoker Bonus Terms, accessible from within the platform."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there ongoing promotions beyond the welcome offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. JackPoker runs regular promotions including reload bonuses, rakeback deals, leaderboard events, and special tournament overlays. The Bonus Bonanza and Big Bang Sunday are recurring high-value events. Check the Bonuses page and the News section for the latest offers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What payment methods does JackPoker accept?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JackPoker accepts VISA, Bitcoin (BTC), USDT (Tether), Litecoin (LTC), PIX (Brazil), MuchBetter, and Interac (Canada). Cryptocurrency deposits are typically confirmed within minutes after blockchain confirmation. Fiat options such as VISA may take 1–3 business days depending on your bank."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the minimum deposit amount?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The minimum deposit at JackPoker is $10 (or equivalent in your selected currency). Cryptocurrency minimums vary by coin and current network fee levels. To qualify for the maximum WELCOME bonus of $2,000, you would need to deposit at least $667."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How fast are withdrawals processed?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cryptocurrency withdrawals (BTC, USDT, LTC) are typically processed within 1–24 hours, subject to blockchain confirmation times. Fiat withdrawals via VISA, PIX, MuchBetter, and Interac are generally processed within 1–3 business days. Verified accounts receive priority processing."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a minimum or maximum withdrawal amount?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Minimum withdrawal amounts vary by payment method. For cryptocurrencies, the minimum is typically the equivalent of $20. For fiat methods, minimums may be higher. There is no hard maximum withdrawal limit, though large withdrawals may require additional verification. Check the cashier for method-specific limits."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What poker games are available at JackPoker?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JackPoker offers Texas Hold'em (No-Limit and Limit), Pot-Limit Omaha (PLO), and Spin & Win jackpot sit-and-go games. Cash games run around the clock at multiple stake levels, from micro stakes up to high roller tables. A full game lobby overview is available on the Games page."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Spin & Win?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Spin & Win (also known as Jackpot Sit-and-Go) is a fast-format three-player tournament where a random multiplier is spun before the game begins. The prize pool can multiply your buy-in by up to 10,000x. Games typically last under five minutes, making Spin & Win ideal for fast-paced play sessions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What tournaments does JackPoker offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JackPoker hosts a full daily and weekly tournament schedule including multi-table tournaments (MTTs), sit-and-go events, Spin & Win jackpot games, the flagship Bonus Bonanza series, and the Big Bang Sunday — a high-overlay weekly tournament with a guaranteed prize pool. See the full schedule on the Tournaments page."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Bonus Bonanza?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Bonus Bonanza is JackPoker's flagship tournament series featuring large guaranteed prize pools and multiple daily flights. It caters to all skill levels with buy-ins starting from just a few dollars up to high-roller events. The series runs continuously and is one of JackPoker's most popular recurring promotions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need to download software to play?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No download is required. JackPoker is fully browser-based and runs directly in modern web browsers on desktop and laptop computers. Simply register, log in, and start playing — no plugins, no Java, no installation."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there an Android or iOS mobile app?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JackPoker offers a dedicated Android app (.APK) available for direct download from the platform — bypassing the Google Play Store restriction on gambling apps. iOS players can access JackPoker via the mobile browser (Safari), which delivers a full responsive experience. A dedicated iOS app may be available; check the platform for the latest download options."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are HUDs (Heads-Up Displays) allowed at JackPoker?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JackPoker does not support third-party HUD software that reads hand history files in real time during play. The platform is designed to create a fair environment for all players. Using real-time tracking software that provides an unfair advantage over opponents is prohibited under the platform's terms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is JackPoker licensed and regulated?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. JackPoker is operated by Jack La International Limitada and holds a gaming license issued by the Government of the Autonomous Island of Anjouan, Union of Comoros (License No. ALSI-202408001-FI1). The platform has been independently tested and certified by iTech Labs, BMM TestLabs, and GLI (Gaming Laboratories International) for fairness and game integrity."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What certifications does JackPoker have?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JackPoker's games and RNG (Random Number Generator) are certified by three independent testing agencies: iTech Labs, BMM TestLabs, and Gaming Laboratories International (GLI). These certifications confirm that game outcomes are truly random and the software meets international standards for fair play."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I contact JackPoker support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JackPoker offers 24/7 customer support via live chat (available directly inside the platform), email at support@jack-poker.com, and Telegram at t.me/jackpokerclub. Live chat is the fastest option for urgent inquiries and is staffed around the clock in multiple languages."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What languages does JackPoker support?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JackPoker supports 17 languages including English, Russian, Spanish, Italian, Portuguese, Vietnamese, Thai, Malay, Korean, Arabic, Japanese, Polish, Czech, Hindi, Turkish, Filipino (Tagalog), and French. The language switcher is available at the top of every page."
+      }
+    }
+  ]
+}
+</script>
+<link rel="alternate" hreflang="en" href="https://jackpoker.xyz/faq.html" />
+<link rel="alternate" hreflang="ru" href="https://jackpoker.xyz/ru/faq.html" />
+<link rel="alternate" hreflang="es" href="https://jackpoker.xyz/es/faq.html" />
+<link rel="alternate" hreflang="it" href="https://jackpoker.xyz/it/faq.html" />
+<link rel="alternate" hreflang="pt" href="https://jackpoker.xyz/pt/faq.html" />
+<link rel="alternate" hreflang="vi" href="https://jackpoker.xyz/vi/faq.html" />
+<link rel="alternate" hreflang="th" href="https://jackpoker.xyz/th/faq.html" />
+<link rel="alternate" hreflang="ms" href="https://jackpoker.xyz/ms/faq.html" />
+<link rel="alternate" hreflang="ko" href="https://jackpoker.xyz/ko/faq.html" />
+<link rel="alternate" hreflang="ar" href="https://jackpoker.xyz/ar/faq.html" />
+<link rel="alternate" hreflang="ja" href="https://jackpoker.xyz/ja/faq.html" />
+<link rel="alternate" hreflang="pl" href="https://jackpoker.xyz/pl/faq.html" />
+<link rel="alternate" hreflang="cs" href="https://jackpoker.xyz/cs/faq.html" />
+<link rel="alternate" hreflang="hi" href="https://jackpoker.xyz/hi/faq.html" />
+<link rel="alternate" hreflang="tr" href="https://jackpoker.xyz/tr/faq.html" />
+<link rel="alternate" hreflang="tl" href="https://jackpoker.xyz/tl/faq.html" />
+<link rel="alternate" hreflang="fr" href="https://jackpoker.xyz/fr/faq.html" />
+<link rel="alternate" hreflang="x-default" href="https://jackpoker.xyz/faq.html" />
+</head>
+<body>
+
+  <!-- ============================================
+       HEADER
+       ============================================ -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="JackPoker Home">
+        <svg class="logo-icon" width="189" height="47" viewBox="0 0 189 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="JackPoker">
+<path d="M25.4001 1C24.0001 1 22.8001 2.2 22.8001 3.6C22.8001 5.1 23.8343 5.9 25.3001 5.9H28.7001C28.7001 5.9 31.3001 5.9 31.3001 8.3C31.3001 10.7 28.7001 10.7 28.7001 10.7H8.30008C6.90008 10.7 5.70008 11.9 5.70008 13.3C5.70008 14.7 6.90008 15.9 8.30008 15.9H22.5001C22.5001 15.9 25.1001 15.9 25.1001 18.3C25.1001 20.7 22.5001 20.7 22.5001 20.7H11.4001C10.0001 20.7 8.80008 21.9 8.80008 23.3C8.80008 24.7 10.0001 25.9 11.4001 25.9H22.6001C22.6001 25.9 25.2001 25.9 25.2001 28.3C25.2001 30.7 22.6001 30.7 22.6001 30.7H21.8001C20.4001 30.7 19.2001 31.9 19.2001 33.3C19.2001 34.7 20.4001 35.9 21.8001 35.9H28.8001C28.8001 35.9 31.4001 35.9 31.4001 38.3C31.4001 40.7 28.8001 40.7 28.8001 40.7H14.0001C12.6001 40.7 11.4001 41.9 11.4001 43.3C11.4001 44.7 12.6001 45.9 14.0001 45.9H34.3001C36.5001 45.9 38.4001 44.8 39.5001 43C41.1501 40.25 42.7751 37.4999 44.4001 34.7499C46.0251 31.9999 47.6501 29.25 49.3001 26.5C50.4001 24.6 50.4001 22.3 49.3001 20.4C47.6501 17.6501 46.0252 14.9001 44.4002 12.1502C42.7752 9.4002 41.1501 6.65001 39.5001 3.9C38.4001 2.1 36.4001 1 34.3001 1H25.4001Z" fill="url(#jpLogoGrad)"/>
+<path d="M11.3999 3.6C11.3999 2.2 12.5999 1 13.9999 1H17.5999C18.9999 1 20.1999 2.2 20.1999 3.6C20.1999 5 18.9999 6.2 17.5999 6.2H13.9999C12.5999 6.2 11.3999 5 11.3999 3.6Z" fill="url(#jpLogoGrad)"/>
+<path d="M0 23.5001C0 22.1001 1.2 20.9001 2.6 20.9001H3.6C5 20.9001 6.2 22.1001 6.2 23.5001C6.2 24.9001 5 26.1001 3.6 26.1001H2.6C1.2 26.1001 0 24.9001 0 23.5001Z" fill="url(#jpLogoGrad)"/>
+<path d="M8.30008 30.8001C6.90008 30.8001 5.70008 32.0001 5.70008 33.4001C5.70008 34.9001 6.90008 36.1001 8.30008 36.0001H14.0001C15.4001 36.0001 16.6001 34.8001 16.6001 33.4001C16.6001 32.0001 15.4001 30.8001 14.0001 30.8001H8.30008Z" fill="url(#jpLogoGrad)"/>
+<path d="M69.7955 27.3088C69.7955 28.8312 69.6204 30.0793 69.2704 31.0533C68.9203 32.0273 68.3261 32.7598 67.4876 33.2509C66.6572 33.7502 65.5257 33.9998 64.0929 33.9998C63.7591 33.9998 63.3887 33.9712 62.9817 33.9139C62.5747 33.8648 62.3142 33.832 62.2002 33.8157L62.5177 31.2252H63.7144C65.1797 31.2252 65.9164 30.4231 65.9246 28.8189V15.265L64.0441 14.5039V12.3676L71.676 12.2449V14.5039L69.7955 15.265V27.3088Z" fill="white"/>
+<path d="M81.4937 28.3401C81.4937 28.3728 81.2779 28.557 80.8465 28.8926C80.415 29.2281 79.8981 29.5351 79.2957 29.8133C78.6933 30.0834 78.0746 30.2185 77.4396 30.2185C76.2185 30.2185 75.2619 29.8788 74.57 29.1995C73.8862 28.512 73.5443 27.538 73.5443 26.2775C73.5443 24.837 74.0571 23.7853 75.0829 23.1223C76.1086 22.4594 77.6024 22.1279 79.5643 22.1279H81.3227V20.7406C81.3227 19.5129 80.6796 18.9031 79.3934 18.9113C79.0107 18.9113 78.6566 18.94 78.331 18.9973C78.0054 19.0545 77.7449 19.1159 77.5495 19.1814C77.3622 19.2387 77.2442 19.2755 77.1954 19.2919L76.8168 20.8756H74.57L74.399 17.1557C74.5456 17.1066 74.9038 17.0002 75.4736 16.8365C76.0516 16.6728 76.7395 16.5173 77.5373 16.37C78.3432 16.2226 79.1044 16.149 79.8207 16.149C81.107 16.149 82.1286 16.3127 82.8857 16.6401C83.6428 16.9593 84.1964 17.4831 84.5464 18.2115C84.8965 18.9318 85.0715 19.9017 85.0715 21.1212V27.3334L86.952 27.7876V29.8011L81.9455 29.9729L81.4937 28.3401ZM77.1709 25.897C77.1709 26.388 77.2971 26.7645 77.5495 27.0264C77.81 27.2802 78.1763 27.407 78.6485 27.407C79.0474 27.407 79.4422 27.3006 79.833 27.0878C80.2237 26.8668 80.5534 26.6418 80.822 26.4126C81.0907 26.1752 81.2576 26.0197 81.3227 25.9461V24.2641H79.894C78.9253 24.2641 78.2292 24.3951 77.8059 24.657C77.3826 24.9189 77.1709 25.3322 77.1709 25.897Z" fill="white"/>
+<path d="M100.311 28.0823C99.7492 28.5897 99.0124 29.0726 98.1007 29.531C97.1971 29.9893 96.1428 30.2185 94.938 30.2185C92.8866 30.2185 91.291 29.6169 90.1513 28.4137C89.0116 27.2106 88.4417 25.5327 88.4417 23.3802C88.4417 21.1376 89.0442 19.3737 90.249 18.0888C91.4619 16.7956 93.1511 16.149 95.3166 16.149C95.9515 16.149 96.5906 16.2145 97.2337 16.3454C97.885 16.4764 98.4263 16.6114 98.8578 16.7506C99.2974 16.8815 99.5742 16.9715 99.6881 17.0206L99.566 21.1457H97.3192L96.9651 19.3656C96.8836 19.3492 96.6801 19.3124 96.3545 19.2551C96.0289 19.1896 95.6585 19.1569 95.2433 19.1569C94.3234 19.1569 93.6029 19.472 93.0819 20.1022C92.5691 20.7324 92.3126 21.6573 92.3126 22.8768C92.3126 24.2682 92.5731 25.3404 93.0942 26.0934C93.6233 26.8382 94.4048 27.2106 95.4387 27.2106C96.0899 27.2106 96.6598 27.1124 97.1482 26.916C97.6448 26.7113 98.06 26.5026 98.3937 26.2898C98.7275 26.077 98.9514 25.9379 99.0654 25.8724L100.311 28.0823Z" fill="white"/>
+<path d="M108.602 21.4527L110.3 18.8868L109.201 18.5307V16.5173L115.66 16.3945V18.5307L113.902 18.8622L111.582 22.1525L114.378 27.3579L116.283 27.9595V29.9729H111.655L108.553 23.8344H106.954V27.3334L108.334 27.9595V29.9729H101.202V27.9595L103.205 27.3334V13.2025L101.202 12.6991V10.6857L106.954 10.4893V21.4527H108.602Z" fill="white"/>
+<path d="M117.406 27.8367L119.275 27.0756V15.265L117.406 14.5039V12.3676L123.158 12.2449H125.527C127.423 12.2449 128.909 12.7155 129.984 13.6567C131.066 14.598 131.608 15.8871 131.608 17.524C131.608 19.6029 130.993 21.1703 129.764 22.2261C128.543 23.2819 126.78 23.8099 124.477 23.8099H123.158V27.0756L125.026 27.8367V29.9729H117.406V27.8367ZM124.477 20.8756C125.527 20.8756 126.333 20.6342 126.894 20.1513C127.456 19.6602 127.737 18.9522 127.737 18.0274C127.737 17.1925 127.513 16.5255 127.065 16.0262C126.626 15.5188 125.991 15.265 125.16 15.265H123.158V20.8756H124.477Z" fill="white"/>
+<path d="M139.74 16.149C141.751 16.149 143.302 16.7383 144.393 17.9169C145.492 19.0955 146.041 20.7692 146.041 22.9382C146.041 24.4278 145.764 25.721 145.211 26.8177C144.665 27.9145 143.892 28.7575 142.891 29.3468C141.89 29.9279 140.713 30.2185 139.362 30.2185C135.112 30.2185 132.988 27.9145 132.988 23.3065C132.988 21.8169 133.264 20.536 133.818 19.4638C134.38 18.3916 135.169 17.5731 136.187 17.0084C137.205 16.4354 138.389 16.149 139.74 16.149ZM139.606 19.1569C138.662 19.1569 137.966 19.4638 137.518 20.0776C137.078 20.6915 136.859 21.7269 136.859 23.1837C136.859 24.5751 137.066 25.5941 137.481 26.2407C137.905 26.8873 138.572 27.2106 139.484 27.2106C140.404 27.2106 141.08 26.8873 141.511 26.2407C141.942 25.5941 142.158 24.5342 142.158 23.061C142.158 21.7514 141.955 20.7733 141.548 20.1267C141.141 19.4802 140.493 19.1569 139.606 19.1569Z" fill="white"/>
+<path d="M154.809 21.4527L156.506 18.8868L155.407 18.5307V16.5173L161.867 16.3945V18.5307L160.108 18.8622L157.788 22.1525L160.585 27.3579L162.49 27.9595V29.9729H157.862L154.76 23.8344H153.16V27.3334L154.54 27.9595V29.9729H147.409V27.9595L149.412 27.3334V13.2025L147.409 12.6991V10.6857L153.16 10.4893V21.4527H154.809Z" fill="white"/>
+<path d="M167.508 24.0186C167.573 25.0253 167.875 25.811 168.412 26.3758C168.957 26.9323 169.666 27.2106 170.537 27.2106C171.155 27.2106 171.774 27.1247 172.393 26.9528C173.02 26.7727 173.536 26.5927 173.944 26.4126C174.359 26.2243 174.623 26.0934 174.737 26.0197L175.812 28.1068C175.812 28.1396 175.519 28.3483 174.933 28.733C174.355 29.1095 173.642 29.4532 172.796 29.7642C171.957 30.0671 171.062 30.2185 170.109 30.2185C167.993 30.2185 166.381 29.6292 165.274 28.4506C164.167 27.272 163.613 25.6023 163.613 23.4415C163.613 21.9847 163.878 20.7079 164.407 19.6111C164.944 18.5062 165.713 17.655 166.715 17.0575C167.716 16.4518 168.904 16.149 170.28 16.149C172.112 16.149 173.516 16.6769 174.493 17.7327C175.47 18.7885 175.958 20.2291 175.958 22.0542C175.958 22.4553 175.938 22.8441 175.897 23.2206C175.857 23.5971 175.828 23.8344 175.812 23.9326L167.508 24.0186ZM170.036 19.1569C169.352 19.1569 168.795 19.3901 168.363 19.8566C167.932 20.315 167.663 20.9207 167.557 21.6737H172.087C172.087 20.9207 171.921 20.315 171.587 19.8566C171.253 19.3901 170.736 19.1569 170.036 19.1569Z" fill="white"/>
+<path d="M183.199 18.1256C183.199 18.0928 183.395 17.9005 183.786 17.5486C184.176 17.1966 184.628 16.8774 185.141 16.591C185.662 16.2963 186.175 16.149 186.68 16.149C187.079 16.149 187.453 16.1817 187.803 16.2472C188.153 16.3127 188.426 16.3822 188.621 16.4559C188.825 16.5296 188.951 16.5746 189 16.591L188.804 21.4281H186.558L186.179 19.2919C185.748 19.2919 185.328 19.3983 184.921 19.6111C184.522 19.8157 184.18 20.0449 183.896 20.2986C183.619 20.5442 183.48 20.6751 183.48 20.6915V27.3334L185.984 27.9595V29.9729H177.729V27.9595L179.732 27.3334V19.1569L177.729 18.5307V16.5173L182.98 16.3945L183.199 18.1256Z" fill="white"/>
+<defs>
+<linearGradient id="jpLogoGrad" x1="0" y1="33.44" x2="50.74" y2="33.44" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8032FF"/>
+<stop offset="1" stop-color="#FF3D00"/>
+</linearGradient>
+</defs>
+</svg>
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html" data-i18n="nav_home">Home</a>
+        <a href="games.html" data-i18n="nav_games">Games</a>
+        <a href="bonuses.html" data-i18n="nav_bonuses">Bonuses</a>
+        <a href="tournaments.html" data-i18n="nav_tournaments">Tournaments</a>
+        <a href="news.html" data-i18n="nav_news">News</a>
+        <a href="promo-code.html" data-i18n="nav_promo">Promo Code</a>
+      </nav>
+      <a href="https://go.jack-full.com/c41f796e" class="header-cta header-cta-desktop" data-i18n="nav_play">Play Now ♠</a>
+      <div class="lang-switcher">
+  <button class="lang-btn" aria-label="Change language" aria-expanded="false">
+    <span class="lang-flag">GB</span>
+    <span class="lang-label">English</span>
+    <svg class="lang-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  </button>
+  <div class="lang-dropdown" role="menu">
+    <a href="faq.html" class="active" role="menuitem" hreflang="en"><span class="lang-flag">GB</span><span>English</span></a>
+    <a href="ru/faq.html" role="menuitem" hreflang="ru"><span class="lang-flag">RU</span><span>Русский</span></a>
+    <a href="es/faq.html" role="menuitem" hreflang="es"><span class="lang-flag">ES</span><span>Español</span></a>
+    <a href="it/faq.html" role="menuitem" hreflang="it"><span class="lang-flag">IT</span><span>Italiano</span></a>
+    <a href="pt/faq.html" role="menuitem" hreflang="pt"><span class="lang-flag">BR</span><span>Português</span></a>
+    <a href="vi/faq.html" role="menuitem" hreflang="vi"><span class="lang-flag">VN</span><span>Tiếng Việt</span></a>
+    <a href="th/faq.html" role="menuitem" hreflang="th"><span class="lang-flag">TH</span><span>ไทย</span></a>
+    <a href="ms/faq.html" role="menuitem" hreflang="ms"><span class="lang-flag">MY</span><span>Bahasa Melayu</span></a>
+    <a href="ko/faq.html" role="menuitem" hreflang="ko"><span class="lang-flag">KR</span><span>한국어</span></a>
+    <a href="ar/faq.html" role="menuitem" hreflang="ar"><span class="lang-flag">SA</span><span>العربية</span></a>
+    <a href="ja/faq.html" role="menuitem" hreflang="ja"><span class="lang-flag">JP</span><span>日本語</span></a>
+    <a href="pl/faq.html" role="menuitem" hreflang="pl"><span class="lang-flag">PL</span><span>Polski</span></a>
+    <a href="cs/faq.html" role="menuitem" hreflang="cs"><span class="lang-flag">CZ</span><span>Čeština</span></a>
+    <a href="hi/faq.html" role="menuitem" hreflang="hi"><span class="lang-flag">IN</span><span>हिन्दी</span></a>
+    <a href="tr/faq.html" role="menuitem" hreflang="tr"><span class="lang-flag">TR</span><span>Türkçe</span></a>
+    <a href="tl/faq.html" role="menuitem" hreflang="tl"><span class="lang-flag">PH</span><span>Filipino</span></a>
+    <a href="fr/faq.html" role="menuitem" hreflang="fr"><span class="lang-flag">FR</span><span>Français</span></a>
+  </div>
+</div>
+        <button class="theme-toggle" aria-label="Toggle theme">
+       <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 1.78a1 1 0 011.415 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM18 9a1 1 0 110 2h-1a1 1 0 110-2h1zM3 9a1 1 0 110 2H2a1 1 0 110-2h1zm12.657 6.071l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 011.414-1.414zM5.757 4.929a1 1 0 010 1.414l-.707.707A1 1 0 013.636 5.636l.707-.707a1 1 0 011.414 0zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1z" fill="currentColor"/><circle cx="10" cy="10" r="3.5" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+       <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/></svg>
+     </button>
+  </div>
+</header>
+
+<!-- ============================================
+     BREADCRUMB
+     ============================================ -->
+<nav class="breadcrumb-nav" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">Home</span></a>
+        <meta itemprop="position" content="1" />
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span itemprop="name">FAQ</span>
+        <meta itemprop="position" content="2" />
+      </li>
+    </ol>
+  </div>
+</nav>
+
+<!-- ============================================
+     HERO
+     ============================================ -->
+<section class="faq-hero">
+  <div class="container">
+    <div class="hero-badge">♠ Help Center</div>
+    <h1>Have Questions?<br><span class="gold-text">We Have Answers.</span></h1>
+    <p>Everything you need to know about registration, bonuses, deposits, games, and support — all in one place.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="https://go.jack-full.com/c41f796e" class="btn btn-primary" style="padding:14px 32px;font-weight:700;font-size:1rem;border-radius:var(--radius-full);display:inline-flex;align-items:center;gap:8px;" target="_blank" rel="noopener noreferrer">
+        Join JackPoker ♠
+      </a>
+      <a href="promo-code.html" class="btn btn-secondary" style="padding:14px 32px;font-weight:700;font-size:1rem;border-radius:var(--radius-full);display:inline-flex;align-items:center;gap:8px;">
+        Claim WELCOME Code
+      </a>
+    </div>
+    <div class="faq-hero-stats">
+      <div class="faq-hero-stat">
+        <div class="stat-val">300%</div>
+        <div class="stat-lbl">Welcome Match</div>
+      </div>
+      <div class="faq-hero-stat">
+        <div class="stat-val">$2,000</div>
+        <div class="stat-lbl">Max Bonus</div>
+      </div>
+      <div class="faq-hero-stat">
+        <div class="stat-val">24/7</div>
+        <div class="stat-lbl">Live Support</div>
+      </div>
+      <div class="faq-hero-stat">
+        <div class="stat-val">17</div>
+        <div class="stat-lbl">Languages</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     FAQ CONTENT
+     ============================================ -->
+<section class="section" style="padding-top: 56px;">
+  <div class="container">
+    <div class="faq-page-content">
+
+      <!-- Table of Contents -->
+      <nav class="faq-toc" aria-label="Jump to section">
+        <a href="#getting-started">♣ Getting Started</a>
+        <a href="#bonuses">♦ Bonuses & Promo Codes</a>
+        <a href="#payments">♠ Deposits & Withdrawals</a>
+        <a href="#games">♥ Games & Tournaments</a>
+        <a href="#software">&#128187; Software & Mobile</a>
+        <a href="#security">&#128274; Security & Support</a>
+      </nav>
+
+      <!-- ===== SECTION 1: GETTING STARTED ===== -->
+      <div class="faq-section" id="getting-started">
+        <div class="faq-section-header">
+          <div class="faq-section-icon">♣</div>
+          <h2>Getting Started</h2>
+        </div>
+        <div class="faq-list">
+
+          <div class="faq-item fade-in-up">
+            <button class="faq-question" aria-expanded="false">
+              How do I create a JackPoker account?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                Click any <strong>Join JackPoker</strong> or <strong>Play Now</strong> button to go directly to the <a href="https://go.jack-full.com/c41f796e" target="_blank" rel="noopener noreferrer">registration page</a>. Enter your name, email address, and preferred currency, choose a secure password, and confirm that you are 18 or older. The entire process takes under two minutes — no software download is required, since JackPoker runs entirely in your browser.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item fade-in-up">
+            <button class="faq-question" aria-expanded="false">
+              What is the minimum age to play at JackPoker?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                You must be at least <strong>18 years of age</strong> to register and play at JackPoker. We also require you to be above the minimum legal gambling age in your country of residence. Age verification may be requested at any time during your account lifetime.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item fade-in-up">
+            <button class="faq-question" aria-expanded="false">
+              Which countries can join JackPoker?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                JackPoker accepts players from most countries worldwide. The following jurisdictions are <strong>restricted</strong>: Australia, Austria, Comoros, France, Germany, the Netherlands, the United States, Iran, North Korea, Myanmar, and all FATF-blacklisted territories. We reserve the right to restrict additional countries at our discretion. If you are unsure whether your country is eligible, contact our live support before registering.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item fade-in-up">
+            <button class="faq-question" aria-expanded="false">
+              Do I need to verify my identity (KYC)?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                Yes. JackPoker may request identity verification (KYC) before processing a withdrawal or at any time to comply with our licensing obligations. Typical documents include a <strong>government-issued photo ID</strong> (passport, national ID, or driver's licence) and a <strong>proof-of-address document</strong> dated within the last three months (utility bill or bank statement). Verified accounts enjoy faster withdrawals and higher limits.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /getting-started -->
+
+      <!-- ===== MID-PAGE PROMO CTA ===== -->
+      <div class="faq-promo-box">
+        <div>
+          <div class="faq-promo-box-label">Exclusive Welcome Offer</div>
+          <h3>300% Bonus + 20% Instant Cash</h3>
+          <p>New players only. Enter code <strong style="color:var(--gold-primary);">WELCOME</strong> on your first deposit. Up to $2,000 in bonus funds.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:14px;flex-shrink:0;">
+          <span class="faq-promo-code-badge">WELCOME</span>
+          <a href="promo-code.html" class="btn btn-gold" style="padding:12px 28px;font-weight:700;font-size:0.9rem;border-radius:var(--radius-full);display:inline-block;background:var(--gradient-btn-gold);color:#000;">
+            Claim Now →
+          </a>
+        </div>
+      </div>
+
+      <!-- ===== SECTION 2: BONUSES & PROMO CODES ===== -->
+      <div class="faq-section" id="bonuses">
+        <div class="faq-section-header">
+          <div class="faq-section-icon">♦</div>
+          <h2>Bonuses &amp; Promo Codes</h2>
+        </div>
+        <div class="faq-list">
+
+          <div class="faq-item fade-in-up">
+            <button class="faq-question" aria-expanded="false">
+              What is the WELCOME promo code and what does it give me?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                Enter promo code <strong>WELCOME</strong> during registration or on your first deposit to claim a <strong>300% deposit match bonus up to $2,000</strong>, plus <strong>20% Instant Cash</strong> back on your deposit amount. For example, depositing $100 gives you $300 in bonus funds and an immediate $20 cash-back credited to your real-money balance. The code is exclusively available to new players making their very first deposit. See the <a href="promo-code.html">Promo Code page</a> for full details.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item fade-in-up">
+            <button class="faq-question" aria-expanded="false">
+              How do I enter the WELCOME promo code?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                During the registration flow or on the cashier deposit page, look for the <strong>Promo Code</strong> or <strong>Bonus Code</strong> field. Type <strong>WELCOME</strong> (all caps) and click Apply. The bonus is credited to your account automatically once your deposit is confirmed — no manual claim required.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item fade-in-up">
+            <button class="faq-question" aria-expanded="false">
+              What wagering requirements apply to the welcome bonus?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                The bonus portion of the welcome package carries a wagering requirement that must be met before bonus funds convert to withdrawable cash. The <strong>20% Instant Cash</strong> component, however, is credited as real money and carries no wagering restrictions — it's yours to use or withdraw immediately. Full wagering terms and release conditions are detailed in the <a href="bonuses.html">Bonuses</a> section and within the JackPoker platform's bonus terms.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item fade-in-up">
+            <button class="faq-question" aria-expanded="false">
+              Are there ongoing promotions beyond the welcome offer?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                Absolutely. JackPoker runs a full calendar of recurring promotions including reload bonuses, rakeback deals, leaderboard challenges, and special tournament overlays. The <strong>Bonus Bonanza</strong> series and the <strong>Big Bang Sunday</strong> are flagship weekly events with large guaranteed prize pools. Check the <a href="bonuses.html">Bonuses page</a> and the <a href="news.html">News section</a> regularly for the latest offers.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /bonuses -->
+
+      <!-- ===== SECTION 3: DEPOSITS & WITHDRAWALS ===== -->
+      <div class="faq-section" id="payments">
+        <div class="faq-section-header">
+          <div class="faq-section-icon">♠</div>
+          <h2>Deposits &amp; Withdrawals</h2>
+        </div>
+        <div class="faq-list">
+
+          <div class="faq-item fade-in-up">
+            <button class="faq-question" aria-expanded="false">
+              What payment methods does JackPoker accept?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                JackPoker supports a broad range of deposit and withdrawal options:
+                <ul style="margin-top:10px;padding-left:20px;line-height:2;">
+                  <li><strong>Cards:</strong> VISA</li>
+                  <li><strong>Crypto:</strong> Bitcoin (BTC), USDT (Tether), Litecoin (LTC)</li>
+                  <li><strong>E-wallets &amp; Local:</strong> MuchBetter, PIX (Brazil), Interac (Canada)</li>
+                </ul>
+                Cryptocurrency deposits are typically confirmed within minutes after blockchain confirmation. Fiat deposits may take 1–3 business days depending on your bank.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item fade-in-up">
+            <button class="faq-question" aria-expanded="false">
+              What is the minimum deposit amount?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                The minimum deposit at JackPoker is <strong>$10</strong> (or equivalent in your selected currency). Cryptocurrency minimums vary by coin and current network fee levels. To qualify for the full <strong>$2,000 maximum WELCOME bonus</strong>, a deposit of at least $667 is required (300% of $667 ≈ $2,000).
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item fade-in-up">
+            <button class="faq-question" aria-expanded="false">
+              How fast are withdrawals processed?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                Withdrawal speeds depend on the method you choose:
+                <ul style="margin-top:10px;padding-left:20px;line-height:2;">
+                  <li><strong>Crypto (BTC, USDT, LTC):</strong> Typically 1–24 hours after blockchain confirmation</li>
+                  <li><strong>PIX:</strong> Usually instant to a few hours</li>
+                  <li><strong>MuchBetter:</strong> 1–24 hours</li>
+                  <li><strong>VISA / Interac:</strong> 1–3 business days</li>
+                </ul>
+                Fully verified accounts receive priority processing, which can significantly shorten wait times.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item fade-in-up">
+            <button class="faq-question" aria-expanded="false">
+              Is there a minimum or maximum withdrawal amount?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                Minimum withdrawal amounts vary by payment method — typically the equivalent of <strong>$20</strong> for cryptocurrencies and higher for some fiat methods. There is no hard maximum withdrawal ceiling, though large amounts may require additional verification steps to process. Exact method-specific limits are displayed in the cashier when you select your withdrawal option.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /payments -->
+
+      <!-- ===== SECTION 4: GAMES & TOURNAMENTS ===== -->
+      <div class="faq-section" id="games">
+        <div class="faq-section-header">
+          <div class="faq-section-icon">♥</div>
+          <h2>Games &amp; Tournaments</h2>
+        </div>
+        <div class="faq-list">
+
+          <div class="faq-item fade-in-up">
+            <button class="faq-question" aria-expanded="false">
+              What poker games are available at JackPoker?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                JackPoker offers three core game types:
+                <ul style="margin-top:10px;padding-left:20px;line-height:2;">
+                  <li><strong>Texas Hold'em</strong> — the world's most popular poker format, available in No-Limit and Limit variants across micro, mid, and high stakes</li>
+                  <li><strong>Pot-Limit Omaha (PLO)</strong> — the action-heavy four-card variant with PLO4 and PLO5 tables</li>
+                  <li><strong>Spin &amp; Win</strong> — fast-format jackpot sit-and-go games with multiplier prize pools</li>
+                </ul>
+                Cash games run 24/7. A full lobby overview is available on the <a href="games.html">Games page</a>.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item fade-in-up">
+            <button class="faq-question" aria-expanded="false">
+              What is Spin &amp; Win?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                Spin &amp; Win (also known as Jackpot Sit-and-Go) is a <strong>fast three-player tournament</strong> where a random multiplier is spun before the game begins — determining the total prize pool. The multiplier can range from 2x up to <strong>10,000x your buy-in</strong>. Most games complete in under five minutes, making Spin &amp; Win the ideal format for quick, high-excitement sessions. Explore available buy-in levels on the <a href="games.html">Games page</a>.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item fade-in-up">
+            <button class="faq-question" aria-expanded="false">
+              What tournaments does JackPoker run?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                JackPoker's tournament schedule includes:
+                <ul style="margin-top:10px;padding-left:20px;line-height:2;">
+                  <li><strong>Daily Multi-Table Tournaments (MTTs)</strong> at various buy-in levels</li>
+                  <li><strong>Sit &amp; Go events</strong> — single-table and multi-table</li>
+                  <li><strong>Spin &amp; Win</strong> — jackpot SNGs running continuously</li>
+                  <li><strong>Bonus Bonanza Series</strong> — flagship recurring tournament series with large guarantees</li>
+                  <li><strong>Big Bang Sunday</strong> — weekly high-overlay event with guaranteed prize pools</li>
+                </ul>
+                See the complete schedule on the <a href="tournaments.html">Tournaments page</a>.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item fade-in-up">
+            <button class="faq-question" aria-expanded="false">
+              What is the Bonus Bonanza?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                Bonus Bonanza is JackPoker's flagship tournament series, featuring <strong>large guaranteed prize pools</strong> and multiple daily and weekly flights. It caters to all skill levels, with buy-ins starting from just a few dollars and extending to high-roller events. The series runs continuously throughout the year and consistently draws JackPoker's largest player fields. Full schedule and buy-in details are on the <a href="tournaments.html">Tournaments page</a>.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /games -->
+
+      <!-- ===== MID-PAGE PROMO CTA 2 ===== -->
+      <div class="faq-promo-box">
+        <div>
+          <div class="faq-promo-box-label">Ready to Play?</div>
+          <h3>Join the Tables — No Download Needed</h3>
+          <p>Browser-based play. Android app available. iOS via mobile browser. Register in under 2 minutes.</p>
+        </div>
+        <div style="flex-shrink:0;">
+          <a href="https://go.jack-full.com/c41f796e" class="btn btn-primary" style="padding:14px 28px;font-weight:700;font-size:0.95rem;border-radius:var(--radius-full);display:inline-block;background:var(--gradient-btn-cta);color:#fff;white-space:nowrap;" target="_blank" rel="noopener noreferrer">
+            Play Now ♠
+          </a>
+        </div>
+      </div>
+
+      <!-- ===== SECTION 5: SOFTWARE & MOBILE ===== -->
+      <div class="faq-section" id="software">
+        <div class="faq-section-header">
+          <div class="faq-section-icon" style="font-size:1.1rem;">&#128187;</div>
+          <h2>Software &amp; Mobile</h2>
+        </div>
+        <div class="faq-list">
+
+          <div class="faq-item fade-in-up">
+            <button class="faq-question" aria-expanded="false">
+              Do I need to download any software to play?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                <strong>No download is required.</strong> JackPoker is fully browser-based and runs directly in all modern desktop and laptop browsers — Chrome, Firefox, Safari, and Edge. Simply <a href="https://go.jack-full.com/c41f796e" target="_blank" rel="noopener noreferrer">register your account</a>, log in, and start playing instantly. No plugins, no Java, and no installation steps.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item fade-in-up">
+            <button class="faq-question" aria-expanded="false">
+              Is there an Android or iOS mobile app?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                <strong>Android:</strong> JackPoker offers a dedicated Android app (.APK) available for direct download from the platform — bypassing Google Play Store restrictions on real-money gaming apps. Visit the platform from your Android device and follow the download link in the lobby.<br><br>
+                <strong>iOS:</strong> iPhone and iPad players can access the full JackPoker experience directly through Safari or any mobile browser. The responsive interface is optimised for touch play. A dedicated iOS app may also be available — check the platform for the latest status.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item fade-in-up">
+            <button class="faq-question" aria-expanded="false">
+              Are HUDs (Heads-Up Displays) allowed?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                JackPoker <strong>does not support</strong> third-party HUD software that reads hand history files in real time during play. The platform is designed to create a level playing field for all skill levels. Using real-time data-mining or tracking software that provides an unfair advantage over other players is prohibited under JackPoker's Terms and Conditions and may result in account action.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /software -->
+
+      <!-- ===== SECTION 6: SECURITY & SUPPORT ===== -->
+      <div class="faq-section" id="security">
+        <div class="faq-section-header">
+          <div class="faq-section-icon" style="font-size:1.1rem;">&#128274;</div>
+          <h2>Security &amp; Support</h2>
+        </div>
+        <div class="faq-list">
+
+          <div class="faq-item fade-in-up">
+            <button class="faq-question" aria-expanded="false">
+              Is JackPoker licensed and regulated?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                Yes. JackPoker is operated by <strong>Jack La International Limitada</strong> (Costa Rica) and holds a gaming licence issued by the <strong>Government of the Autonomous Island of Anjouan, Union of Comoros</strong> (Licence No. <em>ALSI-202408001-FI1</em>). All games and software have been independently tested and certified for fairness and integrity.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item fade-in-up">
+            <button class="faq-question" aria-expanded="false">
+              What testing certifications does JackPoker hold?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                JackPoker's RNG (Random Number Generator) and game outcomes are certified by three independent testing laboratories:
+                <ul style="margin-top:10px;padding-left:20px;line-height:2;">
+                  <li><strong>iTech Labs</strong> — internationally recognised gaming certification body</li>
+                  <li><strong>BMM TestLabs</strong> — one of the world's leading gaming compliance labs</li>
+                  <li><strong>GLI (Gaming Laboratories International)</strong> — independent testing and certification authority</li>
+                </ul>
+                These certifications confirm that all game outcomes are truly random and that the software meets international standards for fair play.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item fade-in-up">
+            <button class="faq-question" aria-expanded="false">
+              How do I contact JackPoker support?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                JackPoker provides <strong>24/7 customer support</strong> through multiple channels:
+                <ul style="margin-top:10px;padding-left:20px;line-height:2;">
+                  <li><strong>Live Chat</strong> — the fastest option, available directly inside the platform around the clock</li>
+                  <li><strong>Email</strong> — <a href="mailto:support@jack-poker.com">support@jack-poker.com</a> for non-urgent matters</li>
+                  <li><strong>Telegram</strong> — join the community at <a href="https://t.me/jackpokerclub" target="_blank" rel="noopener noreferrer">t.me/jackpokerclub</a></li>
+                </ul>
+                Support is available in multiple languages, including English, Russian, Portuguese, and Spanish.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item fade-in-up">
+            <button class="faq-question" aria-expanded="false">
+              What languages does JackPoker support?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                JackPoker supports <strong>17 languages</strong>: English, Russian, Spanish, Italian, Portuguese, Vietnamese, Thai, Malay, Korean, Arabic, Japanese, Polish, Czech, Hindi, Turkish, Filipino (Tagalog), and French. Use the language switcher in the top navigation to switch instantly between languages. Country-specific pages are available for each supported language.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /security -->
+
+      <!-- ===== BOTTOM CTA ===== -->
+      <div class="faq-cta-bottom">
+        <div class="section-label">Ready to Join?</div>
+        <h2>Start Playing at JackPoker Today</h2>
+        <p>Claim your <strong>300% welcome bonus up to $2,000</strong> plus 20% Instant Cash with promo code WELCOME. Browser-based — no download required.</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative;">
+          <a href="https://go.jack-full.com/c41f796e" class="btn btn-primary" style="padding:16px 40px;font-weight:700;font-size:1rem;border-radius:var(--radius-full);display:inline-flex;align-items:center;gap:8px;background:var(--gradient-btn-cta);color:#fff;" target="_blank" rel="noopener noreferrer">
+            Join JackPoker ♠
+          </a>
+          <a href="promo-code.html" class="btn btn-secondary" style="padding:16px 40px;font-weight:700;font-size:1rem;border-radius:var(--radius-full);display:inline-flex;align-items:center;gap:8px;border:1px solid #fff;color:#fff;">
+            See Promo Code
+          </a>
+        </div>
+        <div class="faq-cta-stats">
+          <div class="faq-cta-stat">
+            <div class="stat-val">300%</div>
+            <div class="stat-lbl">Deposit Match</div>
+          </div>
+          <div class="faq-cta-stat">
+            <div class="stat-val">$2,000</div>
+            <div class="stat-lbl">Max Bonus</div>
+          </div>
+          <div class="faq-cta-stat">
+            <div class="stat-val">24/7</div>
+            <div class="stat-lbl">Support</div>
+          </div>
+          <div class="faq-cta-stat">
+            <div class="stat-val">3</div>
+            <div class="stat-lbl">Certifications</div>
+          </div>
+          <div class="faq-cta-stat">
+            <div class="stat-val">17</div>
+            <div class="stat-lbl">Languages</div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /faq-page-content -->
+  </div>
+</section>
+
+<!-- ============================================
+     FOOTER
+     ============================================ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" aria-label="JackPoker Home">
+        <svg class="logo-icon" width="189" height="47" viewBox="0 0 189 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="JackPoker">
+<path d="M25.4001 1C24.0001 1 22.8001 2.2 22.8001 3.6C22.8001 5.1 23.8343 5.9 25.3001 5.9H28.7001C28.7001 5.9 31.3001 5.9 31.3001 8.3C31.3001 10.7 28.7001 10.7 28.7001 10.7H8.30008C6.90008 10.7 5.70008 11.9 5.70008 13.3C5.70008 14.7 6.90008 15.9 8.30008 15.9H22.5001C22.5001 15.9 25.1001 15.9 25.1001 18.3C25.1001 20.7 22.5001 20.7 22.5001 20.7H11.4001C10.0001 20.7 8.80008 21.9 8.80008 23.3C8.80008 24.7 10.0001 25.9 11.4001 25.9H22.6001C22.6001 25.9 25.2001 25.9 25.2001 28.3C25.2001 30.7 22.6001 30.7 22.6001 30.7H21.8001C20.4001 30.7 19.2001 31.9 19.2001 33.3C19.2001 34.7 20.4001 35.9 21.8001 35.9H28.8001C28.8001 35.9 31.4001 35.9 31.4001 38.3C31.4001 40.7 28.8001 40.7 28.8001 40.7H14.0001C12.6001 40.7 11.4001 41.9 11.4001 43.3C11.4001 44.7 12.6001 45.9 14.0001 45.9H34.3001C36.5001 45.9 38.4001 44.8 39.5001 43C41.1501 40.25 42.7751 37.4999 44.4001 34.7499C46.0251 31.9999 47.6501 29.25 49.3001 26.5C50.4001 24.6 50.4001 22.3 49.3001 20.4C47.6501 17.6501 46.0252 14.9001 44.4002 12.1502C42.7752 9.4002 41.1501 6.65001 39.5001 3.9C38.4001 2.1 36.4001 1 34.3001 1H25.4001Z" fill="url(#jpLogoGradF)"/>
+<path d="M11.3999 3.6C11.3999 2.2 12.5999 1 13.9999 1H17.5999C18.9999 1 20.1999 2.2 20.1999 3.6C20.1999 5 18.9999 6.2 17.5999 6.2H13.9999C12.5999 6.2 11.3999 5 11.3999 3.6Z" fill="url(#jpLogoGradF)"/>
+<path d="M0 23.5001C0 22.1001 1.2 20.9001 2.6 20.9001H3.6C5 20.9001 6.2 22.1001 6.2 23.5001C6.2 24.9001 5 26.1001 3.6 26.1001H2.6C1.2 26.1001 0 24.9001 0 23.5001Z" fill="url(#jpLogoGradF)"/>
+<path d="M8.30008 30.8001C6.90008 30.8001 5.70008 32.0001 5.70008 33.4001C5.70008 34.9001 6.90008 36.1001 8.30008 36.0001H14.0001C15.4001 36.0001 16.6001 34.8001 16.6001 33.4001C16.6001 32.0001 15.4001 30.8001 14.0001 30.8001H8.30008Z" fill="url(#jpLogoGradF)"/>
+<path d="M69.7955 27.3088C69.7955 28.8312 69.6204 30.0793 69.2704 31.0533C68.9203 32.0273 68.3261 32.7598 67.4876 33.2509C66.6572 33.7502 65.5257 33.9998 64.0929 33.9998C63.7591 33.9998 63.3887 33.9712 62.9817 33.9139C62.5747 33.8648 62.3142 33.832 62.2002 33.8157L62.5177 31.2252H63.7144C65.1797 31.2252 65.9164 30.4231 65.9246 28.8189V15.265L64.0441 14.5039V12.3676L71.676 12.2449V14.5039L69.7955 15.265V27.3088Z" fill="white"/>
+<path d="M81.4937 28.3401C81.4937 28.3728 81.2779 28.557 80.8465 28.8926C80.415 29.2281 79.8981 29.5351 79.2957 29.8133C78.6933 30.0834 78.0746 30.2185 77.4396 30.2185C76.2185 30.2185 75.2619 29.8788 74.57 29.1995C73.8862 28.512 73.5443 27.538 73.5443 26.2775C73.5443 24.837 74.0571 23.7853 75.0829 23.1223C76.1086 22.4594 77.6024 22.1279 79.5643 22.1279H81.3227V20.7406C81.3227 19.5129 80.6796 18.9031 79.3934 18.9113C79.0107 18.9113 78.6566 18.94 78.331 18.9973C78.0054 19.0545 77.7449 19.1159 77.5495 19.1814C77.3622 19.2387 77.2442 19.2755 77.1954 19.2919L76.8168 20.8756H74.57L74.399 17.1557C74.5456 17.1066 74.9038 17.0002 75.4736 16.8365C76.0516 16.6728 76.7395 16.5173 77.5373 16.37C78.3432 16.2226 79.1044 16.149 79.8207 16.149C81.107 16.149 82.1286 16.3127 82.8857 16.6401C83.6428 16.9593 84.1964 17.4831 84.5464 18.2115C84.8965 18.9318 85.0715 19.9017 85.0715 21.1212V27.3334L86.952 27.7876V29.8011L81.9455 29.9729L81.4937 28.3401ZM77.1709 25.897C77.1709 26.388 77.2971 26.7645 77.5495 27.0264C77.81 27.2802 78.1763 27.407 78.6485 27.407C79.0474 27.407 79.4422 27.3006 79.833 27.0878C80.2237 26.8668 80.5534 26.6418 80.822 26.4126C81.0907 26.1752 81.2576 26.0197 81.3227 25.9461V24.2641H79.894C78.9253 24.2641 78.2292 24.3951 77.8059 24.657C77.3826 24.9189 77.1709 25.3322 77.1709 25.897Z" fill="white"/>
+<path d="M100.311 28.0823C99.7492 28.5897 99.0124 29.0726 98.1007 29.531C97.1971 29.9893 96.1428 30.2185 94.938 30.2185C92.8866 30.2185 91.291 29.6169 90.1513 28.4137C89.0116 27.2106 88.4417 25.5327 88.4417 23.3802C88.4417 21.1376 89.0442 19.3737 90.249 18.0888C91.4619 16.7956 93.1511 16.149 95.3166 16.149C95.9515 16.149 96.5906 16.2145 97.2337 16.3454C97.885 16.4764 98.4263 16.6114 98.8578 16.7506C99.2974 16.8815 99.5742 16.9715 99.6881 17.0206L99.566 21.1457H97.3192L96.9651 19.3656C96.8836 19.3492 96.6801 19.3124 96.3545 19.2551C96.0289 19.1896 95.6585 19.1569 95.2433 19.1569C94.3234 19.1569 93.6029 19.472 93.0819 20.1022C92.5691 20.7324 92.3126 21.6573 92.3126 22.8768C92.3126 24.2682 92.5731 25.3404 93.0942 26.0934C93.6233 26.8382 94.4048 27.2106 95.4387 27.2106C96.0899 27.2106 96.6598 27.1124 97.1482 26.916C97.6448 26.7113 98.06 26.5026 98.3937 26.2898C98.7275 26.077 98.9514 25.9379 99.0654 25.8724L100.311 28.0823Z" fill="white"/>
+<path d="M108.602 21.4527L110.3 18.8868L109.201 18.5307V16.5173L115.66 16.3945V18.5307L113.902 18.8622L111.582 22.1525L114.378 27.3579L116.283 27.9595V29.9729H111.655L108.553 23.8344H106.954V27.3334L108.334 27.9595V29.9729H101.202V27.9595L103.205 27.3334V13.2025L101.202 12.6991V10.6857L106.954 10.4893V21.4527H108.602Z" fill="white"/>
+<path d="M117.406 27.8367L119.275 27.0756V15.265L117.406 14.5039V12.3676L123.158 12.2449H125.527C127.423 12.2449 128.909 12.7155 129.984 13.6567C131.066 14.598 131.608 15.8871 131.608 17.524C131.608 19.6029 130.993 21.1703 129.764 22.2261C128.543 23.2819 126.78 23.8099 124.477 23.8099H123.158V27.0756L125.026 27.8367V29.9729H117.406V27.8367ZM124.477 20.8756C125.527 20.8756 126.333 20.6342 126.894 20.1513C127.456 19.6602 127.737 18.9522 127.737 18.0274C127.737 17.1925 127.513 16.5255 127.065 16.0262C126.626 15.5188 125.991 15.265 125.16 15.265H123.158V20.8756H124.477Z" fill="white"/>
+<path d="M139.74 16.149C141.751 16.149 143.302 16.7383 144.393 17.9169C145.492 19.0955 146.041 20.7692 146.041 22.9382C146.041 24.4278 145.764 25.721 145.211 26.8177C144.665 27.9145 143.892 28.7575 142.891 29.3468C141.89 29.9279 140.713 30.2185 139.362 30.2185C135.112 30.2185 132.988 27.9145 132.988 23.3065C132.988 21.8169 133.264 20.536 133.818 19.4638C134.38 18.3916 135.169 17.5731 136.187 17.0084C137.205 16.4354 138.389 16.149 139.74 16.149ZM139.606 19.1569C138.662 19.1569 137.966 19.4638 137.518 20.0776C137.078 20.6915 136.859 21.7269 136.859 23.1837C136.859 24.5751 137.066 25.5941 137.481 26.2407C137.905 26.8873 138.572 27.2106 139.484 27.2106C140.404 27.2106 141.08 26.8873 141.511 26.2407C141.942 25.5941 142.158 24.5342 142.158 23.061C142.158 21.7514 141.955 20.7733 141.548 20.1267C141.141 19.4802 140.493 19.1569 139.606 19.1569Z" fill="white"/>
+<path d="M154.809 21.4527L156.506 18.8868L155.407 18.5307V16.5173L161.867 16.3945V18.5307L160.108 18.8622L157.788 22.1525L160.585 27.3579L162.49 27.9595V29.9729H157.862L154.76 23.8344H153.16V27.3334L154.54 27.9595V29.9729H147.409V27.9595L149.412 27.3334V13.2025L147.409 12.6991V10.6857L153.16 10.4893V21.4527H154.809Z" fill="white"/>
+<path d="M167.508 24.0186C167.573 25.0253 167.875 25.811 168.412 26.3758C168.957 26.9323 169.666 27.2106 170.537 27.2106C171.155 27.2106 171.774 27.1247 172.393 26.9528C173.02 26.7727 173.536 26.5927 173.944 26.4126C174.359 26.2243 174.623 26.0934 174.737 26.0197L175.812 28.1068C175.812 28.1396 175.519 28.3483 174.933 28.733C174.355 29.1095 173.642 29.4532 172.796 29.7642C171.957 30.0671 171.062 30.2185 170.109 30.2185C167.993 30.2185 166.381 29.6292 165.274 28.4506C164.167 27.272 163.613 25.6023 163.613 23.4415C163.613 21.9847 163.878 20.7079 164.407 19.6111C164.944 18.5062 165.713 17.655 166.715 17.0575C167.716 16.4518 168.904 16.149 170.28 16.149C172.112 16.149 173.516 16.6769 174.493 17.7327C175.47 18.7885 175.958 20.2291 175.958 22.0542C175.958 22.4553 175.938 22.8441 175.897 23.2206C175.857 23.5971 175.828 23.8344 175.812 23.9326L167.508 24.0186ZM170.036 19.1569C169.352 19.1569 168.795 19.3901 168.363 19.8566C167.932 20.315 167.663 20.9207 167.557 21.6737H172.087C172.087 20.9207 171.921 20.315 171.587 19.8566C171.253 19.3901 170.736 19.1569 170.036 19.1569Z" fill="white"/>
+<path d="M183.199 18.1256C183.199 18.0928 183.395 17.9005 183.786 17.5486C184.176 17.1966 184.628 16.8774 185.141 16.591C185.662 16.2963 186.175 16.149 186.68 16.149C187.079 16.149 187.453 16.1817 187.803 16.2472C188.153 16.3127 188.426 16.3822 188.621 16.4559C188.825 16.5296 188.951 16.5746 189 16.591L188.804 21.4281H186.558L186.179 19.2919C185.748 19.2919 185.328 19.3983 184.921 19.6111C184.522 19.8157 184.18 20.0449 183.896 20.2986C183.619 20.5442 183.48 20.6751 183.48 20.6915V27.3334L185.984 27.9595V29.9729H177.729V27.9595L179.732 27.3334V19.1569L177.729 18.5307V16.5173L182.98 16.3945L183.199 18.1256Z" fill="white"/>
+<defs>
+<linearGradient id="jpLogoGradF" x1="0" y1="33.44" x2="50.74" y2="33.44" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8032FF"/>
+<stop offset="1" stop-color="#FF3D00"/>
+</linearGradient>
+</defs>
+</svg>
+      </a>
+          <p>JackPoker is a modern online poker platform offering Texas Hold'em, PLO, Spin&amp;Win, and tournament action. Licensed and certified by iTech Labs, BMM TestLabs, and GLI. Play responsibly.</p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading" style="font-weight:700;font-size:0.95rem;margin-bottom:12px;color:var(--text-white);">Platform</p>
+          <ul>
+            <li><a href="games.html">Games</a></li>
+            <li><a href="tournaments.html">Tournaments</a></li>
+            <li><a href="bonuses.html">Bonuses &amp; Promos</a></li>
+            <li><a href="promo-code.html">Promo Code</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading" style="font-weight:700;font-size:0.95rem;margin-bottom:12px;color:var(--text-white);">Resources</p>
+          <ul>
+            <li><a href="news.html">News</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="https://go.jack-full.com/c41f796e" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading" style="font-weight:700;font-size:0.95rem;margin-bottom:12px;color:var(--text-white);">Payments</p>
+          <div class="footer-payment-icons">
+            <span>VISA</span><span>Mastercard</span><span>Skrill</span><span>Neteller</span><span>Bitcoin</span><span>Ethereum</span><span>USDT</span><span>Pix</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 JackPoker. Operated by Jack La International Limitada. Licensed in Anjouan, Union of Comoros. Play responsibly. 18+</p>
+        <p>Certified by iTech Labs &bull; BMM TestLabs &bull; GLI</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

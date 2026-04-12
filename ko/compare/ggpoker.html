@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JackPoker vs GGPoker (2026) — 어느 포커 사이트가 이기나요? | jackpoker.xyz</title>
+  <meta name="description" content="JackPoker vs GGPoker: 보너스, 레이크, 게임, 소프트웨어, 결제에 대한 전체 나란히 비교. 2026년 레크리에이션 플레이어에게 JackPoker의 300% 보너스와 더 소프트한 테이블이 GGPoker를 이기는 이유를 알아보세요.">
+  <meta property="og:title" content="JackPoker vs GGPoker (2026) — 어느 포커 사이트가 이기나요?">
+  <meta property="og:description" content="JackPoker vs GGPoker: 보너스, 레이크, 게임, 소프트웨어, 결제에 대한 전체 나란히 비교. 300% 대 100% 보너스. 더 소프트한 테이블. PVI 시스템 없음.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://jackpoker.xyz/assets/images/hero-poker.jpg" />
+  <meta property="og:url" content="https://jackpoker.xyz/compare/ggpoker">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="JackPoker vs GGPoker (2026) — Which Poker Site Wins?">
+  <meta name="twitter:description" content="JackPoker vs GGPoker: 300% bonus vs 100%, softer tables, no PVI system. Full 2026 comparison.">
+  <meta name="twitter:image" content="https://jackpoker.xyz/assets/images/hero-poker.jpg">
+  <link rel="canonical" href="https://jackpoker.xyz/ko/compare/ggpoker" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/jackpoker-favicon.svg" />
+
+                                    
+  <style>
+    /* ===== COMPARE PAGE STYLES ===== */
+    .compare-hero {
+      padding: calc(var(--header-height) + 56px) 0 48px;
+      background: linear-gradient(180deg, rgba(137,59,247,0.08) 0%, rgba(255,61,0,0.03) 60%, transparent 100%);
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .compare-hero::before {
+      content: '';
+      position: absolute;
+      top: -120px; left: 50%;
+      transform: translateX(-50%);
+      width: 600px; height: 400px;
+      background: var(--purple-primary);
+      border-radius: 50%;
+      filter: blur(180px);
+      opacity: 0.09;
+      pointer-events: none;
+    }
+    .compare-hero h1 {
+      font-size: clamp(1.9rem, 5vw, 3rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+      position: relative;
+    }
+    .compare-hero p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 620px;
+      margin: 0 auto 32px;
+      line-height: 1.8;
+    }
+    .compare-page-content {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    /* Verdict box */
+    .verdict-box {
+      background: linear-gradient(135deg, rgba(246,186,70,0.12) 0%, rgba(137,59,247,0.08) 100%);
+      border: 2px solid rgba(246,186,70,0.5);
+      border-radius: var(--radius-lg);
+      padding: 28px 36px;
+      margin: 0 0 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    .verdict-box::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: var(--gradient-hero);
+    }
+    .verdict-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold-primary);
+      margin-bottom: 8px;
+    }
+    .verdict-box h2 {
+      font-size: 1.4rem;
+      font-weight: 900;
+      margin: 0 0 8px;
+      letter-spacing: -0.02em;
+    }
+    .verdict-box p {
+      color: var(--text-muted);
+      margin: 0;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* Comparison table */
+    .compare-table-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin: 0 0 56px;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+    }
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      min-width: 600px;
+    }
+    .compare-table thead th {
+      padding: 18px 20px;
+      text-align: left;
+      font-weight: 800;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      background: var(--bg-tertiary);
+      border-bottom: 2px solid var(--border-subtle);
+      position: sticky;
+      top: 0;
+      z-index: 2;
+    }
+    .compare-table thead th.jp-col {
+      background: rgba(246,186,70,0.08);
+      border-bottom: 2px solid rgba(246,186,70,0.4);
+      color: var(--gold-primary);
+    }
+    .compare-table tbody tr:nth-child(even) {
+      background: rgba(255,255,255,0.02);
+    }
+    .compare-table tbody tr:hover {
+      background: rgba(137,59,247,0.05);
+    }
+    .compare-table td {
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border-subtle);
+      color: var(--text-secondary);
+      line-height: 1.5;
+      vertical-align: top;
+    }
+    .compare-table td:first-child {
+      font-weight: 600;
+      color: var(--text-white);
+      font-size: 0.88rem;
+      white-space: nowrap;
+    }
+    .compare-table td.jp-col {
+      background: rgba(246,186,70,0.04);
+      border-left: 2px solid rgba(246,186,70,0.2);
+      border-right: 2px solid rgba(246,186,70,0.2);
+      color: var(--text-secondary);
+    }
+    .compare-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+    .badge-win {
+      display: inline-flex; align-items: center; gap: 4px;
+      background: rgba(34,197,94,0.15);
+      border: 1px solid rgba(34,197,94,0.3);
+      border-radius: 20px;
+      padding: 2px 10px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #4ade80;
+      white-space: nowrap;
+    }
+    .badge-lose {
+      display: inline-flex; align-items: center; gap: 4px;
+      background: rgba(239,68,68,0.12);
+      border: 1px solid rgba(239,68,68,0.25);
+      border-radius: 20px;
+      padding: 2px 10px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #f87171;
+      white-space: nowrap;
+    }
+    .badge-tie {
+      display: inline-flex; align-items: center; gap: 4px;
+      background: rgba(250,204,21,0.1);
+      border: 1px solid rgba(250,204,21,0.25);
+      border-radius: 20px;
+      padding: 2px 10px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #fbbf24;
+      white-space: nowrap;
+    }
+    .check { color: #4ade80; font-weight: 700; }
+    .cross { color: #f87171; font-weight: 700; }
+
+    /* Section headings */
+    .compare-section {
+      margin-bottom: 52px;
+    }
+    .compare-section h2 {
+      font-size: clamp(1.3rem, 3vw, 1.7rem);
+      font-weight: 900;
+      letter-spacing: -0.025em;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border-subtle);
+    }
+    .compare-section h2 .gold-text { color: var(--gold-primary); }
+    .compare-section p {
+      color: var(--text-secondary);
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+    .compare-section ul {
+      padding-left: 20px;
+      color: var(--text-secondary);
+      line-height: 2;
+    }
+    .compare-section ul li strong {
+      color: var(--text-white);
+    }
+
+    /* Why choose box */
+    .why-choose-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 36px 40px;
+      margin: 0 0 52px;
+    }
+    .why-choose-box h2 {
+      font-size: 1.4rem;
+      font-weight: 900;
+      letter-spacing: -0.025em;
+      margin-bottom: 20px;
+      color: var(--gold-primary);
+    }
+    .why-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .why-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+    .why-list li::before {
+      content: '✓';
+      color: #4ade80;
+      font-weight: 700;
+      font-size: 1rem;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .why-list li strong { color: var(--text-white); }
+
+    /* FAQ section */
+    .compare-faq-section {
+      margin-bottom: 52px;
+    }
+    .compare-faq-section h2 {
+      font-size: 1.4rem;
+      font-weight: 900;
+      letter-spacing: -0.025em;
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--border-subtle);
+    }
+
+    /* Bottom CTA */
+    .compare-cta-bottom {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      padding: 56px 48px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      margin: 64px 0 0;
+    }
+    .compare-cta-bottom::before {
+      content: '';
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 500px; height: 300px;
+      background: var(--purple-primary);
+      border-radius: 50%;
+      filter: blur(200px);
+      opacity: 0.08;
+    }
+    .compare-cta-bottom h2 {
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      margin-bottom: 14px;
+      position: relative;
+    }
+    .compare-cta-bottom p {
+      color: var(--text-muted);
+      font-size: 1rem;
+      max-width: 520px;
+      margin: 0 auto 32px;
+      line-height: 1.8;
+      position: relative;
+    }
+
+    /* Breadcrumb */
+    .breadcrumb-nav {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      background: var(--bg-secondary);
+    }
+    .breadcrumb-list {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      flex-wrap: wrap;
+    }
+    .breadcrumb-list li:not(:last-child)::after {
+      content: '›';
+      margin-left: 8px;
+      color: var(--text-faint);
+    }
+    .breadcrumb-list a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .breadcrumb-list a:hover { color: var(--gold-primary); }
+    .breadcrumb-list li:last-child {
+      color: var(--text-white);
+      font-weight: 500;
+    }
+
+    @media (max-width: 640px) {
+      .compare-cta-bottom { padding: 40px 24px; }
+      .why-choose-box { padding: 28px 24px; }
+      .verdict-box { padding: 22px 24px; }
+    }
+  </style>
+
+  <script>
+    (function(){var t=null;try{var m=document.cookie.match(/jp-theme=([^;]+)/);if(m)t=m[1]}catch(e){}document.documentElement.setAttribute("data-theme",t||"dark")})();
+  </script>
+
+  <!-- Organization schema -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "JackPoker",
+  "url": "https://jackpoker.xyz",
+  "logo": "https://jackpoker.xyz/assets/images/jackpoker-logo-official.png",
+  "description": "Modern online poker platform offering Texas Hold'em, PLO, Spin&Win tournaments, and more. Licensed and certified.",
+  "foundingDate": "2021"
+}
+</script>
+
+  <!-- Breadcrumb schema -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://jackpoker.xyz"},
+    {"@type": "ListItem", "position": 2, "name": "Compare", "item": "https://jackpoker.xyz/compare"},
+    {"@type": "ListItem", "position": 3, "name": "JackPoker vs GGPoker", "item": "https://jackpoker.xyz/compare/ggpoker"}
+  ]
+}
+</script>
+
+  <!-- FAQ schema -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is JackPoker better than GGPoker for beginners?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. JackPoker is specifically designed for recreational players, with softer games, no HUDs, and a 300% welcome bonus up to $2,000 — triple GGPoker's 100% offer. The player pool is less experienced on average, making JackPoker a better starting point for new players."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does GGPoker allow HUDs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. GGPoker prohibits all third-party tracking software. It offers a built-in SmartHUD with basic opponent stats, but external tools like PokerTracker or Hold'em Manager are banned. JackPoker also bans HUDs, maintaining a level playing field."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is GGPoker's PVI system?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GGPoker's Player Value Index (PVI) secretly scores players and reduces effective rakeback for winning regulars. Grinders may receive significantly less than the advertised 16–80% rakeback. JackPoker uses a transparent Lootbox rewards system with no hidden scoring."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which has the bigger welcome bonus — JackPoker or GGPoker?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "JackPoker offers a 300% deposit match up to $2,000 plus 20% Instant Cash with code WELCOME. GGPoker offers a 100% match up to $600. JackPoker's bonus is three times larger in percentage and more than three times larger in maximum value."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does JackPoker accept crypto like GGPoker?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Both sites accept cryptocurrency. JackPoker supports BTC, LTC, BCH, USDT ERC20/TRC20, DOGE, and TRX. GGPoker supports BTC, ETH, and USDT. JackPoker accepts more crypto options and also supports regional payment methods like PIX (Brazil) and Interac (Canada)."
+      }
+    }
+  ]
+}
+</script>
+<link rel="alternate" hreflang="en" href="https://jackpoker.xyz/compare/ggpoker.html" />
+<link rel="alternate" hreflang="ru" href="https://jackpoker.xyz/ru/compare/ggpoker.html" />
+<link rel="alternate" hreflang="es" href="https://jackpoker.xyz/es/compare/ggpoker.html" />
+<link rel="alternate" hreflang="it" href="https://jackpoker.xyz/it/compare/ggpoker.html" />
+<link rel="alternate" hreflang="pt" href="https://jackpoker.xyz/pt/compare/ggpoker.html" />
+<link rel="alternate" hreflang="vi" href="https://jackpoker.xyz/vi/compare/ggpoker.html" />
+<link rel="alternate" hreflang="th" href="https://jackpoker.xyz/th/compare/ggpoker.html" />
+<link rel="alternate" hreflang="ms" href="https://jackpoker.xyz/ms/compare/ggpoker.html" />
+<link rel="alternate" hreflang="ko" href="https://jackpoker.xyz/ko/compare/ggpoker.html" />
+<link rel="alternate" hreflang="ar" href="https://jackpoker.xyz/ar/compare/ggpoker.html" />
+<link rel="alternate" hreflang="ja" href="https://jackpoker.xyz/ja/compare/ggpoker.html" />
+<link rel="alternate" hreflang="pl" href="https://jackpoker.xyz/pl/compare/ggpoker.html" />
+<link rel="alternate" hreflang="cs" href="https://jackpoker.xyz/cs/compare/ggpoker.html" />
+<link rel="alternate" hreflang="hi" href="https://jackpoker.xyz/hi/compare/ggpoker.html" />
+<link rel="alternate" hreflang="tr" href="https://jackpoker.xyz/tr/compare/ggpoker.html" />
+<link rel="alternate" hreflang="tl" href="https://jackpoker.xyz/tl/compare/ggpoker.html" />
+<link rel="alternate" hreflang="fr" href="https://jackpoker.xyz/fr/compare/ggpoker.html" />
+<link rel="alternate" hreflang="x-default" href="https://jackpoker.xyz/compare/ggpoker.html" />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ============================================
+       HEADER
+       ============================================ -->
+  <header class="site-header" id="siteHeader">
+    <div class="header-inner">
+      <a href="../index.html" class="logo" aria-label="JackPoker Home">
+        <svg class="logo-icon" width="189" height="47" viewBox="0 0 189 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="JackPoker">
+<path d="M25.4001 1C24.0001 1 22.8001 2.2 22.8001 3.6C22.8001 5.1 23.8343 5.9 25.3001 5.9H28.7001C28.7001 5.9 31.3001 5.9 31.3001 8.3C31.3001 10.7 28.7001 10.7 28.7001 10.7H8.30008C6.90008 10.7 5.70008 11.9 5.70008 13.3C5.70008 14.7 6.90008 15.9 8.30008 15.9H22.5001C22.5001 15.9 25.1001 15.9 25.1001 18.3C25.1001 20.7 22.5001 20.7 22.5001 20.7H11.4001C10.0001 20.7 8.80008 21.9 8.80008 23.3C8.80008 24.7 10.0001 25.9 11.4001 25.9H22.6001C22.6001 25.9 25.2001 25.9 25.2001 28.3C25.2001 30.7 22.6001 30.7 22.6001 30.7H21.8001C20.4001 30.7 19.2001 31.9 19.2001 33.3C19.2001 34.7 20.4001 35.9 21.8001 35.9H28.8001C28.8001 35.9 31.4001 35.9 31.4001 38.3C31.4001 40.7 28.8001 40.7 28.8001 40.7H14.0001C12.6001 40.7 11.4001 41.9 11.4001 43.3C11.4001 44.7 12.6001 45.9 14.0001 45.9H34.3001C36.5001 45.9 38.4001 44.8 39.5001 43C41.1501 40.25 42.7751 37.4999 44.4001 34.7499C46.0251 31.9999 47.6501 29.25 49.3001 26.5C50.4001 24.6 50.4001 22.3 49.3001 20.4C47.6501 17.6501 46.0252 14.9001 44.4002 12.1502C42.7752 9.4002 41.1501 6.65001 39.5001 3.9C38.4001 2.1 36.4001 1 34.3001 1H25.4001Z" fill="url(#jpLogoGrad)"/>
+<path d="M11.3999 3.6C11.3999 2.2 12.5999 1 13.9999 1H17.5999C18.9999 1 20.1999 2.2 20.1999 3.6C20.1999 5 18.9999 6.2 17.5999 6.2H13.9999C12.5999 6.2 11.3999 5 11.3999 3.6Z" fill="url(#jpLogoGrad)"/>
+<path d="M0 23.5001C0 22.1001 1.2 20.9001 2.6 20.9001H3.6C5 20.9001 6.2 22.1001 6.2 23.5001C6.2 24.9001 5 26.1001 3.6 26.1001H2.6C1.2 26.1001 0 24.9001 0 23.5001Z" fill="url(#jpLogoGrad)"/>
+<path d="M8.30008 30.8001C6.90008 30.8001 5.70008 32.0001 5.70008 33.4001C5.70008 34.9001 6.90008 36.1001 8.30008 36.0001H14.0001C15.4001 36.0001 16.6001 34.8001 16.6001 33.4001C16.6001 32.0001 15.4001 30.8001 14.0001 30.8001H8.30008Z" fill="url(#jpLogoGrad)"/>
+<path d="M69.7955 27.3088C69.7955 28.8312 69.6204 30.0793 69.2704 31.0533C68.9203 32.0273 68.3261 32.7598 67.4876 33.2509C66.6572 33.7502 65.5257 33.9998 64.0929 33.9998C63.7591 33.9998 63.3887 33.9712 62.9817 33.9139C62.5747 33.8648 62.3142 33.832 62.2002 33.8157L62.5177 31.2252H63.7144C65.1797 31.2252 65.9164 30.4231 65.9246 28.8189V15.265L64.0441 14.5039V12.3676L71.676 12.2449V14.5039L69.7955 15.265V27.3088Z" fill="white"/>
+<path d="M81.4937 28.3401C81.4937 28.3728 81.2779 28.557 80.8465 28.8926C80.415 29.2281 79.8981 29.5351 79.2957 29.8133C78.6933 30.0834 78.0746 30.2185 77.4396 30.2185C76.2185 30.2185 75.2619 29.8788 74.57 29.1995C73.8862 28.512 73.5443 27.538 73.5443 26.2775C73.5443 24.837 74.0571 23.7853 75.0829 23.1223C76.1086 22.4594 77.6024 22.1279 79.5643 22.1279H81.3227V20.7406C81.3227 19.5129 80.6796 18.9031 79.3934 18.9113C79.0107 18.9113 78.6566 18.94 78.331 18.9973C78.0054 19.0545 77.7449 19.1159 77.5495 19.1814C77.3622 19.2387 77.2442 19.2755 77.1954 19.2919L76.8168 20.8756H74.57L74.399 17.1557C74.5456 17.1066 74.9038 17.0002 75.4736 16.8365C76.0516 16.6728 76.7395 16.5173 77.5373 16.37C78.3432 16.2226 79.1044 16.149 79.8207 16.149C81.107 16.149 82.1286 16.3127 82.8857 16.6401C83.6428 16.9593 84.1964 17.4831 84.5464 18.2115C84.8965 18.9318 85.0715 19.9017 85.0715 21.1212V27.3334L86.952 27.7876V29.8011L81.9455 29.9729L81.4937 28.3401ZM77.1709 25.897C77.1709 26.388 77.2971 26.7645 77.5495 27.0264C77.81 27.2802 78.1763 27.407 78.6485 27.407C79.0474 27.407 79.4422 27.3006 79.833 27.0878C80.2237 26.8668 80.5534 26.6418 80.822 26.4126C81.0907 26.1752 81.2576 26.0197 81.3227 25.9461V24.2641H79.894C78.9253 24.2641 78.2292 24.3951 77.8059 24.657C77.3826 24.9189 77.1709 25.3322 77.1709 25.897Z" fill="white"/>
+<path d="M100.311 28.0823C99.7492 28.5897 99.0124 29.0726 98.1007 29.531C97.1971 29.9893 96.1428 30.2185 94.938 30.2185C92.8866 30.2185 91.291 29.6169 90.1513 28.4137C89.0116 27.2106 88.4417 25.5327 88.4417 23.3802C88.4417 21.1376 89.0442 19.3737 90.249 18.0888C91.4619 16.7956 93.1511 16.149 95.3166 16.149C95.9515 16.149 96.5906 16.2145 97.2337 16.3454C97.885 16.4764 98.4263 16.6114 98.8578 16.7506C99.2974 16.8815 99.5742 16.9715 99.6881 17.0206L99.566 21.1457H97.3192L96.9651 19.3656C96.8836 19.3492 96.6801 19.3124 96.3545 19.2551C96.0289 19.1896 95.6585 19.1569 95.2433 19.1569C94.3234 19.1569 93.6029 19.472 93.0819 20.1022C92.5691 20.7324 92.3126 21.6573 92.3126 22.8768C92.3126 24.2682 92.5731 25.3404 93.0942 26.0934C93.6233 26.8382 94.4048 27.2106 95.4387 27.2106C96.0899 27.2106 96.6598 27.1124 97.1482 26.916C97.6448 26.7113 98.06 26.5026 98.3937 26.2898C98.7275 26.077 98.9514 25.9379 99.0654 25.8724L100.311 28.0823Z" fill="white"/>
+<path d="M108.602 21.4527L110.3 18.8868L109.201 18.5307V16.5173L115.66 16.3945V18.5307L113.902 18.8622L111.582 22.1525L114.378 27.3579L116.283 27.9595V29.9729H111.655L108.553 23.8344H106.954V27.3334L108.334 27.9595V29.9729H101.202V27.9595L103.205 27.3334V13.2025L101.202 12.6991V10.6857L106.954 10.4893V21.4527H108.602Z" fill="white"/>
+<path d="M117.406 27.8367L119.275 27.0756V15.265L117.406 14.5039V12.3676L123.158 12.2449H125.527C127.423 12.2449 128.909 12.7155 129.984 13.6567C131.066 14.598 131.608 15.8871 131.608 17.524C131.608 19.6029 130.993 21.1703 129.764 22.2261C128.543 23.2819 126.78 23.8099 124.477 23.8099H123.158V27.0756L125.026 27.8367V29.9729H117.406V27.8367ZM124.477 20.8756C125.527 20.8756 126.333 20.6342 126.894 20.1513C127.456 19.6602 127.737 18.9522 127.737 18.0274C127.737 17.1925 127.513 16.5255 127.065 16.0262C126.626 15.5188 125.991 15.265 125.16 15.265H123.158V20.8756H124.477Z" fill="white"/>
+<path d="M139.74 16.149C141.751 16.149 143.302 16.7383 144.393 17.9169C145.492 19.0955 146.041 20.7692 146.041 22.9382C146.041 24.4278 145.764 25.721 145.211 26.8177C144.665 27.9145 143.892 28.7575 142.891 29.3468C141.89 29.9279 140.713 30.2185 139.362 30.2185C135.112 30.2185 132.988 27.9145 132.988 23.3065C132.988 21.8169 133.264 20.536 133.818 19.4638C134.38 18.3916 135.169 17.5731 136.187 17.0084C137.205 16.4354 138.389 16.149 139.74 16.149ZM139.606 19.1569C138.662 19.1569 137.966 19.4638 137.518 20.0776C137.078 20.6915 136.859 21.7269 136.859 23.1837C136.859 24.5751 137.066 25.5941 137.481 26.2407C137.905 26.8873 138.572 27.2106 139.484 27.2106C140.404 27.2106 141.08 26.8873 141.511 26.2407C141.942 25.5941 142.158 24.5342 142.158 23.061C142.158 21.7514 141.955 20.7733 141.548 20.1267C141.141 19.4802 140.493 19.1569 139.606 19.1569Z" fill="white"/>
+<path d="M154.809 21.4527L156.506 18.8868L155.407 18.5307V16.5173L161.867 16.3945V18.5307L160.108 18.8622L157.788 22.1525L160.585 27.3579L162.49 27.9595V29.9729H157.862L154.76 23.8344H153.16V27.3334L154.54 27.9595V29.9729H147.409V27.9595L149.412 27.3334V13.2025L147.409 12.6991V10.6857L153.16 10.4893V21.4527H154.809Z" fill="white"/>
+<path d="M167.508 24.0186C167.573 25.0253 167.875 25.811 168.412 26.3758C168.957 26.9323 169.666 27.2106 170.537 27.2106C171.155 27.2106 171.774 27.1247 172.393 26.9528C173.02 26.7727 173.536 26.5927 173.944 26.4126C174.359 26.2243 174.623 26.0934 174.737 26.0197L175.812 28.1068C175.812 28.1396 175.519 28.3483 174.933 28.733C174.355 29.1095 173.642 29.4532 172.796 29.7642C171.957 30.0671 171.062 30.2185 170.109 30.2185C167.993 30.2185 166.381 29.6292 165.274 28.4506C164.167 27.272 163.613 25.6023 163.613 23.4415C163.613 21.9847 163.878 20.7079 164.407 19.6111C164.944 18.5062 165.713 17.655 166.715 17.0575C167.716 16.4518 168.904 16.149 170.28 16.149C172.112 16.149 173.516 16.6769 174.493 17.7327C175.47 18.7885 175.958 20.2291 175.958 22.0542C175.958 22.4553 175.938 22.8441 175.897 23.2206C175.857 23.5971 175.828 23.8344 175.812 23.9326L167.508 24.0186ZM170.036 19.1569C169.352 19.1569 168.795 19.3901 168.363 19.8566C167.932 20.315 167.663 20.9207 167.557 21.6737H172.087C172.087 20.9207 171.921 20.315 171.587 19.8566C171.253 19.3901 170.736 19.1569 170.036 19.1569Z" fill="white"/>
+<path d="M183.199 18.1256C183.199 18.0928 183.395 17.9005 183.786 17.5486C184.176 17.1966 184.628 16.8774 185.141 16.591C185.662 16.2963 186.175 16.149 186.68 16.149C187.079 16.149 187.453 16.1817 187.803 16.2472C188.153 16.3127 188.426 16.3822 188.621 16.4559C188.825 16.5296 188.951 16.5746 189 16.591L188.804 21.4281H186.558L186.179 19.2919C185.748 19.2919 185.328 19.3983 184.921 19.6111C184.522 19.8157 184.18 20.0449 183.896 20.2986C183.619 20.5442 183.48 20.6751 183.48 20.6915V27.3334L185.984 27.9595V29.9729H177.729V27.9595L179.732 27.3334V19.1569L177.729 18.5307V16.5173L182.98 16.3945L183.199 18.1256Z" fill="white"/>
+<defs>
+<linearGradient id="jpLogoGrad" x1="0" y1="33.44" x2="50.74" y2="33.44" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8032FF"/>
+<stop offset="1" stop-color="#FF3D00"/>
+</linearGradient>
+</defs>
+</svg>
+      </a>
+      <nav class="main-nav" id="mainNav">
+        <a href="../index.html" data-i18n="nav_home">홈</a>
+        <a href="../games.html" data-i18n="nav_games">게임</a>
+        <a href="../bonuses.html" data-i18n="nav_bonuses">보너스</a>
+        <a href="../tournaments.html" data-i18n="nav_tournaments">토너먼트</a>
+        <a href="../news.html" data-i18n="nav_news">뉴스</a>
+        <a href="../promo-code.html" data-i18n="nav_promo">프로모 코드</a>
+      </nav>
+      <a href="https://go.jack-full.com/c41f796e" class="header-cta header-cta-desktop" data-i18n="nav_play">지금 플레이 ♠</a>
+      <div class="lang-switcher">
+  <button class="lang-btn" aria-label="Change language" aria-expanded="false">
+    <span class="lang-flag">KR</span>
+    <span class="lang-label">한국어</span>
+    <svg class="lang-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  </button>
+  <div class="lang-dropdown" role="menu">
+    <a href="../../compare/ggpoker.html" role="menuitem" hreflang="en"><span class="lang-flag">GB</span><span>English</span></a>
+    <a href="../../ru/compare/ggpoker.html" role="menuitem" hreflang="ru"><span class="lang-flag">RU</span><span>Русский</span></a>
+    <a href="../../es/compare/ggpoker.html" role="menuitem" hreflang="es"><span class="lang-flag">ES</span><span>Español</span></a>
+    <a href="../../it/compare/ggpoker.html" role="menuitem" hreflang="it"><span class="lang-flag">IT</span><span>Italiano</span></a>
+    <a href="../../pt/compare/ggpoker.html" role="menuitem" hreflang="pt"><span class="lang-flag">BR</span><span>Português</span></a>
+    <a href="../../vi/compare/ggpoker.html" role="menuitem" hreflang="vi"><span class="lang-flag">VN</span><span>Tiếng Việt</span></a>
+    <a href="../../th/compare/ggpoker.html" role="menuitem" hreflang="th"><span class="lang-flag">TH</span><span>ไทย</span></a>
+    <a href="../../ms/compare/ggpoker.html" role="menuitem" hreflang="ms"><span class="lang-flag">MY</span><span>Bahasa Melayu</span></a>
+    <a href="ggpoker.html" class="active" role="menuitem" hreflang="ko"><span class="lang-flag">KR</span><span>한국어</span></a>
+    <a href="../../ar/compare/ggpoker.html" role="menuitem" hreflang="ar"><span class="lang-flag">SA</span><span>العربية</span></a>
+    <a href="../../ja/compare/ggpoker.html" role="menuitem" hreflang="ja"><span class="lang-flag">JP</span><span>日本語</span></a>
+    <a href="../../pl/compare/ggpoker.html" role="menuitem" hreflang="pl"><span class="lang-flag">PL</span><span>Polski</span></a>
+    <a href="../../cs/compare/ggpoker.html" role="menuitem" hreflang="cs"><span class="lang-flag">CZ</span><span>Čeština</span></a>
+    <a href="../../hi/compare/ggpoker.html" role="menuitem" hreflang="hi"><span class="lang-flag">IN</span><span>हिन्दी</span></a>
+    <a href="../../tr/compare/ggpoker.html" role="menuitem" hreflang="tr"><span class="lang-flag">TR</span><span>Türkçe</span></a>
+    <a href="../../tl/compare/ggpoker.html" role="menuitem" hreflang="tl"><span class="lang-flag">PH</span><span>Filipino</span></a>
+    <a href="../../fr/compare/ggpoker.html" role="menuitem" hreflang="fr"><span class="lang-flag">FR</span><span>Français</span></a>
+  </div>
+</div>
+        <button class="theme-toggle" aria-label="Toggle theme">
+       <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 1.78a1 1 0 011.415 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM18 9a1 1 0 110 2h-1a1 1 0 110-2h1zM3 9a1 1 0 110 2H2a1 1 0 110-2h1zm12.657 6.071l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 011.414-1.414zM5.757 4.929a1 1 0 010 1.414l-.707.707A1 1 0 013.636 5.636l.707-.707a1 1 0 011.414 0zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1z" fill="currentColor"/><circle cx="10" cy="10" r="3.5" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+       <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/></svg>
+     </button>
+  </div>
+</header>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb-nav" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb-list">
+      <li><a href="../index.html">홈</a></li>
+      <li><a href="../compare/">비교</a></li>
+      <li>JackPoker vs GGPoker</li>
+    </ol>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="compare-hero">
+  <div class="container">
+    <div class="hero-badge">♠ 나란히 비교</div>
+    <h1>JackPoker vs GGPoker (2026)<br><span class="gold-text">어느 포커 사이트가 이기나요?</span></h1>
+    <p>GGPoker는 세계 최대 포커룸입니다. 하지만 더 크다는 것이 항상 더 좋은 것은 아닙니다 — 특히 레크리에이션 플레이어에게는요. 다음은 전체적이고 솔직한 비교입니다.</p>
+    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+      <a href="https://go.jack-full.com/c41f796e" class="btn btn-primary" style="padding:14px 32px;font-weight:700;font-size:1rem;border-radius:var(--radius-full);display:inline-flex;align-items:center;gap:8px;" target="_blank" rel="noopener noreferrer">
+        JackPoker 참여하기 ♠
+      </a>
+      <a href="../promo-code.html" class="btn btn-secondary" style="padding:14px 32px;font-weight:700;font-size:1rem;border-radius:var(--radius-full);display:inline-flex;align-items:center;gap:8px;">
+        WELCOME 코드 받기
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN CONTENT -->
+<section class="section" style="padding-top:56px;">
+  <div class="container">
+    <div class="compare-page-content">
+
+      <!-- VERDICT BOX -->
+      <div class="verdict-box">
+        <div class="verdict-label">♠ 우리의 평결</div>
+        <h2>승자: <span class="gold-text">JackPoker</span> — 레크리에이션 플레이어를 위한</h2>
+        <p>GGPoker는 원시 트래픽(JackPoker의 500–1,000 대비 10,000명의 동시 접속자)에서 합법적으로 승리하며 독특한 WSOP 파트너십을 제공합니다. 하지만 최고의 보너스 가치, 더 소프트한 경쟁, 투명한 보상, 환영 환경을 원하는 플레이어에게는 — JackPoker가 모든 면에서 제공합니다. 300% 환영 보너스만으로도 GGPoker가 제공하는 것의 3배 가치가 있습니다.</p>
+      </div>
+
+      <!-- COMPARISON TABLE -->
+      <div class="compare-table-wrap">
+        <table class="compare-table" aria-label="JackPoker vs GGPoker Comparison">
+          <thead>
+            <tr>
+              <th style="width:22%">카테고리</th>
+              <th class="jp-col" style="width:39%">🃏 JackPoker</th>
+              <th style="width:39%">GGPoker</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>웰컴 보너스</td>
+              <td class="jp-col"><span class="check">✓</span> <strong>최대 $2,000의 300%</strong> + 20% Instant Cash (코드: WELCOME) <span class="badge-win">승자</span></td>
+              <td>100% 최대 $600 또는 $100 보상 패키지 <span class="badge-lose">3배 더 작음</span></td>
+            </tr>
+            <tr>
+              <td>레이크</td>
+              <td class="jp-col">5%, 경쟁력 있는 상한선 <span class="badge-tie">비슷함</span></td>
+              <td>5%, 3-bet에 대한 프리플롭 레이크(광범위하게 비판 받음) <span class="badge-lose">추가 프리플롭 레이크</span></td>
+            </tr>
+            <tr>
+              <td>게임</td>
+              <td class="jp-col">NLHE, PLO5(5장) <span class="badge-tie">집중</span></td>
+              <td>NLHE, PLO4, 숏덱, Rush & Cash, AoF, Flip & Go, Spin & Gold <span class="badge-win">더 다양한 선택</span></td>
+            </tr>
+            <tr>
+              <td>토너먼트</td>
+              <td class="jp-col"><span class="check">✓</span> Bonus Bonanza ($1.25M GTD), Big Bang Sunday ($45K), Spin&amp;Win ($1M), Spring Spin Festival ($1M) <span class="badge-win">오버레이 가치</span></td>
+              <td>WSOP Online(팔찌), GG Masters($3M+/주), Super MILLION$, MILLIONS Online</td>
+            </tr>
+            <tr>
+              <td>소프트웨어</td>
+              <td class="jp-col"><span class="check">✓</span> 브라우저 기반(다운로드 불필요) + Android 앱. iOS는 브라우저로 작동. <span class="badge-win">설치 불필요</span></td>
+              <td>다운로드 필요(Windows/macOS). iOS &amp; Android 앱. 브라우저 플레이 불가. <span class="badge-lose">다운로드 필수</span></td>
+            </tr>
+            <tr>
+              <td>결제 방법</td>
+              <td class="jp-col"><span class="check">✓</span> VISA, Mastercard, MuchBetter, PIX, Interac, BTC, LTC, BCH, USDT, DOGE, TRX <span class="badge-win">더 많은 암호화폐</span></td>
+              <td>Visa, MC, Skrill, Neteller, MuchBetter, PIX, BTC, ETH, USDT</td>
+            </tr>
+            <tr>
+              <td>HUD 정책</td>
+              <td class="jp-col"><span class="check">✓</span> HUD 없음 — 레크리에이션 플레이어 보호 <span class="badge-win">더 소프트한 테이블</span></td>
+              <td>외부 HUD 없음. 내장 SmartHUD 이용 가능 <span class="badge-tie">비슷함</span></td>
+            </tr>
+            <tr>
+              <td>레이크백</td>
+              <td class="jp-col">루트박스 보상 시스템 — 투명 <span class="badge-win">PVI 패널티 없음</span></td>
+              <td>Ocean Rewards 16–80%. 숨겨진 PVI 시스템이 우승자의 지급액을 줄임 <span class="badge-lose">불투명한 PVI 시스템</span></td>
+            </tr>
+            <tr>
+              <td>최소 입금</td>
+              <td class="jp-col"><span class="check">✓</span> $3–$5(암호화폐) <span class="badge-win">더 낮음</span></td>
+              <td>$5(일부 방법), 대부분 방법은 $10–$50</td>
+            </tr>
+            <tr>
+              <td>출금 속도</td>
+              <td class="jp-col"><span class="check">✓</span> 빠른 처리, $1,000/거래, $6,500/일 <span class="badge-win">더 빠른 암호화폐</span></td>
+              <td>영업일 기준 1–6일</td>
+            </tr>
+            <tr>
+              <td>플레이어 트래픽</td>
+              <td class="jp-col">평균 500 / 최대 1,000+(성장 중) <span class="badge-lose">더 낮음</span></td>
+              <td><span class="check">✓</span> ~10,000 동시 평균 — 글로벌 시장 선도자 <span class="badge-win">훨씬 더 높은 트래픽</span></td>
+            </tr>
+            <tr>
+              <td>라이선스</td>
+              <td class="jp-col">Anjouan (ALSI-202408001-FI1) <span class="badge-tie">역외</span></td>
+              <td>Isle of Man GSC, UKGC, MGA, Kahnawake + 기타 <span class="badge-win">더 많이 규제됨</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- SECTION 1: BONUS -->
+      <div class="compare-section" id="bonus">
+        <h2>환영 보너스: JackPoker <span class="gold-text">300% vs GGPoker의 100%</span></h2>
+        <p>이것이 두 사이트 간 가장 두드러진 차이점입니다. JackPoker는 <strong>최대 $2,000의 300% 입금 매칭</strong> 에 추가로 <strong>20% 즉시 현금</strong> 을 WELCOME 프로모 코드를 사용할 때 입금액에 지급합니다. $500 입금 시 보너스 자금 $1,500과 즉시 현금 $100을 받습니다.</p>
+        <p>GGPoker는 최대 $600의 100% 입금 매칭을 제공합니다 — 또는 $100 보상 패키지 대안. GGPoker가 최대 $350 가치의 추가 챌린지를 제공하더라도 기본 혜택은 여전히 비율에서 세 배 작고 최대 가치에서도 세 배 이상 작습니다.</p>
+        <p>해제 메커니즘도 다릅니다. GGPoker는 지불된 레이크 $5당 $1을 잠금 해제합니다 — 보너스에 대한 느린 20% 실효 레이크백. JackPoker의 20% Instant Cash 구성 요소는 전혀 정산이 필요 없습니다: 즉시 잔액에 실제 돈으로 지급됩니다. 주당 10시간 이상 그라인딩하지 않는 레크리에이션 플레이어에게 JackPoker의 즉시 구성 요소가 훨씬 더 접근하기 쉽습니다.</p>
+        <p>전체 보너스 세부 정보는 <a href="../bonuses.html">JackPoker 보너스 페이지</a>.</p>
+      </div>
+
+      <!-- SECTION 2: GAME QUALITY -->
+      <div class="compare-section" id="games">
+        <h2>게임 품질 &amp; <span class="gold-text">플레이어 풀 소프트니스</span></h2>
+        <p>GGPoker는 의심할 여지 없이 세계 최대 포커룸으로 약 10,000명의 동시 현금 게임 플레이어가 있습니다. 그것은 진정한 장점입니다 — 자리를 기다릴 필요가 없으며 24시간 365일 모든 스테이크 레벨에서 게임이 있습니다.</p>
+        <p>하지만 트래픽 볼륨은 게임 소프트니스와 동일하지 않습니다. GGPoker의 플레이어 풀은 레크리에이션 플레이어를 포함하지만 모든 우위를 활용하는 수천 명의 전문가와 레귤러도 끌어들입니다. 사이트의 고급 도구(SmartHUD, PokerCraft 분석)는 심지어 평균 플레이어에게도 완전한 초보자에 비해 통계적 우위를 제공합니다.</p>
+        <p>JackPoker는 반대 철학으로 구축되었습니다: <strong>레크리에이션 플레이어 우선</strong>. HUD 없음, 핸드 기록 내보내기 없음, 서드파티 추적 없음. 결과적으로 경험 많은 그라인더보다 캐주얼 플레이어를 만날 가능성이 더 높은 플레이어 풀이 형성됩니다. 레크리에이션 플레이어에게 이것은 더 나은 승률과 더 즐거운 세션으로 직접 이어집니다.</p>
+        <p>게임 다양성 면에서 GGPoker가 완전히 승리합니다 — 더 많은 형식(숏덱, Rush &amp; Cash, Flip &amp; Go, All-In-or-Fold)을 제공합니다. JackPoker는 NLHE와 PLO5에 집중하며, 대부분의 플레이어가 실제로 원하는 핵심 게임을 다룹니다. <a href="../games.html">JackPoker의 이용 가능한 게임</a>.</p>
+      </div>
+
+      <!-- SECTION 3: TOURNAMENTS -->
+      <div class="compare-section" id="tournaments">
+        <h2>토너먼트: <span class="gold-text">WSOP 명성 vs 오버레이 가치</span></h2>
+        <p>GGPoker의 토너먼트 자격증명은 탁월합니다. WSOP 파트너십은 플레이어가 온라인에서 진짜 세계 시리즈 오브 포커 팔찌를 획득할 수 있음을 의미합니다 — 독특하고 명성 있는 혜택. GG Masters만으로도 주당 300만 달러 이상을 보장하며, 연간 MILLIONS 및 Super MILLION$ 시리즈는 글로벌 포커 캘린더의 주요 이벤트입니다.</p>
+        <p>JackPoker는 최상위에서 GGPoker의 토너먼트 명성이나 보장 상금 풀에 맞먹을 수 없습니다. JackPoker가 <em>제공하는</em> 것은 탁월한 오버레이 가치와 접근 가능한 바이인입니다. <strong>Bonus Bonanza 시리즈($1.25M GTD)</strong>, <strong>Big Bang Sunday($45,000 GTD)</strong>, 그리고 <strong>Spin &amp; Win(최대 $1백만 잭팟)</strong> 은 500–1,000명의 동시 플레이어 풀에 대해 의미 있는 보장을 제공합니다. 그 비율은 진정한 오버레이 기회를 만들어냅니다.</p>
+        <p>바이인 $5–$50 토너먼트를 플레이하는 대부분의 레크리에이션 플레이어에게 JackPoker의 일정은 GGPoker의 거대하지만 매우 경쟁적인 필드보다 더 나은 참가당 가치를 제공합니다. 전체 일정은 <a href="../tournaments.html">토너먼트 페이지</a>.</p>
+      </div>
+
+      <!-- SECTION 4: SOFTWARE -->
+      <div class="compare-section" id="software">
+        <h2>소프트웨어: <span class="gold-text">브라우저 기반 vs 다운로드 필요</span></h2>
+        <p>이것은 많은 플레이어들에게 실질적인 차별 요소입니다. GGPoker는 플레이하기 위해 데스크탑 다운로드가 필요합니다 — Windows나 macOS에 클라이언트를 설치해야 합니다. GGPoker 앱은 잘 만들어지고 기능이 풍부하지만 공유 컴퓨터, 직장 기기 사용자나 소프트웨어 설치를 원하지 않는 플레이어에게는 마찰 포인트입니다.</p>
+        <p>JackPoker는 완전히 <strong>브라우저 기반</strong> 입니다 — Chrome, Safari 또는 Firefox를 열고, 로그인하면 몇 초 안에 테이블에 앉을 수 있습니다. 설치 없음, 업데이트 없음, 시스템 권한 요청 없음. Android APK는 모바일 플레이어에게 제공되며 iOS 사용자는 Safari를 통해 완전히 플레이할 수 있습니다.</p>
+        <p>GGPoker는 더 나은 멀티 테이블 경험과 고급 내장 분석 도구(PokerCraft, SmartHUD)를 제공합니다. 6개 이상의 테이블을 동시에 플레이해야 하는 고량 그라인더라면 GGPoker의 전용 클라이언트가 더 적합합니다. 1–2개의 테이블을 캐주얼하게 플레이하는 레크리에이션 플레이어에게는 JackPoker의 마찰 없는 브라우저 경험이 편의성에서 승리합니다.</p>
+      </div>
+
+      <!-- SECTION 5: RAKEBACK -->
+      <div class="compare-section" id="rakeback">
+        <h2>레이크백 &amp; 보상: <span class="gold-text">투명 vs 불투명한 PVI</span></h2>
+        <p>GGPoker의 Ocean Rewards 프로그램(이전 Fish Buffet)은 단계별로 16–80% 캐시백을 광고합니다. 후해 보입니다 — 하지만 중요한 주의 사항이 있습니다. GGPoker는 <strong>플레이어 가치 지수(PVI)</strong> 시스템을 사용하여 인식된 레크리에이션 가치를 기준으로 플레이어를 비밀리에 점수화합니다. 시스템이 "그라인더"로 표시하는 우승 레귤러는 광고된 비율에 비해 감소된 실효 레이크백을 받습니다. 정확한 PVI 계산은 플레이어에게 절대 공개되지 않습니다.</p>
+        <p>JackPoker의 루트박스 보상 시스템은 투명하고 일관됩니다. 숨겨진 점수 패널티 없음, 수익을 줄이는 비공개 알고리즘 없음. 보이는 것이 받는 것입니다.</p>
+        <p>설명 없이 GGPoker 레이크백이 조용히 줄어든 경험이 있는 플레이어에게 이 투명성은 진정으로 가치 있습니다. 최대 레이크백을 추출하는 데 집중하지 않는 레크리에이션 플레이어에게 JackPoker의 시스템은 이해하고 활용하기 더 쉽습니다.</p>
+      </div>
+
+      <!-- SECTION 6: PAYMENTS -->
+      <div class="compare-section" id="payments">
+        <h2>결제: <span class="gold-text">더 많은 암호화폐, 더 빠른 출금</span></h2>
+        <p>두 사이트 모두 주요 신용카드와 인기 있는 전자지갑을 지원합니다. JackPoker의 암호화폐 제공이 더 넓습니다: <strong>BTC, LTC, BCH, USDT (ERC20/TRC20), DOGE, TRX</strong> 가 모두 지원됩니다. GGPoker는 BTC, ETH, USDT를 받습니다 — 좋은 선택이지만 JackPoker가 더 많은 옵션을 다룹니다.</p>
+        <p>JackPoker는 또한 특히 암호화폐의 경우 더 빠르게 출금을 처리합니다. GGPoker의 영업일 기준 1–6일 출금 일정은 JackPoker의 당일 암호화폐 처리보다 느립니다. 빠른 상금 접근을 중요시하는 플레이어에게 이것은 의미 있는 실질적 이점입니다.</p>
+        <p>지역 결제 방법은 비슷합니다: 두 사이트 모두 브라질 플레이어를 위해 PIX를 지원합니다. JackPoker는 캐나다 플레이어를 위해 Interac을 추가합니다. GGPoker는 더 넓은 전자지갑 옵션(Skrill, Neteller, payz, AstroPay)을 제공합니다.</p>
+      </div>
+
+      <!-- WHY CHOOSE JACKPOKER -->
+      <div class="why-choose-box">
+        <h2>레크리에이션 플레이어들이 GGPoker 대신 JackPoker를 선택하는 이유</h2>
+        <ul class="why-list">
+          <li><strong>3배 더 큰 환영 보너스:</strong> 최대 $2,000 300% vs GGPoker의 최대 $600 100%. WELCOME 코드로 즉시 활성화됩니다.</li>
+          <li><strong>더 소프트한 플레이어 풀:</strong> JackPoker의 레크리에이션 우선 철학은 테이블에서 더 약한 경쟁을 의미합니다 — 직접 수익에 영향을 미칩니다.</li>
+          <li><strong>숨겨진 PVI 패널티 없음:</strong> 레이크백 보상이 숨겨진 점수 알고리즘에 의해 비밀리에 줄어들지 않습니다. 투명한 루트박스 시스템.</li>
+          <li><strong>마찰 없는 접근:</strong> 브라우저 기반은 소프트웨어 설치가 필요 없음을 의미합니다. 탭을 열고 플레이 — 모든 기기, 모든 OS.</li>
+          <li><strong>더 빠른 암호화폐 출금:</strong> BTC, USDT, LTC 등에 대한 당일 처리. GGPoker는 최대 영업일 기준 6일이 걸립니다.</li>
+        </ul>
+      </div>
+
+      <!-- FAQ SECTION -->
+      <div class="compare-faq-section" id="faq">
+        <h2>자주 묻는 질문: JackPoker vs GGPoker</h2>
+        <div class="faq-list">
+          <div class="faq-item fade-in-up">
+            <button class="faq-question" aria-expanded="false">
+              JackPoker는 GGPoker보다 초보자에게 더 좋나요?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                네. JackPoker는 레크리에이션 및 초보자 플레이어를 위해 특별히 설계되었으며, 더 소프트한 경쟁, HUD 없음, 그리고 <strong>최대 $2,000 300% 환영 보너스</strong> — GGPoker의 100% 혜택의 세 배를 제공합니다. 플레이어 풀의 평균 경험이 적어 JackPoker가 더 나은 시작점입니다. GGPoker의 방대한 트래픽은 또한 더 높은 비율의 경험 많은 레귤러들과 경쟁함을 의미합니다.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item fade-in-up">
+            <button class="faq-question" aria-expanded="false">
+              GGPoker는 HUD를 허용하나요?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                아니요. GGPoker는 모든 서드파티 추적 소프트웨어(PokerTracker, Hold'em Manager 등)를 금지합니다. 기본 상대방 통계가 있는 내장 SmartHUD를 제공합니다. JackPoker도 HUD를 금지하지만 내장 플레이어 추적을 전혀 제공하지 않아 더 나아갑니다 — 모든 플레이어에게 완전히 공평한 경쟁의 장을 유지합니다.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item fade-in-up">
+            <button class="faq-question" aria-expanded="false">
+              GGPoker의 PVI 시스템은 무엇이며 왜 논란이 되나요?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                GGPoker의 플레이어 가치 지수(PVI)는 플레이어를 분류하고 "전문가" 또는 고량 우승자로 간주되는 사람들의 실효 레이크백을 줄이는 숨겨진 점수 시스템입니다. 플레이어들은 아무런 설명 없이 실제 레이크백이 광고된 16–80% 범위보다 훨씬 낮다는 것을 발견할 수 있습니다. JackPoker는 숨겨진 점수나 비공개 패널티 메커니즘이 없는 투명한 루트박스 보상 시스템을 사용합니다.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item fade-in-up">
+            <button class="faq-question" aria-expanded="false">
+              더 큰 환영 보너스는 JackPoker 아니면 GGPoker에 있나요?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                JackPoker는 <strong>최대 $2,000의 300% 입금 매칭</strong> 에 WELCOME 코드로 20% Instant Cash를 추가로 제공합니다. GGPoker는 최대 $600 100% 매칭을 제공합니다. JackPoker의 보너스는 비율에서 세 배 더 크고 최대 가치에서도 세 배 이상 더 큽니다. JackPoker의 20% Instant Cash 구성 요소는 정산이 필요 없습니다 — 즉시 실제 돈으로 지급됩니다. <a href="../promo-code.html">JackPoker 프로모 코드 세부 정보</a>.
+              </div>
+            </div>
+          </div>
+          <div class="faq-item fade-in-up">
+            <button class="faq-question" aria-expanded="false">
+              JackPoker는 GGPoker처럼 암호화폐를 받나요?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" role="region">
+              <div class="faq-answer-inner">
+                두 사이트 모두 암호화폐를 받습니다. JackPoker는 <strong>BTC, LTC, BCH, USDT ERC20/TRC20, DOGE, TRX</strong>를 지원합니다. GGPoker는 BTC, ETH, USDT를 지원합니다. JackPoker는 더 많은 암호화폐 옵션을 지원하고 출금을 더 빠르게 처리합니다 — 종종 GGPoker의 영업일 기준 1–6일 대비 당일.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOTTOM CTA -->
+      <div class="compare-cta-bottom">
+        <div class="section-label">전환할 준비가 되셨나요?</div>
+        <h2>JackPoker의 <span class="gold-text">300% 보너스</span> 오늘</h2>
+        <p>코드 사용 <strong>WELCOME</strong> 를 받으세요. 최대 $2,000 300% 입금 매칭과 20% Instant Cash. 다운로드 불필요. 모든 기기에서 브라우저 기반 플레이.</p>
+        <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;position:relative;">
+          <a href="https://go.jack-full.com/c41f796e" class="btn btn-primary" style="padding:16px 40px;font-weight:700;font-size:1rem;border-radius:var(--radius-full);display:inline-flex;align-items:center;gap:8px;background:var(--gradient-btn-cta);color:#fff;" target="_blank" rel="noopener noreferrer">
+            JackPoker 참여하기 ♠
+          </a>
+          <a href="../promo-code.html" class="btn btn-secondary" style="padding:16px 40px;font-weight:700;font-size:1rem;border-radius:var(--radius-full);display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(246,186,70,0.5);color:var(--gold-primary);">
+            WELCOME 코드 받기
+          </a>
+        </div>
+      </div>
+
+    </div><!-- /compare-page-content -->
+  </div>
+</section>
+
+<!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="logo" aria-label="JackPoker Home">
+        <svg class="logo-icon" width="189" height="47" viewBox="0 0 189 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="JackPoker">
+<path d="M25.4001 1C24.0001 1 22.8001 2.2 22.8001 3.6C22.8001 5.1 23.8343 5.9 25.3001 5.9H28.7001C28.7001 5.9 31.3001 5.9 31.3001 8.3C31.3001 10.7 28.7001 10.7 28.7001 10.7H8.30008C6.90008 10.7 5.70008 11.9 5.70008 13.3C5.70008 14.7 6.90008 15.9 8.30008 15.9H22.5001C22.5001 15.9 25.1001 15.9 25.1001 18.3C25.1001 20.7 22.5001 20.7 22.5001 20.7H11.4001C10.0001 20.7 8.80008 21.9 8.80008 23.3C8.80008 24.7 10.0001 25.9 11.4001 25.9H22.6001C22.6001 25.9 25.2001 25.9 25.2001 28.3C25.2001 30.7 22.6001 30.7 22.6001 30.7H21.8001C20.4001 30.7 19.2001 31.9 19.2001 33.3C19.2001 34.7 20.4001 35.9 21.8001 35.9H28.8001C28.8001 35.9 31.4001 35.9 31.4001 38.3C31.4001 40.7 28.8001 40.7 28.8001 40.7H14.0001C12.6001 40.7 11.4001 41.9 11.4001 43.3C11.4001 44.7 12.6001 45.9 14.0001 45.9H34.3001C36.5001 45.9 38.4001 44.8 39.5001 43C41.1501 40.25 42.7751 37.4999 44.4001 34.7499C46.0251 31.9999 47.6501 29.25 49.3001 26.5C50.4001 24.6 50.4001 22.3 49.3001 20.4C47.6501 17.6501 46.0252 14.9001 44.4002 12.1502C42.7752 9.4002 41.1501 6.65001 39.5001 3.9C38.4001 2.1 36.4001 1 34.3001 1H25.4001Z" fill="url(#jpLogoGradF)"/>
+<path d="M11.3999 3.6C11.3999 2.2 12.5999 1 13.9999 1H17.5999C18.9999 1 20.1999 2.2 20.1999 3.6C20.1999 5 18.9999 6.2 17.5999 6.2H13.9999C12.5999 6.2 11.3999 5 11.3999 3.6Z" fill="url(#jpLogoGradF)"/>
+<path d="M0 23.5001C0 22.1001 1.2 20.9001 2.6 20.9001H3.6C5 20.9001 6.2 22.1001 6.2 23.5001C6.2 24.9001 5 26.1001 3.6 26.1001H2.6C1.2 26.1001 0 24.9001 0 23.5001Z" fill="url(#jpLogoGradF)"/>
+<path d="M8.30008 30.8001C6.90008 30.8001 5.70008 32.0001 5.70008 33.4001C5.70008 34.9001 6.90008 36.1001 8.30008 36.0001H14.0001C15.4001 36.0001 16.6001 34.8001 16.6001 33.4001C16.6001 32.0001 15.4001 30.8001 14.0001 30.8001H8.30008Z" fill="url(#jpLogoGradF)"/>
+<path d="M69.7955 27.3088C69.7955 28.8312 69.6204 30.0793 69.2704 31.0533C68.9203 32.0273 68.3261 32.7598 67.4876 33.2509C66.6572 33.7502 65.5257 33.9998 64.0929 33.9998C63.7591 33.9998 63.3887 33.9712 62.9817 33.9139C62.5747 33.8648 62.3142 33.832 62.2002 33.8157L62.5177 31.2252H63.7144C65.1797 31.2252 65.9164 30.4231 65.9246 28.8189V15.265L64.0441 14.5039V12.3676L71.676 12.2449V14.5039L69.7955 15.265V27.3088Z" fill="white"/>
+<path d="M81.4937 28.3401C81.4937 28.3728 81.2779 28.557 80.8465 28.8926C80.415 29.2281 79.8981 29.5351 79.2957 29.8133C78.6933 30.0834 78.0746 30.2185 77.4396 30.2185C76.2185 30.2185 75.2619 29.8788 74.57 29.1995C73.8862 28.512 73.5443 27.538 73.5443 26.2775C73.5443 24.837 74.0571 23.7853 75.0829 23.1223C76.1086 22.4594 77.6024 22.1279 79.5643 22.1279H81.3227V20.7406C81.3227 19.5129 80.6796 18.9031 79.3934 18.9113C79.0107 18.9113 78.6566 18.94 78.331 18.9973C78.0054 19.0545 77.7449 19.1159 77.5495 19.1814C77.3622 19.2387 77.2442 19.2755 77.1954 19.2919L76.8168 20.8756H74.57L74.399 17.1557C74.5456 17.1066 74.9038 17.0002 75.4736 16.8365C76.0516 16.6728 76.7395 16.5173 77.5373 16.37C78.3432 16.2226 79.1044 16.149 79.8207 16.149C81.107 16.149 82.1286 16.3127 82.8857 16.6401C83.6428 16.9593 84.1964 17.4831 84.5464 18.2115C84.8965 18.9318 85.0715 19.9017 85.0715 21.1212V27.3334L86.952 27.7876V29.8011L81.9455 29.9729L81.4937 28.3401ZM77.1709 25.897C77.1709 26.388 77.2971 26.7645 77.5495 27.0264C77.81 27.2802 78.1763 27.407 78.6485 27.407C79.0474 27.407 79.4422 27.3006 79.833 27.0878C80.2237 26.8668 80.5534 26.6418 80.822 26.4126C81.0907 26.1752 81.2576 26.0197 81.3227 25.9461V24.2641H79.894C78.9253 24.2641 78.2292 24.3951 77.8059 24.657C77.3826 24.9189 77.1709 25.3322 77.1709 25.897Z" fill="white"/>
+<path d="M100.311 28.0823C99.7492 28.5897 99.0124 29.0726 98.1007 29.531C97.1971 29.9893 96.1428 30.2185 94.938 30.2185C92.8866 30.2185 91.291 29.6169 90.1513 28.4137C89.0116 27.2106 88.4417 25.5327 88.4417 23.3802C88.4417 21.1376 89.0442 19.3737 90.249 18.0888C91.4619 16.7956 93.1511 16.149 95.3166 16.149C95.9515 16.149 96.5906 16.2145 97.2337 16.3454C97.885 16.4764 98.4263 16.6114 98.8578 16.7506C99.2974 16.8815 99.5742 16.9715 99.6881 17.0206L99.566 21.1457H97.3192L96.9651 19.3656C96.8836 19.3492 96.6801 19.3124 96.3545 19.2551C96.0289 19.1896 95.6585 19.1569 95.2433 19.1569C94.3234 19.1569 93.6029 19.472 93.0819 20.1022C92.5691 20.7324 92.3126 21.6573 92.3126 22.8768C92.3126 24.2682 92.5731 25.3404 93.0942 26.0934C93.6233 26.8382 94.4048 27.2106 95.4387 27.2106C96.0899 27.2106 96.6598 27.1124 97.1482 26.916C97.6448 26.7113 98.06 26.5026 98.3937 26.2898C98.7275 26.077 98.9514 25.9379 99.0654 25.8724L100.311 28.0823Z" fill="white"/>
+<path d="M108.602 21.4527L110.3 18.8868L109.201 18.5307V16.5173L115.66 16.3945V18.5307L113.902 18.8622L111.582 22.1525L114.378 27.3579L116.283 27.9595V29.9729H111.655L108.553 23.8344H106.954V27.3334L108.334 27.9595V29.9729H101.202V27.9595L103.205 27.3334V13.2025L101.202 12.6991V10.6857L106.954 10.4893V21.4527H108.602Z" fill="white"/>
+<path d="M117.406 27.8367L119.275 27.0756V15.265L117.406 14.5039V12.3676L123.158 12.2449H125.527C127.423 12.2449 128.909 12.7155 129.984 13.6567C131.066 14.598 131.608 15.8871 131.608 17.524C131.608 19.6029 130.993 21.1703 129.764 22.2261C128.543 23.2819 126.78 23.8099 124.477 23.8099H123.158V27.0756L125.026 27.8367V29.9729H117.406V27.8367ZM124.477 20.8756C125.527 20.8756 126.333 20.6342 126.894 20.1513C127.456 19.6602 127.737 18.9522 127.737 18.0274C127.737 17.1925 127.513 16.5255 127.065 16.0262C126.626 15.5188 125.991 15.265 125.16 15.265H123.158V20.8756H124.477Z" fill="white"/>
+<path d="M139.74 16.149C141.751 16.149 143.302 16.7383 144.393 17.9169C145.492 19.0955 146.041 20.7692 146.041 22.9382C146.041 24.4278 145.764 25.721 145.211 26.8177C144.665 27.9145 143.892 28.7575 142.891 29.3468C141.89 29.9279 140.713 30.2185 139.362 30.2185C135.112 30.2185 132.988 27.9145 132.988 23.3065C132.988 21.8169 133.264 20.536 133.818 19.4638C134.38 18.3916 135.169 17.5731 136.187 17.0084C137.205 16.4354 138.389 16.149 139.74 16.149ZM139.606 19.1569C138.662 19.1569 137.966 19.4638 137.518 20.0776C137.078 20.6915 136.859 21.7269 136.859 23.1837C136.859 24.5751 137.066 25.5941 137.481 26.2407C137.905 26.8873 138.572 27.2106 139.484 27.2106C140.404 27.2106 141.08 26.8873 141.511 26.2407C141.942 25.5941 142.158 24.5342 142.158 23.061C142.158 21.7514 141.955 20.7733 141.548 20.1267C141.141 19.4802 140.493 19.1569 139.606 19.1569Z" fill="white"/>
+<path d="M154.809 21.4527L156.506 18.8868L155.407 18.5307V16.5173L161.867 16.3945V18.5307L160.108 18.8622L157.788 22.1525L160.585 27.3579L162.49 27.9595V29.9729H157.862L154.76 23.8344H153.16V27.3334L154.54 27.9595V29.9729H147.409V27.9595L149.412 27.3334V13.2025L147.409 12.6991V10.6857L153.16 10.4893V21.4527H154.809Z" fill="white"/>
+<path d="M167.508 24.0186C167.573 25.0253 167.875 25.811 168.412 26.3758C168.957 26.9323 169.666 27.2106 170.537 27.2106C171.155 27.2106 171.774 27.1247 172.393 26.9528C173.02 26.7727 173.536 26.5927 173.944 26.4126C174.359 26.2243 174.623 26.0934 174.737 26.0197L175.812 28.1068C175.812 28.1396 175.519 28.3483 174.933 28.733C174.355 29.1095 173.642 29.4532 172.796 29.7642C171.957 30.0671 171.062 30.2185 170.109 30.2185C167.993 30.2185 166.381 29.6292 165.274 28.4506C164.167 27.272 163.613 25.6023 163.613 23.4415C163.613 21.9847 163.878 20.7079 164.407 19.6111C164.944 18.5062 165.713 17.655 166.715 17.0575C167.716 16.4518 168.904 16.149 170.28 16.149C172.112 16.149 173.516 16.6769 174.493 17.7327C175.47 18.7885 175.958 20.2291 175.958 22.0542C175.958 22.4553 175.938 22.8441 175.897 23.2206C175.857 23.5971 175.828 23.8344 175.812 23.9326L167.508 24.0186ZM170.036 19.1569C169.352 19.1569 168.795 19.3901 168.363 19.8566C167.932 20.315 167.663 20.9207 167.557 21.6737H172.087C172.087 20.9207 171.921 20.315 171.587 19.8566C171.253 19.3901 170.736 19.1569 170.036 19.1569Z" fill="white"/>
+<path d="M183.199 18.1256C183.199 18.0928 183.395 17.9005 183.786 17.5486C184.176 17.1966 184.628 16.8774 185.141 16.591C185.662 16.2963 186.175 16.149 186.68 16.149C187.079 16.149 187.453 16.1817 187.803 16.2472C188.153 16.3127 188.426 16.3822 188.621 16.4559C188.825 16.5296 188.951 16.5746 189 16.591L188.804 21.4281H186.558L186.179 19.2919C185.748 19.2919 185.328 19.3983 184.921 19.6111C184.522 19.8157 184.18 20.0449 183.896 20.2986C183.619 20.5442 183.48 20.6751 183.48 20.6915V27.3334L185.984 27.9595V29.9729H177.729V27.9595L179.732 27.3334V19.1569L177.729 18.5307V16.5173L182.98 16.3945L183.199 18.1256Z" fill="white"/>
+<defs>
+<linearGradient id="jpLogoGradF" x1="0" y1="33.44" x2="50.74" y2="33.44" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8032FF"/>
+<stop offset="1" stop-color="#FF3D00"/>
+</linearGradient>
+</defs>
+</svg>
+      </a>
+          <p>JackPoker는 Texas Hold'em, PLO, Spin&amp;Win, 토너먼트 액션을 제공하는 현대적인 온라인 포커 플랫폼입니다. 라이선스 취득.</p>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading" style="font-weight:700;font-size:0.95rem;margin-bottom:12px;color:var(--text-white);">플랫폼</p>
+          <ul>
+            <li><a href="../games.html">게임</a></li>
+            <li><a href="../tournaments.html">토너먼트</a></li>
+            <li><a href="../bonuses.html">보너스 &amp; 프로모</a></li>
+            <li><a href="../promo-code.html">프로모 코드</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading" style="font-weight:700;font-size:0.95rem;margin-bottom:12px;color:var(--text-white);">리소스</p>
+          <ul>
+            <li><a href="../news.html">뉴스</a></li>
+            <li><a href="../faq.html">FAQ</a></li>
+            <li><a href="../terms.html">이용약관</a></li>
+            <li><a href="https://go.jack-full.com/c41f796e" target="_blank" rel="noopener noreferrer">개인정보 처리방침</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <p class="footer-heading" style="font-weight:700;font-size:0.95rem;margin-bottom:12px;color:var(--text-white);">결제</p>
+          <div class="footer-payment-icons">
+            <span>VISA</span><span>Mastercard</span><span>MuchBetter</span><span>Bitcoin</span><span>USDT</span><span>Pix</span><span>Interac</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 JackPoker. Jack La International Limitada 운영. Anjouan, 코모로 연합에서 라이선스 취득. 책임감 있는 플레이.</p>
+        <p>iTech Labs &bull; BMM TestLabs &bull; GLI 인증</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../main.js"></script>
+</body>
+</html>

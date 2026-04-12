@@ -1,0 +1,1853 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JackPoker Turnuvaları — Aylık 3,5 Milyon $+ Garantisi</title>
+  <meta name="description" content="Tam JackPoker turnuva programı: Bonus Bonanza $1,25M GTD, Big Bang Sunday $45K, $200K+ freerolllar, Cash Carnival & PKO etkinlikleri.">
+  <meta property="og:title" content="JackPoker Turnuvaları — Aylık 3,5 Milyon $+ Garantisi">
+  <meta property="og:description" content="Online pokerdeki en heyecan verici turnuva programı. Günlük freerolllar, büyük garantili ödül havuzları ve $45K Big Bang Sunday — hepsi JackPoker'da.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://jackpoker.xyz/assets/images/hero-poker.jpg" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="JackPoker Tournaments — $3.5M+ Monthly Guarantees">
+  <meta name="twitter:description" content="The most exciting tournament schedule in online poker. Daily freerolls, massive guaranteed prize pools, and the $45K Big Bang Sunday — all at JackPoker.">
+  <meta name="twitter:image" content="https://jackpoker.xyz/assets/images/tournaments-bg.jpg">
+  <link rel="canonical" href="https://jackpoker.xyz/tr/tournaments" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/jackpoker-favicon.svg" />
+  <style>
+    /* ===== TOURNAMENTS PAGE EXTRAS ===== */
+
+    /* Hero with image bg */
+    .tourn-hero {
+      position: relative;
+      padding: calc(var(--header-height) + 72px) 0 80px;
+      overflow: hidden;
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+    }
+
+    .tourn-hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .tourn-hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.30;
+    }
+
+    .tourn-hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg,
+        rgba(13,11,18,0.45) 0%,
+        rgba(13,11,18,0.72) 60%,
+        rgba(13,11,18,1) 100%
+      );
+    }
+
+    .tourn-hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Stats bar with borders */
+    .stats-section {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .stats-bar-bordered {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      divide: h;
+    }
+
+    .stat-bordered {
+      text-align: center;
+      padding: 36px 24px;
+      border-right: 1px solid var(--border-subtle);
+    }
+
+    .stat-bordered:last-child {
+      border-right: none;
+    }
+
+    .stat-bordered .stat-number {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--gold-primary);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-bordered .stat-desc {
+      color: var(--text-muted);
+      font-size: 0.83rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+
+    /* Carnival Banner */
+    .carnival-banner {
+      background: linear-gradient(135deg, #1A1026 0%, #2A1440 40%, #1A1026 100%);
+      border: 1px solid rgba(246,186,70,0.35);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .carnival-banner::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #F6BA46, #FF3D00, #893BF7, #F6BA46);
+    }
+
+    .carnival-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .carnival-left {
+      padding: 48px;
+      border-right: 1px solid rgba(246,186,70,0.15);
+    }
+
+    .carnival-right {
+      padding: 48px;
+    }
+
+    .carnival-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: rgba(246,186,70,0.12);
+      border: 1px solid rgba(246,186,70,0.3);
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--gold-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 20px;
+    }
+
+    .carnival-prize {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 900;
+      color: var(--gold-primary);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .carnival-subtitle {
+      color: var(--text-white);
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .how-it-works-list {
+      list-style: none;
+      margin: 0;
+    }
+
+    .how-it-works-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 0.93rem;
+      color: var(--text-body);
+      line-height: 1.6;
+    }
+
+    .how-it-works-list li:last-child {
+      border-bottom: none;
+    }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      background: var(--gradient-btn-gold);
+      color: #000000;
+      font-size: 0.75rem;
+      font-weight: 800;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    /* Bonus Bonanza */
+    .bonanza-grid {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .bonanza-schedule {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    .bonanza-schedule-header {
+      padding: 20px 24px;
+      background: var(--purple-surface);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .bonanza-schedule-header h4 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .schedule-row {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      padding: 14px 24px;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 0.88rem;
+      color: var(--text-body);
+      align-items: center;
+    }
+
+    .schedule-row:last-child {
+      border-bottom: none;
+    }
+
+    .schedule-row:hover {
+      background: rgba(137,59,247,0.04);
+    }
+
+    .schedule-row .gtd {
+      color: var(--gold-primary);
+      font-weight: 700;
+    }
+
+    .schedule-row .buyin {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    /* Big Bang Sunday */
+    .big-bang-card {
+      background: linear-gradient(135deg, #1A0D30 0%, #271D34 100%);
+      border: 1px solid rgba(137,59,247,0.35);
+      border-radius: var(--radius-xl);
+      padding: 48px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .big-bang-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--gradient-btn-primary);
+    }
+
+    .big-bang-card::after {
+      content: '♠';
+      position: absolute;
+      right: 40px;
+      top: 40px;
+      font-size: 8rem;
+      color: var(--purple-primary);
+      opacity: 0.06;
+      line-height: 1;
+    }
+
+    .big-bang-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .big-bang-gtd {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 5vw, 4.4rem);
+      font-weight: 900;
+      color: var(--purple-primary);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .big-bang-label {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .blind-structure {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    .blind-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 0.83rem;
+      color: var(--text-body);
+    }
+
+    .blind-row:first-child {
+      background: var(--purple-surface);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .blind-row:last-child {
+      border-bottom: none;
+    }
+
+    /* Freeroll Festival */
+    .freeroll-types {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 32px;
+    }
+
+    .freeroll-type-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      transition: all 0.3s ease;
+    }
+
+    .freeroll-type-card:hover {
+      border-color: rgba(137,59,247,0.3);
+      transform: translateY(-2px);
+    }
+
+    .freeroll-icon {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .freeroll-type-card h4 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: var(--text-white);
+    }
+
+    .freeroll-type-card p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    /* Format grid */
+    .format-card {
+      background: var(--gradient-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .format-card:hover {
+      border-color: rgba(137,59,247,0.3);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .format-icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .format-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+      color: var(--text-white);
+    }
+
+    .format-card p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    /* Register Steps */
+    .register-steps {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .register-step {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 28px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      transition: all 0.3s ease;
+    }
+
+    .register-step:hover {
+      border-color: rgba(137,59,247,0.25);
+      background: var(--bg-card-hover);
+    }
+
+    .step-number {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      background: var(--gradient-btn-primary);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--text-white);
+    }
+
+    .register-step-content h4 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+      color: var(--text-white);
+    }
+
+    .register-step-content p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    /* Tips */
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .tip-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-left: 3px solid var(--purple-primary);
+      border-radius: var(--radius-md);
+      padding: 24px;
+    }
+
+    .tip-card h4 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: var(--text-white);
+    }
+
+    .tip-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    /* Final CTA */
+    .final-cta {
+      background: linear-gradient(135deg, #1A0D30 0%, #221E2E 50%, #1A1026 100%);
+      border-top: 1px solid var(--border-subtle);
+      padding: 96px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px;
+      height: 700px;
+      background: var(--purple-primary);
+      border-radius: 50%;
+      filter: blur(220px);
+      opacity: 0.08;
+      pointer-events: none;
+    }
+
+    .final-cta-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .promo-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      background: rgba(246,186,70,0.08);
+      border: 1px solid rgba(246,186,70,0.25);
+      border-radius: 100px;
+      font-size: 0.88rem;
+      color: var(--text-body);
+      margin-bottom: 28px;
+    }
+
+    .promo-pill .code {
+      font-family: 'Courier New', monospace;
+      font-weight: 800;
+      color: var(--gold-primary);
+      letter-spacing: 0.1em;
+    }
+
+    /* Schedule Table Wrapper */
+    .table-wrapper {
+      overflow-x: auto;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .carnival-inner { grid-template-columns: 1fr; }
+      .carnival-left { border-right: none; border-bottom: 1px solid rgba(246,186,70,0.15); padding: 32px; }
+      .carnival-right { padding: 32px; }
+      .big-bang-inner { grid-template-columns: 1fr; }
+      .bonanza-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .stats-bar-bordered { grid-template-columns: repeat(2, 1fr); }
+      .stat-bordered { border-right: none; border-bottom: 1px solid var(--border-subtle); }
+      .stat-bordered:nth-child(odd) { border-right: 1px solid var(--border-subtle); }
+      .freeroll-types { grid-template-columns: 1fr; }
+      .register-steps { grid-template-columns: 1fr; }
+      .tips-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+<script>
+    (function(){var t=null;try{var m=document.cookie.match(/jp-theme=([^;]+)/);if(m)t=m[1]}catch(e){}document.documentElement.setAttribute("data-theme",t||"dark")})();
+  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "JackPoker",
+  "url": "https://jackpoker.xyz",
+  "logo": "https://jackpoker.xyz/assets/images/jackpoker-logo-official.png",
+  "description": "Modern online poker platform offering Texas Hold'em, PLO, Spin&Win tournaments, and more. Licensed and certified.",
+  "foundingDate": "2021",
+  "sameAs": [
+    "https://jack-poker.com",
+    "https://t.me/jackpokerclub"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "url": "https://jack-poker.com/support",
+    "availableLanguage": [
+      "English",
+      "Russian",
+      "Portuguese",
+      "Spanish"
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://jackpoker.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tournaments",
+      "item": "https://jackpoker.xyz/tournaments.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "JackPoker Tournament Schedule",
+  "description": "Daily and weekly poker tournaments on JackPoker platform",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Sunday Major",
+      "description": "Promotions flagship tournament with massive guaranteed prize pools"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Daily Grind Series",
+      "description": "Affordable daily tournaments with solid guarantees"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Spin & Win Leaderboard",
+      "description": "Promotions competitions with extra cash prizes for top spinners"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Freeroll Festivals",
+      "description": "Free-entry tournaments with real money prizes"
+    }
+  ]
+}
+</script>
+
+<!-- Event Schema — Active Tournaments -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Spring Spin Festival",
+    "description": "JackPoker Spring Spin Festival — win up to $1,000,000 from a $10 buy-in Spin&Win tournament with 100,000x multiplier",
+    "startDate": "2026-04-06",
+    "endDate": "2026-04-26",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+    "location": {
+      "@type": "VirtualLocation",
+      "url": "https://jackpoker.xyz/tournaments.html"
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "JackPoker",
+      "url": "https://jackpoker.xyz"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "10",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "validFrom": "2026-04-06",
+      "url": "https://go.jack-full.com/c41f796e"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Easter Turbo Sprint $500,000 GTD",
+    "description": "JackPoker Easter Turbo Sprint with $500,000 guaranteed prize pool featuring turbo and hyper-turbo events",
+    "startDate": "2026-04-01",
+    "endDate": "2026-04-20",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+    "location": {
+      "@type": "VirtualLocation",
+      "url": "https://jackpoker.xyz/tournaments.html"
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "JackPoker",
+      "url": "https://jackpoker.xyz"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://go.jack-full.com/c41f796e"
+    }
+  }
+]
+</script>
+
+<link rel="alternate" hreflang="en" href="https://jackpoker.xyz/tournaments.html" />
+<link rel="alternate" hreflang="ru" href="https://jackpoker.xyz/ru/tournaments.html" />
+<link rel="alternate" hreflang="es" href="https://jackpoker.xyz/es/tournaments.html" />
+<link rel="alternate" hreflang="it" href="https://jackpoker.xyz/it/tournaments.html" />
+<link rel="alternate" hreflang="pt" href="https://jackpoker.xyz/pt/tournaments.html" />
+<link rel="alternate" hreflang="vi" href="https://jackpoker.xyz/vi/tournaments.html" />
+<link rel="alternate" hreflang="th" href="https://jackpoker.xyz/th/tournaments.html" />
+<link rel="alternate" hreflang="ms" href="https://jackpoker.xyz/ms/tournaments.html" />
+<link rel="alternate" hreflang="ko" href="https://jackpoker.xyz/ko/tournaments.html" />
+<link rel="alternate" hreflang="ar" href="https://jackpoker.xyz/ar/tournaments.html" />
+<link rel="alternate" hreflang="ja" href="https://jackpoker.xyz/ja/tournaments.html" />
+<link rel="alternate" hreflang="pl" href="https://jackpoker.xyz/pl/tournaments.html" />
+<link rel="alternate" hreflang="cs" href="https://jackpoker.xyz/cs/tournaments.html" />
+<link rel="alternate" hreflang="hi" href="https://jackpoker.xyz/hi/tournaments.html" />
+<link rel="alternate" hreflang="tr" href="https://jackpoker.xyz/tr/tournaments.html" />
+<link rel="alternate" hreflang="tl" href="https://jackpoker.xyz/tl/tournaments.html" />
+<link rel="alternate" hreflang="fr" href="https://jackpoker.xyz/fr/tournaments.html" />
+<link rel="alternate" hreflang="x-default" href="https://jackpoker.xyz/tournaments.html" />
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="JackPoker Home">
+        <svg class="logo-icon" width="189" height="47" viewBox="0 0 189 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="JackPoker">
+<path d="M25.4001 1C24.0001 1 22.8001 2.2 22.8001 3.6C22.8001 5.1 23.8343 5.9 25.3001 5.9H28.7001C28.7001 5.9 31.3001 5.9 31.3001 8.3C31.3001 10.7 28.7001 10.7 28.7001 10.7H8.30008C6.90008 10.7 5.70008 11.9 5.70008 13.3C5.70008 14.7 6.90008 15.9 8.30008 15.9H22.5001C22.5001 15.9 25.1001 15.9 25.1001 18.3C25.1001 20.7 22.5001 20.7 22.5001 20.7H11.4001C10.0001 20.7 8.80008 21.9 8.80008 23.3C8.80008 24.7 10.0001 25.9 11.4001 25.9H22.6001C22.6001 25.9 25.2001 25.9 25.2001 28.3C25.2001 30.7 22.6001 30.7 22.6001 30.7H21.8001C20.4001 30.7 19.2001 31.9 19.2001 33.3C19.2001 34.7 20.4001 35.9 21.8001 35.9H28.8001C28.8001 35.9 31.4001 35.9 31.4001 38.3C31.4001 40.7 28.8001 40.7 28.8001 40.7H14.0001C12.6001 40.7 11.4001 41.9 11.4001 43.3C11.4001 44.7 12.6001 45.9 14.0001 45.9H34.3001C36.5001 45.9 38.4001 44.8 39.5001 43C41.1501 40.25 42.7751 37.4999 44.4001 34.7499C46.0251 31.9999 47.6501 29.25 49.3001 26.5C50.4001 24.6 50.4001 22.3 49.3001 20.4C47.6501 17.6501 46.0252 14.9001 44.4002 12.1502C42.7752 9.4002 41.1501 6.65001 39.5001 3.9C38.4001 2.1 36.4001 1 34.3001 1H25.4001Z" fill="url(#jpLogoGrad)"/>
+<path d="M11.3999 3.6C11.3999 2.2 12.5999 1 13.9999 1H17.5999C18.9999 1 20.1999 2.2 20.1999 3.6C20.1999 5 18.9999 6.2 17.5999 6.2H13.9999C12.5999 6.2 11.3999 5 11.3999 3.6Z" fill="url(#jpLogoGrad)"/>
+<path d="M0 23.5001C0 22.1001 1.2 20.9001 2.6 20.9001H3.6C5 20.9001 6.2 22.1001 6.2 23.5001C6.2 24.9001 5 26.1001 3.6 26.1001H2.6C1.2 26.1001 0 24.9001 0 23.5001Z" fill="url(#jpLogoGrad)"/>
+<path d="M8.30008 30.8001C6.90008 30.8001 5.70008 32.0001 5.70008 33.4001C5.70008 34.9001 6.90008 36.1001 8.30008 36.0001H14.0001C15.4001 36.0001 16.6001 34.8001 16.6001 33.4001C16.6001 32.0001 15.4001 30.8001 14.0001 30.8001H8.30008Z" fill="url(#jpLogoGrad)"/>
+<path d="M69.7955 27.3088C69.7955 28.8312 69.6204 30.0793 69.2704 31.0533C68.9203 32.0273 68.3261 32.7598 67.4876 33.2509C66.6572 33.7502 65.5257 33.9998 64.0929 33.9998C63.7591 33.9998 63.3887 33.9712 62.9817 33.9139C62.5747 33.8648 62.3142 33.832 62.2002 33.8157L62.5177 31.2252H63.7144C65.1797 31.2252 65.9164 30.4231 65.9246 28.8189V15.265L64.0441 14.5039V12.3676L71.676 12.2449V14.5039L69.7955 15.265V27.3088Z" fill="white"/>
+<path d="M81.4937 28.3401C81.4937 28.3728 81.2779 28.557 80.8465 28.8926C80.415 29.2281 79.8981 29.5351 79.2957 29.8133C78.6933 30.0834 78.0746 30.2185 77.4396 30.2185C76.2185 30.2185 75.2619 29.8788 74.57 29.1995C73.8862 28.512 73.5443 27.538 73.5443 26.2775C73.5443 24.837 74.0571 23.7853 75.0829 23.1223C76.1086 22.4594 77.6024 22.1279 79.5643 22.1279H81.3227V20.7406C81.3227 19.5129 80.6796 18.9031 79.3934 18.9113C79.0107 18.9113 78.6566 18.94 78.331 18.9973C78.0054 19.0545 77.7449 19.1159 77.5495 19.1814C77.3622 19.2387 77.2442 19.2755 77.1954 19.2919L76.8168 20.8756H74.57L74.399 17.1557C74.5456 17.1066 74.9038 17.0002 75.4736 16.8365C76.0516 16.6728 76.7395 16.5173 77.5373 16.37C78.3432 16.2226 79.1044 16.149 79.8207 16.149C81.107 16.149 82.1286 16.3127 82.8857 16.6401C83.6428 16.9593 84.1964 17.4831 84.5464 18.2115C84.8965 18.9318 85.0715 19.9017 85.0715 21.1212V27.3334L86.952 27.7876V29.8011L81.9455 29.9729L81.4937 28.3401ZM77.1709 25.897C77.1709 26.388 77.2971 26.7645 77.5495 27.0264C77.81 27.2802 78.1763 27.407 78.6485 27.407C79.0474 27.407 79.4422 27.3006 79.833 27.0878C80.2237 26.8668 80.5534 26.6418 80.822 26.4126C81.0907 26.1752 81.2576 26.0197 81.3227 25.9461V24.2641H79.894C78.9253 24.2641 78.2292 24.3951 77.8059 24.657C77.3826 24.9189 77.1709 25.3322 77.1709 25.897Z" fill="white"/>
+<path d="M100.311 28.0823C99.7492 28.5897 99.0124 29.0726 98.1007 29.531C97.1971 29.9893 96.1428 30.2185 94.938 30.2185C92.8866 30.2185 91.291 29.6169 90.1513 28.4137C89.0116 27.2106 88.4417 25.5327 88.4417 23.3802C88.4417 21.1376 89.0442 19.3737 90.249 18.0888C91.4619 16.7956 93.1511 16.149 95.3166 16.149C95.9515 16.149 96.5906 16.2145 97.2337 16.3454C97.885 16.4764 98.4263 16.6114 98.8578 16.7506C99.2974 16.8815 99.5742 16.9715 99.6881 17.0206L99.566 21.1457H97.3192L96.9651 19.3656C96.8836 19.3492 96.6801 19.3124 96.3545 19.2551C96.0289 19.1896 95.6585 19.1569 95.2433 19.1569C94.3234 19.1569 93.6029 19.472 93.0819 20.1022C92.5691 20.7324 92.3126 21.6573 92.3126 22.8768C92.3126 24.2682 92.5731 25.3404 93.0942 26.0934C93.6233 26.8382 94.4048 27.2106 95.4387 27.2106C96.0899 27.2106 96.6598 27.1124 97.1482 26.916C97.6448 26.7113 98.06 26.5026 98.3937 26.2898C98.7275 26.077 98.9514 25.9379 99.0654 25.8724L100.311 28.0823Z" fill="white"/>
+<path d="M108.602 21.4527L110.3 18.8868L109.201 18.5307V16.5173L115.66 16.3945V18.5307L113.902 18.8622L111.582 22.1525L114.378 27.3579L116.283 27.9595V29.9729H111.655L108.553 23.8344H106.954V27.3334L108.334 27.9595V29.9729H101.202V27.9595L103.205 27.3334V13.2025L101.202 12.6991V10.6857L106.954 10.4893V21.4527H108.602Z" fill="white"/>
+<path d="M117.406 27.8367L119.275 27.0756V15.265L117.406 14.5039V12.3676L123.158 12.2449H125.527C127.423 12.2449 128.909 12.7155 129.984 13.6567C131.066 14.598 131.608 15.8871 131.608 17.524C131.608 19.6029 130.993 21.1703 129.764 22.2261C128.543 23.2819 126.78 23.8099 124.477 23.8099H123.158V27.0756L125.026 27.8367V29.9729H117.406V27.8367ZM124.477 20.8756C125.527 20.8756 126.333 20.6342 126.894 20.1513C127.456 19.6602 127.737 18.9522 127.737 18.0274C127.737 17.1925 127.513 16.5255 127.065 16.0262C126.626 15.5188 125.991 15.265 125.16 15.265H123.158V20.8756H124.477Z" fill="white"/>
+<path d="M139.74 16.149C141.751 16.149 143.302 16.7383 144.393 17.9169C145.492 19.0955 146.041 20.7692 146.041 22.9382C146.041 24.4278 145.764 25.721 145.211 26.8177C144.665 27.9145 143.892 28.7575 142.891 29.3468C141.89 29.9279 140.713 30.2185 139.362 30.2185C135.112 30.2185 132.988 27.9145 132.988 23.3065C132.988 21.8169 133.264 20.536 133.818 19.4638C134.38 18.3916 135.169 17.5731 136.187 17.0084C137.205 16.4354 138.389 16.149 139.74 16.149ZM139.606 19.1569C138.662 19.1569 137.966 19.4638 137.518 20.0776C137.078 20.6915 136.859 21.7269 136.859 23.1837C136.859 24.5751 137.066 25.5941 137.481 26.2407C137.905 26.8873 138.572 27.2106 139.484 27.2106C140.404 27.2106 141.08 26.8873 141.511 26.2407C141.942 25.5941 142.158 24.5342 142.158 23.061C142.158 21.7514 141.955 20.7733 141.548 20.1267C141.141 19.4802 140.493 19.1569 139.606 19.1569Z" fill="white"/>
+<path d="M154.809 21.4527L156.506 18.8868L155.407 18.5307V16.5173L161.867 16.3945V18.5307L160.108 18.8622L157.788 22.1525L160.585 27.3579L162.49 27.9595V29.9729H157.862L154.76 23.8344H153.16V27.3334L154.54 27.9595V29.9729H147.409V27.9595L149.412 27.3334V13.2025L147.409 12.6991V10.6857L153.16 10.4893V21.4527H154.809Z" fill="white"/>
+<path d="M167.508 24.0186C167.573 25.0253 167.875 25.811 168.412 26.3758C168.957 26.9323 169.666 27.2106 170.537 27.2106C171.155 27.2106 171.774 27.1247 172.393 26.9528C173.02 26.7727 173.536 26.5927 173.944 26.4126C174.359 26.2243 174.623 26.0934 174.737 26.0197L175.812 28.1068C175.812 28.1396 175.519 28.3483 174.933 28.733C174.355 29.1095 173.642 29.4532 172.796 29.7642C171.957 30.0671 171.062 30.2185 170.109 30.2185C167.993 30.2185 166.381 29.6292 165.274 28.4506C164.167 27.272 163.613 25.6023 163.613 23.4415C163.613 21.9847 163.878 20.7079 164.407 19.6111C164.944 18.5062 165.713 17.655 166.715 17.0575C167.716 16.4518 168.904 16.149 170.28 16.149C172.112 16.149 173.516 16.6769 174.493 17.7327C175.47 18.7885 175.958 20.2291 175.958 22.0542C175.958 22.4553 175.938 22.8441 175.897 23.2206C175.857 23.5971 175.828 23.8344 175.812 23.9326L167.508 24.0186ZM170.036 19.1569C169.352 19.1569 168.795 19.3901 168.363 19.8566C167.932 20.315 167.663 20.9207 167.557 21.6737H172.087C172.087 20.9207 171.921 20.315 171.587 19.8566C171.253 19.3901 170.736 19.1569 170.036 19.1569Z" fill="white"/>
+<path d="M183.199 18.1256C183.199 18.0928 183.395 17.9005 183.786 17.5486C184.176 17.1966 184.628 16.8774 185.141 16.591C185.662 16.2963 186.175 16.149 186.68 16.149C187.079 16.149 187.453 16.1817 187.803 16.2472C188.153 16.3127 188.426 16.3822 188.621 16.4559C188.825 16.5296 188.951 16.5746 189 16.591L188.804 21.4281H186.558L186.179 19.2919C185.748 19.2919 185.328 19.3983 184.921 19.6111C184.522 19.8157 184.18 20.0449 183.896 20.2986C183.619 20.5442 183.48 20.6751 183.48 20.6915V27.3334L185.984 27.9595V29.9729H177.729V27.9595L179.732 27.3334V19.1569L177.729 18.5307V16.5173L182.98 16.3945L183.199 18.1256Z" fill="white"/>
+<defs>
+<linearGradient id="jpLogoGrad" x1="0" y1="33.44" x2="50.74" y2="33.44" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8032FF"/>
+<stop offset="1" stop-color="#FF3D00"/>
+</linearGradient>
+</defs>
+</svg>
+      </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="games.html">Oyunlar</a>
+      <a href="bonuses.html">Bonuslar</a>
+      <a href="tournaments.html" class="active">Turnuvalar</a>
+      <a href="news.html">Haberler</a>
+      <a href="promo-code.html">Promosyon Kodu</a>
+    </nav>
+    <a href="https://go.jack-full.com/c41f796e" class="header-cta header-cta-desktop">Hemen Oyna ♠</a>
+     <div class="lang-switcher">
+  <button class="lang-btn" aria-label="Change language" aria-expanded="false">
+    <span class="lang-flag">TR</span>
+    <span class="lang-label">Türkçe</span>
+    <svg class="lang-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  </button>
+  <div class="lang-dropdown" role="menu">
+    <a href="../tournaments.html" role="menuitem" hreflang="en"><span class="lang-flag">GB</span><span>English</span></a>
+    <a href="../ru/tournaments.html" role="menuitem" hreflang="ru"><span class="lang-flag">RU</span><span>Русский</span></a>
+    <a href="../es/tournaments.html" role="menuitem" hreflang="es"><span class="lang-flag">ES</span><span>Español</span></a>
+    <a href="../it/tournaments.html" role="menuitem" hreflang="it"><span class="lang-flag">IT</span><span>Italiano</span></a>
+    <a href="../pt/tournaments.html" role="menuitem" hreflang="pt"><span class="lang-flag">BR</span><span>Português</span></a>
+    <a href="../vi/tournaments.html" role="menuitem" hreflang="vi"><span class="lang-flag">VN</span><span>Tiếng Việt</span></a>
+    <a href="../th/tournaments.html" role="menuitem" hreflang="th"><span class="lang-flag">TH</span><span>ไทย</span></a>
+    <a href="../ms/tournaments.html" role="menuitem" hreflang="ms"><span class="lang-flag">MY</span><span>Bahasa Melayu</span></a>
+    <a href="../ko/tournaments.html" role="menuitem" hreflang="ko"><span class="lang-flag">KR</span><span>한국어</span></a>
+    <a href="../ar/tournaments.html" role="menuitem" hreflang="ar"><span class="lang-flag">SA</span><span>العربية</span></a>
+    <a href="../ja/tournaments.html" role="menuitem" hreflang="ja"><span class="lang-flag">JP</span><span>日本語</span></a>
+    <a href="../pl/tournaments.html" role="menuitem" hreflang="pl"><span class="lang-flag">PL</span><span>Polski</span></a>
+    <a href="../cs/tournaments.html" role="menuitem" hreflang="cs"><span class="lang-flag">CZ</span><span>Čeština</span></a>
+    <a href="../hi/tournaments.html" role="menuitem" hreflang="hi"><span class="lang-flag">IN</span><span>हिन्दी</span></a>
+    <a href="tournaments.html" class="active" role="menuitem" hreflang="tr"><span class="lang-flag">TR</span><span>Türkçe</span></a>
+    <a href="../tl/tournaments.html" role="menuitem" hreflang="tl"><span class="lang-flag">PH</span><span>Filipino</span></a>
+    <a href="../fr/tournaments.html" role="menuitem" hreflang="fr"><span class="lang-flag">FR</span><span>Français</span></a>
+  </div>
+</div>
+        <button class="theme-toggle" aria-label="Toggle theme">
+       <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 1.78a1 1 0 011.415 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM18 9a1 1 0 110 2h-1a1 1 0 110-2h1zM3 9a1 1 0 110 2H2a1 1 0 110-2h1zm12.657 6.071l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 011.414-1.414zM5.757 4.929a1 1 0 010 1.414l-.707.707A1 1 0 013.636 5.636l.707-.707a1 1 0 011.414 0zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1z" fill="currentColor"/><circle cx="10" cy="10" r="3.5" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+       <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/></svg>
+     </button>
+  </div>
+</header>
+
+<!-- Breadcrumb Navigation -->
+<nav class="breadcrumb-nav" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">Ana Sayfa</span></a>
+        <meta itemprop="position" content="1" />
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span itemprop="name">Turnuvalar</span>
+        <meta itemprop="position" content="2" />
+      </li>
+    </ol>
+  </div>
+</nav>
+
+
+<!-- Page Hero with H1 -->
+<section style="padding: calc(var(--header-height) + 48px) 0 24px; background: linear-gradient(180deg, rgba(137,59,247,0.06) 0%, transparent 100%); position: relative; overflow: hidden;">
+  <div class="container">
+    <h1 style="font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 900; letter-spacing: -0.03em; margin-bottom: 12px;" data-i18n="tournaments_hero_title">JackPoker Turnuvaları</h1>
+    <p style="color: var(--text-muted); font-size: 1.08rem; max-width: 640px; line-height: 1.7;" data-i18n="tournaments_hero_subtitle">Aylık 3,5 milyon $+ garantiyle, günlük freeroll'lar, ikonik Big Bang Sunday ve özel seri etkinlikler. Bir sonraki büyük başarınız burada başlıyor.</p>
+  </div>
+</section>
+
+<!-- ===== 2. TOURNAMENT OVERVIEW STATS ===== -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-bar-bordered">
+      <div class="stat-bordered">
+        <div class="stat-number">$3,5M+</div>
+        <div class="stat-desc">Aylık Garantiler</div>
+      </div>
+      <div class="stat-bordered">
+        <div class="stat-number">8</div>
+        <div class="stat-desc">Günlük Freeroll'lar</div>
+      </div>
+      <div class="stat-bordered">
+        <div class="stat-number">$45B</div>
+        <div class="stat-desc">Big Bang Sunday GTD</div>
+      </div>
+      <div class="stat-bordered">
+        <div class="stat-number">$200B+</div>
+        <div class="stat-desc">Aylık Turnuva Ödülleri</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3a. FEATURED: EASTER TURBO SPRINT ===== -->
+<section class="section" data-expires="2026-04-12">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Mevcut Etkinlik</span>
+      <h2>Easter Turbo Sprint — <span class="gold-text">$500.000 GTD</span></h2>
+      <p>Turbo ve Hyper turnuvalarımızın Easter serisi canlı. Yarım milyon dolarlık garantili ödül havuzuyla iki hafta yüksek hızlı aksiyon — 12 Nisan'a kadar devam ediyor.</p>
+    </div>
+
+    <div class="carnival-banner">
+      <div class="carnival-inner">
+        <div class="carnival-left">
+          <div class="carnival-badge">🥚 Şu An Yayında · 30 Mart – 12 Nisan 2026</div>
+          <div class="carnival-prize">$500,000</div>
+          <div class="carnival-subtitle">Toplam Garantili Ödül Havuzu</div>
+          <p style="color: var(--text-body); margin-bottom: 20px; line-height: 1.8;">Easter Turbo Sprint, JackPoker'ın toplam garantili ödül havuzuyla 30 Mart'tan 12 Nisan'a kadar süren en büyük Easter turnuva serisidir. <strong style="color: var(--gold-primary);">$500,000</strong>. Seri, yalnızca Turbo ve Hyper format turnuvalarını içerir — dinamik oyun, hızlı kararlar ve minimal ısınma süresi seven oyuncular için mükemmel seçim. Bu hızlı tempolu etkinliklerde blindler hızla yükseliyor ve aksiyon hiç durmuyor; her saniye önemli.</p>
+          <p style="color: var(--text-body); margin-bottom: 24px; line-height: 1.8;">Easter Turbo Sprint'i özel yapan şey hız ve değer kombinasyonudur. <strong style="color: var(--text-white);">500.000 $ garantili</strong> iki haftalık yoğun turnuva aksiyonuyla seri, her bankroll'a uygun çeşitli giriş seviyesi sunuyor. Oyuncular gerçek para veya turnuva biletleri kullanarak kayıt olabilir — herkese erişilebilir yapıyor. Hızlı formatlar oturum başına daha fazla turnuva, daha fazla finali masa ve Easter yumurtaları bitmeden bankroll'ınızı inşa etmek için daha fazla fırsat anlamına gelir.</p>
+
+          <div class="highlight-box gold">
+            <h3>Easter Turbo Sprint Neden Kaçırılmaz</h3>
+            <p>500.000 $ GTD güçlü bir alan çekerken Turbo ve Hyper formatları her elde anlamlılık kazandırır. İki tam haftalık etkinliklerle, her bankroll boyutu için giriş ücretleri ve ilave yatırım olmadan oynamanızı sağlayan bilet sistemiyle, bu şimdiye kadar düzenlediğimiz en erişilebilir hız formatı serisi. Doruk saatlerinde eş zamanlı etkinliklerde çok masalı oyun, kenarınızı katlanarak artırır.</p>
+          </div>
+        </div>
+
+        <div class="carnival-right">
+          <h3 style="color: var(--text-white); margin-bottom: 20px;">Nasıl Katılınır</h3>
+          <ul class="how-it-works-list">
+            <li>
+              <span class="step-num">1</span>
+              <span><strong style="color: var(--text-white);">Ücretsiz hesabınızı oluşturun</strong> — Kayıt iki dakikadan az sürer. Hoş geldin paketinizi etkinleştirmek ve doğrudan aksiyona atlamak için promosyon kodunu kullanın <strong style="color: var(--gold-primary);">WELCOME</strong> .</span>
+            </li>
+            <li>
+              <span class="step-num">2</span>
+              <span><strong style="color: var(--text-white);">Hesabınızı fonlayın</strong> — Visa, Mastercard, Skrill, Neteller, Bitcoin, Ethereum, USDT veya Pix kullanarak uygun bir para yatırma yapın. Minimum para yatırmalar 10 $'dan başlıyor.</span>
+            </li>
+            <li>
+              <span class="step-num">3</span>
+              <span><strong style="color: var(--text-white);">Turnuva lobisini açın</strong> — Easter Turbo Sprint sekmesine gidin. Tüm etkinlikler program, giriş ücretleri ve garantili ödül havuzlarıyla listeleniyor. Gerçek para veya turnuva biletleriyle kayıt olun.</span>
+            </li>
+            <li>
+              <span class="step-num">4</span>
+              <span><strong style="color: var(--text-white);">Hızlı oyna, büyük kazan</strong> — Turbo ve Hyper formatları hızlı kör seviyeleri ve sürekli aksiyon anlamına gelir. Her karar önemlidir ve derin koşmalar zamanın çok daha kısa bir diliminde gerçekleşir.</span>
+            </li>
+            <li>
+              <span class="step-num">5</span>
+              <span><strong style="color: var(--text-white);">Biletlerinizi kullanın</strong> — Promosyon biletleri 12 Nisan 2026'dan önce kullanılmalıdır. Kullanılmayan biletler serinin sonunda sona erer, bu nedenle erken ve sık kayıt olduğunuzdan emin olun.</span>
+            </li>
+          </ul>
+
+          <div style="margin-top: 28px; padding: 20px; background: rgba(246,186,70,0.06); border: 1px solid rgba(246,186,70,0.2); border-radius: var(--radius-md);">
+            <p style="margin: 0; font-size: 0.88rem; color: var(--text-muted);">Seri 30 Mart – 12 Nisan 2026 tarihleri arasında çalışır. Fonlanmış gerçek para hesabına sahip tüm oyunculara açıktır. Nakit veya turnuva biletleriyle kayıt olun. Promosyon biletleri 12 Nisan'da sona erer. Tam program JackPoker turnuva lobisinde mevcuttur.</p>
+          </div>
+
+          <a href="https://go.jack-full.com/c41f796e" class="btn btn-gold btn-lg" style="margin-top: 24px; width: 100%; justify-content: center;">500 $'lık Easter Sprint'e Katıl ♠</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3c. FEATURED: SHERLOCK'S MYSTERY BOUNTIES ===== -->
+
+<!-- ===== SPRING SPIN FESTIVAL ===== -->
+<section class="section" data-expires="2026-04-26">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Mevcut Etkinlik</span>
+      <h2>Spring Spin Festival — <span class="gold-text">10 $'a 1.000.000 $ Kazan</span></h2>
+      <p>JackPoker'da milyona ulaşmanın en hızlı yolu. 100.000x çarpan aktif olan Spin&amp;Win ekspres turnuvaları — 15 dakikada iki rakibi yenin ve birinci ödülü talep edin. 6 Nisan'dan 26 Nisan'a kadar çalışıyor.</p>
+    </div>
+
+    <div class="carnival-banner">
+      <div class="carnival-inner">
+        <div class="carnival-left">
+          <div class="carnival-badge">⚡ Şu An Yayında · 6 Nisan – 26 Nisan 2026</div>
+          <div class="carnival-prize">$1,000,000</div>
+          <div class="carnival-subtitle">Birinci Ödül — 10 $'lık Giriş Ücretinizin 100.000x'i</div>
+          <p style="color: var(--text-body); margin-bottom: 20px; line-height: 1.8;">Spring Spin Festival özel bir <strong style="color: var(--gold-primary);">100.000x çarpanı</strong> Nisan boyunca JackPoker'ın Spin&amp;Win turnuvalarında etkinleştiriyor. 6 ila 26 Nisan arasında, herhangi bir 10 $'lık Spin&amp;Win turnuvası maksimum <strong style="color: var(--gold-primary);">bir milyon dolar</strong>ödül havuzunu verebilir. Format acımasız derecede verimli: çarpan çarkı oyun başlamadan önce döner ve ödül havuzunuzu ortaya çıkarır, ardından 15 dakikalık heads-up mücadelede yalnızca iki rakiple karşı karşıya gelirsiniz. Uzun oturumlar yok, büyük alanlar yok, karmaşık çok masalı mücadele yok. Bir giriş ücreti, iki galibiyet, bir milyon.</p>
+          <p style="color: var(--text-body); margin-bottom: 24px; line-height: 1.8;">Kazanımlar <strong style="color: var(--text-white);">Instant Cash</strong> olarak ödenir — turnuva sona erdiği anda bakiyenize yatırılır. Fonlar nakit oyunlarda daha fazla oyun için hemen kullanılabilir. Ödül çekilişine katılmak için minimum <strong style="color: var(--text-white);">$10</strong> promosyon dönemi boyunca para yatırılması gerekir. Yalnızca gerçek para oyunları ve para yatırmalar bu promosyona katkıda bulunur.</p>
+
+          <div class="highlight-box gold">
+            <h3>Spring Spin Festival Neden Mutlaka Oynanmalı</h3>
+            <p>10 $ giriş noktası ile gerçek 1.000.000 $ birinci ödülün kombinasyonu, bu promosyonu online pokerdaki en olağandışı risk-ödül önerilerinden biri yapıyor. Geleneksel turnuva serileri, hayatı değiştiren paraya ulaşmak için saatler süren oyun ve büyük alanlar gerektirir. Spring Spin Festival tüm bunları yalnızca iki rakibe karşı 15 dakikaya sıkıştırıyor — her oyuncuya, her bankroll seviyesinde, bu baharda bir milyona gerçek bir şans veriyor.</p>
+          </div>
+        </div>
+
+        <div class="carnival-right">
+          <h3 style="color: var(--text-white); margin-bottom: 20px;">1.000.000 $ Nasıl Kazanılır</h3>
+          <ul class="how-it-works-list">
+            <li>
+              <span class="step-num">1</span>
+              <span><strong style="color: var(--text-white);">Ücretsiz hesabınızı oluşturun</strong> — Kayıt iki dakikadan az sürer. Hoş geldin paketinizi etkinleştirmek ve doğrudan aksiyona atlamak için promosyon kodunu kullanın <strong style="color: var(--gold-primary);">WELCOME</strong> %300 hoş geldin bonusunuzun kilidini açmak ve anında festival için hazır olmak için.</span>
+            </li>
+            <li>
+              <span class="step-num">2</span>
+              <span><strong style="color: var(--text-white);">En az 10 $ yatırın</strong> — Ödül çekilişine girmek için 6-26 Nisan promosyon penceresi boyunca Visa, Mastercard, Skrill, Neteller, Bitcoin, USDT veya Pix kullanarak uygun gerçek para yatırma yapın.</span>
+            </li>
+            <li>
+              <span class="step-num">3</span>
+              <span><strong style="color: var(--text-white);">Spin&amp;Win lobisini açın</strong> — JackPoker turnuva lobisindeki Spin&amp;Win bölümüne gidin ve 10 $'lık bir masa seçin. Çarpan çarkı oyununuz başlamadan otomatik olarak döner.</span>
+            </li>
+            <li>
+              <span class="step-num">4</span>
+              <span><strong style="color: var(--text-white);">İki rakibinizi yenin</strong> — İlk heads-up maçı kazanın, ardından ikinciyi. Birinci tüm çarpılmış ödül havuzunu alır. 100.000x çarpan aktifken, birinci 1.000.000 $ değerindedir.</span>
+            </li>
+            <li>
+              <span class="step-num">5</span>
+              <span><strong style="color: var(--text-white);">Instant Cash'inizi toplayın</strong> — Kazanımlarınız anında bakiyenize yatırılır. Bekleme süresi yok, ödül üzerinde rollover şartı yok. Kazan, çek, tekrarla.</span>
+            </li>
+          </ul>
+
+          <div style="margin-top: 28px; padding: 20px; background: rgba(246,186,70,0.06); border: 1px solid rgba(246,186,70,0.2); border-radius: var(--radius-md);">
+            <p style="margin: 0; font-size: 0.88rem; color: var(--text-muted);">Spring Spin Festival 6-26 Nisan 2026 tarihleri arasında çalışır. Ödül çekilişine katılmak için minimum 10 $ gerçek para yatırma gereklidir. Yalnızca gerçek para oyunları ve para yatırmalar geçerlidir. Instant Cash fonları hemen oyun için kullanılabilir. Para çekme işlemi, platform kurallarına göre rake üretimi şartlarına tabidir.</p>
+          </div>
+
+          <a href="https://go.jack-full.com/c41f796e" class="btn btn-gold btn-lg" style="margin-top: 24px; width: 100%; justify-content: center;">1.000.000 $ İçin Oyna ⚡</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" data-expires="2026-04-19">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Mevcut Etkinlik</span>
+      <h2>Sherlock's Mystery Bounties — <span class="gold-text">2.500.000 $ GTD</span></h2>
+      <p>2026'nın en büyük Mystery Bounty Knockout serimiz canlı. 100'den fazla turnuva, 4.500 $+ değerinde ödüller ve Instant Cash ödemeleri — şimdi 19 Nisan'a kadar devam ediyor.</p>
+    </div>
+
+    <div class="carnival-banner">
+      <div class="carnival-inner">
+        <div class="carnival-left">
+          <div class="carnival-badge">🔍 Şu An Yayında · 30 Mart – 19 Nisan 2026</div>
+          <div class="carnival-prize">$2,500,000</div>
+          <div class="carnival-subtitle">Toplam Garantili Ödül Havuzu</div>
+          <p style="color: var(--text-body); margin-bottom: 20px; line-height: 1.8;">Sherlock's Mystery Bounties, dedektif düzeyinde entrika getiren 21 günlük büyük bir Mystery Bounty KO serisidir. 30 Mart'tan 19 Nisan'a kadar 100'den fazla turnuva çalışıyor ve toplam <strong style="color: var(--gold-primary);">$2,500,000</strong> garantili ödül havuzlarında garantili. Her etkinlik Mystery Bounty formatını kullanıyor — bir rakibi eleminasyona götürdüğünüzde, minimum ödülden başlayarak <strong style="color: var(--gold-primary);">$4,500+</strong>'na kadar her şeyi içerebilecek rastgele bir ödül zarfı alırsınız. Gizem unsuru her nakavtı potansiyel jackpot anına dönüştürür.</p>
+          <p style="color: var(--text-body); margin-bottom: 24px; line-height: 1.8;">Bu seriyi öne çıkaran şey <strong style="color: var(--text-white);">Instant Cash</strong> ödeme sistemi — tüm ödül ödülleri doğrudan hesap bakiyenize gerçek zamanlı olarak yatırılır. Bilet yok, bekleme süresi yok, şart yok. Bir oyuncuyu eleyorsunuz, zarfı açıyorsunuz ve nakit anında bakiyenize geliyor. Mikro'dan yüksek rolüne kadar her bankroll seviyesini kapsayan giriş ücretleriyle birleşince, Sherlock's Mystery Bounties şimdiye kadar düzenlediğimiz en erişilebilir ve heyecan verici turnuva serisi olmak üzere tasarlandı.</p>
+
+          <div class="highlight-box gold">
+            <h3>Sherlock's Mystery Bounties Neden Kaçırılmaz</h3>
+            <p>Yalnızca 21 günde 100'den fazla etkinlikte 2,5 milyon $ garantiyle, ortalama etkinlik 25.000 $ garantiye sahip — karma giriş serisi için devasa. Mystery bounty mekaniği, her tek eliminasyonun giriş ücretinin çok üzerinde bir değer taşıyabileceği anlamına gelir. Doruk saatlerinde, düzinelerce etkinlik çakışıyor ve birden fazla masada derin koşmalar ödül kazanımını katlanarak artırıyor. Bu, tek bir oturumun bankroll'ınızı yeniden tanımlayabileceği türden bir seri.</p>
+          </div>
+        </div>
+
+        <div class="carnival-right">
+          <h3 style="color: var(--text-white); margin-bottom: 20px;">Nasıl Katılınır</h3>
+          <ul class="how-it-works-list">
+            <li>
+              <span class="step-num">1</span>
+              <span><strong style="color: var(--text-white);">Ücretsiz hesabınızı oluşturun</strong> — Kayıt iki dakikadan az sürer. Hoş geldin paketinizi etkinleştirmek ve doğrudan aksiyona atlamak için promosyon kodunu kullanın <strong style="color: var(--gold-primary);">WELCOME</strong> hoş geldin paketinizi etkinleştirmek ve anında seri için hazır olmak için.</span>
+            </li>
+            <li>
+              <span class="step-num">2</span>
+              <span><strong style="color: var(--text-white);">Hesabınızı fonlayın</strong> — Visa, Mastercard, Skrill, Neteller, Bitcoin, Ethereum, USDT veya Pix kullanarak uygun bir para yatırma yapın. Minimum para yatırmalar 10 $'dan başlıyor.</span>
+            </li>
+            <li>
+              <span class="step-num">3</span>
+              <span><strong style="color: var(--text-white);">Turnuva lobisini açın</strong> — Sherlock's Mystery Bounties sekmesine turnuva lobisinde gidin. 100'den fazla etkinliğin tamamı program, giriş ücretleri ve garantili ödül havuzlarıyla listeleniyor.</span>
+            </li>
+            <li>
+              <span class="step-num">4</span>
+              <span><strong style="color: var(--text-white);">Kayıt ol ve oyna</strong> — Giriş seviyenizi seçin, etkinliklerinize kayıt olun ve ödül avına başlayın. Her nakavt anında nakit ödüllerle gizemli bir ödül zarfı ortaya çıkarır.</span>
+            </li>
+            <li>
+              <span class="step-num">5</span>
+              <span><strong style="color: var(--text-white);">Instant Cash Toplayın</strong> — Ödül ödülleri gerçek zamanlı olarak bakiyenize yatırılır. Bahis şartı yok, bekleme yok, koşul yok. Kazan, çek, tekrarla.</span>
+            </li>
+          </ul>
+
+          <div style="margin-top: 28px; padding: 20px; background: rgba(246,186,70,0.06); border: 1px solid rgba(246,186,70,0.2); border-radius: var(--radius-md);">
+            <p style="margin: 0; font-size: 0.88rem; color: var(--text-muted);">Seri 30 Mart – 19 Nisan 2026 tarihleri arasında çalışır. Fonlanmış gerçek para hesabına sahip tüm oyunculara açıktır. Mystery bounty ödülleri anında yatırılır. Etkinlikler genelinde çok masalı oyun teşvik edilir. Tam program JackPoker turnuva lobisinde mevcuttur.</p>
+          </div>
+
+          <a href="https://go.jack-full.com/c41f796e" class="btn btn-gold btn-lg" style="margin-top: 24px; width: 100%; justify-content: center;">2,5 Milyon $'lık Ödül Avla ♠</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3b. FEATURED: CASH CARNIVAL ===== -->
+<section class="section" data-expires="2026-04-19">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Mevcut Etkinlik</span>
+      <h2>Cash Carnival — <span class="gold-text">500.000 $ Nakit Düşüşü</span></h2>
+      <p>Yılın en büyük canlı promosyonu şu an yayında. Nakit masalarındaki her oturumunuz sürpriz bir rüzgar getirebilir — ve bunu talep etmek için herhangi bir işlem gerekmez.</p>
+    </div>
+
+    <div class="carnival-banner">
+      <div class="carnival-inner">
+        <div class="carnival-left">
+          <div class="carnival-badge">🎪 Şu An Yayında · 23 Mart – 19 Nisan 2026</div>
+          <div class="carnival-prize">$500,000</div>
+          <div class="carnival-subtitle">Toplam Nakit Düşüşlerinde</div>
+          <p style="color: var(--text-body); margin-bottom: 20px; line-height: 1.8;">Cash Carnival, mevsimlik amiral gemisi promosyonumuzdur ve 2026 baskısı şimdiye kadar düzenlediğimizin en büyüğü. Dört haftalık bir pencere boyunca — 23 Mart'tan 19 Nisan'a kadar — gerçek para nakit masalarındaki oyunculara tamamen rastgele yarım milyon dolar saf nakit ödülü dağıtıyoruz. Satın alınacak bilet yok, biriktirilecek puan yok, kovalanacak sıralama tablosu yok. Ödüller siz oynarken masaya düşüyor.</p>
+          <p style="color: var(--text-body); margin-bottom: 24px; line-height: 1.8;">Cash Carnival'ı olağanüstü yapan şey, düşüşlerin sıklığı ve öngörülemezliğidir. Bir 'nakit bomb' rastgele her <strong style="color: var(--gold-primary);">3 ila 7 elde</strong> katılan masalarda tetikleniyor. Bomba patladığında, o anda masada oturan her oyuncu anında bakiyesine eklenen bir nakit ödül alıyor — bahis şartı yok, bekleme yok, şart yok. Bu, gerçek zamanlı dağıtılan gerçek para, her tek eli mümkün olan en iyi şekilde potansiyel hayat değiştirici yapıyor.</p>
+
+          <div class="highlight-box gold">
+            <h3>Cash Carnival Neden Kaçırılmaz</h3>
+            <p>Aktif nakit masalarda yalnızca 27 gün boyunca yayılan 500.000 $ ile matematik, düzenli oyuncular için olağanüstü beklenen değerde çalışıyor. Yoksa rutin hissettiren oturumlar, eller arasında gelen bonus rüzgar olasılığıyla elektrik yüklü hale geliyor. Doruk trafik saatlerinde, birden fazla masa eş zamanlı çalışabiliyor ve her masada bomba saati tikiliyorken — bu da promosyon dönemi boyunca önemli ölçüde ödül dağıtım hızının arttığı anlamına geliyor.</p>
+          </div>
+        </div>
+
+        <div class="carnival-right">
+          <h3 style="color: var(--text-white); margin-bottom: 20px;">Nasıl Katılınır</h3>
+          <ul class="how-it-works-list">
+            <li>
+              <span class="step-num">1</span>
+              <span><strong style="color: var(--text-white);">Ücretsiz hesabınızı oluşturun</strong> — Kayıt iki dakikadan az sürer. Hoş geldin paketinizi etkinleştirmek ve doğrudan aksiyona atlamak için promosyon kodunu kullanın <strong style="color: var(--gold-primary);">WELCOME</strong> hoş geldin paketinizi Cash Carnival uygunluğuyla birlikte etkinleştirmek için.</span>
+            </li>
+            <li>
+              <span class="step-num">2</span>
+              <span><strong style="color: var(--text-white);">Hesabınızı fonlayın</strong> — Visa, Mastercard, Skrill, Neteller, Bitcoin, Ethereum, USDT veya Pix dahil desteklenen ödeme yöntemlerimizden herhangi birini kullanarak uygun bir para yatırma yapın. Minimum para yatırmalar 10 $'dan başlıyor.</span>
+            </li>
+            <li>
+              <span class="step-num">3</span>
+              <span><strong style="color: var(--text-white);">Herhangi bir nakit masasında oturun</strong> — Cash Carnival, Texas Hold'em ve PLO nakit oyun masalarımızda aktif. Nakit oyun lobisine gidin, tercih ettiğiniz bahisi seçin ve bir koltuk alın.</span>
+            </li>
+            <li>
+              <span class="step-num">4</span>
+              <span><strong style="color: var(--text-white);">Bombayı bekleyin</strong> — Nakit bomb rastgele her 3-7 elde tetikleniyor. Ateşlendiğinde, masadaki tüm oyuncular otomatik nakit ödül alır. Basılacak düğme yok, katılım gerekmiyor.</span>
+            </li>
+            <li>
+              <span class="step-num">5</span>
+              <span><strong style="color: var(--text-white);">Bakiyenizin büyümesini izleyin</strong> — Ödüller anında yatırılır ve herhangi bir oynatma şartı olmaksızın serbestçe çekilebilir. Daha uzun oynayın, daha fazla masada oynayın ve şanslarınızı katlanarak çoğaltın.</span>
+            </li>
+          </ul>
+
+          <div style="margin-top: 28px; padding: 20px; background: rgba(246,186,70,0.06); border: 1px solid rgba(246,186,70,0.2); border-radius: var(--radius-md);">
+            <p style="margin: 0; font-size: 0.88rem; color: var(--text-muted);">Promosyon 23 Mart – 19 Nisan 2026 tarihleri arasında çalışır. Fonlanmış gerçek para hesabına sahip tüm oyunculara açıktır. Nakit ödüller otomatik olarak yatırılır. 3 masaya kadar çok masalı oyun bomba maruziyetinizi artırır. Tam şartlar JackPoker web sitesinde mevcuttur.</p>
+          </div>
+
+          <a href="https://go.jack-full.com/c41f796e" class="btn btn-gold btn-lg" style="margin-top: 24px; width: 100%; justify-content: center;">500 $'lık Payınızı Alın ♠</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 4. BONUS BONANZA SERIES ===== -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Amiral Gemisi Serisi</span>
+      <h2>Bonus Bonanza Serisi — <span class="gold-text">Aylık ~1,25 Milyon $ GTD</span></h2>
+      <p>Kalıcı amiral gemisi turnuva serimiz her tek ay çalışıyor ve büyük garantili ödül havuzlarıyla tüm giriş seviyelerinde yapılandırılmış bir etkinlik programı sunuyor.</p>
+    </div>
+
+    <div class="bonanza-grid">
+      <div>
+        <p style="line-height: 1.8; margin-bottom: 20px;">Bonus Bonanza Serisi, JackPoker'ın turnuva teklifinin omurgasıdır. Birkaç hafta çalışıp kaybolan zaman sınırlı serilerin aksine, Bonus Bonanza yıl boyunca sürekli çalışır ve oyuncularımızın her zaman ileriye dönük rekabetçi çok masalı bir turnuva olmasını sağlar. Her ay seri yaklaşık <strong style="color: var(--gold-primary);">1,25 milyon dolar</strong> toplam ödül havuzu parasını, ultra uygun fiyatlı mikro bahisli girişlerden en deneyimli oyuncularımızı çeken ciddi orta bahisli yarışmalara kadar uzanan düzinelerce etkinliğe yayılmış şekilde garanti eder.</p>
+
+        <p style="line-height: 1.8; margin-bottom: 20px;">Bonus Bonanza'nın tanımlayıcı özelliklerinden biri, giriş seviyelerinin çeşitliliğidir. Her oyuncunun — freeroll'larda bankroll inşa eden yeniden başlayanlardan, pokeri birincil gelir kaynağı olarak ele alan deneyimli bir grindere kadar — anlamlı ödül havuzlarına sahip iyi yapılandırılmış turnuvalara erişimi hak ettiğine inanıyoruz. Bu nedenle Bonus Bonanza etkinlikleri, giriş ücretleriyle aşağıdan çalışıyor <strong style="color: var(--text-white);">$1.10</strong> mikro bahisli uçuşlar için, popüler orta aralıklı <strong style="color: var(--text-white);">22 $ ve 55 $</strong> giriş etkinlikleri ve yukarısı arasında <strong style="color: var(--text-white);">109 $ ve 215 $</strong> daha yüksek bahisli manşet turnuvalar için. Her bankroll için gerçek bir etkinlik var.</p>
+
+        <p style="line-height: 1.8; margin-bottom: 28px;">Aşamalı Nakavt (PKO) turnuvaları, Bonus Bonanza deneyiminin köşe taşıdır. PKO etkinliklerinde, her oyuncunun giriş ücretinin bir kısmı doğrudan kafasındaki bir ödüle gider. Bir rakibi her elimine ettiğinizde, ödüllerinin yarısını anında nakit olarak toplarsınız — diğer yarısı kendi kafanızdaki ödüle eklenerek sizi giderek daha değerli bir hedef haline getirir. Bu, agresifliğin ödüllendirildiği, yan potların gerçek nakit sonuçları taşıdığı ve her all-in durumunun yalnızca chip birikiminin ötesinde tehlikeler içerdiği olağanüstü dinamik bir oyun ortamı yaratır. PKO alanlarımız, online pokerdaki en aktif ve eğlenceli alanlar arasındadır.</p>
+
+        <div class="highlight-box">
+          <h3>Seri Nasıl Çalışır</h3>
+          <p>Bonus Bonanza, yuvarlayan aylık bir takvimi takip eder. Etkinlikler, planlamanıza ve erken kayıt olmanıza olanak tanımak için turnuva lobisinde 30 gün önceden yayınlanır. Geç kayıt, çoğu etkinlikte 3 seviyeye kadar mevcuttur. Seçili turnuvalarda yeniden giriş seçenekleri mevcut olup erken elenen oyunculara ödül havuzu için ikinci bir şans sunuyor. Tüm Bonus Bonanza etkinlikleri VIP rakeback hesaplamalarımıza katkıda bulunur; yani turnuva ödülleri için rekabet ederken aynı zamanda sadakat ödülleri kazanırsınız.</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="bonanza-schedule">
+          <div class="bonanza-schedule-header">
+            <h3>Seri Program Öne Çıkanları</h3>
+          </div>
+          <div class="schedule-row" style="background: var(--purple-surface); color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;">
+            <span>Etkinlik</span>
+            <span>Format</span>
+            <span class="gtd" style="color: var(--text-muted);">GTD</span>
+          </div>
+          <div class="schedule-row">
+            <span class="buyin">$5.50</span>
+            <span>Mikro Kickoff</span>
+            <span class="gtd">$5,000</span>
+          </div>
+          <div class="schedule-row">
+            <span class="buyin">$11</span>
+            <span>Günlük Grinder</span>
+            <span class="gtd">$15,000</span>
+          </div>
+          <div class="schedule-row">
+            <span class="buyin">$22</span>
+            <span>Hafta Ortası Özel</span>
+            <span class="gtd">$30,000</span>
+          </div>
+          <div class="schedule-row">
+            <span class="buyin">$22</span>
+            <span>PKO Ödül Avcısı</span>
+            <span class="gtd">$25,000</span>
+          </div>
+          <div class="schedule-row">
+            <span class="buyin">$33</span>
+            <span>Cuma Gecesi Turbo</span>
+            <span class="gtd">$20,000</span>
+          </div>
+          <div class="schedule-row">
+            <span class="buyin">$55</span>
+            <span>Yüksek Rulo PKO</span>
+            <span class="gtd">$50,000</span>
+          </div>
+          <div class="schedule-row">
+            <span class="buyin">$109</span>
+            <span>Bonanza Ana Etkinliği</span>
+            <span class="gtd">$100,000</span>
+          </div>
+          <div class="schedule-row">
+            <span class="buyin">$215</span>
+            <span>Süper Yüksek Rulo</span>
+            <span class="gtd">$75,000</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 12px;">
+          <div class="pill" style="justify-content: space-between; padding: 14px 18px; border-radius: var(--radius-md);">
+            <span>Aylık Etkinlikler</span>
+            <strong style="color: var(--gold-primary);">40'tan fazla turnuva</strong>
+          </div>
+          <div class="pill" style="justify-content: space-between; padding: 14px 18px; border-radius: var(--radius-md);">
+            <span>Aylık PKO Etkinlikleri</span>
+            <strong style="color: var(--gold-primary);">12'den fazla etkinlik</strong>
+          </div>
+          <div class="pill" style="justify-content: space-between; padding: 14px 18px; border-radius: var(--radius-md);">
+            <span>Giriş Ücreti Aralığı</span>
+            <strong style="color: var(--gold-primary);">$1.10 – $215</strong>
+          </div>
+          <div class="pill" style="justify-content: space-between; padding: 14px 18px; border-radius: var(--radius-md);">
+            <span>Geç Kayıt</span>
+            <strong style="color: var(--gold-primary);">3 kör seviyesine kadar</strong>
+          </div>
+        </div>
+
+        <a href="https://go.jack-full.com/c41f796e" class="btn btn-purple" style="margin-top: 24px; width: 100%; justify-content: center;">Tam Seri Programını İncele</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. BIG BANG SUNDAY ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Promosyonlar Amiral Gemisi</span>
+      <h2>Big Bang Sunday — <span class="gold-text">Online Pokerdaki En İyi Değer</span></h2>
+      <p>Her Pazar, topluluğumuz haftanın en büyük turnuvası için bir araya geliyor. Girmek için 30 $, 45.000 $ garantili; bu, on kat daha pahalı turnuvalarla rekabet eden ödül-giriş oranını sunuyor.</p>
+    </div>
+
+    <div class="big-bang-card">
+      <div class="big-bang-inner">
+        <div>
+          <div class="big-bang-label">Promosyonlar Garantili Ödül Havuzu</div>
+          <div class="big-bang-gtd">$45,000</div>
+          <div style="display: flex; gap: 12px; margin-bottom: 28px; flex-wrap: wrap;">
+            <span class="badge badge-purple">30 $ Giriş Ücreti</span>
+            <span class="badge badge-gold">Her Pazar</span>
+            <span class="badge badge-green">Yeniden Giriş Mevcut</span>
+          </div>
+
+          <p style="color: var(--text-body); line-height: 1.8; margin-bottom: 16px;">Big Bang Sunday, amiral gemisi haftalık turnuvamız ve topluluğumuzun en çok beklediği etkinliktir. Her Pazar sabit bir saatte, lobi dünyanın dört bir yanından oyuncularla dolup taşıyor, hepsi garanti edilen 45.000 $'lık ödül havuzunun payı için rekabet ediyor — kaç kayıt alındığından bağımsız olarak. Bu garanti, her hafta yağmur ya da güneş olsun, 500 oyuncu katılsın ya da 2.000 katılsın, verdiğimiz bir sözdür.</p>
+
+          <p style="color: var(--text-body); line-height: 1.8; margin-bottom: 16px;">30 $'lık giriş ücreti ile Big Bang Sunday olağanüstü değer sunuyor. 45.000 $ garantiyi tipik 30 $'lık girişe böldüğünüzde, çoğu online poker odasında bulamayacağınız bir ödül havuzu overlay ve değer önerisini temsil ediyor. Giriş ücretini kasıtlı olarak erişilebilir tutuyoruz çünkü en iyi turnuvaların mümkün olan en geniş alanlara açık olması gerektiğine inanıyoruz — daha büyük alanlar, garanti aşıldığında daha büyük ödüller ve herkes için daha heyecanlı, rekabetçi bir ortam anlamına gelir.</p>
+
+          <p style="color: var(--text-body); line-height: 1.8; margin-bottom: 24px;">Yeniden giriş, geç kayıt dönemi kapanana kadar mümkündür; genellikle turnuvanın üç ila beş kör seviyesi içinde. İlk kurşununuz planlandığı gibi gitmezse, yeniden yükleyebilir ve ödül havuzu için başka bir şans alabilirsiniz. Henüz 30 $'a taahhütte bulunmaya hazır olmayan oyuncular, birinci adım uydusunda yalnızca 3 $'a koltuklarını kazanabilir ve Big Bang Sunday'i en muhafazakar bankroll'lar için bile erişilebilir kılar.</p>
+
+          <a href="https://go.jack-full.com/c41f796e" class="btn btn-primary">Bu Pazar İçin Kayıt Ol →</a>
+        </div>
+
+        <div>
+          <h3 style="color: var(--text-white); margin-bottom: 16px; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.06em;">Turnuva Yapısı</h3>
+          <div class="blind-structure">
+            <div class="blind-row">
+              <span>Seviye</span>
+              <span>Körler</span>
+              <span>Süre</span>
+            </div>
+            <div class="blind-row">
+              <span>1–4</span>
+              <span>25/50 – 100/200</span>
+              <span>12 dak</span>
+            </div>
+            <div class="blind-row">
+              <span>5–8</span>
+              <span>150/300 – 400/800</span>
+              <span>12 dak</span>
+            </div>
+            <div class="blind-row">
+              <span>9–12</span>
+              <span>600/1200 – 1.5K/3K</span>
+              <span>12 dak</span>
+            </div>
+            <div class="blind-row">
+              <span>13–16</span>
+              <span>2.5K/5K – 6K/12K</span>
+              <span>12 dak</span>
+            </div>
+            <div class="blind-row">
+              <span>17+</span>
+              <span>8K/16K+</span>
+              <span>12 dak</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 10px;">
+            <div class="pill" style="justify-content: space-between; padding: 12px 16px; border-radius: var(--radius-md);">
+              <span>Başlangıç Stack'i</span>
+              <strong style="color: var(--text-white);">20.000 chip</strong>
+            </div>
+            <div class="pill" style="justify-content: space-between; padding: 12px 16px; border-radius: var(--radius-md);">
+              <span>Geç Kayıt</span>
+              <strong style="color: var(--text-white);">İlk 5 seviye</strong>
+            </div>
+            <div class="pill" style="justify-content: space-between; padding: 12px 16px; border-radius: var(--radius-md);">
+              <span>Ödeme Yapılan Sıralar</span>
+              <strong style="color: var(--text-white);">Alanın en üst %15'i</strong>
+            </div>
+            <div class="pill" style="justify-content: space-between; padding: 12px 16px; border-radius: var(--radius-md);">
+              <span>Uydu Adım 1</span>
+              <strong style="color: var(--gold-primary);">3 $'dan</strong>
+            </div>
+          </div>
+
+          <div class="highlight-box" style="margin-top: 20px;">
+            <h3>Big Bang Sunday Neden Öne Çıkıyor</h3>
+            <p>30 $'lık girişte 45.000 $ garantisi, online pokerdaki en iyi ödül-giriş oranlarından biridir. Diğer odalar karşılaştırılabilir garantiler için 100-200 $ ücretlendiriyor. Alan boyutunu maksimize etmek ve mümkün olan en heyecanlı, derin stackli Pazar deneyimini yaratmak için fiyatı düşük tutuyoruz.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. FREEROLL FESTIVAL ===== -->
+<section class="section section-surface">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Oynaması Ücretsiz</span>
+      <h2>Freeroll Festival — <span class="gold-text">Aylık 200.000 $+, Sıfır Giriş Ücreti</span></h2>
+      <p>Her gün sekiz freeroll turnuvasıyla saatte bir başlayan 200.000 $'ın üzerinde ödül dağıtıyoruz — sıfır giriş ücreti. İster yeni başlıyor olun ister disiplinli bir bankroll kuruyorsunuz, freeroll programımız mükemmel temeldir.</p>
+    </div>
+
+    <div class="split">
+      <div class="split-content">
+        <p>Freeroll Festival programımız, online pokerde haberdar olduğumuz en cömert program: üzeri <strong style="color: var(--gold-primary);">ayda 200.000 $</strong> tamamen ücretsiz girişli turnuvalar aracılığıyla dağıtılıyor. Çalışıyoruz <strong style="color: var(--text-white);">her gün sekiz freeroll</strong>, dünya genelinde tüm önemli zaman dilimlerini kapsayacak şekilde yaklaşık her üç saatte bir planlıyoruz. Nerede yaşadığınızdan veya hangi saatleri tuttuğunuzdan bağımsız olarak, her zaman birkaç saat içinde çalışan ya da başlayan bir freeroll var.</p>
+
+        <p>Yeni oyuncular için freeroll'lar ideal test alanını temsil eder. Tek bir dolar riske atmadan tam JackPoker turnuva arayüzünü deneyimleyebilirsiniz — çok masa navigasyonu, el geçmişi, geç aşama oyununda ICM baskısı, chip stack yönetimi. Gerçek para kazanın, bankroll'ınızı inşa edin ve organik olarak bahis merdiveninde tırmanın. En başarılı düzenli oyuncularımızın çoğu, freeroll'larımızı öğüterek ve bu kazanımları ilk giriş ücreti turnuvalarına girmek için kullanarak JackPoker yolculuklarına başladı.</p>
+
+        <p>Standart açık freeroll'ların ötesinde, sadakat ve aktiviteyi ödüllendiren katmanlı bir premium freeroll programı işletiyoruz. Para yatıran oyuncular, yeterli rake üretimine sahip aktif grinder'lar ve VIP programımızda kilometre taşı seviyelerine ulaşan oyuncular, <strong style="color: var(--text-white);">daha büyük ödül havuzlarına sahip özel freeroll'lara</strong> ve 200'den az oyuncudan oluşan daha seçici alanlara erişim sağlar. Bu premium etkinlikler, standart açık freeroll'larla karşılaştırıldığında olağanüstü bir EV önerisiyle 200'den az oyuncudan oluşan alanlarla 5.000 $ veya üzeri ödüller içerebilir.</p>
+
+        <a href="https://go.jack-full.com/c41f796e" class="btn btn-purple" style="margin-top: 8px;">Bugün Ücretsiz Oyna →</a>
+      </div>
+
+      <div>
+        <div class="freeroll-types">
+          <div class="freeroll-type-card">
+            <span class="freeroll-icon">🆓</span>
+            <h3>Açık Turnuvalar</h3>
+            <p>Koşulsuz olarak tüm kayıtlı oyunculara açık. Her gün sekiz turnuva, her üç saatte bir çalışıyor. Ödül havuzları etkinlik başına 100 $'dan 1.000 $'a kadar, tam program boyunca aylık 200.000 $'ın üzerine çıkıyor.</p>
+          </div>
+          <div class="freeroll-type-card">
+            <span class="freeroll-icon">💰</span>
+            <h3>Para Yatırma Turnuvaları</h3>
+            <p>En az bir uygun para yatırma yapan oyunculara özel. Daha küçük alanlar ve daha büyük ödül havuzları, bunları programımızdaki en yüksek EV etkinlikleri arasında yapıyor. Yalnızca 10 $'lık bir para yatırma erişimin kilidini açıyor.</p>
+          </div>
+          <div class="freeroll-type-card">
+            <span class="freeroll-icon">👑</span>
+            <h3>Sadakat Turnuvaları</h3>
+            <p>Nakit oyunlarımız ve ücretli turnuvalarımız aracılığıyla rake üreten oyunculara ödüllendiriliyor. Ne kadar çok oynarsanız, o kadar çok sadakat freeroll bileti biriktirirsiniz. En yüksek VIP katmanları, en yüksek değerli etkinliklerimize bilet alır.</p>
+          </div>
+          <div class="freeroll-type-card">
+            <span class="freeroll-icon">⭐</span>
+            <h3>Özel Etkinlik Turnuvaları</h3>
+            <p>Büyük promosyonlar, mevsimsel seri lansmanları ve tatillerle birlikte başlatıldı. Bu tek seferlik etkinlikler, 5.000 ila 25.000 $ arasında ödül havuzu taşıyabilir ve promosyon lobisinde önceden bildirimle duyurulur.</p>
+          </div>
+        </div>
+
+        <div class="highlight-box gold" style="margin-top: 24px;">
+          <h3>Bankroll'ınızı Akıllı Yoldan İnşa Edin</h3>
+          <p>Arayüzü öğrenmek için açık freeroll'larla başlayın. Para yatırır yatırmaz — hatta 10 $ bile — dramatik biçimde daha yüksek değerli yatırımcı freeroll'larının kilidini açarsınız. Kazanımları 1-5 $'lık giriş Bonus Bonanza etkinliklerine yatırın, sürekli yeniden yatırın ve anlamlı risk olmadan sıfırdan gerçek poker bankroll'u inşa edebilirsiniz.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. TOURNAMENT FORMATS ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Oyununuzu Bilin</span>
+      <h2>Turnuva Formatları <span class="gold-text">Açıklandı</span></h2>
+      <p>Programımızda beş temel turnuva formatı sunuyoruz. Her biri farklı stratejik yaklaşımı ödüllendiriyor — masaya oturmadan önce yapıyı anlamak, tutarlı biçimde paraya girmek için ilk adımdır.</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="format-card">
+        <span class="format-icon">🔒</span>
+        <h3>Dondurma</h3>
+        <p>Klasik format. Bir başlangıç stack'i alırsınız ve chipleriniz bittiğinde elenirsiniz. Yeniden giriş yok, ikinci şans yok. Freezeout'lar ilk elden saf baskı yaratır ve erken aşamalarda muhafazakar, sabırlı oyunu ödüllendirir. Büyük serilerimizin tamamında en az bir amiral gemisi freezeout etkinliği bulunur. Strateji açıktır: stack'iniz sınırlıdır, bu nedenle her chip en başından önem taşır. Freezeout finallerinde geç aşama ICM hesaplamaları kritik öneme sahiptir.</p>
+      </div>
+
+      <div class="format-card">
+        <span class="format-icon">🔄</span>
+        <h3>Yeniden Giriş</h3>
+        <p>Geç kayıt dönemi kapanmadan önce elenirseniz, giriş ücretini tekrar ödeyerek taze bir stack ile turnuvaya yeniden girebilirsiniz. Bu format, daha büyük alanlar ve garantiye göre daha büyük gerçek ödül havuzları üretme eğilimindedir. Yeniden giriş etkinlikleri agresif erken oyunu ödüllendirir — deneyimli oyuncular, erken bir blöf ters giderse yeniden yükleyebileceğini bilerek birden fazla kurşun atmakta daha rahat hisseder. Yeniden giriş etkinliklerimiz genellikle kayıt penceresi boyunca sınırsız yeniden girişe izin verir.</p>
+      </div>
+
+      <div class="format-card">
+        <span class="format-icon">💥</span>
+        <h3>Aşamalı Nakavt (PKO)</h3>
+        <p>Modern turnuva pokerindeki en heyecanlı format. PKO'da giriş ücretinizin yarısı ödül havuzunu finanse eder ve yarısı kafanızda ödül olarak oturur. Bir oyuncuyu eleminize ettiğinizde, birikmiş ödüllerinin yarısını anında nakit olarak toplarsınız — diğer yarısı kendi kafa değerinize eklenerek sizi giderek daha değerli bir hedef haline getirir. Oyun ilerledikçe, chip liderlerini elimine etmek gerçek para açısından son derece kârlı hale gelir, sürekli agresiflik ve drama yaratır. Strateji standart turnuvalardan önemli ölçüde ayrılır; büyük bir ödülü toplamak için elverişsiz chip eşitlik oranlarına rağmen stack'leri call etmek çoğu zaman doğrudur.</p>
+      </div>
+
+      <div class="format-card">
+        <span class="format-icon">⚡</span>
+        <h3>Turbo &amp; Hyper-Turbo</h3>
+        <p>Turbo etkinlikler, standart 10-15'e kıyasla 5-6 dakikalık kör seviyeleri içerir. Hyper-Turbo'lar bunu 2-3 dakikalık seviyelere kadar iter, son derece hızlı tempolu oyun yaratır ve push-fold stratejisi çok daha erken alakalı hale gelir. Bu formatlar, iki saatten kısa sürede tam çok masalı turnuvayı tamamlamak isteyen sınırlı zamanlı oyuncular için idealdir. Hyper-Turbo serimiz — 2025 sonunda başlatıldı — 5 ila 55 $'lık girişlerle günlük birden fazla etkinlik çalışır. Yüksek baskılı, yüksek varyanslı ortamlarda gelişen agresif oyuncular için mükemmel.</p>
+      </div>
+
+      <div class="format-card">
+        <span class="format-icon">🎯</span>
+        <h3>Uydu Turnuvaları</h3>
+        <p>Uydular, nakit ödüller yerine daha büyük hedef turnuvalara koltuk kazandırır. Bir uydu kazanırsanız, tam giriş ücreti değerinde doğrudan hedef etkinliğe bilet alırsınız. Uydu ağımız, her büyük JackPoker etkinliğini kapsar: Big Bang Sunday için birinci adım uydular yalnızca 3 $'dan başlar ve 30 $'lık bir koltuğu maliyetin çok altında kazanmayı mümkün kılar. Çok adımlı uydu merdivenleri, mikro girişlerden en yüksek değerli mevsimsel seri ana etkinliklerimize kadar çalışmanıza olanak tanır. Uydular, stratejik bankroll oyuncusunun en iyi arkadaşıdır.</p>
+      </div>
+
+      <div class="format-card">
+        <span class="format-icon">🌀</span>
+        <h3>Spin &amp; Win (Jackpot)</h3>
+        <p>Ödül havuzunun her oyun öncesi rastgele bir çarpan spiniyle belirlendiği hiper hızlı üç oyunculu format. 2x, 3x, 5x ve 10x standart çarpanlar sıklıkla görünürken nadir jackpot spinleri toplam ödül havuzunu <strong style="color: var(--gold-primary);">$1,000,000</strong>'a kadar çıkarabilir. Oyunlar 5 ila 20 dakika arasında sürer. Spin &amp; Win geleneksel bir çok masalı turnuva değildir ancak ultra kısa oturumlarda turnuva tarzı heyecan isteyen oyuncular için tercih edilen seçenek olarak platformumuzda sevilen bir yer edinmiştir. 1 $'dan 100 $'a kadar birden fazla giriş boyutunda mevcuttur.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. RECENT EVENT COVERAGE ===== -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Etkinlik Tarihi</span>
+      <h2>Son <span class="gold-text">Etkinlikler Büyük</span></h2>
+      <p>Etkinlik geçmişimiz kendi adına konuşuyor. Her sezon daha büyük garantiler, daha yaratıcı formatlar ve topluluğumuza masalarda olmak için her türlü nedeni veren promosyonlarla çıtayı yükseltiyoruz.</p>
+    </div>
+
+    <div class="grid-2">
+      <div>
+        <div class="timeline">
+          <div class="timeline-item" data-expires="2026-04-26">
+            <div class="timeline-date">6 Nisan – 26 Nisan 2026</div>
+            <h3>Spring Spin Festival <span class="badge badge-green" style="margin-left: 8px; vertical-align: middle;">Şu An Canlı</span></h3>
+            <p>Kazanın <strong style="color: var(--gold-primary);">\,000,000</strong> Spin&amp;Win girişinden. JackPoker, Nisan boyunca özel 100.000x çarpanı etkinleştiriyor — 15 dakikada iki rakibi yenin ve tam ödülü talep edin. Instant Cash ödemeleri. Katılmak için minimum para yatırma gereklidir. 26 Nisan'a kadar çalışıyor.</p>
+          </div>
+
+                    <div class="timeline-item" data-expires="2026-04-12">
+            <div class="timeline-date">30 Mart – 12 Nisan 2026</div>
+            <h3>Easter Turbo Sprint <span class="badge badge-green" style="margin-left: 8px; vertical-align: middle;">Şu An Canlı</span></h3>
+            <p>Yalnızca Turbo ve Hyper format turnuvalarını içeren iki haftalık bir Easter serisi <strong style="color: var(--gold-primary);">$500,000</strong> garantili ödül havuzlarında. Her saniyenin önemli olduğu hızlı tempolu etkinlikler — gerçek para veya turnuva biletleriyle kayıt olun. Girişler her bankroll seviyesine yayılıyor. Promosyon biletleri 12 Nisan'a kadar kullanılmalı yoksa sona erer.</p>
+          </div>
+
+          <div class="timeline-item" data-expires="2026-04-19">
+            <div class="timeline-date">30 Mart – 19 Nisan 2026</div>
+            <h3>Sherlock's Mystery Bounties <span class="badge badge-green" style="margin-left: 8px; vertical-align: middle;">Şu An Canlı</span></h3>
+            <p>100'den fazla turnuvada garantili ödül havuzlarıyla büyük 21 günlük Mystery Bounty KO serisi <strong style="color: var(--gold-primary);">$2,500,000</strong> . Her nakavt, 4.500 $+'a kadar değer taşıyan rastgele bir mystery bounty zarfını ortaya çıkarıyor. Instant Cash ödemeleri — ödüller doğrudan bakiyenize gerçek zamanlı olarak yatırılıyor. Girişler mikro'dan yüksek rulo bahislerine uzanıyor ve seri tüm zaman dilimlerinde ateşlenen etkinliklerle 19 Nisan'a kadar çalışıyor.</p>
+          </div>
+
+          <div class="timeline-item" data-expires="2026-04-19">
+            <div class="timeline-date">23 Mart – 19 Nisan 2026</div>
+            <h3>Cash Carnival 2026 <span class="badge badge-green" style="margin-left: 8px; vertical-align: middle;">Şu An Canlı</span></h3>
+            <p>Şimdiye kadarki en büyük nakit masa promosyonumuz. Dört haftalık bir pencere boyunca tüm gerçek para nakit masalarda dağıtılan yarım milyon dolar rastgele nakit bomba. Bombalar her 3-7 elde ateşleniyor ve masadaki tüm oyunculara aynı anda ödüyor. Giriş ücreti yok, kayıt yok, şart yok — sadece gelin ve normal oyununuzu oynayın; sürpriz bir ödül her an gelebilir.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">26 Ocak – 15 Şubat 2026</div>
+            <h3>Winter Games Festival</h3>
+            <p>Kış sezonunun en büyük garantili serimiz teslim etti <strong style="color: var(--gold-primary);">2,5 milyon dolar</strong> 80'den fazla etkinlikte toplam garantili ödül havuzu. Tek başına Ana Etkinliğin <strong style="color: var(--text-white);">80.000 $ garantisi</strong> 200 $'dan başlayan girişlerle. Seri, her seviyede olağanüstü değeriyle dikkat çekti — mikro bahisli 5 $'lık giriş etkinlikleri bile 10.000 $+ garantiye sahipti ve anında bankroll inşa etme fırsatları yaratarak düşük bahisli grinder'lar için masif overlay'ler üretti. 1. Gün uçuşları, tüm zaman dilimlerindeki uluslararası oyunculara uyum sağlamak için üç farklı günde çalıştı.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">9 Şubat – 8 Mart 2026</div>
+            <h3>Happy Hour Jackpot + Cash Carnival</h3>
+            <p>İki promosyonun aynı anda birleştiği güçlü bir ikili. Happy Hour Jackpot ve Cash Carnival, en popüler iki formatımızı aynı anda birleştirdi. <strong style="color: var(--gold-primary);">garantili liderlik tablosu ödüllerinde 1 milyon dolar</strong> nakit oyun topluluğumuzdaki en tutarlı performans gösterenleri hacim ve kazanma yüzdesine dayalı otomatik ödemelerle ödüllendirerek haftalık olarak dağıtıldı.</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">3-30 Kasım 2025</div>
+            <h3>Bigger Bang Serisi</h3>
+            <p>Lansmanı sırasında gerçekleştirdiğimiz en iddialı turnuva serisi olan Bigger Bang Serisi, inanılmaz bir <strong style="color: var(--gold-primary);">3,5 milyon dolarlık toplam garantili ödül havuzuyla</strong> bir aylık oyun boyunca yeni bir kıyaslama oluşturdu. Seri, freezeout, PKO, re-entry, turbo ve uydu formatlarını kapsayan 120'den fazla etkinliği içeriyordu.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">6 Ekim – 2 Kasım 2025</div>
+            <h3>Full House of Horror</h3>
+            <p>Cadılar Bayramı temalı mevsimsel serimiz, şimdiye kadarki en yaratıcı ve sevilen etkinliklerimizden biri oldu. Full House of Horror şunu içeriyordu: <strong style="color: var(--text-white);">162 ayrı PKO turnuvası</strong> — tek bir seri için benzeri görülmemiş bir sayı — $2,20 ile $215 arasındaki her giriş seviyesinde progresif knockout'larla. <strong style="color: var(--gold-primary);">1 milyon dolarlık liderlik tablosu</strong> tüm etkinliklerdeki bounty ödülü kazanımlarını takip etti ve en agresif eleme yapanları seri boyunca haftalık bonus nakit ödülleriyle ödüllendirdi.</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">Kasım 2025</div>
+            <h3>Hyper Giveaway Lansman Serisi</h3>
+            <p>Bigger Bang Serisi ile eş zamanlı olarak başlatılan Hyper Giveaway, JackPoker'da ultra hızlı Hyper-Turbo formatının lansmanını kutlamak için başlatılan bir seri oldu.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. DAILY TOURNAMENT SCHEDULE ===== -->
+<section class="section" id="schedule">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Günlük Program</span>
+      <h2>Günlük Turnuva <span class="gold-text">Programı</span></h2>
+      <p>Günlük programımız, hangi saat diliminde oynarsanız oynayın her zaman bir sonraki saat içinde başlayan bir turnuva olmasını sağlar.</p>
+    </div>
+
+    <div class="table-wrapper">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Saat (UTC)</th>
+            <th>Turnuva Adı</th>
+            <th>Format</th>
+            <th>Giriş Ücreti</th>
+            <th>GTD / Ödül</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">00:00</td>
+            <td>Gece Yarısı Turnuvaları</td>
+            <td><span class="badge badge-green">Turnuvalar</span></td>
+            <td>ÜCRETSİZ</td>
+            <td>$200</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">01:00</td>
+            <td>Asya Erken Kuş</td>
+            <td><span class="badge badge-purple">Dondurma</span></td>
+            <td>$5.50</td>
+            <td>$2.000 GTD</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">03:00</td>
+            <td>Turnuvalar #2 — Erken Oturum</td>
+            <td><span class="badge badge-green">Turnuvalar</span></td>
+            <td>ÜCRETSİZ</td>
+            <td>$300</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">05:00</td>
+            <td>Sabah Isınma PKO</td>
+            <td><span class="badge badge-gold">PKO</span></td>
+            <td>$11</td>
+            <td>$5.000 GTD</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">06:00</td>
+            <td>Turnuvalar #3 — Global</td>
+            <td><span class="badge badge-green">Turnuvalar</span></td>
+            <td>ÜCRETSİZ</td>
+            <td>$500</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">08:00</td>
+            <td>Bonanza Mikro Açılışı</td>
+            <td><span class="badge badge-purple">Yeniden Giriş</span></td>
+            <td>$5.50</td>
+            <td>$5.000 GTD</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">09:00</td>
+            <td>Turnuvalar #4 — Avrupa Sabahı</td>
+            <td><span class="badge badge-green">Turnuvalar</span></td>
+            <td>ÜCRETSİZ</td>
+            <td>$500</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">11:00</td>
+            <td>Öğle Turbosu</td>
+            <td><span class="badge badge-purple">Turbo</span></td>
+            <td>$16.50</td>
+            <td>$7.500 GTD</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">12:00</td>
+            <td>Turnuvalar #5 — Öğle Arası</td>
+            <td><span class="badge badge-green">Turnuvalar</span></td>
+            <td>ÜCRETSİZ</td>
+            <td>$750</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">14:00</td>
+            <td>Öğleden Sonra Grinder</td>
+            <td><span class="badge badge-purple">Dondurma</span></td>
+            <td>$22</td>
+            <td>$15.000 GTD</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">15:00</td>
+            <td>Turnuvalar #6 — Öğleden Sonra</td>
+            <td><span class="badge badge-green">Turnuvalar</span></td>
+            <td>ÜCRETSİZ</td>
+            <td>$1,000</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">17:00</td>
+            <td>Happy Hour PKO</td>
+            <td><span class="badge badge-gold">PKO</span></td>
+            <td>$33</td>
+            <td>$20.000 GTD</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">18:00</td>
+            <td>Turnuvalar #7 — Prime Time</td>
+            <td><span class="badge badge-green">Turnuvalar</span></td>
+            <td>ÜCRETSİZ</td>
+            <td>$1,500</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">19:00</td>
+            <td>Akşam Özelliği — Bonanza Ana</td>
+            <td><span class="badge badge-purple">Yeniden Giriş</span></td>
+            <td>$55</td>
+            <td>$30.000 GTD</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">20:30</td>
+            <td>Hyper-Turbo Shootout</td>
+            <td><span class="badge badge-purple">Hyper-Turbo</span></td>
+            <td>$16.50</td>
+            <td>$5.000 GTD</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">21:00</td>
+            <td>Turnuvalar #8 — Gece Baykuşu</td>
+            <td><span class="badge badge-green">Turnuvalar</span></td>
+            <td>ÜCRETSİZ</td>
+            <td>$1,000</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">22:00</td>
+            <td>Gece Geç Yüksek Rulo</td>
+            <td><span class="badge badge-gold">PKO</span></td>
+            <td>$109</td>
+            <td>$25.000 GTD</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600; border-bottom: none;">Yalnızca Pazar</td>
+            <td><strong style="color: var(--text-white);">Big Bang Sunday</strong></td>
+            <td><span class="badge badge-gold">Yeniden Giriş</span></td>
+            <td>$30</td>
+            <td style="color: var(--gold-primary); font-weight: 700;">$45.000 GTD</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="margin-top: 20px; color: var(--text-muted); font-size: 0.85rem; text-align: center;">Program, standart hafta içi programını temsil etmektedir. Ek Bonus Bonanza serisi etkinlikleri, uydu turnuvaları ve özel promosyon etkinlikleri yıl boyunca eklenir.</p>
+  </div>
+</section>
+
+<!-- ===== 10. HOW TO REGISTER ===== -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Başlayın</span>
+      <h2>Nasıl Kayıt Olunur <span class="gold-text">Turnuvalar</span></h2>
+      <p>İlk JackPoker turnuvanıza katılmak yalnızca birkaç dakika sürer. Hesabınızı oluşturmaktan masaya oturmaya kadar adım adım yapmanız gereken her şey burada.</p>
+    </div>
+
+    <div class="register-steps">
+      <div class="register-step">
+        <div class="step-number">1</div>
+        <div class="register-step-content">
+          <h3>Hesabınızı Oluşturun</h3>
+          <p>JackPoker'ı ziyaret edin ve Kayıt Ol'a tıklayın. E-posta adresinizi girin, güvenli bir şifre seçin ve bilgilerinizi onaylayın. Kayıt formu yaklaşık iki dakika sürer. <strong style="color: var(--gold-primary);">WELCOME</strong> tam hoş geldin paketini etkinleştirmek için kayıt sırasında promosyon kodu alanına girin; $2.000'e kadar %300 depozito eşleşmesi ve ücretsiz lootbox dahil.</p>
+        </div>
+      </div>
+
+      <div class="register-step">
+        <div class="step-number">2</div>
+        <div class="register-step-content">
+          <h3>Kimliğinizi Doğrulayın</h3>
+          <p>JackPoker tam oyun lisansı altında faaliyet gösterir ve para çekme işlemleri yapılmadan önce standart kimlik doğrulaması gerektirir. Hükümete ait bir kimlik belgesi yükleyin.</p>
+        </div>
+      </div>
+
+      <div class="register-step">
+        <div class="step-number">3</div>
+        <div class="register-step-content">
+          <h3>Para Yatırın</h3>
+          <p>Kasa bölümüne gidin ve tercih ettiğiniz ödeme yöntemini seçin. Visa, Mastercard, Skrill, Neteller, JetonBank, LuxonPay, Paysafecard ve kripto para birimlerini destekliyoruz.</p>
+        </div>
+      </div>
+
+      <div class="register-step">
+        <div class="step-number">4</div>
+        <div class="register-step-content">
+          <h3>Turnuva Lobisini Açın</h3>
+          <p>Ana navigasyondaki Turnuvalar sekmesine tıklayın. Lobi, başlangıç saatine göre sıralanmış tüm yaklaşan etkinlikleri giriş ücreti aralığı, format ve daha fazlası için filtrelerle görüntüler.</p>
+        </div>
+      </div>
+
+      <div class="register-step">
+        <div class="step-number">5</div>
+        <div class="register-step-content">
+          <h3>Etkinliğinize Kayıt Olun</h3>
+          <p>Girmek istediğiniz turnuvayı seçin, ardından yeşil Kayıt Ol düğmesine tıklayın. Ücretli etkinlikler için giriş ücreti hemen bakiyenizden düşülür.</p>
+        </div>
+      </div>
+
+      <div class="register-step">
+        <div class="step-number">6</div>
+        <div class="register-step-content">
+          <h3>Yerinizi Alın &amp; Oynayın</h3>
+          <p>Turnuva başladığında masanız otomatik olarak açılır veya sizi bir uyarıyla bilgilendirir. JackPoker tamamen tarayıcı tabanlıdır — yazılım indirmesi gerekmez.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 11. TOURNAMENT TIPS ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Strateji Köşesi</span>
+      <h2>Turnuva İpuçları <span class="gold-text">JackPoker Oyuncuları</span></h2>
+      <p>Çok masalı turnuvalara yeni başlayan veya deneyimli bir grinder olun, bu stratejik ilkeler turnuva formatlarımızda gezinmenize yardımcı olacaktır.</p>
+    </div>
+
+    <div class="tips-grid">
+      <div class="tip-card">
+        <h3>Arayüzü Öğrenmek İçin Önce Turnuvalarla Başlayın</h3>
+        <p>Herhangi bir turnuvaya para yatırmadan önce, JackPoker arayüzünde ustalaşmak için ücretsiz freerollarımıza zaman ayırın.</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>Bubble Yaklaşırken ICM'i Anlayın</h3>
+        <p>Bağımsız Chip Modeli (ICM) matematiği, para bubble'ı ve final masa ödeme atlayışları yakınında optimal oyunu yönetir.</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>PKO Formatları İçin Stratejinizi Uyarlayın</h3>
+        <p>Progresif Knockout turnuvaları, standart freezeout'lara kıyasla temelden farklı bir stratejik çerçeve gerektirir. Rakiplerin üzerindeki dead money devreye girer.</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>Yüksek Giriş Ücretli Etkinliklere Erişmek İçin Uyduları Kullanın</h3>
+        <p>Turnuva özgeçmişinizi oluşturmanın ve yüksek değerli etkinliklere katılmanın en verimli yolu uydu ağımız aracılığıyla.</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>Turbo ve Hyper Etkinliklerinde Erken Stack Oluşturun</h3>
+        <p>Turbo ve Hyper-Turbo turnuvalarında kör-stack oranı o kadar hızlı artar ki muhafazakâr oyun çabuk çıkmaza girer. Optimal strateji erken stack toplamaktır.</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>Hacim ve Beklenen Değeri Maksimize Etmek İçin Çoklu Masa Kullanın</h3>
+        <p>JackPoker aynı anda üç masayı destekler ve çoklu masa oyunu, turnuva hacminizi ve beklenen değerinizi artırmanın en etkili yollarından biridir.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 12. FINAL CTA ===== -->
+<section class="final-cta">
+  <div class="container">
+    <div class="final-cta-inner">
+      <div class="promo-pill">
+        Promosyon kodu kullanın <span class="code">WELCOME</span> $2.000'e kadar %300 depozito eşleşmesi için
+      </div>
+      <h2 style="font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 20px;">Katıl <span class="gold-text">Aksiyona</span></h2>
+      <p style="color: var(--text-muted); max-width: 580px; margin: 0 auto 16px; font-size: 1.05rem; line-height: 1.8;">Aylık garantilerde 3,5 milyondan fazla dolar. Her gün sekiz ücretsiz turnuva. Her hafta 45.000$ Big Bang Sunday. Cash Carnival 19 Nisan'a kadar devam ediyor.</p>
+      <p style="color: var(--text-muted); max-width: 520px; margin: 0 auto 36px; font-size: 0.95rem; line-height: 1.8;">Şimdi kaydolun, kayıt olduktan birkaç dakika içinde ilk freerolunuza girin ve en rewarding poker platformlarından birinde bankroll'unuzu oluşturmaya başlayın.</p>
+
+      <div style="display: flex; align-items: center; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px;">
+        <div class="promo-code-box" style="max-width: 280px;">
+          <span class="promo-code-value">WELCOME</span>
+          <button class="promo-code-copy" onclick="navigator.clipboard.writeText('WELCOME').then(()=>{this.textContent='Kopyalandı!';setTimeout(()=>{this.textContent='Kopyala'},2000})">Kopyala</button>
+        </div>
+        <a href="https://go.jack-full.com/c41f796e" class="btn btn-primary btn-lg">Hemen Oyna ♠</a>
+      </div>
+
+      <div style="display: flex; gap: 32px; justify-content: center; flex-wrap: wrap;">
+        <div style="display: flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.88rem;">
+          <span style="color: var(--success);">✓</span> İndirme gerekmez
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.88rem;">
+          <span style="color: var(--success);">✓</span> Lisanslı &amp; sertifikalı platform
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.88rem;">
+          <span style="color: var(--success);">✓</span> Turnuvalar hemen kullanılabilir
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.88rem;">
+          <span style="color: var(--success);">✓</span> iOS, Android &amp; tarayıcıdan oyna
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Promo Code CTA — Tournament Context -->
+<aside class="promo-cta-inline" style="background: linear-gradient(135deg, rgba(137,59,247,0.08), rgba(246,186,70,0.08)); border: 1px solid rgba(246,186,70,0.2); border-radius: 16px; padding: 32px 36px; margin: 48px 0; position: relative; overflow: hidden;">
+  <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--purple-primary), var(--gold-primary));"></div>
+  <div style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 280px;">
+      <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 8px;">Daha Büyük Stack ile Turnuvalara Girin</h3>
+      <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin: 0;">Promosyon kodu ile kayıt olan yeni oyuncular <a href="promo-code.html" style="color: var(--gold-primary); font-weight: 700; text-decoration: underline;">JackPoker bonus kodu WELCOME</a> %300 depozito eşleşmesi artı freeroll biletleri ve turnuva ödüllerini içeren Hoş Geldin Görevi girişleri alır. <a href="promo-code.html" style="color: var(--gold-primary); font-weight: 600;">WELCOME promosyon kodunun tamamına bakın</a> ne açacağınızı görmek için.</p>
+    </div>
+    <div style="flex-shrink: 0;">
+      <a href="promo-code.html" class="btn btn-cta" style="white-space: nowrap;">WELCOME Kodunu Kullan →</a>
+    </div>
+  </div>
+</aside>
+
+<!-- ===== FOOTER ===== -->
+
+    <!-- Latest News Links -->
+    <section style="padding: 24px 0 0;">
+      <div class="container">
+        <h3 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; color: var(--text-primary);">JackPoker'dan En Son</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <a href="news/winter-games-festival-wraps-with-record-breaking-21m-in-payo.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">Kış Oyunları Festivali: 2,1 Milyon $ Ödeme →</a>
+          <a href="news/bonus-bonanza-march-schedule-620-events-125m-in-guarantees.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">Bonus Bonanza Mart: 1,25 Milyon $ GTD →</a>
+          <a href="news/jackpoker-mobile-app-30-launches-with-multi-table-support.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">Mobil Uygulama 3.0 Yayında →</a>
+          <a href="news/crypto-deposits-now-available-in-sol-matic-and-ton.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">Kripto Para Yatırma: SOL, MATIC, TON →</a>
+        </div>
+      </div>
+    </section>
+
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="JackPoker Home">
+        <svg class="logo-icon" width="189" height="47" viewBox="0 0 189 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="JackPoker">
+<path d="M25.4001 1C24.0001 1 22.8001 2.2 22.8001 3.6C22.8001 5.1 23.8343 5.9 25.3001 5.9H28.7001C28.7001 5.9 31.3001 5.9 31.3001 8.3C31.3001 10.7 28.7001 10.7 28.7001 10.7H8.30008C6.90008 10.7 5.70008 11.9 5.70008 13.3C5.70008 14.7 6.90008 15.9 8.30008 15.9H22.5001C22.5001 15.9 25.1001 15.9 25.1001 18.3C25.1001 20.7 22.5001 20.7 22.5001 20.7H11.4001C10.0001 20.7 8.80008 21.9 8.80008 23.3C8.80008 24.7 10.0001 25.9 11.4001 25.9H22.6001C22.6001 25.9 25.2001 25.9 25.2001 28.3C25.2001 30.7 22.6001 30.7 22.6001 30.7H21.8001C20.4001 30.7 19.2001 31.9 19.2001 33.3C19.2001 34.7 20.4001 35.9 21.8001 35.9H28.8001C28.8001 35.9 31.4001 35.9 31.4001 38.3C31.4001 40.7 28.8001 40.7 28.8001 40.7H14.0001C12.6001 40.7 11.4001 41.9 11.4001 43.3C11.4001 44.7 12.6001 45.9 14.0001 45.9H34.3001C36.5001 45.9 38.4001 44.8 39.5001 43C41.1501 40.25 42.7751 37.4999 44.4001 34.7499C46.0251 31.9999 47.6501 29.25 49.3001 26.5C50.4001 24.6 50.4001 22.3 49.3001 20.4C47.6501 17.6501 46.0252 14.9001 44.4002 12.1502C42.7752 9.4002 41.1501 6.65001 39.5001 3.9C38.4001 2.1 36.4001 1 34.3001 1H25.4001Z" fill="url(#jpLogoGrad)"/>
+<path d="M11.3999 3.6C11.3999 2.2 12.5999 1 13.9999 1H17.5999C18.9999 1 20.1999 2.2 20.1999 3.6C20.1999 5 18.9999 6.2 17.5999 6.2H13.9999C12.5999 6.2 11.3999 5 11.3999 3.6Z" fill="url(#jpLogoGrad)"/>
+<path d="M0 23.5001C0 22.1001 1.2 20.9001 2.6 20.9001H3.6C5 20.9001 6.2 22.1001 6.2 23.5001C6.2 24.9001 5 26.1001 3.6 26.1001H2.6C1.2 26.1001 0 24.9001 0 23.5001Z" fill="url(#jpLogoGrad)"/>
+<path d="M8.30008 30.8001C6.90008 30.8001 5.70008 32.0001 5.70008 33.4001C5.70008 34.9001 6.90008 36.1001 8.30008 36.0001H14.0001C15.4001 36.0001 16.6001 34.8001 16.6001 33.4001C16.6001 32.0001 15.4001 30.8001 14.0001 30.8001H8.30008Z" fill="url(#jpLogoGrad)"/>
+<path d="M69.7955 27.3088C69.7955 28.8312 69.6204 30.0793 69.2704 31.0533C68.9203 32.0273 68.3261 32.7598 67.4876 33.2509C66.6572 33.7502 65.5257 33.9998 64.0929 33.9998C63.7591 33.9998 63.3887 33.9712 62.9817 33.9139C62.5747 33.8648 62.3142 33.832 62.2002 33.8157L62.5177 31.2252H63.7144C65.1797 31.2252 65.9164 30.4231 65.9246 28.8189V15.265L64.0441 14.5039V12.3676L71.676 12.2449V14.5039L69.7955 15.265V27.3088Z" fill="white"/>
+<path d="M81.4937 28.3401C81.4937 28.3728 81.2779 28.557 80.8465 28.8926C80.415 29.2281 79.8981 29.5351 79.2957 29.8133C78.6933 30.0834 78.0746 30.2185 77.4396 30.2185C76.2185 30.2185 75.2619 29.8788 74.57 29.1995C73.8862 28.512 73.5443 27.538 73.5443 26.2775C73.5443 24.837 74.0571 23.7853 75.0829 23.1223C76.1086 22.4594 77.6024 22.1279 79.5643 22.1279H81.3227V20.7406C81.3227 19.5129 80.6796 18.9031 79.3934 18.9113C79.0107 18.9113 78.6566 18.94 78.331 18.9973C78.0054 19.0545 77.7449 19.1159 77.5495 19.1814C77.3622 19.2387 77.2442 19.2755 77.1954 19.2919L76.8168 20.8756H74.57L74.399 17.1557C74.5456 17.1066 74.9038 17.0002 75.4736 16.8365C76.0516 16.6728 76.7395 16.5173 77.5373 16.37C78.3432 16.2226 79.1044 16.149 79.8207 16.149C81.107 16.149 82.1286 16.3127 82.8857 16.6401C83.6428 16.9593 84.1964 17.4831 84.5464 18.2115C84.8965 18.9318 85.0715 19.9017 85.0715 21.1212V27.3334L86.952 27.7876V29.8011L81.9455 29.9729L81.4937 28.3401ZM77.1709 25.897C77.1709 26.388 77.2971 26.7645 77.5495 27.0264C77.81 27.2802 78.1763 27.407 78.6485 27.407C79.0474 27.407 79.4422 27.3006 79.833 27.0878C80.2237 26.8668 80.5534 26.6418 80.822 26.4126C81.0907 26.1752 81.2576 26.0197 81.3227 25.9461V24.2641H79.894C78.9253 24.2641 78.2292 24.3951 77.8059 24.657C77.3826 24.9189 77.1709 25.3322 77.1709 25.897Z" fill="white"/>
+<path d="M100.311 28.0823C99.7492 28.5897 99.0124 29.0726 98.1007 29.531C97.1971 29.9893 96.1428 30.2185 94.938 30.2185C92.8866 30.2185 91.291 29.6169 90.1513 28.4137C89.0116 27.2106 88.4417 25.5327 88.4417 23.3802C88.4417 21.1376 89.0442 19.3737 90.249 18.0888C91.4619 16.7956 93.1511 16.149 95.3166 16.149C95.9515 16.149 96.5906 16.2145 97.2337 16.3454C97.885 16.4764 98.4263 16.6114 98.8578 16.7506C99.2974 16.8815 99.5742 16.9715 99.6881 17.0206L99.566 21.1457H97.3192L96.9651 19.3656C96.8836 19.3492 96.6801 19.3124 96.3545 19.2551C96.0289 19.1896 95.6585 19.1569 95.2433 19.1569C94.3234 19.1569 93.6029 19.472 93.0819 20.1022C92.5691 20.7324 92.3126 21.6573 92.3126 22.8768C92.3126 24.2682 92.5731 25.3404 93.0942 26.0934C93.6233 26.8382 94.4048 27.2106 95.4387 27.2106C96.0899 27.2106 96.6598 27.1124 97.1482 26.916C97.6448 26.7113 98.06 26.5026 98.3937 26.2898C98.7275 26.077 98.9514 25.9379 99.0654 25.8724L100.311 28.0823Z" fill="white"/>
+<path d="M108.602 21.4527L110.3 18.8868L109.201 18.5307V16.5173L115.66 16.3945V18.5307L113.902 18.8622L111.582 22.1525L114.378 27.3579L116.283 27.9595V29.9729H111.655L108.553 23.8344H106.954V27.3334L108.334 27.9595V29.9729H101.202V27.9595L103.205 27.3334V13.2025L101.202 12.6991V10.6857L106.954 10.4893V21.4527H108.602Z" fill="white"/>
+<path d="M117.406 27.8367L119.275 27.0756V15.265L117.406 14.5039V12.3676L123.158 12.2449H125.527C127.423 12.2449 128.909 12.7155 129.984 13.6567C131.066 14.598 131.608 15.8871 131.608 17.524C131.608 19.6029 130.993 21.1703 129.764 22.2261C128.543 23.2819 126.78 23.8099 124.477 23.8099H123.158V27.0756L125.026 27.8367V29.9729H117.406V27.8367ZM124.477 20.8756C125.527 20.8756 126.333 20.6342 126.894 20.1513C127.456 19.6602 127.737 18.9522 127.737 18.0274C127.737 17.1925 127.513 16.5255 127.065 16.0262C126.626 15.5188 125.991 15.265 125.16 15.265H123.158V20.8756H124.477Z" fill="white"/>
+<path d="M139.74 16.149C141.751 16.149 143.302 16.7383 144.393 17.9169C145.492 19.0955 146.041 20.7692 146.041 22.9382C146.041 24.4278 145.764 25.721 145.211 26.8177C144.665 27.9145 143.892 28.7575 142.891 29.3468C141.89 29.9279 140.713 30.2185 139.362 30.2185C135.112 30.2185 132.988 27.9145 132.988 23.3065C132.988 21.8169 133.264 20.536 133.818 19.4638C134.38 18.3916 135.169 17.5731 136.187 17.0084C137.205 16.4354 138.389 16.149 139.74 16.149ZM139.606 19.1569C138.662 19.1569 137.966 19.4638 137.518 20.0776C137.078 20.6915 136.859 21.7269 136.859 23.1837C136.859 24.5751 137.066 25.5941 137.481 26.2407C137.905 26.8873 138.572 27.2106 139.484 27.2106C140.404 27.2106 141.08 26.8873 141.511 26.2407C141.942 25.5941 142.158 24.5342 142.158 23.061C142.158 21.7514 141.955 20.7733 141.548 20.1267C141.141 19.4802 140.493 19.1569 139.606 19.1569Z" fill="white"/>
+<path d="M154.809 21.4527L156.506 18.8868L155.407 18.5307V16.5173L161.867 16.3945V18.5307L160.108 18.8622L157.788 22.1525L160.585 27.3579L162.49 27.9595V29.9729H157.862L154.76 23.8344H153.16V27.3334L154.54 27.9595V29.9729H147.409V27.9595L149.412 27.3334V13.2025L147.409 12.6991V10.6857L153.16 10.4893V21.4527H154.809Z" fill="white"/>
+<path d="M167.508 24.0186C167.573 25.0253 167.875 25.811 168.412 26.3758C168.957 26.9323 169.666 27.2106 170.537 27.2106C171.155 27.2106 171.774 27.1247 172.393 26.9528C173.02 26.7727 173.536 26.5927 173.944 26.4126C174.359 26.2243 174.623 26.0934 174.737 26.0197L175.812 28.1068C175.812 28.1396 175.519 28.3483 174.933 28.733C174.355 29.1095 173.642 29.4532 172.796 29.7642C171.957 30.0671 171.062 30.2185 170.109 30.2185C167.993 30.2185 166.381 29.6292 165.274 28.4506C164.167 27.272 163.613 25.6023 163.613 23.4415C163.613 21.9847 163.878 20.7079 164.407 19.6111C164.944 18.5062 165.713 17.655 166.715 17.0575C167.716 16.4518 168.904 16.149 170.28 16.149C172.112 16.149 173.516 16.6769 174.493 17.7327C175.47 18.7885 175.958 20.2291 175.958 22.0542C175.958 22.4553 175.938 22.8441 175.897 23.2206C175.857 23.5971 175.828 23.8344 175.812 23.9326L167.508 24.0186ZM170.036 19.1569C169.352 19.1569 168.795 19.3901 168.363 19.8566C167.932 20.315 167.663 20.9207 167.557 21.6737H172.087C172.087 20.9207 171.921 20.315 171.587 19.8566C171.253 19.3901 170.736 19.1569 170.036 19.1569Z" fill="white"/>
+<path d="M183.199 18.1256C183.199 18.0928 183.395 17.9005 183.786 17.5486C184.176 17.1966 184.628 16.8774 185.141 16.591C185.662 16.2963 186.175 16.149 186.68 16.149C187.079 16.149 187.453 16.1817 187.803 16.2472C188.153 16.3127 188.426 16.3822 188.621 16.4559C188.825 16.5296 188.951 16.5746 189 16.591L188.804 21.4281H186.558L186.179 19.2919C185.748 19.2919 185.328 19.3983 184.921 19.6111C184.522 19.8157 184.18 20.0449 183.896 20.2986C183.619 20.5442 183.48 20.6751 183.48 20.6915V27.3334L185.984 27.9595V29.9729H177.729V27.9595L179.732 27.3334V19.1569L177.729 18.5307V16.5173L182.98 16.3945L183.199 18.1256Z" fill="white"/>
+<defs>
+<linearGradient id="jpLogoGrad" x1="0" y1="33.44" x2="50.74" y2="33.44" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8032FF"/>
+<stop offset="1" stop-color="#FF3D00"/>
+</linearGradient>
+</defs>
+</svg>
+      </a>
+        <p>JackPoker, Texas Hold'em, PLO, Spin&Win ve turnuva aksiyonu sunan modern bir online
+          poker platformudur. iTech Labs, BMM TestLabs ve GLI tarafından lisanslı ve sertifikalıdır.
+          Sorumlu oynayın.</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-heading" style="font-weight:700;font-size:0.95rem;margin-bottom:12px;color:var(--text-white);">Platform</p>
+        <ul>
+          <li><a href="games.html">Oyunlar</a></li>
+          <li><a href="tournaments.html">Turnuvalar</a></li>
+          <li><a href="bonuses.html">Bonuslar &amp; Promosyonlar</a></li>
+          <li><a href="promo-code.html">Promosyon Kodu</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-heading" style="font-weight:700;font-size:0.95rem;margin-bottom:12px;color:var(--text-white);">Kaynaklar</p>
+        <ul>
+          <li><a href="news.html">Haberler</a></li>
+          <li><a href="faq.html">SSS</a></li>
+          <li><a href="terms.html">Hizmet Şartları</a></li>
+          <li><a href="https://go.jack-full.com/c41f796e" target="_blank" rel="noopener noreferrer">Gizlilik Politikası</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-heading" style="font-weight:700;font-size:0.95rem;margin-bottom:12px;color:var(--text-white);">Ödemeler</p>
+        <div class="footer-payment-icons">
+          <span>VISA</span><span>Mastercard</span><span>Skrill</span><span>Neteller</span><span>Bitcoin</span><span>Ethereum</span><span>USDT</span><span>Pix</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 JackPoker. Jack La International Limitada tarafından işletilmektedir. Anjouan, Komorlar Birliği'nde lisanslıdır. Sorumlu oynayın. 18+</p>
+      <p>iTech Labs &bull; BMM TestLabs &bull; GLI tarafından sertifikalıdır</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../main.js"></script>
+</body>
+</html>

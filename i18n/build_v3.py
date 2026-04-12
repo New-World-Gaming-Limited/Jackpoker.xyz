@@ -27,13 +27,17 @@ I18N_DIR = ROOT / "i18n"
 TRANSLATIONS_DIR = I18N_DIR / "translations"
 TRANSLATIONS_DIR.mkdir(exist_ok=True)
 
-MAIN_PAGES = ["index.html", "games.html", "tournaments.html", "bonuses.html", "promo-code.html", "news.html", "terms.html"]
+MAIN_PAGES = ["index.html", "games.html", "tournaments.html", "bonuses.html", "promo-code.html", "news.html", "terms.html", "faq.html"]
+
+# Auto-discover comparison pages
+COMPARE_DIR = ROOT / "compare"
+COMPARE_PAGES = [f"compare/{f.name}" for f in sorted(COMPARE_DIR.glob("*.html"))] if COMPARE_DIR.exists() else []
 
 # Auto-discover news article pages
 NEWS_DIR = ROOT / "news"
 NEWS_PAGES = [f"news/{f.name}" for f in sorted(NEWS_DIR.glob("*.html"))] if NEWS_DIR.exists() else []
 
-PAGES = MAIN_PAGES + NEWS_PAGES
+PAGES = MAIN_PAGES + COMPARE_PAGES + NEWS_PAGES
 
 LANGUAGES = {
     "en": {"name": "English", "flag_code": "GB"},
@@ -49,6 +53,10 @@ LANGUAGES = {
     "ja": {"name": "日本語", "flag_code": "JP"},
     "pl": {"name": "Polski", "flag_code": "PL"},
     "cs": {"name": "Čeština", "flag_code": "CZ"},
+    "hi": {"name": "हिन्दी", "flag_code": "IN"},
+    "tr": {"name": "Türkçe", "flag_code": "TR"},
+    "tl": {"name": "Filipino", "flag_code": "PH"},
+    "fr": {"name": "Français", "flag_code": "FR"},
 }
 
 BASE_URL = "https://jackpoker.xyz"

@@ -18,3 +18,7 @@ Sitemap: https://jackpoker.xyz/ar/sitemap.xml
 Sitemap: https://jackpoker.xyz/ja/sitemap.xml
 Sitemap: https://jackpoker.xyz/pl/sitemap.xml
 Sitemap: https://jackpoker.xyz/cs/sitemap.xml
+Sitemap: https://jackpoker.xyz/hi/sitemap.xml
+Sitemap: https://jackpoker.xyz/tr/sitemap.xml
+Sitemap: https://jackpoker.xyz/tl/sitemap.xml
+Sitemap: https://jackpoker.xyz/fr/sitemap.xml
