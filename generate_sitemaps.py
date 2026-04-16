@@ -4,7 +4,7 @@
 import os
 from datetime import date
 
-DOMAIN = "https://jackpoker.xyz"
+DOMAIN = "https://www.jackpoker.xyz"
 TODAY = date.today().isoformat()
 
 LANGUAGES = ["en", "ru", "es", "it", "pt", "vi", "th", "ms", "ko", "ar", "ja", "pl", "cs", "hi", "tr", "tl", "fr"]
