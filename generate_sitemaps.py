@@ -7,7 +7,7 @@ from datetime import date
 DOMAIN = "https://www.jackpoker.xyz"
 TODAY = date.today().isoformat()
 
-LANGUAGES = ["en", "ru", "es", "it", "pt", "vi", "th", "ms", "ko", "ar", "ja", "pl", "cs", "hi", "tr", "tl", "fr"]
+LANGUAGES = ["en", "ru", "es", "it", "pt", "vi", "th", "ms", "ko", "ar", "ja", "pl", "cs", "hi", "tr", "tl", "fr", "zh", "id", "uk"]
 
 # All pages (matching build_v3.py PAGES list)
 MAIN_PAGES = ["index.html", "games.html", "tournaments.html", "bonuses.html", "promo-code.html", "news.html", "terms.html", "faq.html"]

@@ -22,3 +22,6 @@ Sitemap: https://www.jackpoker.xyz/hi/sitemap.xml
 Sitemap: https://www.jackpoker.xyz/tr/sitemap.xml
 Sitemap: https://www.jackpoker.xyz/tl/sitemap.xml
 Sitemap: https://www.jackpoker.xyz/fr/sitemap.xml
+Sitemap: https://www.jackpoker.xyz/zh/sitemap.xml
+Sitemap: https://www.jackpoker.xyz/id/sitemap.xml
+Sitemap: https://www.jackpoker.xyz/uk/sitemap.xml

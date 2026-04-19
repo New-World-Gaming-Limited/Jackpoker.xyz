@@ -57,6 +57,9 @@ LANGUAGES = {
     "tr": {"name": "Türkçe", "flag_code": "TR"},
     "tl": {"name": "Filipino", "flag_code": "PH"},
     "fr": {"name": "Français", "flag_code": "FR"},
+    "zh": {"name": "中文", "flag_code": "CN"},
+    "id": {"name": "Bahasa Indonesia", "flag_code": "ID"},
+    "uk": {"name": "Українська", "flag_code": "UA"},
 }
 
 BASE_URL = "https://www.jackpoker.xyz"

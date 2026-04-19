@@ -1,0 +1,1857 @@
+<!DOCTYPE html>
+<html lang="zh" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JackPoker 锦标赛——每月保底 $3.5M+</title>
+  <meta name="description" content="完整 JackPoker 锦标赛赛程：Bonus Bonanza $1.25M 保底、Big Bang Sunday $45K、$200K+ 免费赛、Cash Carnival 和 PKO 赛事。">
+  <meta property="og:title" content="JackPoker 锦标赛——每月保底 $3.5M+">
+  <meta property="og:description" content="在线扑克中最精彩的锦标赛赛程。每日免费赛、大量保底奖池，以及每周 $45K Big Bang Sunday——尽在 JackPoker。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.jackpoker.xyz/assets/images/hero-poker.jpg" />
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="JackPoker Tournaments — $3.5M+ Monthly Guarantees">
+  <meta name="twitter:description" content="The most exciting tournament schedule in online poker. Daily freerolls, massive guaranteed prize pools, and the $45K Big Bang Sunday — all at JackPoker.">
+  <meta name="twitter:image" content="https://www.jackpoker.xyz/assets/images/tournaments-bg.jpg">
+  <link rel="canonical" href="https://www.jackpoker.xyz/zh/tournaments" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/svg+xml" href="../assets/images/jackpoker-favicon.svg" />
+  <style>
+    /* ===== TOURNAMENTS PAGE EXTRAS ===== */
+
+    /* Hero with image bg */
+    .tourn-hero {
+      position: relative;
+      padding: calc(var(--header-height) + 72px) 0 80px;
+      overflow: hidden;
+      min-height: 560px;
+      display: flex;
+      align-items: center;
+    }
+
+    .tourn-hero-bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .tourn-hero-bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.30;
+    }
+
+    .tourn-hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg,
+        rgba(13,11,18,0.45) 0%,
+        rgba(13,11,18,0.72) 60%,
+        rgba(13,11,18,1) 100%
+      );
+    }
+
+    .tourn-hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Stats bar with borders */
+    .stats-section {
+      background: var(--bg-secondary);
+      border-top: 1px solid var(--border-subtle);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .stats-bar-bordered {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      divide: h;
+    }
+
+    .stat-bordered {
+      text-align: center;
+      padding: 36px 24px;
+      border-right: 1px solid var(--border-subtle);
+    }
+
+    .stat-bordered:last-child {
+      border-right: none;
+    }
+
+    .stat-bordered .stat-number {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      font-weight: 900;
+      color: var(--gold-primary);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .stat-bordered .stat-desc {
+      color: var(--text-muted);
+      font-size: 0.83rem;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+
+    /* Carnival Banner */
+    .carnival-banner {
+      background: linear-gradient(135deg, #1A1026 0%, #2A1440 40%, #1A1026 100%);
+      border: 1px solid rgba(246,186,70,0.35);
+      border-radius: var(--radius-xl);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .carnival-banner::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #F6BA46, #FF3D00, #893BF7, #F6BA46);
+    }
+
+    .carnival-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+
+    .carnival-left {
+      padding: 48px;
+      border-right: 1px solid rgba(246,186,70,0.15);
+    }
+
+    .carnival-right {
+      padding: 48px;
+    }
+
+    .carnival-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      background: rgba(246,186,70,0.12);
+      border: 1px solid rgba(246,186,70,0.3);
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--gold-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 20px;
+    }
+
+    .carnival-prize {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 900;
+      color: var(--gold-primary);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .carnival-subtitle {
+      color: var(--text-white);
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .how-it-works-list {
+      list-style: none;
+      margin: 0;
+    }
+
+    .how-it-works-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 0.93rem;
+      color: var(--text-body);
+      line-height: 1.6;
+    }
+
+    .how-it-works-list li:last-child {
+      border-bottom: none;
+    }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      background: var(--gradient-btn-gold);
+      color: #000000;
+      font-size: 0.75rem;
+      font-weight: 800;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    /* Bonus Bonanza */
+    .bonanza-grid {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      gap: 48px;
+      align-items: start;
+    }
+
+    .bonanza-schedule {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+
+    .bonanza-schedule-header {
+      padding: 20px 24px;
+      background: var(--purple-surface);
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .bonanza-schedule-header h4 {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .schedule-row {
+      display: grid;
+      grid-template-columns: 1fr 2fr 1fr;
+      padding: 14px 24px;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 0.88rem;
+      color: var(--text-body);
+      align-items: center;
+    }
+
+    .schedule-row:last-child {
+      border-bottom: none;
+    }
+
+    .schedule-row:hover {
+      background: rgba(137,59,247,0.04);
+    }
+
+    .schedule-row .gtd {
+      color: var(--gold-primary);
+      font-weight: 700;
+    }
+
+    .schedule-row .buyin {
+      color: var(--text-muted);
+      font-size: 0.82rem;
+    }
+
+    /* Big Bang Sunday */
+    .big-bang-card {
+      background: linear-gradient(135deg, #1A0D30 0%, #271D34 100%);
+      border: 1px solid rgba(137,59,247,0.35);
+      border-radius: var(--radius-xl);
+      padding: 48px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .big-bang-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--gradient-btn-primary);
+    }
+
+    .big-bang-card::after {
+      content: '♠';
+      position: absolute;
+      right: 40px;
+      top: 40px;
+      font-size: 8rem;
+      color: var(--purple-primary);
+      opacity: 0.06;
+      line-height: 1;
+    }
+
+    .big-bang-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .big-bang-gtd {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 5vw, 4.4rem);
+      font-weight: 900;
+      color: var(--purple-primary);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .big-bang-label {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+
+    .blind-structure {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    .blind-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 0.83rem;
+      color: var(--text-body);
+    }
+
+    .blind-row:first-child {
+      background: var(--purple-surface);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .blind-row:last-child {
+      border-bottom: none;
+    }
+
+    /* Freeroll Festival */
+    .freeroll-types {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-top: 32px;
+    }
+
+    .freeroll-type-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      transition: all 0.3s ease;
+    }
+
+    .freeroll-type-card:hover {
+      border-color: rgba(137,59,247,0.3);
+      transform: translateY(-2px);
+    }
+
+    .freeroll-icon {
+      font-size: 1.6rem;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .freeroll-type-card h4 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: var(--text-white);
+    }
+
+    .freeroll-type-card p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    /* Format grid */
+    .format-card {
+      background: var(--gradient-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .format-card:hover {
+      border-color: rgba(137,59,247,0.3);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-card-hover);
+    }
+
+    .format-icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .format-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 10px;
+      color: var(--text-white);
+    }
+
+    .format-card p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    /* Register Steps */
+    .register-steps {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    .register-step {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      padding: 28px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      transition: all 0.3s ease;
+    }
+
+    .register-step:hover {
+      border-color: rgba(137,59,247,0.25);
+      background: var(--bg-card-hover);
+    }
+
+    .step-number {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      background: var(--gradient-btn-primary);
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--text-white);
+    }
+
+    .register-step-content h4 {
+      font-size: 1rem;
+      margin-bottom: 6px;
+      color: var(--text-white);
+    }
+
+    .register-step-content p {
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    /* Tips */
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .tip-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-left: 3px solid var(--purple-primary);
+      border-radius: var(--radius-md);
+      padding: 24px;
+    }
+
+    .tip-card h4 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: var(--text-white);
+    }
+
+    .tip-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    /* Final CTA */
+    .final-cta {
+      background: linear-gradient(135deg, #1A0D30 0%, #221E2E 50%, #1A1026 100%);
+      border-top: 1px solid var(--border-subtle);
+      padding: 96px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 700px;
+      height: 700px;
+      background: var(--purple-primary);
+      border-radius: 50%;
+      filter: blur(220px);
+      opacity: 0.08;
+      pointer-events: none;
+    }
+
+    .final-cta-inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .promo-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 20px;
+      background: rgba(246,186,70,0.08);
+      border: 1px solid rgba(246,186,70,0.25);
+      border-radius: 100px;
+      font-size: 0.88rem;
+      color: var(--text-body);
+      margin-bottom: 28px;
+    }
+
+    .promo-pill .code {
+      font-family: 'Courier New', monospace;
+      font-weight: 800;
+      color: var(--gold-primary);
+      letter-spacing: 0.1em;
+    }
+
+    /* Schedule Table Wrapper */
+    .table-wrapper {
+      overflow-x: auto;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .carnival-inner { grid-template-columns: 1fr; }
+      .carnival-left { border-right: none; border-bottom: 1px solid rgba(246,186,70,0.15); padding: 32px; }
+      .carnival-right { padding: 32px; }
+      .big-bang-inner { grid-template-columns: 1fr; }
+      .bonanza-grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .stats-bar-bordered { grid-template-columns: repeat(2, 1fr); }
+      .stat-bordered { border-right: none; border-bottom: 1px solid var(--border-subtle); }
+      .stat-bordered:nth-child(odd) { border-right: 1px solid var(--border-subtle); }
+      .freeroll-types { grid-template-columns: 1fr; }
+      .register-steps { grid-template-columns: 1fr; }
+      .tips-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+<script>
+    (function(){var t=null;try{var m=document.cookie.match(/jp-theme=([^;]+)/);if(m)t=m[1]}catch(e){}document.documentElement.setAttribute("data-theme",t||"dark")})();
+  </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "JackPoker",
+  "url": "https://www.jackpoker.xyz",
+  "logo": "https://www.jackpoker.xyz/assets/images/jackpoker-logo-official.png",
+  "description": "Modern online poker platform offering Texas Hold'em, PLO, Spin&Win tournaments, and more. Licensed and certified.",
+  "foundingDate": "2021",
+  "sameAs": [
+    "https://jack-poker.com",
+    "https://t.me/jackpokerclub"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "url": "https://jack-poker.com/support",
+    "availableLanguage": [
+      "English",
+      "Russian",
+      "Portuguese",
+      "Spanish"
+    ]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.jackpoker.xyz"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Tournaments",
+      "item": "https://www.jackpoker.xyz/tournaments.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "JackPoker Tournament Schedule",
+  "description": "Daily and weekly poker tournaments on JackPoker platform",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Sunday Major",
+      "description": "Promotions flagship tournament with massive guaranteed prize pools"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Daily Grind Series",
+      "description": "Affordable daily tournaments with solid guarantees"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Spin & Win Leaderboard",
+      "description": "Promotions competitions with extra cash prizes for top spinners"
+    },
+    {
+      "@type": "ListItem",
+      "position": 4,
+      "name": "Freeroll Festivals",
+      "description": "Free-entry tournaments with real money prizes"
+    }
+  ]
+}
+</script>
+
+<!-- Event Schema — Active Tournaments -->
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Spring Spin Festival",
+    "description": "JackPoker Spring Spin Festival — win up to $1,000,000 from a $10 buy-in Spin&Win tournament with 100,000x multiplier",
+    "startDate": "2026-04-06",
+    "endDate": "2026-04-26",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+    "location": {
+      "@type": "VirtualLocation",
+      "url": "https://www.jackpoker.xyz/tournaments.html"
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "JackPoker",
+      "url": "https://www.jackpoker.xyz"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "10",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "validFrom": "2026-04-06",
+      "url": "https://go.jack-full.com/c41f796e"
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Event",
+    "name": "Easter Turbo Sprint $500,000 GTD",
+    "description": "JackPoker Easter Turbo Sprint with $500,000 guaranteed prize pool featuring turbo and hyper-turbo events",
+    "startDate": "2026-04-01",
+    "endDate": "2026-04-20",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+    "location": {
+      "@type": "VirtualLocation",
+      "url": "https://www.jackpoker.xyz/tournaments.html"
+    },
+    "organizer": {
+      "@type": "Organization",
+      "name": "JackPoker",
+      "url": "https://www.jackpoker.xyz"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "url": "https://go.jack-full.com/c41f796e"
+    }
+  }
+]
+</script>
+
+<link rel="alternate" hreflang="en" href="https://www.jackpoker.xyz/tournaments.html" />
+<link rel="alternate" hreflang="ru" href="https://www.jackpoker.xyz/ru/tournaments.html" />
+<link rel="alternate" hreflang="es" href="https://www.jackpoker.xyz/es/tournaments.html" />
+<link rel="alternate" hreflang="it" href="https://www.jackpoker.xyz/it/tournaments.html" />
+<link rel="alternate" hreflang="pt" href="https://www.jackpoker.xyz/pt/tournaments.html" />
+<link rel="alternate" hreflang="vi" href="https://www.jackpoker.xyz/vi/tournaments.html" />
+<link rel="alternate" hreflang="th" href="https://www.jackpoker.xyz/th/tournaments.html" />
+<link rel="alternate" hreflang="ms" href="https://www.jackpoker.xyz/ms/tournaments.html" />
+<link rel="alternate" hreflang="ko" href="https://www.jackpoker.xyz/ko/tournaments.html" />
+<link rel="alternate" hreflang="ar" href="https://www.jackpoker.xyz/ar/tournaments.html" />
+<link rel="alternate" hreflang="ja" href="https://www.jackpoker.xyz/ja/tournaments.html" />
+<link rel="alternate" hreflang="pl" href="https://www.jackpoker.xyz/pl/tournaments.html" />
+<link rel="alternate" hreflang="cs" href="https://www.jackpoker.xyz/cs/tournaments.html" />
+<link rel="alternate" hreflang="hi" href="https://www.jackpoker.xyz/hi/tournaments.html" />
+<link rel="alternate" hreflang="tr" href="https://www.jackpoker.xyz/tr/tournaments.html" />
+<link rel="alternate" hreflang="tl" href="https://www.jackpoker.xyz/tl/tournaments.html" />
+<link rel="alternate" hreflang="fr" href="https://www.jackpoker.xyz/fr/tournaments.html" />
+<link rel="alternate" hreflang="zh" href="https://www.jackpoker.xyz/zh/tournaments.html" />
+<link rel="alternate" hreflang="id" href="https://www.jackpoker.xyz/id/tournaments.html" />
+<link rel="alternate" hreflang="uk" href="https://www.jackpoker.xyz/uk/tournaments.html" />
+<link rel="alternate" hreflang="x-default" href="https://www.jackpoker.xyz/tournaments.html" />
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="JackPoker Home">
+        <svg class="logo-icon" width="189" height="47" viewBox="0 0 189 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="JackPoker">
+<path d="M25.4001 1C24.0001 1 22.8001 2.2 22.8001 3.6C22.8001 5.1 23.8343 5.9 25.3001 5.9H28.7001C28.7001 5.9 31.3001 5.9 31.3001 8.3C31.3001 10.7 28.7001 10.7 28.7001 10.7H8.30008C6.90008 10.7 5.70008 11.9 5.70008 13.3C5.70008 14.7 6.90008 15.9 8.30008 15.9H22.5001C22.5001 15.9 25.1001 15.9 25.1001 18.3C25.1001 20.7 22.5001 20.7 22.5001 20.7H11.4001C10.0001 20.7 8.80008 21.9 8.80008 23.3C8.80008 24.7 10.0001 25.9 11.4001 25.9H22.6001C22.6001 25.9 25.2001 25.9 25.2001 28.3C25.2001 30.7 22.6001 30.7 22.6001 30.7H21.8001C20.4001 30.7 19.2001 31.9 19.2001 33.3C19.2001 34.7 20.4001 35.9 21.8001 35.9H28.8001C28.8001 35.9 31.4001 35.9 31.4001 38.3C31.4001 40.7 28.8001 40.7 28.8001 40.7H14.0001C12.6001 40.7 11.4001 41.9 11.4001 43.3C11.4001 44.7 12.6001 45.9 14.0001 45.9H34.3001C36.5001 45.9 38.4001 44.8 39.5001 43C41.1501 40.25 42.7751 37.4999 44.4001 34.7499C46.0251 31.9999 47.6501 29.25 49.3001 26.5C50.4001 24.6 50.4001 22.3 49.3001 20.4C47.6501 17.6501 46.0252 14.9001 44.4002 12.1502C42.7752 9.4002 41.1501 6.65001 39.5001 3.9C38.4001 2.1 36.4001 1 34.3001 1H25.4001Z" fill="url(#jpLogoGrad)"/>
+<path d="M11.3999 3.6C11.3999 2.2 12.5999 1 13.9999 1H17.5999C18.9999 1 20.1999 2.2 20.1999 3.6C20.1999 5 18.9999 6.2 17.5999 6.2H13.9999C12.5999 6.2 11.3999 5 11.3999 3.6Z" fill="url(#jpLogoGrad)"/>
+<path d="M0 23.5001C0 22.1001 1.2 20.9001 2.6 20.9001H3.6C5 20.9001 6.2 22.1001 6.2 23.5001C6.2 24.9001 5 26.1001 3.6 26.1001H2.6C1.2 26.1001 0 24.9001 0 23.5001Z" fill="url(#jpLogoGrad)"/>
+<path d="M8.30008 30.8001C6.90008 30.8001 5.70008 32.0001 5.70008 33.4001C5.70008 34.9001 6.90008 36.1001 8.30008 36.0001H14.0001C15.4001 36.0001 16.6001 34.8001 16.6001 33.4001C16.6001 32.0001 15.4001 30.8001 14.0001 30.8001H8.30008Z" fill="url(#jpLogoGrad)"/>
+<path d="M69.7955 27.3088C69.7955 28.8312 69.6204 30.0793 69.2704 31.0533C68.9203 32.0273 68.3261 32.7598 67.4876 33.2509C66.6572 33.7502 65.5257 33.9998 64.0929 33.9998C63.7591 33.9998 63.3887 33.9712 62.9817 33.9139C62.5747 33.8648 62.3142 33.832 62.2002 33.8157L62.5177 31.2252H63.7144C65.1797 31.2252 65.9164 30.4231 65.9246 28.8189V15.265L64.0441 14.5039V12.3676L71.676 12.2449V14.5039L69.7955 15.265V27.3088Z" fill="white"/>
+<path d="M81.4937 28.3401C81.4937 28.3728 81.2779 28.557 80.8465 28.8926C80.415 29.2281 79.8981 29.5351 79.2957 29.8133C78.6933 30.0834 78.0746 30.2185 77.4396 30.2185C76.2185 30.2185 75.2619 29.8788 74.57 29.1995C73.8862 28.512 73.5443 27.538 73.5443 26.2775C73.5443 24.837 74.0571 23.7853 75.0829 23.1223C76.1086 22.4594 77.6024 22.1279 79.5643 22.1279H81.3227V20.7406C81.3227 19.5129 80.6796 18.9031 79.3934 18.9113C79.0107 18.9113 78.6566 18.94 78.331 18.9973C78.0054 19.0545 77.7449 19.1159 77.5495 19.1814C77.3622 19.2387 77.2442 19.2755 77.1954 19.2919L76.8168 20.8756H74.57L74.399 17.1557C74.5456 17.1066 74.9038 17.0002 75.4736 16.8365C76.0516 16.6728 76.7395 16.5173 77.5373 16.37C78.3432 16.2226 79.1044 16.149 79.8207 16.149C81.107 16.149 82.1286 16.3127 82.8857 16.6401C83.6428 16.9593 84.1964 17.4831 84.5464 18.2115C84.8965 18.9318 85.0715 19.9017 85.0715 21.1212V27.3334L86.952 27.7876V29.8011L81.9455 29.9729L81.4937 28.3401ZM77.1709 25.897C77.1709 26.388 77.2971 26.7645 77.5495 27.0264C77.81 27.2802 78.1763 27.407 78.6485 27.407C79.0474 27.407 79.4422 27.3006 79.833 27.0878C80.2237 26.8668 80.5534 26.6418 80.822 26.4126C81.0907 26.1752 81.2576 26.0197 81.3227 25.9461V24.2641H79.894C78.9253 24.2641 78.2292 24.3951 77.8059 24.657C77.3826 24.9189 77.1709 25.3322 77.1709 25.897Z" fill="white"/>
+<path d="M100.311 28.0823C99.7492 28.5897 99.0124 29.0726 98.1007 29.531C97.1971 29.9893 96.1428 30.2185 94.938 30.2185C92.8866 30.2185 91.291 29.6169 90.1513 28.4137C89.0116 27.2106 88.4417 25.5327 88.4417 23.3802C88.4417 21.1376 89.0442 19.3737 90.249 18.0888C91.4619 16.7956 93.1511 16.149 95.3166 16.149C95.9515 16.149 96.5906 16.2145 97.2337 16.3454C97.885 16.4764 98.4263 16.6114 98.8578 16.7506C99.2974 16.8815 99.5742 16.9715 99.6881 17.0206L99.566 21.1457H97.3192L96.9651 19.3656C96.8836 19.3492 96.6801 19.3124 96.3545 19.2551C96.0289 19.1896 95.6585 19.1569 95.2433 19.1569C94.3234 19.1569 93.6029 19.472 93.0819 20.1022C92.5691 20.7324 92.3126 21.6573 92.3126 22.8768C92.3126 24.2682 92.5731 25.3404 93.0942 26.0934C93.6233 26.8382 94.4048 27.2106 95.4387 27.2106C96.0899 27.2106 96.6598 27.1124 97.1482 26.916C97.6448 26.7113 98.06 26.5026 98.3937 26.2898C98.7275 26.077 98.9514 25.9379 99.0654 25.8724L100.311 28.0823Z" fill="white"/>
+<path d="M108.602 21.4527L110.3 18.8868L109.201 18.5307V16.5173L115.66 16.3945V18.5307L113.902 18.8622L111.582 22.1525L114.378 27.3579L116.283 27.9595V29.9729H111.655L108.553 23.8344H106.954V27.3334L108.334 27.9595V29.9729H101.202V27.9595L103.205 27.3334V13.2025L101.202 12.6991V10.6857L106.954 10.4893V21.4527H108.602Z" fill="white"/>
+<path d="M117.406 27.8367L119.275 27.0756V15.265L117.406 14.5039V12.3676L123.158 12.2449H125.527C127.423 12.2449 128.909 12.7155 129.984 13.6567C131.066 14.598 131.608 15.8871 131.608 17.524C131.608 19.6029 130.993 21.1703 129.764 22.2261C128.543 23.2819 126.78 23.8099 124.477 23.8099H123.158V27.0756L125.026 27.8367V29.9729H117.406V27.8367ZM124.477 20.8756C125.527 20.8756 126.333 20.6342 126.894 20.1513C127.456 19.6602 127.737 18.9522 127.737 18.0274C127.737 17.1925 127.513 16.5255 127.065 16.0262C126.626 15.5188 125.991 15.265 125.16 15.265H123.158V20.8756H124.477Z" fill="white"/>
+<path d="M139.74 16.149C141.751 16.149 143.302 16.7383 144.393 17.9169C145.492 19.0955 146.041 20.7692 146.041 22.9382C146.041 24.4278 145.764 25.721 145.211 26.8177C144.665 27.9145 143.892 28.7575 142.891 29.3468C141.89 29.9279 140.713 30.2185 139.362 30.2185C135.112 30.2185 132.988 27.9145 132.988 23.3065C132.988 21.8169 133.264 20.536 133.818 19.4638C134.38 18.3916 135.169 17.5731 136.187 17.0084C137.205 16.4354 138.389 16.149 139.74 16.149ZM139.606 19.1569C138.662 19.1569 137.966 19.4638 137.518 20.0776C137.078 20.6915 136.859 21.7269 136.859 23.1837C136.859 24.5751 137.066 25.5941 137.481 26.2407C137.905 26.8873 138.572 27.2106 139.484 27.2106C140.404 27.2106 141.08 26.8873 141.511 26.2407C141.942 25.5941 142.158 24.5342 142.158 23.061C142.158 21.7514 141.955 20.7733 141.548 20.1267C141.141 19.4802 140.493 19.1569 139.606 19.1569Z" fill="white"/>
+<path d="M154.809 21.4527L156.506 18.8868L155.407 18.5307V16.5173L161.867 16.3945V18.5307L160.108 18.8622L157.788 22.1525L160.585 27.3579L162.49 27.9595V29.9729H157.862L154.76 23.8344H153.16V27.3334L154.54 27.9595V29.9729H147.409V27.9595L149.412 27.3334V13.2025L147.409 12.6991V10.6857L153.16 10.4893V21.4527H154.809Z" fill="white"/>
+<path d="M167.508 24.0186C167.573 25.0253 167.875 25.811 168.412 26.3758C168.957 26.9323 169.666 27.2106 170.537 27.2106C171.155 27.2106 171.774 27.1247 172.393 26.9528C173.02 26.7727 173.536 26.5927 173.944 26.4126C174.359 26.2243 174.623 26.0934 174.737 26.0197L175.812 28.1068C175.812 28.1396 175.519 28.3483 174.933 28.733C174.355 29.1095 173.642 29.4532 172.796 29.7642C171.957 30.0671 171.062 30.2185 170.109 30.2185C167.993 30.2185 166.381 29.6292 165.274 28.4506C164.167 27.272 163.613 25.6023 163.613 23.4415C163.613 21.9847 163.878 20.7079 164.407 19.6111C164.944 18.5062 165.713 17.655 166.715 17.0575C167.716 16.4518 168.904 16.149 170.28 16.149C172.112 16.149 173.516 16.6769 174.493 17.7327C175.47 18.7885 175.958 20.2291 175.958 22.0542C175.958 22.4553 175.938 22.8441 175.897 23.2206C175.857 23.5971 175.828 23.8344 175.812 23.9326L167.508 24.0186ZM170.036 19.1569C169.352 19.1569 168.795 19.3901 168.363 19.8566C167.932 20.315 167.663 20.9207 167.557 21.6737H172.087C172.087 20.9207 171.921 20.315 171.587 19.8566C171.253 19.3901 170.736 19.1569 170.036 19.1569Z" fill="white"/>
+<path d="M183.199 18.1256C183.199 18.0928 183.395 17.9005 183.786 17.5486C184.176 17.1966 184.628 16.8774 185.141 16.591C185.662 16.2963 186.175 16.149 186.68 16.149C187.079 16.149 187.453 16.1817 187.803 16.2472C188.153 16.3127 188.426 16.3822 188.621 16.4559C188.825 16.5296 188.951 16.5746 189 16.591L188.804 21.4281H186.558L186.179 19.2919C185.748 19.2919 185.328 19.3983 184.921 19.6111C184.522 19.8157 184.18 20.0449 183.896 20.2986C183.619 20.5442 183.48 20.6751 183.48 20.6915V27.3334L185.984 27.9595V29.9729H177.729V27.9595L179.732 27.3334V19.1569L177.729 18.5307V16.5173L182.98 16.3945L183.199 18.1256Z" fill="white"/>
+<defs>
+<linearGradient id="jpLogoGrad" x1="0" y1="33.44" x2="50.74" y2="33.44" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8032FF"/>
+<stop offset="1" stop-color="#FF3D00"/>
+</linearGradient>
+</defs>
+</svg>
+      </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">首页</a>
+      <a href="games.html">游戏</a>
+      <a href="bonuses.html">奖金</a>
+      <a href="tournaments.html" class="active">锦标赛</a>
+      <a href="news.html">新闻</a>
+      <a href="promo-code.html">促销码</a>
+    </nav>
+    <a href="https://go.jack-full.com/c41f796e" class="header-cta header-cta-desktop">立即游戏 ♠</a>
+     <div class="lang-switcher">
+  <button class="lang-btn" aria-label="Change language" aria-expanded="false">
+    <span class="lang-flag">CN</span>
+    <span class="lang-label">中文</span>
+    <svg class="lang-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+  </button>
+  <div class="lang-dropdown" role="menu">
+    <a href="../tournaments.html" role="menuitem" hreflang="en"><span class="lang-flag">GB</span><span>English</span></a>
+    <a href="../ru/tournaments.html" role="menuitem" hreflang="ru"><span class="lang-flag">RU</span><span>Русский</span></a>
+    <a href="../es/tournaments.html" role="menuitem" hreflang="es"><span class="lang-flag">ES</span><span>Español</span></a>
+    <a href="../it/tournaments.html" role="menuitem" hreflang="it"><span class="lang-flag">IT</span><span>Italiano</span></a>
+    <a href="../pt/tournaments.html" role="menuitem" hreflang="pt"><span class="lang-flag">BR</span><span>Português</span></a>
+    <a href="../vi/tournaments.html" role="menuitem" hreflang="vi"><span class="lang-flag">VN</span><span>Tiếng Việt</span></a>
+    <a href="../th/tournaments.html" role="menuitem" hreflang="th"><span class="lang-flag">TH</span><span>ไทย</span></a>
+    <a href="../ms/tournaments.html" role="menuitem" hreflang="ms"><span class="lang-flag">MY</span><span>Bahasa Melayu</span></a>
+    <a href="../ko/tournaments.html" role="menuitem" hreflang="ko"><span class="lang-flag">KR</span><span>한국어</span></a>
+    <a href="../ar/tournaments.html" role="menuitem" hreflang="ar"><span class="lang-flag">SA</span><span>العربية</span></a>
+    <a href="../ja/tournaments.html" role="menuitem" hreflang="ja"><span class="lang-flag">JP</span><span>日本語</span></a>
+    <a href="../pl/tournaments.html" role="menuitem" hreflang="pl"><span class="lang-flag">PL</span><span>Polski</span></a>
+    <a href="../cs/tournaments.html" role="menuitem" hreflang="cs"><span class="lang-flag">CZ</span><span>Čeština</span></a>
+    <a href="../hi/tournaments.html" role="menuitem" hreflang="hi"><span class="lang-flag">IN</span><span>हिन्दी</span></a>
+    <a href="../tr/tournaments.html" role="menuitem" hreflang="tr"><span class="lang-flag">TR</span><span>Türkçe</span></a>
+    <a href="../tl/tournaments.html" role="menuitem" hreflang="tl"><span class="lang-flag">PH</span><span>Filipino</span></a>
+    <a href="../fr/tournaments.html" role="menuitem" hreflang="fr"><span class="lang-flag">FR</span><span>Français</span></a>
+    <a href="tournaments.html" class="active" role="menuitem" hreflang="zh"><span class="lang-flag">CN</span><span>中文</span></a>
+    <a href="../id/tournaments.html" role="menuitem" hreflang="id"><span class="lang-flag">ID</span><span>Bahasa Indonesia</span></a>
+    <a href="../uk/tournaments.html" role="menuitem" hreflang="uk"><span class="lang-flag">UA</span><span>Українська</span></a>
+  </div>
+</div>
+        <button class="theme-toggle" aria-label="Toggle theme">
+       <svg class="theme-icon-dark" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 1.78a1 1 0 011.415 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM18 9a1 1 0 110 2h-1a1 1 0 110-2h1zM3 9a1 1 0 110 2H2a1 1 0 110-2h1zm12.657 6.071l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 011.414-1.414zM5.757 4.929a1 1 0 010 1.414l-.707.707A1 1 0 013.636 5.636l.707-.707a1 1 0 011.414 0zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1z" fill="currentColor"/><circle cx="10" cy="10" r="3.5" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+       <svg class="theme-icon-light" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" fill="currentColor"/></svg>
+     </button>
+  </div>
+</header>
+
+<!-- Breadcrumb Navigation -->
+<nav class="breadcrumb-nav" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a itemprop="item" href="index.html"><span itemprop="name">首页</span></a>
+        <meta itemprop="position" content="1" />
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span itemprop="name">锦标赛</span>
+        <meta itemprop="position" content="2" />
+      </li>
+    </ol>
+  </div>
+</nav>
+
+
+<!-- Page Hero with H1 -->
+<section style="padding: calc(var(--header-height) + 48px) 0 24px; background: linear-gradient(180deg, rgba(137,59,247,0.06) 0%, transparent 100%); position: relative; overflow: hidden;">
+  <div class="container">
+    <h1 style="font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 900; letter-spacing: -0.03em; margin-bottom: 12px;" data-i18n="tournaments_hero_title">JackPoker 锦标赛</h1>
+    <p style="color: var(--text-muted); font-size: 1.08rem; max-width: 640px; line-height: 1.7;" data-i18n="tournaments_hero_subtitle">每月保底 $3.5M+，每日免费赛，标志性 Big Bang Sunday 和独家系列赛事。您的下一次大赢始于此。</p>
+  </div>
+</section>
+
+<!-- ===== 2. TOURNAMENT OVERVIEW STATS ===== -->
+<section class="stats-section">
+  <div class="container">
+    <div class="stats-bar-bordered">
+      <div class="stat-bordered">
+        <div class="stat-number">$3.5M+</div>
+        <div class="stat-desc">每月保底</div>
+      </div>
+      <div class="stat-bordered">
+        <div class="stat-number">8</div>
+        <div class="stat-desc">每日免费赛</div>
+      </div>
+      <div class="stat-bordered">
+        <div class="stat-number">$45K</div>
+        <div class="stat-desc">Big Bang Sunday 保底</div>
+      </div>
+      <div class="stat-bordered">
+        <div class="stat-number">$200K+</div>
+        <div class="stat-desc">月度锦标赛奖金</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3a. FEATURED: EASTER TURBO SPRINT ===== -->
+<section class="section" data-expires="2026-04-12">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">当前赛事</span>
+      <h2>Easter Turbo Sprint — <span class="gold-text">$500,000 保底</span></h2>
+      <p>我们的 Easter Turbo 和 Hyper 锦标赛系列正在进行中。两周高速行动，半百万美元保底奖金——现在运行至 4 月 12 日。</p>
+    </div>
+
+    <div class="carnival-banner">
+      <div class="carnival-inner">
+        <div class="carnival-left">
+          <div class="carnival-badge">🥚 进行中 · 2026年3月30日 – 4月12日</div>
+          <div class="carnival-prize">$500,000</div>
+          <div class="carnival-subtitle">总保底奖池</div>
+          <p style="color: var(--text-body); margin-bottom: 20px; line-height: 1.8;">Easter Turbo Sprint 是 JackPoker 最大的复活节锦标赛系列，从 3 月 30 日至 4 月 12 日举行，总保底奖池为 <strong style="color: var(--gold-primary);">$500,000</strong>。该系列专门采用 Turbo 和 Hyper 格式锦标赛——非常适合欣赏动感游戏、快速决策和极短热身时间的玩家。在这些盲注快速升级、行动永不停歇的快节奏赛事中，每一秒都至关重要。</p>
+          <p style="color: var(--text-body); margin-bottom: 24px; line-height: 1.8;">Easter Turbo Sprint 之所以特别，在于速度与价值的结合。有 <strong style="color: var(--text-white);">$500,000 保底</strong> 覆盖两周激烈的锦标赛行动，该系列提供各种买入级别以适合每种资金。玩家可以使用真实货币或锦标赛门票注册——让每个人都能参与。快速格式意味着每次会话更多锦标赛、更多决赛桌，以及在复活节彩蛋用完之前积累资金的更多机会。</p>
+
+          <div class="highlight-box gold">
+            <h3>Easter Turbo Sprint 不可错过的原因</h3>
+            <p>$500,000 保底吸引了强大的参赛阵容，同时 Turbo 和 Hyper 格式让每手牌都有意义。两整周的赛事、各种资金大小的买入，以及让您无需额外投入就能游戏的门票系统，使这成为我们有史以来运行过最易上手的速度格式系列。在高峰时段同时进行多桌赛事会以指数级方式叠加您的优势。</p>
+          </div>
+        </div>
+
+        <div class="carnival-right">
+          <h3 style="color: var(--text-white); margin-bottom: 20px;">如何参与</h3>
+          <ul class="how-it-works-list">
+            <li>
+              <span class="step-num">1</span>
+              <span><strong style="color: var(--text-white);">创建您的免费账户</strong> ——注册不超过两分钟。使用促销码 <strong style="color: var(--gold-primary);">WELCOME</strong> 激活您的欢迎礼包并直接进入行动。</span>
+            </li>
+            <li>
+              <span class="step-num">2</span>
+              <span><strong style="color: var(--text-white);">资助您的账户</strong> ——使用 Visa、Mastercard、Skrill、Neteller、比特币、以太坊、USDT 或 Pix 进行合格存款。最低存款从 $10 开始。</span>
+            </li>
+            <li>
+              <span class="step-num">3</span>
+              <span><strong style="color: var(--text-white);">打开锦标赛大厅</strong> ——导航至 Easter Turbo Sprint 选项卡。所有赛事均列有日程、买入和保底奖池。使用真实货币或锦标赛门票注册。</span>
+            </li>
+            <li>
+              <span class="step-num">4</span>
+              <span><strong style="color: var(--text-white);">快速游戏，大赢</strong> ——Turbo 和 Hyper 格式意味着快速盲注级别和持续行动。每个决定都很重要，深入运行只需普通时间的一小部分。</span>
+            </li>
+            <li>
+              <span class="step-num">5</span>
+              <span><strong style="color: var(--text-white);">使用您的门票</strong> ——促销门票必须在 2026 年 4 月 12 日前使用。任何未使用的门票在系列结束时失效，因此确保尽早且经常注册。</span>
+            </li>
+          </ul>
+
+          <div style="margin-top: 28px; padding: 20px; background: rgba(246,186,70,0.06); border: 1px solid rgba(246,186,70,0.2); border-radius: var(--radius-md);">
+            <p style="margin: 0; font-size: 0.88rem; color: var(--text-muted);">系列赛从 2026 年 3 月 30 日至 4 月 12 日举行。对所有拥有充值真实货币账户的玩家开放。使用现金或锦标赛门票注册。促销门票于 4 月 12 日失效。完整赛程在 JackPoker 锦标赛大厅中可查。</p>
+          </div>
+
+          <a href="https://go.jack-full.com/c41f796e" class="btn btn-gold btn-lg" style="margin-top: 24px; width: 100%; justify-content: center;">加入 $500K Easter Sprint ♠</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3c. FEATURED: SHERLOCK'S MYSTERY BOUNTIES ===== -->
+
+<!-- ===== SPRING SPIN FESTIVAL ===== -->
+<section class="section" data-expires="2026-04-26">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">当前赛事</span>
+      <h2>Spring Spin Festival — <span class="gold-text">以 $10 赢取 $1,000,000</span></h2>
+      <p>JackPoker 上通往百万的最快方式。Spin&amp;Win 快速锦标赛，100,000x 倍增系数激活——在 15 分钟内击败两名对手并领取头奖。从 4 月 6 日至 4 月 26 日进行。</p>
+    </div>
+
+    <div class="carnival-banner">
+      <div class="carnival-inner">
+        <div class="carnival-left">
+          <div class="carnival-badge">⚡ 进行中 · 2026年4月6日 – 4月26日</div>
+          <div class="carnival-prize">$1,000,000</div>
+          <div class="carnival-subtitle">头奖——您 $10 买入的 100,000 倍</div>
+          <p style="color: var(--text-body); margin-bottom: 20px; line-height: 1.8;">Spring Spin Festival 在整个四月的 JackPoker Spin&amp;Win 锦标赛中激活一个特殊的 <strong style="color: var(--gold-primary);">100,000x 倍增系数</strong> 。从 4 月 6 日至 26 日，任何 $10 Spin&amp;Win 锦标赛都可能授予最高奖池 <strong style="color: var(--gold-primary);">一百万美元</strong>。格式极度高效：倍增转盘在游戏开始前旋转，揭示您的奖池，然后您仅面对两名对手进行 15 分钟的对决。没有漫长的会话，没有大型参赛阵容，没有复杂的多桌磨牌。一次买入，两次胜利，一百万美元。</p>
+          <p style="color: var(--text-body); margin-bottom: 24px; line-height: 1.8;">赢款将以 <strong style="color: var(--text-white);">Instant Cash</strong> 的方式支付——在锦标赛结束的瞬间存入您的余额。资金可立即在现金游戏中继续使用。要参与奖金抽取，在促销期间必须进行至少 <strong style="color: var(--text-white);">$10</strong> 的最低存款。只有真实货币游戏和存款计入此促销。</p>
+
+          <div class="highlight-box gold">
+            <h3>为什么 Spring Spin Festival 是必玩活动</h3>
+            <p>$10 入场点与真实 $1,000,000 头奖的结合，使这一促销成为在线扑克中最非凡的风险-回报主张之一。传统锦标赛系列需要数小时游戏和大型参赛阵容才能达到改变人生的奖金。Spring Spin Festival 将这一切压缩为 15 分钟对决两名对手——让每位玩家，无论资金级别，在这个春天都有真实的百万机会。</p>
+          </div>
+        </div>
+
+        <div class="carnival-right">
+          <h3 style="color: var(--text-white); margin-bottom: 20px;">如何赢取 $1,000,000</h3>
+          <ul class="how-it-works-list">
+            <li>
+              <span class="step-num">1</span>
+              <span><strong style="color: var(--text-white);">创建您的免费账户</strong> ——注册不超过两分钟。使用促销码 <strong style="color: var(--gold-primary);">WELCOME</strong> 解锁您的 300% 欢迎奖金并立即做好节庆准备。</span>
+            </li>
+            <li>
+              <span class="step-num">2</span>
+              <span><strong style="color: var(--text-white);">至少存款 $10</strong> ——在 4 月 6-26 日促销窗口期间使用 Visa、Mastercard、Skrill、Neteller、比特币、USDT 或 Pix 进行合格真实货币存款以参与奖金抽取。</span>
+            </li>
+            <li>
+              <span class="step-num">3</span>
+              <span><strong style="color: var(--text-white);">打开 Spin&amp;Win 大厅</strong> ——在 JackPoker 锦标赛大厅中导航至 Spin&amp;Win 部分，选择 $10 桌。倍增转盘在您的游戏开始前自动旋转。</span>
+            </li>
+            <li>
+              <span class="step-num">4</span>
+              <span><strong style="color: var(--text-white);">击败您的两名对手</strong> ——赢得第一场对决，然后赢得第二场。第一名获取整个倍增奖池。当 100,000x 倍增系数激活时，第一名价值 $1,000,000。</span>
+            </li>
+            <li>
+              <span class="step-num">5</span>
+              <span><strong style="color: var(--text-white);">领取您的 Instant Cash</strong> ——您的赢款立即存入您的余额。无待处理期，奖金无流水要求。赢，提款，重复。</span>
+            </li>
+          </ul>
+
+          <div style="margin-top: 28px; padding: 20px; background: rgba(246,186,70,0.06); border: 1px solid rgba(246,186,70,0.2); border-radius: var(--radius-md);">
+            <p style="margin: 0; font-size: 0.88rem; color: var(--text-muted);">Spring Spin Festival 从 2026 年 4 月 6 日至 26 日举行。需要最低 $10 真实货币存款才能参与奖金抽取。只有真实货币游戏和存款计入。Instant Cash 资金立即可用于游戏。提款需满足平台规则规定的产生抽水要求。</p>
+          </div>
+
+          <a href="https://go.jack-full.com/c41f796e" class="btn btn-gold btn-lg" style="margin-top: 24px; width: 100%; justify-content: center;">旋转赢取 $1,000,000 ⚡</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" data-expires="2026-04-19">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">当前赛事</span>
+      <h2>Sherlock's Mystery Bounties — <span class="gold-text">$2,500,000 保底</span></h2>
+      <p>我们 2026 年最大的神秘赏金淘汰系列正在进行中。超过 100 场锦标赛，赏金高达 $4,500+，Instant Cash 支付——现在运行至 4 月 19 日。</p>
+    </div>
+
+    <div class="carnival-banner">
+      <div class="carnival-inner">
+        <div class="carnival-left">
+          <div class="carnival-badge">🔍 进行中 · 2026年3月30日 – 4月19日</div>
+          <div class="carnival-prize">$2,500,000</div>
+          <div class="carnival-subtitle">总保底奖池</div>
+          <p style="color: var(--text-body); margin-bottom: 20px; line-height: 1.8;">Sherlock's Mystery Bounties 是一个为期 21 天的神秘赏金 KO 系列，为锦标赛带来侦探级别的悬念。从 3 月 30 日至 4 月 19 日举办超过 100 场锦标赛，提供合计 <strong style="color: var(--gold-primary);">$2,500,000</strong> 的保底奖池。每场赛事使用神秘赏金格式——当您淘汰对手时，您会收到一个随机赏金信封，其中可能包含从最低赏金到高达 <strong style="color: var(--gold-primary);">$4,500+</strong>的任何金额。神秘感将每次击杀变成潜在的大奖时刻。</p>
+          <p style="color: var(--text-body); margin-bottom: 24px; line-height: 1.8;">使该系列与众不同的是 <strong style="color: var(--text-white);">Instant Cash</strong> 支付系统——所有赏金奖励实时直接存入您的账户余额。没有门票，没有待处理支付，没有条件。您淘汰一名玩家，打开信封，现金立即进入您的余额。结合涵盖从微小筹码到高额玩家每种资金级别的买入，Sherlock's Mystery Bounties 旨在成为我们有史以来运行过最易上手且最精彩的锦标赛系列。</p>
+
+          <div class="highlight-box gold">
+            <h3>Sherlock's Mystery Bounties 不可错过的原因</h3>
+            <p>仅 21 天内 100+ 场赛事中保证 $2.5M，平均每场赛事具有 $25,000 保底——对于混合买入系列来说非常巨大。神秘赏金机制意味着每一次淘汰都可能比买入本身更有价值。在高峰时段，数十场赛事重叠，在多张桌上深入运行会以指数级方式叠加赏金收益。这种系列可以在单次会话中重新定义您的资金。</p>
+          </div>
+        </div>
+
+        <div class="carnival-right">
+          <h3 style="color: var(--text-white); margin-bottom: 20px;">如何参与</h3>
+          <ul class="how-it-works-list">
+            <li>
+              <span class="step-num">1</span>
+              <span><strong style="color: var(--text-white);">创建您的免费账户</strong> ——注册不超过两分钟。使用促销码 <strong style="color: var(--gold-primary);">WELCOME</strong> 激活您的欢迎礼包并立即做好参赛准备。</span>
+            </li>
+            <li>
+              <span class="step-num">2</span>
+              <span><strong style="color: var(--text-white);">资助您的账户</strong> ——使用 Visa、Mastercard、Skrill、Neteller、比特币、以太坊、USDT 或 Pix 进行合格存款。最低存款从 $10 开始。</span>
+            </li>
+            <li>
+              <span class="step-num">3</span>
+              <span><strong style="color: var(--text-white);">打开锦标赛大厅</strong> ——在锦标赛大厅中导航至 Sherlock's Mystery Bounties 选项卡。所有 100+ 场赛事均列有日程、买入和保底奖池。</span>
+            </li>
+            <li>
+              <span class="step-num">4</span>
+              <span><strong style="color: var(--text-white);">注册并游戏</strong> ——选择您的买入级别，注册您的赛事，开始追逐赏金。每次击杀揭示一个含即时现金奖励的神秘赏金信封。</span>
+            </li>
+            <li>
+              <span class="step-num">5</span>
+              <span><strong style="color: var(--text-white);">领取 Instant Cash</strong> ——赏金奖励实时存入您的余额。无流水要求，无等待，无条件。赢，提款，重复。</span>
+            </li>
+          </ul>
+
+          <div style="margin-top: 28px; padding: 20px; background: rgba(246,186,70,0.06); border: 1px solid rgba(246,186,70,0.2); border-radius: var(--radius-md);">
+            <p style="margin: 0; font-size: 0.88rem; color: var(--text-muted);">系列赛从 2026 年 3 月 30 日至 4 月 19 日举行。对所有拥有充值真实货币账户的玩家开放。神秘赏金奖金即时存入。鼓励跨赛事多桌游戏。完整赛程在 JackPoker 锦标赛大厅中可查。</p>
+          </div>
+
+          <a href="https://go.jack-full.com/c41f796e" class="btn btn-gold btn-lg" style="margin-top: 24px; width: 100%; justify-content: center;">追逐 $2.5M 赏金 ♠</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3b. FEATURED: CASH CARNIVAL ===== -->
+<section class="section" data-expires="2026-04-19">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">当前赛事</span>
+      <h2>Cash Carnival — <span class="gold-text">$500,000 现金掉落</span></h2>
+      <p>我们今年最大的现场促销活动正在进行中。我们现金桌上的每次会话都可能以意外之财结束——无需任何操作即可领取。</p>
+    </div>
+
+    <div class="carnival-banner">
+      <div class="carnival-inner">
+        <div class="carnival-left">
+          <div class="carnival-badge">🎪 进行中 · 2026年3月23日 – 4月19日</div>
+          <div class="carnival-prize">$500,000</div>
+          <div class="carnival-subtitle">总现金掉落</div>
+          <p style="color: var(--text-body); margin-bottom: 20px; line-height: 1.8;">Cash Carnival 是我们的旗舰季节性促销活动，2026 年版是我们有史以来最大的一次。在四周窗口期——从 3 月 23 日至 4 月 19 日——我们在真实货币现金桌上完全随机地向玩家分发半百万美元纯现金奖励。没有门票购买，没有积分积累，没有排行榜追逐。奖励只是在您游戏时落在桌上。</p>
+          <p style="color: var(--text-body); margin-bottom: 24px; line-height: 1.8;">使 Cash Carnival 非凡的是掉落的频率和不可预测性。"现金炸弹"随机在 <strong style="color: var(--gold-primary);">每 3 到 7 手</strong> 在参与桌上引发。炸弹爆炸时，当时坐在桌上的每位玩家都会收到直接添加到其余额的即时现金奖励——无流水要求，无等待，无条件。这是实时分发的真实货币，让每一手牌都可能以最佳方式改变人生。</p>
+
+          <div class="highlight-box gold">
+            <h3>为什么 Cash Carnival 不可错过</h3>
+            <p>在 27 天内将 $500,000 分散到活跃现金桌上，这对于常规玩家来说意味着非凡的期望值。原本可能感觉平常的会话因手牌间持续存在额外意外之财可能性而充满活力。在高峰流量时段，多张桌可以同时运行，每张桌的炸弹时钟滴答作响——这意味着在夜间和周末，奖金分配率显著加速。</p>
+          </div>
+        </div>
+
+        <div class="carnival-right">
+          <h3 style="color: var(--text-white); margin-bottom: 20px;">如何参与</h3>
+          <ul class="how-it-works-list">
+            <li>
+              <span class="step-num">1</span>
+              <span><strong style="color: var(--text-white);">创建您的免费账户</strong> ——注册不超过两分钟。使用促销码 <strong style="color: var(--gold-primary);">WELCOME</strong> 激活您的欢迎礼包以及 Cash Carnival 资格。</span>
+            </li>
+            <li>
+              <span class="step-num">2</span>
+              <span><strong style="color: var(--text-white);">资助您的账户</strong> ——使用我们任何支持的支付方式进行合格存款，包括 Visa、Mastercard、Skrill、Neteller、比特币、以太坊、USDT 或 Pix。最低存款从 $10 开始。</span>
+            </li>
+            <li>
+              <span class="step-num">3</span>
+              <span><strong style="color: var(--text-white);">坐在任何现金桌</strong> ——Cash Carnival 在我们的 Texas Hold'em 和 PLO 现金游戏桌上激活。导航至现金游戏大厅，选择您偏好的档位，坐下。</span>
+            </li>
+            <li>
+              <span class="step-num">4</span>
+              <span><strong style="color: var(--text-white);">等待炸弹</strong> ——现金炸弹随机每 3-7 手引发。炸弹爆炸时，所有桌上的玩家自动收到现金奖励。无需按任何按钮，无需报名。</span>
+            </li>
+            <li>
+              <span class="step-num">5</span>
+              <span><strong style="color: var(--text-white);">观察您的余额增长</strong> ——奖励即时存入并可自由提款，无流水要求。游戏更长，在更多桌游戏，以指数级方式倍增您的机会。</span>
+            </li>
+          </ul>
+
+          <div style="margin-top: 28px; padding: 20px; background: rgba(246,186,70,0.06); border: 1px solid rgba(246,186,70,0.2); border-radius: var(--radius-md);">
+            <p style="margin: 0; font-size: 0.88rem; color: var(--text-muted);">促销从 2026 年 3 月 23 日至 4 月 19 日举行。对所有拥有充值真实货币账户的玩家开放。现金奖励自动存入。多桌最多 3 张可倍增您的炸弹暴露。完整条款在 JackPoker 网站上可查。</p>
+          </div>
+
+          <a href="https://go.jack-full.com/c41f796e" class="btn btn-gold btn-lg" style="margin-top: 24px; width: 100%; justify-content: center;">领取您的 $500K 份额 ♠</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 4. BONUS BONANZA SERIES ===== -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">旗舰系列</span>
+      <h2>Bonus Bonanza 系列 — <span class="gold-text">每月约 $1.25M 保底</span></h2>
+      <p>我们的永久旗舰锦标赛系列每个月持续举办，提供涵盖所有买入级别的结构化赛程，拥有大量保底奖池和令人兴奋的 PKO 格式。</p>
+    </div>
+
+    <div class="bonanza-grid">
+      <div>
+        <p style="line-height: 1.8; margin-bottom: 20px;">Bonus Bonanza 系列是 JackPoker 锦标赛产品的基础。与运行几周后消失的限时系列不同，Bonus Bonanza 全年持续运营，确保我们的玩家始终有值得期待的竞争性多桌锦标赛。每月，该系列保证约 <strong style="color: var(--gold-primary);">$1.25M</strong> 的总奖金，分散在数十场赛事中，从超级实惠的微小筹码买入到吸引我们最有经验玩家的认真中等筹码比赛。</p>
+
+        <p style="line-height: 1.8; margin-bottom: 20px;">Bonus Bonanza 的一个决定性特征是其多样化的买入级别。我们相信每位玩家——从在免费赛中积累资金的新手到将扑克视为主要收入来源的经验丰富磨牌者——都应该能够参与具有有意义奖池的结构良好锦标赛。这就是为什么 Bonus Bonanza 赛事的买入低至 <strong style="color: var(--text-white);">$1.10</strong> 适合微小筹码阵容，通过流行的中等范围 <strong style="color: var(--text-white);">$22 和 $55</strong> 买入赛事，以及高达 <strong style="color: var(--text-white);">$109 和 $215</strong> 的高筹码旗舰锦标赛。真的有适合每种资金的赛事。</p>
+
+        <p style="line-height: 1.8; margin-bottom: 28px;">渐进式淘汰（PKO）锦标赛是 Bonus Bonanza 体验的基石。在 PKO 赛事中，每位玩家买入的一部分直接成为其头上的赏金。每次您淘汰对手，您立即以现金收取其一半积累的赏金——另一半加入您自己头上的赏金价值，随着赛事进展使您成为越来越有价值的目标。这创造了一个非常动态的游戏环境，其中进攻性得到奖励，边池具有实际现金含义，每次全押情况都有超出筹码积累的赌注。我们的 PKO 阵容是在线扑克中最活跃、最精彩的之一。</p>
+
+        <div class="highlight-box">
+          <h3>系列赛如何运作</h3>
+          <p>Bonus Bonanza 遵循滚动月度日历。赛事在锦标赛大厅提前 30 天发布，允许您提前规划和注册。大多数赛事允许晚到注册最多 3 个盲注级别。部分锦标赛有重入选项，为提前出局的玩家提供第二次机会。所有 Bonus Bonanza 赛事都纳入我们的 VIP 返水计算，这意味着您在竞争锦标赛奖金的同时还能赚取忠诚度奖励。</p>
+        </div>
+      </div>
+
+      <div>
+        <div class="bonanza-schedule">
+          <div class="bonanza-schedule-header">
+            <h3>系列赛程亮点</h3>
+          </div>
+          <div class="schedule-row" style="background: var(--purple-surface); color: var(--text-muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em;">
+            <span>赛事</span>
+            <span>格式</span>
+            <span class="gtd" style="color: var(--text-muted);">保底</span>
+          </div>
+          <div class="schedule-row">
+            <span class="buyin">$5.50</span>
+            <span>微小筹码开幕赛</span>
+            <span class="gtd">$5,000</span>
+          </div>
+          <div class="schedule-row">
+            <span class="buyin">$11</span>
+            <span>每日磨牌赛</span>
+            <span class="gtd">$15,000</span>
+          </div>
+          <div class="schedule-row">
+            <span class="buyin">$22</span>
+            <span>周中特别赛</span>
+            <span class="gtd">$30,000</span>
+          </div>
+          <div class="schedule-row">
+            <span class="buyin">$22</span>
+            <span>PKO 赏金猎人</span>
+            <span class="gtd">$25,000</span>
+          </div>
+          <div class="schedule-row">
+            <span class="buyin">$33</span>
+            <span>周五晚间 Turbo 赛</span>
+            <span class="gtd">$20,000</span>
+          </div>
+          <div class="schedule-row">
+            <span class="buyin">$55</span>
+            <span>高额 PKO</span>
+            <span class="gtd">$50,000</span>
+          </div>
+          <div class="schedule-row">
+            <span class="buyin">$109</span>
+            <span>Bonanza 主赛事</span>
+            <span class="gtd">$100,000</span>
+          </div>
+          <div class="schedule-row">
+            <span class="buyin">$215</span>
+            <span>超级高额</span>
+            <span class="gtd">$75,000</span>
+          </div>
+        </div>
+
+        <div style="margin-top: 24px; display: flex; flex-direction: column; gap: 12px;">
+          <div class="pill" style="justify-content: space-between; padding: 14px 18px; border-radius: var(--radius-md);">
+            <span>每月赛事</span>
+            <strong style="color: var(--gold-primary);">40+ 场锦标赛</strong>
+          </div>
+          <div class="pill" style="justify-content: space-between; padding: 14px 18px; border-radius: var(--radius-md);">
+            <span>每月 PKO 赛事</span>
+            <strong style="color: var(--gold-primary);">12+ 场赛事</strong>
+          </div>
+          <div class="pill" style="justify-content: space-between; padding: 14px 18px; border-radius: var(--radius-md);">
+            <span>买入范围</span>
+            <strong style="color: var(--gold-primary);">$1.10 – $215</strong>
+          </div>
+          <div class="pill" style="justify-content: space-between; padding: 14px 18px; border-radius: var(--radius-md);">
+            <span>晚到注册</span>
+            <strong style="color: var(--gold-primary);">最多 3 个盲注级别</strong>
+          </div>
+        </div>
+
+        <a href="https://go.jack-full.com/c41f796e" class="btn btn-purple" style="margin-top: 24px; width: 100%; justify-content: center;">浏览完整系列赛程</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 5. BIG BANG SUNDAY ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">旗舰促销</span>
+      <h2>Big Bang Sunday — <span class="gold-text">在线扑克中最超值活动</span></h2>
+      <p>每个周日，我们的社区聚集参加当周最大的锦标赛。$30 买入，$45,000 保底，提供与十倍价格锦标赛媲美的奖金买入比。</p>
+    </div>
+
+    <div class="big-bang-card">
+      <div class="big-bang-inner">
+        <div>
+          <div class="big-bang-label">促销保底奖池</div>
+          <div class="big-bang-gtd">$45,000</div>
+          <div style="display: flex; gap: 12px; margin-bottom: 28px; flex-wrap: wrap;">
+            <span class="badge badge-purple">买入 $30</span>
+            <span class="badge badge-gold">每周日</span>
+            <span class="badge badge-green">允许重入</span>
+          </div>
+
+          <p style="color: var(--text-body); line-height: 1.8; margin-bottom: 16px;">Big Bang Sunday 是我们的首要每周锦标赛，也是我们社区最期待的赛事。每个周日固定时间，来自世界各地的玩家充满大厅，共同竞争保底 $45,000 奖池的份额——无论收到多少参赛名额。无论周日参与的是 500 还是 2,000 名玩家，这一保底都是我们每周兑现的承诺。</p>
+
+          <p style="color: var(--text-body); line-height: 1.8; margin-bottom: 16px;">以 $30 买入，Big Bang Sunday 代表非凡价值。$45,000 保底除以典型的 $30 参赛费代表了一个奖池叠加和价值主张，您在大多数在线扑克室根本找不到。我们故意保持较低的买入，因为我们相信最好的锦标赛应该对最广泛的参赛阵容开放——更大的阵容意味着当保底被超越时更大的奖金，以及对每个人都更精彩、更具竞争力的环境。</p>
+
+          <p style="color: var(--text-body); line-height: 1.8; margin-bottom: 24px;">重入在晚到注册期结束之前允许，通常在锦标赛开始的三到五个盲注级别内。如果您的第一颗子弹没有按计划进行，您可以重新加入并再次冲击奖池。尚未准备好投入 $30 的玩家也可以通过我们的卫星网络资格，在第一步卫星赛中以低至 $3 赢取席位，使 Big Bang Sunday 对最保守的资金都触手可及。</p>
+
+          <a href="https://go.jack-full.com/c41f796e" class="btn btn-primary">注册本周日 →</a>
+        </div>
+
+        <div>
+          <h3 style="color: var(--text-white); margin-bottom: 16px; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.06em;">锦标赛结构</h3>
+          <div class="blind-structure">
+            <div class="blind-row">
+              <span>级别</span>
+              <span>盲注</span>
+              <span>持续时间</span>
+            </div>
+            <div class="blind-row">
+              <span>1–4</span>
+              <span>25/50 – 100/200</span>
+              <span>12 分钟</span>
+            </div>
+            <div class="blind-row">
+              <span>5–8</span>
+              <span>150/300 – 400/800</span>
+              <span>12 分钟</span>
+            </div>
+            <div class="blind-row">
+              <span>9–12</span>
+              <span>600/1200 – 1.5K/3K</span>
+              <span>12 分钟</span>
+            </div>
+            <div class="blind-row">
+              <span>13–16</span>
+              <span>2.5K/5K – 6K/12K</span>
+              <span>12 分钟</span>
+            </div>
+            <div class="blind-row">
+              <span>17+</span>
+              <span>8K/16K+</span>
+              <span>12 分钟</span>
+            </div>
+          </div>
+
+          <div style="margin-top: 20px; display: flex; flex-direction: column; gap: 10px;">
+            <div class="pill" style="justify-content: space-between; padding: 12px 16px; border-radius: var(--radius-md);">
+              <span>起始筹码</span>
+              <strong style="color: var(--text-white);">20,000 筹码</strong>
+            </div>
+            <div class="pill" style="justify-content: space-between; padding: 12px 16px; border-radius: var(--radius-md);">
+              <span>晚到注册</span>
+              <strong style="color: var(--text-white);">前 5 个级别</strong>
+            </div>
+            <div class="pill" style="justify-content: space-between; padding: 12px 16px; border-radius: var(--radius-md);">
+              <span>支付名次</span>
+              <strong style="color: var(--text-white);">参赛阵容前 15%</strong>
+            </div>
+            <div class="pill" style="justify-content: space-between; padding: 12px 16px; border-radius: var(--radius-md);">
+              <span>卫星赛第 1 步</span>
+              <strong style="color: var(--gold-primary);">从 $3 起</strong>
+            </div>
+          </div>
+
+          <div class="highlight-box" style="margin-top: 20px;">
+            <h3>Big Bang Sunday 脱颖而出的原因</h3>
+            <p>$30 买入 $45,000 保底是在线扑克中最佳的奖金与参赛比之一。其他扑克室对同等保底收取 $100-$200。我们保持低价以最大化阵容规模，并创造最令人兴奋的深筹码周日体验。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 6. FREEROLL FESTIVAL ===== -->
+<section class="section section-surface">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">免费参与</span>
+      <h2>Freeroll Festival — <span class="gold-text">每月 $200,000+，零买入</span></h2>
+      <p>我们每月通过八场每日锦标赛分发超过 $200,000 的免费赛奖金——每隔约三小时启动一场，全天候不间断。无论您是刚刚起步还是在积累有纪律的资金，我们的免费赛计划都是完美的基础。</p>
+    </div>
+
+    <div class="split">
+      <div class="split-content">
+        <p>我们的 Freeroll Festival 计划是我们所知道的在线扑克中最慷慨的：超过 <strong style="color: var(--gold-primary);">每月 $200,000</strong> 通过完全免费参赛的锦标赛分发。我们举办 <strong style="color: var(--text-white);">每天八场免费赛</strong>，大约每三小时一场，覆盖全球所有主要时区。无论您住在哪里或保持什么样的作息时间，总有一场免费赛正在进行或在未来几小时内开始。</p>
+
+        <p>对于新玩家，免费赛是理想的训练场。您可以体验完整的 JackPoker 锦标赛界面——多桌导航、牌局历史、后期游戏 ICM 压力、筹码管理——而不冒任何风险。赢得真实货币，积累资金，有机地向更高档位迈进。我们许多最成功的常规玩家是通过磨我们的免费赛并用那些赢款进入他们第一场买入锦标赛来开始 JackPoker 之旅的。</p>
+
+        <p>除了标准开放免费赛外，我们还运营一个分层高级免费赛计划，奖励忠诚度和活跃度。存款玩家、产生足够抽水的活跃磨牌者，以及达到我们 VIP 计划里程碑级别的玩家可以解锁 <strong style="color: var(--text-white);">拥有更大奖池的独家免费赛</strong> 和更小、更有选择性的参赛阵容。这些高级赛事可以提供超过 $5,000 的奖金，参赛阵容不足 200 人——与标准开放免费赛相比，这是非凡的期望值主张。</p>
+
+        <a href="https://go.jack-full.com/c41f796e" class="btn btn-purple" style="margin-top: 8px;">今天免费游戏 →</a>
+      </div>
+
+      <div>
+        <div class="freeroll-types">
+          <div class="freeroll-type-card">
+            <span class="freeroll-icon">🆓</span>
+            <h3>开放锦标赛</h3>
+            <p>所有注册玩家均可参与，无任何条件。每天举办八场，每三小时一场。每场奖池从 $100 到 $1,000，全月累计超过 $200,000。</p>
+          </div>
+          <div class="freeroll-type-card">
+            <span class="freeroll-icon">💰</span>
+            <h3>存款锦标赛</h3>
+            <p>专属于至少进行过一次合格存款的玩家。更小的阵容和更大的奖池使这些成为我们赛程中期望值最高的赛事之一。仅 $10 的存款即可解锁访问权限。</p>
+          </div>
+          <div class="freeroll-type-card">
+            <span class="freeroll-icon">👑</span>
+            <h3>忠诚度锦标赛</h3>
+            <p>奖励通过现金游戏和付费锦标赛产生抽水的玩家。您游戏越多，积累的忠诚度免费赛门票越多。顶级 VIP 等级会员收到我们最高价值赛事的门票。</p>
+          </div>
+          <div class="freeroll-type-card">
+            <span class="freeroll-icon">⭐</span>
+            <h3>特别赛事锦标赛</h3>
+            <p>与重大促销活动、季节性系列启动和节假日联合发布。这些一次性赛事可以拥有 $5,000 到 $25,000 的奖池，并在我们的促销大厅提前公布。</p>
+          </div>
+        </div>
+
+        <div class="highlight-box gold" style="margin-top: 24px;">
+          <h3>以聪明的方式积累您的资金</h3>
+          <p>从开放免费赛开始学习界面。一旦您进行了存款——哪怕只有 $10——您就解锁了存款者免费赛，其价值显著更高。用赢款参加 $1-$5 买入的 Bonus Bonanza 赛事，持续再投资，您可以从零开始建立真实的扑克资金，没有任何实质性风险。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 7. TOURNAMENT FORMATS ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">了解您的游戏</span>
+      <h2>锦标赛格式 <span class="gold-text">详解</span></h2>
+      <p>我们在赛程中提供五种核心锦标赛格式。每种格式奖励不同的策略方法——在坐下之前了解结构是持续获得奖金的第一步。</p>
+    </div>
+
+    <div class="grid-3">
+      <div class="format-card">
+        <span class="format-icon">🔒</span>
+        <h3>冻结赛</h3>
+        <p>经典格式。您获得一个起始筹码堆，当您的筹码用完时，您被淘汰。没有重入，没有第二次机会。冻结赛从第一手牌就产生纯粹的压力，并奖励早期阶段的保守耐心游戏。我们所有主要系列赛至少有一场旗舰冻结赛赛事。策略很简单：您的筹码是有限的，因此每颗筹码从一开始就很重要。冻结赛决赛中的后期 ICM 计算至关重要。</p>
+      </div>
+
+      <div class="format-card">
+        <span class="format-icon">🔄</span>
+        <h3>重入赛</h3>
+        <p>如果您在晚到注册期结束前被淘汰，您可以再次支付买入费用并获得全新的筹码堆重入锦标赛。这种格式往往产生更大的阵容和相对于保底更大的实际奖池。重入赛事奖励早期激进游戏——熟练的玩家更舒适地多次开枪，知道如果早期虚张声势失败可以重新加入。我们的重入赛事通常在注册窗口期间允许无限次重入。</p>
+      </div>
+
+      <div class="format-card">
+        <span class="format-icon">💥</span>
+        <h3>渐进式淘汰（PKO）</h3>
+        <p>现代锦标赛扑克中最令人兴奋的格式。在 PKO 中，您一半的买入资助奖池，另一半作为您头上的赏金。当您淘汰一名玩家时，您立即以现金收取其一半积累的赏金——另一半加入您自己的头部价值。随着游戏进行，淘汰筹码领袖在真实货币方面变得异常有利可图，产生持续的进攻性和戏剧性。策略与标准锦标赛有显著分歧；即使面对不利的筹码权益赔率，为了收取大额赏金而跟注全押往往是正确的。</p>
+      </div>
+
+      <div class="format-card">
+        <span class="format-icon">⚡</span>
+        <h3>Turbo &amp; 超快速</h3>
+        <p>Turbo 赛事的盲注级别为 5-6 分钟，相比标准的 10-15 分钟。超快速进一步推进到 2-3 分钟级别，产生极度快节奏的游戏，在那里 Push-Fold 策略变得相关得多。这些格式非常适合时间有限且想在两小时内完成完整多桌锦标赛的玩家。我们的超快速系列——2025 年底推出——每天举办多场赛事，买入从 $5 到 $55。非常适合在高压、高波动环境中茁壮成长的激进玩家。</p>
+      </div>
+
+      <div class="format-card">
+        <span class="format-icon">🎯</span>
+        <h3>卫星锦标赛</h3>
+        <p>卫星赛授予进入更大目标锦标赛的席位而非现金奖励。赢得卫星赛，您将获得直接进入目标赛事的门票，价值其全额买入。我们的卫星网络涵盖所有 JackPoker 主要赛事：Big Bang Sunday 的第一步卫星赛低至 $3，使您可以用一小部分成本赢得 $30 席位。多步卫星阶梯让您从微小筹码买入一路晋升到我们最高价值季节性系列主赛事。卫星赛是战略资金玩家最好的朋友。</p>
+      </div>
+
+      <div class="format-card">
+        <span class="format-icon">🌀</span>
+        <h3>Spin &amp; Win（大奖）</h3>
+        <p>一种超快速三人格式，在每局游戏前通过随机倍增旋转确定奖池。标准的 2x、3x、5x 和 10x 倍增系数出现频繁，而罕见的大奖旋转可以将总奖池推高至 <strong style="color: var(--gold-primary);">$1,000,000</strong>。游戏持续 5 到 20 分钟。Spin &amp; Win 不是传统多桌锦标赛，但它在我们平台上占据了一个深受喜爱的位置，作为想要在超短会话中获得锦标赛式兴奋的玩家的首选选项。从 $1 到 $100 的多种买入大小可供选择。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 8. RECENT EVENT COVERAGE ===== -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">赛事历史</span>
+      <h2>近期 <span class="gold-text">重大赛事</span></h2>
+      <p>我们的赛事历史足以说明一切。每个赛季我们都以更大的保底、更具创意的格式和让我们社区有充分理由留在牌桌旁的促销活动提高标准。</p>
+    </div>
+
+    <div class="grid-2">
+      <div>
+        <div class="timeline">
+          <div class="timeline-item" data-expires="2026-04-26">
+            <div class="timeline-date">2026年4月6日 – 4月26日</div>
+            <h3>Spring Spin Festival <span class="badge badge-green" style="margin-left: 8px; vertical-align: middle;">正在进行</span></h3>
+            <p>赢取高达 <strong style="color: var(--gold-primary);">\,000,000</strong> 从   Spin&amp;Win 买入。JackPoker 在整个四月激活特殊 100,000x 倍增系数——在 15 分钟内击败两名对手并领取全额奖金。Instant Cash 支付。需要最低   存款才能参与。运行至 4 月 26 日。</p>
+          </div>
+
+                    <div class="timeline-item" data-expires="2026-04-12">
+            <div class="timeline-date">2026年3月30日 – 4月12日</div>
+            <h3>Easter Turbo Sprint <span class="badge badge-green" style="margin-left: 8px; vertical-align: middle;">正在进行</span></h3>
+            <p>为期两周的复活节系列，专门采用 Turbo 和 Hyper 格式锦标赛，保底奖池 <strong style="color: var(--gold-primary);">$500,000</strong> 。快节奏赛事，每一秒都至关重要——使用真实货币或锦标赛门票注册。买入涵盖每种资金级别。促销门票必须在 4 月 12 日前使用，否则失效。</p>
+          </div>
+
+          <div class="timeline-item" data-expires="2026-04-19">
+            <div class="timeline-date">2026年3月30日 – 4月19日</div>
+            <h3>Sherlock's Mystery Bounties <span class="badge badge-green" style="margin-left: 8px; vertical-align: middle;">正在进行</span></h3>
+            <p>一个为期 21 天的神秘赏金 KO 系列，保底奖池 <strong style="color: var(--gold-primary);">$2,500,000</strong> 覆盖 100+ 场锦标赛。每次击杀揭示价值高达 $4,500+ 的随机神秘赏金信封。Instant Cash 支付——赏金实时直接存入您的余额。买入涵盖微小筹码到高额档位，该系列运行至 4 月 19 日，赛事全天候进行。</p>
+          </div>
+
+          <div class="timeline-item" data-expires="2026-04-19">
+            <div class="timeline-date">2026年3月23日 – 4月19日</div>
+            <h3>Cash Carnival 2026 <span class="badge badge-green" style="margin-left: 8px; vertical-align: middle;">正在进行</span></h3>
+            <p>我们有史以来最大的现金桌促销活动。在四周窗口期内，$500,000 随机现金炸弹在所有真实货币现金桌上分发。炸弹每 3-7 手引发，同时向桌上所有玩家付款。无买入，无注册，无条件——只需出现并正常游戏，而意外奖励随时可能到来。</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">2026年1月26日 – 2月15日</div>
+            <h3>冬季游戏节</h3>
+            <p>我们的冬季最大保底系列提供了 <strong style="color: var(--gold-primary);">$2.5M</strong> 的总保底奖池，覆盖 80+ 场赛事。仅主赛事就拥有 <strong style="color: var(--text-white);">$80,000 保底</strong> ，买入从 $200 起。该系列因每个级别的出色价值而著称——即使是 $5 买入的微小筹码赛事也有 $10,000+ 保底，产生大量叠加并为小筹码磨牌者创造即时资金积累机会。第一天阵容在三个不同日期进行，以满足所有时区的国际玩家。</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">2026年2月9日 – 3月8日</div>
+            <h3>欢乐时光大奖 + Cash Carnival</h3>
+            <p>结合了我们两种最受欢迎格式的双重促销组合。欢乐时光大奖拥有 <strong style="color: var(--gold-primary);">$1M 保底排行榜奖金</strong> 每周分发，根据量和胜率向我们现金游戏社区中最稳定的表现者提供自动支付。同时运行的早期 Cash Carnival 版本提供 20BB 跟注组损失支付——自动补偿在现金桌上遭受顺子对顺子坏牌的玩家。这两项促销活动在平台历史上产生了我们记录到的最高同时流量。</p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">2025年11月3日–30日</div>
+            <h3>Bigger Bang 系列</h3>
+            <p>我们在推出时运行过的最雄心勃勃的锦标赛系列，Bigger Bang 系列以惊人的 <strong style="color: var(--gold-primary);">$3.5M 总保底奖池</strong> 在整整一个月的游戏中设立了新基准。该系列拥有 120+ 个涵盖冻结赛、PKO、重入赛、Turbo 和卫星格式的单独赛事。仅主赛事就吸引了 JackPoker 历史上最大的参赛阵容之一，决赛桌进行了直播。同时，Hyper 赠品促销奖励在新超快速系列中竞争的玩家以额外的现金奖励和商品掉落，为我们最忠实的社区成员创造了完整的十一月体验。</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">2025年10月6日 – 11月2日</div>
+            <h3>Full House of Horror</h3>
+            <p>我们的万圣节主题季节性系列被证明是我们有史以来最具创意和最受喜爱的赛事之一。Full House of Horror 拥有 <strong style="color: var(--text-white);">162 场单独 PKO 锦标赛</strong> ——单个系列中前所未有的数量——渐进式淘汰从 $2.20 到 $215 的每个买入级别运行。该系列由 <strong style="color: var(--gold-primary);">$1M 排行榜</strong> 锚定，追踪所有赛事中的赏金奖励收益，每周在促销期间向最积极的淘汰者分发额外现金奖励。特别万圣节主题卫星赛允许玩家以仅 $1 赢取进入高级赛事的席位。</p>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-date">2025年11月</div>
+            <h3>Hyper 赠品启动系列</h3>
+            <p>与 Bigger Bang 系列联合推出，Hyper 赠品是我们在 JackPoker 上超快速格式的首次亮相。为庆祝推出，我们运行了一个完全由我们资助的专属奖池——玩家在新超快速赛事中竞争，并在不超出正常买入的情况下赚取赠品排行榜积分。顶级表现者获得现金奖励、商品和下月专属受邀赛事访问权限。此后，超快速格式已成为我们每日赛程的永久组成部分。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 9. DAILY TOURNAMENT SCHEDULE ===== -->
+<section class="section" id="schedule">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">每日赛程</span>
+      <h2>每日锦标赛 <span class="gold-text">赛程</span></h2>
+      <p>我们的每日赛程确保无论您在哪个时区游戏，总有一场锦标赛在下一小时内开始。以下是我们典型工作日赛程的代表性样本——所有时间为 UTC。</p>
+    </div>
+
+    <div class="table-wrapper">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>时间（UTC）</th>
+            <th>锦标赛名称</th>
+            <th>格式</th>
+            <th>买入</th>
+            <th>保底 / 奖金</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">00:00</td>
+            <td>午夜锦标赛</td>
+            <td><span class="badge badge-green">锦标赛</span></td>
+            <td>免费</td>
+            <td>$200</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">01:00</td>
+            <td>亚洲早鸟赛</td>
+            <td><span class="badge badge-purple">冻结赛</span></td>
+            <td>$5.50</td>
+            <td>$2,000 保底</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">03:00</td>
+            <td>锦标赛 #2 — 早场</td>
+            <td><span class="badge badge-green">锦标赛</span></td>
+            <td>免费</td>
+            <td>$300</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">05:00</td>
+            <td>早间热身 PKO</td>
+            <td><span class="badge badge-gold">PKO</span></td>
+            <td>$11</td>
+            <td>$5,000 保底</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">06:00</td>
+            <td>锦标赛 #3 — 全球</td>
+            <td><span class="badge badge-green">锦标赛</span></td>
+            <td>免费</td>
+            <td>$500</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">08:00</td>
+            <td>Bonanza 微小筹码开幕赛</td>
+            <td><span class="badge badge-purple">重入赛</span></td>
+            <td>$5.50</td>
+            <td>$5,000 保底</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">09:00</td>
+            <td>锦标赛 #4 — 欧洲早晨</td>
+            <td><span class="badge badge-green">锦标赛</span></td>
+            <td>免费</td>
+            <td>$500</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">11:00</td>
+            <td>午间 Turbo 赛</td>
+            <td><span class="badge badge-purple">Turbo</span></td>
+            <td>$16.50</td>
+            <td>$7,500 保底</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">12:00</td>
+            <td>锦标赛 #5 — 午休</td>
+            <td><span class="badge badge-green">锦标赛</span></td>
+            <td>免费</td>
+            <td>$750</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">14:00</td>
+            <td>下午磨牌赛</td>
+            <td><span class="badge badge-purple">冻结赛</span></td>
+            <td>$22</td>
+            <td>$15,000 保底</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">15:00</td>
+            <td>锦标赛 #6 — 下午</td>
+            <td><span class="badge badge-green">锦标赛</span></td>
+            <td>免费</td>
+            <td>$1,000</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">17:00</td>
+            <td>欢乐时光 PKO</td>
+            <td><span class="badge badge-gold">PKO</span></td>
+            <td>$33</td>
+            <td>$20,000 保底</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">18:00</td>
+            <td>锦标赛 #7 — 黄金时段</td>
+            <td><span class="badge badge-green">锦标赛</span></td>
+            <td>免费</td>
+            <td>$1,500</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">19:00</td>
+            <td>晚间特色赛——Bonanza 主赛</td>
+            <td><span class="badge badge-purple">重入赛</span></td>
+            <td>$55</td>
+            <td>$30,000 保底</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">20:30</td>
+            <td>超快速射手赛</td>
+            <td><span class="badge badge-purple">Hyper-Turbo</span></td>
+            <td>$16.50</td>
+            <td>$5,000 保底</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">21:00</td>
+            <td>锦标赛 #8 — 夜枭场</td>
+            <td><span class="badge badge-green">锦标赛</span></td>
+            <td>免费</td>
+            <td>$1,000</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600;">22:00</td>
+            <td>深夜高额赛</td>
+            <td><span class="badge badge-gold">PKO</span></td>
+            <td>$109</td>
+            <td>$25,000 保底</td>
+          </tr>
+          <tr>
+            <td style="color: var(--gold-primary); font-weight: 600; border-bottom: none;">仅周日</td>
+            <td><strong style="color: var(--text-white);">Big Bang Sunday</strong></td>
+            <td><span class="badge badge-gold">重入赛</span></td>
+            <td>$30</td>
+            <td style="color: var(--gold-primary); font-weight: 700;">$45,000 保底</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p style="margin-top: 20px; color: var(--text-muted); font-size: 0.85rem; text-align: center;">赛程是标准工作日编程的代表性样本。额外的 Bonus Bonanza 系列赛事、卫星赛和特别促销赛事全周运行。完整赛程在登录后可在锦标赛大厅中查看。所有时间为 UTC——请根据您所在的时区调整。</p>
+  </div>
+</section>
+
+<!-- ===== 10. HOW TO REGISTER ===== -->
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">开始</span>
+      <h2>如何注册 <span class="gold-text">锦标赛</span></h2>
+      <p>进入您的第一场 JackPoker 锦标赛只需几分钟。以下是您需要做的所有步骤，从创建账户到坐在虚拟桌前。</p>
+    </div>
+
+    <div class="register-steps">
+      <div class="register-step">
+        <div class="step-number">1</div>
+        <div class="register-step-content">
+          <h3>创建您的账户</h3>
+          <p>访问 JackPoker 并点击注册。填写您的电子邮件地址，选择安全密码，并确认您的详细信息。注册表单大约需要 90 秒钟完成。在注册时输入促销码 <strong style="color: var(--gold-primary);">WELCOME</strong> 在注册期间的促销码字段中激活完整的欢迎礼包，包括最高 $2,000 的 300% 存款匹配和您的免费 Lootbox。</p>
+        </div>
+      </div>
+
+      <div class="register-step">
+        <div class="step-number">2</div>
+        <div class="register-step-content">
+          <h3>验证您的身份</h3>
+          <p>JackPoker 在完整游戏许可证下运营，在处理提款之前需要标准的身份验证。上传政府颁发的照片身份证明和最近的地址证明文件。验证通常在几小时内完成。您可以在注册后立即开始游戏——验证仅在您的第一次提款前需要。</p>
+        </div>
+      </div>
+
+      <div class="register-step">
+        <div class="step-number">3</div>
+        <div class="register-step-content">
+          <h3>进行存款</h3>
+          <p>导航至收银台部分，选择您偏好的支付方式。我们支持 Visa、Mastercard、Skrill、Neteller、JetonBank、LuxonPay、Paysafecard、Pix、Interac、Blik、比特币、以太坊、USDT、Tron、莱特币、狗狗币和 BNB。最低存款因方式而异，但从 $10 开始。仅访问免费赛无需任何存款。</p>
+        </div>
+      </div>
+
+      <div class="register-step">
+        <div class="step-number">4</div>
+        <div class="register-step-content">
+          <h3>打开锦标赛大厅</h3>
+          <p>点击主导航中的锦标赛选项卡。大厅显示所有即将举行的赛事，按开始时间排序，附有买入范围、格式（冻结赛、PKO、Turbo、卫星）和奖池规模的筛选器。您可以通过点击名称查看任何即将举行赛事的完整结构表、已注册玩家数量和奖池详细信息。</p>
+        </div>
+      </div>
+
+      <div class="register-step">
+        <div class="step-number">5</div>
+        <div class="register-step-content">
+          <h3>注册您的赛事</h3>
+          <p>选择您想参加的锦标赛，然后点击绿色的注册按钮。对于付费赛事，买入立即从您的余额中扣除。对于免费赛，注册即时且免费。您可以同时为多场赛事注册，并从大厅的我的锦标赛部分管理所有注册。在开始时间前 60 分钟内取消注册的任何赛事可获得全额退款。</p>
+        </div>
+      </div>
+
+      <div class="register-step">
+        <div class="step-number">6</div>
+        <div class="register-step-content">
+          <h3>入座 &amp; 游戏</h3>
+          <p>当锦标赛开始时，您的桌面将自动打开或通过提醒通知您。JackPoker 完全基于浏览器——无需软件下载。您也可以通过我们的 Android APK 或 iOS 渐进式 Web 应用进行移动游戏。使用我们的平铺界面同时多桌最多 3 场锦标赛。锦标赛结果和奖金支付在赛事结束后几秒内自动处理并存入您的账户。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 11. TOURNAMENT TIPS ===== -->
+<section class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">策略专区</span>
+      <h2>锦标赛技巧—— <span class="gold-text">JackPoker 玩家指南</span></h2>
+      <p>无论您是多桌锦标赛新手还是经验丰富的磨牌者，这些策略原则都将帮助您更有效地驾驭我们的锦标赛格式并更持续地进钱。</p>
+    </div>
+
+    <div class="tips-grid">
+      <div class="tip-card">
+        <h3>先用锦标赛学习界面</h3>
+        <p>在向任何锦标赛投入买入资金之前，先在我们的免费赛中花时间掌握 JackPoker 界面。学习如何在桌间导航、使用时间银行、读取盲注级别时钟和查看奖池结构——零成本。锦标赛大厅、牌局历史和多桌平铺视图都会通过练习变得得心应手，流畅使用界面可以释放您的精力专注于真正重要的扑克决策。</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>当泡沫临近时理解 ICM</h3>
+        <p>独立筹码模型（ICM）数学支配着临近奖金泡沫和决赛桌奖金跳跃附近的最优游戏。在标准现金游戏中，筹码以 1:1 的比例直接转化为现金价值。在锦标赛中，您筹码堆中的最后一颗筹码远比第一颗值钱——因为在奖金线前一位出局什么都得不到。当任何 JackPoker 锦标赛的泡沫临近时，显著收紧您的范围，避免在您可能被淘汰的边缘全押对抗，并利用在压力下游戏过于宽松的对手。</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>调整您的 PKO 格式策略</h3>
+        <p>渐进式淘汰锦标赛与标准冻结赛相比，需要从根本上不同的策略框架。对手头上作为赏金的死钱显著改变了接近跟注决策的数学。即使您对推注范围的权益为负（筹码 EV 意义上），为了收取大额赏金而跟注也可能是正确的。跟踪您桌旁玩家头上的赏金，并相应地调整您的进攻性——目标是积累了大量赏金的玩家，以较短的筹码堆可以隔离，并在不处于单挑时通过避免不必要的全押赌博来保护您自己不断增长的赏金。</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>使用卫星赛访问高买入赛事</h3>
+        <p>建立您的锦标赛履历并冲击高价值赛事的最有效方式是通过我们的卫星网络。$45 Big Bang Sunday 席位可以通过我们的第一步卫星赛以低至 $3 赢取。在我们高级系列中价值 $200-$500 的主赛事席位可以通过低于 $5 开始的卫星链赢取。通过将买入预算路由到卫星赛而非直接注册，您可以在不增加总体支出的情况下显著增加参加高级赛事的数量——这是认真玩家的关键资金管理纪律。</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>在 Turbo 和 Hyper 赛事中早期积累筹码</h3>
+        <p>在 Turbo 和超快速锦标赛中，盲注与筹码比例增长如此之快，以至于保守游戏很快变得站不住脚。最优策略向进攻性和 Push-Fold 游戏转变比标准赛事早得多。在 2 分钟级别的超快速中，到第 6 级时您可能只剩 15 个大盲——在标准桌上大多数玩家甚至还没开始考虑这一点时，就进入了纯粹的推注或弃牌领域。了解您的 Push-Fold 图表，愿意在早期接受薄弱局面来积累可操作的筹码堆，并将每场 Turbo 赛事视为与不断升级的盲注的竞赛，而非耐心的手牌选择练习。</p>
+      </div>
+
+      <div class="tip-card">
+        <h3>多桌以最大化量和 EV</h3>
+        <p>JackPoker 支持最多三张同时桌，多桌是增加锦标赛量和期望值的最有效方式之一。如果您进入的每场锦标赛都有正期望利润，同时游戏三场——即使每场单独游戏需要稍少的注意力——通常比完全专注单桌产生更好的整体结果。从双桌一对免费赛开始校准您对界面的舒适度。当您可以轻松管理两张桌时，再加第三张。JackPoker 上的经验丰富磨牌者在夜间高峰时段常规同时运行三场 Bonus Bonanza 赛事。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 12. FINAL CTA ===== -->
+<section class="final-cta">
+  <div class="container">
+    <div class="final-cta-inner">
+      <div class="promo-pill">
+        使用促销码 <span class="code">WELCOME</span> 可获最高 $2,000 的 300% 存款匹配
+      </div>
+      <h2 style="font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 20px;">加入 <span class="gold-text">行动</span></h2>
+      <p style="color: var(--text-muted); max-width: 580px; margin: 0 auto 16px; font-size: 1.05rem; line-height: 1.8;">超过 $3.5M 月度保底。每日八场免费锦标赛。每周 $45,000 Big Bang Sunday。Cash Carnival 运行至 4 月 19 日。开始扑克生涯所需的一切就在这里。</p>
+      <p style="color: var(--text-muted); max-width: 520px; margin: 0 auto 36px; font-size: 0.95rem; line-height: 1.8;">立即注册，注册后几分钟内参加您的第一场免费赛，开始在在线扑克中最有价值的平台之一上积累您的资金和锦标赛经验。行动永不停歇——从您坐下的那一刻就开始了。</p>
+
+      <div style="display: flex; align-items: center; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 32px;">
+        <div class="promo-code-box" style="max-width: 280px;">
+          <span class="promo-code-value">WELCOME</span>
+          <button class="promo-code-copy" onclick="navigator.clipboard.writeText('WELCOME').then(()=>{this.textContent='已复制!';setTimeout(()=>{this.textContent='复制'},2000)})\">复制</button>
+        </div>
+        <a href="https://go.jack-full.com/c41f796e" class="btn btn-primary btn-lg">立即游戏 ♠</a>
+      </div>
+
+      <div style="display: flex; gap: 32px; justify-content: center; flex-wrap: wrap;">
+        <div style="display: flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.88rem;">
+          <span style="color: var(--success);">✓</span> 无需下载
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.88rem;">
+          <span style="color: var(--success);">✓</span> 持牌 &amp; 认证平台
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.88rem;">
+          <span style="color: var(--success);">✓</span> 锦标赛即时可用
+        </div>
+        <div style="display: flex; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.88rem;">
+          <span style="color: var(--success);">✓</span> iOS、Android &amp; 浏览器游戏
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Promo Code CTA — Tournament Context -->
+<aside class="promo-cta-inline" style="background: linear-gradient(135deg, rgba(137,59,247,0.08), rgba(246,186,70,0.08)); border: 1px solid rgba(246,186,70,0.2); border-radius: 16px; padding: 32px 36px; margin: 48px 0; position: relative; overflow: hidden;">
+  <div style="position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--purple-primary), var(--gold-primary));"></div>
+  <div style="display: flex; align-items: center; gap: 32px; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 280px;">
+      <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 8px;">以更大的资金进入锦标赛</h3>
+      <p style="color: var(--text-muted); font-size: 0.92rem; line-height: 1.7; margin: 0;">使用以下方式注册的新玩家 <a href="promo-code.html" style="color: var(--gold-primary); font-weight: 700; text-decoration: underline;">JackPoker 奖金代码 WELCOME</a> 可获得 300% 存款匹配以及包含锦标赛奖励的免费赛门票和欢迎任务参赛资格。查看 <a href="promo-code.html" style="color: var(--gold-primary); font-weight: 600;">完整的 WELCOME 促销码详细说明</a> 了解您解锁的所有内容。</p>
+    </div>
+    <div style="flex-shrink: 0;">
+      <a href="promo-code.html" class="btn btn-cta" style="white-space: nowrap;">使用代码 WELCOME →</a>
+    </div>
+  </div>
+</aside>
+
+<!-- ===== FOOTER ===== -->
+
+    <!-- Latest News Links -->
+    <section style="padding: 24px 0 0;">
+      <div class="container">
+        <h3 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; margin-bottom: 16px; color: var(--text-primary);">来自 JackPoker 的最新资讯</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+          <a href="news/winter-games-festival-wraps-with-record-breaking-21m-in-payo.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">冬季游戏节：$2.1M 奖金已付 →</a>
+          <a href="news/bonus-bonanza-march-schedule-620-events-125m-in-guarantees.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">Bonus Bonanza 三月：$1.25M 保底 →</a>
+          <a href="news/jackpoker-mobile-app-30-launches-with-multi-table-support.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">移动应用 3.0 发布 →</a>
+          <a href="news/crypto-deposits-now-available-in-sol-matic-and-ton.html" style="color: var(--purple-primary); font-size: 0.82rem; text-decoration: none; padding: 6px 14px; border: 1px solid var(--border-subtle); border-radius: 20px; transition: all 0.2s;">加密存款：SOL、MATIC、TON →</a>
+        </div>
+      </div>
+    </section>
+
+  <footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="index.html" class="logo" aria-label="JackPoker Home">
+        <svg class="logo-icon" width="189" height="47" viewBox="0 0 189 47" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="JackPoker">
+<path d="M25.4001 1C24.0001 1 22.8001 2.2 22.8001 3.6C22.8001 5.1 23.8343 5.9 25.3001 5.9H28.7001C28.7001 5.9 31.3001 5.9 31.3001 8.3C31.3001 10.7 28.7001 10.7 28.7001 10.7H8.30008C6.90008 10.7 5.70008 11.9 5.70008 13.3C5.70008 14.7 6.90008 15.9 8.30008 15.9H22.5001C22.5001 15.9 25.1001 15.9 25.1001 18.3C25.1001 20.7 22.5001 20.7 22.5001 20.7H11.4001C10.0001 20.7 8.80008 21.9 8.80008 23.3C8.80008 24.7 10.0001 25.9 11.4001 25.9H22.6001C22.6001 25.9 25.2001 25.9 25.2001 28.3C25.2001 30.7 22.6001 30.7 22.6001 30.7H21.8001C20.4001 30.7 19.2001 31.9 19.2001 33.3C19.2001 34.7 20.4001 35.9 21.8001 35.9H28.8001C28.8001 35.9 31.4001 35.9 31.4001 38.3C31.4001 40.7 28.8001 40.7 28.8001 40.7H14.0001C12.6001 40.7 11.4001 41.9 11.4001 43.3C11.4001 44.7 12.6001 45.9 14.0001 45.9H34.3001C36.5001 45.9 38.4001 44.8 39.5001 43C41.1501 40.25 42.7751 37.4999 44.4001 34.7499C46.0251 31.9999 47.6501 29.25 49.3001 26.5C50.4001 24.6 50.4001 22.3 49.3001 20.4C47.6501 17.6501 46.0252 14.9001 44.4002 12.1502C42.7752 9.4002 41.1501 6.65001 39.5001 3.9C38.4001 2.1 36.4001 1 34.3001 1H25.4001Z" fill="url(#jpLogoGrad)"/>
+<path d="M11.3999 3.6C11.3999 2.2 12.5999 1 13.9999 1H17.5999C18.9999 1 20.1999 2.2 20.1999 3.6C20.1999 5 18.9999 6.2 17.5999 6.2H13.9999C12.5999 6.2 11.3999 5 11.3999 3.6Z" fill="url(#jpLogoGrad)"/>
+<path d="M0 23.5001C0 22.1001 1.2 20.9001 2.6 20.9001H3.6C5 20.9001 6.2 22.1001 6.2 23.5001C6.2 24.9001 5 26.1001 3.6 26.1001H2.6C1.2 26.1001 0 24.9001 0 23.5001Z" fill="url(#jpLogoGrad)"/>
+<path d="M8.30008 30.8001C6.90008 30.8001 5.70008 32.0001 5.70008 33.4001C5.70008 34.9001 6.90008 36.1001 8.30008 36.0001H14.0001C15.4001 36.0001 16.6001 34.8001 16.6001 33.4001C16.6001 32.0001 15.4001 30.8001 14.0001 30.8001H8.30008Z" fill="url(#jpLogoGrad)"/>
+<path d="M69.7955 27.3088C69.7955 28.8312 69.6204 30.0793 69.2704 31.0533C68.9203 32.0273 68.3261 32.7598 67.4876 33.2509C66.6572 33.7502 65.5257 33.9998 64.0929 33.9998C63.7591 33.9998 63.3887 33.9712 62.9817 33.9139C62.5747 33.8648 62.3142 33.832 62.2002 33.8157L62.5177 31.2252H63.7144C65.1797 31.2252 65.9164 30.4231 65.9246 28.8189V15.265L64.0441 14.5039V12.3676L71.676 12.2449V14.5039L69.7955 15.265V27.3088Z" fill="white"/>
+<path d="M81.4937 28.3401C81.4937 28.3728 81.2779 28.557 80.8465 28.8926C80.415 29.2281 79.8981 29.5351 79.2957 29.8133C78.6933 30.0834 78.0746 30.2185 77.4396 30.2185C76.2185 30.2185 75.2619 29.8788 74.57 29.1995C73.8862 28.512 73.5443 27.538 73.5443 26.2775C73.5443 24.837 74.0571 23.7853 75.0829 23.1223C76.1086 22.4594 77.6024 22.1279 79.5643 22.1279H81.3227V20.7406C81.3227 19.5129 80.6796 18.9031 79.3934 18.9113C79.0107 18.9113 78.6566 18.94 78.331 18.9973C78.0054 19.0545 77.7449 19.1159 77.5495 19.1814C77.3622 19.2387 77.2442 19.2755 77.1954 19.2919L76.8168 20.8756H74.57L74.399 17.1557C74.5456 17.1066 74.9038 17.0002 75.4736 16.8365C76.0516 16.6728 76.7395 16.5173 77.5373 16.37C78.3432 16.2226 79.1044 16.149 79.8207 16.149C81.107 16.149 82.1286 16.3127 82.8857 16.6401C83.6428 16.9593 84.1964 17.4831 84.5464 18.2115C84.8965 18.9318 85.0715 19.9017 85.0715 21.1212V27.3334L86.952 27.7876V29.8011L81.9455 29.9729L81.4937 28.3401ZM77.1709 25.897C77.1709 26.388 77.2971 26.7645 77.5495 27.0264C77.81 27.2802 78.1763 27.407 78.6485 27.407C79.0474 27.407 79.4422 27.3006 79.833 27.0878C80.2237 26.8668 80.5534 26.6418 80.822 26.4126C81.0907 26.1752 81.2576 26.0197 81.3227 25.9461V24.2641H79.894C78.9253 24.2641 78.2292 24.3951 77.8059 24.657C77.3826 24.9189 77.1709 25.3322 77.1709 25.897Z" fill="white"/>
+<path d="M100.311 28.0823C99.7492 28.5897 99.0124 29.0726 98.1007 29.531C97.1971 29.9893 96.1428 30.2185 94.938 30.2185C92.8866 30.2185 91.291 29.6169 90.1513 28.4137C89.0116 27.2106 88.4417 25.5327 88.4417 23.3802C88.4417 21.1376 89.0442 19.3737 90.249 18.0888C91.4619 16.7956 93.1511 16.149 95.3166 16.149C95.9515 16.149 96.5906 16.2145 97.2337 16.3454C97.885 16.4764 98.4263 16.6114 98.8578 16.7506C99.2974 16.8815 99.5742 16.9715 99.6881 17.0206L99.566 21.1457H97.3192L96.9651 19.3656C96.8836 19.3492 96.6801 19.3124 96.3545 19.2551C96.0289 19.1896 95.6585 19.1569 95.2433 19.1569C94.3234 19.1569 93.6029 19.472 93.0819 20.1022C92.5691 20.7324 92.3126 21.6573 92.3126 22.8768C92.3126 24.2682 92.5731 25.3404 93.0942 26.0934C93.6233 26.8382 94.4048 27.2106 95.4387 27.2106C96.0899 27.2106 96.6598 27.1124 97.1482 26.916C97.6448 26.7113 98.06 26.5026 98.3937 26.2898C98.7275 26.077 98.9514 25.9379 99.0654 25.8724L100.311 28.0823Z" fill="white"/>
+<path d="M108.602 21.4527L110.3 18.8868L109.201 18.5307V16.5173L115.66 16.3945V18.5307L113.902 18.8622L111.582 22.1525L114.378 27.3579L116.283 27.9595V29.9729H111.655L108.553 23.8344H106.954V27.3334L108.334 27.9595V29.9729H101.202V27.9595L103.205 27.3334V13.2025L101.202 12.6991V10.6857L106.954 10.4893V21.4527H108.602Z" fill="white"/>
+<path d="M117.406 27.8367L119.275 27.0756V15.265L117.406 14.5039V12.3676L123.158 12.2449H125.527C127.423 12.2449 128.909 12.7155 129.984 13.6567C131.066 14.598 131.608 15.8871 131.608 17.524C131.608 19.6029 130.993 21.1703 129.764 22.2261C128.543 23.2819 126.78 23.8099 124.477 23.8099H123.158V27.0756L125.026 27.8367V29.9729H117.406V27.8367ZM124.477 20.8756C125.527 20.8756 126.333 20.6342 126.894 20.1513C127.456 19.6602 127.737 18.9522 127.737 18.0274C127.737 17.1925 127.513 16.5255 127.065 16.0262C126.626 15.5188 125.991 15.265 125.16 15.265H123.158V20.8756H124.477Z" fill="white"/>
+<path d="M139.74 16.149C141.751 16.149 143.302 16.7383 144.393 17.9169C145.492 19.0955 146.041 20.7692 146.041 22.9382C146.041 24.4278 145.764 25.721 145.211 26.8177C144.665 27.9145 143.892 28.7575 142.891 29.3468C141.89 29.9279 140.713 30.2185 139.362 30.2185C135.112 30.2185 132.988 27.9145 132.988 23.3065C132.988 21.8169 133.264 20.536 133.818 19.4638C134.38 18.3916 135.169 17.5731 136.187 17.0084C137.205 16.4354 138.389 16.149 139.74 16.149ZM139.606 19.1569C138.662 19.1569 137.966 19.4638 137.518 20.0776C137.078 20.6915 136.859 21.7269 136.859 23.1837C136.859 24.5751 137.066 25.5941 137.481 26.2407C137.905 26.8873 138.572 27.2106 139.484 27.2106C140.404 27.2106 141.08 26.8873 141.511 26.2407C141.942 25.5941 142.158 24.5342 142.158 23.061C142.158 21.7514 141.955 20.7733 141.548 20.1267C141.141 19.4802 140.493 19.1569 139.606 19.1569Z" fill="white"/>
+<path d="M154.809 21.4527L156.506 18.8868L155.407 18.5307V16.5173L161.867 16.3945V18.5307L160.108 18.8622L157.788 22.1525L160.585 27.3579L162.49 27.9595V29.9729H157.862L154.76 23.8344H153.16V27.3334L154.54 27.9595V29.9729H147.409V27.9595L149.412 27.3334V13.2025L147.409 12.6991V10.6857L153.16 10.4893V21.4527H154.809Z" fill="white"/>
+<path d="M167.508 24.0186C167.573 25.0253 167.875 25.811 168.412 26.3758C168.957 26.9323 169.666 27.2106 170.537 27.2106C171.155 27.2106 171.774 27.1247 172.393 26.9528C173.02 26.7727 173.536 26.5927 173.944 26.4126C174.359 26.2243 174.623 26.0934 174.737 26.0197L175.812 28.1068C175.812 28.1396 175.519 28.3483 174.933 28.733C174.355 29.1095 173.642 29.4532 172.796 29.7642C171.957 30.0671 171.062 30.2185 170.109 30.2185C167.993 30.2185 166.381 29.6292 165.274 28.4506C164.167 27.272 163.613 25.6023 163.613 23.4415C163.613 21.9847 163.878 20.7079 164.407 19.6111C164.944 18.5062 165.713 17.655 166.715 17.0575C167.716 16.4518 168.904 16.149 170.28 16.149C172.112 16.149 173.516 16.6769 174.493 17.7327C175.47 18.7885 175.958 20.2291 175.958 22.0542C175.958 22.4553 175.938 22.8441 175.897 23.2206C175.857 23.5971 175.828 23.8344 175.812 23.9326L167.508 24.0186ZM170.036 19.1569C169.352 19.1569 168.795 19.3901 168.363 19.8566C167.932 20.315 167.663 20.9207 167.557 21.6737H172.087C172.087 20.9207 171.921 20.315 171.587 19.8566C171.253 19.3901 170.736 19.1569 170.036 19.1569Z" fill="white"/>
+<path d="M183.199 18.1256C183.199 18.0928 183.395 17.9005 183.786 17.5486C184.176 17.1966 184.628 16.8774 185.141 16.591C185.662 16.2963 186.175 16.149 186.68 16.149C187.079 16.149 187.453 16.1817 187.803 16.2472C188.153 16.3127 188.426 16.3822 188.621 16.4559C188.825 16.5296 188.951 16.5746 189 16.591L188.804 21.4281H186.558L186.179 19.2919C185.748 19.2919 185.328 19.3983 184.921 19.6111C184.522 19.8157 184.18 20.0449 183.896 20.2986C183.619 20.5442 183.48 20.6751 183.48 20.6915V27.3334L185.984 27.9595V29.9729H177.729V27.9595L179.732 27.3334V19.1569L177.729 18.5307V16.5173L182.98 16.3945L183.199 18.1256Z" fill="white"/>
+<defs>
+<linearGradient id="jpLogoGrad" x1="0" y1="33.44" x2="50.74" y2="33.44" gradientUnits="userSpaceOnUse">
+<stop stop-color="#8032FF"/>
+<stop offset="1" stop-color="#FF3D00"/>
+</linearGradient>
+</defs>
+</svg>
+      </a>
+        <p>JackPoker 是一个现代在线扑克平台，提供 Texas Hold'em、PLO、Spin&Win 和锦标赛行动。持有 iTech Labs、BMM TestLabs 和 GLI 认证牌照。负责任游戏。</p>
+      </div>
+      <div class="footer-col">
+        <p class="footer-heading" style="font-weight:700;font-size:0.95rem;margin-bottom:12px;color:var(--text-white);">平台</p>
+        <ul>
+          <li><a href="games.html">游戏</a></li>
+          <li><a href="tournaments.html">锦标赛</a></li>
+          <li><a href="bonuses.html">奖金 &amp; 促销</a></li>
+          <li><a href="promo-code.html">促销码</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-heading" style="font-weight:700;font-size:0.95rem;margin-bottom:12px;color:var(--text-white);">资源</p>
+        <ul>
+          <li><a href="news.html">新闻</a></li>
+          <li><a href="faq.html">常见问题</a></li>
+          <li><a href="terms.html">服务条款</a></li>
+          <li><a href="https://go.jack-full.com/c41f796e" target="_blank" rel="noopener noreferrer">隐私政策</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-heading" style="font-weight:700;font-size:0.95rem;margin-bottom:12px;color:var(--text-white);">支付</p>
+        <div class="footer-payment-icons">
+          <span>VISA</span><span>Mastercard</span><span>Skrill</span><span>Neteller</span><span>比特币</span><span>以太坊</span><span>USDT</span><span>Pix</span>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 JackPoker。由 Jack La International Limitada 运营。在 Anjouan、科摩罗联盟取得牌照。负责任游戏。18+</p>
+      <p>经 iTech Labs &bull; BMM TestLabs &bull; GLI 认证</p>
+    </div>
+  </div>
+</footer>
+
+<script src="../main.js"></script>
+</body>
+</html>
