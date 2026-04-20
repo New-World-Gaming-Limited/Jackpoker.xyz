@@ -72,6 +72,7 @@ PROTECTED_BRAND_NAMES = [
     "Big Bang Sunday", "Bonus Bonanza",
     "Sherlock's Mystery Bounties", "Mystery Bounty", "Instant Cash",
     "Easter Turbo Sprint", "Turbo", "Hyper",
+    "Flipout", "Flipout Tournaments",
     "Spin&Win", "Lootbox", "Freeroll Festival", "Bad Beat Jackpot",
     "NLP", "NLB", "NL8", "PLO5", "PLO5B",
     "Texas Hold'em", "Omaha", "PLO", "PLO6",
@@ -255,10 +256,17 @@ def build_language_switcher_html(current_lang, current_page):
         
         if current_lang == "en":
             # From English root
-            if code == "en":
-                href = current_page  # same page
+            if is_nested:
+                # From /compare/X.html or /news/X.html — need ../ to reach root
+                if code == "en":
+                    href = page_filename  # just X.html (same directory)
+                else:
+                    href = f"../{code}/{current_page}"  # ../ru/compare/X.html
             else:
-                href = f"{code}/{current_page}"  # e.g., ru/news.html or ru/news/article.html
+                if code == "en":
+                    href = current_page  # same page
+                else:
+                    href = f"{code}/{current_page}"  # ru/news.html
         else:
             # From a language subdirectory
             if is_nested:
