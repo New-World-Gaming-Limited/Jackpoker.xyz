@@ -73,7 +73,7 @@ PROTECTED_BRAND_NAMES = [
     "Sherlock's Mystery Bounties", "Mystery Bounty", "Instant Cash",
     "Easter Turbo Sprint", "Turbo", "Hyper",
     "Flipout", "Flipout Tournaments",
-    "Spin&Win", "Lootbox", "Freeroll Festival", "Bad Beat Jackpot",
+    "Spin&Win", "Spin & Win", "Spin and Win", "Spin & Go", "Spin Go", "Lootbox", "Freeroll Festival", "Bad Beat Jackpot",
     "NLP", "NLB", "NL8", "PLO5", "PLO5B",
     "Texas Hold'em", "Omaha", "PLO", "PLO6",
     "NL25+", "NLH",
